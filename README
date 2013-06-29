@@ -1,0 +1,38 @@
+# Rcpi
+
+## Introduction
+
+The Rcpi package supports the analysis of compound-protein interactions with R. Rcpi supports retrieving protein sequence data from UniProt and KEGG, retrieving drug molecular data from PubChem, ChEMBL, CAS, KEGG and DrugBank. Rcpi offers the functionalities of protein sequence feature extraction, calculating drug molecular descriptors and fingerprints, and integrate the whole process all in one. All the users need to do, is providing the pair input of the drug and protein IDs. The package is developed by Computational Biology and Drug Design Group, Central South University.
+
+## Supported Protein Sequence Database
+
+Some Content Here.
+
+## Supported Drug Molecular Database
+
+Some Content Here.
+
+## Supported Protein Sequence Features
+
+Some Content Here.
+
+## Supported Drug Molecular Descriptors and Fingerprints
+
+Some Content Here.
+
+## Links
+
+  * CRAN Page: http://cran.r-project.org/web/packages/Rcpi/
+
+  * Track Devel: https://github.com/road2stat/Rcpi
+
+  * Report Bugs: https://github.com/road2stat/Rcpi/issues
+
+## Contact
+
+  * Xiao Nan <road2stat@gmail.com>
+
+  * Dongsheng Cao <oriental-cds@163.com>
+
+  * Qingsong Xu <dasongxu@gmail.com>
+

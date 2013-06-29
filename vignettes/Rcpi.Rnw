@@ -1,0 +1,80 @@
+\documentclass[shortnames,nojss,article]{jss}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tablefootnote}
+%\VignetteIndexEntry{Rcpi: Analysis Compound-Protein Interactions with R}
+%\VignetteKeywords{R, Rcpi, protein sequence, amino acid, feature extraction}
+%\VignettePackage{Rcpi}
+
+\author{Xiao Nan\\Central South University \And 
+        Dongsheng Cao\\Central South University \AND
+        Qingsong Xu\\Central South University}
+\Plainauthor{Xiao Nan, Dongsheng Cao, Qingsong Xu}
+
+\title{\pkg{Rcpi}: Analysis Compound-Protein Interactions with \proglang{R}}
+\Plaintitle{Rcpi: Analysis Compound-Protein Interactions with R}
+
+\Abstract{
+  Abstract here.
+}
+
+\Keywords{\proglang{R}, Rcpi, protein sequence, amino acid, feature extraction}
+\Plainkeywords{R, Rcpi, protein sequence, amino acid, feature extraction}
+
+\Volume{xx}
+\Issue{x}
+\Month{Xxxxx}
+\Year{2012}
+\Submitdate{2012-xx-xx}
+\Acceptdate{2012-xx-xx}
+
+\Address{
+  Xiao Nan \\
+  School of Math Science \& Statistics\\
+  Central South University\\
+  Changsha, Hunan, P. R. China\\
+  E-mail: \email{road2stat@gmail.com}\\
+  URL: \url{http://www.road2stat.com/}\\
+
+  Dongsheng Cao\\
+  School of Chemistry \& Chemical Engineering\\
+  Central South University\\
+  Changsha, Hunan, P. R. China\\
+  E-mail: \email{oriental-cds@163.com}\\
+  URL: \url{http://cbdd.csu.edu.cn/}
+  
+  Qingsong Xu\\
+  School of Math Science \& Statistics\\
+  Central South University\\
+  Changsha, Hunan, P. R. China\\
+  E-mail: \email{dasongxu@gmail.com}\\
+  
+}
+
+%
+<<prelim,echo=FALSE,print=FALSE>>=
+Rcpi.version = '1.0'
+now.date = strftime(Sys.Date(), "%Y-%m-%d")
+@
+%
+
+\begin{document}
+
+\section{Introduction}\label{sec:intro}
+
+The \pkg{Rcpi} package \citep{CRAN:Rcpi} presented in this article implemented most of the state-of-the-art protein sequence feature extraction methods with \proglang{R}. Several self-explanatory examples have been included to illustrate the benefits of using \pkg{Rcpi}. Many more examples are available within the package.
+
+The \pkg{Rcpi} package is available from the Comprehensive \proglang{R} Archive Network (CRAN) now, visit \url{http://CRAN.R-project.org/package=Rcpi} for more details. This vignette corresponds to \pkg{Rcpi} version \Sexpr{Rcpi.version} and was typeset on \Sexpr{now.date}.
+
+\section*{Acknowledgments}
+
+To be added.
+
+\nocite{*} % list uncited bibs
+\bibliography{Rcpi}
+
+\vspace*{-0.35cm}
+
+\end{document}
+

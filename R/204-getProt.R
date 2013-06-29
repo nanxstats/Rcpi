@@ -1,0 +1,3 @@
+getProt = function () {
+  
+}

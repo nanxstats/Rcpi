@@ -1,0 +1,68 @@
+\name{readFASTA}
+\alias{readFASTA}
+\title{Read Protein Sequences in FASTA Format}
+\usage{
+  readFASTA(file = system.file("protseq/P00750.fasta", package = "Rcpi"),
+    legacy.mode = TRUE, seqonly = FALSE)
+}
+\arguments{
+  \item{file}{The name of the file which the sequences in
+  fasta format are to be read from. If it does not contain
+  an absolute or relative path, the file name is relative
+  to the current working directory, \code{\link{getwd}}.
+  The default here is to read the \code{P00750.fasta} file
+  which is present in the \code{protseq} directory of the
+  Rcpi package.}
+
+  \item{legacy.mode}{If set to \code{TRUE}, lines starting
+  with a semicolon ';' are ignored. Default value is
+  \code{TRUE}.}
+
+  \item{seqonly}{If set to \code{TRUE}, only sequences as
+  returned without attempt to modify them or to get their
+  names and annotations (execution time is divided
+  approximately by a factor 3). Default value is
+  \code{FALSE}.}
+}
+\value{
+  The result character vector
+
+  The three returned argument are just different forms of
+  the same output. If one is interested in a Mahalanobis
+  metric over the original data space, the first argument
+  is all she/he needs. If a transformation into another
+  space (where one can use the Euclidean metric) is
+  preferred, the second returned argument is sufficient.
+  Using A and B is equivalent in the following sense.
+}
+\description{
+  Read Protein Sequences in FASTA Format
+}
+\details{
+  This function reads protein sequences in FASTA format.
+}
+\note{
+  Note that any different sets of instances (chunklets),
+  e.g. {1, 3, 7} and {4, 6}, might belong to the same class
+  and might belong to different classes.
+}
+\examples{
+P00750 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))
+}
+\author{
+  Xiao Nan <\url{http://www.road2stat.com}>
+}
+\references{
+  Pearson, W.R. and Lipman, D.J. (1988) Improved tools for
+  biological sequence comparison. \emph{Proceedings of the
+  National Academy of Sciences of the United States of
+  America}, \bold{85}: 2444-2448
+}
+\seealso{
+  See \code{\link{getUniProt}} for retrieving protein
+  sequences from uniprot.org
+}
+\keyword{FASTA}
+\keyword{Rcpi}
+\keyword{readFASTA}
+
