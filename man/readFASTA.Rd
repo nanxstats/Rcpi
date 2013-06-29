@@ -26,14 +26,6 @@
 }
 \value{
   The result character vector
-
-  The three returned argument are just different forms of
-  the same output. If one is interested in a Mahalanobis
-  metric over the original data space, the first argument
-  is all she/he needs. If a transformation into another
-  space (where one can use the Euclidean metric) is
-  preferred, the second returned argument is sufficient.
-  Using A and B is equivalent in the following sense.
 }
 \description{
   Read Protein Sequences in FASTA Format

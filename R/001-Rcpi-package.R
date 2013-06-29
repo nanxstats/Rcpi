@@ -1,6 +1,6 @@
-#' Compound-Protein Interaction
+#' Analysis Compound-Protein Interaction with R
 #'
-#' The Rcpi package aims for ...
+#' The Rcpi package aims for sth.
 #' The package is developed by Computational Biology and 
 #' Drug Design Group, Central South University.
 #'
@@ -27,12 +27,12 @@
 #' The associated website for this package:
 #' \url{http://cbdd.csu.edu.cn/Rcpi/}
 #'
-#' @seealso See \code{\link{read.csv}} for details.
+#' @seealso See \code{\link{Rcpi}} for details.
 #' 
-#' @keywords Rcpi package drug design compound protein sequence 
+#' @keywords Rcpi drug design compound protein sequence 
 #'           feature extraction descriptors fingerprint
 #'           network graph rcdk protr interaction
-#'           chemoinformatics bioinforamtics chemogenomics
+#'           chemoinformatics bioinforamtics
 #' 
 #' @example inst/examples/Rcpi-package-ex.R
 NULL

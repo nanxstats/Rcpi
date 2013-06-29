@@ -8,9 +8,9 @@ Author: Xiao Nan <road2stat@gmail.com>, Dongsheng Cao <oriental-cds@163.com>,
 Maintainer: Xiao Nan <road2stat@gmail.com>
 Description: The Rcpi package supports the analysis of compound-protein
     interactions with R. Rcpi supports retrieving protein sequence data from
-    UniProt and KEGG, retrieving drug molecular data from PubChem, ChEMBL, CAS,
-    KEGG and DrugBank. Rcpi offers the functionalities of protein sequence
-    feature extraction, calculating drug molecular descriptors and
+    UniProt, KEGG and RCSB PDB, retrieving drug molecular data from PubChem,
+    ChEMBL, CAS, KEGG and DrugBank. Rcpi offers the functionalities of protein
+    sequence feature extraction, calculating drug molecular descriptors and
     fingerprints, and integrate the whole process all in one. All the users
     need to do, is providing the pair input of the drug and protein IDs.
 License: BSD
@@ -22,12 +22,6 @@ Depends:
     RCurl
 Collate:
     '001-Rcpi-package.R'
-    '101-getDrugPubChem.R'
-    '102-getDrugChEMBL.R'
-    '103-getDrugCAS.R'
-    '104-getDrugKEGG.R'
-    '105-getDrugDrugBank.R'
-    '201-getProtUniProt.R'
     '401-extractAAC.R'
     '402-extractDC.R'
     '403-extractTC.R'
@@ -45,7 +39,13 @@ Collate:
     '501-readFASTA.R'
     '503-protcheck.R'
     '504-protseg.R'
+    '101-getDrugPubChem.R'
+    '102-getDrugChEMBL.R'
+    '103-getDrugCAS.R'
+    '104-getDrugKEGG.R'
+    '105-getDrugDrugBank.R'
     '106-getDrug.R'
+    '201-getProtUniProt.R'
     '202-getProtKEGG.R'
     '203-getProtRCSBPDB.R'
     '204-getProt.R'

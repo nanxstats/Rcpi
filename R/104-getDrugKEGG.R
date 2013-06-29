@@ -8,6 +8,20 @@ getMolFromKEGG = function (id, parallel = 5) {
   
   MolTxt = getURLAsynchronous(url = MolURL, perform = parallel)
   
+  return(MolTxt)
+  
+}
+
+
+
+getSmiFromKEGG = function (id, parallel = 5) {
+  
+  # example id     : D00496 (Penicillamine)
+  # example url    : http://rest.kegg.jp/get/D00496/mol
+  # KEGG API Intro : http://www.kegg.jp/kegg/rest/keggapi.html
+  
+  MolTxt = getMolFromKEGG(id, parallel)
+  
   # rcdk::load.molecules() only loads files on the disk
   # so we have to do this
   tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'mol')

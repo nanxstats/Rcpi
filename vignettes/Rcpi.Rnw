@@ -31,7 +31,7 @@
 
 \Address{
   Xiao Nan \\
-  School of Math Science \& Statistics\\
+  School of Mathematics and Statistics\\
   Central South University\\
   Changsha, Hunan, P. R. China\\
   E-mail: \email{road2stat@gmail.com}\\
@@ -45,7 +45,7 @@
   URL: \url{http://cbdd.csu.edu.cn/}
   
   Qingsong Xu\\
-  School of Math Science \& Statistics\\
+  School of Mathematics and Statistics\\
   Central South University\\
   Changsha, Hunan, P. R. China\\
   E-mail: \email{dasongxu@gmail.com}\\

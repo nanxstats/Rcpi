@@ -2,10 +2,10 @@
 \name{Rcpi-package}
 \alias{Rcpi}
 \alias{Rcpi-package}
-\title{Compound-Protein Interaction}
+\title{Analysis Compound-Protein Interaction with R}
 \description{
-  The Rcpi package aims for ... The package is developed by
-  Computational Biology and Drug Design Group, Central
+  The Rcpi package aims for sth. The package is developed
+  by Computational Biology and Drug Design Group, Central
   South University.
 }
 \details{
@@ -33,10 +33,9 @@ NULL
   \url{http://cbdd.csu.edu.cn/Rcpi/}
 }
 \seealso{
-  See \code{\link{read.csv}} for details.
+  See \code{\link{Rcpi}} for details.
 }
 \keyword{bioinforamtics}
-\keyword{chemogenomics}
 \keyword{chemoinformatics}
 \keyword{compound}
 \keyword{descriptors}
@@ -48,7 +47,6 @@ NULL
 \keyword{graph}
 \keyword{interaction}
 \keyword{network}
-\keyword{package}
 \keyword{protein}
 \keyword{protr}
 \keyword{rcdk}
