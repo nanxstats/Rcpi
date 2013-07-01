@@ -19,10 +19,9 @@ BugReports: https://github.com/road2stat/Rcpi/issues
 Depends:
     protr,
     RCurl,
-    rcdk,
-    rjson
+    rjson,
+    rcdk
 Collate:
-    '401-extractAAC.R'
     '001-Rcpi-package.R'
     '101-getDrugPubChem.R'
     '102-getDrugChEMBL.R'
@@ -34,15 +33,16 @@ Collate:
     '202-getProtKEGG.R'
     '203-getProtRCSBPDB.R'
     '204-getProt.R'
+    '401-extractAAC.R'
     '402-extractDC.R'
-    '403-extractTC.R'
+    '403-extractTriC.R'
     '404-extractMoreauBroto.R'
     '405-extractMoran.R'
     '406-extractGeary.R'
     '407-extractCTDC.R'
     '408-extractCTDT.R'
     '409-extractCTDD.R'
-    '410-extractCTriad.R'
+    '410-extractConTriad.R'
     '411-extractSOCN.R'
     '412-extractQSO.R'
     '413-extractPAAC.R'

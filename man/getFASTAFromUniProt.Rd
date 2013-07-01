@@ -1,12 +1,13 @@
 \name{getFASTAFromUniProt}
 \alias{getFASTAFromUniProt}
-\alias{getUniProt}
 \title{Get Protein Sequences from UniProt by Protein ID}
 \usage{
   getFASTAFromUniProt(id, parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the protein ID(s).}
+
+  \item{parallel}{The parallel threads, default is 5.}
 }
 \value{
   A list, each component contains one of the protein
@@ -21,7 +22,7 @@
 }
 \examples{
 ids = c('P00750', 'P00751', 'P00752')
-\dontrun{getUniProt(ids)}
+\dontrun{getFASTAFromUniProt(ids)}
 }
 \author{
   Xiao Nan <\url{http://www.road2stat.com}>
@@ -33,6 +34,6 @@ ids = c('P00750', 'P00751', 'P00752')
   See \code{\link{readFASTA}} for reading FASTA format
   files.
 }
-\keyword{getUniProt}
+\keyword{getFASTAFromUniProt}
 \keyword{UniProt}
 

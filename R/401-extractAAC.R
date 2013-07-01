@@ -14,7 +14,7 @@
 #' 
 #' @author Xiao Nan <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{extractDC}} and \code{\link{extractTC}} 
+#' @seealso See \code{\link{extractDC}} and \code{\link{extractTriC}} 
 #'          for Dipeptide Composition and Tripeptide Composition descriptors.
 #' 
 #' @export extractAAC

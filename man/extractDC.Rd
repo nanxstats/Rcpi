@@ -32,9 +32,9 @@ extractDC(x)
   2004, 279, 23262.
 }
 \seealso{
-  See \code{\link{extractAAC}} and \code{\link{extractTC}}
-  for Amino Acid Composition and Tripeptide Composition
-  descriptors.
+  See \code{\link{extractAAC}} and
+  \code{\link{extractTriC}} for Amino Acid Composition and
+  Tripeptide Composition descriptors.
 }
 \keyword{Composition}
 \keyword{DC}

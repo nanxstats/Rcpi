@@ -1,8 +1,8 @@
-\name{extractCTriad}
-\alias{extractCTriad}
+\name{extractConTriad}
+\alias{extractConTriad}
 \title{Conjoint Triad Descriptor}
 \usage{
-  extractCTriad(x)
+  extractConTriad(x)
 }
 \arguments{
   \item{x}{A character vector, as the input protein
@@ -20,7 +20,7 @@
 }
 \examples{
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
-extractCTriad(x)
+extractConTriad(x)
 }
 \author{
   Xiao Nan <\url{http://www.road2stat.com}>
@@ -33,8 +33,8 @@ extractCTriad(x)
   007, 104, 4337-4341.
 }
 \keyword{Conjoint}
-\keyword{CTriad}
+\keyword{ConTriad}
 \keyword{extract}
-\keyword{extractCTriad}
+\keyword{extractConTriad}
 \keyword{Triad}
 

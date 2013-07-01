@@ -32,7 +32,7 @@ extractAAC(x)
   2004, 279, 23262.
 }
 \seealso{
-  See \code{\link{extractDC}} and \code{\link{extractTC}}
+  See \code{\link{extractDC}} and \code{\link{extractTriC}}
   for Dipeptide Composition and Tripeptide Composition
   descriptors.
 }

@@ -1,8 +1,8 @@
-\name{extractTC}
-\alias{extractTC}
+\name{extractTriC}
+\alias{extractTriC}
 \title{Tripeptide Composition Descriptor}
 \usage{
-  extractTC(x)
+  extractTriC(x)
 }
 \arguments{
   \item{x}{A character vector, as the input protein
@@ -20,7 +20,7 @@
 }
 \examples{
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
-extractTC(x)
+extractTriC(x)
 }
 \author{
   Xiao Nan <\url{http://www.road2stat.com}>
@@ -38,7 +38,7 @@ extractTC(x)
 }
 \keyword{Composition}
 \keyword{extract}
-\keyword{extractTC}
-\keyword{TC}
+\keyword{extractTriC}
+\keyword{TriC}
 \keyword{Tripeptide}
 

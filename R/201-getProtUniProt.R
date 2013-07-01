@@ -6,24 +6,26 @@
 #' 
 #' @param id A character vector, as the protein ID(s). 
 #'
+#' @param parallel The parallel threads, default is 5.
+#'
 #' @return A list, each component contains one of the protein sequences. 
 #' 
-#' @keywords UniProt getUniProt
+#' @keywords UniProt getFASTAFromUniProt
 #'
-#' @aliases getUniProt
+#' @aliases getFASTAFromUniProt
 #' 
 #' @author Xiao Nan <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{readFASTA}} for reading FASTA format files.
 #' 
-#' @export getUniProt
+#' @export getFASTAFromUniProt
 #' 
 #' @references
 #' UniProt. \url{http://www.uniprot.org/}
 #' 
 #' @examples
 #' ids = c('P00750', 'P00751', 'P00752')
-#' \dontrun{getUniProt(ids)}
+#' \dontrun{getFASTAFromUniProt(ids)}
 #' 
 
 getFASTAFromUniProt = function (id, parallel = 5) {
