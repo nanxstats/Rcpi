@@ -41,9 +41,11 @@ extractTriC = function (x) {
   # DCDict = as.vector((outer(AADict, AADict, paste, sep = '')))
   # TCDict = as.vector((outer(DCDict, AADict, paste, sep = '')))
   
-  zzz = environment()
+  # To pass R CMD check
   
-  load(system.file('sysdata/TCDict.rda', package = 'Rcpi'), envir = zzz)
+  TCDict = NULL
+  
+  load(system.file('sysdata/TCDict.rda', package = 'Rcpi'))
   
   xSplitted = strsplit(x, split = '')[[1]]
   n  = nchar(x)

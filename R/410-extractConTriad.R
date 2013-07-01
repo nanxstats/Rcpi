@@ -56,10 +56,12 @@ extractConTriad = function (x) {
   # 
   # CTDict = unlist(CTDict)
   
-  zzz = environment()
+  # To pass R CMD check
+  CTDict = NULL
+  CTIndex = NULL
   
-  load(system.file('sysdata/CTDict.rda', package = 'Rcpi'), envir = zzz)
-  load(system.file('sysdata/CTIndex.rda', package = 'Rcpi'), envir = zzz)
+  load(system.file('sysdata/CTDict.rda', package = 'Rcpi'))
+  load(system.file('sysdata/CTIndex.rda', package = 'Rcpi'))
   
   xSplitted = strsplit(x, split = '')[[1]]
   n  = nchar(x)
