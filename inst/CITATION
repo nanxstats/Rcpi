@@ -8,7 +8,7 @@ citEntry(entry = "Manual",
 title = "Rcpi: Analysis Compound-Protein Interactions with R",
 author = personList(as.person("Xiao Nan"),
                     as.person("Dongsheng Cao"),
-                    as.person("Qingsong Xu"),
+                    as.person("Qingsong Xu")),
               year = year,
               note = vers,
 

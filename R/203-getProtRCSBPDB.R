@@ -11,6 +11,8 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
   
 }
 
+
+
 getSeqFromRCSBPDB = function (id, parallel = 5) {
   
   # example id : 4HHB

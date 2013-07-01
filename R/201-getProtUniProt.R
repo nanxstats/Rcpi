@@ -26,22 +26,35 @@
 #' \dontrun{getUniProt(ids)}
 #' 
 
-getUniProt = function (id) {
+getFASTAFromUniProt = function (id, parallel = 5) {
   
-  id = as.character(id)
+  # example id:  P00750
+  # example url: http://www.uniprot.org/uniprot/P00750.fasta
   
-  n = length(id)
+  fastaURL = paste0('http://www.uniprot.org/uniprot/', id, '.fasta')
   
-  proteins = vector('list', n)
+  fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
   
-  # API format:
-  # http://www.uniprot.org/uniprot/P00750.fasta
+  return(fastaTxt)
   
-  for (i in 1:n) {
-    proteins[[i]] = readFASTA(paste('http://www.uniprot.org/uniprot/', 
-                                    id[i], '.fasta', sep = ''))[[1]]
-  }
+}
+
+
+
+getSeqFromUniProt = function (id, parallel = 5) {
   
-  return(proteins)
+  # example id:  P00750
+  # example url: http://www.uniprot.org/uniprot/P00750.fasta
+  
+  fastaTxt = getFASTAFromUniProt(id, parallel)
+  
+  tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'fasta')
+  for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])
+  
+  AASeq = lapply(tmpfile, readFASTA)
+  
+  unlink(tmpfile)
+  
+  return(AASeq)
   
 }
