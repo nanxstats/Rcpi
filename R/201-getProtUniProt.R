@@ -4,11 +4,11 @@
 #' 
 #' This function get protein sequences from uniprot.org by protein ID(s).
 #' 
-#' @param id A character vector, as the protein ID(s). 
+#' @param id A character vector, as the protein ID(s).
 #'
 #' @param parallel The parallel threads, default is 5.
 #'
-#' @return A list, each component contains one of the protein sequences. 
+#' @return A list, each component contains one of the protein sequences.
 #' 
 #' @keywords UniProt getFASTAFromUniProt
 #'
@@ -22,6 +22,8 @@
 #' 
 #' @references
 #' UniProt. \url{http://www.uniprot.org/}
+#' 
+#' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
 #' 
 #' @examples
 #' ids = c('P00750', 'P00751', 'P00752')
@@ -42,6 +44,38 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 }
 
 
+
+#' Get Protein Sequences from UniProt by Protein ID
+#'
+#' Get Protein Sequences from UniProt by Protein ID
+#' 
+#' This function get protein sequences from uniprot.org by protein ID(s).
+#' 
+#' @param id A character vector, as the protein ID(s). 
+#'
+#' @param parallel The parallel threads, default is 5.
+#'
+#' @return A list, each component contains one of the protein sequences. 
+#' 
+#' @keywords UniProt getSeqFromUniProt
+#'
+#' @aliases getSeqFromUniProt
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @seealso See \code{\link{getFASTAFromUniProt}} for reading FASTA format files.
+#' 
+#' @export getSeqFromUniProt
+#' 
+#' @references
+#' UniProt. \url{http://www.uniprot.org/}
+#' 
+#' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
+#' 
+#' @examples
+#' ids = c('P00750', 'P00751', 'P00752')
+#' \dontrun{getSeqFromUniProt(ids, parallel = 3)}
+#' 
 
 getSeqFromUniProt = function (id, parallel = 5) {
   

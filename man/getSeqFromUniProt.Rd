@@ -1,8 +1,8 @@
-\name{getFASTAFromUniProt}
-\alias{getFASTAFromUniProt}
+\name{getSeqFromUniProt}
+\alias{getSeqFromUniProt}
 \title{Get Protein Sequences from UniProt by Protein ID}
 \usage{
-  getFASTAFromUniProt(id, parallel = 5)
+  getSeqFromUniProt(id, parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the protein ID(s).}
@@ -22,7 +22,7 @@
 }
 \examples{
 ids = c('P00750', 'P00751', 'P00752')
-\dontrun{getFASTAFromUniProt(ids)}
+\dontrun{getSeqFromUniProt(ids, parallel = 3)}
 }
 \author{
   Xiao Nan <\url{http://www.road2stat.com}>
@@ -34,9 +34,9 @@ ids = c('P00750', 'P00751', 'P00752')
   \url{http://www.uniprot.org/faq/28}
 }
 \seealso{
-  See \code{\link{readFASTA}} for reading FASTA format
-  files.
+  See \code{\link{getFASTAFromUniProt}} for reading FASTA
+  format files.
 }
-\keyword{getFASTAFromUniProt}
+\keyword{getSeqFromUniProt}
 \keyword{UniProt}
 
