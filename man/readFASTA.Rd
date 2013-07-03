@@ -51,8 +51,8 @@ P00750 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))
   America}, \bold{85}: 2444-2448
 }
 \seealso{
-  See \code{\link{getUniProt}} for retrieving protein
-  sequences from uniprot.org
+  See \code{\link{readPDB}} for reading protein sequences
+  in PDB format
 }
 \keyword{FASTA}
 \keyword{Rcpi}

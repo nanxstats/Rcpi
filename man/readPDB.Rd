@@ -38,7 +38,7 @@ Seq4HHB = readPDB(system.file('protseq/4HHB.pdb', package = 'Rcpi'))
 }
 \seealso{
   See \code{\link{readFASTA}} for reading protein sequences
-  of FASTA format.
+  in FASTA format.
 }
 \keyword{PDB}
 \keyword{Rcpi}

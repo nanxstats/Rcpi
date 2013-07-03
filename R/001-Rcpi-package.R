@@ -37,6 +37,8 @@
 #' @example inst/examples/Rcpi-package-ex.R
 NULL
 
+
+
 #' AAindex Data of 544 Physicochemical and Biological Properties
 #' for 20 Amino Acids
 #' 

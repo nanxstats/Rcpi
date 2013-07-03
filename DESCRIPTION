@@ -17,7 +17,6 @@ License: BSD
 URL: https://github.com/road2stat/Rcpi/
 BugReports: https://github.com/road2stat/Rcpi/issues
 Depends:
-    protr,
     RCurl,
     rjson,
     rcdk
@@ -33,21 +32,21 @@ Collate:
     '202-getProtKEGG.R'
     '203-getProtRCSBPDB.R'
     '204-getProt.R'
-    '401-extractAAC.R'
-    '402-extractDC.R'
-    '403-extractTriC.R'
-    '404-extractMoreauBroto.R'
-    '405-extractMoran.R'
-    '406-extractGeary.R'
-    '407-extractCTDC.R'
-    '408-extractCTDT.R'
-    '409-extractCTDD.R'
-    '410-extractConTriad.R'
-    '411-extractSOCN.R'
-    '412-extractQSO.R'
-    '413-extractPAAC.R'
-    '414-extractAPAAC.R'
+    '401-extractProtAAC.R'
+    '402-extractProtDC.R'
+    '403-extractProtTC.R'
+    '404-extractProtMoreauBroto.R'
+    '405-extractProtMoran.R'
+    '406-extractProtGeary.R'
+    '407-extractProtCTDC.R'
+    '408-extractProtCTDT.R'
+    '409-extractProtCTDD.R'
+    '410-extractProtCTriad.R'
+    '411-extractProtSOCN.R'
+    '412-extractProtQSO.R'
+    '413-extractProtPAAC.R'
+    '414-extractProtAPAAC.R'
     '501-readFASTA.R'
     '502-readPDB.R'
-    '503-protcheck.R'
-    '504-protseg.R'
+    '503-checkProt.R'
+    '504-segProt.R'

@@ -30,8 +30,7 @@
 #' 
 #' @author Xiao Nan <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{getUniProt}} for retrieving protein sequences 
-#'          from uniprot.org
+#' @seealso See \code{\link{readPDB}} for reading protein sequences in PDB format
 #' 
 #' @export readFASTA
 #' 

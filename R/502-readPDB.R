@@ -22,7 +22,7 @@
 #' @author Xiao Nan <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{readFASTA}} for reading protein sequences 
-#'          of FASTA format.
+#'          in FASTA format.
 #' 
 #' @export readPDB
 #' 
