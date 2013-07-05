@@ -1,0 +1,5 @@
+getCPI = function () {
+  
+  return(NULL)
+  
+}

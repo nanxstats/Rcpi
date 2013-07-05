@@ -1,0 +1,5 @@
+readMolFromSmi = function () {
+  
+  return(NULL)
+    
+}
