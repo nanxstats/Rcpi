@@ -37,35 +37,35 @@ getPPI = function (protmat1, protmat2, type = c('combine', 'tensorprod', 'entryw
     
     result = getPPICombine(protmat1, protmat2)
     
-  } else if (all(type == 'tensorprod')) {
-    
-    result = getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1)
-    
-  } else if (all(type == 'entrywise')) {
-    
-    result = getPPIEntry(protmat1, protmat2)
-    
-  } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
-    
-    result = cbind(getPPICombine(protmat1, protmat2), getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1))
-    
-  } else if (length(setdiff(type, c('tensorprod', 'entrywise'))) == 0L) {
-    
-    result = cbind(getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), getPPIEntry(protmat1, protmat2))
-    
-  } else if (length(setdiff(type, c('combine', 'entrywise'))) == 0L) {
-    
-    result = cbind(getPPICombine(protmat1, protmat2), getPPIEntry(protmat1, protmat2))
-    
-  } else if (length(setdiff(type, c('tensorprod', 'combine', 'entrywise'))) == 0L) {
-    
-    result = cbind(getPPICombine(protmat1, protmat2), getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), getPPIEntry(protmat1, protmat2))
-    
-  } else {
-    
-    stop('Interaction type must be in "tensorprod", "combine" and "entrywise"')
-    
-  }
+    } else if (all(type == 'tensorprod')) {
+      
+      result = getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1)
+      
+      } else if (all(type == 'entrywise')) {
+        
+        result = getPPIEntry(protmat1, protmat2)
+        
+        } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
+          
+          result = cbind(getPPICombine(protmat1, protmat2), getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1))
+          
+          } else if (length(setdiff(type, c('tensorprod', 'entrywise'))) == 0L) {
+            
+            result = cbind(getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), getPPIEntry(protmat1, protmat2))
+            
+            } else if (length(setdiff(type, c('combine', 'entrywise'))) == 0L) {
+              
+              result = cbind(getPPICombine(protmat1, protmat2), getPPIEntry(protmat1, protmat2))
+              
+              } else if (length(setdiff(type, c('tensorprod', 'combine', 'entrywise'))) == 0L) {
+                
+                result = cbind(getPPICombine(protmat1, protmat2), getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), getPPIEntry(protmat1, protmat2))
+                
+                } else {
+                  
+                  stop('Interaction type must be in "tensorprod", "combine" and "entrywise"')
+                
+                }
   
   return(result)
   

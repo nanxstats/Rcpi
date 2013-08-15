@@ -1,6 +1,10 @@
 inner = function (a, b, f, ...) {
+  
+  # For computing column-by-column (pseudo)-tensor product type interactions
+  
   f = match.fun(f)
-  apply(b, 2, function(x) apply(a, 1, function(y) f(x, y, ...)))
+  apply(b, 2, function (x) apply(a, 1, function (y) f(x, y, ...)))
+
 }
 
 getCPICombine = function (drugmat, protmat) {
@@ -34,19 +38,19 @@ getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
     
     result = getCPICombine(drugmat, protmat)
     
-  } else if (all(type == 'tensorprod')) {
-    
-    result = getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol)
-    
-  } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
-    
-    result = cbind(getCPICombine(drugmat, protmat), getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol))
-    
-  } else {
-    
-    stop('Interaction type must be in "tensorprod" and "combine" or both')
-    
-  }
+    } else if (all(type == 'tensorprod')) {
+      
+      result = getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol)
+      
+      } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
+        
+        result = cbind(getCPICombine(drugmat, protmat), getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol))
+        
+        } else {
+          
+          stop('Interaction type must be in "tensorprod" and "combine" or both')
+        
+        }
   
   return(result)
   
@@ -62,15 +66,3 @@ getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
 # getCPI(x, y, type = c('combine', 'tensorprod'))
 # getCPI(x, y, type = c('tensorprod', 'combine'))
 # getCPI(x, y, type = c('cbm'))
-
-## column-by-column (pseudo)-tensor product interactions
-## 
-# x = matrix(1:10, ncol = 2)
-# y = matrix(1:15, ncol = 3)
-# 
-# inner = function (a, b, f, ...) {
-#   f = match.fun(f)
-#   apply(b, 2, function(x) apply(a, 1, function(y) f(x, y, ...)))
-# }
-# 
-# array(inner(t(x), y, '*'), c(5, 6))
