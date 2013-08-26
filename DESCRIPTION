@@ -1,6 +1,6 @@
 Package: Rcpi
 Type: Package
-Title: Analysis Compound-Protein Interactions with R
+Title: Compound-Protein Interactions with R
 Version: 1.0
 Date: 2013-06-26
 Author: Xiao Nan <road2stat@gmail.com>, Dongsheng Cao <oriental-cds@163.com>,
@@ -32,6 +32,7 @@ Collate:
     '202-getProtKEGG.R'
     '203-getProtRCSBPDB.R'
     '204-getProt.R'
+    '300-extractDrugAIO.R'
     '301-extractDrugALOGP.R'
     '302-extractDrugApol.R'
     '303-extractDrugAcidicGroupCount.R'

@@ -2,8 +2,7 @@
 \usepackage{booktabs}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{tablefootnote}
-%\VignetteIndexEntry{Rcpi: Analysis Compound-Protein Interactions with R}
+%\VignetteIndexEntry{Rcpi: Compound-Protein Interactions with R}
 %\VignetteKeywords{R, Rcpi, protein sequence, amino acid, feature extraction}
 %\VignettePackage{Rcpi}
 
@@ -12,8 +11,8 @@
         Qingsong Xu\\Central South University}
 \Plainauthor{Xiao Nan, Dongsheng Cao, Qingsong Xu}
 
-\title{\pkg{Rcpi}: Analysis Compound-Protein Interactions with \proglang{R}}
-\Plaintitle{Rcpi: Analysis Compound-Protein Interactions with R}
+\title{\pkg{Rcpi}: Compound-Protein Interactions with \proglang{R}}
+\Plaintitle{Rcpi: Compound-Protein Interactions with R}
 
 \Abstract{
   Abstract here.
@@ -60,6 +59,7 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
 %
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
 \section{Introduction}\label{sec:intro}
 
