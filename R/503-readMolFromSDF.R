@@ -1,11 +1,18 @@
-readMolFromSDF = function () {
+# Read molecule(s) by SDF file and return parsed Java molecular object
+# 
+# Input: vector containing sdf file name(s)
+# Output: a list containing parsed Java molecular object
+
+# # Examples
+# readMolFromSDF('/Users/jimmy/Rpkg/Rcpi-support/DB00859.sdf')
+# readMolFromSDF(c('/Users/jimmy/Rpkg/Rcpi-support/DB00859.sdf', '/Users/jimmy/Rpkg/Rcpi-support/DB00860.sdf'))
+
+readMolFromSDF = function (sdffile) {
   
-  return(NULL)
-
+  txt = rcdk::load.molecules(sdffile)
+  smi = sapply(txt, get.smiles)
+  mol = rcdk::parse.smiles(smi)
+  
+  return(mol)
+  
 }
-
-
-# require(rcdk)
-# smi = c('CCC', 'c1ccccc1', 'C(C)(C=O)C(CCNC)C1CC1C(=O)')
-# mol = rcdk::parse.smiles(smi[1])
-# mols = rcdk::parse.smiles(smi)
