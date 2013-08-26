@@ -6,7 +6,7 @@ extractDrugBondCount = function (molecules, silent = TRUE) {
   
   x = rcdk::eval.desc(molecules, 
                       'org.openscience.cdk.qsar.descriptors.molecular.BondCountDescriptor', 
-                      verbose = FALSE)
+                      verbose = !silent)
   
   return(x)
   

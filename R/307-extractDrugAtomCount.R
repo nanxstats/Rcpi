@@ -6,7 +6,7 @@ extractDrugAtomCount = function (molecules, silent = TRUE) {
   
   x = rcdk::eval.desc(molecules, 
                       'org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor', 
-                      verbose = FALSE)
+                      verbose = !silent)
   
   return(x)
   

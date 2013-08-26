@@ -19,7 +19,7 @@ extractDrugChiPathCluster = function (molecules, silent = TRUE) {
   
   x = rcdk::eval.desc(molecules, 
                       'org.openscience.cdk.qsar.descriptors.molecular.ChiPathClusterDescriptor', 
-                      verbose = FALSE)
+                      verbose = !silent)
   
   return(x)
   

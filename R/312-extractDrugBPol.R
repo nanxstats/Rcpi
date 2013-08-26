@@ -6,7 +6,7 @@ extractDrugBPol = function (molecules, silent = TRUE) {
   
   x = rcdk::eval.desc(molecules, 
                       'org.openscience.cdk.qsar.descriptors.molecular.BPolDescriptor', 
-                      verbose = FALSE)
+                      verbose = !silent)
   
   return(x)
   

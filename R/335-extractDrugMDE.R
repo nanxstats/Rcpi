@@ -9,7 +9,7 @@ extractDrugMDE = function (molecules, silent = TRUE) {
   
   x = rcdk::eval.desc(molecules, 
                       'org.openscience.cdk.qsar.descriptors.molecular.MDEDescriptor', 
-                      verbose = FALSE)
+                      verbose = !silent)
   
   return(x)
   

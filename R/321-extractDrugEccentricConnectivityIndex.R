@@ -12,7 +12,7 @@ extractDrugEccentricConnectivityIndex = function (molecules, silent = TRUE) {
   
   x = rcdk::eval.desc(molecules, 
                       'org.openscience.cdk.qsar.descriptors.molecular.EccentricConnectivityIndexDescriptor', 
-                      verbose = FALSE)
+                      verbose = !silent)
   
   return(x)
   
