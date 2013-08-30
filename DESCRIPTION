@@ -115,4 +115,3 @@ Collate:
     '601-getCPI.R'
     '602-getPPI.R'
     '701-calcDrugSim.R'
-    '702-calcProtSim.R'
