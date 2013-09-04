@@ -2,13 +2,22 @@
 \name{Rcpi-package}
 \alias{Rcpi}
 \alias{Rcpi-package}
-\title{Analysis Compound-Protein Interaction with R}
+\title{Compound-Protein Interaction with R}
 \description{
-  The Rcpi package aims for sth. The package is developed
-  by Computational Biology and Drug Design Group, Central
-  South University.
+  The Rcpi package provides easily accessible functions for
+  retrieving molecule data from PubChem, ChEMBL, CAS, KEGG,
+  DrugBank, and protein sequences from UniProt, KEGG and
+  RCSBPDB. Rcpi calculates 14 types of descriptors for
+  protein sequences, 50 kinds of molecular descriptors, 9
+  kinds of molecular fingerprints and computing their
+  similarities. Rcpi facilitates the compound-protein
+  interaction and protein-protein interaction via 3 types
+  of feature combination.
 }
 \details{
+  The package is developed by Computational Biology and
+  Drug Design Group, Central South University.
+
   \tabular{ll}{ Package: \tab Rcpi\cr Type: \tab Package\cr
   Version: \tab 1.0\cr License: \tab BSD\cr }
 }
