@@ -32,7 +32,7 @@
 }
 \details{
   This function retrieves drug molecules in MOL and SMILES
-  format from the five databases.
+  format from five databases.
 }
 \examples{
 \dontrun{
@@ -44,7 +44,7 @@ getDrug(id, 'drugbank', 'smile')}
 }
 \seealso{
   See \code{\link{getProt}} for retrieving protein
-  sequences from the databases.
+  sequences from three databases.
 }
 \keyword{getDrug}
 

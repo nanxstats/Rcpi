@@ -1,8 +1,8 @@
-\name{getSeqFromUniProt}
-\alias{getSeqFromUniProt}
-\title{Retrieve Protein Sequence from the UniProt Database}
+\name{getSeqFromKEGG}
+\alias{getSeqFromKEGG}
+\title{Retrieve Protein Sequence from the KEGG Database}
 \usage{
-  getSeqFromUniProt(id, parallel = 5)
+  getSeqFromKEGG(id, parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the protein ID.}
@@ -18,32 +18,25 @@
   represented by amino acid sequence(s).
 }
 \description{
-  Retrieve Protein Sequence from the UniProt Database
+  Retrieve Protein Sequence from the KEGG Database
 }
 \details{
   This function retrieves protein represented by amino acid
-  sequence from the UniProt database.
+  sequence from the KEGG database.
 }
 \examples{
 \dontrun{
-id = c('P00750', 'P00751', 'P00752')
-getSeqFromUniProt(id)}
+id = c('hsa:10161', 'hsa:10162')
+getSeqFromKEGG(id)}
 }
 \author{
   Xiao Nan <\url{http://www.road2stat.com}>
 }
-\references{
-  UniProt. \url{http://www.uniprot.org/}
-
-  UniProt REST API Documentation.
-  \url{http://www.uniprot.org/faq/28}
-}
 \seealso{
-  See \code{\link{getFASTAFromUniProt}} for retrieving
-  protein sequence in FASTA format from the UniProt
-  database.
+  See \code{\link{getFASTAFromKEGG}} for retrieving protein
+  sequence in FASTA format from the KEGG database.
 }
 \keyword{getProt}
-\keyword{getSeqFromUniProt}
-\keyword{UniProt}
+\keyword{getSeqFromKEGG}
+\keyword{KEGG}
 

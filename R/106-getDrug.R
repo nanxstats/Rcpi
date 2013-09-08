@@ -2,7 +2,7 @@
 #'
 #' Retrieve Drug Molecules in MOL and SMILES Format from Databases
 #' 
-#' This function retrieves drug molecules in MOL and SMILES format from the five databases.
+#' This function retrieves drug molecules in MOL and SMILES format from five databases.
 #' 
 #' @param id A character vector, as the drug ID(s).
 #' @param from The database, one of \code{'pubchem'}, \code{'chembl'}, \code{'cas'}, 
@@ -20,7 +20,7 @@
 #' 
 #' @author Xiao Nan <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{getProt}} for retrieving protein sequences from the databases.
+#' @seealso See \code{\link{getProt}} for retrieving protein sequences from three databases.
 #' 
 #' @export getDrug
 #' 

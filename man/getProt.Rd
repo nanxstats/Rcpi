@@ -1,0 +1,49 @@
+\name{getProt}
+\alias{getProt}
+\title{Retrieve Protein Sequence in various Formats from Databases}
+\usage{
+  getProt(id, from = c("uniprot", "kegg", "pdb"),
+    type = c("fasta", "pdb", "aaseq"), parallel = 5)
+}
+\arguments{
+  \item{id}{A character vector, as the protein ID(s).}
+
+  \item{from}{The database, one of \code{'uniprot'},
+  \code{'kegg'}, \code{'pdb'}.}
+
+  \item{type}{The returned protein format, one of
+  \code{fasta}, \code{pdb}, \code{aaseq}.}
+
+  \item{parallel}{An integer, the parallel parameter,
+  indicates how many process the user would like to use for
+  retrieving the data (using RCurl), default is \code{5}.
+  For regular cases, we recommend a number less than
+  \code{20}.}
+}
+\value{
+  A length of \code{id} character list, each element
+  containing the corresponding protein sequence(s) or
+  file(s).
+}
+\description{
+  Retrieve Protein Sequence in various Formats from
+  Databases
+}
+\details{
+  This function retrieves protein sequence in various
+  formats from three databases.
+}
+\examples{
+\dontrun{
+id = c('P00750', 'P00751', 'P00752')
+getProt(id, from = 'uniprot', type = 'aaseq')}
+}
+\author{
+  Xiao Nan <\url{http://www.road2stat.com}>
+}
+\seealso{
+  See \code{\link{getDrug}} for retrieving drug molecules
+  from five databases.
+}
+\keyword{getProt}
+

@@ -1,3 +1,34 @@
+#' Retrieve Protein Sequence in FASTA Format from the KEGG Database
+#'
+#' Retrieve Protein Sequence in FASTA Format from the KEGG Database
+#' 
+#' This function retrieves protein sequences in FASTA format from the KEGG database.
+#' 
+#' @param id A character vector, as the protein ID.
+#' @param parallel An integer, the parallel parameter, indicates how many process 
+#'                 the user would like to use for retrieving the data (using RCurl), 
+#'                 default is \code{5}. For regular cases, we recommend a number less than \code{20}.
+#'
+#' @return A list, each component contains one of the protein sequences in FASTA format.
+#' 
+#' @keywords getProt getFASTAFromKEGG KEGG
+#'
+#' @aliases getFASTAFromKEGG
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @seealso See \code{\link{getSeqFromKEGG}} for retrieving protein
+#' represented by amino acid sequence from the KEGG database.
+#' See \code{\link{readFASTA}} for reading FASTA format files.
+#' 
+#' @export getFASTAFromKEGG
+#' 
+#' @examples
+#' \dontrun{
+#' id = c('hsa:10161', 'hsa:10162')
+#' getFASTAFromKEGG(id)}
+#' 
+
 getFASTAFromKEGG = function (id, parallel = 5) {
   
   # example id : hsa:10161
@@ -11,7 +42,35 @@ getFASTAFromKEGG = function (id, parallel = 5) {
   
 }
 
-
+#' Retrieve Protein Sequence from the KEGG Database
+#'
+#' Retrieve Protein Sequence from the KEGG Database
+#' 
+#' This function retrieves protein represented by amino acid sequence from the KEGG database.
+#' 
+#' @param id A character vector, as the protein ID.
+#' @param parallel An integer, the parallel parameter, indicates how many process 
+#'                 the user would like to use for retrieving the data (using RCurl), 
+#'                 default is \code{5}. For regular cases, we recommend a number less than \code{20}.
+#'
+#' @return A list, each component contains one of the protein represented by amino acid sequence(s).
+#' 
+#' @keywords getProt getSeqFromKEGG KEGG
+#'
+#' @aliases getSeqFromKEGG
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @seealso See \code{\link{getFASTAFromKEGG}} for retrieving protein sequence
+#' in FASTA format from the KEGG database.
+#' 
+#' @export getSeqFromKEGG
+#' 
+#' @examples
+#' \dontrun{
+#' id = c('hsa:10161', 'hsa:10162')
+#' getSeqFromKEGG(id)}
+#' 
 
 getSeqFromKEGG = function (id, parallel = 5) {
   

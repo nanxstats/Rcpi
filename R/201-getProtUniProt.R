@@ -1,22 +1,25 @@
-#' Get Protein Sequences from UniProt by Protein ID
+#' Retrieve Protein Sequence in FASTA Format from the UniProt Database
 #'
-#' Get Protein Sequences from UniProt by Protein ID
+#' Retrieve Protein Sequence in FASTA Format from the UniProt Database
 #' 
-#' This function get protein sequences from uniprot.org by protein ID(s).
+#' This function retrieves protein sequences in FASTA format from the UniProt database.
 #' 
-#' @param id A character vector, as the protein ID(s).
+#' @param id A character vector, as the protein ID.
+#' @param parallel An integer, the parallel parameter, indicates how many process 
+#'                 the user would like to use for retrieving the data (using RCurl), 
+#'                 default is \code{5}. For regular cases, we recommend a number less than \code{20}.
 #'
-#' @param parallel The parallel threads, default is 5.
-#'
-#' @return A list, each component contains one of the protein sequences.
+#' @return A list, each component contains one of the protein sequences in FASTA format.
 #' 
-#' @keywords UniProt getFASTAFromUniProt
+#' @keywords getProt getFASTAFromUniProt UniProt
 #'
 #' @aliases getFASTAFromUniProt
 #' 
 #' @author Xiao Nan <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{readFASTA}} for reading FASTA format files.
+#' @seealso See \code{\link{getSeqFromUniProt}} for retrieving protein
+#' represented by amino acid sequence from the UniProt database.
+#' See \code{\link{readFASTA}} for reading FASTA format files.
 #' 
 #' @export getFASTAFromUniProt
 #' 
@@ -26,8 +29,9 @@
 #' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
 #' 
 #' @examples
-#' ids = c('P00750', 'P00751', 'P00752')
-#' \dontrun{getFASTAFromUniProt(ids)}
+#' \dontrun{
+#' id = c('P00750', 'P00751', 'P00752')
+#' getFASTAFromUniProt(id)}
 #' 
 
 getFASTAFromUniProt = function (id, parallel = 5) {
@@ -43,27 +47,27 @@ getFASTAFromUniProt = function (id, parallel = 5) {
   
 }
 
-
-
-#' Get Protein Sequences from UniProt by Protein ID
+#' Retrieve Protein Sequence from the UniProt Database
 #'
-#' Get Protein Sequences from UniProt by Protein ID
+#' Retrieve Protein Sequence from the UniProt Database
 #' 
-#' This function get protein sequences from uniprot.org by protein ID(s).
+#' This function retrieves protein represented by amino acid sequence from the UniProt database.
 #' 
-#' @param id A character vector, as the protein ID(s). 
+#' @param id A character vector, as the protein ID.
+#' @param parallel An integer, the parallel parameter, indicates how many process 
+#'                 the user would like to use for retrieving the data (using RCurl), 
+#'                 default is \code{5}. For regular cases, we recommend a number less than \code{20}.
 #'
-#' @param parallel The parallel threads, default is 5.
-#'
-#' @return A list, each component contains one of the protein sequences. 
+#' @return A list, each component contains one of the protein represented by amino acid sequence(s).
 #' 
-#' @keywords UniProt getSeqFromUniProt
+#' @keywords getProt getSeqFromUniProt UniProt
 #'
 #' @aliases getSeqFromUniProt
 #' 
 #' @author Xiao Nan <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{getFASTAFromUniProt}} for reading FASTA format files.
+#' @seealso See \code{\link{getFASTAFromUniProt}} for retrieving protein sequence
+#' in FASTA format from the UniProt database.
 #' 
 #' @export getSeqFromUniProt
 #' 
@@ -73,8 +77,9 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
 #' 
 #' @examples
-#' ids = c('P00750', 'P00751', 'P00752')
-#' \dontrun{getSeqFromUniProt(ids, parallel = 3)}
+#' \dontrun{
+#' id = c('P00750', 'P00751', 'P00752')
+#' getSeqFromUniProt(id)}
 #' 
 
 getSeqFromUniProt = function (id, parallel = 5) {

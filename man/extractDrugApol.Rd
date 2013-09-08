@@ -1,0 +1,38 @@
+\name{extractDrugApol}
+\alias{extractDrugApol}
+\title{Calculates the Sum of the Atomic Polarizabilities Descriptor}
+\usage{
+  extractDrugApol(molecules, silent = TRUE)
+}
+\arguments{
+  \item{molecules}{Parsed molucule object.}
+
+  \item{silent}{Logical. Whether the calculating process
+  should be shown or not, default is \code{TRUE}.}
+}
+\value{
+  A data frame, each row represents one of the molecules,
+  each column represents one feature, This function returns
+  one column named \code{apol}.
+}
+\description{
+  Calculates the Sum of the Atomic Polarizabilities
+  Descriptor
+}
+\details{
+  Calculates the sum of the atomic polarizabilities
+  (including implicit hydrogens) descriptor.
+  Polarizabilities are taken from
+  \url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
+}
+\examples{
+\dontrun{
+mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
+extractDrugApol(mol)}
+}
+\author{
+  Xiao Nan <\url{http://www.road2stat.com}>
+}
+\keyword{Apol}
+\keyword{extractDrugApol}
+
