@@ -1,6 +1,33 @@
-# The Moreau-Broto autocorrelation descriptors using atomic weight
-# This class calculates ATS autocorrelation descriptor, where the weight equal to the scaled atomic mass [Moreau G. and Broto P., The autocorrelation of a topological structure: A new molecular descriptor, Nouveau Journal de Chimie, 1980, ?:359-360].
-# 5 features: ATSm1 ATSm2 ATSm3 ATSm4 ATSm5
+#' Calculates the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
+#'
+#' Calculates the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
+#'
+#' Calculates the ATS autocorrelation descriptor, where the weight equal to the scaled atomic mass.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return A data frame, each row represents one of the molecules, each column represents one feature,
+#'         This function returns 5 columns named 
+#'         \code{ATSm1}, \code{ATSm2}, \code{ATSm3}, \code{ATSm4}, \code{ATSm5}.
+#' 
+#' @keywords extractDrugAutocorrelationMass Autocorrelation Mass
+#'
+#' @aliases extractDrugAutocorrelationMass
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugAutocorrelationMass
+#' 
+#' @references
+#' Moreau, Gilles, and Pierre Broto. 
+#' The autocorrelation of a topological structure: a new molecular descriptor.
+#' Nouv. J. Chim 4 (1980): 359-360.
+#' 
+#' @examples
+#' \dontrun{
+#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
+#' extractDrugAutocorrelationMass(mol)}
 
 extractDrugAutocorrelationMass = function (molecules, silent = TRUE) {
   

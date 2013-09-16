@@ -1,8 +1,27 @@
-# Descriptor based on the weight of atoms of a certain element type. If no element is specified, the returned value is the Molecular Weight
-# 
-# IDescriptor based on the weight of atoms of a certain element type. If the wild-card symbol * is specified, the returned value is the molecular weight. If an invalid element symbol is specified, the return value is 0 and no exception is thrown
-# 
-# 1 feature: MW
+#' Descriptor that Calculates the Total Weight of Atoms
+#'
+#' Descriptor that Calculates the Total Weight of Atoms
+#' 
+#' This descriptor calculates the molecular weight.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return A data frame, each row represents one of the molecules, each column represents one feature,
+#'         This function returns one column named \code{MW}.
+#' 
+#' @keywords extractDrugWeight Weight
+#'
+#' @aliases extractDrugWeight
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugWeight
+#' 
+#' @examples
+#' \dontrun{
+#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
+#' extractDrugWeight(mol)}
 
 extractDrugWeight = function (molecules, silent = TRUE) {
   

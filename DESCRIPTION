@@ -53,7 +53,6 @@ Collate:
     '318-extractDrugChiCluster.R'
     '319-extractDrugChiPathCluster.R'
     '320-extractDrugChiPath.R'
-    '321-extractDrugEccentricConnectivityIndex.R'
     '322-extractDrugFMF.R'
     '323-extractDrugFragmentComplexity.R'
     '324-extractDrugGravitationalIndex.R'
@@ -115,3 +114,4 @@ Collate:
     '601-getCPI.R'
     '602-getPPI.R'
     '701-calcDrugSim.R'
+    '321-extractDrugECI.R'

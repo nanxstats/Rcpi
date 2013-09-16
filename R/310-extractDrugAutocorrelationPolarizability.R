@@ -1,6 +1,28 @@
-# The Moreau-Broto autocorrelation descriptors using polarizability
-# This class calculates ATS autocorrelation descriptor, where the weight equal to the charges.
-# 5 features: ATSp1 ATSp2 ATSp3 ATSp4 ATSp5
+#' Calculates the Moreau-Broto Autocorrelation Descriptors using Polarizability
+#'
+#' Calculates the Moreau-Broto Autocorrelation Descriptors using Polarizability
+#'
+#' Calculates the ATS autocorrelation descriptor using polarizability.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return A data frame, each row represents one of the molecules, each column represents one feature,
+#'         This function returns 5 columns named 
+#'         \code{ATSp1}, \code{ATSp2}, \code{ATSp3}, \code{ATSp4}, \code{ATSp5}.
+#' 
+#' @keywords extractDrugAutocorrelationPolarizability Autocorrelation Polarizability
+#'
+#' @aliases extractDrugAutocorrelationPolarizability
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugAutocorrelationPolarizability
+#' 
+#' @examples
+#' \dontrun{
+#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
+#' extractDrugAutocorrelationPolarizability(mol)}
 
 extractDrugAutocorrelationPolarizability = function (molecules, silent = TRUE) {
   
