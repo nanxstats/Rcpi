@@ -1,7 +1,7 @@
 #' Descriptor that Calculates the Number of Nonrotatable Bonds on A Molecule
-#'
+#' 
 #' Descriptor that Calculates the Number of Nonrotatable Bonds on A Molecule
-#'  
+#' 
 #' The number of rotatable bonds is given by the SMARTS specified by Daylight on SMARTS tutorial
 #' (\url{http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html#EXMPL})
 #' 
