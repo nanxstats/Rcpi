@@ -1,0 +1,98 @@
+
+  Mrv0541 04191212152D          
+
+  9  8  0  0  1  0            999 V2000
+    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.7144    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7145    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4289    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0000   -0.8250    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7145    1.2375    0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0
+    0.7144    1.2375    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4290    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4290    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  3  1  1  0  0  0  0
+  1  5  1  0  0  0  0
+  4  2  1  0  0  0  0
+  7  2  2  0  0  0  0
+  6  3  1  0  0  0  0
+  8  3  1  0  0  0  0
+  3  9  1  0  0  0  0
+M  END
+> <DRUGBANK_ID>
+DB00859
+
+> <DRUG_GROUPS>
+approved
+
+> <GENERIC_NAME>
+Penicillamine
+
+> <SYNONYMS>
+beta-Thiovaline; beta,beta-Dimethylcysteine; D-Mercaptovaline; D-Penamine; D-Penicilamine; D-Penicillamine; D-Penicyllamine; Dimethylcysteine; L-Penicillamine; Penicilamina [INN-Spanish]; Penicillamin; Penicillamina [DCIT]; Penicillaminum [INN-Latin]; Penicilllamine
+
+> <BRANDS>
+Artamine; Cuprenil; Cuprimine; Cupripen; Depamine; Depen; Distamine; Kuprenil; Mercaptovaline; Mercaptyl; Metalcaptase; Pendramine; Perdolat; Sufirtan; Trolovol
+
+> <CHEMICAL_FORMULA>
+C5H11NO2S
+
+> <MOLECULAR_WEIGHT>
+149.211
+
+> <EXACT_MASS>
+149.051049291
+
+> <IUPAC_NAME>
+2-amino-3-methyl-3-sulfanylbutanoic acid
+
+> <INCHI_IDENTIFIER>
+InChI=1S/C5H11NO2S/c1-5(2,9)3(6)4(7)8/h3,9H,6H2,1-2H3,(H,7,8)
+
+> <INCHI_KEY>
+InChIKey=VVNCNSJFMMFHPL-UHFFFAOYSA-N
+
+> <SMILES>
+CC(C)(S)C(N)C(O)=O
+
+> <JCHEM_ACCEPTOR_COUNT>
+3
+
+> <JCHEM_DONOR_COUNT>
+3
+
+> <JCHEM_ACIDIC_PKA>
+2.56
+
+> <JCHEM_BASIC_PKA>
+9.09
+
+> <JCHEM_PHYSIOLOGICAL_CHARGE>
+0
+
+> <ALOGPS_LOGP>
+-1.7
+
+> <JCHEM_LOGP>
+-2.1
+
+> <ALOGPS_LOGS>
+-1.5
+
+> <JCHEM_POLARIZABILITY>
+14.88
+
+> <JCHEM_POLAR_SURFACE_AREA>
+63.32
+
+> <JCHEM_REFRACTIVITY>
+37.23
+
+> <JCHEM_ROTATABLE_BOND_COUNT>
+2
+
+> <ALOGPS_SOLUBILITY>
+4.65e+00 g/l
+
+$$$$

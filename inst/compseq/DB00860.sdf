@@ -1,0 +1,142 @@
+860
+  Mrv0541 02231215032D          
+
+ 29 32  0  0  1  0            999 V2000
+    6.6263    1.5366    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9559    0.9126    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    7.4634    2.0559    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    8.9696    1.3822    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6500   -2.0181    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0993    0.5001    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+    6.0993   -0.3249    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0
+    5.3849   -0.7374    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+    4.6703   -0.3249    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0
+    6.8799    0.7515    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+    5.3849    0.9126    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.8799   -0.5763    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6703    0.5001    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0
+    3.9196   -0.7431    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+    7.3614    0.0876    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.3981   -1.5966    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0993    1.3251    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6572   -2.0321    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9130   -1.6024    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.5482    1.2353    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9259    0.0819    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.1550   -0.2777    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.1413   -2.0559    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.3013    0.8984    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3729   -0.7132    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3660   -1.6083    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1691   -0.9812    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.9589   -1.0630    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.2420    0.0051    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+ 10  1  1  6  0  0  0
+ 13  2  1  1  0  0  0
+  3 20  2  0  0  0  0
+  4 24  1  0  0  0  0
+  5 26  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 10  1  0  0  0  0
+  6 11  1  0  0  0  0
+  6 17  1  1  0  0  0
+  7  8  1  0  0  0  0
+  7 12  1  0  0  0  0
+  7 27  1  6  0  0  0
+  8  9  1  0  0  0  0
+  8 16  1  0  0  0  0
+  8 28  1  1  0  0  0
+  9 13  1  0  0  0  0
+  9 14  1  0  0  0  0
+  9 29  1  6  0  0  0
+ 10 15  1  0  0  0  0
+ 10 20  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 12 15  1  0  0  0  0
+ 14 19  1  0  0  0  0
+ 14 21  1  1  0  0  0
+ 14 22  1  0  0  0  0
+ 16 18  1  0  0  0  0
+ 18 19  1  0  0  0  0
+ 19 23  2  0  0  0  0
+ 20 24  1  0  0  0  0
+ 22 25  2  0  0  0  0
+ 23 26  1  0  0  0  0
+ 25 26  1  0  0  0  0
+M  END
+> <DRUGBANK_ID>
+DB00860
+
+> <DRUG_GROUPS>
+approved
+
+> <GENERIC_NAME>
+Prednisolone
+
+> <SYNONYMS>
+Deltahydrocortisone; Methylprednisolone Acetate; PRDL; Predisolone Sodium Phosphate; Prednisolona [INN-Spanish]; Prednisolone Acetate; Prednisolone Sodium Phosphate; Prednisolone Tebutate; Prednisolonum [INN-Latin]
+
+> <BRANDS>
+Ak-Pred; Ak-Tate; Alphadrol; Articulose-50; Co-Hydeltra; Codelcortone; Cordrol; Cortalone; Cotogesic; Cotolone; Decaprednil; Decortin H; Delcortol; Delta F; Delta-Cortef; Delta-Stab; Deltacortenol; Deltacortril; Deltacortril Enteric; Deltasolone; Deltisilone; Depo-Medrol; Derpo Pd; Dexa-Cortidelt Hostacortin H; Di-Adreson F; Dicortol; Donisolone; Dydeltrone; Eazolin D; Econopred; Erbacort; Erbasona; Estilsona; Fernisolone; Fernisolone P; Fernisolone-P; Flamasone; Hostacortin H; Hydeltra; Hydeltra-Tba; Hydeltrasol; Hydeltrone; Hydrodeltalone; Hydrodeltisone; Hydroretrocortin; Hydroretrocortine; I-Pred; Inflamase Forte; Inflamase Mild; Key-Pred; Klismacort; Lentosone; Lite Pred; M-Predrol; Medrol; Medrol Acetate; Metacortandralone; Meti-Derm; Meticortelone; Metreton; Nor-Pred T.B.A.; Ocu-Pred; Ocu-Pred Forte; Ophtho-Tate; Orapred; Panafcortelone; Paracortol; Paracotol; Pediapred; Precortalon; Precortancyl; Precortilon; Precortisyl; Pred Forte; Pred Mild; Predair; Predair A; Predair Forte; Predalone T.B.A.; Predate Tba; Predate-50; Predcor-25; Predcor-50; Predcor-Tba; Predne-Dome; Prednelan; Predni-Dome; Prednicen; Predniliderm; Predniretard; Prednis; Predonin; Predonine; Prelone; Prenolone; Rolisone; Scherisolon; Solone; Steran; Sterane; Sterolone; Supercortisol; Ulacort; Ultra Pred; Ultracorten H; Ultracortene H; Ultracortene-H; Ultracortene-Hydrogen
+
+> <CHEMICAL_FORMULA>
+C21H28O5
+
+> <MOLECULAR_WEIGHT>
+360.444
+
+> <EXACT_MASS>
+360.193674006
+
+> <IUPAC_NAME>
+(1S,2R,10S,11S,14R,15S,17S)-14,17-dihydroxy-14-(2-hydroxyacetyl)-2,15-dimethyltetracyclo[8.7.0.0^{2,7}.0^{11,15}]heptadeca-3,6-dien-5-one
+
+> <INCHI_IDENTIFIER>
+InChI=1S/C21H28O5/c1-19-7-5-13(23)9-12(19)3-4-14-15-6-8-21(26,17(25)11-22)20(15,2)10-16(24)18(14)19/h5,7,9,14-16,18,22,24,26H,3-4,6,8,10-11H2,1-2H3/t14-,15-,16-,18+,19-,20-,21-/m0/s1
+
+> <INCHI_KEY>
+InChIKey=OIGNJSKKLXVSLS-VWUMJDOOSA-N
+
+> <SMILES>
+[H][C@@]12CC[C@](O)(C(=O)CO)[C@@]1(C)C[C@H](O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)C=C[C@]12C
+
+> <JCHEM_ACCEPTOR_COUNT>
+5
+
+> <JCHEM_DONOR_COUNT>
+3
+
+> <JCHEM_ACIDIC_PKA>
+12.58
+
+> <JCHEM_BASIC_PKA>
+-2.9
+
+> <JCHEM_PHYSIOLOGICAL_CHARGE>
+0
+
+> <ALOGPS_LOGP>
+1.66
+
+> <JCHEM_LOGP>
+1.27
+
+> <ALOGPS_LOGS>
+-3.2
+
+> <JCHEM_POLARIZABILITY>
+38.78
+
+> <JCHEM_POLAR_SURFACE_AREA>
+94.83
+
+> <JCHEM_REFRACTIVITY>
+98.49
+
+> <JCHEM_ROTATABLE_BOND_COUNT>
+2
+
+> <ALOGPS_SOLUBILITY>
+2.39e-01 g/l
+
+$$$$

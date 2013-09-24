@@ -1,11 +1,36 @@
-# Fingerprint - shortestpath
-# 
-# 
-# 
-# smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-# mols = parse.smiles(smiles)
-# extractDrugShortestPath(mols)
-# extractDrugShortestPath(mols[[1]])
+#' Calculate the Shortest Path Molecular Fingerprints (in Compact Format)
+#'
+#' Calculate the Shortest Path Molecular Fingerprints (in Compact Format)
+#' 
+#' Calculate the fingerprint based on the shortest paths between pairs 
+#' of atoms and takes into account ring systems, charges etc.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param depth The search depth. Default is \code{6}.
+#' @param size The length of the fingerprint bit string. Default is \code{1024}.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return A list, each component represents one of the molecules, each element 
+#' in the component represents the index of which element in the fingerprint is 1.
+#' Each component's name is the length of the fingerprints.
+#' 
+#' @keywords extractDrugShortestPath
+#'
+#' @aliases extractDrugShortestPath
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugShortestPath
+#' 
+#' @seealso \link{extractDrugShortestPathComplete}
+#' 
+#' @examples
+#' \dontrun{
+#' smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
+#' mols = parse.smiles(smiles)
+#' extractDrugShortestPath(mols)
+#' extractDrugShortestPath(mols[[1]])}
+#' 
 
 extractDrugShortestPath = function (molecules, depth = 6, size = 1024, silent = TRUE) {
   
@@ -37,14 +62,38 @@ extractDrugShortestPath = function (molecules, depth = 6, size = 1024, silent = 
   
 }
 
-
-
-
-
-# smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-# mols = parse.smiles(smiles)
-# extractDrugShortestPathComplete(mols)
-# extractDrugShortestPathComplete(mols[[1]])
+#' Calculate the Shortest Path Molecular Fingerprints (in Complete Format)
+#'
+#' Calculate the Shortest Path Molecular Fingerprints (in Complete Format)
+#' 
+#' Calculate the fingerprint based on the shortest paths between pairs 
+#' of atoms and takes into account ring systems, charges etc.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param depth The search depth. Default is \code{6}.
+#' @param size The length of the fingerprint bit string. Default is \code{1024}.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return An integer vector or a matrix. Each row represents one molecule, 
+#' the columns represent the fingerprints.
+#' 
+#' @keywords extractDrugShortestPathComplete
+#'
+#' @aliases extractDrugShortestPathComplete
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugShortestPathComplete
+#' 
+#' @seealso \link{extractDrugShortestPath}
+#' 
+#' @examples
+#' \dontrun{
+#' smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
+#' mols = parse.smiles(smiles)
+#' extractDrugShortestPathComplete(mols)
+#' extractDrugShortestPathComplete(mols[[1]])}
+#' 
 
 extractDrugShortestPathComplete = function (molecules, depth = 6, size = 1024, silent = TRUE) {
   

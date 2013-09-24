@@ -1,9 +1,9 @@
-\name{extractDrugStandard}
-\alias{extractDrugStandard}
-\title{Calculate the Standard Molecular Fingerprints (in Compact Format)}
+\name{extractDrugShortestPath}
+\alias{extractDrugShortestPath}
+\title{Calculate the Shortest Path Molecular Fingerprints (in Compact Format)}
 \usage{
-  extractDrugStandard(molecules, depth = 6, size = 1024,
-    silent = TRUE)
+  extractDrugShortestPath(molecules, depth = 6,
+    size = 1024, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -23,26 +23,26 @@
   name is the length of the fingerprints.
 }
 \description{
-  Calculate the Standard Molecular Fingerprints (in Compact
-  Format)
+  Calculate the Shortest Path Molecular Fingerprints (in
+  Compact Format)
 }
 \details{
-  Calculate the standard molecular fingerprints. Considers
-  paths of a given length. This is hashed fingerprints,
-  with a default length of 1024.
+  Calculate the fingerprint based on the shortest paths
+  between pairs of atoms and takes into account ring
+  systems, charges etc.
 }
 \examples{
 \dontrun{
 smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
 mols = parse.smiles(smiles)
-extractDrugStandard(mols)
-extractDrugStandard(mols[[1]])}
+extractDrugShortestPath(mols)
+extractDrugShortestPath(mols[[1]])}
 }
 \author{
   Xiao Nan <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugStandardComplete}
+  \link{extractDrugShortestPathComplete}
 }
-\keyword{extractDrugStandard}
+\keyword{extractDrugShortestPath}
 

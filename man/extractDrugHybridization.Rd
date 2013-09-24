@@ -1,9 +1,9 @@
-\name{extractDrugStandard}
-\alias{extractDrugStandard}
-\title{Calculate the Standard Molecular Fingerprints (in Compact Format)}
+\name{extractDrugHybridization}
+\alias{extractDrugHybridization}
+\title{Calculate the Hybridization Molecular Fingerprints (in Compact Format)}
 \usage{
-  extractDrugStandard(molecules, depth = 6, size = 1024,
-    silent = TRUE)
+  extractDrugHybridization(molecules, depth = 6,
+    size = 1024, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -23,26 +23,27 @@
   name is the length of the fingerprints.
 }
 \description{
-  Calculate the Standard Molecular Fingerprints (in Compact
-  Format)
+  Calculate the Hybridization Molecular Fingerprints (in
+  Compact Format)
 }
 \details{
-  Calculate the standard molecular fingerprints. Considers
-  paths of a given length. This is hashed fingerprints,
-  with a default length of 1024.
+  Calculate the hybridization molecular fingerprints.
+  Similar to the standard type, but only consider
+  hybridization state. This is hashed fingerprints, with a
+  default length of 1024.
 }
 \examples{
 \dontrun{
 smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
 mols = parse.smiles(smiles)
-extractDrugStandard(mols)
-extractDrugStandard(mols[[1]])}
+extractDrugHybridization(mols)
+extractDrugHybridization(mols[[1]])}
 }
 \author{
   Xiao Nan <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugStandardComplete}
+  \link{extractDrugHybridizationComplete}
 }
-\keyword{extractDrugStandard}
+\keyword{extractDrugHybridization}
 

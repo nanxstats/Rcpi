@@ -19,7 +19,8 @@
 \value{
   A list, each component represents one of the molecules,
   each element in the component represents the index of
-  which element in the fingerprint is 1.
+  which element in the fingerprint is 1. Each component's
+  name is the length of the fingerprints.
 }
 \description{
   Calculate the Extended Molecular Fingerprints (in Compact

@@ -1,11 +1,31 @@
-# Read molecule(s) by SDF file and return parsed Java molecular object
-# 
-# Input: vector containing sdf file name(s)
-# Output: a list containing parsed Java molecular object
-
-# # Examples
-# readMolFromSDF('/Users/jimmy/Rpkg/Rcpi-support/DB00859.sdf')
-# readMolFromSDF(c('/Users/jimmy/Rpkg/Rcpi-support/DB00859.sdf', '/Users/jimmy/Rpkg/Rcpi-support/DB00860.sdf'))
+#' Read Molecules from SDF files and Return Parsed Java Molecular Object
+#'
+#' Read Molecules from SDF files and Return Parsed Java Molecular Object
+#' 
+#' This function reads molecules from SDF files and return 
+#' parsed Java molecular object needed by \code{extractDrug...} functions.
+#' 
+#' @param sdffile Character vector, containing SDF file location(s).
+#' 
+#' @return A list, containing parsed Java molecular object.
+#' 
+#' @keywords readMolFromSDF MOL SDF
+#'
+#' @aliases readMolFromSDF
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @seealso See \code{\link{readMolFromSmi}} for reading molecules by SMILES 
+#' string and returning parsed Java molecular object.
+#' 
+#' @export readMolFromSDF
+#' 
+#' @examples
+#' \dontrun{
+#' mol  = readMolFromSDF(system.file('compseq/DB00859.sdf', package = 'Rcpi'))
+#' mols = readMolFromSDF(c(system.file('compseq/DB00859.sdf', package = 'Rcpi'), 
+#'                         system.file('compseq/DB00860.sdf', package = 'Rcpi')))}
+#' 
 
 readMolFromSDF = function (sdffile) {
   

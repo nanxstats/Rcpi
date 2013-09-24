@@ -1,11 +1,37 @@
-# Fingerprint - hybridization
-# 
-# 
-# 
-# smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-# mols = parse.smiles(smiles)
-# extractDrugHybridization(mols)
-# extractDrugHybridization(mols[[1]])
+#' Calculate the Hybridization Molecular Fingerprints (in Compact Format)
+#'
+#' Calculate the Hybridization Molecular Fingerprints (in Compact Format)
+#' 
+#' Calculate the hybridization molecular fingerprints. 
+#' Similar to the standard type, but only consider hybridization state.
+#' This is hashed fingerprints, with a default length of 1024.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param depth The search depth. Default is \code{6}.
+#' @param size The length of the fingerprint bit string. Default is \code{1024}.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return A list, each component represents one of the molecules, each element 
+#' in the component represents the index of which element in the fingerprint is 1.
+#' Each component's name is the length of the fingerprints.
+#' 
+#' @keywords extractDrugHybridization
+#'
+#' @aliases extractDrugHybridization
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugHybridization
+#' 
+#' @seealso \link{extractDrugHybridizationComplete}
+#' 
+#' @examples
+#' \dontrun{
+#' smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
+#' mols = parse.smiles(smiles)
+#' extractDrugHybridization(mols)
+#' extractDrugHybridization(mols[[1]])}
+#' 
 
 extractDrugHybridization = function (molecules, depth = 6, size = 1024, silent = TRUE) {
   
@@ -37,14 +63,39 @@ extractDrugHybridization = function (molecules, depth = 6, size = 1024, silent =
   
 }
 
-
-
-
-
-# smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-# mols = parse.smiles(smiles)
-# extractDrugHybridizationComplete(mols)
-# extractDrugHybridizationComplete(mols[[1]])
+#' Calculate the Hybridization Molecular Fingerprints (in Complete Format)
+#'
+#' Calculate the Hybridization Molecular Fingerprints (in Complete Format)
+#' 
+#' Calculate the hybridization molecular fingerprints. 
+#' Similar to the standard type, but only consider hybridization state.
+#' This is hashed fingerprints, with a default length of 1024.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param depth The search depth. Default is \code{6}.
+#' @param size The length of the fingerprint bit string. Default is \code{1024}.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return An integer vector or a matrix. Each row represents one molecule, 
+#' the columns represent the fingerprints.
+#' 
+#' @keywords extractDrugHybridizationComplete
+#'
+#' @aliases extractDrugHybridizationComplete
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugHybridizationComplete
+#' 
+#' @seealso \link{extractDrugHybridization}
+#' 
+#' @examples
+#' \dontrun{
+#' smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
+#' mols = parse.smiles(smiles)
+#' extractDrugHybridizationComplete(mols)
+#' extractDrugHybridizationComplete(mols[[1]])}
+#' 
 
 extractDrugHybridizationComplete = function (molecules, depth = 6, size = 1024, silent = TRUE) {
   

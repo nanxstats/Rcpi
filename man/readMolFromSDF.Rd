@@ -1,0 +1,39 @@
+\name{readMolFromSDF}
+\alias{readMolFromSDF}
+\title{Read Molecules from SDF files and Return Parsed Java Molecular Object}
+\usage{
+  readMolFromSDF(sdffile)
+}
+\arguments{
+  \item{sdffile}{Character vector, containing SDF file
+  location(s).}
+}
+\value{
+  A list, containing parsed Java molecular object.
+}
+\description{
+  Read Molecules from SDF files and Return Parsed Java
+  Molecular Object
+}
+\details{
+  This function reads molecules from SDF files and return
+  parsed Java molecular object needed by
+  \code{extractDrug...} functions.
+}
+\examples{
+\dontrun{
+mol  = readMolFromSDF(system.file('compseq/DB00859.sdf', package = 'Rcpi'))
+mols = readMolFromSDF(c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
+                        system.file('compseq/DB00860.sdf', package = 'Rcpi')))}
+}
+\author{
+  Xiao Nan <\url{http://www.road2stat.com}>
+}
+\seealso{
+  See \code{\link{readMolFromSmi}} for reading molecules by
+  SMILES string and returning parsed Java molecular object.
+}
+\keyword{MOL}
+\keyword{readMolFromSDF}
+\keyword{SDF}
+
