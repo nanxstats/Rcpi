@@ -1,0 +1,57 @@
+\name{extractDrugChiPathCluster}
+\alias{extractDrugChiPathCluster}
+\title{Calculate the Kier and Hall Chi Path Cluster Indices of Orders 4, 5 and 6}
+\usage{
+  extractDrugChiPathCluster(molecules, silent = TRUE)
+}
+\arguments{
+  \item{molecules}{Parsed molucule object.}
+
+  \item{silent}{Logical. Whether the calculating process
+  should be shown or not, default is \code{TRUE}.}
+}
+\value{
+  A data frame, each row represents one of the molecules,
+  each column represents one feature, This function returns
+  6 columns named \code{SPC.4}, \code{SPC.5}, \code{SPC.6},
+  \code{VPC.4}, \code{VPC.5}, \code{VPC.6}: \itemize{ \item
+  \code{SPC.4} - Simple path cluster, order 4 \item
+  \code{SPC.5} - Simple path cluster, order 5 \item
+  \code{SPC.6} - Simple path cluster, order 6 \item
+  \code{VPC.4} - Valence path cluster, order 4 \item
+  \code{VPC.5} - Valence path cluster, order 5 \item
+  \code{VPC.6} - Valence path cluster, order 6 }
+}
+\description{
+  Calculate the Kier and Hall Chi Path Cluster Indices of
+  Orders 4, 5 and 6
+}
+\details{
+  Evaluates chi path cluster descriptors. The code
+  currently evluates the simple and valence chi chain
+  descriptors of orders 4, 5 and 6. It utilizes the graph
+  isomorphism code of the CDK to find fragments matching
+  SMILES strings representing the fragments corresponding
+  to each type of chain.
+}
+\note{
+  These descriptors are calculated using graph isomorphism
+  to identify the various fragments. As a result
+  calculations may be slow. In addition, recent versions of
+  Molconn-Z use simplified fragment definitions (i.e.,
+  rings without branches etc.)  whereas these descriptors
+  use the older more complex fragment definitions.
+}
+\examples{
+\dontrun{
+mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
+extractDrugChiPathCluster(mol)}
+}
+\author{
+  Xiao Nan <\url{http://www.road2stat.com}>
+}
+\keyword{Chi}
+\keyword{Cluster}
+\keyword{extractDrugChiPathCluster}
+\keyword{Path}
+

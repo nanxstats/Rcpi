@@ -17,11 +17,11 @@
 # 
 # fp1 = extractDrugEstate(mols[[1]])
 # fp2 = extractDrugEstate(mols[[2]])
-# calcDrugSim(fp1, fp2, fptype = 'compressed', metric = 'tanimoto')
-# calcDrugSim(fp1, fp2, fptype = 'compressed', metric = 'euclidean')
-# calcDrugSim(fp1, fp2, fptype = 'compressed', metric = 'cosine')
-# calcDrugSim(fp1, fp2, fptype = 'compressed', metric = 'dice')
-# calcDrugSim(fp1, fp2, fptype = 'compressed', metric = 'hamming')
+# calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'tanimoto')
+# calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'euclidean')
+# calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'cosine')
+# calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'dice')
+# calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'hamming')
 # 
 # fp3 = extractDrugEstateComplete(mols[[1]])
 # fp4 = extractDrugEstateComplete(mols[[2]])
@@ -33,16 +33,16 @@
 
 
 
-calcDrugSim = function (fp1, fp2, fptype = c('compressed', 'complete'), 
+calcDrugSim = function (fp1, fp2, fptype = c('compact', 'complete'), 
                         metric = c('tanimoto', 'euclidean', 'cosine', 'dice', 'hamming')) {
   
   fptype = match.arg(fptype)
   metric = match.arg(metric)
   
-  if ( !(fptype %in% c('compressed', 'complete')) ) stop('fptype must be one of "compressed" or "complete"')
+  if ( !(fptype %in% c('compact', 'complete')) ) stop('fptype must be one of "compact" or "complete"')
   if ( !(metric %in% c('tanimoto', 'euclidean', 'cosine', 'dice', 'hamming')) ) stop('metric must be one of "tanimoto", "euclidean", "cosine", "dice", "hamming"')
   
-  if (fptype == 'compressed') {
+  if (fptype == 'compact') {
     
     fp1ext = integer(as.integer(names(fp1)))
     fp1ext[fp1[[1]]] = 1L

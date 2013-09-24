@@ -1,11 +1,36 @@
-# Fingerprint - standard
-# 
-# Considers paths of a given length. The default is but can be changed. These are hashed fingerprints, with a default length of 1024
-# 
-# smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-# mols = parse.smiles(smiles)
-# extractDrugStandard(mols)
-# extractDrugStandard(mols[[1]])
+#' Calculate the Standard Molecular Fingerprints (in Compact Format)
+#'
+#' Calculate the Standard Molecular Fingerprints (in Compact Format)
+#' 
+#' Calculate the standard molecular fingerprints. 
+#' Considers paths of a given length. 
+#' This is hashed fingerprints, with a default length of 1024.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param depth The search depth. Default is \code{6}.
+#' @param size The length of the fingerprint bit string. Default is \code{1024}.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return A list, each component represents one of the molecules, each element 
+#' in the component represents the index of which element in the fingerprint is 1.
+#' 
+#' @keywords extractDrugStandard
+#'
+#' @aliases extractDrugStandard
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugStandard
+#' 
+#' @seealso \link{extractDrugStandardComplete}
+#' 
+#' @examples
+#' \dontrun{
+#' smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
+#' mols = parse.smiles(smiles)
+#' extractDrugStandard(mols)
+#' extractDrugStandard(mols[[1]])}
+#' 
 
 extractDrugStandard = function (molecules, depth = 6, size = 1024, silent = TRUE) {
   
@@ -37,14 +62,39 @@ extractDrugStandard = function (molecules, depth = 6, size = 1024, silent = TRUE
   
 }
 
-
-
-
-
-# smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-# mols = parse.smiles(smiles)
-# extractDrugStandardComplete(mols)
-# extractDrugStandardComplete(mols[[1]])
+#' Calculate the Standard Molecular Fingerprints (in Complete Format)
+#'
+#' Calculate the Standard Molecular Fingerprints (in Complete Format)
+#' 
+#' Calculate the standard molecular fingerprints. 
+#' Considers paths of a given length. 
+#' This is hashed fingerprints, with a default length of 1024.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param depth The search depth. Default is \code{6}.
+#' @param size The length of the fingerprint bit string. Default is \code{1024}.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return An integer vector or a matrix. Each row represents one molecule, 
+#' the columns represent the fingerprints.
+#' 
+#' @keywords extractDrugStandardComplete
+#'
+#' @aliases extractDrugStandardComplete
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugStandardComplete
+#' 
+#' @seealso \link{extractDrugStandard}
+#' 
+#' @examples
+#' \dontrun{
+#' smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
+#' mols = parse.smiles(smiles)
+#' extractDrugStandardComplete(mols)
+#' extractDrugStandardComplete(mols[[1]])}
+#' 
 
 extractDrugStandardComplete = function (molecules, depth = 6, size = 1024, silent = TRUE) {
   

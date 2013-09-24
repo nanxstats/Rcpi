@@ -1,49 +1,81 @@
-# Holistic descriptors described by Todeschini et al.
-# 
-# Holistic descriptors described by Todeschini et al [Todeschini, R. and Gramatica, P., New 3D Molecular Descriptors: The WHIM theory and QAR Applications, Persepectives in Drug Discovery and Design, 1998, ?:355-380]. The descriptors are based on a number of atom weightings. There are 6 different possible weightings:
-#  * unit weights
-#  * atomic masses
-#  * van der Waals volumes
-#  * Mulliken atomic electronegativites
-#  * atomic polarizabilities
-#  * E-state values described by Kier & Hall
-# 
-# Currently weighting schemes 1,2,3,4 & 5 are implemented. The weight values are taken from [Todeschini, R. and Gramatica, P., New 3D Molecular Descriptors: The WHIM theory and QAR Applications, Persepectives in Drug Discovery and Design, 1998, ?:355-380] and as a result 19 elements are considered.
-# For each weighting scheme we can obtain
-# 
-#  * 11 directional WHIM descriptors (λ1 .. 3, ν1 .. 2, γ1 .. 3, η1 .. 3)
-#  * 6 non-directional WHIM descriptors (T, A, V, K, G, D)
-# Though [Todeschini, R. and Gramatica, P., New 3D Molecular Descriptors: The WHIM theory and QAR Applications, Persepectives in Drug Discovery and Design, 1998, ?:355-380] mentions that for planar molecules only 8 directional WHIM descriptors are required the current code will return all 11.
-# 
-# The descriptor returns 17 values for a given weighting scheme, named as follows:
-#   
-# Wlambda1
-# Wlambda2
-# wlambda3
-# Wnu1
-# Wnu2
-# Wgamma1
-# Wgamma2
-# Wgamma3
-# Weta1
-# Weta2
-# Weta3
-# WT
-# WA
-# WV
-# WK
-# WG
-# WD
-# 
-# Each name will have a suffix of the form .X where X indicates the weighting scheme used. Possible values of X are
-# 
-# unity
-# mass
-# volume
-# eneg
-# polar
-# 
-# 17 features: Wlambda1.unity Wlambda2.unity Wlambda3.unity Wnu1.unity Wnu2.unity Wgamma1.unity Wgamma2.unity Wgamma3.unity Weta1.unity Weta2.unity Weta3.unity WT.unity WA.unity WV.unity WK.unity WG.unity WD.unity
+#' Calculate Holistic Descriptors Described by Todeschini et al.
+#'
+#' Calculate Holistic Descriptors Described by Todeschini et al.
+#' 
+#' Holistic descriptors described by Todeschini et al, the descriptors 
+#' are based on a number of atom weightings. 
+#' There are six different possible weightings:
+#' \itemize{
+#' \item unit weights
+#' \item atomic masses
+#' \item van der Waals volumes
+#' \item Mulliken atomic electronegativites
+#' \item atomic polarizabilities
+#' \item E-state values described by Kier and Hall
+#' }
+#' 
+#' Currently weighting schemes 1, 2, 3, 4 and 5 are implemented. 
+#' The weight values are taken from Todeschini et al.
+#' and as a result 19 elements are considered.
+#' For each weighting scheme we can obtain
+#' \itemize{
+#' \item 11 directional WHIM descriptors (lambda1 .. 3, nu1 .. 2, gamma1 .. 3, eta1 .. 3)
+#' \item 6 non-directional WHIM descriptors (T, A, V, K, G, D)
+#' }
+#' Though Todeschini et al. mentions that for planar molecules 
+#' only 8 directional WHIM descriptors are required the current code will return all 11.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#'
+#' @return A data frame, each row represents one of the molecules, each column represents one feature,
+#'         This function returns 17 columns:
+#'         \itemize{
+#'         \item Wlambda1
+#'         \item Wlambda2
+#'         \item wlambda3
+#'         \item Wnu1
+#'         \item Wnu2
+#'         \item Wgamma1
+#'         \item Wgamma2
+#'         \item Wgamma3
+#'         \item Weta1
+#'         \item Weta2
+#'         \item Weta3
+#'         \item WT
+#'         \item WA
+#'         \item WV
+#'         \item WK
+#'         \item WG
+#'         \item WD
+#'         }
+#' Each name will have a suffix of the form \code{.X} where \code{X} indicates the 
+#' weighting scheme used. Possible values of \code{X} are
+#' \itemize{
+#' \item unity
+#' \item mass
+#' \item volume
+#' \item eneg
+#' \item polar
+#' }
+#' 
+#' @keywords extractDrugWHIM WHIM
+#'
+#' @aliases extractDrugWHIM
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugWHIM
+#' 
+#' @references
+#' Todeschini, R. and Gramatica, P., 
+#' New 3D Molecular Descriptors: The WHIM theory and QAR Applications, 
+#' Persepectives in Drug Discovery and Design, 1998, ?:355-380.
+#' 
+#' @examples
+#' \dontrun{
+#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
+#' extractDrugWHIM(mol)}
 
 extractDrugWHIM = function (molecules, silent = TRUE) {
   
