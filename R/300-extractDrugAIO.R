@@ -1,3 +1,36 @@
+#' Calculates All the Molecular Descriptors in the Rcpi Package at Once
+#'
+#' Calculates All the Molecular Descriptors in the Rcpi Package at Once
+#' 
+#' This function calculates all the molecular descriptors in the Rcpi package at once.
+#' 
+#' @param molecules Parsed molucule object.
+#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param warn Logical. Whether the warning about some descriptors 
+#' need the 3D coordinates should be shown or not after the calculation, 
+#' default is \code{TRUE}.
+#'
+#' @return A data frame, each row represents one of the molecules, each column represents one feature,
+#'         Currently, this function returns total 295 columns.
+#' 
+#' @keywords extractDrugAIO
+#'
+#' @aliases extractDrugAIO
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @export extractDrugAIO
+#' 
+#' @note
+#' Note that we need 3-D coordinates of the molecules to calculate 
+#' some of the descriptors, if not provided, these descriptors values will be \code{NA}.
+#' 
+#' @examples
+#' \dontrun{
+#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
+#' extractDrugAIO(mol)}
+#' 
+
 extractDrugAIO = function (molecules, silent = TRUE, warn = TRUE) {
   
   if (warn == TRUE) {

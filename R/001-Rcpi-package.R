@@ -38,8 +38,7 @@
 #' 
 #' @keywords Rcpi drug design compound protein sequence 
 #'           feature extraction descriptors fingerprint
-#'           network graph rcdk protr interaction
-#'           chemoinformatics bioinforamtics
+#'           protr interaction chemoinformatics bioinforamtics
 #' 
 #' @example inst/examples/Rcpi-package-ex.R
 NULL

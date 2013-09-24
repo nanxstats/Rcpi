@@ -53,12 +53,9 @@ NULL
 \keyword{extraction}
 \keyword{feature}
 \keyword{fingerprint}
-\keyword{graph}
 \keyword{interaction}
-\keyword{network}
 \keyword{protein}
 \keyword{protr}
-\keyword{rcdk}
 \keyword{Rcpi}
 \keyword{sequence}
 

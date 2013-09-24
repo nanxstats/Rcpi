@@ -22,8 +22,7 @@
 \details{
   This descriptor calculates the LogP based on a simple
   equation using the number of carbons and hetero atoms.
-  The implemented equation was proposed in Mannhold, R.,
-  Poda, G.I., Ostermann, C. and Tetko, I.V.
+  The implemented equation was proposed in Mannhold et al.
 }
 \examples{
 \dontrun{
@@ -36,8 +35,8 @@ extractDrugMannholdLogP(mol)}
 \references{
   Mannhold, R., Poda, G. I., Ostermann, C., & Tetko, I. V.
   (2009). Calculation of molecular lipophilicity:
-  State‐of‐the‐art and comparison of log P methods on
-  more than 96,000 compounds. Journal of pharmaceutical
+  State-of-the-art and comparison of log P methods on more
+  than 96,000 compounds. Journal of pharmaceutical
   sciences, 98(3), 861-893.
 }
 \keyword{extractDrugMannholdLogP}

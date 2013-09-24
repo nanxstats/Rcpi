@@ -1,20 +1,61 @@
-getPPICombine = function (protmat1, protmat2) {
+.getPPICombine = function (protmat1, protmat2) {
   
   return(cbind(protmat1, protmat2))
   
 }
 
-getPPITensor = function (protmat1, protmat2, row, col) {
+.getPPITensor = function (protmat1, protmat2, row, col) {
   
-  return(array(inner(t(protmat1), protmat2, '*'), c(row, col^2)))
+  return(array(.inner(t(protmat1), protmat2, '*'), c(row, col^2)))
   
 }
 
-getPPIEntry = function (protmat1, protmat2) {
+.getPPIEntry = function (protmat1, protmat2) {
   
   return(cbind((protmat1 * protmat2), (protmat1 + protmat2)))
   
 }
+
+#' Generating Protein-Protein Interaction Features
+#'
+#' Generating Protein-Protein Interaction Features
+#' 
+#' This function calculates the protein-protein interaction features 
+#' by three types of interaction:
+#' \itemize{
+#' \item \code{combine} - combine the two feature matrix, result has \code{(p + p)} columns;
+#' \item \code{tensorprod} - calculate column-by-column (pseudo)-tensor product type interactions, result has \code{(p * p)} columns;
+#' \item \code{entrywise} - calculate entrywise product and entrywise sum of the two matrices, then combine them, result has \code{(p + p)} columns.
+#' }
+#' 
+#' @param protmat1 The first protein feature matrix, must have the same ncol with \code{protmat2}.
+#' @param protmat2 The second protein feture matrix, must have the same ncol with \code{protmat1}.
+#' @param type The interaction type, one or more of \code{"combine"}, \code{"tensorprod"}, and \code{"entrywise"}.
+#' 
+#' @return A matrix containing the protein-protein interaction features.
+#' 
+#' @keywords getPPI protein-protein interaction ppi
+#'
+#' @aliases getPPI
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @seealso See \code{\link{getCPI}} for generating compound-protein interaction features.
+#' 
+#' @export getPPI
+#' 
+#' @examples
+#' x = matrix(1:10, ncol = 2)
+#' y = matrix(5:14, ncol = 2)
+#' 
+#' getPPI(x, y, type = 'combine')
+#' getPPI(x, y, type = 'tensorprod')
+#' getPPI(x, y, type = 'entrywise')
+#' getPPI(x, y, type = c('combine', 'tensorprod'))
+#' getPPI(x, y, type = c('combine', 'entrywise'))
+#' getPPI(x, y, type = c('entrywise', 'tensorprod'))
+#' getPPI(x, y, type = c('combine', 'entrywise', 'tensorprod'))
+#' 
 
 getPPI = function (protmat1, protmat2, type = c('combine', 'tensorprod', 'entrywise')) {
   
@@ -35,31 +76,31 @@ getPPI = function (protmat1, protmat2, type = c('combine', 'tensorprod', 'entryw
   
   if (all(type == 'combine')) {
     
-    result = getPPICombine(protmat1, protmat2)
+    result = .getPPICombine(protmat1, protmat2)
     
     } else if (all(type == 'tensorprod')) {
       
-      result = getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1)
+      result = .getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1)
       
       } else if (all(type == 'entrywise')) {
         
-        result = getPPIEntry(protmat1, protmat2)
+        result = .getPPIEntry(protmat1, protmat2)
         
         } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
           
-          result = cbind(getPPICombine(protmat1, protmat2), getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1))
+          result = cbind(.getPPICombine(protmat1, protmat2), .getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1))
           
           } else if (length(setdiff(type, c('tensorprod', 'entrywise'))) == 0L) {
             
-            result = cbind(getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), getPPIEntry(protmat1, protmat2))
+            result = cbind(.getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), .getPPIEntry(protmat1, protmat2))
             
             } else if (length(setdiff(type, c('combine', 'entrywise'))) == 0L) {
               
-              result = cbind(getPPICombine(protmat1, protmat2), getPPIEntry(protmat1, protmat2))
+              result = cbind(.getPPICombine(protmat1, protmat2), .getPPIEntry(protmat1, protmat2))
               
               } else if (length(setdiff(type, c('tensorprod', 'combine', 'entrywise'))) == 0L) {
                 
-                result = cbind(getPPICombine(protmat1, protmat2), getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), getPPIEntry(protmat1, protmat2))
+                result = cbind(.getPPICombine(protmat1, protmat2), .getPPITensor(protmat1, protmat2, row = protrow1, col = protcol1), .getPPIEntry(protmat1, protmat2))
                 
                 } else {
                   
@@ -70,16 +111,3 @@ getPPI = function (protmat1, protmat2, type = c('combine', 'tensorprod', 'entryw
   return(result)
   
 }
-
-# x = matrix(1:10, ncol = 2)
-# y = matrix(5:14, ncol = 2)
-# 
-# getPPI(x, y)
-# getPPI(x, y, type = 'combine')
-# getPPI(x, y, type = 'tensorprod')
-# getPPI(x, y, type = 'entrywise')
-# getPPI(x, y, type = c('combine', 'tensorprod'))
-# getPPI(x, y, type = c('combine', 'entrywise'))
-# getPPI(x, y, type = c('entrywise', 'tensorprod'))
-# getPPI(x, y, type = c('combine', 'entrywise', 'tensorprod'))
-# getPPI(x, y, type = c('combine', 'entrywise', 'ccc'))

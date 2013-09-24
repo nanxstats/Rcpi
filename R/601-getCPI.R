@@ -1,4 +1,4 @@
-inner = function (a, b, f, ...) {
+.inner = function (a, b, f, ...) {
   
   # For computing column-by-column (pseudo)-tensor product type interactions
   
@@ -7,17 +7,54 @@ inner = function (a, b, f, ...) {
 
 }
 
-getCPICombine = function (drugmat, protmat) {
+.getCPICombine = function (drugmat, protmat) {
   
   return(cbind(drugmat, protmat))
   
 }
 
-getCPITensor = function (drugmat, protmat, row, dcol, pcol) {
+.getCPITensor = function (drugmat, protmat, row, dcol, pcol) {
   
-  return(array(inner(t(drugmat), protmat, '*'), c(row, dcol * pcol)))
+  return(array(.inner(t(drugmat), protmat, '*'), c(row, dcol * pcol)))
 
 }
+
+#' Generating Compound-Protein Interaction Features
+#'
+#' Generating Compound-Protein Interaction Features
+#' 
+#' This function calculates the compound-protein interaction features 
+#' by three types of interaction:
+#' \itemize{
+#' \item \code{combine} - combine the two feature matrix, result has \code{(p1 + p2)} columns;
+#' \item \code{tensorprod} - calculate column-by-column (pseudo)-tensor product type interactions, result has \code{(p1 * p2)} columns;
+#' }
+#' 
+#' @param drugmat The compound feature matrix.
+#' @param protmat The protein feture matrix.
+#' @param type The interaction type, one or two of \code{"combine"} and \code{"tensorprod"}.
+#' 
+#' @return A matrix containing the compound-protein interaction features.
+#' 
+#' @keywords getCPI compound-protein interaction cpi
+#'
+#' @aliases getCPI
+#' 
+#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' 
+#' @seealso See \code{\link{getPPI}} for generating protein-protein interaction features.
+#' 
+#' @export getCPI
+#' 
+#' @examples
+#' x = matrix(1:10, ncol = 2)
+#' y = matrix(1:15, ncol = 3)
+#' 
+#' getCPI(x, y, 'combine')
+#' getCPI(x, y, 'tensorprod')
+#' getCPI(x, y, type = c('combine', 'tensorprod'))
+#' getCPI(x, y, type = c('tensorprod', 'combine'))
+#' 
 
 getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
   
@@ -36,15 +73,15 @@ getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
   
   if (all(type == 'combine')) {
     
-    result = getCPICombine(drugmat, protmat)
+    result = .getCPICombine(drugmat, protmat)
     
     } else if (all(type == 'tensorprod')) {
       
-      result = getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol)
+      result = .getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol)
       
       } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
         
-        result = cbind(getCPICombine(drugmat, protmat), getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol))
+        result = cbind(.getCPICombine(drugmat, protmat), .getCPITensor(drugmat, protmat, row = drugrow, dcol = drugcol, pcol = protcol))
         
         } else {
           
@@ -55,14 +92,3 @@ getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
   return(result)
   
 }
-
-
-# x = matrix(1:10, ncol = 2)
-# y = matrix(1:15, ncol = 3)
-# 
-# getCPI(x, y)
-# getCPI(x, y, 'combine')
-# getCPI(x, y, 'tensorprod')
-# getCPI(x, y, type = c('combine', 'tensorprod'))
-# getCPI(x, y, type = c('tensorprod', 'combine'))
-# getCPI(x, y, type = c('cbm'))
