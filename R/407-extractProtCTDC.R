@@ -13,10 +13,9 @@
 #'
 #' @aliases extractProtCTDC
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{extractProtCTDT}} and 
-#'          \code{\link{extractProtCTDD}} 
+#' @seealso See \code{\link{extractProtCTDT}} and \code{\link{extractProtCTDD}} 
 #'          for Transition and Distribution of the CTD descriptors.
 #' 
 #' @export extractProtCTDC

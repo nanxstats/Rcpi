@@ -2,8 +2,8 @@
 \alias{getProt}
 \title{Retrieve Protein Sequence in various Formats from Databases}
 \usage{
-  getProt(id, from = c("uniprot", "kegg", "pdb"),
-    type = c("fasta", "pdb", "aaseq"), parallel = 5)
+getProt(id, from = c("uniprot", "kegg", "pdb"), type = c("fasta", "pdb",
+  "aaseq"), parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the protein ID(s).}
@@ -21,17 +21,16 @@
   \code{20}.}
 }
 \value{
-  A length of \code{id} character list, each element
-  containing the corresponding protein sequence(s) or
-  file(s).
+A length of \code{id} character list, each element
+containing the corresponding protein sequence(s) or
+file(s).
 }
 \description{
-  Retrieve Protein Sequence in various Formats from
-  Databases
+Retrieve Protein Sequence in various Formats from Databases
 }
 \details{
-  This function retrieves protein sequence in various
-  formats from three databases.
+This function retrieves protein sequence in various formats
+from three databases.
 }
 \examples{
 \dontrun{
@@ -39,11 +38,11 @@ id = c('P00750', 'P00751', 'P00752')
 getProt(id, from = 'uniprot', type = 'aaseq')}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  See \code{\link{getDrug}} for retrieving drug molecules
-  from five databases.
+See \code{\link{getDrug}} for retrieving drug molecules
+from five databases.
 }
 \keyword{getProt}
 

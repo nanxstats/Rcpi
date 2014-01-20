@@ -2,7 +2,7 @@
 \alias{extractDrugAutocorrelationMass}
 \title{Calculates the Moreau-Broto Autocorrelation Descriptors using Atomic Weight}
 \usage{
-  extractDrugAutocorrelationMass(molecules, silent = TRUE)
+extractDrugAutocorrelationMass(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,18 +11,18 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A data frame, each row represents one of the molecules,
-  each column represents one feature, This function returns
-  5 columns named \code{ATSm1}, \code{ATSm2}, \code{ATSm3},
-  \code{ATSm4}, \code{ATSm5}.
+A data frame, each row represents one of the molecules,
+each column represents one feature, This function returns 5
+columns named \code{ATSm1}, \code{ATSm2}, \code{ATSm3},
+\code{ATSm4}, \code{ATSm5}.
 }
 \description{
-  Calculates the Moreau-Broto Autocorrelation Descriptors
-  using Atomic Weight
+Calculates the Moreau-Broto Autocorrelation Descriptors
+using Atomic Weight
 }
 \details{
-  Calculates the ATS autocorrelation descriptor, where the
-  weight equal to the scaled atomic mass.
+Calculates the ATS autocorrelation descriptor, where the
+weight equal to the scaled atomic mass.
 }
 \examples{
 \dontrun{
@@ -30,14 +30,14 @@ mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
 extractDrugAutocorrelationMass(mol)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \references{
-  Moreau, Gilles, and Pierre Broto. The autocorrelation of
-  a topological structure: a new molecular descriptor.
-  Nouv. J. Chim 4 (1980): 359-360.
+Moreau, Gilles, and Pierre Broto. The autocorrelation of a
+topological structure: a new molecular descriptor. Nouv. J.
+Chim 4 (1980): 359-360.
 }
 \keyword{Autocorrelation}
-\keyword{extractDrugAutocorrelationMass}
 \keyword{Mass}
+\keyword{extractDrugAutocorrelationMass}
 

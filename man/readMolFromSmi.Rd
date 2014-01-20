@@ -1,40 +1,38 @@
 \name{readMolFromSmi}
 \alias{readMolFromSmi}
-\title{Read Molecules from SMILES String and Return Parsed Java Molecular Object}
+\title{Read Molecules from SMILES Files and Return Parsed Java Molecular Object}
 \usage{
-  readMolFromSmi(smiles)
+readMolFromSmi(smifile)
 }
 \arguments{
-  \item{smiles}{Character vector, containing SMILES
-  string(s).}
+  \item{smiles}{Character vector, containing SMILES file
+  location(s).}
 }
 \value{
-  A list, containing parsed Java molecular object.
+A list, containing parsed Java molecular object.
 }
 \description{
-  Read Molecules from SMILES String and Return Parsed Java
-  Molecular Object
+Read Molecules from SMILES Files and Return Parsed Java
+Molecular Object
 }
 \details{
-  This function reads molecules from SMILES strings and
-  return parsed Java molecular object needed by
-  \code{extractDrug...} functions.
+This function reads molecules from SMILES strings and
+return parsed Java molecular object needed by
+\code{extractDrug...} functions.
 }
 \examples{
 \dontrun{
-smi  = c('CCC', 'c1ccccc1', 'C(C)(C=O)C(CCNC)C1CC1C(=O)')
-mol  = readMolFromSmi(smi[1])
-mols = readMolFromSmi(smi)}
+smi  = system.file('vignettedata/bbbp11.smi', package = 'Rcpi')
+mol  = readMolFromSmi(smi)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  See \code{\link{readMolFromSDF}} for reading molecules
-  from SDF files and returning parsed Java molecular
-  object.
+See \code{\link{readMolFromSDF}} for reading molecules from
+SDF files and returning parsed Java molecular object.
 }
 \keyword{MOL}
-\keyword{readMolFromSmi}
 \keyword{SMILES}
+\keyword{readMolFromSmi}
 

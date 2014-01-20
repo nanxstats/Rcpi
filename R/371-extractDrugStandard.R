@@ -19,7 +19,7 @@
 #'
 #' @aliases extractDrugStandard
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugStandard
 #' 
@@ -83,7 +83,7 @@ extractDrugStandard = function (molecules, depth = 6, size = 1024, silent = TRUE
 #'
 #' @aliases extractDrugStandardComplete
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugStandardComplete
 #' 

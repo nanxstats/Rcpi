@@ -1,6 +1,6 @@
-#' Calculate the Similarity of Drug Molecule Fingerprints
+#' Calculate Drug Molecule Similarity Derived by Molecular Fingerprints
 #'
-#' Calculate the Similarity of Drug Molecule Fingerprints
+#' Calculate Drug Molecule Similarity Derived by Molecular Fingerprints
 #' 
 #' This function calculate drug molecule fingerprints similarity.
 #' Define \code{a} as the features of object A, \code{b} is the features of object B, 
@@ -24,13 +24,13 @@
 #' 
 #' @return The numeric similarity value.
 #' 
-#' @keywords calcDrugSim Drug Similarity Tanimoto Euclidean Dice Cosine Hamming
+#' @keywords calcDrugFPSim Drug Similarity Tanimoto Euclidean Dice Cosine Hamming
 #'
-#' @aliases calcDrugSim
+#' @aliases calcDrugFPSim
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
-#' @export calcDrugSim
+#' @export calcDrugFPSim
 #' 
 #' @references
 #' Gasteiger, Johann, and Thomas Engel, eds. 
@@ -38,28 +38,27 @@
 #' 
 #' @examples
 #' \dontrun{
-#' smiles = c('C1CCC1CC(CN(C)(C))CC(=O)CC', 'c1ccccc1Cc1ccccc1')
-#' mols = readMolFromSmi(smiles)
+#' mols = readMolFromSDF(system.file('compseq/tyrphostin.sdf', package = 'Rcpi'))
 #' 
 #' fp1 = extractDrugEstate(mols[[1]])
 #' fp2 = extractDrugEstate(mols[[2]])
-#' calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'tanimoto')
-#' calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'euclidean')
-#' calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'cosine')
-#' calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'dice')
-#' calcDrugSim(fp1, fp2, fptype = 'compact', metric = 'hamming')
+#' calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'tanimoto')
+#' calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'euclidean')
+#' calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'cosine')
+#' calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'dice')
+#' calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'hamming')
 #' 
 #' fp3 = extractDrugEstateComplete(mols[[1]])
 #' fp4 = extractDrugEstateComplete(mols[[2]])
-#' calcDrugSim(fp3, fp4, fptype = 'complete', metric = 'tanimoto')
-#' calcDrugSim(fp3, fp4, fptype = 'complete', metric = 'euclidean')
-#' calcDrugSim(fp3, fp4, fptype = 'complete', metric = 'cosine')
-#' calcDrugSim(fp3, fp4, fptype = 'complete', metric = 'dice')
-#' calcDrugSim(fp3, fp4, fptype = 'complete', metric = 'hamming')}
+#' calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'tanimoto')
+#' calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'euclidean')
+#' calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'cosine')
+#' calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'dice')
+#' calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'hamming')}
 #' 
 
-calcDrugSim = function (fp1, fp2, fptype = c('compact', 'complete'), 
-                        metric = c('tanimoto', 'euclidean', 'cosine', 'dice', 'hamming')) {
+calcDrugFPSim = function (fp1, fp2, fptype = c('compact', 'complete'), 
+                          metric = c('tanimoto', 'euclidean', 'cosine', 'dice', 'hamming')) {
   
   fptype = match.arg(fptype)
   metric = match.arg(metric)

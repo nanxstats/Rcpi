@@ -2,8 +2,7 @@
 \alias{extractDrugGraphComplete}
 \title{Calculate the Graph Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugGraphComplete(molecules, depth = 6,
-    size = 1024, silent = TRUE)
+extractDrugGraphComplete(molecules, depth = 6, size = 1024, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -17,17 +16,17 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the Graph Molecular Fingerprints (in Complete
-  Format)
+Calculate the Graph Molecular Fingerprints (in Complete
+Format)
 }
 \details{
-  Calculate the graph molecular fingerprints. Similar to
-  the standard type by simply considers connectivity. This
-  is hashed fingerprints, with a default length of 1024.
+Calculate the graph molecular fingerprints. Similar to the
+standard type by simply considers connectivity. This is
+hashed fingerprints, with a default length of 1024.
 }
 \examples{
 \dontrun{
@@ -37,10 +36,10 @@ extractDrugGraphComplete(mols)
 extractDrugGraphComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugGraph}
+\link{extractDrugGraph}
 }
 \keyword{extractDrugGraphComplete}
 

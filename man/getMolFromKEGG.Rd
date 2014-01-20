@@ -2,7 +2,7 @@
 \alias{getMolFromKEGG}
 \title{Retrieve Drug Molecules in MOL Format from the KEGG Database}
 \usage{
-  getMolFromKEGG(id, parallel = 5)
+getMolFromKEGG(id, parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the KEGG drug ID.}
@@ -14,16 +14,16 @@
   \code{20}.}
 }
 \value{
-  A length of \code{id} character vector, each element
-  containing the corresponding drug molecule.
+A length of \code{id} character vector, each element
+containing the corresponding drug molecule.
 }
 \description{
-  Retrieve Drug Molecules in MOL Format from the KEGG
-  Database
+Retrieve Drug Molecules in MOL Format from the KEGG
+Database
 }
 \details{
-  This function retrieves drug molecules in MOL format from
-  the KEGG database.
+This function retrieves drug molecules in MOL format from
+the KEGG database.
 }
 \examples{
 \dontrun{
@@ -31,13 +31,13 @@ id = 'D00496'  # Penicillamine
 getMolFromKEGG(id)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  See \code{\link{getSmiFromKEGG}} for retrieving drug
-  molecules in SMILES format from the KEGG database.
+See \code{\link{getSmiFromKEGG}} for retrieving drug
+molecules in SMILES format from the KEGG database.
 }
+\keyword{KEGG}
 \keyword{getDrug}
 \keyword{getMolFromKEGG}
-\keyword{KEGG}
 

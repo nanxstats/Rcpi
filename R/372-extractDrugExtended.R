@@ -20,7 +20,7 @@
 #'
 #' @aliases extractDrugExtended
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugExtended
 #' 
@@ -85,7 +85,7 @@ extractDrugExtended = function (molecules, depth = 6, size = 1024, silent = TRUE
 #'
 #' @aliases extractDrugExtendedComplete
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugExtendedComplete
 #' 

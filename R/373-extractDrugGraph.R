@@ -19,7 +19,7 @@
 #'
 #' @aliases extractDrugGraph
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugGraph
 #' 
@@ -83,7 +83,7 @@ extractDrugGraph = function (molecules, depth = 6, size = 1024, silent = TRUE) {
 #'
 #' @aliases extractDrugGraphComplete
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugGraphComplete
 #' 

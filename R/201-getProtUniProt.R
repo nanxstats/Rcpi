@@ -15,7 +15,7 @@
 #'
 #' @aliases getFASTAFromUniProt
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getSeqFromUniProt}} for retrieving protein
 #' represented by amino acid sequence from the UniProt database.
@@ -64,7 +64,7 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #'
 #' @aliases getSeqFromUniProt
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getFASTAFromUniProt}} for retrieving protein sequence
 #' in FASTA format from the UniProt database.

@@ -2,7 +2,7 @@
 \alias{getMolFromPubChem}
 \title{Retrieve Drug Molecules in MOL Format from the PubChem Database}
 \usage{
-  getMolFromPubChem(id, parallel = 5)
+getMolFromPubChem(id, parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the PubChem drug ID.}
@@ -14,16 +14,16 @@
   \code{20}.}
 }
 \value{
-  A length of \code{id} character vector, each element
-  containing the corresponding drug molecule.
+A length of \code{id} character vector, each element
+containing the corresponding drug molecule.
 }
 \description{
-  Retrieve Drug Molecules in MOL Format from the PubChem
-  Database
+Retrieve Drug Molecules in MOL Format from the PubChem
+Database
 }
 \details{
-  This function retrieves drug molecules in MOL format from
-  the PubChem database.
+This function retrieves drug molecules in MOL format from
+the PubChem database.
 }
 \examples{
 \dontrun{
@@ -31,13 +31,13 @@ id = c('7847562', '7847563')  # Penicillamine
 getMolFromPubChem(id)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  See \code{\link{getSmiFromPubChem}} for retrieving drug
-  molecules in SMILES format from the PubChem database.
+See \code{\link{getSmiFromPubChem}} for retrieving drug
+molecules in SMILES format from the PubChem database.
 }
+\keyword{PubChem}
 \keyword{getDrug}
 \keyword{getMolFromPubChem}
-\keyword{PubChem}
 

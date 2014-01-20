@@ -1,0 +1,76 @@
+\name{calcDrugFPSim}
+\alias{calcDrugFPSim}
+\title{Calculate Drug Molecule Similarity Derived by Molecular Fingerprints}
+\usage{
+calcDrugFPSim(fp1, fp2, fptype = c("compact", "complete"),
+  metric = c("tanimoto", "euclidean", "cosine", "dice", "hamming"))
+}
+\arguments{
+  \item{fp1}{The first molecule's fingerprints, could be
+  extracted by \code{extractDrugMACCS()},
+  \code{extractDrugMACCSComplete()} etc.}
+
+  \item{fp2}{The second molecule's fingerprints.}
+
+  \item{fptype}{The fingerprint type, must be one of
+  \code{"compact"} or \code{"complete"}.}
+
+  \item{metric}{The similarity metric, one of
+  \code{"tanimoto"}, \code{"euclidean"}, \code{"cosine"},
+  \code{"dice"} and \code{"hamming"}.}
+}
+\value{
+The numeric similarity value.
+}
+\description{
+Calculate Drug Molecule Similarity Derived by Molecular
+Fingerprints
+}
+\details{
+This function calculate drug molecule fingerprints
+similarity. Define \code{a} as the features of object A,
+\code{b} is the features of object B, \code{c} is the
+number of common features to A and B: \itemize{ \item
+Tanimoto: aka Jaccard - \eqn{c/a+b+c} \item Euclidean:
+\eqn{\sqrt(a + b)} \item Dice: aka Sorensen, Czekanowski,
+Hodgkin-Richards - \eqn{c/0.5[(a+c) + (b+c)]} \item Cosine:
+aka Ochiai, Carbo - \eqn{c/\sqrt((a + c)(b + c))} \item
+Hamming: aka Manhattan, taxi-cab, city-block distance -
+\eqn{(a + b)} }
+}
+\examples{
+\dontrun{
+mols = readMolFromSDF(system.file('compseq/tyrphostin.sdf', package = 'Rcpi'))
+
+fp1 = extractDrugEstate(mols[[1]])
+fp2 = extractDrugEstate(mols[[2]])
+calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'tanimoto')
+calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'euclidean')
+calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'cosine')
+calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'dice')
+calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'hamming')
+
+fp3 = extractDrugEstateComplete(mols[[1]])
+fp4 = extractDrugEstateComplete(mols[[2]])
+calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'tanimoto')
+calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'euclidean')
+calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'cosine')
+calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'dice')
+calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'hamming')}
+}
+\author{
+Nan Xiao <\url{http://www.road2stat.com}>
+}
+\references{
+Gasteiger, Johann, and Thomas Engel, eds. Chemoinformatics.
+Wiley.com, 2006.
+}
+\keyword{Cosine}
+\keyword{Dice}
+\keyword{Drug}
+\keyword{Euclidean}
+\keyword{Hamming}
+\keyword{Similarity}
+\keyword{Tanimoto}
+\keyword{calcDrugFPSim}
+

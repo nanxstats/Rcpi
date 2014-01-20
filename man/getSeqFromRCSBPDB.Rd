@@ -2,7 +2,7 @@
 \alias{getSeqFromRCSBPDB}
 \title{Retrieve Protein Sequence from RCSB PDB}
 \usage{
-  getSeqFromRCSBPDB(id, parallel = 5)
+getSeqFromRCSBPDB(id, parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the protein ID.}
@@ -14,14 +14,14 @@
   \code{20}.}
 }
 \value{
-  A list, each component contains one of the protein
-  represented by amino acid sequence(s).
+A list, each component contains one of the protein
+represented by amino acid sequence(s).
 }
 \description{
-  Retrieve Protein Sequence from RCSB PDB
+Retrieve Protein Sequence from RCSB PDB
 }
 \details{
-  This function retrieves protein sequences from RCSB PDB.
+This function retrieves protein sequences from RCSB PDB.
 }
 \examples{
 \dontrun{
@@ -29,13 +29,13 @@ id = c('4HHB', '4FF9')
 getSeqFromRCSBPDB(id)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  See \code{\link{getPDBFromRCSBPDB}} for retrieving
-  protein in PDB format from the RCSB PDB database.
+See \code{\link{getPDBFromRCSBPDB}} for retrieving protein
+in PDB format from the RCSB PDB database.
 }
+\keyword{PDB}
 \keyword{getProt}
 \keyword{getSeqFromRCSBPDB}
-\keyword{PDB}
 

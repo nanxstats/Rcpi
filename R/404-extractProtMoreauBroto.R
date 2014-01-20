@@ -41,10 +41,9 @@
 #'
 #' @aliases extractProtMoreauBroto
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{extractProtMoran}} and 
-#'          \code{\link{extractProtGeary}} 
+#' @seealso See \code{\link{extractProtMoran}} and \code{\link{extractProtGeary}} 
 #'          for Moran autocorrelation descriptors and 
 #'          Geary autocorrelation descriptors.
 #' 
@@ -87,9 +86,9 @@
 #' 
 #' # Use 4 properties in the AAindex database, and 3 cutomized properties
 #' extractProtMoreauBroto(x, customprops = myprops,
-#'                    props = c('CIDH920105', 'BHAR880101',
-#'                              'CHAM820101', 'CHAM820102',
-#'                              'MyProp1', 'MyProp2', 'MyProp3'))
+#'                        props = c('CIDH920105', 'BHAR880101',
+#'                                  'CHAM820101', 'CHAM820102',
+#'                                  'MyProp1', 'MyProp2', 'MyProp3'))
 #' 
 
 extractProtMoreauBroto = function (x, props = c('CIDH920105', 'BHAR880101',

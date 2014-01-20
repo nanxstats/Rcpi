@@ -2,8 +2,8 @@
 \alias{extractDrugStandardComplete}
 \title{Calculate the Standard Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugStandardComplete(molecules, depth = 6,
-    size = 1024, silent = TRUE)
+extractDrugStandardComplete(molecules, depth = 6, size = 1024,
+  silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -17,17 +17,17 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the Standard Molecular Fingerprints (in
-  Complete Format)
+Calculate the Standard Molecular Fingerprints (in Complete
+Format)
 }
 \details{
-  Calculate the standard molecular fingerprints. Considers
-  paths of a given length. This is hashed fingerprints,
-  with a default length of 1024.
+Calculate the standard molecular fingerprints. Considers
+paths of a given length. This is hashed fingerprints, with
+a default length of 1024.
 }
 \examples{
 \dontrun{
@@ -37,10 +37,10 @@ extractDrugStandardComplete(mols)
 extractDrugStandardComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugStandard}
+\link{extractDrugStandard}
 }
 \keyword{extractDrugStandardComplete}
 

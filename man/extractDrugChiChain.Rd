@@ -2,7 +2,7 @@
 \alias{extractDrugChiChain}
 \title{Calculate the Kier and Hall Chi Chain Indices of Orders 3, 4, 5, 6 and 7}
 \usage{
-  extractDrugChiChain(molecules, silent = TRUE)
+extractDrugChiChain(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,38 +11,37 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A data frame, each row represents one of the molecules,
-  each column represents one feature, This function returns
-  10 columns, the order and names of the columns returned
-  is: \itemize{ \item \code{SCH.3} - Simple chain, order 3
-  \item \code{SCH.4} - Simple chain, order 4 \item
-  \code{SCH.5} - Simple chain, order 5 \item \code{SCH.6} -
-  Simple chain, order 6 \item \code{SCH.7} - Simple chain,
-  order 7 \item \code{VCH.3} - Valence chain, order 3 \item
-  \code{VCH.4} - Valence chain, order 4 \item \code{VCH.5}
-  - Valence chain, order 5 \item \code{VCH.6} - Valence
-  chain, order 6 \item \code{VCH.7} - Valence chain, order
-  7 }
+A data frame, each row represents one of the molecules,
+each column represents one feature, This function returns
+10 columns, the order and names of the columns returned is:
+\itemize{ \item \code{SCH.3} - Simple chain, order 3 \item
+\code{SCH.4} - Simple chain, order 4 \item \code{SCH.5} -
+Simple chain, order 5 \item \code{SCH.6} - Simple chain,
+order 6 \item \code{SCH.7} - Simple chain, order 7 \item
+\code{VCH.3} - Valence chain, order 3 \item \code{VCH.4} -
+Valence chain, order 4 \item \code{VCH.5} - Valence chain,
+order 5 \item \code{VCH.6} - Valence chain, order 6 \item
+\code{VCH.7} - Valence chain, order 7 }
 }
 \description{
-  Calculate the Kier and Hall Chi Chain Indices of Orders
-  3, 4, 5, 6 and 7
+Calculate the Kier and Hall Chi Chain Indices of Orders 3,
+4, 5, 6 and 7
 }
 \details{
-  Evaluates chi chain descriptors. The code currently
-  evluates the simple and valence chi chain descriptors of
-  orders 3, 4, 5, 6 and 7. It utilizes the graph
-  isomorphism code of the CDK to find fragments matching
-  SMILES strings representing the fragments corresponding
-  to each type of chain.
+Evaluates chi chain descriptors. The code currently
+evluates the simple and valence chi chain descriptors of
+orders 3, 4, 5, 6 and 7. It utilizes the graph isomorphism
+code of the CDK to find fragments matching SMILES strings
+representing the fragments corresponding to each type of
+chain.
 }
 \note{
-  These descriptors are calculated using graph isomorphism
-  to identify the various fragments. As a result
-  calculations may be slow. In addition, recent versions of
-  Molconn-Z use simplified fragment definitions (i.e.,
-  rings without branches etc.) whereas these descriptors
-  use the older more complex fragment definitions.
+These descriptors are calculated using graph isomorphism to
+identify the various fragments. As a result calculations
+may be slow. In addition, recent versions of Molconn-Z use
+simplified fragment definitions (i.e., rings without
+branches etc.) whereas these descriptors use the older more
+complex fragment definitions.
 }
 \examples{
 \dontrun{
@@ -50,7 +49,7 @@ mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
 extractDrugChiChain(mol)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \keyword{Chain}
 \keyword{Chi}

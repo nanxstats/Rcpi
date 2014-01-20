@@ -15,7 +15,7 @@
 #'
 #' @aliases extractDrugMACCS
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugMACCS
 #' 
@@ -74,7 +74,7 @@ extractDrugMACCS = function (molecules, silent = TRUE) {
 #'
 #' @aliases extractDrugMACCSComplete
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugMACCSComplete
 #' 

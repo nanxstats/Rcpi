@@ -2,8 +2,8 @@
 \alias{extractDrugExtendedComplete}
 \title{Calculate the Extended Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugExtendedComplete(molecules, depth = 6,
-    size = 1024, silent = TRUE)
+extractDrugExtendedComplete(molecules, depth = 6, size = 1024,
+  silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -17,19 +17,19 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the Extended Molecular Fingerprints (in
-  Complete Format)
+Calculate the Extended Molecular Fingerprints (in Complete
+Format)
 }
 \details{
-  Calculate the extended molecular fingerprints. Considers
-  paths of a given length, similar to the standard type,
-  but takes rings and atomic properties into account into
-  account. This is hashed fingerprints, with a default
-  length of 1024.
+Calculate the extended molecular fingerprints. Considers
+paths of a given length, similar to the standard type, but
+takes rings and atomic properties into account into
+account. This is hashed fingerprints, with a default length
+of 1024.
 }
 \examples{
 \dontrun{
@@ -39,10 +39,10 @@ extractDrugExtendedComplete(mols)
 extractDrugExtendedComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugExtended}
+\link{extractDrugExtended}
 }
 \keyword{extractDrugExtendedComplete}
 

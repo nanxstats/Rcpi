@@ -2,7 +2,7 @@
 \alias{extractDrugEstateComplete}
 \title{Calculate the E-State Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugEstateComplete(molecules, silent = TRUE)
+extractDrugEstateComplete(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,16 +11,16 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the E-State Molecular Fingerprints (in Complete
-  Format)
+Calculate the E-State Molecular Fingerprints (in Complete
+Format)
 }
 \details{
-  79 bit fingerprints corresponding to the E-State atom
-  types described by Hall and Kier.
+79 bit fingerprints corresponding to the E-State atom types
+described by Hall and Kier.
 }
 \examples{
 \dontrun{
@@ -30,10 +30,10 @@ extractDrugEstateComplete(mols)
 extractDrugEstateComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugEstate}
+\link{extractDrugEstate}
 }
 \keyword{extractDrugEstateComplete}
 

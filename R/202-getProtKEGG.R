@@ -15,7 +15,7 @@
 #'
 #' @aliases getFASTAFromKEGG
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getSeqFromKEGG}} for retrieving protein
 #' represented by amino acid sequence from the KEGG database.
@@ -59,7 +59,7 @@ getFASTAFromKEGG = function (id, parallel = 5) {
 #'
 #' @aliases getSeqFromKEGG
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getFASTAFromKEGG}} for retrieving protein sequence
 #' in FASTA format from the KEGG database.

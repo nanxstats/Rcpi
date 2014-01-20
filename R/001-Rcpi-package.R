@@ -12,15 +12,15 @@
 #' Drug Design Group, Central South University.
 #'
 #' \tabular{ll}{ Package: \tab Rcpi\cr Type: \tab Package\cr
-#' Version: \tab 1.0\cr License: \tab BSD\cr }
+#' Version: \tab 1.0\cr License: \tab Artistic-2.0\cr }
 #'
 #' @name Rcpi-package
 #' @aliases Rcpi
 #' @docType package
 #' @exportPattern "^[^\\.]"
-#' @author Xiao Nan <\email{road2stat@@gmail.com}>
-#'         Dongsheng Cao \email{oriental-cds@@163.com}
-#'         Qingsong Xu \email{dasongxu@@gmail.com}
+#' @author Nan Xiao <\email{road2stat@@gmail.com}>
+#'         Dongsheng Cao <\email{oriental-cds@@163.com}>
+#'         Qingsong Xu <\email{dasongxu@@gmail.com}>
 #' 
 #' @note
 #' The comprehensive user's guide could be opened with \code{vignette('Rcpi')},
@@ -31,40 +31,14 @@
 #' \url{https://github.com/road2stat/Rcpi/issues}.
 #' 
 #' @references
-#' The associated website for this package:
-#' \url{http://cbdd.csu.edu.cn/Rcpi/}
+#' The associated website for this package, see
+#' \url{http://cbdd.csu.edu.cn/}.
 #'
 #' @seealso See \code{\link{Rcpi}} for details.
 #' 
-#' @keywords Rcpi drug design compound protein sequence 
+#' @keywords Rcpi drug discovery molecular compound protein sequence 
 #'           feature extraction descriptors fingerprint
-#'           protr interaction chemoinformatics bioinforamtics
+#'           protr interaction chemogenomics bioinforamtics
 #' 
 #' @example inst/examples/Rcpi-package-ex.R
-NULL
-
-
-
-#' AAindex Data of 544 Physicochemical and Biological Properties
-#' for 20 Amino Acids
-#' 
-#' AAindex Data of 544 Physicochemical and Biological Properties
-#' for 20 Amino Acids
-#' 
-#' The data was extracted from the AAindex1 database ver 9.1 
-#' (\url{ftp://ftp.genome.jp/pub/db/community/aaindex/aaindex1}) as of Nov. 2012
-#' (Data Last Modified 2006-08-14).
-#' 
-#' With this data, users could investigate each property's accession number 
-#' and other details. Visit \url{http://www.genome.jp/dbget/aaindex.html} 
-#' for more information.
-#' 
-#' @docType data
-#' @name AAindex
-#' @aliases AAindex
-#' @usage data(AAindex)
-#' @keywords AAindex aaindex datasets
-#' @examples
-#' data(AAindex)
-#' 
 NULL

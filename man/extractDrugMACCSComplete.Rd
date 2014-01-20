@@ -2,7 +2,7 @@
 \alias{extractDrugMACCSComplete}
 \title{Calculate the MACCS Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugMACCSComplete(molecules, silent = TRUE)
+extractDrugMACCSComplete(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,15 +11,15 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the MACCS Molecular Fingerprints (in Complete
-  Format)
+Calculate the MACCS Molecular Fingerprints (in Complete
+Format)
 }
 \details{
-  The popular 166 bit MACCS keys described by MDL.
+The popular 166 bit MACCS keys described by MDL.
 }
 \examples{
 \dontrun{
@@ -29,10 +29,10 @@ extractDrugMACCSComplete(mols)
 extractDrugMACCSComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugMACCS}
+\link{extractDrugMACCS}
 }
 \keyword{extractDrugMACCSComplete}
 

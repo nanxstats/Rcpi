@@ -2,7 +2,7 @@
 \alias{getSmiFromDrugBank}
 \title{Retrieve Drug Molecules in SMILES Format from the DrugBank Database}
 \usage{
-  getSmiFromDrugBank(id, parallel = 5)
+getSmiFromDrugBank(id, parallel = 5)
 }
 \arguments{
   \item{id}{A character vector, as the DrugBank drug ID.}
@@ -14,16 +14,16 @@
   \code{20}.}
 }
 \value{
-  A length of \code{id} character vector, each element
-  containing the corresponding drug molecule.
+A length of \code{id} character vector, each element
+containing the corresponding drug molecule.
 }
 \description{
-  Retrieve Drug Molecules in SMILES Format from the
-  DrugBank Database
+Retrieve Drug Molecules in SMILES Format from the DrugBank
+Database
 }
 \details{
-  This function retrieves drug molecules in SMILES format
-  from the DrugBank database.
+This function retrieves drug molecules in SMILES format
+from the DrugBank database.
 }
 \examples{
 \dontrun{
@@ -31,11 +31,11 @@ id = 'DB00859'  # Penicillamine
 getSmiFromDrugBank(id)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  See \code{\link{getMolFromDrugBank}} for retrieving drug
-  molecules in MOL format from the DrugBank database.
+See \code{\link{getMolFromDrugBank}} for retrieving drug
+molecules in MOL format from the DrugBank database.
 }
 \keyword{DrugBank}
 \keyword{getDrug}

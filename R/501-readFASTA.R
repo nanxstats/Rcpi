@@ -28,7 +28,7 @@
 #'       e.g. {1, 3, 7} and {4, 6}, might belong to the 
 #'       same class and might belong to different classes.
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{readPDB}} for reading protein sequences in PDB format
 #' 

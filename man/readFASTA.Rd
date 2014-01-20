@@ -2,8 +2,8 @@
 \alias{readFASTA}
 \title{Read Protein Sequences in FASTA Format}
 \usage{
-  readFASTA(file = system.file("protseq/P00750.fasta", package = "Rcpi"),
-    legacy.mode = TRUE, seqonly = FALSE)
+readFASTA(file = system.file("protseq/P00750.fasta", package = "Rcpi"),
+  legacy.mode = TRUE, seqonly = FALSE)
 }
 \arguments{
   \item{file}{The name of the file which the sequences in
@@ -25,34 +25,34 @@
   \code{FALSE}.}
 }
 \value{
-  The result character vector
+The result character vector
 }
 \description{
-  Read Protein Sequences in FASTA Format
+Read Protein Sequences in FASTA Format
 }
 \details{
-  This function reads protein sequences in FASTA format.
+This function reads protein sequences in FASTA format.
 }
 \note{
-  Note that any different sets of instances (chunklets),
-  e.g. {1, 3, 7} and {4, 6}, might belong to the same class
-  and might belong to different classes.
+Note that any different sets of instances (chunklets), e.g.
+{1, 3, 7} and {4, 6}, might belong to the same class and
+might belong to different classes.
 }
 \examples{
 P00750 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \references{
-  Pearson, W.R. and Lipman, D.J. (1988) Improved tools for
-  biological sequence comparison. \emph{Proceedings of the
-  National Academy of Sciences of the United States of
-  America}, \bold{85}: 2444-2448
+Pearson, W.R. and Lipman, D.J. (1988) Improved tools for
+biological sequence comparison. \emph{Proceedings of the
+National Academy of Sciences of the United States of
+America}, \bold{85}: 2444-2448
 }
 \seealso{
-  See \code{\link{readPDB}} for reading protein sequences
-  in PDB format
+See \code{\link{readPDB}} for reading protein sequences in
+PDB format
 }
 \keyword{FASTA}
 \keyword{Rcpi}

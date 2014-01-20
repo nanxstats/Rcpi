@@ -2,7 +2,7 @@
 \alias{extractDrugPubChemComplete}
 \title{Calculate the PubChem Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugPubChemComplete(molecules, silent = TRUE)
+extractDrugPubChemComplete(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,15 +11,15 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the PubChem Molecular Fingerprints (in Complete
-  Format)
+Calculate the PubChem Molecular Fingerprints (in Complete
+Format)
 }
 \details{
-  Calculate the 881 bit fingerprints defined by PubChem.
+Calculate the 881 bit fingerprints defined by PubChem.
 }
 \examples{
 \dontrun{
@@ -29,10 +29,10 @@ extractDrugPubChemComplete(mols)
 extractDrugPubChemComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugPubChem}
+\link{extractDrugPubChem}
 }
 \keyword{extractDrugPubChemComplete}
 

@@ -1,0 +1,78 @@
+\name{calcDrugMCSSim}
+\alias{calcDrugMCSSim}
+\title{Calculate Drug Molecule Similarity Derived by Maximum Common Substructure Search}
+\usage{
+calcDrugMCSSim(mol1, mol2, type = c("smile", "sdf"), plot = FALSE, al = 0,
+  au = 0, bl = 0, bu = 0, matching.mode = "static")
+}
+\arguments{
+  \item{mol1}{The first molecule. R character string object
+  containing the molecule. See examples.}
+
+  \item{mol2}{The second molecule. R character string
+  object containing the molecule. See examples.}
+
+  \item{type}{The input molecule format, 'smile' or 'sdf'.}
+
+  \item{plot}{Logical. Should we plot the two molecules and
+  their maximum common substructure?}
+
+  \item{al}{Lower bound for the number of atom mismatches.
+  Default is 0.}
+
+  \item{au}{Upper bound for the number of atom mismatches.
+  Default is 0.}
+
+  \item{bl}{Lower bound for the number of bond mismatches.
+  Default is 0.}
+
+  \item{bu}{Upper bound for the number of bond mismatches.
+  Default is 0.}
+
+  \item{matching.mode}{Three modes for bond matching are
+  supported: \code{'static'}, \code{'aromatic'}, and
+  \code{'ring'}.}
+}
+\value{
+A list containing the detail MCS information and similarity
+values.  The numeric similarity value includes Tanimoto
+coefficient and overlap coefficient.
+}
+\description{
+Calculate Drug Molecule Similarity Derived by Maximum
+Common Substructure Search
+}
+\details{
+This function calculate drug molecule similarity derived by
+maximum common substructure search. The maximum common
+substructure search algorithm is provided by the
+\code{fmcsR} package.
+}
+\examples{
+\dontrun{
+mol1 = 'CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC'
+mol2 = 'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'
+mol3 = readChar(system.file('compseq/DB00859.sdf', package = 'Rcpi'), nchars = 1e+6)
+mol4 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'), nchars = 1e+6)
+
+sim1 = calcDrugMCSSim(mol1, mol2, type = 'smile')
+sim2 = calcDrugMCSSim(mol3, mol4, type = 'sdf', plot = TRUE)
+print(sim1[[2]])  # Tanimoto Coefficient
+print(sim2[[3]])  # Overlap Coefficient}
+}
+\author{
+Nan Xiao <\url{http://www.road2stat.com}>
+}
+\references{
+Wang, Y., Backman, T. W., Horan, K., & Girke, T. (2013).
+fmcsR: mismatch tolerant maximum common substructure
+searching in R. Bioinformatics, 29(21), 2792--2794.
+}
+\keyword{Common}
+\keyword{Drug}
+\keyword{MCS}
+\keyword{Maximum}
+\keyword{Similarity}
+\keyword{Substructure}
+\keyword{calcDrugMCSSim}
+

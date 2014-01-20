@@ -8,11 +8,11 @@
 #'
 #' @return A length 20 named vector
 #' 
-#' @keywords extract AAC extractAAC Amino Acid Composition
+#' @keywords extract AAC extractProtAAC Amino Acid Composition
 #'
 #' @aliases extractProtAAC
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{extractProtDC}} and \code{\link{extractProtTC}} 
 #'          for Dipeptide Composition and Tripeptide Composition descriptors.

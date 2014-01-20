@@ -15,7 +15,7 @@
 #'
 #' @aliases getMolFromKEGG
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getSmiFromKEGG}} for retrieving drug molecules
 #' in SMILES format from the KEGG database.
@@ -59,7 +59,7 @@ getMolFromKEGG = function (id, parallel = 5) {
 #'
 #' @aliases getSmiFromKEGG
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getMolFromKEGG}} for retrieving drug molecules
 #' in MOL format from the KEGG database.

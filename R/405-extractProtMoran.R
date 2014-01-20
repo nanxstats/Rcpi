@@ -40,10 +40,9 @@
 #'
 #' @aliases extractProtMoran
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{extractProtMoreauBroto}} and 
-#'          \code{\link{extractProtGeary}} 
+#' @seealso See \code{\link{extractProtMoreauBroto}} and \code{\link{extractProtGeary}} 
 #'          for Moreau-Broto autocorrelation descriptors and 
 #'          Geary autocorrelation descriptors.
 #' 

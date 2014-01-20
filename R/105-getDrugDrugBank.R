@@ -15,7 +15,7 @@
 #'
 #' @aliases getMolFromDrugBank
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getSmiFromDrugBank}} for retrieving drug molecules
 #' in SMILES format from the DrugBank database.
@@ -58,7 +58,7 @@ getMolFromDrugBank = function (id, parallel = 5) {
 #'
 #' @aliases getSmiFromDrugBank
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getMolFromDrugBank}} for retrieving drug molecules
 #' in MOL format from the DrugBank database.

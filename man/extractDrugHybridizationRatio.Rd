@@ -2,7 +2,7 @@
 \alias{extractDrugHybridizationRatio}
 \title{Descriptor that Characterizing Molecular Complexity in Terms of Carbon Hybridization States}
 \usage{
-  extractDrugHybridizationRatio(molecules, silent = TRUE)
+extractDrugHybridizationRatio(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,23 +11,23 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A data frame, each row represents one of the molecules,
-  each column represents one feature, This function returns
-  one column named \code{HybRatio}.
+A data frame, each row represents one of the molecules,
+each column represents one feature, This function returns
+one column named \code{HybRatio}.
 }
 \description{
-  Descriptor that Characterizing Molecular Complexity in
-  Terms of Carbon Hybridization States
+Descriptor that Characterizing Molecular Complexity in
+Terms of Carbon Hybridization States
 }
 \details{
-  This descriptor calculates the fraction of sp3 carbons to
-  sp2 carbons. Note that it only considers carbon atoms and
-  rather than use a simple ratio it reports the value of
-  Nsp3/(Nsp3 + Nsp2). The original form of the descriptor
-  (i.e., simple ratio) has been used to characterize
-  molecular complexity, especially in the are of natural
-  products, which usually have a high value of the sp3 to
-  sp2 ratio.
+This descriptor calculates the fraction of sp3 carbons to
+sp2 carbons. Note that it only considers carbon atoms and
+rather than use a simple ratio it reports the value of
+Nsp3/(Nsp3 + Nsp2). The original form of the descriptor
+(i.e., simple ratio) has been used to characterize
+molecular complexity, especially in the are of natural
+products, which usually have a high value of the sp3 to sp2
+ratio.
 }
 \examples{
 \dontrun{
@@ -35,9 +35,9 @@ mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
 extractDrugHybridizationRatio(mol)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
-\keyword{extractDrugHybridizationRatio}
 \keyword{Hybridization}
 \keyword{Ratio}
+\keyword{extractDrugHybridizationRatio}
 

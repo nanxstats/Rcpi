@@ -2,7 +2,7 @@
 \alias{extractDrugKRComplete}
 \title{Calculate the KR (Klekota and Roth) Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugKRComplete(molecules, silent = TRUE)
+extractDrugKRComplete(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,16 +11,16 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the KR (Klekota and Roth) Molecular
-  Fingerprints (in Complete Format)
+Calculate the KR (Klekota and Roth) Molecular Fingerprints
+(in Complete Format)
 }
 \details{
-  Calculate the 4860 bit fingerprint defined by Klekota and
-  Roth.
+Calculate the 4860 bit fingerprint defined by Klekota and
+Roth.
 }
 \examples{
 \dontrun{
@@ -30,10 +30,10 @@ extractDrugKRComplete(mols)
 extractDrugKRComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugKR}
+\link{extractDrugKR}
 }
 \keyword{extractDrugKRComplete}
 

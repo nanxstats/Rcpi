@@ -2,8 +2,7 @@
 \alias{extractDrugShortestPath}
 \title{Calculate the Shortest Path Molecular Fingerprints (in Compact Format)}
 \usage{
-  extractDrugShortestPath(molecules, depth = 6,
-    size = 1024, silent = TRUE)
+extractDrugShortestPath(molecules, depth = 6, size = 1024, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -17,19 +16,19 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A list, each component represents one of the molecules,
-  each element in the component represents the index of
-  which element in the fingerprint is 1. Each component's
-  name is the length of the fingerprints.
+A list, each component represents one of the molecules,
+each element in the component represents the index of which
+element in the fingerprint is 1. Each component's name is
+the length of the fingerprints.
 }
 \description{
-  Calculate the Shortest Path Molecular Fingerprints (in
-  Compact Format)
+Calculate the Shortest Path Molecular Fingerprints (in
+Compact Format)
 }
 \details{
-  Calculate the fingerprint based on the shortest paths
-  between pairs of atoms and takes into account ring
-  systems, charges etc.
+Calculate the fingerprint based on the shortest paths
+between pairs of atoms and takes into account ring systems,
+charges etc.
 }
 \examples{
 \dontrun{
@@ -39,10 +38,10 @@ extractDrugShortestPath(mols)
 extractDrugShortestPath(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugShortestPathComplete}
+\link{extractDrugShortestPathComplete}
 }
 \keyword{extractDrugShortestPath}
 

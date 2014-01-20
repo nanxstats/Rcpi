@@ -1,6 +1,6 @@
-#' Read Molecules from SDF files and Return Parsed Java Molecular Object
+#' Read Molecules from SDF Files and Return Parsed Java Molecular Object
 #'
-#' Read Molecules from SDF files and Return Parsed Java Molecular Object
+#' Read Molecules from SDF Files and Return Parsed Java Molecular Object
 #' 
 #' This function reads molecules from SDF files and return 
 #' parsed Java molecular object needed by \code{extractDrug...} functions.
@@ -13,7 +13,7 @@
 #'
 #' @aliases readMolFromSDF
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{readMolFromSmi}} for reading molecules by SMILES 
 #' string and returning parsed Java molecular object.
@@ -29,9 +29,7 @@
 
 readMolFromSDF = function (sdffile) {
   
-  txt = rcdk::load.molecules(sdffile)
-  smi = sapply(txt, get.smiles)
-  mol = rcdk::parse.smiles(smi)
+  mol = rcdk::load.molecules(sdffile)
   
   return(mol)
   

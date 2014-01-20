@@ -15,7 +15,7 @@
 #'
 #' @aliases getMolFromPubChem
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getSmiFromPubChem}} for retrieving drug molecules
 #' in SMILES format from the PubChem database.
@@ -58,7 +58,7 @@ getMolFromPubChem = function (id, parallel = 5) {
 #'
 #' @aliases getSmiFromPubChem
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getMolFromPubChem}} for retrieving drug molecules
 #' in MOL format from the PubChem database.

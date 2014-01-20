@@ -2,7 +2,7 @@
 \alias{extractDrugWeightedPath}
 \title{Descriptor that Calculates the Weighted Path (Molecular ID)}
 \usage{
-  extractDrugWeightedPath(molecules, silent = TRUE)
+extractDrugWeightedPath(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,29 +11,27 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A data frame, each row represents one of the molecules,
-  each column represents one feature, This function returns
-  5 columns named \code{WTPT.1}, \code{WTPT.2},
-  \code{WTPT.3}, \code{WTPT.4}, \code{WTPT.5}: \itemize{
-  \item \code{WTPT.1} - molecular ID \item \code{WTPT.2} -
-  molecular ID / number of atoms \item \code{WTPT.3} - sum
-  of path lengths starting from heteroatoms \item
-  \code{WTPT.4} - sum of path lengths starting from oxygens
-  \item \code{WTPT.5} - sum of path lengths starting from
-  nitrogens }
+A data frame, each row represents one of the molecules,
+each column represents one feature, This function returns 5
+columns named \code{WTPT.1}, \code{WTPT.2}, \code{WTPT.3},
+\code{WTPT.4}, \code{WTPT.5}: \itemize{ \item \code{WTPT.1}
+- molecular ID \item \code{WTPT.2} - molecular ID / number
+of atoms \item \code{WTPT.3} - sum of path lengths starting
+from heteroatoms \item \code{WTPT.4} - sum of path lengths
+starting from oxygens \item \code{WTPT.5} - sum of path
+lengths starting from nitrogens }
 }
 \description{
-  Descriptor that Calculates the Weighted Path (Molecular
-  ID)
+Descriptor that Calculates the Weighted Path (Molecular ID)
 }
 \details{
-  This descriptor calculates the weighted path (molecular
-  ID) described by Randic, characterizing molecular
-  branching. Five descriptors are calculated, based on the
-  implementation in the ADAPT software package. Note that
-  the descriptor is based on identifying all paths between
-  pairs of atoms and so is NP-hard. This means that it can
-  take some time for large, complex molecules.
+This descriptor calculates the weighted path (molecular ID)
+described by Randic, characterizing molecular branching.
+Five descriptors are calculated, based on the
+implementation in the ADAPT software package. Note that the
+descriptor is based on identifying all paths between pairs
+of atoms and so is NP-hard. This means that it can take
+some time for large, complex molecules.
 }
 \examples{
 \dontrun{
@@ -41,14 +39,14 @@ mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
 extractDrugWeightedPath(mol)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \references{
-  Randic, M., On molecular identification numbers (1984).
-  Journal of Chemical Information and Computer Science,
-  24:164-175.
+Randic, M., On molecular identification numbers (1984).
+Journal of Chemical Information and Computer Science,
+24:164-175.
 }
-\keyword{extractDrugWeightedPath}
 \keyword{Path}
 \keyword{Weighted}
+\keyword{extractDrugWeightedPath}
 

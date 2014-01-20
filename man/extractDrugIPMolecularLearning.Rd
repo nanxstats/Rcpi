@@ -2,7 +2,7 @@
 \alias{extractDrugIPMolecularLearning}
 \title{Calculates the Descriptor that Evaluates the Ionization Potential}
 \usage{
-  extractDrugIPMolecularLearning(molecules, silent = TRUE)
+extractDrugIPMolecularLearning(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,18 +11,18 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A data frame, each row represents one of the molecules,
-  each column represents one feature, This function returns
-  one column named \code{MolIP}.
+A data frame, each row represents one of the molecules,
+each column represents one feature, This function returns
+one column named \code{MolIP}.
 }
 \description{
-  Calculates the Descriptor that Evaluates the Ionization
-  Potential
+Calculates the Descriptor that Evaluates the Ionization
+Potential
 }
 \details{
-  Calculate the ionization potential of a molecule. The
-  descriptor assumes that explicit hydrogens have been
-  added to the molecules.
+Calculate the ionization potential of a molecule. The
+descriptor assumes that explicit hydrogens have been added
+to the molecules.
 }
 \examples{
 \dontrun{
@@ -30,9 +30,9 @@ mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
 extractDrugIPMolecularLearning(mol)}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
-\keyword{extractDrugIPMolecularLearning}
 \keyword{Ionization}
 \keyword{Potential}
+\keyword{extractDrugIPMolecularLearning}
 

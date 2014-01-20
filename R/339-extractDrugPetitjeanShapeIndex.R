@@ -15,7 +15,7 @@
 #'
 #' @aliases extractDrugPetitjeanShapeIndex
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugPetitjeanShapeIndex
 #' 

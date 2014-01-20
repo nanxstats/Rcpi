@@ -2,8 +2,7 @@
 \alias{extractDrugStandard}
 \title{Calculate the Standard Molecular Fingerprints (in Compact Format)}
 \usage{
-  extractDrugStandard(molecules, depth = 6, size = 1024,
-    silent = TRUE)
+extractDrugStandard(molecules, depth = 6, size = 1024, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -17,19 +16,19 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A list, each component represents one of the molecules,
-  each element in the component represents the index of
-  which element in the fingerprint is 1. Each component's
-  name is the length of the fingerprints.
+A list, each component represents one of the molecules,
+each element in the component represents the index of which
+element in the fingerprint is 1. Each component's name is
+the length of the fingerprints.
 }
 \description{
-  Calculate the Standard Molecular Fingerprints (in Compact
-  Format)
+Calculate the Standard Molecular Fingerprints (in Compact
+Format)
 }
 \details{
-  Calculate the standard molecular fingerprints. Considers
-  paths of a given length. This is hashed fingerprints,
-  with a default length of 1024.
+Calculate the standard molecular fingerprints. Considers
+paths of a given length. This is hashed fingerprints, with
+a default length of 1024.
 }
 \examples{
 \dontrun{
@@ -39,10 +38,10 @@ extractDrugStandard(mols)
 extractDrugStandard(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugStandardComplete}
+\link{extractDrugStandardComplete}
 }
 \keyword{extractDrugStandard}
 

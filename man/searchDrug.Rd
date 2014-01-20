@@ -1,0 +1,86 @@
+\name{searchDrug}
+\alias{searchDrug}
+\title{Parallelized Drug Molecule Similarity Search by Molecular Fingerprints Similarity or Maximum Common Substructure Search}
+\usage{
+searchDrug(mol, moldb, cores = 2, method = c("fp", "mcs"),
+  fptype = c("standard", "extended", "graph", "hybrid", "maccs", "estate",
+  "pubchem", "kr", "shortestpath", "fp2", "fp3", "fp4", "obmaccs"),
+  fpsim = c("tanimoto", "euclidean", "cosine", "dice", "hamming"),
+  mcssim = c("tanimoto", "overlap"), ...)
+}
+\arguments{
+  \item{mol}{The query molecule. The location of a
+  \code{sdf} file containing one molecule.}
+
+  \item{moldb}{The molecule database. The location of a
+  \code{sdf} file containing all the molecules to be
+  searched with.}
+
+  \item{cores}{Integer. The number of CPU cores to use for
+  parallel search, default is \code{2}. Users could use the
+  \code{detectCores()} function in the \code{parallel}
+  package to see how many cores they could use.}
+
+  \item{method}{\code{'fp'} or \code{'mcs'}. Search by
+  molecular fingerprints or by maximum common substructure
+  searching.}
+
+  \item{fptype}{The fingerprint type, only available when
+  \code{method = 'fp'}.  Rcpi supports 13 types of
+  fingerprints, including \code{'standard'},
+  \code{'extended'}, \code{'graph'}, \code{'hybrid'},
+  \code{'maccs'}, \code{'estate'}, \code{'pubchem'},
+  \code{'kr'}, \code{'shortestpath'}, \code{'fp2'},
+  \code{'fp3'}, \code{'fp4'}, \code{'obmaccs'}.}
+
+  \item{fpsim}{Similarity measure type for fingerprint,
+  only available when \code{method = 'fp'}.  Including
+  \code{'tanimoto'}, \code{'euclidean'}, \code{'cosine'},
+  \code{'dice'} and \code{'hamming'}.  See
+  \code{calcDrugFPSim} for details.}
+
+  \item{mcssim}{Similarity measure type for maximum common
+  substructure search, only available when \code{method =
+  'mcs'}.  Including \code{'tanimoto'} and
+  \code{'overlap'}.}
+
+  \item{...}{Other possible parameter for maximum common
+  substructure search, see \code{calcDrugMCSSim} for
+  details.}
+}
+\value{
+Named numerical vector. With the decreasing similarity
+value of the molecules in the database.
+}
+\description{
+Parallelized Drug Molecule Similarity Search by Molecular
+Fingerprints Similarity or Maximum Common Substructure
+Search
+}
+\details{
+This function does compound similarity search derived by
+various molecular fingerprints with various similarity
+measures or derived by maximum common substructure search.
+This function runs for a query compound against a set of
+molecules.
+}
+\examples{
+\dontrun{
+mol = system.file('compseq/DB00530.sdf', package = 'Rcpi')
+# DrugBank ID DB00530: Erlotinib
+moldb = system.file('compseq/tyrphostin.sdf', package = 'Rcpi')
+# Database composed by searching 'tyrphostin' in PubChem and filtered by Lipinski's Rule of Five
+searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'maccs', fpsim = 'hamming')
+searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'fp2', fpsim = 'tanimoto')
+searchDrug(mol, moldb, cores = 4, method = 'mcs', mcssim = 'tanimoto')}
+}
+\author{
+Nan Xiao <\url{http://www.road2stat.com}>
+}
+\keyword{Drug}
+\keyword{MCS}
+\keyword{Molecule}
+\keyword{Search}
+\keyword{Similarity}
+\keyword{searchDrug}
+

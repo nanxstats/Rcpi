@@ -2,8 +2,8 @@
 \alias{extractDrugShortestPathComplete}
 \title{Calculate the Shortest Path Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugShortestPathComplete(molecules, depth = 6,
-    size = 1024, silent = TRUE)
+extractDrugShortestPathComplete(molecules, depth = 6, size = 1024,
+  silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -17,17 +17,17 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the Shortest Path Molecular Fingerprints (in
-  Complete Format)
+Calculate the Shortest Path Molecular Fingerprints (in
+Complete Format)
 }
 \details{
-  Calculate the fingerprint based on the shortest paths
-  between pairs of atoms and takes into account ring
-  systems, charges etc.
+Calculate the fingerprint based on the shortest paths
+between pairs of atoms and takes into account ring systems,
+charges etc.
 }
 \examples{
 \dontrun{
@@ -37,10 +37,10 @@ extractDrugShortestPathComplete(mols)
 extractDrugShortestPathComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugShortestPath}
+\link{extractDrugShortestPath}
 }
 \keyword{extractDrugShortestPathComplete}
 

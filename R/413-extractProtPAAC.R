@@ -43,7 +43,7 @@
 #'
 #' @aliases extractProtPAAC
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{extractProtAPAAC}} for amphiphilic pseudo 
 #'          amino acid composition descriptor.
@@ -103,7 +103,7 @@ extractProtPAAC = function (x, props = c('Hydrophobicity', 'Hydrophilicity', 'Si
   if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
   
   AAidx = read.csv(system.file('sysdata/AAidx.csv', package = 'Rcpi'), header = TRUE)
-    
+  
   tmp = data.frame(AccNo = c("Hydrophobicity", "Hydrophilicity", "SideChainMass"), 
                    A = c(0.62,  -0.5, 15),  R = c(-2.53,   3, 101), 
                    N = c(-0.78,  0.2, 58),  D = c(-0.9,    3, 59), 

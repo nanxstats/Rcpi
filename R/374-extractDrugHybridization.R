@@ -19,7 +19,7 @@
 #'
 #' @aliases extractDrugHybridization
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugHybridization
 #' 
@@ -83,7 +83,7 @@ extractDrugHybridization = function (molecules, depth = 6, size = 1024, silent =
 #'
 #' @aliases extractDrugHybridizationComplete
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugHybridizationComplete
 #' 

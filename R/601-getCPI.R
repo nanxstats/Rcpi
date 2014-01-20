@@ -40,7 +40,7 @@
 #'
 #' @aliases getCPI
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getPPI}} for generating protein-protein interaction features.
 #' 

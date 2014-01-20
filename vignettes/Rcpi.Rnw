@@ -3,13 +3,13 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 %\VignetteIndexEntry{Rcpi: Compound-Protein Interactions with R}
-%\VignetteKeywords{R, Rcpi, protein sequence, amino acid, feature extraction}
+%\VignetteKeywords{protein sequence, drug discovery, molecular descriptor, molecular fingerprint, similarity, drug-target interaction}
 %\VignettePackage{Rcpi}
 
-\author{Xiao Nan\\Central South University \And 
-        Dongsheng Cao\\Central South University \AND
-        Qingsong Xu\\Central South University}
-\Plainauthor{Xiao Nan, Dongsheng Cao, Qingsong Xu}
+\author{Nan Xiao\\Central South University \And 
+        Qingsong Xu\\Central South University \And
+        Dongsheng Cao\\Central South University}
+\Plainauthor{Nan Xiao, Qingsong Xu, Dongsheng Cao}
 
 \title{\pkg{Rcpi}: Compound-Protein Interactions with \proglang{R}}
 \Plaintitle{Rcpi: Compound-Protein Interactions with R}
@@ -18,36 +18,36 @@
   Abstract here.
 }
 
-\Keywords{\proglang{R}, Rcpi, protein sequence, amino acid, feature extraction}
-\Plainkeywords{R, Rcpi, protein sequence, amino acid, feature extraction}
+\Keywords{protein sequence, drug discovery, molecular descriptor, molecular fingerprint, similarity, drug-target interaction}
+\Plainkeywords{protein sequence, drug discovery, molecular descriptor, molecular fingerprint, similarity, drug-target interaction}
 
 \Volume{xx}
 \Issue{x}
 \Month{Xxxxx}
-\Year{2012}
-\Submitdate{2012-xx-xx}
-\Acceptdate{2012-xx-xx}
+\Year{2014}
+\Submitdate{2014-xx-xx}
+\Acceptdate{2014-xx-xx}
 
 \Address{
-  Xiao Nan \\
+  Nan Xiao \\
   School of Mathematics and Statistics\\
   Central South University\\
   Changsha, Hunan, P. R. China\\
   E-mail: \email{road2stat@gmail.com}\\
   URL: \url{http://www.road2stat.com/}\\
-
+  
   Dongsheng Cao\\
-  School of Chemistry \& Chemical Engineering\\
+  School of Pharmaceutical Sciences\\
   Central South University\\
   Changsha, Hunan, P. R. China\\
   E-mail: \email{oriental-cds@163.com}\\
-  URL: \url{http://cbdd.csu.edu.cn/}
+  URL: \url{http://cbdd.csu.edu.cn/}\\
   
   Qingsong Xu\\
   School of Mathematics and Statistics\\
   Central South University\\
   Changsha, Hunan, P. R. China\\
-  E-mail: \email{dasongxu@gmail.com}\\
+  E-mail: \email{dasongxu@gmail.com}
   
 }
 
@@ -67,9 +67,43 @@ The \pkg{Rcpi} package \citep{CRAN:Rcpi} presented in this article implemented m
 
 The \pkg{Rcpi} package is available from the Comprehensive \proglang{R} Archive Network (CRAN) now, visit \url{http://CRAN.R-project.org/package=Rcpi} for more details. This vignette corresponds to \pkg{Rcpi} version \Sexpr{Rcpi.version} and was typeset on \Sexpr{now.date}.
 
+\section{Applications in Bioinformatics}
+
+\subsection{Predicting Protein Subcellular Locations}
+
+\section{Applications in Chemoinformatics}
+
+\subsection{Regression Modeling in QSAR Studies}
+
+Regression Modeling
+
+\subsection{In Silico Structure-Based Toxicity Prediction for Drug Discovery}
+
+Classification Modeling ROC plots
+
+\subsection{Molecule Clustering}
+
+Despite supervised methods, unsupervised modeling, like clustering
+
+plots like fmcsR
+
+\subsection{Molecule Similarity Search}
+
+result ranked list
+
+\section{Applications in Chemogenomics}
+
+\subsection{Predicting Drug-Target Interaction by Integrating Chemical and Genomic Spaces}
+
+G Protein-Coupled Receptor (GPCR)
+
 \section*{Acknowledgments}
 
-To be added.
+We would like to thank the Computational Biology and Drug Design (CBDD) Group (\url{http://cbdd.csu.edu.cn/}) of Central South University for their inspiring workshops and their support for the development of the \pkg{protr} package.
+
+\textit{Funding:} National Natural Science Foundation of China (Grants No. 11271374) and the Postdoctoral Science Foundation of Central South University. The studies meet with the approval of the university's review board.
+
+\clearpage
 
 \nocite{*} % list uncited bibs
 \bibliography{Rcpi}

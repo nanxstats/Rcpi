@@ -15,7 +15,7 @@
 #'
 #' @aliases getPDBFromRCSBPDB
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getSeqFromRCSBPDB}} for retrieving protein
 #' represented by amino acid sequence from the RCSB PDB database.
@@ -58,7 +58,7 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 #'
 #' @aliases getSeqFromRCSBPDB
 #' 
-#' @author Xiao Nan <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @seealso See \code{\link{getPDBFromRCSBPDB}} for retrieving protein
 #' in PDB format from the RCSB PDB database.

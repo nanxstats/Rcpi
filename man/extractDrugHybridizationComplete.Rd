@@ -2,8 +2,8 @@
 \alias{extractDrugHybridizationComplete}
 \title{Calculate the Hybridization Molecular Fingerprints (in Complete Format)}
 \usage{
-  extractDrugHybridizationComplete(molecules, depth = 6,
-    size = 1024, silent = TRUE)
+extractDrugHybridizationComplete(molecules, depth = 6, size = 1024,
+  silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -17,18 +17,18 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  An integer vector or a matrix. Each row represents one
-  molecule, the columns represent the fingerprints.
+An integer vector or a matrix. Each row represents one
+molecule, the columns represent the fingerprints.
 }
 \description{
-  Calculate the Hybridization Molecular Fingerprints (in
-  Complete Format)
+Calculate the Hybridization Molecular Fingerprints (in
+Complete Format)
 }
 \details{
-  Calculate the hybridization molecular fingerprints.
-  Similar to the standard type, but only consider
-  hybridization state. This is hashed fingerprints, with a
-  default length of 1024.
+Calculate the hybridization molecular fingerprints. Similar
+to the standard type, but only consider hybridization
+state. This is hashed fingerprints, with a default length
+of 1024.
 }
 \examples{
 \dontrun{
@@ -38,10 +38,10 @@ extractDrugHybridizationComplete(mols)
 extractDrugHybridizationComplete(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugHybridization}
+\link{extractDrugHybridization}
 }
 \keyword{extractDrugHybridizationComplete}
 

@@ -2,7 +2,7 @@
 \alias{extractDrugPubChem}
 \title{Calculate the PubChem Molecular Fingerprints (in Compact Format)}
 \usage{
-  extractDrugPubChem(molecules, silent = TRUE)
+extractDrugPubChem(molecules, silent = TRUE)
 }
 \arguments{
   \item{molecules}{Parsed molucule object.}
@@ -11,17 +11,17 @@
   should be shown or not, default is \code{TRUE}.}
 }
 \value{
-  A list, each component represents one of the molecules,
-  each element in the component represents the index of
-  which element in the fingerprint is 1. Each component's
-  name is the length of the fingerprints.
+A list, each component represents one of the molecules,
+each element in the component represents the index of which
+element in the fingerprint is 1. Each component's name is
+the length of the fingerprints.
 }
 \description{
-  Calculate the PubChem Molecular Fingerprints (in Compact
-  Format)
+Calculate the PubChem Molecular Fingerprints (in Compact
+Format)
 }
 \details{
-  Calculate the 881 bit fingerprints defined by PubChem.
+Calculate the 881 bit fingerprints defined by PubChem.
 }
 \examples{
 \dontrun{
@@ -31,10 +31,10 @@ extractDrugPubChem(mols)
 extractDrugPubChem(mols[[1]])}
 }
 \author{
-  Xiao Nan <\url{http://www.road2stat.com}>
+Nan Xiao <\url{http://www.road2stat.com}>
 }
 \seealso{
-  \link{extractDrugPubChemComplete}
+\link{extractDrugPubChemComplete}
 }
 \keyword{extractDrugPubChem}
 
