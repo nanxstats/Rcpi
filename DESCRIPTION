@@ -9,8 +9,7 @@ Description: The Rcpi package supports the research of compound-protein
     ChEMBL, CAS, KEGG and DrugBank. Rcpi offers the functionalities of protein
     sequence descriptor calculation, computing drug molecular descriptors and
     fingerprints.
-Author: Nan Xiao <road2stat@gmail.com>, Qingsong Xu <dasongxu@gmail.com>,
-    Dongsheng Cao <oriental-cds@163.com>
+Author: Nan Xiao <road2stat@gmail.com>, Dongsheng Cao <oriental-cds@163.com>, Qingsong Xu <dasongxu@gmail.com>
 Maintainer: Nan Xiao <road2stat@gmail.com>
 License: Artistic-2.0
 URL: https://github.com/road2stat/Rcpi/

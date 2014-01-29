@@ -16,6 +16,7 @@
 #' @param bu Upper bound for the number of bond mismatches. Default is 0.
 #' @param matching.mode Three modes for bond matching are supported: 
 #'                      \code{'static'}, \code{'aromatic'}, and \code{'ring'}.
+#' @param ... Other graphical parameters
 #' 
 #' @return A list containing the detail MCS information and similarity values.
 #'         The numeric similarity value includes Tanimoto coefficient 
@@ -49,7 +50,7 @@
 
 calcDrugMCSSim = function (mol1, mol2, type = c('smile', 'sdf'), plot = FALSE, 
                            al = 0, au = 0, bl = 0, bu = 0, 
-                           matching.mode = 'static') {
+                           matching.mode = 'static', ...) {
   
   fmcsR.exist = suppressMessages(require(fmcsR, quietly = TRUE))
   if ( !fmcsR.exist ) stop('The fmcsR package is required to run calcDrugMCSSim(). Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/fmcsR.html to install it.')
@@ -80,7 +81,7 @@ calcDrugMCSSim = function (mol1, mol2, type = c('smile', 'sdf'), plot = FALSE,
   mcs = fmcs(sdfset1, sdfset2, al = al, au = au, bl = bl, bu = bu, 
              matching.mode = matching.mode, fast = FALSE)
   
-  if (plot == TRUE) plotMCS(mcs)
+  if (plot == TRUE) plotMCS(mcs, ...)
   
   x = list(mcs, mcs@stats['Tanimoto_Coefficient'], mcs@stats['Overlap_Coefficient'])
   

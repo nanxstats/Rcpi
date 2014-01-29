@@ -3,7 +3,7 @@
 \title{Calculate Drug Molecule Similarity Derived by Maximum Common Substructure Search}
 \usage{
 calcDrugMCSSim(mol1, mol2, type = c("smile", "sdf"), plot = FALSE, al = 0,
-  au = 0, bl = 0, bu = 0, matching.mode = "static")
+  au = 0, bl = 0, bu = 0, matching.mode = "static", ...)
 }
 \arguments{
   \item{mol1}{The first molecule. R character string object
@@ -32,6 +32,8 @@ calcDrugMCSSim(mol1, mol2, type = c("smile", "sdf"), plot = FALSE, al = 0,
   \item{matching.mode}{Three modes for bond matching are
   supported: \code{'static'}, \code{'aromatic'}, and
   \code{'ring'}.}
+
+  \item{...}{Other graphical parameters}
 }
 \value{
 A list containing the detail MCS information and similarity

@@ -1,0 +1,298 @@
+RI	SMILES	Name	Odor
+2300	CCCCCCCCCCCCCCCCCCCCCCC	tricosane	alkane
+2200	CCCCCCCCCCCCCCCCCCCCCC	docosane	alkane
+2111	CC(CCC[C@H](CCC[C@H](CCC/C(=C/CO)C)C)C)C	phytol	flower
+2100	C(CCCCCCC)CCCCCCCCCCCCC	heneicosane	alkane
+2000	CCCCCCCCCCCCCCCCCCCC	eicosane	alkane
+1900	C(CCCCC)CCCCCCCCCCCCC	nonadecane	alkane
+1800	CCCCCCCCCCCCCCCCCC	octadecane	alkane
+1796	CCCCCCCCCCCCCCCC=O	palmitaldehyde	cardboard
+1781	CCCCCCCCCCCCCCC(=O)C	hexadecanone	fruit
+1749	[C@@]12([C@@H](C[C@H](CC1)C2(C)C)OC(=O)c1ccccc1)C	bornyl benzoate	pine, balsamic
+1739	c1ccccc1C(=O)OCc1ccccc1	benzyl benzoate	balsamic, oil, herb
+1700	C(CCC)CCCCCCCCCCCCC	heptadecane	alkane
+1676	CCCCCC/C=C/CCCCCCCCC	7-heptadecene	alkane
+1674	C1C[C@@]([C@H]2[C@H]([C@@H]1C(C)C)C=C(CC2)C)(C)O	α-cadinol	herb, wood
+1659	C1C[C@]([C@H]2[C@@H]([C@H]1C(C)C)C[C@@H](CC2)C)(O)C	T-muurolol	herb, weak spice
+1657	C1C[C@@]([C@@H]2[C@H]([C@@H]1C(C)C)C=C(CC2)C)(C)O	δ-cadinol	herb
+1649	C1C(=O)[C@@H]([C@@H](C1)CC(=O)OC)CCCCC	methyl dihydroepijasmonate	jasmine
+1640	C1C[C@H]([C@H](C1=O)C/C=C\CC)CC(=O)OC	methyl epijasmonate	jasmine
+1632	C/C(=C/CC/C(=C/COC(=O)CCCC)C)C	geranyl valerate	rose, fruit
+1609	C1C[C@H]([C@H](C1=O)C/C=C\CC)CC(=O)OC	methyl jasmonate	jasmine
+1608	C/C(=C\CC[C@H](CCOC(=O)CCCC)C)C	citronellyl valerate	warm, honey, herb, rose
+1603	C1C(=CC[C@H](C1)[C@](CC/C=C(/C)C)(O)C)C	levomenol	herb
+1600	CCCCCCCCCCCCCCCC	hexadecane	alkane
+1596	CCCCCCCCCCCCCC=O	tetradecyl aldehyde	flower, wax
+1593	C/C(=C/CC/C(=C/COC(=O)CC(C)C)C)C	geranyl isovalerate	fruit, rose, apple
+1564	C(C/C=C(/C)C)/C(=C\C[C@H]([C@H](C=C)C)O)C	nerolidol	wood, flower, wax
+1549	C1C[C@@H](c2c([C@@H]1C(C)C)cc(cc2)C)C	calamenene	herb, spice
+1544	C1CC(=CC/C(=C(\C)C)CCC(=C1)C)C	germacrene B	wood, earth, spice
+1543	C1C(=C)C=C[C@H](C1)[C@H](CC/C=C(/C)C)C	β-sesquiphellandrene	wood
+1536	c1(ccc(cc1)[C@@H](C)CC/C=C(/C)C)C	α-curcumene	herb
+1532	C/C(=C/CC/C(=C/COC(=O)CCC)C)C	geranyl butyrate	fruit, rose, apple
+1531	C1CC(=C2[C@H]([C@@H]1C(C)C)C=C(CC2)C)C	δ-cadinene	thyme, medicine, wood
+1526	C1C(=C[C@H]2[C@@H](C1)C(=C)CC[C@@H]2C(C)C)C	γ-cadinene	wood
+1518	C1(=C[C@@H]2C(=CC1)[C@H](CC[C@H]2C(C)C)C)C	cadinadiene	spice, fruit
+1518	C/C(=C/CC/C(=C/C/C=C(/C=C)C)C)C	α-farnesene	wood, sweet
+1513	C1CC(=CC[C@@H]1C(=C)CC/C=C(/C)C)C	(-)-β-bisabolene	balsamic
+1511	CCCC(=O)OCC[C@H](CC/C=C(/C)C)C	citronellyl butyrate	fruit, sweet, rose
+1506	C1C=C([C@@H]2[C@H]([C@@H]1C(C)C)C=C(CC2)C)C	α-muurolene	wood
+1500	C/C(=C/CC[C@@](C=C)(C)OC(=O)CCCC)C	linalyl valerate	citrus, lavender
+1500	C1(=CCCC(=C)C=C[C@H](CC1)C(C)C)C	germacrene D	wood, spice
+1500	C(C)CCCCCCCCCCCCC	pentadecane	alkane
+1488	C1CC(=C)[C@H]2[C@@H]([C@H]1C(C)C)C=C(CC2)C	γ-muurolene	herb, wood, spice
+1473	[C@@]12([C@@H](C[C@H](CC1)C2(C)C)OC(=O)CCC)C	bornyl butyrate	herb, wood
+1472	CC1=CCC(C)(C)C=CCC(=CCC1)C	α-humulene	wood
+1469	C(=C\c1ccc(cc1)O)/C(=O)O	p-coumaric acid	balsamic
+1469	C=C(C(=O)OCC[C@H](CC/C=C(/C)C)C)C	citronellyl isobutyrate	fruit, rose
+1462	c1(c(c(cc(c1)CC=C)OC)OC)OC	elemicin	spice, flower
+1461	C/C(=C/CC[C@@](C=C)(C)OC(=O)CC(C)C)C	linalyl isovalerate	sweet, apple, citrus
+1458	C1C[C@@H]2[C@H]([C@@H]3[C@@H](C1=C)CC[C@@H]3C)C2	aromadendrene	wood
+1451	C(=C\CC/C(=C/CCC(=C)C=C)C)(/C)C	β-farnesene	wood, citrus, sweet
+1448	CCCCCCCCCC/C=C/C=O	2-dodecenal	green, fat, sweet
+1438	C1CC[C@@]2([C@H](C1=C)CC(=C(\C)C)\CC2)C	γ-selinene	wood
+1438	C1C(=CCC[C@@H]2[C@@H](C(=C)C1)CC2(C)C)C	β-caryophyllene	wood, spice
+1431	C(=C\CC/C(=C/CCC(=O)C)C)(\C)C	geranyl acetone	magnolia, green
+1424	O1C(=O)CC[C@@H]1CCCCCC	γ-decalactone	peach, fat
+1421	C1C(=C)[C@@H]2[C@@H](CCC(=CC1)C)C(C2)(C)C	isocaryophyllene	wood
+1419	C1[C@H](C[C@@H]2[C@](C1)(CCCC2=C)C)C(=C)C	β-selinene	herb
+1408	C1CC=C([C@H](C1(C)C)/C=C/C(=O)C)C	α-ionone	wood, violet
+1400	[C@@H]12[C@@H]([C@@H]3[C@]1(CC[C@H]3C(C)C)C)C(=C)CC2	β-bourbonene	herb
+1400	CCCCCCCCCCCCCC	tetradecane	alkane
+1394	CCCCCCCCCCOC(=O)C	decyl alcohol	orange, oil
+1391	C(CCCCCCC=O)CCCC	lauric aldehyde	lily, fat, citrus
+1384	C(C(=O)OCC)CCCCCCCC	ethyl decanoate	grape
+1381	c1cc(cc(c1O)OC)CC=C	eugenol	clove, honey
+1376	C(=O)(CC)O[C@H]1C[C@@H]2CC[C@]1(C2(C)C)C	isobornyl propionate	fruit, turpentine
+1372	c1cccc(c1)[C@H](CO)O	styrene glycol	sweet
+1371	C(C(=O)OCCCC)CCCCCC	butyl octanoate	fruit
+1369	C(C(=O)OCCCCCC)CCCC	hexyl hexanoate	apple peel, peach
+1365	C(C/C=C(\C)C)/C(=C/CC(=O)OCC)C	geranyl acetate	rose
+1363	C(=O)(/C=C/C)C1=C(C=CCC1(C)C)C	β-damascenone	apple. rose, honey
+1354	C1CCn2c1ccc2C(=O)C	acetylpyrrolizine	medicine
+1354	CCCCCCCCCCCO	undecanol	mandarin
+1345	c1cc(c(cc1C=O)OC)O	vanillin	vanilla
+1345	C/C(=C/CC/C(=C\COC(=O)C)C)C	neryl acetate	fruit
+1342	CCCCCCCC/C=C/C=O	(E)-2-undecenal	soap, fat, green
+1335	C(C[C@H](CCOC(=O)C)C)/C=C(/C)C	citronellyl acetate	rose, dust
+1326	c1ccccc1C(=O)OCCCC	butyl benzoate	balsamic
+1322	c1cc(ccc1CO)C(C)C	cuminic alcohol	wood, herb
+1322	CCCCCCCOC(=O)[C@H](CC)C	heptyl 2-methylbutyrate	apple
+1320	c1cccc(c1C(=O)OC)N	methyl anthranilate	honey, flower
+1319	C(=O)(C)O[C@@H]1C[C@H](CC[C@H]1C)C(=C)C	dihydrocarvyl acetate	mint, camphor, medicine
+1318	c1(ccccc1)COC(=O)CCC	benzyl butanoate	plum
+1313	c1(ccccc1)C(OC)OC	dimethoxytoluene	hummus
+1312	CC[C@H](CCC(=O)OCC)O	ethylhydroxyhexanoate	fresh
+1307	C(C(=O)OC)CCCCCCCC	methyl decanoate	wine
+1304	c1cccc(c1)CCC(=O)O	hydrocinnamic acid	balsamic
+1300	CCCCCCCCCCCCC	tridecane	alkane
+1295	c1(c(ncc(n1)C)C)CCC(C)C	isopentyldimethylpyrazine	fruit
+1289	C1[C@H](CCC(=C1)C)C(C)(C)O	α-terpineol	oil, anise, mint
+1288	CCCCCCCCCCC=O	undecanaldehyde	oil, pungent, sweet
+1288	O=C/C=C/C=C/CCCCC	decadienal	fried, wax, fat
+1284	C/C(=C/CC/C(=C/C(=O)OC)C)C	methyl geranate	flower, green, fruit
+1267	C(=C\C=C/CCCCC)\C=O	2,4-decadienal	seaweed
+1262	C(C(=O)O)CCCCCC	octanoic acid	sweat, cheese
+1258	C/C(=C/CC/C(=C/CO)C)C	geraniol	rose, geranium
+1258	C(=O)(C)O[C@@H]1C[C@H](CC[C@@H]1C(=C)C)C	isopulegyl acetate	mint, leaf
+1252	c1cc(c(cc1)C(=O)C)N	o-aminoacetophenone	foxy, sweet
+1252	CCCCCCCCCCO	decanol	fat
+1245	C1(=CC[C@H](CC1)C(=C)C)C=O	perilla aldehyde	spice
+1241	c1c(ccc(c1)C=O)C(C)C	cumin aldehyde	acid, sharp
+1241	c1(c(scn1)CCO)C	sulfurol	sulfur
+1241	c1c(ccc(c1)CC)OC	p-anisyl alcohol	flower
+1239	C1C[C@]2([C@H](C[C@@H]1C2(C)C)OC=O)C	bornyl formate	green
+1237	C(=C(\CCO)C)\C/C=C(\C)C	isogeraniol	rose
+1236	c1ccccc1CC(=O)O	phenylacetic acid	honey, flower
+1234	C(C/C=C(\C)C)/C(=C\CO)C	nerol	sweet
+1233	c1c(cccc1)CCOC(=O)C	β-phenethyl acetate	rose, honey, tobacco
+1229	C(=C\CC[C@H](CCO)C)(\C)C	citronellol	rose
+1228	C(=O)O[C@H]1C[C@@H]2CC[C@]1(C2(C)C)C	isobornyl formate	green, earth, camphor
+1227	CCC[C@H](CCOC(=O)C)S	3-mercaptohexyl-acetate	box tree
+1222	[C@@H](C(=O)OCCCCCC)(CC)C	hexyl methylbutyrate	strawberry
+1220	O1C(=O)CC[C@@H]1CCCC	γ-octalactone	coconut
+1217	c1c(c(ccc1)C(=O)OC)O	methyl salicylate	peppermint
+1216	[C@H]1([C@H](CCC(=C1)C)C(C)C)O	piperitol	herb
+1210	C1[C@H](CC=C(C1=O)C)C(=C)C	(-)-carvone	mint
+1207	C(C(=O)OC)CCCCCCC	methyl nonanoate	coconut
+1206	C/C(=C/CC[C@@](C=C)(C)OC=O)C	linalyl formate	citrus, coriander
+1203	[C@H]1([C@H](CCC(=C1)C)C(C)C)O	(Z)-piperitol	herb
+1200	c1(ccc(cc1)C(C)(C)O)C	p-cymenol	citrus, must
+1200	CCCCCCCCCCCC	dodecane	alkane
+1186	CCCCCCCCCC=O	decanal	soap, orange peel, tallow
+1182	[C@H]1(CC[C@@H]([C@@H](C1)O)C(C)C)C	neoisomenthol	menthol
+1182	[C@@]1(CCC(=CC1)C)(C(C)C)O	1-terpinen-4-ol	turpentine, nutmeg, must
+1182	C(C(=O)OCC)CCCCCC	ethyl octanoate	fruit, fat
+1180	[C@@H]1(C[C@H]2CC[C@@]1(C2(C)C)C)O	borneol	camphor
+1175	C(C(=O)OCCCC)CCCC	butyl hexanoate	fruit
+1175	c1cnc(c(n1)CC(C)C)OC	isobutylmethoxypyrazine	earth, spice, green pepper
+1169	C/C(=C/C[C@H](C(=C)C)CO)C	lavandulol	herb
+1168	C(C(=O)OCCCCCC)CC	hexyl butanoate	apple peel
+1166	C(=O)C/C(=C/C/C=C(\C)C)C	dimethyloctadienal	green
+1157	C1C[C@]2([C@@H](C[C@@H]1C2)O)C	isoborneol	must, camphor
+1152	[C@@H]12C(=C)[C@H](C[C@@H](C1(C)C)C2)O	pinocarveol	flower
+1152	C1[C@@H]2C([C@@]([C@H](C1)C2)(C)O)(C)C	camphene hydrate	camphor
+1151	C(=O)C/C(=C\C/C=C(/C)C)C	cis-isocitral	green
+1150	o1c(c(cc1)SSC)C	methyl-(methyldithio)furan	cooked meat, thiamin
+1150	o1c(c(cc1)SSC)C	methyldithiofurane	thiamin, meat
+1147	c1(ncc(nc1CC)C)CC	diethylmethyl pyrazine	potato, meat, roast
+1147	CC(=O)OCc1ccccc1	benzyl acetate	fresh, boiled vegetable
+1137	CCCCCC/C=C/C=O	2-nonenal	paper
+1134	C/C(=C/CC[C@H](CC=O)C)C	citronellal	fat
+1132	CCCCCC[C@H](OC(=O)C)C	octyl acetate	fruit
+1130	O=C/C=C/CCCCCC	(E)-2-nonenal	cucumber, fat, green
+1128	C1C=CC[C@@]([C@@H]1C(C)C)(C)O	p-2-menthen-1-ol	herb
+1127	C1C(CCC(C1)(C)O)C(=C)C	β-terpineol	must
+1125	[C@H]1(C(=O)C[C@H](CC1)C)C(C)C	menthone	mint
+1123	C1[C@H]2C(C)(C)[C@H]([C@@](C1)(C2)C)O	α-fenchyl alcohol	camphor
+1123	C1[C@H]2C(C)(C)[C@H]([C@@](C1)(C2)C)O	α-fenchyl alcohol	camphor
+1123	CCCCCOC(=O)CC(C)C	pentyl methylbutyrate	apple
+1122	C1[C@H](CC[C@]2([C@H]1O2)C)C(=C)C	(E)-limonene oxide	fresh, citrus
+1121	C(CC/C=C\C=O)CCC	2-nonenal	orris, fat, cucumber
+1120	[C@@]1(CC=C(CC1)C(C)C)(O)C	3-terpinen-1-ol	must
+1119	C1[C@H](CC[C@]2([C@@H]1O2)C)C(=C)C	(Z)-limonene oxide	fresh, citrus
+1117	c1cc(ccc1)CO	benzyl alcohol	sweet, flower
+1113	O1C(=O)CC[C@@H]1CCC	γ-heptalactone	nut, fat, fruit
+1111	[C@H]1(C[C@H](CCO1)C)/C=C(/C)C	(E)-rose oxide	flower
+1110	C1(=NCCCC1)C(=O)C	2-acetyl-3,4,5,6-tetrahydropyridine	caramel
+1109	c1c(cco1)CC/C=C(/C)C	perillen	wood
+1100	CCCCCCCCCCC	undecane	alkane
+1099	o1c(c(cc1)C)C/C=C(/C)C	(methylbutenyl)-methylfuran	mint
+1094	C/C(=C/[C@@H]1OCC[C@H](C1)C)C	(-)-cis-rose oxide	sweet, rose
+1093	CCCCCCCC(=O)C	nonanone	hot milk, soap, green
+1092	C1[C@@H](C[C@@H](OC1)/C=C(/C)C)C	(+)-cis-rose oxide	green, flower
+1089	C1C/C(=C(\C)C)CC=C1C	δ-terpinene	pine, plastic
+1087	CCC/C=C/C=C/C=O	2,4-octadienal	green, seaweed, cucumber
+1085	C/C(=C/CC[C@](C=C)(O)C)C	linalool	flower, lavender
+1084	C=C[C@@](C/C=C/C(=C)C)(O)C	hotrienol	hyacinth
+1083	c1(nccnc1C(C)C)OC	isopropylmethoxypyrazine	pea, earth
+1080	c1c(cccc1)CCO	2-phenylethyl alcohol	honey, spice, rose, lilac
+1079	C(C=O)CCCCCCC	nonanal	fat, citrus, green
+1077	C(C(=O)OCCCCC)CC	pentyl butanoate	banana
+1071	C(CO)CCCCCC	octanol	chemical, metal, burnt
+1070	c1(=O)c(c(occ1)CC)C	maltol	caramel
+1064	c1(C(=O)OC)ccccc1	methyl benzoate	prune, lettuce, herb, sweet
+1064	c1ccc(s1)CS	thenylthiol	sulfur
+1063	C1(=C([C@H](OC1=O)C)C)O	sotolon	cotton candy, spice, maple
+1063	CC(CCC[C@H](C=C)C)(O)C	dihydromyrcenol	tart lime, citrus, cologne
+1062	c1(ncc(nc1CC)C)C	2,5-dimethyl-3-ethylpyrazine	potato, roast
+1059	C=CC(=O)CCCCCC	nonenone	pungent, mushroom
+1058	C1C=C(CC=C1C)C(C)C	γ-terpinene	gasoline, turpentine
+1056	c1cccc(c1OC)O	guaiacol	smoke, sweet, medicine
+1043	C(=C(\C=C)C)\C/C=C(\C)C	(E)-β-ocimene	sweet, herb
+1039	C/C(=C/CC[C@H](C=O)C)C	dimethylheptenal	fruit, green, melon
+1036	CC(CCC[C@H](C=C)C)(O)C	6(10)-dihydromyrcenol	tart lime, citrus, cologne
+1035	[C@H]1([C@H](C1(C)C)/C=C(/C)C)CO	dihydrolinalool	wood, citrus, camphor
+1035	C(=C(\C=C)C)\C/C=C(\C)C	ocimene	herb
+1035	C1C[C@H](C=CC1=C)C(C)C	β-phellandrene	mint, terpentine
+1032	[C@H]1([C@H](C(=O)[C@H](O1)C)OC)C	dimethylmethoxyfuranone	caramel, sweet, mildew
+1031	O=C/C=C/CCCCC	2-octenal	green, nut, fat
+1030	c1(c(ccs1)S)C	methyl-thiophenethiol	medicine
+1028	c1(ccc[nH]1)C(=O)C	2-acetylpyrrole	nut, walnut, bread
+1025	c1cc(ccc1C)C(C)C	p-cymene	solvent, gasoline, citrus
+1023	CC1=C(O)C(=O)[C@@H](C)O1	furaneol™	caramel
+1023	C(C(=O)OC(C)C)CCCC	isopropyl hexanoate	fresh
+1022	C(CCC(=O)OCC)O	ethyl hydroxybutanoate	caramel
+1022	C1C[C@H](CC=C1C)C(=C)C	limonene	lemon, orange
+1020	C1CC(=CC=C1C)C(C)C	α-terpinene	lemon
+1018	N1=C(CCCC1)C(=O)C	2-acetyl-1,4,5,6-tetrahydropyridine	caramel
+1017	C1=C(C[C@H]2[C@@H](C1)C2(C)C)C	δ-3-carene	lemon, resin
+1015	C1CC2(CCC1C(O2)(C)C)C	1,8-cineole	mint, sweet
+1009	C1=C[C@H](CC=C1C)C(C)C	α-phellandrene	turpentine, mint, spice
+1004	c1cc(ccc1)CC=O	phenylethanal	hawthorne, honey, sweet
+1001	C12(CCC(CC1)(O2)C(C)C)C	1,4-cineole	spice
+1000	C(CC)CCCCCCC	decane	alkane
+995	c1cccnc1C(=O)C	acetylpyridine	popcorn
+995	CCCCC[C@H](CC)O	octanol	moss, nut, mushroom
+990	C/C(=C/CCC(=O)C=C)C	myrcene	balsamic, must, spice
+988	O=C(OCC/C=C/CC)C	hexenyl acetate	green, banana
+987	CCCCCC[C@@H](C)O	2-octanol	mushroom, fat
+985	C1C(=C)[C@H]2C([C@@H](C1)C2)(C)C	β-pinene	pine, resin, turpentine
+984	CCCCCC(=O)OCC	ethyl hexanoate	apple peel, fruit
+982	C1CSC(S1)C	methyldithiolane	sulfur
+982	C(C=O)CCCCCC	octanal	fat, soap, lemon, green
+976	c1c(ncc(n1)CC)C	ethylmethyl pyrazine	fruit, sweet
+975	[C@]12(OC([C@@H](C=C1)CC2)(C)C)C	2,3-dehydro-1,8-cineole	mint, lemon
+970	C1[C@@]2([C@H](C(=C)C1)C2)C(C)C	sabinene	pepper, turpentine, wood
+965	C(=C\CCC(=O)C)(/C)C	methylisohexenyl ketone	pepper, mushroom, rubber
+958	CCCCC[C@H](C=C)O	octenol	mushroom
+957	C1C[C@H]2C(C(=C)[C@@H]1C2)(C)C	camphene	camphor
+956	CCCCCC(=O)C=C	octenone	mushroom, metal
+952	C1CC(=O)[C@H](S1)C	methyldihydrothiophenone	cabbage, onion, must
+952	CSCCC(=O)C	4-methylthio-2-butanone	fruit
+951	CCOC(=O)CCC(C)C	ethyl isohexanoate	fruit
+949	CSSSC	dimethyl trisulfide	sulfur, fish, cabbage
+945	OCCCSC	methionol	sweet, potato
+945	C(CCCCCO)C	heptanol	chemical, green
+930	[C@@H]12C(=CC[C@@]1(C2)C(C)C)C	α-thujene	wood, green, herb
+928	O[C@H](CC(=O)OCC)C	ethyl 3-hydroxybutanoate	marshmallow
+926	C1=C([C@H]2C[C@@H](C1)C2(C)C)C	α-pinene	pine, turpentine
+919	C1CC(=C(O1)C)S	methyldihydrofuranthiol	meat
+917	C(C(=O)OC)CCCC	methyl hexanoate	fruit, fresh, sweet
+908	CCCCCCS	hexanethiol	sulfur
+906	c1nc(c(s1)C)C	dimethylthiazole	roast, smoke
+901	C(=O)([C@@H](C)S)OCC	ethyl mercaptopropionate	sulfur
+900	CCCCCCCCC	nonane	alkane
+894	c1cnc(c(n1)C)C	dimethyl pyrazine	nut, peanut butter, cocoa, meat
+890	C(C(=O)O)CCCC	caproic acid	sweat
+890	c1cncc(n1)CC	ethyl pyrazine	peanut butter, wood
+889	n1ccnc(c1C)C	dimethyl pyrazine	roasted nut, cocoa, roast beef
+888	c1(cnc(cn1)C)C	dimethyl pyrazine	cocoa, roasted nut, roast beef, medicine
+885	C(C=O)CCCCC	heptanal	fat, citrus, rancid
+883	CCC(=O)[C@@H](C)S	mercaptopentanone	roasted meat
+883	C(C(=O)OCC)CCC	ethyl valerate	yeast, fruit
+881	C(C(=O)OCCC)CC	propyl butyrate	pineapple, solvent
+876	c1(ccco1)C(=O)C	acetylfuran	balsamic
+876	c1cccc(c1)C=C	styrene	balsamic, gasoline
+875	CC[C@H](C(=O)C)S	mercaptopentanone	sulfur, onion, meat
+872	CCCCCC(=O)C	heptanone	soap
+870	CCCC/C=C/O	(E)-2-hexenol	green, leaf, walnut
+864	O=CCCSC	methional	cooked potato
+863	C(=C\CCC)\CO	2-hexenol	leaf, green, wine, fruit
+862	CC(CCOC(=O)C)C	isoamyl acetate	banana
+861	c1c(nc(s1)C)C	dimethylthiazole	rubber, mold
+858	CCCCCCO	hexanol	resin, flower, green
+856	CCCCC(=O)C=C	heptenone	metal
+844	C(=C\CCO)\CC	(Z)-3-hexenol	grass
+840	C(C(=O)O)C(C)C	isovaleric acid	sweat, acid, rancid
+835	[C@@H](C(=O)OCC)(CC)C	ethyl methylbutyrate	apple
+832	CCCC(=O)OC(C)C	isopropyl butanoate	pungent, fruit
+827	CCC/C=C/C=O	(E)-2-hexenal	green, leaf
+826	CCC/C=C/C=O	2-hexenal	apple, green
+826	[C@@H](C)(S)SC	1-(methylthio)ethanethiol	thiamin
+816	OCCCOCC	ethoxypropanol	fruit
+811	c1cccc(n1)C	methyl pyrazine	popcorn
+800	c1cc(oc1)C=O	furfural	bread, almond, sweet
+800	CC(=O)OCCCC	butyl acetate	pear
+800	CCCCCCCC	octane	alkane
+795	C(C(=O)OCCC)C	propyl propanoate	pineapple
+791	CCCCC=O	pentanal	almond, malt, pungent
+789	C(C(=O)OCC)CC	ethyl butyrate	apple
+787	C[C@H](C(=O)C)S	mercaptobutanone	onion
+772	CCCCCC=O	hexanal	grass, tallow, fat
+767	C(C(=O)OCC)(C)C	ethyl isobutyrate	sweet, rubber
+764	O=C([C@@H](CC)C)OC	methyl methylbutyrate	apple
+756	c1ccc(cc1)C	toluene	paint
+751	CCCC(O)(C)C	methylpentanol	pungent
+747	C(C(=O)C=C)CC	hexenone	cooked vegetable, metal
+737	CCCC(=O)C	pentanone	ether, fruit
+736	CC(CCO)C	3-methyl-1-butanol	whiskey, malt, burnt
+726	CCCCC(=O)C	hexanone	ether
+725	CSSC	dimethyl disulfide	onion, cabbage, putrid
+706	C(C(=O)OC)CC	methyl butanoate	ether, fruit, sweet
+700	C(CC)CCCC	heptane	alkane
+681	CCCC(=O)O	butyric acid	rancid, cheese, sweat
+669	CCC(=O)C(=O)C	2,3-pentadione	cream, butter
+662	CCCC=O	butanal	pungent, green
+660	SCC=O	mercaptoacetaldehyde	cabbage
+655	CC(=O)C(=O)C	diacetyl	butter
+649	CCO	ethanol	sweet
+641	CC(CC=O)C	methylbutanal	malt
+639	CC[C@H](C=O)C	methylbutanal	cocoa, almond
+603	C=CC(O)(C)C	methylbutenol	herb
+602	CC(=O)OCC	ethyl acetate	pineapple
+600	CCCCCC	hexane	alkane
+530	O=COCC	ethyl formate	pungent
+527	CSC	dimethyl sulfide	cabbage, sulfur, gasoline
+500	CCCCC	pentane	alkane
+418	CC=O	ethanal	pungent, ether
