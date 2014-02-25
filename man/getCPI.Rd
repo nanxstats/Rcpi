@@ -23,9 +23,9 @@ Generating Compound-Protein Interaction Features
 This function calculates the compound-protein interaction
 features by three types of interaction: \itemize{ \item
 \code{combine} - combine the two feature matrix, result has
-\code{(p1 + p2)} columns; \item \code{tensorprod} -
+\code{(p1 + p2)} columns \item \code{tensorprod} -
 calculate column-by-column (pseudo)-tensor product type
-interactions, result has \code{(p1 * p2)} columns; }
+interactions, result has \code{(p1 * p2)} columns }
 }
 \examples{
 x = matrix(1:10, ncol = 2)

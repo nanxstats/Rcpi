@@ -26,8 +26,8 @@
 #' This function calculates the compound-protein interaction features 
 #' by three types of interaction:
 #' \itemize{
-#' \item \code{combine} - combine the two feature matrix, result has \code{(p1 + p2)} columns;
-#' \item \code{tensorprod} - calculate column-by-column (pseudo)-tensor product type interactions, result has \code{(p1 * p2)} columns;
+#' \item \code{combine} - combine the two feature matrix, result has \code{(p1 + p2)} columns
+#' \item \code{tensorprod} - calculate column-by-column (pseudo)-tensor product type interactions, result has \code{(p1 * p2)} columns
 #' }
 #' 
 #' @param drugmat The compound feature matrix.

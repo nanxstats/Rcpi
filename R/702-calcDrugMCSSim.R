@@ -67,8 +67,8 @@ calcDrugMCSSim = function (mol1, mol2, type = c('smile', 'sdf'), plot = FALSE,
     } else if (type == 'sdf') {
       
       # sdf to sdfset
-      sdfstr1 = ChemmineR::read.SDFstr(textConnection(mol3))
-      sdfstr2 = ChemmineR::read.SDFstr(textConnection(mol4))
+      sdfstr1 = ChemmineR::read.SDFstr(textConnection(mol1))
+      sdfstr2 = ChemmineR::read.SDFstr(textConnection(mol2))
       sdfset1 = as(sdfstr1, 'SDFset')
       sdfset2 = as(sdfstr2, 'SDFset')
       

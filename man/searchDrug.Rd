@@ -46,7 +46,7 @@ searchDrug(mol, moldb, cores = 2, method = c("fp", "mcs"),
 
   \item{...}{Other possible parameter for maximum common
   substructure search, see \code{calcDrugMCSSim} for
-  details.}
+  available options.}
 }
 \value{
 Named numerical vector. With the decreasing similarity

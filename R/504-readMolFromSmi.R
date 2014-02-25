@@ -1,13 +1,19 @@
-#' Read Molecules from SMILES Files and Return Parsed Java Molecular Object
+#' Read Molecules from SMILES Files and Return Parsed Java Molecular Object or Plain Text List
 #'
-#' Read Molecules from SMILES Files and Return Parsed Java Molecular Object
+#' Read Molecules from SMILES Files and Return Parsed Java Molecular Object or Plain Text List
 #' 
 #' This function reads molecules from SMILES strings and return 
-#' parsed Java molecular object needed by \code{extractDrug...} functions.
+#' parsed Java molecular object or plain text list 
+#' needed by \code{extractDrug...()} functions.
 #' 
-#' @param smiles Character vector, containing SMILES file location(s).
+#' @param smifile Character vector, containing SMILES file location(s).
+#' @param type \code{'mol'} or \code{'text'}. \code{'mol'} returns parsed 
+#'        Java molecular object, used for \code{'text'} returns (plain-text) 
+#'        character string list. For common molecular descriptors and fingerprints, 
+#'        use \code{'mol'}. For descriptors and fingerprints calculated by OpenBabel,
+#'        i.e. functions named \code{extractDrugOB...()} , use \code{'text'}.
 #' 
-#' @return A list, containing parsed Java molecular object.
+#' @return A list, containing parsed Java molecular object or character strings.
 #' 
 #' @keywords readMolFromSmi MOL SMILES
 #'
@@ -26,11 +32,23 @@
 #' mol  = readMolFromSmi(smi)}
 #' 
 
-readMolFromSmi = function (smifile) {
+readMolFromSmi = function (smifile, type = c('mol', 'text')) {
   
-  txt = scan(smifile, what = 'complex')
-  smi = as.character(txt)
-  mol = rcdk::parse.smiles(smi)
+  if (type == 'mol') {
+    
+    txt = scan(smifile, what = 'complex', quiet = TRUE)
+    smi = as.character(txt)
+    mol = rcdk::parse.smiles(smi)
+    
+    } else if (type == 'text') {
+      
+      mol = scan(smifile, what = 'complex', quiet = TRUE)
+      
+      } else {
+        
+        stop('type must be one of "mol" or "text"')
+        
+      }
   
   return(mol)
   

@@ -29,7 +29,7 @@
 #'               only available when \code{method = 'mcs'}. 
 #'               Including \code{'tanimoto'} and \code{'overlap'}.
 #' @param ... Other possible parameter for maximum common substructure search, 
-#'            see \code{calcDrugMCSSim} for details.
+#'            see \code{calcDrugMCSSim} for available options.
 #' 
 #' @return Named numerical vector.
 #' With the decreasing similarity value of the molecules in the database.

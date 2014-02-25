@@ -26,12 +26,12 @@ Generating Protein-Protein Interaction Features
 This function calculates the protein-protein interaction
 features by three types of interaction: \itemize{ \item
 \code{combine} - combine the two feature matrix, result has
-\code{(p + p)} columns; \item \code{tensorprod} - calculate
+\code{(p + p)} columns \item \code{tensorprod} - calculate
 column-by-column (pseudo)-tensor product type interactions,
-result has \code{(p * p)} columns; \item \code{entrywise} -
+result has \code{(p * p)} columns \item \code{entrywise} -
 calculate entrywise product and entrywise sum of the two
 matrices, then combine them, result has \code{(p + p)}
-columns. }
+columns }
 }
 \examples{
 x = matrix(1:10, ncol = 2)
