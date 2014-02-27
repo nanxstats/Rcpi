@@ -16,8 +16,9 @@ extractDrugAIO(molecules, silent = TRUE, warn = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, Currently, this
-function returns total 295 columns.
+each column represents one descriptor, Currently, this
+function returns total 293 descriptors composed of 48
+descriptor types.
 }
 \description{
 Calculates All the Molecular Descriptors in the Rcpi
@@ -34,8 +35,9 @@ descriptors values will be \code{NA}.
 }
 \examples{
 \dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugAIO(mol)}
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+mol = readMolFromSDF(sdf)
+descmat = extractDrugAIO(mol, warn = FALSE)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

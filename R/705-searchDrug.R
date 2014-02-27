@@ -195,6 +195,8 @@ searchDrug = function (mol, moldb, cores = 2,
       
     }
     
+    i = NULL
+    
     rankvec = rep(NA, nrow(moldbfp))
     
     rankvec <- foreach (i = 1:nrow(moldbfp), .combine = 'c', .errorhandling = 'pass') %dopar% {

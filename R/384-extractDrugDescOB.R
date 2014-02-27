@@ -69,16 +69,14 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
     
     if ( length(molecules) == 1L ) {
       
-      x = .Call('propOB', 'SMILES', as.character(molecules), 
-                numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]
+      x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
       
     } else if ( length(molecules) > 1L ) {
       
       x = matrix(NA, nrow = length(molecules), ncol = length(numDesc))
       
       for ( i in 1:length(molecules) ) {
-        x[i, ] = .Call('propOB', 'SMILES', as.character(molecules[i]), 
-                       numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]
+        x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
       }
       
     }
@@ -90,16 +88,14 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
     
     if ( length(smiclean) == 1L ) {
       
-      x = .Call('propOB', 'SMILES', as.character(smiclean), 
-                numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]
+      x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
       
     } else if ( length(smiclean) > 1L ) {
       
       x = matrix(NA, nrow = length(smiclean), ncol = length(numDesc))
       
       for ( i in 1:length(smiclean) ) {
-        x[i, ] = .Call('propOB', 'SMILES', as.character(smiclean[i]), 
-                       numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]
+        x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
       }
       
     }

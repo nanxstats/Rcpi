@@ -10,8 +10,8 @@
 #' need the 3D coordinates should be shown or not after the calculation, 
 #' default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         Currently, this function returns total 295 columns.
+#' @return A data frame, each row represents one of the molecules, each column represents one descriptor,
+#'         Currently, this function returns total 293 descriptors composed of 48 descriptor types.
 #' 
 #' @keywords extractDrugAIO
 #'
@@ -27,8 +27,9 @@
 #' 
 #' @examples
 #' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugAIO(mol)}
+#' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' mol = readMolFromSDF(sdf)
+#' descmat = extractDrugAIO(mol, warn = FALSE)}
 #' 
 
 extractDrugAIO = function (molecules, silent = TRUE, warn = TRUE) {
@@ -39,7 +40,6 @@ extractDrugAIO = function (molecules, silent = TRUE, warn = TRUE) {
   
   descNames = c('org.openscience.cdk.qsar.descriptors.molecular.ALOGPDescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.APolDescriptor',
-                'org.openscience.cdk.qsar.descriptors.molecular.AcidicGroupCountDescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.AminoAcidCountDescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.AromaticAtomsCountDescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.AromaticBondsCountDescriptor',
@@ -49,7 +49,6 @@ extractDrugAIO = function (molecules, silent = TRUE, warn = TRUE) {
                 'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorPolarizability', 
                 'org.openscience.cdk.qsar.descriptors.molecular.BCUTDescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.BPolDescriptor',
-                'org.openscience.cdk.qsar.descriptors.molecular.BasicGroupCountDescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.BondCountDescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.CPSADescriptor',
                 'org.openscience.cdk.qsar.descriptors.molecular.CarbonTypesDescriptor', 

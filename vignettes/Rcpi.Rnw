@@ -68,10 +68,14 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
     {\Large Nan Xiao, Dongsheng Cao, Qingsong Xu}\\[\baselineskip]
     {\large Package Version \Sexpr{Rcpi.version}}\par
     {\large \Sexpr{now.date}}\par
-    \vfill
-    {\Large Insert Logo here}\\
-    {\scshape Computational Biology and Drug Design Group} \\
-    {\scshape Central South University}\par
+    \vfill    
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig/logo-panel-text.pdf}
+    \end{figure}
+    
+%    {\scshape Computational Biology and Drug Design Group} \\
+%    {\scshape Central South University}\par
     \end{center}
 
 \thispagestyle{empty}
@@ -88,22 +92,51 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
 
 \section{Introduction}\label{sec:intro}\addcontentsline{toc}{section}{1. Introduction}
 
-The \pkg{Rcpi} package \citep{CRAN:Rcpi} presented in this vignette offers a comprehensive \proglang{R}/Bioconductor package emphasizing the integration of bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery.
+The \pkg{Rcpi} package \citep{CRAN:Rcpi} presented in this manual offers an \proglang{R}/Bioconductor package emphasizing the comprehensive integration of bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery.
 
-\pkg{Rcpi} is a powerful \proglang{R}/Bioconductor package for computing commonly used structural and physicochemical descriptors of protein and peptide sequences, molecular descriptors of drug molecules from their topology, and protein-protein interaction and protein-ligand interaction descriptors. \pkg{Rcpi} calculates six protein descriptor groups composed of ? descriptor that include ? descriptor types and ? descriptors, ? drug descriptor groups composed of ? descriptor types that include ? descriptors. In addition, \pkg{Rcpi} provides ? types of molecular fingerprint systems for drug molecules, including ?, E-state fingerprints, MACCS keys, FP4 keys, topological torsion fingerprints, and ? fingerprints. By combining different types of descriptors from drugs and proteins in different methods, interaction descriptors representing protein-protein or drug-protein interactions could be conveniently generated. These computed descriptors are widely used in various fields relevant to bioinformatics, chemoinformatics, proteochemometrics and chemogenomics.
+\pkg{Rcpi} implemented and integrated the state-of-the-art protein sequence descriptors and molecular descriptors/fingerprints with \proglang{R}. For protein sequences, the \pkg{Rcpi} package could
 
-\pkg{Rcpi} implemented and integrated the state-of-the-art protein sequence descriptors and molecular descriptors/fingerprints with \proglang{R}. Parallelized molecule and sequence retrieving from multiple websites. Parallelized similarity computation for molecules and proteins by FP/MCS and sequence alignment/GO. Several self-explanatory examples have been included to illustrate the benefits of using \pkg{Rcpi}. Many more examples are available within the package.
+\begin{itemize}
+\item Calculate six protein descriptor groups composed of fourteen types of commonly used structural and physicochemical descriptors that include 9920 descriptors.
+\item Calculate six types of generalized scales-based descriptors derived by various dimensionality reduction methods for proteochemometric (PCM) modeling.
+\item Parallellized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.
+\end{itemize}
+
+For small molecules, the \pkg{Rcpi} package could
+
+\begin{itemize}
+\item Calculate 307 molecular descriptors (2D/3D), including constitutional, topological, geometrical, and electronic descriptors, etc.
+\item Calculate more than ten types of molecular fingerprints, including FP4 keys, E-state fingerprints, MACCS keys, etc., and parallelized chemical similarity search.
+\item Parallelized pairwise similarity computation derived by fingerprints and maximum common substructure search within a list of small molecules.
+\end{itemize}
+
+By combining various types of descriptors for drugs and proteins in different methods, interaction descriptors representing protein-protein or compound-protein interactions could be conveniently generated with \pkg{Rcpi}, including:
+
+\begin{itemize}
+\item Two types of compound-protein interaction (CPI) descriptors
+\item Three types of protein-protein interaction (PPI) descriptors
+\end{itemize}
+
+Several useful auxiliary utilities are also shipped with \pkg{Rcpi}:
+
+\begin{itemize}
+\item Parallelized molecule and protein sequence retrieval from several online databases, like PubChem, ChEMBL, KEGG, DrugBank, UniProt, RCSB PDB, etc.
+\item Loading molecules stored in SMILES/SDF files and loading protein sequences from FASTA/PDB files
+\item Molecular file format conversion
+\end{itemize}
+
+The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, chemoinformatics, proteochemometrics and chemogenomics.
 
 The \pkg{Rcpi} package is available from Bioconductor (\url{http://bioconductor.org}), visit \url{http://bioconductor.org/packages/release/bioc/html/Rcpi.html} for more details. This vignette corresponds to \pkg{Rcpi} version \Sexpr{Rcpi.version} and was typeset on \Sexpr{now.date}.
 
-To install the \pkg{Rcpi} package, type
+To install the \pkg{Rcpi} package in \proglang{R}, simply type
 
 \begin{CodeInput}
 source('http://bioconductor.org/biocLite.R')
 biocLite('Rcpi')
 \end{CodeInput}
 
-To use all functions in \pkg{Rcpi} package, we strongly recommend install the suggested packages:
+To make the \pkg{Rcpi} package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the \emph{suggested} packages by using:
 
 \begin{CodeInput}
 source('http://bioconductor.org/biocLite.R')
@@ -116,9 +149,9 @@ For bioinformatics research, \pkg{Rcpi} calculates commonly used descriptors and
 
 \subsection{Predicting Protein Subcellular Localization}\addcontentsline{toc}{subsection}{2.1 Predicting Protein Subcellular Localization}
 
-Protein subcellular localization prediction involves the computational prediction of where a protein resides in a cell. Since determining the subcellular localization of a protein experimentally is a time consuming task, this is a solution. It is an important component of bioinformatics-based prediction of protein function and genome annotation, and it can aid the identification of novel drug targets.
+Protein subcellular localization prediction involves the computational prediction of where a protein resides in a cell. It is an important component of bioinformatics-based prediction of protein function and genome annotation, and could also aid us to identify novel drug targets.
 
-Here we use the subcellular localization dataset of human proteins presented in the study of \cite{chou2008cell} for demonstration. The complete dataset includes 3134 protein sequences (2750 different proteins), classified into 14 human subcellular locations. We select two classes of proteins as our benchmark dataset. Class 1 contains 325 \emph{extracell} proteins, and class 2 includes 307 \emph{mitochondrion} proteins.
+Here we use the subcellular localization dataset of human proteins presented in the study of \cite{chou2008cell} for a demonstration. The complete dataset includes 3134 protein sequences (2750 different proteins), classified into 14 human subcellular locations. We select two classes of proteins as our benchmark dataset. Class 1 contains 325 \emph{extracell} proteins, and class 2 includes 307 \emph{mitochondrion} proteins.
 
 First, we load the \pkg{Rcpi} package, then read the protein sequences stored in two separated FASTA files with \code{readFASTA()}:
 
@@ -173,7 +206,7 @@ length(mitonchon)
 ## [1] 304
 \end{CodeOutput}
 
-Two protein sequences were removed from each class. For the remaining sequences, we calculate the amphiphilic pseudo amino acid composition (APAAC) descriptor \citep{chou2005using} and make class labels for classification modeling.
+Two protein sequences were removed from each class. For the remaining sequences, we calculate the amphiphilic pseudo amino acid composition (APAAC) descriptor \citep{chouapaac} and make class labels for classification modeling.
 
 \begin{CodeInput}
 # calculate APAAC descriptors
@@ -185,7 +218,7 @@ x  = rbind(x1, x2)
 labels = as.factor(c(rep(0, length(extracell)), rep(1, length(mitonchon))))
 \end{CodeInput}
 
-For protein sequences in \pkg{Rcpi}, the functions of commonly used descriptors and proteochemometric (PCM) modeling descriptors are named after \code{extractProt...()} and \code{extractPCM...()} in \pkg{Rcpi}.
+In \pkg{Rcpi}, the functions of commonly used descriptors for protein sequences and proteochemometric (PCM) modeling descriptors are named after \code{extractProt...()} and \code{extractPCM...()}.
 
 Next, we will split the data into a $75\%$ training set and a $25\%$ test set.
 
@@ -201,7 +234,7 @@ y.tr   = labels[tr.idx]
 y.te   = labels[te.idx]
 \end{CodeInput}
 
-We will train a random forest classification model on the training set with 5-fold cross validation, using the \pkg{randomForest} package.
+We will train a random forest classification model on the training set with 5-fold cross-validation, using the \pkg{randomForest} package.
 
 \begin{CodeInput}
 require(randomForest)
@@ -225,7 +258,7 @@ The training result is:
 ## 1  72 156   0.3157895
 \end{CodeOutput}
 
-With the model trained on the training set, we predict on the test set and plot the ROC curve with the \pkg{pROC} package, as shown in figure \ref{fig:ex1-1}.
+With the model trained on the training set, we predict on the test set and plot the ROC curve with the \pkg{pROC} package, as is shown in figure \ref{fig:ex1-1}.
 
 \begin{CodeInput}
 # predict on test set
@@ -250,22 +283,22 @@ The area under the ROC curve (AUC) is:
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/ex1-1.pdf}
-\caption{ROC Curve for the Test Set of Protein Subcellular Localization Data.} \label{fig:ex1-1}
+\caption{ROC curve for the test set of protein subcellular localization data} \label{fig:ex1-1}
 \end{figure}
 
 
 
 \section{Applications in Chemoinformatics}\addcontentsline{toc}{section}{3 Applications in Chemoinformatics}
 
-For chemoinformatics research, \pkg{Rcpi} calculates molecular descriptors and fingerprints, computes pairwise similarities derived by fingerprints and maximum common substructure search. \pkg{Rcpi} also provides \code{searchDrug()} for parallelized molecular similarity search based on these similarity types.
+For chemoinformatics research, \pkg{Rcpi} calculates various types of molecular descriptors/fingerprints, and computes pairwise similarities derived by fingerprints and maximum common substructure search. \pkg{Rcpi} also provides the \code{searchDrug()} function for parallelized molecular similarity search based on these similarity types.
 
 \subsection{Regression Modeling in QSRR Study of Retention Indices}\addcontentsline{toc}{subsection}{3.1 Regression Modeling in QSRR Study of Retention Indices}
 
-In \cite{yan2012comparison}, a quantitative structure-retention relationship study was performed for 656 flavor compounds on four stationary phases of different polarities, using constitutional, topological and geometrical molecular descriptors. The gas chromatographic retention indices (RIs) of these compounds were accurately predicted using linear models. Here we chose the molecules and retention indices of one stationary phase (OV101) as our benchmark dataset.
+In \cite{yan2012comparison}, a quantitative structure-retention relationship study was performed for 656 flavor compounds on four stationary phases of different polarities, using constitutional, topological and geometrical molecular descriptors. The gas chromatographic retention indices (RIs) of these compounds were accurately predicted using linear models. Here we choose the molecules and their RIs of one stationary phase (OV101) as our benchmark dataset.
 
-Since it would be rather tedious to implement the complete cross-validation procedures, the \proglang{R} package \pkg{caret} is used here. To run the \proglang{R} code examples below, users need to install the \pkg{caret} package and the required predictive modeling packages first. The \pkg{caret} package provides a unified interface for the modeling tuning task across different statistical machine learning packages. It is particularly helpful in QSAR modeling, for it contains tools for data splitting, pre-processing, feature selection, model tuning and other functionalities.
+Since it would be rather tedious to implement the complete cross-validation procedures, the \proglang{R} package \pkg{caret} is used here. To run the \proglang{R} code below, users need to install the \pkg{caret} package and the required predictive modeling packages first. The \pkg{caret} package provides a unified interface for the modeling tuning task across different statistical machine learning packages. It is particularly helpful in QSAR modeling, for it contains tools for data splitting, pre-processing, feature selection, model tuning and other functionalities.
 
-Just like the last section, we load the \pkg{Rcpi} package, and read the molecules stored in a SMILES file with \code{readMolFromSmi()}:
+Just like the last section, we load the \pkg{Rcpi} package, and read the molecules stored in a SMILES file:
 
 \begin{CodeInput}
 require(Rcpi)
@@ -282,7 +315,7 @@ The \code{readMolFromSmi()} function is used for reading molecules from SMILES f
 
 The CSV file \code{RI.csv} contains tabular data for the retention indices, compound name, and odor information of the compounds. Here we only extracted the RI values by calling \code{x.tab$RI}.
 
-After the molecules were properly loaded, we calculate several selected molecular descriptors. The corresponding functions are all named after \code{extractDrug...()} in \pkg{Rcpi}:
+After the molecules were properly loaded, we calculate several selected molecular descriptors. The corresponding functions for molecular descriptor calculation are all named after \code{extractDrug...()} in \pkg{Rcpi}:
 
 \begin{CodeInput}
 # calculate selected molecular descriptors
@@ -298,14 +331,14 @@ x = suppressWarnings(cbind(
 
 After the descriptors were calculated, the result \code{x} would be an \proglang{R} data frame, each row represents one molecule, and each column is one descriptor (predictor). The Rcpi package integrated the molecular descriptors and chemical fingerprints calculated by the \pkg{rcdk} package \citep{steinbeck2003chemistry} and the \pkg{ChemmineOB} package \citep{chemmineob}.
 
-We could train a partial least squares model with the \pkg{pls} and \pkg{caret} package. The cross-validation setting is 5-fold repeated CV (repeat for 10 times).
+Next, a partial least squares model will be fitted with the \pkg{pls} and \pkg{caret} package. The cross-validation setting is 5-fold repeated CV (repeat for 10 times).
 
 \begin{CodeInput}
 # regression on training set
 require(caret)
 require(pls)
 
-# cross validation settings
+# cross-validation settings
 ctrl = trainControl(method = 'repeatedcv', number = 5, repeats = 10,
                     summaryFunction = defaultSummary)
 
@@ -314,7 +347,7 @@ set.seed(1002)
 pls.fit = train(x, y, method = 'pls', tuneLength = 10, trControl = ctrl,
                 metric = 'RMSE', preProc = c('center', 'scale'))
 
-# print cross validation result
+# print cross-validation result
 print(pls.fit)
 \end{CodeInput}
 
@@ -348,7 +381,7 @@ The cross-validation result is:
 ## The final value used for the model was ncomp = 9.
 \end{CodeOutput}
 
-We could see that the RMSE of the PLS regression model was decreasing when the number of principal components (\code{ncomp}) was increasing. We can plot the components and RMSE to helps us select the desired number of principal components used in the model.
+We see that the RMSE of the PLS regression model was decreasing when the number of principal components (\code{ncomp}) was increasing. We can plot the components and RMSE to helps us select the desired number of principal components used in the model.
 
 \begin{CodeInput}
 # Components vs RMSE
@@ -358,10 +391,10 @@ print(plot(pls.fit, asp = 0.5))
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{fig/ex2-1.pdf}
-\caption{RMSE and Selected Components} \label{fig:ex2-1}
+\caption{Number of principal components vs. RMSE for the PLS regression model} \label{fig:ex2-1}
 \end{figure}
 
-From figure \ref{fig:ex2-1}, we could see that selecting six or seven components is acceptable. Then we plot the experimental RIs and the predicted RIs to see if the model fits well on the training set, and it does fit well:
+From figure \ref{fig:ex2-1}, we consider that selecting six or seven components is acceptable. At last, we plot the experimental RIs and the predicted RIs to see if the model fits well on the training set (Figure \ref{fig:ex2-2}):
 
 \begin{CodeInput}
 # plot experimental RIs vs predicted RIs
@@ -373,18 +406,18 @@ abline(a = 0, b = 1)
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/ex2-2.pdf}
-\caption{Experimental RIs vs Predicted RIs} \label{fig:ex2-2}
+\caption{Experimental RIs vs. Predicted RIs} \label{fig:ex2-2}
 \end{figure}
 
 
 
 \subsection{In Silico Toxicity Classification for Drug Discovery}\addcontentsline{toc}{subsection}{3.2 In Silico Toxicity Classification for Drug Discovery}
 
-In the perspective of quantitative pharmacology, the successful discovery of novel drugs depends on the pharmacokinetics properties, like \textbf{a}bsorption, \textbf{d}istribution, \textbf{m}etabolism, and \textbf{e}xcretion. In addition, the potential \textbf{t}oxicity of chemical compounds is taken into account. QSAR or QSPR methods are usually employed to predict the ADME/T qualities of compounds.
+In the perspective of quantitative pharmacology, the successful discovery of novel drugs depends on the pharmacokinetics properties, like \textbf{a}bsorption, \textbf{d}istribution, \textbf{m}etabolism, and \textbf{e}xcretion. In addition, the potential \textbf{t}oxicity of chemical compounds is taken into account. QSAR or QSPR methods are usually employed to predict the ADME/T qualities of potential drug candidates.
 
-In the study of \cite{cao2012silico}, quantitative structure-toxicity relationship (QSTR) models were established for classifying five toxicity datasets from US Environmental Protection Agency (EPA) Distributed Structure-Searchable Toxicity (DSSTox) database. Here we use the maximum recommended daily dose dataset (FDAMDD) from FDA Center for Drug Evaluation and Research as our benchmark dataset.
+In the study of \cite{cao2012silico}, quantitative structure-toxicity relationship (QSTR) models were established for classifying five toxicity datasets. Here we use the maximum recommended daily dose dataset (FDAMDD) from FDA Center for Drug Evaluation and Research as our benchmark dataset.
 
-First, we load the drug molecules stored in a SMILES file:
+First, load the drug molecules stored in a SMILES file into \proglang{R}:
 
 \begin{CodeInput}
 require(Rcpi)
@@ -397,7 +430,7 @@ x.smi = readMolFromSmi(fdamdd.smi, type = 'text')
 y     = as.factor(paste0('class', scan(fdamdd.csv)))
 \end{CodeInput}
 
-The \code{x.mol} is used for computing the MACCS and Estate fingerprints, the \code{x.smi} is used for computing the FP4 fingerprints. The 0-1 class labels stored in \code{FDAMDD.csv} indicates whether the drug molecule has high toxicity or not.
+The object \code{x.mol} is used for computing the MACCS and E-state fingerprints, the object \code{x.smi} is used for computing the FP4 fingerprints. The 0-1 class labels stored in \code{FDAMDD.csv} indicates whether the drug molecule has high toxicity or not.
 
 Then we calculate three different types of molecular fingerprints (E-state, MACCS, and FP4) for the drug molecules:
 
@@ -408,7 +441,7 @@ x2 = extractDrugMACCSComplete(x.mol)
 x3 = extractDrugOBFP4(x.smi, type = 'smile')
 \end{CodeInput}
 
-As the nature of fingerprint-based structure representation, the calculated 0-1 matrix \code{x1}, \code{x2}, and \code{x3} will be very sparse. Since there are several variables with nearly exactly the same value for all the observations, we should remove them with \code{nearZeroVar()} in \pkg{caret} before modeling, and split our training set and test set:
+As the nature of fingerprint-based structure representation, the calculated 0-1 matrix \code{x1}, \code{x2}, and \code{x3} will be very sparse. Since there are several columns have nearly exactly the same value for all the molecules, we should remove them with \code{nearZeroVar()} in \pkg{caret} before modeling, and split our training set and test set:
 
 \begin{CodeInput}
 # Remove near zero variance variables
@@ -431,14 +464,14 @@ y.tr   = y[tr.idx]
 y.te   = y[te.idx]
 \end{CodeInput}
 
-On the training sets, we train three classification models separately using SVM (RBF kernel), using the \pkg{kernlab} package and \pkg{caret} package. The cross-validation setting is 5-fold repeated CV (repeat for 10 times). Then print the cross-validation result.
+On the training sets, we will train three classification models separately using SVM (RBF kernel), using the \pkg{kernlab} package and \pkg{caret} package. The cross-validation setting is 5-fold repeated CV (repeat for 10 times). Then print the cross-validation result.
 
 \footnotesize
 \begin{CodeInput}
 # svm classification on training sets
 require(kernlab)
 
-# cross validation settings
+# cross-validation settings
 ctrl = trainControl(method = 'cv', number = 5, repeats = 10, 
                     classProbs = TRUE, 
                     summaryFunction = twoClassSummary)
@@ -451,14 +484,14 @@ svm.fit2 = train(x2.tr, y.tr, method = 'svmRadial', trControl = ctrl,
 svm.fit3 = train(x3.tr, y.tr, method = 'svmRadial', trControl = ctrl,
                  metric = 'ROC', preProc = c('center', 'scale'))
 
-# print cross validation result
+# print cross-validation result
 print(svm.fit1)
 print(svm.fit2)
 print(svm.fit3)
 \end{CodeInput}
 \normalsize
 
-The result when using E-state fingerprints:
+The training result when using E-state fingerprints:
 
 \footnotesize
 \begin{CodeOutput}
@@ -488,7 +521,7 @@ The result when using E-state fingerprints:
 
 We could see that after removing the near zero variance predictors, there are only 23 predictors left for the original length 79 E-state fingerprints.
 
-The result when using MACCS keys:
+The training result when using MACCS keys:
 
 \footnotesize
 \begin{CodeOutput}
@@ -518,7 +551,7 @@ The result when using MACCS keys:
 
 There are 126 predictors left for the original length 166 MACCS keys after removing the near zero variance predictors. The model performance by AUC values is slightly better than using the E-state fingerprints.
 
-The result when using FP4 fingerprints:
+The training result when using FP4 fingerprints:
 
 \footnotesize
 \begin{CodeOutput}
@@ -548,7 +581,7 @@ The result when using FP4 fingerprints:
 
 There are 58 predictors left for the original length 512 FP4 fingerprints after the screening. The model performance by AUC values is almost the same comparing to using MACCS keys, and better than using E-state fingerprints.
 
-We will predict on the test sets with the established models, and plot the ROC curves in one figure, as is shown in figure \ref{fig:ex3-1}.
+We predict on the test sets with the established models, and plot the ROC curves in one figure, as is shown in figure \ref{fig:ex3-1}.
 
 \footnotesize
 \begin{CodeInput}
@@ -572,7 +605,7 @@ plot(smooth(roc(y.te, svm.pred3)), col = pal[3], grid = TRUE, add = TRUE)
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/ex3-1.pdf}
-\caption{Smoothed ROC Curves for different fingerprint types} \label{fig:ex3-1}
+\caption{Smoothed ROC curves for different fingerprint types} \label{fig:ex3-1}
 \end{figure}
 
 \subsection{Clustering of Molecules Based on Structural Similarities}\addcontentsline{toc}{subsection}{3.3 Clustering of Molecules Based on Structural Similarities}
@@ -606,7 +639,7 @@ for (i in 1:length(mols)) {
 }
 \end{CodeInput}
 
-With the similarity matrix \code{simmat}, we will try to apply hierarchical clustering on it, then visualize the clustering result:
+For the computed similarity matrix \code{simmat}, we will try to do hierarchical clustering with it, then visualize the clustering result:
 
 \begin{CodeInput}
 mol.hc = hclust(as.dist(1 - simmat), method = 'ward')
@@ -626,7 +659,7 @@ The clustering result for these molecules is shown in figure \ref{fig:ex4-1}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/ex4-1.pdf}
-\caption{Tree Visualization of Molecular Clustering Result} \label{fig:ex4-1}
+\caption{Tree visualization of molecular clustering result} \label{fig:ex4-1}
 \end{figure}
 
 \subsection{Structure-Based Chemical Similarity Searching}\addcontentsline{toc}{subsection}{3.4 Structure-Based Chemical Similarity Searching}
@@ -642,7 +675,7 @@ mol   = system.file('compseq/DB00530.sdf', package = 'Rcpi')
 moldb = system.file('compseq/tyrphostin.sdf', package = 'Rcpi')
 \end{CodeInput}
 
-Using \code{searchDrug()}, we could do the parallelized drug molecular similarity search. Here we choose the search criterion to be MACCS keys with cosine similarity, FP2 fingerprints with tanimoto similarity, and maximum common substructure search with tanimoto similarity.
+We could do parallelized drug molecular similarity search with the \code{searchDrug()} function in \pkg{Rcpi}. Here we choose the search criterion to be MACCS keys with cosine similarity, FP2 fingerprints with tanimoto similarity, and maximum common substructure search with tanimoto similarity.
 
 \begin{CodeInput}
 
@@ -654,7 +687,7 @@ rank3 = searchDrug(mol, moldb, cores = 4, method = 'mcs',
                    mcssim = 'tanimoto')
 \end{CodeInput}
 
-The search result is a numerical vector, each element's name is the molecule number in the database, and the value is the similarity value between the query molecule and it. We shall print the top search results:
+The returned search result is stored as a numerical vector, each element's name is the molecule number in the database, and the value is the similarity value between the query molecule and this molecule. We shall print the top search results here:
 
 \begin{CodeInput}
 head(rank1)
@@ -682,7 +715,7 @@ smi2 = readLines('tyrphostin.smi')[92]  # select No.92 molecule in database
 calcDrugMCSSim(smi1, smi2, type = 'smile', plot = TRUE)
 \end{CodeInput}
 
-The MCS search result is stored in a list, which contains the original MCS result provided by the \pkg{fmcsR} package \citep{wang2013fmcsr}, the Tanimoto coefficient and overlap coefficient.
+The MCS search result is stored in a list, which contains the original MCS result provided by the \pkg{fmcsR} package \citep{wang2013fmcsr}, the Tanimoto coefficient and the overlap coefficient.
 
 \footnotesize
 \begin{CodeOutput}
@@ -705,30 +738,30 @@ The MCS search result is stored in a list, which contains the original MCS resul
 \end{CodeOutput}
 \normalsize
 
-By using \code{calcDrugMCSSim(..., plot = TRUE)}, the maximum common substructure is presented in figure \ref{fig:ex5-1}.
+By using \code{calcDrugMCSSim(..., plot = TRUE)}, the maximum common substructure of the two molecules is presented in figure \ref{fig:ex5-1}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.45\textwidth]{fig/ex5-1.pdf}
-\caption{Maximum Common Structure of the Query Molecule and No.92 Molecule in the Chemical Database (SDF File)} \label{fig:ex5-1}
+\caption{Maximum common structure of the query molecule and No.92 molecule in the chemical database (SDF file)} \label{fig:ex5-1}
 \end{figure}
 
 \section{Applications in Chemogenomics}\addcontentsline{toc}{section}{4 Applications in Chemogenomics}
 
-For chemogenomics modeling, \pkg{Rcpi} calculates compound-protein interaction descriptors and protein-protein interaction descriptors.
+For chemogenomics modeling, \pkg{Rcpi} calculates compound-protein interaction (CPI) descriptors and protein-protein interaction (PPI) descriptors.
 
 \subsection{Predicting Drug-Target Interaction by Integrating Chemical and Genomic Spaces}\addcontentsline{toc}{subsection}{4.1 Predicting Drug-Target Interaction by Integrating Chemical and Genomic Spaces}
 
-The prediction of novel interactions between drugs and target proteins is a key area in genomic drug discovery. In this example, we use the G protein-coupled receptor (GPCR) dataset provided in \cite{yamanishi2008prediction} as our benchmark dataset.
+The prediction of novel interactions between drugs and target proteins is a key area in genomic drug discovery. In this example, we use the G protein-coupled receptor (GPCR) dataset provided by \cite{yamanishi2008prediction} as our benchmark dataset.
 
-Generally speaking, a drug-target interaction network can be naturally modeled as a bipartite graph, where the nodes are target proteins or drug molecules and edges (only drugs and proteins could be connected by edges) represent drug-target interactions. Initially, the graph only contains edges describing the \emph{real} drug-target interactions determined by experiments or other ways. In this example, all real drug-target interaction pairs (i.e., 635 drug-target interactions) are used as the positive samples. For negative examples we select random, non-interacting pairs from these drugs and proteins. They are constructed as follows: 
+A drug-target interaction network can be naturally modeled as a bipartite graph, where the nodes are target proteins or drug molecules and edges (only drugs and proteins could be connected by edges) represent drug-target interactions. Initially, the graph only contains edges describing the \emph{real} drug-target interactions determined by experiments or other ways. In this example, all real drug-target interaction pairs (i.e., 635 drug-target interactions) are used as the positive samples. For negative samples we select random, non-interacting pairs from these drugs and proteins. They are constructed as follows: 
 
 \begin{enumerate}
 \item Separate the pairs in the above positive samples into single drugs and proteins;
 \item Re-couple these singles into pairs in a way that none of them occurs in the corresponding positive dataset.
 \end{enumerate}
 
-In \cite{cao2012large}, ten negative sets were generated, here we only use one of them as a demonstration. The drug ID and target ID is stored in \code{GPCR.csv}. The first column is KEGG protein ID, and the second column is KEGG drug ID. The first 635 rows is the positive set, and the last 635 rows is the negative set.
+Ten generated negative sets were used in \cite{cao2012large}, here we only use one of them for a demonstration. The drug ID and target ID is stored in \code{GPCR.csv}. The first column is KEGG protein ID, and the second column is KEGG drug ID. The first 635 rows is the positive set, and the last 635 rows is the negative set.
 
 \begin{CodeInput}
 require(Rcpi)
@@ -737,7 +770,7 @@ gpcr = read.table(system.file('vignettedata/GPCR.csv', package = 'Rcpi'),
                   header = FALSE, as.is = TRUE)
 \end{CodeInput}
 
-Take a glimpse of the data:
+Get a glimpse of the data:
 
 \begin{CodeInput}
 head(gpcr)
@@ -779,17 +812,15 @@ arcplot(edgelist, ordering = new.ord, labels = vlabels,
         pch.nodes = 21, line = -0.5, col.arcs = hsv(0, 0, 0.2, 0.25))
 \end{CodeInput}
 
-The result is shown in figure \ref{fig:ex6-1}.
-
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{fig/ex6-1.pdf}
-\caption{Arc Diagram Visualization of the GPCR Drug-Target Interaction Network} \label{fig:ex6-1}
+\caption{Arc diagram visualization of the GPCR drug-target interaction network} \label{fig:ex6-1}
 \end{figure}
 
 An arc diagram visualize the nodes in the network in a one-dimensional layout, while using circular arcs to represent edges. With a good ordering of nodes, it is easy to identify cliques and bridges.
 
-We will download the target protein sequences (in FASTA format) and drug molecule (in SMILES format) from the KEGG website in parallel:
+Next, we will download the target protein sequences (in FASTA format) and drug molecule (in SMILES format) from the KEGG database, in parallel:
 
 \begin{CodeInput}
 require(Rcpi)
@@ -804,11 +835,11 @@ protseq = getSeqFromKEGG(protid, parallel = 5)
 drugseq = getSmiFromKEGG(drugid, parallel = 50)
 \end{CodeInput}
 
-If the connection is slow or accidentally interrupts, just try more times.
+If the connection is slow or accidentally interrupts, just try more times until success.
 
-The functions in \pkg{Rcpi} named after \code{getMolFrom...()}, \code{getSmiFrom...()} supports the parallelized retrieval of (drug) molecules from PubChem, ChEMBL, CAS, KEGG, and DrugBank. The functions named after \code{getSeqFrom...()}, \code{getFASTAFrom...()}, \code{getPDBFrom...()} supports the parallelized retrieval of proteins from UniProt, KEGG and RCSB PDB. The functions \code{getDrug()} and \code{getProt()} are two integrated wrapper functions for downloading the molecules and protein sequences from these website.
+The functions in \pkg{Rcpi} named after \code{getMolFrom...()} and \code{getSmiFrom...()} supports the parallelized retrieval of (drug) molecules from PubChem, ChEMBL, CAS, KEGG, and DrugBank. The functions named after \code{getSeqFrom...()}, \code{getFASTAFrom...()} and \code{getPDBFrom...()} supports the parallelized retrieval of proteins from UniProt, KEGG and RCSB PDB. The functions \code{getDrug()} and \code{getProt()} are two integrated wrapper functions for downloading the molecules and protein sequences from these online databases.
 
-After the sequences are downloaded, we could calculate the protein descriptors and molecular descriptors:
+After the sequences were downloaded, we could calculate the protein sequence descriptors and molecular descriptors for the targets and drugs:
 
 \begin{CodeInput}
 x0.prot = cbind(t(sapply(unlist(protseq), extractProtAPAAC)), 
@@ -819,7 +850,7 @@ x0.drug = cbind(extractDrugEstateComplete(readMolFromSmi(textConnection(drugseq)
                 extractDrugOBFP4(drugseq, type = 'smile'))
 \end{CodeInput}
 
-Since the descriptors is for the \emph{uniqued} drug and protein list, we need to generate the full descriptor matrix for the training data:
+Since the descriptors is only for the \emph{uniqued} drug and target list, we need to generate the full descriptor matrix for the training data:
 
 \begin{CodeInput}
 # generate drug x / protein x / y
@@ -831,7 +862,7 @@ for (i in 1:nrow(gpcr)) x.drug[i, ] = x0.drug[which(gpcr[, 2][i] == drugid), ]
 y = as.factor(c(rep('pos', nrow(gpcr)/2), rep('neg', nrow(gpcr)/2)))
 \end{CodeInput}
 
-Generate drug-protein interaction descriptors using \code{getCPI()}.
+Generate drug-target interaction descriptors using \code{getCPI()}.
 
 \begin{CodeInput}
 x = getCPI(x.prot, x.drug, type = 'combine')
@@ -849,9 +880,9 @@ For compound descriptor vector $d_1^{1 \times p_1}$ and the protein descriptor v
   \item \verb|'tensorprod'| - column-by-column (pseudo)-tensor product type interactions, $d$ has $p_1 \times p_2$ columns.
 \end{enumerate}
 
-For interaction protein A and protein B, let $d_1^{1 \times p}$ and $d_2^{1 \times p}$ be the descriptor vectors. There are three methods to construct the protein-protein interaction descriptor vector $d$:
-
 \item Protein-Protein Interaction (PPI) Descriptors
+
+For interaction protein A and protein B, let $d_1^{1 \times p}$ and $d_2^{1 \times p}$ be the descriptor vectors. There are three methods to construct the protein-protein interaction descriptor $d$:
 
 \begin{enumerate}
   \item \verb|'combine'| - combine the two descriptor matrix, $d$ has $p + p$ columns;
@@ -861,13 +892,13 @@ For interaction protein A and protein B, let $d_1^{1 \times p}$ and $d_2^{1 \tim
 
 \end{itemize}
 
-Train the model:
+Train a random forest classification model with 5-fold repeated CV:
 
 \begin{CodeInput}
 require(caret)
 x = x[, -nearZeroVar(x)]
 
-# cross validation settings
+# cross-validation settings
 ctrl = trainControl(method = 'cv', number = 5, repeats = 10, 
                     classProbs = TRUE, 
                     summaryFunction = twoClassSummary)
@@ -879,7 +910,7 @@ rf.fit = train(x, y, method = 'rf', trControl = ctrl,
                metric = 'ROC', preProc = c('center', 'scale'))
 \end{CodeInput}
 
-Print cross-validation result:
+Print the cross-validation result:
 
 \begin{CodeInput}
 print(rf.fit)
@@ -922,7 +953,7 @@ The ROC curve is shown in figure \ref{fig:ex6-2}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/ex6-2.pdf}
-\caption{ROC Curve} \label{fig:ex6-2}
+\caption{ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest} \label{fig:ex6-2}
 \end{figure}
 
 
