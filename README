@@ -2,81 +2,57 @@
 
 ## Introduction
 
-The Rcpi package supports the analysis of compound-protein interactions with R. Rcpi supports retrieving protein sequence data from UniProt, KEGG and RCSB PDB, retrieving drug molecular data from PubChem, ChEMBL, CAS, KEGG and DrugBank. Rcpi offers the functionalities of protein sequence feature extraction, calculating drug molecular descriptors and fingerprints, and integrate the whole process all in one. All the users need to do, is providing the pair input of the drug and protein IDs. The package is developed by Computational Biology and Drug Design Group, Central South University.
+The Rcpi package offers an R/Bioconductor package emphasizing the comprehensive integration of bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery. See `vignette('Rcpi')` for the comprehensive user guide.
 
-## Supported Protein Sequence Database
+## Install
 
-  * PubChem
-  
-  * ChEMBL
-  
-  * CAS
-  
-  * KEGG
-  
-  * DrugBank
+To install the Rcpi package in R, simply type
 
-## Supported Drug Molecular Database
+    source('http://bioconductor.org/biocLite.R')
+    biocLite('Rcpi')
 
-  * UniProt
-  
-  * KEGG
-  
-  * RCSB PDB
+To make the Rcpi package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the suggested packages by using:
 
-## Supported Protein Sequence Formats
+    source('http://bioconductor.org/biocLite.R')
+    biocLite('Rcpi', dependencies = c('Depends', 'Suggests'))
 
-  * FASTA
-  
-  * PDB (Protein Data Bank)
+## Features
 
-## Supported Drug Molecular Formats
-  
-  * Mol / SDF
-  
-  * Smile
-  
-  * InChI (CAS only)
+Rcpi implemented and integrated the state-of-the-art protein sequence descriptors and molecular descriptors/fingerprints with R. For protein sequences, the Rcpi package could
 
-## Supported Protein Sequence Features
+  * Calculate six protein descriptor groups composed of fourteen types of commonly used structural and physicochemical descriptors that include 9920 descriptors.
 
-  * Amino Acid Composition
-  
-    * Amino Acid Composition
-    * Dipeptide Composition
-    * Tripeptide Composition
+  * Calculate six types of generalized scales-based descriptors derived by various dimensionality reduction methods for proteochemometric (PCM) modeling.
 
-  * Autocorrelation
-  
-    * Normalized Moreau-Broto Autocorrelation
-    * Moran Autocorrelation
-    * Geary Autocorrelation
+  * Parallellized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.
 
-  * CTD
-  
-    * Composition
-    * Transition
-    * Distribution
+For small molecules, the Rcpi package could
 
-  * Conjoint Triad
+  * Calculate 307 molecular descriptors (2D/3D), including constitutional, topological, geometrical, and electronic descriptors, etc.
 
-  * Quasi-sequence-order Descriptors
-  
-    * Sequence-order-coupling Number
-    * Quasi-sequence-order Descriptors
-  
-  * Pseudo Amino Acid Composition
-  
-    * Pseudo Amino Acid Composition
-    * Amphiphilic Pseudo Amino Acid Composition
+  * Calculate more than ten types of molecular fingerprints, including FP4 keys, E-state fingerprints, MACCS keys, etc., and parallelized chemical similarity search.
 
-## Supported Drug Molecular Descriptors and Fingerprints
+  * Parallelized pairwise similarity computation derived by fingerprints and maximum common substructure search within a list of small molecules.
 
-Some Content Here.
+By combining various types of descriptors for drugs and proteins in different methods, interaction descriptors representing protein-protein or compound-protein interactions could be conveniently generated with Rcpi, including:
+
+  * Two types of compound-protein interaction (CPI) descriptors
+
+  * Three types of protein-protein interaction (PPI) descriptors
+
+Several useful auxiliary utilities are also shipped with Rcpi:
+
+  * Parallelized molecule and protein sequence retrieval from several online databases, like PubChem, ChEMBL, KEGG, DrugBank, UniProt, RCSB PDB, etc.
+
+  * Loading molecules stored in SMILES/SDF files and loading protein sequences from FASTA/PDB files
+
+  * Molecular file format conversion
+
+The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, chemoinformatics, proteochemometrics and chemogenomics.
 
 ## Links
 
-  * CRAN Page: http://cran.r-project.org/web/packages/Rcpi/
+  * Bioconductor Page: http://bioconductor.org/packages/release/bioc/html/Rcpi.html
 
   * Track Devel: https://github.com/road2stat/Rcpi
 
@@ -84,9 +60,10 @@ Some Content Here.
 
 ## Contact
 
-  * Xiao Nan <road2stat@gmail.com>
+The Rcpi package is developed by Computational Biology and Drug Design Group, Central South University, China.
+
+  * Nan Xiao <road2stat@gmail.com>
 
   * Dongsheng Cao <oriental-cds@163.com>
 
   * Qingsong Xu <dasongxu@gmail.com>
-

@@ -2,13 +2,10 @@ Package: Rcpi
 Type: Package
 Title: Compound-Protein Interactions with R
 Version: 1.0
-Date: 2014-01-16
-Description: The Rcpi package supports the research of compound-protein
-    interactions with R. Rcpi supports retrieving protein sequence data from
-    UniProt, KEGG and RCSB PDB, retrieving drug molecular data from PubChem,
-    ChEMBL, CAS, KEGG and DrugBank. Rcpi offers the functionalities of protein
-    sequence descriptor calculation, computing drug molecular descriptors and
-    fingerprints.
+Date: 2014-02-27
+Description: The Rcpi package offers an R/Bioconductor package emphasizing the
+    comprehensive integration of bioinformatics and chemoinformatics into a
+    molecular informatics platform for drug discovery.
 Author: Nan Xiao <road2stat@gmail.com>, Dongsheng Cao <oriental-cds@163.com>,
     Qingsong Xu <dasongxu@gmail.com>
 Maintainer: Nan Xiao <road2stat@gmail.com>
