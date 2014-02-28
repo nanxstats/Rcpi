@@ -136,11 +136,11 @@ source('http://bioconductor.org/biocLite.R')
 biocLite('Rcpi')
 \end{CodeInput}
 
-To make the \pkg{Rcpi} package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the \emph{Enhances} packages by using:
+To make the \pkg{Rcpi} package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the \emph{Suggests} packages by using:
 
 \begin{CodeInput}
 source('http://bioconductor.org/biocLite.R')
-biocLite('Rcpi', dependencies = c('Imports', 'Enhances'))
+biocLite('Rcpi', dependencies = c('Depends', 'Suggests'))
 \end{CodeInput}
 
 \section{Applications in Bioinformatics}\addcontentsline{toc}{section}{2. Applications in Bioinformatics}

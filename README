@@ -11,10 +11,10 @@ To install the Rcpi package in R, simply type
     source('http://bioconductor.org/biocLite.R')
     biocLite('Rcpi')
 
-To make the Rcpi package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the _Enhances_ packages by using:
+To make the Rcpi package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the _Suggests_ packages by using:
 
     source('http://bioconductor.org/biocLite.R')
-    biocLite('Rcpi', dependencies = c('Imports', 'Enhances'))
+    biocLite('Rcpi', dependencies = c('Depends', 'Suggests'))
 
 ## Features
 

@@ -13,16 +13,17 @@ License: Artistic-2.0
 URL: https://github.com/road2stat/Rcpi/
 BugReports: https://github.com/road2stat/Rcpi/issues
 LazyData: yes
-Imports:
+Depends:
     RCurl,
     rjson,
-    rcdk,
+    rcdk
+Suggests: 
     Biostrings,
     GOSemSim,
     ChemmineOB,
     ChemmineR,
-    fmcsR
-Enhances: foreach,
+    fmcsR,
+    foreach,
     doParallel,
     doMC
 biocViews: Software, DataRepresentation, Bioinformatics, Infrastructure,
