@@ -16,23 +16,23 @@
   
 }
 
-#' Generating Protein-Protein Interaction Features
+#' Generating Protein-Protein Interaction Descriptors
 #'
-#' Generating Protein-Protein Interaction Features
+#' Generating Protein-Protein Interaction Descriptors
 #' 
-#' This function calculates the protein-protein interaction features 
+#' This function calculates the protein-protein interaction descriptors
 #' by three types of interaction:
 #' \itemize{
-#' \item \code{combine} - combine the two feature matrix, result has \code{(p + p)} columns
+#' \item \code{combine} - combine the two descriptor matrix, result has \code{(p + p)} columns
 #' \item \code{tensorprod} - calculate column-by-column (pseudo)-tensor product type interactions, result has \code{(p * p)} columns
 #' \item \code{entrywise} - calculate entrywise product and entrywise sum of the two matrices, then combine them, result has \code{(p + p)} columns
 #' }
 #' 
-#' @param protmat1 The first protein feature matrix, must have the same ncol with \code{protmat2}.
-#' @param protmat2 The second protein feture matrix, must have the same ncol with \code{protmat1}.
+#' @param protmat1 The first protein descriptor matrix, must have the same ncol with \code{protmat2}.
+#' @param protmat2 The second protein descriptor matrix, must have the same ncol with \code{protmat1}.
 #' @param type The interaction type, one or more of \code{"combine"}, \code{"tensorprod"}, and \code{"entrywise"}.
 #' 
-#' @return A matrix containing the protein-protein interaction features.
+#' @return A matrix containing the protein-protein interaction descriptors
 #' 
 #' @keywords getPPI protein-protein interaction ppi
 #'
@@ -40,7 +40,7 @@
 #' 
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{getCPI}} for generating compound-protein interaction features.
+#' @seealso See \code{\link{getCPI}} for generating compound-protein interaction descriptors.
 #' 
 #' @export getPPI
 #' 

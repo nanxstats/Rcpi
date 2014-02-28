@@ -5,7 +5,7 @@ year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
 vers <- paste("R package version", meta$Version)
      
 citEntry(entry = "Manual",
-title = "Rcpi: R/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions",
+title = "Rcpi: Toolkit for Compound-Protein Interaction in Drug Discovery",
 author = personList(as.person("Nan Xiao"),
                     as.person("Dongsheng Cao"),
                     as.person("Qingsong Xu")),
@@ -15,5 +15,5 @@ author = personList(as.person("Nan Xiao"),
 textVersion =
 paste("Nan Xiao, Dongsheng Cao, Qingsong Xu (",
        year,
-       "). Rcpi: R/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions. ",
+       "). Rcpi: Toolkit for Compound-Protein Interaction in Drug Discovery. ",
        vers, ".", sep=""))

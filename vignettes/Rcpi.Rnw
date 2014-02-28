@@ -2,7 +2,7 @@
 \usepackage{booktabs}
 \usepackage{amssymb}
 \usepackage{amsmath}
-%\VignetteIndexEntry{Rcpi: R/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions}
+%\VignetteIndexEntry{Rcpi: R/Bioconductor Package as an Integrated Informatics Platform in Drug Discovery}
 %\VignetteKeywords{protein sequence, drug discovery, molecular descriptor, molecular fingerprint, similarity, drug-target interaction}
 %\VignettePackage{Rcpi}
 
@@ -21,9 +21,9 @@
         }
 \Plainauthor{Nan Xiao, Dongsheng Cao, Qingsong Xu}
 
-\title{\pkg{Rcpi}: \proglang{R}/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions}
-\Plaintitle{Rcpi: R/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions}
-\Shorttitle{\pkg{Rcpi}: R/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions}
+\title{\pkg{Rcpi}: \proglang{R}/Bioconductor Package as an Integrated Informatics Platform in Drug Discovery}
+\Plaintitle{Rcpi: R/Bioconductor Package as an Integrated Informatics Platform in Drug Discovery}
+\Shorttitle{\pkg{Rcpi}: R/Bioconductor Package as an Integrated Informatics Platform in Drug Discovery}
 
 \Address{
   Nan Xiao \\
@@ -62,7 +62,7 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
     \vspace*{\baselineskip}
     \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
     \rule{\textwidth}{0.4pt}\\[2\baselineskip]
-    {\LARGE \pkg{Rcpi}\textbf{: \proglang{R}/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions}}\\[1.2\baselineskip]
+    {\LARGE \pkg{Rcpi}\textbf{: \proglang{R}/Bioconductor Package as an Integrated Informatics Platform in Drug Discovery}}\\[1.2\baselineskip]
     \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
     \rule{\textwidth}{1.6pt}\\[2\baselineskip]
     {\Large Nan Xiao, Dongsheng Cao, Qingsong Xu}\\[\baselineskip]
@@ -75,7 +75,7 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
     \end{figure}
     
 %    {\scshape Computational Biology and Drug Design Group} \\
-%    {\scshape Central South University}\par
+%    {\scshape Central South University, China}\par
     \end{center}
 
 \thispagestyle{empty}
@@ -92,7 +92,7 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
 
 \section{Introduction}\label{sec:intro}\addcontentsline{toc}{section}{1. Introduction}
 
-The \pkg{Rcpi} package \citep{CRAN:Rcpi} presented in this manual offers an \proglang{R}/Bioconductor package emphasizing the comprehensive integration of bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery.
+The \pkg{Rcpi} package \citep{Rcpi} presented in this manual offers an \proglang{R}/Bioconductor package emphasizing the comprehensive integration of bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery.
 
 \pkg{Rcpi} implemented and integrated the state-of-the-art protein sequence descriptors and molecular descriptors/fingerprints with \proglang{R}. For protein sequences, the \pkg{Rcpi} package could
 

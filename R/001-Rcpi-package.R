@@ -1,4 +1,4 @@
-#' R/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions
+#' Toolkit for Compound-Protein Interaction in Drug Discovery
 #' 
 #' The Rcpi package offers an R/Bioconductor package emphasizing 
 #' the comprehensive integration of bioinformatics and chemoinformatics 

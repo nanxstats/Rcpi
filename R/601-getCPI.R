@@ -19,22 +19,22 @@
 
 }
 
-#' Generating Compound-Protein Interaction Features
+#' Generating Compound-Protein Interaction Descriptors
 #'
-#' Generating Compound-Protein Interaction Features
+#' Generating Compound-Protein Interaction Descriptors
 #' 
-#' This function calculates the compound-protein interaction features 
+#' This function calculates the compound-protein interaction descriptors
 #' by three types of interaction:
 #' \itemize{
-#' \item \code{combine} - combine the two feature matrix, result has \code{(p1 + p2)} columns
+#' \item \code{combine} - combine the two descriptor matrix, result has \code{(p1 + p2)} columns
 #' \item \code{tensorprod} - calculate column-by-column (pseudo)-tensor product type interactions, result has \code{(p1 * p2)} columns
 #' }
 #' 
-#' @param drugmat The compound feature matrix.
-#' @param protmat The protein feture matrix.
+#' @param drugmat The compound descriptor matrix.
+#' @param protmat The protein descriptor matrix.
 #' @param type The interaction type, one or two of \code{"combine"} and \code{"tensorprod"}.
 #' 
-#' @return A matrix containing the compound-protein interaction features.
+#' @return A matrix containing the compound-protein interaction descriptors
 #' 
 #' @keywords getCPI compound-protein interaction cpi
 #'
@@ -42,7 +42,7 @@
 #' 
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{getPPI}} for generating protein-protein interaction features.
+#' @seealso See \code{\link{getPPI}} for generating protein-protein interaction descriptors.
 #' 
 #' @export getCPI
 #' 

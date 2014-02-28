@@ -2,7 +2,7 @@
 \name{Rcpi-package}
 \alias{Rcpi}
 \alias{Rcpi-package}
-\title{R/Bioconductor Package for Predictive Modeling of Compound-Protein Interactions}
+\title{Toolkit for Compound-Protein Interaction in Drug Discovery}
 \description{
 The Rcpi package offers an R/Bioconductor package
 emphasizing the comprehensive integration of bioinformatics
