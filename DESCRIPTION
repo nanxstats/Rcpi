@@ -1,7 +1,7 @@
 Package: Rcpi
 Type: Package
 Title: Toolkit for Compound-Protein Interaction in Drug Discovery
-Version: 1.0
+Version: 1.0.0
 Date: 2014-02-28
 Description: The Rcpi package offers an R/Bioconductor package emphasizing the
     comprehensive integration of bioinformatics and chemoinformatics into a
@@ -13,16 +13,17 @@ License: Artistic-2.0
 URL: https://github.com/road2stat/Rcpi/
 BugReports: https://github.com/road2stat/Rcpi/issues
 LazyData: yes
-Depends:
+Imports:
     RCurl,
     rjson,
-    rcdk
-Suggests:
+    rcdk,
     Biostrings,
     GOSemSim,
-    foreach,
-    doParallel,
-    doMC,
     ChemmineOB,
     ChemmineR,
     fmcsR
+Enhances: foreach,
+    doParallel,
+    doMC
+biocViews: Software, DataRepresentation, Bioinformatics, Infrastructure,
+    DataImport, Proteomics, GO, Clustering, NetworkAnalysis, Visualization

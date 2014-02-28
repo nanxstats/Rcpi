@@ -50,7 +50,7 @@
 
 %
 <<prelim,echo=FALSE,print=FALSE>>=
-Rcpi.version = '1.0'
+Rcpi.version = '1.0.0'
 now.date = strftime(Sys.Date(), "%Y-%m-%d")
 @
 %
@@ -136,11 +136,11 @@ source('http://bioconductor.org/biocLite.R')
 biocLite('Rcpi')
 \end{CodeInput}
 
-To make the \pkg{Rcpi} package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the \emph{suggested} packages by using:
+To make the \pkg{Rcpi} package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the \emph{Enhances} packages by using:
 
 \begin{CodeInput}
 source('http://bioconductor.org/biocLite.R')
-biocLite('Rcpi', dependencies = c('Depends', 'Suggests'))
+biocLite('Rcpi', dependencies = c('Imports', 'Enhances'))
 \end{CodeInput}
 
 \section{Applications in Bioinformatics}\addcontentsline{toc}{section}{2. Applications in Bioinformatics}
