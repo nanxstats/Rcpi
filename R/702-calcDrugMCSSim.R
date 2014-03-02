@@ -52,12 +52,6 @@ calcDrugMCSSim = function (mol1, mol2, type = c('smile', 'sdf'), plot = FALSE,
                            al = 0, au = 0, bl = 0, bu = 0, 
                            matching.mode = 'static', ...) {
   
-  fmcsR.exist = suppressMessages(require(fmcsR, quietly = TRUE))
-  if ( !fmcsR.exist ) stop('The fmcsR package is required to run calcDrugMCSSim(). Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/fmcsR.html to install it.')
-  
-  ChemmineR.exist = suppressMessages(require(ChemmineR, quietly = TRUE))
-  if ( !ChemmineR.exist ) stop('The ChemmineR package is required to run calcDrugMCSSim(). Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html to install it.')
-  
   if (type == 'smile') {
     
     # smile to sdfset
@@ -78,10 +72,10 @@ calcDrugMCSSim = function (mol1, mol2, type = c('smile', 'sdf'), plot = FALSE,
       
       }
   
-  mcs = fmcs(sdfset1, sdfset2, al = al, au = au, bl = bl, bu = bu, 
+  mcs = fmcsR::fmcs(sdfset1, sdfset2, al = al, au = au, bl = bl, bu = bu, 
              matching.mode = matching.mode, fast = FALSE)
   
-  if (plot == TRUE) plotMCS(mcs, ...)
+  if (plot == TRUE) fmcsR::plotMCS(mcs, ...)
   
   x = list(mcs, mcs@stats['Tanimoto_Coefficient'], mcs@stats['Overlap_Coefficient'])
   

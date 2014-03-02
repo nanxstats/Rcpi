@@ -39,25 +39,25 @@
 # 19 features: MDEC.11 MDEC.12 MDEC.13 MDEC.14 MDEC.22 MDEC.23 MDEC.24 MDEC.33 MDEC.34 MDEC.44 MDEO.11 MDEO.12 MDEO.22 MDEN.11 MDEN.12 MDEN.13 MDEN.22 MDEN.23 MDEN.33
 # The variants are described below:
 # 
-# MDEC-11   molecular distance edge between all primary carbons
-# MDEC-12	 molecular distance edge between all primary and secondary carbons
-# MDEC-13	 molecular distance edge between all primary and tertiary carbons
-# MDEC-14	 molecular distance edge between all primary and quaternary carbons
-# MDEC-22	 molecular distance edge between all secondary carbons
-# MDEC-23	 molecular distance edge between all secondary and tertiary carbons
-# MDEC-24	 molecular distance edge between all secondary and quaternary carbons
-# MDEC-33	 molecular distance edge between all tertiary carbons
-# MDEC-34	 molecular distance edge between all tertiary and quaternary carbons
-# MDEC-44	 molecular distance edge between all quaternary carbons
-# MDEO-11	 molecular distance edge between all primary oxygens
-# MDEO-12	 molecular distance edge between all primary and secondary oxygens
-# MDEO-22	 molecular distance edge between all secondary oxygens
-# MDEN-11	 molecular distance edge between all primary nitrogens
-# MDEN-12	 molecular distance edge between all primary and secondary nitrogens
-# MDEN-13	 molecular distance edge between all primary and tertiary niroqens
-# MDEN-22	 molecular distance edge between all secondary nitroqens
-# MDEN-23	 molecular distance edge between all secondary and tertiary nitrogens
-# MDEN-33	 molecular distance edge between all tertiary nitrogens
+# MDEC-11 - molecular distance edge between all primary carbons
+# MDEC-12 - molecular distance edge between all primary and secondary carbons
+# MDEC-13 - molecular distance edge between all primary and tertiary carbons
+# MDEC-14 - molecular distance edge between all primary and quaternary carbons
+# MDEC-22 - molecular distance edge between all secondary carbons
+# MDEC-23 - molecular distance edge between all secondary and tertiary carbons
+# MDEC-24 - molecular distance edge between all secondary and quaternary carbons
+# MDEC-33 - molecular distance edge between all tertiary carbons
+# MDEC-34 - molecular distance edge between all tertiary and quaternary carbons
+# MDEC-44 - molecular distance edge between all quaternary carbons
+# MDEO-11 - molecular distance edge between all primary oxygens
+# MDEO-12 - molecular distance edge between all primary and secondary oxygens
+# MDEO-22 - molecular distance edge between all secondary oxygens
+# MDEN-11 - molecular distance edge between all primary nitrogens
+# MDEN-12 - molecular distance edge between all primary and secondary nitrogens
+# MDEN-13 - molecular distance edge between all primary and tertiary niroqens
+# MDEN-22 - molecular distance edge between all secondary nitroqens
+# MDEN-23 - molecular distance edge between all secondary and tertiary nitrogens
+# MDEN-33 - molecular distance edge between all tertiary nitrogens
 
 extractDrugMDE = function (molecules, silent = TRUE) {
   

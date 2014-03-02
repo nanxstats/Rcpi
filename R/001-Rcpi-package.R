@@ -26,5 +26,8 @@
 #' 
 #' @keywords Rcpi
 #' 
+#' @import RCurl rjson rcdk foreach doParallel 
+#' Biostrings GOSemSim ChemmineOB ChemmineR fmcsR
+#' 
 #' @example inst/examples/Rcpi-package-ex.R
 NULL

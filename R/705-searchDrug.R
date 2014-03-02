@@ -63,28 +63,7 @@ searchDrug = function (mol, moldb, cores = 2,
                                  'dice', 'hamming'), 
                        mcssim = c('tanimoto', 'overlap'), ...) {
   
-  foreach.exist = suppressMessages(require(foreach, quietly = TRUE))
-  doParallel.exist = suppressMessages(require(doParallel, quietly = TRUE))
-  doMC.exist = suppressMessages(require(doMC, quietly = TRUE))
-  
-  if ( ( foreach.exist ) & ( doParallel.exist | doMC.exist ) ) {
-    if( !getDoParRegistered() ) {
-      if ( .Platform$OS.type == 'windows' & doParallel.exist ) {
-        doParallel::registerDoParallel(cores)
-      } else if ( .Platform$OS.type == 'unix' & doMC.exist ) {
-        doMC::registerDoMC(cores)
-      } else if ( .Platform$OS.type == 'unix' & doParallel.exist ) {
-        doParallel::registerDoParallel(cores)
-      } else {
-        stop('The doParallel or doMC package is required to run searchDrug(). Please use install.packages("doParallel") or install.packages("doMC") to install at least one of them.')
-      }
-    }
-  } else {
-    stop('The foreach and doParallel/doMC packages are required to run searchDrug(). Please use install.packages("foreach") and install.packages("doParallel") / install.packages("doMC") to install them.')
-  }
-  
-  fmcsR.exist = suppressMessages(require(fmcsR, quietly = TRUE))
-  if ( method == 'mcs' & !fmcsR.exist ) stop('The fmcsR package is required to run searchDrug() when method == "mcs". Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/fmcsR.html to install it.')
+  doParallel::registerDoParallel(cores)
   
   if (method == 'fp') {
     

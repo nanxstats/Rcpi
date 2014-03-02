@@ -50,7 +50,7 @@
 
 %
 <<prelim,echo=FALSE,print=FALSE>>=
-Rcpi.version = '1.0.0'
+Rcpi.version = 'Release 1'
 now.date = strftime(Sys.Date(), "%Y-%m-%d")
 @
 %
@@ -66,7 +66,7 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
     \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
     \rule{\textwidth}{1.6pt}\\[2\baselineskip]
     {\Large Nan Xiao, Dongsheng Cao, Qingsong Xu}\\[\baselineskip]
-    {\large Package Version \Sexpr{Rcpi.version}}\par
+    {\large Package Version: \Sexpr{Rcpi.version}}\par
     {\large \Sexpr{now.date}}\par
     \vfill    
     \begin{figure}[h]
@@ -127,7 +127,9 @@ Several useful auxiliary utilities are also shipped with \pkg{Rcpi}:
 
 The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, chemoinformatics, proteochemometrics and chemogenomics.
 
-The \pkg{Rcpi} package is available from Bioconductor (\url{http://bioconductor.org}), visit \url{http://bioconductor.org/packages/release/bioc/html/Rcpi.html} for more details. This vignette corresponds to \pkg{Rcpi} version \Sexpr{Rcpi.version} and was typeset on \Sexpr{now.date}.
+The \pkg{Rcpi} package is available from Bioconductor (\url{http://bioconductor.org}), visit \url{http://bioconductor.org/packages/release/bioc/html/Rcpi.html} for more details. This vignette corresponds to \pkg{Rcpi} \Sexpr{Rcpi.version} and was typeset on \Sexpr{now.date}.
+
+\vskip 0.4in
 
 To install the \pkg{Rcpi} package in \proglang{R}, simply type
 
@@ -136,12 +138,9 @@ source('http://bioconductor.org/biocLite.R')
 biocLite('Rcpi')
 \end{CodeInput}
 
-To make the \pkg{Rcpi} package fully functional (especially the parallelized similarity computation), we strongly recommend the users also install the \emph{Suggests} packages by using:
+Several depended packages may have system-level requirements according to your OS type, check the corresponding manuals for installation guides.
 
-\begin{CodeInput}
-source('http://bioconductor.org/biocLite.R')
-biocLite('Rcpi', dependencies = c('Depends', 'Suggests'))
-\end{CodeInput}
+\vskip 0.4in
 
 \section{Applications in Bioinformatics}\addcontentsline{toc}{section}{2. Applications in Bioinformatics}
 

@@ -196,9 +196,6 @@
 
 convMolFormat = function (infile, outfile, from, to) {
   
-  ChemmineOB.exist = suppressMessages(require(ChemmineOB, quietly = TRUE))
-  if ( !ChemmineOB.exist ) stop('The ChemmineOB package is required to run extractDrugOBFP2(). Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/ChemmineOB.html to install it.')
-  
   eval(parse(text = "invisible(.Call('ob_convert_file', as.character(from), as.character(to), as.character(infile), as.character(outfile), PACKAGE = 'ChemmineOB'))"))
   
 }

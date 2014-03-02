@@ -83,9 +83,6 @@ calcParProtGOSim = function (golist, type = c('go', 'gene'),
                      ont = 'MF', organism = 'human', 
                      measure = 'Resnik', combine = 'BMA') {
   
-  GOSemSim.exist = suppressMessages(require(GOSemSim, quietly = TRUE))
-  if ( !GOSemSim.exist ) stop('The GOSemSim package is required to run parGOSim(). Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/GOSemSim.html to install it.')
-  
   if ( type == 'gene' ) {
     gosimmat = GOSemSim::mgeneSim(unlist(golist), ont = ont, organism = organism, measure = measure, combine = combine, verbose = FALSE)
   }
@@ -169,9 +166,6 @@ calcParProtGOSim = function (golist, type = c('go', 'gene'),
 calcTwoProtGOSim = function (id1, id2, type = c('go', 'gene'), 
                      ont = 'MF', organism = 'human', 
                      measure = 'Resnik', combine = 'BMA') {
-  
-  GOSemSim.exist = suppressMessages(require(GOSemSim, quietly = TRUE))
-  if ( !GOSemSim.exist ) stop('The GOSemSim package is required to run twoGOSim(). Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/GOSemSim.html to install it.')
   
   if ( type == 'go' ) {
     sim = GOSemSim::mgoSim(id1, id2, 

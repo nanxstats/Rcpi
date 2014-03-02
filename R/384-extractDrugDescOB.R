@@ -58,9 +58,6 @@
 
 extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
   
-  ChemmineOB.exist = suppressMessages(require(ChemmineOB, quietly = TRUE))
-  if ( !ChemmineOB.exist ) stop('The ChemmineOB package is required to run extractDrugOBFP2(). Please follow the instructions on http://www.bioconductor.org/packages/release/bioc/html/ChemmineOB.html to install it.')
-  
   strDesc = c('cansmi', 'cansmiNS', 'formula', 'title')
   numDesc = c('abonds', 'atoms', 'bonds', 'dbonds', 'HBA1', 'HBA2', 'HBD', 
               'logP', 'MR', 'MW', 'nF', 'sbonds', 'tbonds', 'TPSA')
