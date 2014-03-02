@@ -129,8 +129,6 @@ The computed protein sequence descriptors, molecular descriptors/fingerprints, i
 
 The \pkg{Rcpi} package is available from Bioconductor (\url{http://bioconductor.org}), visit \url{http://bioconductor.org/packages/release/bioc/html/Rcpi.html} for more details. This vignette corresponds to \pkg{Rcpi} \Sexpr{Rcpi.version} and was typeset on \Sexpr{now.date}.
 
-\vskip 0.4in
-
 To install the \pkg{Rcpi} package in \proglang{R}, simply type
 
 \begin{CodeInput}
@@ -138,9 +136,14 @@ source('http://bioconductor.org/biocLite.R')
 biocLite('Rcpi')
 \end{CodeInput}
 
-Several depended packages may have system-level requirements according to your OS type, check the corresponding manuals for installation guides.
+To make the \pkg{Rcpi} package fully functional (especially the Open Babel related functionalities), we recommend the users also install the \emph{Enhances} packages by using:
 
-\vskip 0.4in
+\begin{CodeInput}
+source('http://bioconductor.org/biocLite.R')
+biocLite('Rcpi', dependencies = c('Imports', 'Enhances'))
+\end{CodeInput}
+
+Several dependencies of the \pkg{Rcpi} package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.
 
 \section{Applications in Bioinformatics}\addcontentsline{toc}{section}{2. Applications in Bioinformatics}
 

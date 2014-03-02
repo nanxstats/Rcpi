@@ -21,8 +21,8 @@ Imports:
     doParallel,
     Biostrings,
     GOSemSim,
-    ChemmineOB,
     ChemmineR,
     fmcsR
+Enhances: ChemmineOB
 biocViews: Software, DataRepresentation, Bioinformatics, Infrastructure,
     DataImport, Proteomics, GO, Clustering, NetworkAnalysis, Visualization
