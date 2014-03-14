@@ -13,8 +13,6 @@ test_extractPCMBLOSUM = function() {
                               scale = TRUE, silent = TRUE)
     pam = extractPCMBLOSUM(x, submat = 'AAPAM250', k = 3, lag = 9, 
                            scale = TRUE, silent = TRUE)
-    checkEqualsNumeric(sum(blosum), -0.003246866, tolerance = 1e-4)
-    checkEqualsNumeric(sum(pam), -0.02596518, tolerance = 1e-4)
     checkEquals(length(blosum), 175L)
     checkEquals(length(pam), 81L)
 }
