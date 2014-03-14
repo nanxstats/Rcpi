@@ -1,6 +1,8 @@
-#' Descriptor that Calculates the Principal Moments of Inertia and Ratios of the Principal Moments
+#' Descriptor that Calculates the Principal Moments of 
+#' Inertia and Ratios of the Principal Moments
 #'
-#' Descriptor that Calculates the Principal Moments of Inertia and Ratios of the Principal Moments
+#' Descriptor that Calculates the Principal Moments of 
+#' Inertia and Ratios of the Principal Moments
 #' 
 #' A descriptor that calculates the moment of inertia and radius of gyration. 
 #' Moment of inertia (MI) values characterize the mass distribution of a molecule. 
@@ -12,43 +14,51 @@
 #' gyration of the molecule.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns 7 columns named \code{MOMI.X}, \code{MOMI.Y}, \code{MOMI.Z}, \code{MOMI.XY}, \code{MOMI.XZ}, \code{MOMI.YZ}, \code{MOMI.R}:
-#'         \itemize{
-#'         \item \code{MOMI.X} - MI along X axis
-#'         \item \code{MOMI.Y} - MI along Y axis
-#'         \item \code{MOMI.Z} - MI along Z axis
-#'         \item \code{MOMI.XY} - X/Y
-#'         \item \code{MOMI.XZ} - X/Z
-#'         \item \code{MOMI.YZ} - Y/Z
-#'         \item \code{MOMI.R} - Radius of gyration
-#'         }
-#'         
-#'         One important aspect of the algorithm is that if the eigenvalues 
-#'         of the MI tensor are below \code{1e-3}, 
-#'         then the ratio's are set to a default of 1000.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns 7 columns named 
+#' \code{MOMI.X}, \code{MOMI.Y}, \code{MOMI.Z}, 
+#' \code{MOMI.XY}, \code{MOMI.XZ}, \code{MOMI.YZ}, \code{MOMI.R}:
+#' \itemize{
+#' \item \code{MOMI.X} - MI along X axis
+#' \item \code{MOMI.Y} - MI along Y axis
+#' \item \code{MOMI.Z} - MI along Z axis
+#' \item \code{MOMI.XY} - X/Y
+#' \item \code{MOMI.XZ} - X/Z
+#' \item \code{MOMI.YZ} - Y/Z
+#' \item \code{MOMI.R} - Radius of gyration
+#' }
+#' One important aspect of the algorithm is that if the eigenvalues 
+#' of the MI tensor are below \code{1e-3}, 
+#' then the ratio's are set to a default of 1000.
 #' 
 #' @keywords extractDrugMomentOfInertia Moment Inertia
-#'
+#' 
 #' @aliases extractDrugMomentOfInertia
 #' 
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugMomentOfInertia
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugMomentOfInertia(mol)}
+#' \donttest{
+#' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' mol = readMolFromSDF(sdf)
+#' dat = extractDrugMomentOfInertia(mol)
+#' head(dat)}
+#' 
 
 extractDrugMomentOfInertia = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.MomentOfInertiaDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.MomentOfInertiaDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

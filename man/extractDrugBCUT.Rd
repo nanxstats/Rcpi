@@ -12,16 +12,17 @@ extractDrugBCUT(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 6
-columns: \itemize{ \item \code{BCUTw-1l, BCUTw-2l ...} -
-nhigh lowest atom weighted BCUTS \item \code{BCUTw-1h,
-BCUTw-2h ...} - nlow highest atom weighted BCUTS \item
-\code{BCUTc-1l, BCUTc-2l ...} - nhigh lowest partial charge
-weighted BCUTS \item \code{BCUTc-1h, BCUTc-2h ...} - nlow
-highest partial charge weighted BCUTS \item \code{BCUTp-1l,
-BCUTp-2l ...} - nhigh lowest polarizability weighted BCUTS
-\item \code{BCUTp-1h, BCUTp-2h ...} - nlow highest
-polarizability weighted BCUTS }
+each column represents one feature. This function returns 6
+columns: \itemize{ \item \code{BCUTw-1l, BCUTw-2l ...} - n
+high lowest atom weighted BCUTS \item \code{BCUTw-1h,
+BCUTw-2h ...} - n low highest atom weighted BCUTS \item
+\code{BCUTc-1l, BCUTc-2l ...} - n high lowest partial
+charge weighted BCUTS \item \code{BCUTc-1h, BCUTc-2h ...} -
+n low highest partial charge weighted BCUTS \item
+\code{BCUTp-1l, BCUTp-2l ...} - n high lowest
+polarizability weighted BCUTS \item \code{BCUTp-1h,
+BCUTp-2h ...} - n low highest polarizability weighted BCUTS
+}
 }
 \description{
 BCUT -- Eigenvalue Based Descriptor
@@ -66,9 +67,11 @@ specify the number of heavy atoms (or some large number)
 for nhigh (or vice versa).
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugBCUT(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugBCUT(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

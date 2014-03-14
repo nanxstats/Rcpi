@@ -12,7 +12,7 @@ extractDrugApol(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{apol}.
 }
 \description{
@@ -26,9 +26,11 @@ are taken from
 \url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugApol(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugApol(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

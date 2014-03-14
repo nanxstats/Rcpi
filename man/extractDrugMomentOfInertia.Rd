@@ -1,6 +1,7 @@
 \name{extractDrugMomentOfInertia}
 \alias{extractDrugMomentOfInertia}
-\title{Descriptor that Calculates the Principal Moments of Inertia and Ratios of the Principal Moments}
+\title{Descriptor that Calculates the Principal Moments of
+Inertia and Ratios of the Principal Moments}
 \usage{
 extractDrugMomentOfInertia(molecules, silent = TRUE)
 }
@@ -12,18 +13,17 @@ extractDrugMomentOfInertia(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 7
+each column represents one feature. This function returns 7
 columns named \code{MOMI.X}, \code{MOMI.Y}, \code{MOMI.Z},
 \code{MOMI.XY}, \code{MOMI.XZ}, \code{MOMI.YZ},
 \code{MOMI.R}: \itemize{ \item \code{MOMI.X} - MI along X
 axis \item \code{MOMI.Y} - MI along Y axis \item
 \code{MOMI.Z} - MI along Z axis \item \code{MOMI.XY} - X/Y
 \item \code{MOMI.XZ} - X/Z \item \code{MOMI.YZ} - Y/Z \item
-\code{MOMI.R} - Radius of gyration }
-
-One important aspect of the algorithm is that if the
-eigenvalues of the MI tensor are below \code{1e-3}, then
-the ratio's are set to a default of 1000.
+\code{MOMI.R} - Radius of gyration } One important aspect
+of the algorithm is that if the eigenvalues of the MI
+tensor are below \code{1e-3}, then the ratio's are set to a
+default of 1000.
 }
 \description{
 Descriptor that Calculates the Principal Moments of Inertia
@@ -40,9 +40,11 @@ axes as well as the ratio's X/Y, X/Z and Y/Z. Finally it
 also calculates the radius of gyration of the molecule.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugMomentOfInertia(mol)}
+\donttest{
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+mol = readMolFromSDF(sdf)
+dat = extractDrugMomentOfInertia(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

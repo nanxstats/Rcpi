@@ -8,9 +8,10 @@
 #' 
 #' @param x A character vector, as the input protein sequence.
 #' @param propmat A matrix containing the properties for the amino acids. 
-#'        Each row represent one amino acid type, each column represents one property.
-#'        Note that the one-letter row names must be provided for we need them to seek 
-#'        the properties for each AA type.
+#'        Each row represent one amino acid type, each column represents 
+#'        one property.
+#'        Note that the one-letter row names must be provided for we 
+#'        need them to seek the properties for each AA type.
 #' @param k Integer. The maximum dimension of the space which the data 
 #'        are to be represented in.
 #'        Must be no greater than the number of AA properties provided.
@@ -48,31 +49,32 @@
 #' mds = extractPCMMDSScales(x, propmat = tprops, k = 5, lag = 7, silent = FALSE)
 #' 
 
-extractPCMMDSScales = function (x, propmat, k, lag, scale = TRUE, silent = TRUE) {
-  
-  if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
-  
-  k = min(k, ncol(propmat) - 1, nrow(propmat) - 1)
-  
-  if (scale) propmat = scale(propmat)
-  
-  d = dist(propmat)  # euclidean distances between the rows
-  mds = cmdscale(d, k = k, eig = TRUE)
-  
-  accmat = matrix(0, k, nchar(x))
-  x.split = strsplit(x, '')[[1]]
-  
-  for (i in 1:nchar(x)) {
-    accmat[, i] = mds$points[x.split[i], 1:k]
-  }
-  
-  result = acc(accmat, lag)
-  
-  if (!silent) {
-    cat('Eigenvalues computed during the scaling process:\n')
-    print(mds$eig)
-  }
-  
-  return(result)
-  
+extractPCMMDSScales = function (x, propmat, k, lag, 
+                                scale = TRUE, silent = TRUE) {
+
+    if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
+
+    k = min(k, ncol(propmat) - 1, nrow(propmat) - 1)
+
+    if (scale) propmat = scale(propmat)
+
+    d = dist(propmat)  # euclidean distances between the rows
+    mds = cmdscale(d, k = k, eig = TRUE)
+
+    accmat = matrix(0, k, nchar(x))
+    x.split = strsplit(x, '')[[1]]
+
+    for (i in 1:nchar(x)) {
+        accmat[, i] = mds$points[x.split[i], 1:k]
+    }
+
+    result = acc(accmat, lag)
+
+    if (!silent) {
+        cat('Eigenvalues computed during the scaling process:\n')
+        print(mds$eig)
+    }
+
+    return(result)
+
 }

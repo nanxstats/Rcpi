@@ -26,7 +26,7 @@ This function retrieves drug molecules in SMILES format
 from the ChEMBL database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = 'CHEMBL1430'  # Penicillamine
 getSmiFromChEMBL(id)}
 }

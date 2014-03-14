@@ -1,6 +1,7 @@
 \name{acc}
 \alias{acc}
-\title{Auto Cross Covariance (ACC) for Generating Scales-Based Descriptors of the Same Length}
+\title{Auto Cross Covariance (ACC) for Generating Scales-Based Descriptors
+of the Same Length}
 \usage{
 acc(mat, lag)
 }

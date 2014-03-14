@@ -18,7 +18,7 @@ Group, Central South University
 (\url{http://cbdd.csu.edu.cn/}).
 
 \tabular{ll}{ Package: \tab Rcpi\cr Type: \tab Package\cr
-Version: \tab 1.0.0\cr License: \tab Artistic-2.0\cr }
+Version: \tab Release 1\cr License: \tab Artistic-2.0\cr }
 }
 \note{
 Bug reports and feature requests should be sent to

@@ -14,10 +14,12 @@
 #' and V(i) is the vertex degree of the i-th atom.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns one column named \code{ECCEN}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns one column named \code{ECCEN}.
 #' 
 #' @keywords extractDrugECI Eccentric Connectivity Index
 #'
@@ -27,23 +29,28 @@
 #' 
 #' @export extractDrugECI
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @references
 #' Sharma, V. and Goswami, R. and Madan, A.K. (1997), 
-#' Eccentric Connectivity Index: A Novel Highly Discriminating Topological Descriptor 
-#' for Structure-Property and Structure-Activity Studies, 
+#' Eccentric Connectivity Index: A Novel Highly Discriminating 
+#' Topological Descriptor for Structure-Property and Structure-Activity Studies, 
 #' Journal of Chemical Information and Computer Sciences, 37:273-282
 #' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugECI(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugECI(mol)
+#' head(dat)}
+#' 
 
 extractDrugECI = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.EccentricConnectivityIndexDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.EccentricConnectivityIndexDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

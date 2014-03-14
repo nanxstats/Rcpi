@@ -12,7 +12,7 @@ extractDrugKappaShapeIndices(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 3
+each column represents one feature. This function returns 3
 columns named \code{Kier1}, \code{Kier2} and \code{Kier3}:
 \itemize{ \item \code{Kier1} - First kappa shape index
 \item \code{Kier2} - Second kappa shape index \item
@@ -36,9 +36,11 @@ denote the number of paths of length 2 and let p3 denote
 the number of paths of length 3".
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugKappaShapeIndices(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugKappaShapeIndices(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

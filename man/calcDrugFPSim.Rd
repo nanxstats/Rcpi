@@ -39,7 +39,7 @@ Hamming: aka Manhattan, taxi-cab, city-block distance -
 \eqn{(a + b)} }
 }
 \examples{
-\dontrun{
+\donttest{
 mols = readMolFromSDF(system.file('compseq/tyrphostin.sdf', package = 'Rcpi'))
 
 fp1 = extractDrugEstate(mols[[1]])

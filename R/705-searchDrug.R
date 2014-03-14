@@ -1,14 +1,18 @@
-#' Parallelized Drug Molecule Similarity Search by Molecular Fingerprints Similarity or Maximum Common Substructure Search
+#' Parallelized Drug Molecule Similarity Search by 
+#' Molecular Fingerprints Similarity or Maximum Common Substructure Search
 #' 
-#' Parallelized Drug Molecule Similarity Search by Molecular Fingerprints Similarity or Maximum Common Substructure Search
+#' Parallelized Drug Molecule Similarity Search by 
+#' Molecular Fingerprints Similarity or Maximum Common Substructure Search
 #' 
 #' This function does compound similarity search derived by 
 #' various molecular fingerprints with various similarity measures or 
 #' derived by maximum common substructure search.
 #' This function runs for a query compound against a set of molecules.
 #' 
-#' @param mol The query molecule. The location of a \code{sdf} file containing one molecule.
-#' @param moldb The molecule database. The location of a \code{sdf} file containing all the molecules to be searched with.
+#' @param mol The query molecule. The location of a \code{sdf} file 
+#' containing one molecule.
+#' @param moldb The molecule database. The location of a \code{sdf} file 
+#' containing all the molecules to be searched with.
 #' @param cores Integer. The number of CPU cores to use for parallel search, 
 #'        default is \code{2}. Users could use the \code{detectCores()} function
 #'        in the \code{parallel} package to see how many cores they could use.
@@ -43,7 +47,7 @@
 #' @export searchDrug
 #' 
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' mol = system.file('compseq/DB00530.sdf', package = 'Rcpi')
 #' # DrugBank ID DB00530: Erlotinib
 #' moldb = system.file('compseq/tyrphostin.sdf', package = 'Rcpi')
@@ -62,153 +66,153 @@ searchDrug = function (mol, moldb, cores = 2,
                        fpsim = c('tanimoto', 'euclidean', 'cosine', 
                                  'dice', 'hamming'), 
                        mcssim = c('tanimoto', 'overlap'), ...) {
-  
-  doParallel::registerDoParallel(cores)
-  
-  if (method == 'fp') {
-    
-    if ( fptype %in% c('standard', 'extended', 'graph', 
-                       'hybrid',   'maccs',    'estate',
-                       'pubchem',  'kr',       'shortestpath') ) {
-      
-      mol   = rcdk::load.molecules(mol)
-      moldb = rcdk::load.molecules(moldb)
-      
-    }
-    
-    if ( fptype %in% c('fp2', 'fp3', 'fp4', 'obmaccs') ) {
-      
-      mol   = readChar(mol, nchars = file.info(mol)['size'])
-      moldb = readChar(moldb, nchars = file.info(moldb)['size'])
-      
+
+    doParallel::registerDoParallel(cores)
+
+    if (method == 'fp') {
+
+        if ( fptype %in% c('standard', 'extended', 'graph', 
+                           'hybrid',   'maccs',    'estate',
+                           'pubchem',  'kr',       'shortestpath') ) {
+
+            mol   = rcdk::load.molecules(mol)
+            moldb = rcdk::load.molecules(moldb)
+
+        }
+
+        if ( fptype %in% c('fp2', 'fp3', 'fp4', 'obmaccs') ) {
+
+            mol   = readChar(mol, nchars = file.info(mol)['size'])
+            moldb = readChar(moldb, nchars = file.info(moldb)['size'])
+
+        }
+
+        if (fptype == 'standard') {
+
+            molfp   = extractDrugStandardComplete(mol[[1]])
+            moldbfp = extractDrugStandardComplete(moldb)
+
+        }
+
+        if (fptype == 'extended') {
+
+            molfp   = extractDrugExtendedComplete(mol[[1]])
+            moldbfp = extractDrugExtendedComplete(moldb)
+
+        }
+
+        if (fptype == 'graph') {
+
+            molfp   = extractDrugGraphComplete(mol[[1]])
+            moldbfp = extractDrugGraphComplete(moldb)
+
+        }
+
+        if (fptype == 'hybrid') {
+
+            molfp   = extractDrugHybridizationComplete(mol[[1]])
+            moldbfp = extractDrugHybridizationComplete(moldb)
+
+        }
+
+        if (fptype == 'maccs') {
+
+            molfp   = extractDrugMACCSComplete(mol[[1]])
+            moldbfp = extractDrugMACCSComplete(moldb)
+
+        }
+
+        if (fptype == 'estate') {
+
+            molfp   = extractDrugEstateComplete(mol[[1]])
+            moldbfp = extractDrugEstateComplete(moldb)
+
+        }
+
+        if (fptype == 'pubchem') {
+
+            molfp   = extractDrugPubChemComplete(mol[[1]])
+            moldbfp = extractDrugPubChemComplete(moldb)
+
+        }
+
+        if (fptype == 'kr') {
+
+            molfp   = extractDrugKRComplete(mol[[1]])
+            moldbfp = extractDrugKRComplete(moldb)
+
+        }
+
+        if (fptype == 'shortestpath') {
+
+            molfp   = extractDrugShortestPathComplete(mol[[1]])
+            moldbfp = extractDrugShortestPathComplete(moldb)
+
+        }
+
+        if (fptype == 'fp2') {
+
+            molfp   = extractDrugOBFP2(mol, type = 'sdf')
+            moldbfp = extractDrugOBFP2(moldb, type = 'sdf')
+
+        }
+
+        if (fptype == 'fp3') {
+
+            molfp   = extractDrugOBFP3(mol, type = 'sdf')
+            moldbfp = extractDrugOBFP3(moldb, type = 'sdf')
+
+        }
+
+        if (fptype == 'fp4') {
+
+            molfp   = extractDrugOBFP4(mol, type = 'sdf')
+            moldbfp = extractDrugOBFP4(moldb, type = 'sdf')
+
+        }
+
+        if (fptype == 'obmaccs') {
+
+            molfp   = extractDrugOBMACCS(mol, type = 'sdf')
+            moldbfp = extractDrugOBMACCS(moldb, type = 'sdf')
+
+        }
+
+        i = NULL
+
+        rankvec = rep(NA, nrow(moldbfp))
+
+        rankvec <- foreach (i = 1:nrow(moldbfp), .combine = 'c', .errorhandling = 'pass') %dopar% {
+            tmp <- calcDrugFPSim(as.vector(molfp), as.vector(moldbfp[i, ]), fptype = 'complete', metric = fpsim)
+        }
+
+        rankvec.ord = order(rankvec, decreasing = TRUE)
+        rankvec = rankvec[rankvec.ord]
+        names(rankvec) = as.character(rankvec.ord)
+
     }
 
-    if (fptype == 'standard') {
-      
-      molfp   = extractDrugStandardComplete(mol[[1]])
-      moldbfp = extractDrugStandardComplete(moldb)
-      
+    if (method == 'mcs') {
+
+        mol = ChemmineR::read.SDFset(mol)
+        moldb = ChemmineR::read.SDFset(moldb)
+
+        fmcsresult = fmcsR::fmcsBatch(mol, moldb, ...)
+
+        if (mcssim == 'tanimoto') {
+            rankvec = fmcsresult[order(fmcsresult[, 'Tanimoto_Coefficient'], 
+                                       decreasing = TRUE), 'Tanimoto_Coefficient']
+        }
+
+        if (mcssim == 'overlap') {
+            rankvec = fmcsresult[order(fmcsresult[, 'Overlap_Coefficient'], 
+                                       decreasing = TRUE), 'Overlap_Coefficient']
+        }
+
+        names(rankvec) = gsub('CMP', '', names(rankvec))
+
     }
-    
-    if (fptype == 'extended') {
-      
-      molfp   = extractDrugExtendedComplete(mol[[1]])
-      moldbfp = extractDrugExtendedComplete(moldb)
-      
-    }
-    
-    if (fptype == 'graph') {
-      
-      molfp   = extractDrugGraphComplete(mol[[1]])
-      moldbfp = extractDrugGraphComplete(moldb)
-      
-    }
-    
-    if (fptype == 'hybrid') {
-      
-      molfp   = extractDrugHybridizationComplete(mol[[1]])
-      moldbfp = extractDrugHybridizationComplete(moldb)
-      
-    }
-    
-    if (fptype == 'maccs') {
-      
-      molfp   = extractDrugMACCSComplete(mol[[1]])
-      moldbfp = extractDrugMACCSComplete(moldb)
-      
-    }
-    
-    if (fptype == 'estate') {
-      
-      molfp   = extractDrugEstateComplete(mol[[1]])
-      moldbfp = extractDrugEstateComplete(moldb)
-      
-    }
-    
-    if (fptype == 'pubchem') {
-      
-      molfp   = extractDrugPubChemComplete(mol[[1]])
-      moldbfp = extractDrugPubChemComplete(moldb)
-      
-    }
-    
-    if (fptype == 'kr') {
-      
-      molfp   = extractDrugKRComplete(mol[[1]])
-      moldbfp = extractDrugKRComplete(moldb)
-      
-    }
-    
-    if (fptype == 'shortestpath') {
-      
-      molfp   = extractDrugShortestPathComplete(mol[[1]])
-      moldbfp = extractDrugShortestPathComplete(moldb)
-      
-    }
-    
-    if (fptype == 'fp2') {
-      
-      molfp   = extractDrugOBFP2(mol, type = 'sdf')
-      moldbfp = extractDrugOBFP2(moldb, type = 'sdf')
-      
-    }
-    
-    if (fptype == 'fp3') {
-      
-      molfp   = extractDrugOBFP3(mol, type = 'sdf')
-      moldbfp = extractDrugOBFP3(moldb, type = 'sdf')
-      
-    }
-    
-    if (fptype == 'fp4') {
-      
-      molfp   = extractDrugOBFP4(mol, type = 'sdf')
-      moldbfp = extractDrugOBFP4(moldb, type = 'sdf')
-      
-    }
-    
-    if (fptype == 'obmaccs') {
-      
-      molfp   = extractDrugOBMACCS(mol, type = 'sdf')
-      moldbfp = extractDrugOBMACCS(moldb, type = 'sdf')
-      
-    }
-    
-    i = NULL
-    
-    rankvec = rep(NA, nrow(moldbfp))
-    
-    rankvec <- foreach (i = 1:nrow(moldbfp), .combine = 'c', .errorhandling = 'pass') %dopar% {
-      tmp <- calcDrugFPSim(as.vector(molfp), as.vector(moldbfp[i, ]), fptype = 'complete', metric = fpsim)
-    }
-    
-    rankvec.ord = order(rankvec, decreasing = TRUE)
-    rankvec = rankvec[rankvec.ord]
-    names(rankvec) = as.character(rankvec.ord)
-    
-  }
-  
-  if (method == 'mcs') {
-    
-    mol = ChemmineR::read.SDFset(mol)
-    moldb = ChemmineR::read.SDFset(moldb)
-    
-    fmcsresult = fmcsR::fmcsBatch(mol, moldb, ...)
-    
-    if (mcssim == 'tanimoto') {
-      rankvec = fmcsresult[order(fmcsresult[, 'Tanimoto_Coefficient'], 
-                                 decreasing = TRUE), 'Tanimoto_Coefficient']
-    }
-    
-    if (mcssim == 'overlap') {
-      rankvec = fmcsresult[order(fmcsresult[, 'Overlap_Coefficient'], 
-                                 decreasing = TRUE), 'Overlap_Coefficient']
-    }
-    
-    names(rankvec) = gsub('CMP', '', names(rankvec))
-    
-  }
-  
-  return(rankvec)
-  
+
+    return(rankvec)
+
 }

@@ -12,7 +12,7 @@ extractDrugPetitjeanShapeIndex(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 two columns named \code{topoShape} (Topological Shape
 Index) and \code{geomShape} (Geometric Shape Index).
 }
@@ -25,9 +25,11 @@ Petitjean and Bath et al. respectively. Both measure the
 anisotropy in a molecule.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugPetitjeanShapeIndex(mol)}
+\donttest{
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+mol = readMolFromSDF(sdf)
+dat = extractDrugPetitjeanShapeIndex(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

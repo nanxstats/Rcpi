@@ -5,10 +5,12 @@
 #' This descriptor calculates the number of atoms in the largest pi chain.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns one column named \code{nAtomP}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns one column named \code{nAtomP}.
 #' 
 #' @keywords extractDrugLargestPiSystem Largest Pi Chain
 #'
@@ -18,17 +20,22 @@
 #' 
 #' @export extractDrugLargestPiSystem
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugLargestPiSystem(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugLargestPiSystem(mol)
+#' head(dat)}
+#' 
 
 extractDrugLargestPiSystem = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.LargestPiSystemDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.LargestPiSystemDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

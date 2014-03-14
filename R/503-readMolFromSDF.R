@@ -20,17 +20,19 @@
 #' 
 #' @export readMolFromSDF
 #' 
+#' @importFrom rcdk load.molecules
+#' 
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' mol  = readMolFromSDF(system.file('compseq/DB00859.sdf', package = 'Rcpi'))
 #' mols = readMolFromSDF(c(system.file('compseq/DB00859.sdf', package = 'Rcpi'), 
 #'                         system.file('compseq/DB00860.sdf', package = 'Rcpi')))}
 #' 
 
 readMolFromSDF = function (sdffile) {
-  
-  mol = rcdk::load.molecules(sdffile)
-  
-  return(mol)
-  
+
+    mol = load.molecules(sdffile)
+
+    return(mol)
+
 }

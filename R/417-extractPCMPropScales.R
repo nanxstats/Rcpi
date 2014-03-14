@@ -2,14 +2,17 @@
 #'
 #' Generalized AA-Properties Based Scales Descriptors
 #'
-#' This function calculates the generalized amino acid properties based scales descriptors.
-#' Users could specify which AAindex properties to select from the AAindex database
-#' by specify the numerical or character index of the properties in the AAindex database.
+#' This function calculates the generalized amino acid properties based 
+#' scales descriptors.
+#' Users could specify which AAindex properties to select from the 
+#' AAindex database by specify the numerical or character index of 
+#' the properties in the AAindex database.
 #' 
 #' @param x A character vector, as the input protein sequence.
-#' @param index Integer vector or character vector. Specify which AAindex properties 
-#'        to select from the AAindex database by specify the numerical or character index 
-#'        of the properties in the AAindex database. 
+#' @param index Integer vector or character vector. Specify which 
+#'        AAindex properties to select from the AAindex database by 
+#'        specify the numerical or character index of the properties 
+#'        in the AAindex database. 
 #'        Default is \code{NULL}, means selecting all the AA properties 
 #'        in the AAindex database.
 #' @param pc Integer. Use the first pc principal components as the scales.
@@ -31,7 +34,8 @@
 #' 
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
-#' @seealso See \code{\link{extractPCMScales}} for generalized scales-based descriptors.
+#' @seealso See \code{\link{extractPCMScales}} for 
+#' generalized scales-based descriptors.
 #' 
 #' @export extractPCMPropScales
 #' 
@@ -40,12 +44,15 @@
 #' propscales = extractPCMPropScales(x, index = c(160:165, 258:296), pc = 5, lag = 7, silent = FALSE)
 #' 
 
-extractPCMPropScales = function (x, index = NULL, pc, lag, scale = TRUE, silent = TRUE) {
-  
-  if (!is.null(index)) propmat = t(na.omit(as.matrix(AAindex[index, 7:26])))
-  
-  result = extractPCMScales(x = x, propmat = propmat, pc = pc, lag = lag, scale = scale, silent = silent)
-  
-  return(result)
-  
+extractPCMPropScales = function (x, index = NULL, pc, lag, 
+                                 scale = TRUE, silent = TRUE) {
+
+    aaidx = get('AAindex')
+    if (!is.null(index)) propmat = t(na.omit(as.matrix(aaidx[index, 7:26])))
+
+    result = extractPCMScales(x = x, propmat = propmat, pc = pc, lag = lag, 
+                              scale = scale, silent = silent)
+
+    return(result)
+
 }

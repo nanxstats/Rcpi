@@ -12,7 +12,7 @@ extractDrugChiPath(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 16 columns, The order and names of the columns returned is:
 \itemize{ \item \code{SP.0, SP.1, ..., SP.7} - Simple path,
 orders 0 to 7 \item \code{VP.0, VP.1, ..., VP.7} - Valence
@@ -37,9 +37,11 @@ branches etc.) whereas these descriptors use the older more
 complex fragment definitions.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugChiPath(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugChiPath(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

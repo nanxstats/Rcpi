@@ -25,7 +25,7 @@ This function retrieves protein represented by amino acid
 sequence from the UniProt database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = c('P00750', 'P00751', 'P00752')
 getSeqFromUniProt(id)}
 }

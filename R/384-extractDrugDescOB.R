@@ -5,7 +5,8 @@
 #' This function calculates 14 types of the \emph{numerical} 
 #' molecular descriptors provided in OpenBabel.
 #' 
-#' @param molecules R character string object containing the molecules. See examples.
+#' @param molecules R character string object containing the molecules. 
+#' See the example section for details.
 #' @param type 'smile' or 'sdf'
 #' 
 #' @return A data frame, each row represents one of the molecules, 
@@ -40,7 +41,7 @@
 #' @export extractDrugDescOB
 #' 
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' mol1 = 'CC(=O)NCCC1=CNc2c1cc(OC)cc2'  # one molecule SMILE in a vector
 #' mol2 = c('OCCc1c(C)[n+](=cs1)Cc2cnc(C)nc(N)2', 
 #'          'CCc(c1)ccc2[n+]1ccc3c2Nc4c3cccc4', 
@@ -57,54 +58,55 @@
 #' 
 
 extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
-  
-  strDesc = c('cansmi', 'cansmiNS', 'formula', 'title')
-  numDesc = c('abonds', 'atoms', 'bonds', 'dbonds', 'HBA1', 'HBA2', 'HBD', 
-              'logP', 'MR', 'MW', 'nF', 'sbonds', 'tbonds', 'TPSA')
-  
-  if (type == 'smile') {
-    
-    if ( length(molecules) == 1L ) {
-      
-      x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
-      
-    } else if ( length(molecules) > 1L ) {
-      
-      x = matrix(NA, nrow = length(molecules), ncol = length(numDesc))
-      
-      for ( i in 1:length(molecules) ) {
-        x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
-      }
-      
-    }
-    
-  } else if (type == 'sdf') {
-    
-    smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES', source = molecules)
-    smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
-    
-    if ( length(smiclean) == 1L ) {
-      
-      x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
-      
-    } else if ( length(smiclean) > 1L ) {
-      
-      x = matrix(NA, nrow = length(smiclean), ncol = length(numDesc))
-      
-      for ( i in 1:length(smiclean) ) {
-        x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
-      }
-      
-    }
-    
-  } else {
-    
-    stop('Molecule type must be "smile" or "sdf"')
-    
-  }
-  
-  colnames(x) = numDesc
-  
-  return(x)
-  
+
+    strDesc = c('cansmi', 'cansmiNS', 'formula', 'title')
+    numDesc = c('abonds', 'atoms', 'bonds', 'dbonds', 'HBA1', 'HBA2', 'HBD', 
+                'logP', 'MR', 'MW', 'nF', 'sbonds', 'tbonds', 'TPSA')
+
+    if (type == 'smile') {
+
+        if ( length(molecules) == 1L ) {
+
+            x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+
+            } else if ( length(molecules) > 1L ) {
+
+                x = matrix(NA, nrow = length(molecules), ncol = length(numDesc))
+
+                for ( i in 1:length(molecules) ) {
+                    x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+                }
+
+            }
+
+        } else if (type == 'sdf') {
+
+            smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES', 
+                                            source = molecules)
+            smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
+
+            if ( length(smiclean) == 1L ) {
+
+                x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+
+                } else if ( length(smiclean) > 1L ) {
+
+                    x = matrix(NA, nrow = length(smiclean), ncol = length(numDesc))
+
+                    for ( i in 1:length(smiclean) ) {
+                        x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+                    }
+
+                }
+
+            } else {
+
+                stop('Molecule type must be "smile" or "sdf"')
+
+            }
+
+    colnames(x) = numDesc
+
+    return(x)
+
 }

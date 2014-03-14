@@ -12,7 +12,7 @@ extractDrugFragmentComplexity(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{fragC}.
 }
 \description{
@@ -26,9 +26,11 @@ A is the number of non-hydrogen atoms, B is the number of
 bonds and H is the number of heteroatoms.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugFragmentComplexity(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugFragmentComplexity(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

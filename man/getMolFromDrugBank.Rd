@@ -26,7 +26,7 @@ This function retrieves drug molecules in MOL format from
 the DrugBank database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = 'DB00859'  # Penicillamine
 getMolFromDrugBank(id)}
 }

@@ -1,6 +1,8 @@
 \name{extractDrugBPol}
 \alias{extractDrugBPol}
-\title{Calculates the Descriptor that Describes the Sum of the Absolute Value of the Difference between Atomic Polarizabilities of All Bonded Atoms in the Molecule}
+\title{Calculates the Descriptor that Describes the Sum of the Absolute
+Value of the Difference between Atomic Polarizabilities of
+All Bonded Atoms in the Molecule}
 \usage{
 extractDrugBPol(molecules, silent = TRUE)
 }
@@ -12,7 +14,7 @@ extractDrugBPol(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{bpol}.
 }
 \description{
@@ -29,9 +31,11 @@ with polarizabilities taken from
 This descriptor assumes 2-centered bonds.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugBPol(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugBPol(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

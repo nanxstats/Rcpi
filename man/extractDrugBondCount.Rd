@@ -1,6 +1,7 @@
 \name{extractDrugBondCount}
 \alias{extractDrugBondCount}
-\title{Calculates the Descriptor Based on the Number of Bonds of a Certain Bond Order}
+\title{Calculates the Descriptor Based on the Number of Bonds of a
+Certain Bond Order}
 \usage{
 extractDrugBondCount(molecules, silent = TRUE)
 }
@@ -12,7 +13,7 @@ extractDrugBondCount(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{nB}.
 }
 \description{
@@ -24,9 +25,11 @@ Calculates the descriptor based on the number of bonds of a
 certain bond order.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugBondCount(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugBondCount(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

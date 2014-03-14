@@ -12,7 +12,7 @@ extractDrugWeightedPath(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 5
+each column represents one feature. This function returns 5
 columns named \code{WTPT.1}, \code{WTPT.2}, \code{WTPT.3},
 \code{WTPT.4}, \code{WTPT.5}: \itemize{ \item \code{WTPT.1}
 - molecular ID \item \code{WTPT.2} - molecular ID / number
@@ -34,9 +34,11 @@ of atoms and so is NP-hard. This means that it can take
 some time for large, complex molecules.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugWeightedPath(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugWeightedPath(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

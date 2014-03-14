@@ -12,7 +12,7 @@ extractDrugRotatableBondsCount(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{nRotB}.
 }
 \description{
@@ -25,9 +25,11 @@ specified by Daylight on SMARTS tutorial
 (\url{http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html#EXMPL})
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugRotatableBondsCount(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugRotatableBondsCount(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

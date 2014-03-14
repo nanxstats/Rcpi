@@ -7,10 +7,11 @@
 #' The comprehensive user guide could be opened with \code{vignette('Rcpi')},
 #' which explains the functionalities included in this package in detail.
 #' The Rcpi package is developed by Computational Biology and 
-#' Drug Design (CBDD) Group, Central South University (\url{http://cbdd.csu.edu.cn/}).
+#' Drug Design (CBDD) Group, Central South University 
+#' (\url{http://cbdd.csu.edu.cn/}).
 #' 
 #' \tabular{ll}{ Package: \tab Rcpi\cr Type: \tab Package\cr
-#' Version: \tab 1.0.0\cr License: \tab Artistic-2.0\cr }
+#' Version: \tab Release 1\cr License: \tab Artistic-2.0\cr }
 #' 
 #' @name Rcpi-package
 #' @aliases Rcpi
@@ -26,8 +27,7 @@
 #' 
 #' @keywords Rcpi
 #' 
-#' @import RCurl rjson rcdk foreach doParallel 
-#' Biostrings GOSemSim ChemmineR fmcsR
+#' @import foreach doParallel Biostrings GOSemSim ChemmineR fmcsR
 #' 
 #' @example inst/examples/Rcpi-package-ex.R
 NULL

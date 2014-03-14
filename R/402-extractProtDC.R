@@ -31,19 +31,18 @@
 #' 
 
 extractProtDC = function (x) {
-  
-  if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
-  
-  AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
-             'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
-  DCDict = as.vector((outer(AADict, AADict, paste, sep = '')))
-  
-  xSplitted = strsplit(x, split = '')[[1]]
-  n  = nchar(x)
-  DC = summary(factor(paste(xSplitted[-n], xSplitted[-1], sep = ''), 
-                      levels = DCDict), maxsum = 401)/(n-1)
-  
-  return(DC)
+
+    if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
+
+    AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
+               'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
+    DCDict = as.vector((outer(AADict, AADict, paste, sep = '')))
+
+    xSplitted = strsplit(x, split = '')[[1]]
+    n  = nchar(x)
+    DC = summary(factor(paste(xSplitted[-n], xSplitted[-1], sep = ''), 
+                        levels = DCDict), maxsum = 401)/(n-1)
+
+    return(DC)
 
 }
-

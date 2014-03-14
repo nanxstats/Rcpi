@@ -20,9 +20,10 @@
 #'        \code{AAInfo}, \code{AAMolProp}, \code{AARandic}, 
 #'        \code{AARDF}, \code{AATopo}, \code{AATopoChg}, 
 #'        \code{AAWalk}, \code{AAWHIM}.
-#' @param index Integer vector or character vector. Specify which molecular descriptors 
-#'        to select from one of these deseriptor sets by specify the 
-#'        numerical or character index of the molecular descriptors in the descriptor set. 
+#' @param index Integer vector or character vector. Specify which molecular 
+#'        descriptors to select from one of these deseriptor sets by specify the 
+#'        numerical or character index of the molecular descriptors in the 
+#'        descriptor set. 
 #'        Default is \code{NULL}, means selecting all the molecular descriptors 
 #'        in this descriptor set.
 #' @param pc Integer. The maximum dimension of the space which the data 
@@ -56,13 +57,15 @@
 #'                                   pc = 5, lag = 7, silent = FALSE)
 #' 
 
-extractPCMDescScales = function (x, propmat, index = NULL, pc, lag, scale = TRUE, silent = TRUE) {
-  
-  propmat = get(propmat)
-  if (!is.null(index)) propmat = propmat[, index]
-  
-  result = extractPCMScales(x = x, propmat = propmat, pc = pc, lag = lag, scale = scale, silent = silent)
-  
-  return(result)
-  
+extractPCMDescScales = function (x, propmat, index = NULL, pc, lag, 
+                                 scale = TRUE, silent = TRUE) {
+
+    propmat = get(propmat)
+    if (!is.null(index)) propmat = propmat[, index]
+
+    result = extractPCMScales(x = x, propmat = propmat, pc = pc, lag = lag, 
+                              scale = scale, silent = silent)
+
+    return(result)
+
 }

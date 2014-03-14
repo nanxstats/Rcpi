@@ -34,30 +34,31 @@ segProt = function (x, aa = c('A', 'R', 'N', 'D', 'C',
                               'E', 'Q', 'G', 'H', 'I', 
                               'L', 'K', 'M', 'F', 'P', 
                               'S', 'T', 'W', 'Y', 'V'), k = 7) {
-  
-  aa = match.arg(aa)
-  
-  xSplitted = strsplit(x, split = '')[[1]]
-  n = nchar(x)
-  
-  CenterIdx = which(xSplitted == aa)
-  
-  if (length(CenterIdx) < 0.5) stop(paste('Did not find AA', aa, 'in the sequence'))
-  
-  CenterIdx = CenterIdx[(CenterIdx - k) > 0.5 & (CenterIdx + k) < (n + 0.5)]
-  
-  if (length(CenterIdx) < 0.5) stop(paste('Segmentation does not exist for AA', aa, 'and step', k))
-  
-  Segments = vector('list', length(CenterIdx))
-  
-  for (i in 1:length(CenterIdx)) {
-    Segments[[i]] = paste(xSplitted[(CenterIdx[i] - k):(CenterIdx[i] + k)], 
-                          collapse = '')
-  }
-  
-  names(Segments) = as.character(CenterIdx)
-  
-  return(Segments)
-  
-}
 
+    aa = match.arg(aa)
+
+    xSplitted = strsplit(x, split = '')[[1]]
+    n = nchar(x)
+
+    CenterIdx = which(xSplitted == aa)
+
+    if (length(CenterIdx) < 0.5) 
+        stop(paste('Did not find AA', aa, 'in the sequence'))
+
+    CenterIdx = CenterIdx[(CenterIdx - k) > 0.5 & (CenterIdx + k) < (n + 0.5)]
+
+    if (length(CenterIdx) < 0.5) 
+        stop(paste('Segmentation does not exist for AA', aa, 'and step', k))
+
+    Segments = vector('list', length(CenterIdx))
+
+    for (i in 1:length(CenterIdx)) {
+        Segments[[i]] = paste(xSplitted[(CenterIdx[i] - k):(CenterIdx[i] + k)], 
+                              collapse = '')
+    }
+
+    names(Segments) = as.character(CenterIdx)
+
+    return(Segments)
+
+}

@@ -12,15 +12,16 @@ extractDrugWHIM(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 17 columns: \itemize{ \item Wlambda1 \item Wlambda2 \item
 wlambda3 \item Wnu1 \item Wnu2 \item Wgamma1 \item Wgamma2
 \item Wgamma3 \item Weta1 \item Weta2 \item Weta3 \item WT
-\item WA \item WV \item WK \item WG \item WD } Each name
-will have a suffix of the form \code{.X} where \code{X}
-indicates the weighting scheme used. Possible values of
-\code{X} are \itemize{ \item unity \item mass \item volume
-\item eneg \item polar }
+\item WA \item WV \item WK \item WG \item WD }
+
+Each name will have a suffix of the form \code{.X} where
+\code{X} indicates the weighting scheme used. Possible
+values of \code{X} are \itemize{ \item unity \item mass
+\item volume \item eneg \item polar }
 }
 \description{
 Calculate Holistic Descriptors Described by Todeschini et
@@ -47,9 +48,11 @@ descriptors are required the current code will return all
 11.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugWHIM(mol)}
+\donttest{
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+mol = readMolFromSDF(sdf)
+dat = extractDrugWHIM(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

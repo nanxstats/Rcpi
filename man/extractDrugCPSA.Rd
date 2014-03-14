@@ -12,7 +12,7 @@ extractDrugCPSA(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 29 columns: \itemize{ \item \code{PPSA.1} - partial
 positive surface area -- sum of surface area on positive
 parts of molecule \item \code{PPSA.2} - partial positive
@@ -62,9 +62,11 @@ Calculates 29 Charged Partial Surface Area (CPSA)
 descriptors. The CPSA's were developed by Stanton et al.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugCPSA(mol)}
+\donttest{
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+mol = readMolFromSDF(sdf)
+dat = extractDrugCPSA(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

@@ -34,7 +34,7 @@ This function retrieves drug molecules in MOL and SMILES
 format from five databases.
 }
 \examples{
-\dontrun{
+\donttest{
 id = c('DB00859', 'DB00860')
 getDrug(id, 'drugbank', 'smile')}
 }

@@ -1,6 +1,7 @@
 \name{extractDrugXLogP}
 \alias{extractDrugXLogP}
-\title{Descriptor that Calculates the Prediction of logP Based on the Atom-Type Method Called XLogP}
+\title{Descriptor that Calculates the Prediction of logP
+Based on the Atom-Type Method Called XLogP}
 \usage{
 extractDrugXLogP(molecules, silent = TRUE)
 }
@@ -12,7 +13,7 @@ extractDrugXLogP(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{XLogP}.
 }
 \description{
@@ -24,9 +25,11 @@ Prediction of logP based on the atom-type method called
 XLogP.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugXLogP(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugXLogP(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

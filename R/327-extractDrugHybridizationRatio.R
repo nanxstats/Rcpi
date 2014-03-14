@@ -1,6 +1,8 @@
-#' Descriptor that Characterizing Molecular Complexity in Terms of Carbon Hybridization States
+#' Descriptor that Characterizing Molecular Complexity 
+#' in Terms of Carbon Hybridization States
 #'
-#' Descriptor that Characterizing Molecular Complexity in Terms of Carbon Hybridization States
+#' Descriptor that Characterizing Molecular Complexity 
+#' in Terms of Carbon Hybridization States
 #' 
 #' This descriptor calculates the fraction of sp3 carbons to sp2 carbons.
 #' Note that it only considers carbon atoms and rather than use a simple 
@@ -11,10 +13,12 @@
 #' which usually have a high value of the sp3 to sp2 ratio.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns one column named \code{HybRatio}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns one column named \code{HybRatio}.
 #' 
 #' @keywords extractDrugHybridizationRatio Hybridization Ratio
 #'
@@ -24,17 +28,22 @@
 #' 
 #' @export extractDrugHybridizationRatio
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugHybridizationRatio(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugHybridizationRatio(mol)
+#' head(dat)}
+#' 
 
 extractDrugHybridizationRatio = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.HybridizationRatioDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.HybridizationRatioDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

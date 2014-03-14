@@ -1,6 +1,7 @@
 \name{searchDrug}
 \alias{searchDrug}
-\title{Parallelized Drug Molecule Similarity Search by Molecular Fingerprints Similarity or Maximum Common Substructure Search}
+\title{Parallelized Drug Molecule Similarity Search by
+Molecular Fingerprints Similarity or Maximum Common Substructure Search}
 \usage{
 searchDrug(mol, moldb, cores = 2, method = c("fp", "mcs"),
   fptype = c("standard", "extended", "graph", "hybrid", "maccs", "estate",
@@ -65,7 +66,7 @@ This function runs for a query compound against a set of
 molecules.
 }
 \examples{
-\dontrun{
+\donttest{
 mol = system.file('compseq/DB00530.sdf', package = 'Rcpi')
 # DrugBank ID DB00530: Erlotinib
 moldb = system.file('compseq/tyrphostin.sdf', package = 'Rcpi')

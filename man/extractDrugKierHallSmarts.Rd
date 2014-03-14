@@ -12,7 +12,7 @@ extractDrugKierHallSmarts(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 79 columns: \tabular{ccc}{ ID \tab Name \tab Pattern\cr
 \code{0} \tab \code{khs.sLi} \tab \code{[LiD1]-*}\cr
 \code{1} \tab \code{khs.ssBe} \tab \code{[BeD2](-*)-*}\cr
@@ -128,9 +128,11 @@ are taken from Hall et al. The SMARTS definitions were
 obtained from RDKit.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugKierHallSmarts(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugKierHallSmarts(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

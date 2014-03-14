@@ -106,8 +106,6 @@ See \code{\link{extractProtPAAC}} for pseudo amino acid
 composition descriptor.
 }
 \keyword{APAAC}
-\keyword{Acid}
-\keyword{Amino}
 \keyword{Amphiphilic}
 \keyword{Composition}
 \keyword{Pseudo}

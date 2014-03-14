@@ -31,19 +31,15 @@
 #' 
 
 extractProtAAC = function (x) {
-  
-  if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
 
-  # The 20 Amino Acid Abbrevation Dictionary is from
-  # http://en.wikipedia.org/wiki/Amino_acid#Table_of_standard_amino_acid_abbreviations_and_properties
-  
-  AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
-             'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
-  
-  AAC = summary(factor(strsplit(x, split = '')[[1]], levels = AADict), 
-                maxsum = 21)/nchar(x)
-  
-  return(AAC)
+    if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
+
+    AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
+               'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
+
+    AAC = summary(factor(strsplit(x, split = '')[[1]], levels = AADict), 
+                  maxsum = 21)/nchar(x)
+
+    return(AAC)
 
 }
-

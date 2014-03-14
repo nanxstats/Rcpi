@@ -13,13 +13,16 @@
 #' \item an oxygen that is adjacent to a nitrogen
 #' }
 #' and any nitrogen where the formal charge of the nitrogen is 
-#' non-positive (i.e. formal charge <= 0) except a nitrogen that is adjacent to an oxygen.
+#' non-positive (i.e. formal charge <= 0) except a nitrogen 
+#' that is adjacent to an oxygen.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns one column named \code{nHBAcc}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns one column named \code{nHBAcc}.
 #' 
 #' @keywords extractDrugHBondAcceptorCount HBond Acceptor Count
 #'
@@ -29,17 +32,22 @@
 #' 
 #' @export extractDrugHBondAcceptorCount
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugHBondAcceptorCount(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugHBondAcceptorCount(mol)
+#' head(dat)}
+#' 
 
 extractDrugHBondAcceptorCount = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.HBondAcceptorCountDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.HBondAcceptorCountDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

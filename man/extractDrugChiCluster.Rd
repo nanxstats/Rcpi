@@ -12,7 +12,7 @@ extractDrugChiCluster(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 8
+each column represents one feature. This function returns 8
 columns, the order and names of the columns returned is:
 \itemize{ \item SC.3 - Simple cluster, order 3 \item SC.4 -
 Simple cluster, order 4 \item SC.5 - Simple cluster, order
@@ -40,9 +40,11 @@ branches etc.) whereas these descriptors use the older more
 complex fragment definitions.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugChiCluster(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugChiCluster(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

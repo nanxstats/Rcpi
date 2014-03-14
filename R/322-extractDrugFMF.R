@@ -10,10 +10,12 @@
 #' system to be a framework (even though there is no linker). 
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns one column named \code{FMF}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns one column named \code{FMF}.
 #' 
 #' @keywords extractDrugFMF FMF
 #'
@@ -23,6 +25,8 @@
 #' 
 #' @export extractDrugFMF
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @references
 #' Yang, Y., Chen, H., Nilsson, I., Muresan, S., & Engkvist, O. (2010). 
 #' Investigation of the relationship between topology and selectivity 
@@ -30,17 +34,19 @@
 #' 53(21), 7709-7714.
 #' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugFMF(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugFMF(mol)
+#' head(dat)}
 #' 
 
 extractDrugFMF = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.FMFDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.FMFDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

@@ -48,7 +48,7 @@ This function calculates the Gene Ontology (GO) similarity
 between two groups of GO terms or two Entrez gene IDs.
 }
 \examples{
-\dontrun{
+\donttest{
 # by GO terms
 go1 = c("GO:0004022", "GO:0004024", "GO:0004023")
 go2 = c("GO:0009055", "GO:0020037")

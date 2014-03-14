@@ -12,7 +12,7 @@ extractDrugChiPathCluster(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 6
+each column represents one feature. This function returns 6
 columns named \code{SPC.4}, \code{SPC.5}, \code{SPC.6},
 \code{VPC.4}, \code{VPC.5}, \code{VPC.6}: \itemize{ \item
 \code{SPC.4} - Simple path cluster, order 4 \item
@@ -43,9 +43,11 @@ branches etc.)  whereas these descriptors use the older
 more complex fragment definitions.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugChiPathCluster(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugChiPathCluster(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

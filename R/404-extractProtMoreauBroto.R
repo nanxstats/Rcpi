@@ -96,60 +96,59 @@ extractProtMoreauBroto = function (x, props = c('CIDH920105', 'BHAR880101',
                                                 'CHOC760101', 'BIGC670101',
                                                 'CHAM810101', 'DAYM780201'), 
                                    nlag = 30L, customprops = NULL) {
-  
-  if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
-  
-  # 1. Compute Pr values for each type of property
-  
-  AAidx = read.csv(system.file('sysdata/AAidx.csv', package = 'Rcpi'), header = TRUE)
-  
-  if (!is.null(customprops)) AAidx = rbind(AAidx, customprops)
-  
-  aaidx = AAidx[, -1]
-  row.names(aaidx) = AAidx[, 1]
-  n = length(props)
-  pmean = rowMeans(aaidx[props, ])
-  psd   = apply(aaidx[props, ], 1, sd) * sqrt((20 - 1)/20) # sd() uses (n-1)
-  
-  Pr = data.frame(matrix(ncol = 20, nrow = n))
-  for (i in 1:n) Pr[i, ] = (aaidx[props[i], ] - pmean[i])/psd[i]
-  
-  # 2. Replace character with numbers, also applies to less than 20 AA occured
-  
-  xSplitted = strsplit(x, split = '')[[1]]
-  AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
-             'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
-  names(Pr) = AADict
-  
-  P = vector('list', n)
-  for (i in 1:n) P[[i]] = xSplitted
-  
-  for (i in 1:n) {
-    for (j in AADict) {
-    try(P[[i]][which(P[[i]] == j)] <- Pr[i, j], silent = TRUE)
-    }
-  }
-  
-  P = lapply(P, as.numeric)
-  
-  # 3. Compute Moreau-Broto Autocorrelation Descriptor
-  
-  MB = vector('list', n)
-  N  = length(xSplitted)
-  
-  for (i in 1:n) {
-    for (j in 1:nlag) {
-      MB[[i]][j] = sum(P[[i]][1:(N - j)] * P[[i]][(1:(N - j)) + j])/(N - j)
-    }
-  }
-  
-  MB = unlist(MB)
-  
-  names(MB) = as.vector(t(outer(props, 
-                                paste('.lag', 1:nlag, sep = ''), 
-                                paste, sep = '')))
-  
-  return(MB)
-  
-}
 
+    if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
+
+    # 1. Compute Pr values for each type of property
+
+    AAidx = read.csv(system.file('sysdata/AAidx.csv', package = 'Rcpi'), header = TRUE)
+
+    if (!is.null(customprops)) AAidx = rbind(AAidx, customprops)
+
+    aaidx = AAidx[, -1]
+    row.names(aaidx) = AAidx[, 1]
+    n = length(props)
+    pmean = rowMeans(aaidx[props, ])
+    psd   = apply(aaidx[props, ], 1, sd) * sqrt((20 - 1)/20) # sd() uses (n-1)
+
+    Pr = data.frame(matrix(ncol = 20, nrow = n))
+    for (i in 1:n) Pr[i, ] = (aaidx[props[i], ] - pmean[i])/psd[i]
+
+    # 2. Replace character with numbers, also applies to less than 20 AA occured
+
+    xSplitted = strsplit(x, split = '')[[1]]
+    AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
+               'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
+    names(Pr) = AADict
+
+    P = vector('list', n)
+    for (i in 1:n) P[[i]] = xSplitted
+
+    for (i in 1:n) {
+        for (j in AADict) {
+            try(P[[i]][which(P[[i]] == j)] <- Pr[i, j], silent = TRUE)
+        }
+    }
+
+    P = lapply(P, as.numeric)
+
+    # 3. Compute Moreau-Broto Autocorrelation Descriptor
+
+    MB = vector('list', n)
+    N  = length(xSplitted)
+
+    for (i in 1:n) {
+        for (j in 1:nlag) {
+            MB[[i]][j] = sum(P[[i]][1:(N - j)] * P[[i]][(1:(N - j)) + j])/(N - j)
+        }
+    }
+
+    MB = unlist(MB)
+
+    names(MB) = as.vector(t(outer(props, 
+                                  paste('.lag', 1:nlag, sep = ''), 
+                                  paste, sep = '')))
+
+    return(MB)
+
+}

@@ -12,7 +12,7 @@ extractDrugWienerNumbers(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 two columns named \code{WPATH} (weiner path number) and
 \code{WPOL} (weiner polarity number).
 }
@@ -28,9 +28,11 @@ entries; Wiener polarity number: half the sum of all the
 distance matrix entries with a value of 3.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugWienerNumbers(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugWienerNumbers(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

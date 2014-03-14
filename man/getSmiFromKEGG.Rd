@@ -26,7 +26,7 @@ This function retrieves drug molecules in SMILES format
 from the KEGG database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = 'D00496'  # Penicillamine
 getSmiFromKEGG(id)}
 }

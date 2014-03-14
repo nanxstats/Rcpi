@@ -25,7 +25,7 @@ This function retrieves protein represented by amino acid
 sequence from the KEGG database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = c('hsa:10161', 'hsa:10162')
 getSeqFromKEGG(id)}
 }

@@ -1,7 +1,7 @@
 Package: Rcpi
 Type: Package
 Title: Toolkit for Compound-Protein Interaction in Drug Discovery
-Version: 0.99.0
+Version: 0.99.1
 Date: 2014-03-01
 Description: The Rcpi package offers an R/Bioconductor package emphasizing the
     comprehensive integration of bioinformatics and chemoinformatics into a
@@ -23,6 +23,10 @@ Imports:
     GOSemSim,
     ChemmineR,
     fmcsR
+Suggests:
+    RUnit,
+    BiocGenerics
 Enhances: ChemmineOB
-biocViews: Software, DataRepresentation, Bioinformatics, Infrastructure,
-    DataImport, Proteomics, GO, Clustering, NetworkAnalysis, Visualization
+biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
+    Cheminformatics, BiomedicalInformatics, Proteomics, GO,
+    GraphAndNetwork, SystemsBiology

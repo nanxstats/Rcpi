@@ -12,9 +12,10 @@
 #' 
 #' @param x A character vector, as the input protein sequence.
 #' @param propmat A matrix containing the properties for the amino acids. 
-#'        Each row represent one amino acid type, each column represents one property.
-#'        Note that the one-letter row names must be provided for we need them to seek 
-#'        the properties for each AA type.
+#'        Each row represent one amino acid type, each column represents 
+#'        one property.
+#'        Note that the one-letter row names must be provided for we need 
+#'        them to seek the properties for each AA type.
 #' @param pc Integer. Use the first pc principal components as the scales.
 #'        Must be no greater than the number of AA properties provided.
 #' @param lag The lag parameter. Must be less than the amino acids.
@@ -48,28 +49,28 @@
 #' 
 
 extractPCMScales = function (x, propmat, pc, lag, scale = TRUE, silent = TRUE) {
-  
-  if (checkProt(x) == FALSE) stop('x has unrecognized amino acid types')
-  
-  pc = min(pc, ncol(propmat), nrow(propmat))
-  
-  prop.pr = prcomp(propmat, scale = scale)
-  prop.pred = predict(prop.pr)
-  
-  accmat = matrix(0, pc, nchar(x))
-  x.split = strsplit(x, '')[[1]]
-  
-  for (i in 1:nchar(x)) {
-    accmat[, i] = prop.pred[x.split[i], 1:pc]
-  }
-  
-  result = acc(accmat, lag)
-  
-  if (!silent) {
-    cat('Summary of the first', pc,'principal components:\n')
-    print(summary(prop.pr)$importance[, 1:pc])
-  }
-  
-  return(result)
-  
+
+    if (checkProt(x) == FALSE) stop('x has unrecognized amino acid types')
+
+    pc = min(pc, ncol(propmat), nrow(propmat))
+
+    prop.pr = prcomp(propmat, scale = scale)
+    prop.pred = predict(prop.pr)
+
+    accmat = matrix(0, pc, nchar(x))
+    x.split = strsplit(x, '')[[1]]
+
+    for (i in 1:nchar(x)) {
+        accmat[, i] = prop.pred[x.split[i], 1:pc]
+    }
+
+    result = acc(accmat, lag)
+
+    if (!silent) {
+        cat('Summary of the first', pc,'principal components:\n')
+        print(summary(prop.pr)$importance[, 1:pc])
+    }
+
+    return(result)
+
 }

@@ -12,16 +12,16 @@ extractDrugChiChain(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
-10 columns, the order and names of the columns returned is:
-\itemize{ \item \code{SCH.3} - Simple chain, order 3 \item
-\code{SCH.4} - Simple chain, order 4 \item \code{SCH.5} -
-Simple chain, order 5 \item \code{SCH.6} - Simple chain,
-order 6 \item \code{SCH.7} - Simple chain, order 7 \item
-\code{VCH.3} - Valence chain, order 3 \item \code{VCH.4} -
-Valence chain, order 4 \item \code{VCH.5} - Valence chain,
-order 5 \item \code{VCH.6} - Valence chain, order 6 \item
-\code{VCH.7} - Valence chain, order 7 }
+each column represents one feature. This function returns
+10 columns, in the following order: \itemize{ \item
+\code{SCH.3} - Simple chain, order 3 \item \code{SCH.4} -
+Simple chain, order 4 \item \code{SCH.5} - Simple chain,
+order 5 \item \code{SCH.6} - Simple chain, order 6 \item
+\code{SCH.7} - Simple chain, order 7 \item \code{VCH.3} -
+Valence chain, order 3 \item \code{VCH.4} - Valence chain,
+order 4 \item \code{VCH.5} - Valence chain, order 5 \item
+\code{VCH.6} - Valence chain, order 6 \item \code{VCH.7} -
+Valence chain, order 7 }
 }
 \description{
 Calculate the Kier and Hall Chi Chain Indices of Orders 3,
@@ -44,9 +44,11 @@ branches etc.) whereas these descriptors use the older more
 complex fragment definitions.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugChiChain(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugChiChain(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

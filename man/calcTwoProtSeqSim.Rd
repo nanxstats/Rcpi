@@ -35,7 +35,7 @@ This function implements the sequence alignment between two
 protein sequences.
 }
 \examples{
-\dontrun{
+\donttest{
 s1 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 s2 = readFASTA(system.file('protseq/P10323.fasta', package = 'Rcpi'))[[1]]
 seqalign = calcTwoProtSeqSim(s1, s2)

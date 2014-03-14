@@ -148,7 +148,7 @@ UniChem XYZ format \item vmol -- ViewMol format \item xed
 format [Write-only] }
 }
 \examples{
-\dontrun{
+\donttest{
 convMolFormat(infile = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
               outfile = 'aa.smi', from = 'sdf', to = 'smiles')  # SDF to SMILES
 convMolFormat(infile = 'aa.smi', outfile = 'aa.mop',

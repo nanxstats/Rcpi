@@ -33,7 +33,7 @@ This function retrieves protein sequence in various formats
 from three databases.
 }
 \examples{
-\dontrun{
+\donttest{
 id = c('P00750', 'P00751', 'P00752')
 getProt(id, from = 'uniprot', type = 'aaseq')}
 }

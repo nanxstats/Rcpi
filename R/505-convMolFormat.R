@@ -187,7 +187,7 @@
 #'             }
 #' 
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' convMolFormat(infile = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'), 
 #'               outfile = 'aa.smi', from = 'sdf', to = 'smiles')  # SDF to SMILES
 #' convMolFormat(infile = 'aa.smi', outfile = 'aa.mop', 
@@ -195,7 +195,7 @@
 #' 
 
 convMolFormat = function (infile, outfile, from, to) {
-  
-  eval(parse(text = "invisible(.Call('ob_convert_file', as.character(from), as.character(to), as.character(infile), as.character(outfile), PACKAGE = 'ChemmineOB'))"))
-  
+
+    eval(parse(text = "invisible(.Call('ob_convert_file', as.character(from), as.character(to), as.character(infile), as.character(outfile), PACKAGE = 'ChemmineOB'))"))
+
 }

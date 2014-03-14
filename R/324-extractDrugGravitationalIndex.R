@@ -9,21 +9,23 @@
 #' are also generated as described by Wessel et al.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns 9 columns:
-#'         \itemize{
-#'         \item \code{GRAV.1} - gravitational index of heavy atoms
-#'         \item \code{GRAV.2} - square root of gravitational index of heavy atoms
-#'         \item \code{GRAV.3} - cube root of gravitational index of heavy atoms
-#'         \item \code{GRAVH.1} - gravitational index - hydrogens included
-#'         \item \code{GRAVH.2} - square root of hydrogen-included gravitational index
-#'         \item \code{GRAVH.3} - cube root of hydrogen-included gravitational index
-#'         \item \code{GRAV.4} - grav1 for all pairs of atoms (not just bonded pairs)
-#'         \item \code{GRAV.5} - grav2 for all pairs of atoms (not just bonded pairs)
-#'         \item \code{GRAV.6} - grav3 for all pairs of atoms (not just bonded pairs)
-#'         }
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns 9 columns:
+#' \itemize{
+#' \item \code{GRAV.1} - gravitational index of heavy atoms
+#' \item \code{GRAV.2} - square root of gravitational index of heavy atoms
+#' \item \code{GRAV.3} - cube root of gravitational index of heavy atoms
+#' \item \code{GRAVH.1} - gravitational index - hydrogens included
+#' \item \code{GRAVH.2} - square root of hydrogen-included gravitational index
+#' \item \code{GRAVH.3} - cube root of hydrogen-included gravitational index
+#' \item \code{GRAV.4} - grav1 for all pairs of atoms (not just bonded pairs)
+#' \item \code{GRAV.5} - grav2 for all pairs of atoms (not just bonded pairs)
+#' \item \code{GRAV.6} - grav3 for all pairs of atoms (not just bonded pairs)
+#' }
 #' 
 #' @keywords extractDrugGravitationalIndex Gravitational Index
 #'
@@ -33,27 +35,34 @@
 #' 
 #' @export extractDrugGravitationalIndex
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @references
 #' Katritzky, A.R. and Mu, L. and Lobanov, V.S. and Karelson, M., 
 #' Correlation of Boiling Points With Molecular Structure. 
-#' 1. A Training Set of 298 Diverse Organics and a Test Set of 9 Simple Inorganics, 
+#' 1. A Training Set of 298 Diverse Organics and a 
+#' Test Set of 9 Simple Inorganics, 
 #' J. Phys. Chem., 1996, 100:10400-10407.
 #' 
 #' Wessel, M.D. and Jurs, P.C. and Tolan, J.W. and Muskal, S.M. , 
-#' Prediction of Human Intestinal Absorption of Drug Compounds From Molecular Structure, 
+#' Prediction of Human Intestinal Absorption of Drug Compounds 
+#' From Molecular Structure, 
 #' Journal of Chemical Information and Computer Sciences, 1998, 38:726-735.
 #' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugGravitationalIndex(mol)}
+#' \donttest{
+#' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' mol = readMolFromSDF(sdf)
+#' dat = extractDrugGravitationalIndex(mol)
+#' head(dat)}
+#' 
 
 extractDrugGravitationalIndex = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.GravitationalIndexDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.GravitationalIndexDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

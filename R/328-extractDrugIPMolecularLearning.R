@@ -6,10 +6,12 @@
 #' The descriptor assumes that explicit hydrogens have been added to the molecules.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns one column named \code{MolIP}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns one column named \code{MolIP}.
 #' 
 #' @keywords extractDrugIPMolecularLearning Ionization Potential
 #'
@@ -19,17 +21,22 @@
 #' 
 #' @export extractDrugIPMolecularLearning
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugIPMolecularLearning(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugIPMolecularLearning(mol)
+#' head(dat)}
+#' 
 
 extractDrugIPMolecularLearning = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.IPMolecularLearningDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.IPMolecularLearningDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

@@ -1,6 +1,7 @@
 \name{extractDrugMannholdLogP}
 \alias{extractDrugMannholdLogP}
-\title{Descriptor that Calculates the LogP Based on a Simple Equation Using the Number of Carbons and Hetero Atoms}
+\title{Descriptor that Calculates the LogP Based on a Simple Equation
+Using the Number of Carbons and Hetero Atoms}
 \usage{
 extractDrugMannholdLogP(molecules, silent = TRUE)
 }
@@ -12,7 +13,7 @@ extractDrugMannholdLogP(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{MLogP}.
 }
 \description{
@@ -25,9 +26,11 @@ equation using the number of carbons and hetero atoms. The
 implemented equation was proposed in Mannhold et al.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugMannholdLogP(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugMannholdLogP(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

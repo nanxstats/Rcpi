@@ -31,22 +31,21 @@
 #' 
 
 extractProtTC = function (x) {
-  
-  if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
-  
-  AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
-             'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
-  DCDict = as.vector((outer(AADict, AADict, paste, sep = '')))
-  TCDict = as.vector((outer(DCDict, AADict, paste, sep = '')))
-  
-  xSplitted = strsplit(x, split = '')[[1]]
-  n  = nchar(x)
-  TC = summary(factor(paste(paste(xSplitted[-c(n, n-1)], 
-                                  xSplitted[-c(1, n)], sep = ''), 
-                            xSplitted[-c(1, 2)], sep = ''), 
-                      levels = TCDict), maxsum = 8001)/(n-2)
-  
-  return(TC)
+
+    if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
+
+    AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
+               'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
+    DCDict = as.vector((outer(AADict, AADict, paste, sep = '')))
+    TCDict = as.vector((outer(DCDict, AADict, paste, sep = '')))
+
+    xSplitted = strsplit(x, split = '')[[1]]
+    n  = nchar(x)
+    TC = summary(factor(paste(paste(xSplitted[-c(n, n-1)], 
+                                    xSplitted[-c(1, n)], sep = ''), 
+                              xSplitted[-c(1, 2)], sep = ''), 
+                        levels = TCDict), maxsum = 8001)/(n-2)
+
+    return(TC)
 
 }
-

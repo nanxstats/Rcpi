@@ -12,7 +12,7 @@ extractDrugALOGP(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 three columns named \code{ALogP}, \code{ALogp2} and
 \code{AMR}.
 }
@@ -32,9 +32,11 @@ But for the case of molecules obtained from SMILES,
 hydrogens must be made explicit.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugALOGP(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugALOGP(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

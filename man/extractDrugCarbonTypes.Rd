@@ -1,6 +1,7 @@
 \name{extractDrugCarbonTypes}
 \alias{extractDrugCarbonTypes}
-\title{Topological Descriptor Characterizing the Carbon Connectivity in Terms of Hybridization}
+\title{Topological Descriptor Characterizing the Carbon Connectivity
+in Terms of Hybridization}
 \usage{
 extractDrugCarbonTypes(molecules, silent = TRUE)
 }
@@ -12,8 +13,8 @@ extractDrugCarbonTypes(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature.  This function returns
-9 columns named \code{C1SP1}, \code{C2SP1}, \code{C1SP2},
+each column represents one feature. This function returns 9
+columns named \code{C1SP1}, \code{C2SP1}, \code{C1SP2},
 \code{C2SP2}, \code{C3SP2}, \code{C1SP3}, \code{C2SP3},
 \code{C3SP3} and \code{C4SP3}.
 }
@@ -40,9 +41,11 @@ bound carbon bound to three other carbons \item
 carbons }
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugCarbonTypes(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugCarbonTypes(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

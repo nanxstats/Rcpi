@@ -12,7 +12,7 @@ extractDrugLengthOverBreadth(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 two columns named \code{LOBMAX} and \code{LOBMIN}:
 \itemize{ \item \code{LOBMAX} - The maximum L/B ratio;
 \item \code{LOBMIN} - The L/B ratio for the rotation that
@@ -32,9 +32,11 @@ degree increments).
 The descriptor assumes that the atoms have been configured.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugLengthOverBreadth(mol)}
+\donttest{
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+mol = readMolFromSDF(sdf)
+dat = extractDrugLengthOverBreadth(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

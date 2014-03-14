@@ -308,7 +308,7 @@ require(Rcpi)
 RI.smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 RI.csv = system.file('vignettedata/RI.csv', package = 'Rcpi')
 
-x.mol = readMolFromSmi(RI.smi)
+x.mol = readMolFromSmi(RI.smi, type = 'mol')
 x.tab = read.table(RI.csv, sep = '\t', header = TRUE)
 y     = x.tab$RI
 \end{CodeInput}

@@ -26,7 +26,7 @@ This function retrieves drug molecules in MOL format from
 the ChEMBL database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = 'CHEMBL1430'  # Penicillamine
 getMolFromChEMBL(id)}
 }

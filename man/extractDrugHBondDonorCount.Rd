@@ -12,7 +12,7 @@ extractDrugHBondDonorCount(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{nHBDon}.
 }
 \description{
@@ -31,9 +31,11 @@ Any-NH where the formal charge of the nitrogen is
 non-negative (i.e. formal charge >= 0) }
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugHBondDonorCount(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugHBondDonorCount(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

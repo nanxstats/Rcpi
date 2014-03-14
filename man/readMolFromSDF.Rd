@@ -21,7 +21,7 @@ parsed Java molecular object needed by
 \code{extractDrug...} functions.
 }
 \examples{
-\dontrun{
+\donttest{
 mol  = readMolFromSDF(system.file('compseq/DB00859.sdf', package = 'Rcpi'))
 mols = readMolFromSDF(c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
                         system.file('compseq/DB00860.sdf', package = 'Rcpi')))}

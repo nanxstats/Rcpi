@@ -26,7 +26,7 @@ This function retrieves drug molecules in MOL format from
 the PubChem database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = c('7847562', '7847563')  # Penicillamine
 getMolFromPubChem(id)}
 }

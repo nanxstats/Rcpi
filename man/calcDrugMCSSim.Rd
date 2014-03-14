@@ -1,6 +1,7 @@
 \name{calcDrugMCSSim}
 \alias{calcDrugMCSSim}
-\title{Calculate Drug Molecule Similarity Derived by Maximum Common Substructure Search}
+\title{Calculate Drug Molecule Similarity Derived by
+Maximum Common Substructure Search}
 \usage{
 calcDrugMCSSim(mol1, mol2, type = c("smile", "sdf"), plot = FALSE, al = 0,
   au = 0, bl = 0, bu = 0, matching.mode = "static", ...)
@@ -51,7 +52,7 @@ substructure search algorithm is provided by the
 \code{fmcsR} package.
 }
 \examples{
-\dontrun{
+\donttest{
 mol1 = 'CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC'
 mol2 = 'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'
 mol3 = readChar(system.file('compseq/DB00859.sdf', package = 'Rcpi'), nchars = 1e+6)

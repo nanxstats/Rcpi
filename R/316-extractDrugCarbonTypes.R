@@ -1,6 +1,8 @@
-#' Topological Descriptor Characterizing the Carbon Connectivity in Terms of Hybridization
+#' Topological Descriptor Characterizing the Carbon Connectivity 
+#' in Terms of Hybridization
 #'
-#' Topological Descriptor Characterizing the Carbon Connectivity in Terms of Hybridization
+#' Topological Descriptor Characterizing the Carbon Connectivity 
+#' in Terms of Hybridization
 #'
 #' Calculates the carbon connectivity in terms of hybridization. 
 #' The function calculates 9 descriptors in the following order:
@@ -18,11 +20,14 @@
 #' }
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature.
-#'         This function returns 9 columns named \code{C1SP1}, \code{C2SP1}, \code{C1SP2}, \code{C2SP2},
-#'         \code{C3SP2}, \code{C1SP3}, \code{C2SP3}, \code{C3SP3} and \code{C4SP3}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns 9 columns named 
+#' \code{C1SP1}, \code{C2SP1}, \code{C1SP2}, \code{C2SP2}, \code{C3SP2}, 
+#' \code{C1SP3}, \code{C2SP3}, \code{C3SP3} and \code{C4SP3}.
 #' 
 #' @keywords extractDrugCarbonTypes Carbon Types
 #'
@@ -32,17 +37,22 @@
 #' 
 #' @export extractDrugCarbonTypes
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugCarbonTypes(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugCarbonTypes(mol)
+#' head(dat)}
+#' 
 
 extractDrugCarbonTypes = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.CarbonTypesDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.CarbonTypesDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

@@ -6,7 +6,7 @@ extractDrugOBFP2(molecules, type = c("smile", "sdf"))
 }
 \arguments{
   \item{molecules}{R character string object containing the
-  molecules. See examples.}
+  molecules. See the example section for details.}
 
   \item{type}{'smile' or 'sdf'}
 }
@@ -22,7 +22,7 @@ Calculate the 1024 bit FP2 fingerprints provided by
 OpenBabel.
 }
 \examples{
-\dontrun{
+\donttest{
 mol1 = 'C1CCC1CC(CN(C)(C))CC(=O)CC'  # one molecule SMILE in a vector
 mol2 = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1',
          'C1CCC1CC(CN(C)(C))CC(=O)CC')  # multiple SMILEs in a vector

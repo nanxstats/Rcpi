@@ -23,11 +23,11 @@ Calculate the 4860 bit fingerprint defined by Klekota and
 Roth.
 }
 \examples{
-\dontrun{
-smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-mols = parse.smiles(smiles)
-extractDrugKRComplete(mols)
-extractDrugKRComplete(mols[[1]])}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+fp  = extractDrugKRComplete(mol)
+dim(fp)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

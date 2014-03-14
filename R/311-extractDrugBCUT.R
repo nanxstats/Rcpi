@@ -7,7 +7,8 @@
 #' The descriptor is based on a weighted version of the Burden matrix which 
 #' takes into account both the connectivity as well as atomic properties 
 #' of a molecule. The weights are a variety of atom properties placed along 
-#' the diagonal of the Burden matrix. Currently three weighting schemes are employed:
+#' the diagonal of the Burden matrix. 
+#' Currently three weighting schemes are employed:
 #' \itemize{
 #' \item Atomic Weight
 #' \item Partial Charge (Gasteiger Marsilli)
@@ -15,18 +16,19 @@
 #' }
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns 6 columns:
-#'         \itemize{
-#'         \item \code{BCUTw-1l, BCUTw-2l ...} - nhigh lowest atom weighted BCUTS
-#'         \item \code{BCUTw-1h, BCUTw-2h ...} - nlow highest atom weighted BCUTS
-#'         \item \code{BCUTc-1l, BCUTc-2l ...} - nhigh lowest partial charge weighted BCUTS
-#'         \item \code{BCUTc-1h, BCUTc-2h ...} - nlow highest partial charge weighted BCUTS
-#'         \item \code{BCUTp-1l, BCUTp-2l ...} - nhigh lowest polarizability weighted BCUTS
-#'         \item \code{BCUTp-1h, BCUTp-2h ...} - nlow highest polarizability weighted BCUTS
-#'         }
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. This function returns 6 columns:
+#' \itemize{
+#' \item \code{BCUTw-1l, BCUTw-2l ...} - n high lowest atom weighted BCUTS
+#' \item \code{BCUTw-1h, BCUTw-2h ...} - n low highest atom weighted BCUTS
+#' \item \code{BCUTc-1l, BCUTc-2l ...} - n high lowest partial charge weighted BCUTS
+#' \item \code{BCUTc-1h, BCUTc-2h ...} - n low highest partial charge weighted BCUTS
+#' \item \code{BCUTp-1l, BCUTp-2l ...} - n high lowest polarizability weighted BCUTS
+#' \item \code{BCUTp-1h, BCUTp-2h ...} - n low highest polarizability weighted BCUTS
+#' }
 #' 
 #' @keywords extractDrugBCUT BCUT
 #'
@@ -35,6 +37,8 @@
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugBCUT
+#' 
+#' @importFrom rcdk eval.desc
 #' 
 #' @references
 #' Pearlman, R.S. and Smith, K.M., 
@@ -67,23 +71,27 @@
 #' 
 #' Note that it is possible to specify an arbitrarily large number of 
 #' eigenvalues to be returned. However if the number (i.e., nhigh or nlow) 
-#' is larger than the number of heavy atoms, the remaining eignevalues will be \code{NaN}.
+#' is larger than the number of heavy atoms, the remaining eignevalues 
+#' will be \code{NaN}.
 #' 
 #' Given the above description, if the aim is to gt all the eigenvalues for 
 #' a molecule, you should set nlow to 0 and specify the number of heavy atoms 
 #' (or some large number) for nhigh (or vice versa).
 #' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugBCUT(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugBCUT(mol)
+#' head(dat)}
+#' 
 
 extractDrugBCUT = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.BCUTDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.BCUTDescriptor', 
+                  verbose = !silent)
+
+    return(x)
 
 }

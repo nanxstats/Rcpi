@@ -30,11 +30,11 @@ paths of a given length. This is hashed fingerprints, with
 a default length of 1024.
 }
 \examples{
-\dontrun{
-smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-mols = parse.smiles(smiles)
-extractDrugStandardComplete(mols)
-extractDrugStandardComplete(mols[[1]])}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+fp  = extractDrugStandardComplete(mol)
+dim(fp)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

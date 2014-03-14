@@ -12,7 +12,7 @@ extractDrugAutocorrelationMass(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 5
+each column represents one feature. This function returns 5
 columns named \code{ATSm1}, \code{ATSm2}, \code{ATSm3},
 \code{ATSm4}, \code{ATSm5}.
 }
@@ -25,9 +25,11 @@ Calculates the ATS autocorrelation descriptor, where the
 weight equal to the scaled atomic mass.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugAutocorrelationMass(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugAutocorrelationMass(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

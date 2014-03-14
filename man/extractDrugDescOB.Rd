@@ -6,7 +6,7 @@ extractDrugDescOB(molecules, type = c("smile", "sdf"))
 }
 \arguments{
   \item{molecules}{R character string object containing the
-  molecules. See examples.}
+  molecules. See the example section for details.}
 
   \item{type}{'smile' or 'sdf'}
 }
@@ -38,7 +38,7 @@ This function calculates 14 types of the \emph{numerical}
 molecular descriptors provided in OpenBabel.
 }
 \examples{
-\dontrun{
+\donttest{
 mol1 = 'CC(=O)NCCC1=CNc2c1cc(OC)cc2'  # one molecule SMILE in a vector
 mol2 = c('OCCc1c(C)[n+](=cs1)Cc2cnc(C)nc(N)2',
          'CCc(c1)ccc2[n+]1ccc3c2Nc4c3cccc4',

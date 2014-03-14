@@ -26,7 +26,7 @@ This function retrieves protein sequences in FASTA format
 from the KEGG database.
 }
 \examples{
-\dontrun{
+\donttest{
 id = c('hsa:10161', 'hsa:10162')
 getFASTAFromKEGG(id)}
 }

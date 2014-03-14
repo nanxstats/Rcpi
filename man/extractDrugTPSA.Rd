@@ -1,6 +1,7 @@
 \name{extractDrugTPSA}
 \alias{extractDrugTPSA}
-\title{Descriptor of Topological Polar Surface Area Based on Fragment Contributions (TPSA)}
+\title{Descriptor of Topological Polar Surface Area Based on
+Fragment Contributions (TPSA)}
 \usage{
 extractDrugTPSA(molecules, silent = TRUE)
 }
@@ -12,7 +13,7 @@ extractDrugTPSA(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{TopoPSA}.
 }
 \description{
@@ -24,9 +25,11 @@ Calculate the descriptor of topological polar surface area
 based on fragment contributions (TPSA).
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugTPSA(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugTPSA(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

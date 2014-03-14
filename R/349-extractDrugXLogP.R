@@ -1,14 +1,18 @@
-#' Descriptor that Calculates the Prediction of logP Based on the Atom-Type Method Called XLogP
+#' Descriptor that Calculates the Prediction of logP 
+#' Based on the Atom-Type Method Called XLogP
 #'
-#' Descriptor that Calculates the Prediction of logP Based on the Atom-Type Method Called XLogP
+#' Descriptor that Calculates the Prediction of logP 
+#' Based on the Atom-Type Method Called XLogP
 #' 
 #' Prediction of logP based on the atom-type method called XLogP.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns one column named \code{XLogP}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns one column named \code{XLogP}.
 #' 
 #' @keywords extractDrugXLogP XLogP
 #'
@@ -17,6 +21,8 @@
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugXLogP
+#' 
+#' @importFrom rcdk eval.desc
 #' 
 #' @references
 #' Wang, R., Fu, Y., and Lai, L., 
@@ -28,16 +34,19 @@
 #' Perspectives in Drug Discovery and Design, 2000, 19:47-66.
 #' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugXLogP(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugXLogP(mol)
+#' head(dat)}
+#' 
 
 extractDrugXLogP = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.XLogPDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.XLogPDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

@@ -12,7 +12,7 @@ extractDrugGravitationalIndex(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns 9
+each column represents one feature. This function returns 9
 columns: \itemize{ \item \code{GRAV.1} - gravitational
 index of heavy atoms \item \code{GRAV.2} - square root of
 gravitational index of heavy atoms \item \code{GRAV.3} -
@@ -39,9 +39,11 @@ roots of the descriptor are also generated as described by
 Wessel et al.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugGravitationalIndex(mol)}
+\donttest{
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+mol = readMolFromSDF(sdf)
+dat = extractDrugGravitationalIndex(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

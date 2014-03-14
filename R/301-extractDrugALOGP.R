@@ -2,13 +2,23 @@
 #'
 #' Calculates Atom Additive logP and Molar Refractivity Values Descriptor
 #' 
-#' Calculates ALOGP (Ghose-Crippen LogKow) and the Ghose-Crippen molar refractivity as described by Ghose, A.K. and Crippen, G.M. Note the underlying code in CDK assumes that aromaticity has been detected before evaluating this descriptor. The code also expects that the molecule will have hydrogens explicitly set. For SD files, this is usually not a problem since hydrogens are explicit. But for the case of molecules obtained from SMILES, hydrogens must be made explicit.
+#' Calculates ALOGP (Ghose-Crippen LogKow) and the Ghose-Crippen molar 
+#' refractivity as described by Ghose, A.K. and Crippen, G.M. 
+#' Note the underlying code in CDK assumes that aromaticity 
+#' has been detected before evaluating this descriptor. 
+#' The code also expects that the molecule will have 
+#' hydrogens explicitly set. For SD files, this is 
+#' usually not a problem since hydrogens are explicit. 
+#' But for the case of molecules obtained from SMILES, 
+#' hydrogens must be made explicit.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns three columns named \code{ALogP}, \code{ALogp2} and \code{AMR}.
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. This function returns three columns 
+#' named \code{ALogP}, \code{ALogp2} and \code{AMR}.
 #' 
 #' @keywords extractDrugALOGP ALOGP
 #'
@@ -17,6 +27,8 @@
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
 #' 
 #' @export extractDrugALOGP
+#' 
+#' @importFrom rcdk eval.desc
 #' 
 #' @references
 #' Ghose, A.K. and Crippen, G.M. , 
@@ -32,17 +44,19 @@
 #' Journal of Chemical Information and Computer Science, 1987, 27:21-35.
 #' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugALOGP(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugALOGP(mol)
+#' head(dat)}
 #' 
 
 extractDrugALOGP = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.ALOGPDescriptor', 
-                      verbose = !silent)
 
-  return(x)
-  
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.ALOGPDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

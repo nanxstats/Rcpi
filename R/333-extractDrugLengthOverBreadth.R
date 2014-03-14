@@ -8,10 +8,12 @@
 #' (in 10 degree increments).
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns two columns named \code{LOBMAX} and \code{LOBMIN}:
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns two columns named \code{LOBMAX} and \code{LOBMIN}:
 #' \itemize{
 #' \item \code{LOBMAX} - The maximum L/B ratio;
 #' \item \code{LOBMIN} - The L/B ratio for the rotation that results in the 
@@ -26,20 +28,24 @@
 #' 
 #' @export extractDrugLengthOverBreadth
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @note The descriptor assumes that the atoms have been configured.
 #' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugLengthOverBreadth(mol)}
+#' \donttest{
+#' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' mol = readMolFromSDF(sdf)
+#' dat = extractDrugLengthOverBreadth(mol)
+#' head(dat)}
 #' 
 
 extractDrugLengthOverBreadth = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

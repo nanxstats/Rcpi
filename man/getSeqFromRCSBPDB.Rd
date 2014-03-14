@@ -24,7 +24,7 @@ Retrieve Protein Sequence from RCSB PDB
 This function retrieves protein sequences from RCSB PDB.
 }
 \examples{
-\dontrun{
+\donttest{
 id = c('4HHB', '4FF9')
 getSeqFromRCSBPDB(id)}
 }

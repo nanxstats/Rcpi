@@ -10,25 +10,29 @@
 #' corresponding to each type of chain.
 #' 
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be shown or not, default is \code{TRUE}.
+#' @param silent Logical. Whether the calculating process 
+#' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, each column represents one feature,
-#'         This function returns 6 columns named \code{SPC.4}, \code{SPC.5}, \code{SPC.6}, 
-#'         \code{VPC.4}, \code{VPC.5}, \code{VPC.6}:
-#'         \itemize{
-#'           \item \code{SPC.4} - Simple path cluster, order 4
-#'           \item \code{SPC.5} - Simple path cluster, order 5
-#'           \item \code{SPC.6} - Simple path cluster, order 6
-#'           \item \code{VPC.4} - Valence path cluster, order 4
-#'           \item \code{VPC.5} - Valence path cluster, order 5
-#'           \item \code{VPC.6} - Valence path cluster, order 6   
-#'           }
-#'           
+#' @return A data frame, each row represents one of the molecules, 
+#' each column represents one feature. 
+#' This function returns 6 columns named 
+#' \code{SPC.4}, \code{SPC.5}, \code{SPC.6}, 
+#' \code{VPC.4}, \code{VPC.5}, \code{VPC.6}:
+#' \itemize{
+#' \item \code{SPC.4} - Simple path cluster, order 4
+#' \item \code{SPC.5} - Simple path cluster, order 5
+#' \item \code{SPC.6} - Simple path cluster, order 6
+#' \item \code{VPC.4} - Valence path cluster, order 4
+#' \item \code{VPC.5} - Valence path cluster, order 5
+#' \item \code{VPC.6} - Valence path cluster, order 6
+#' }
+#' 
 #' @note These descriptors are calculated using graph isomorphism 
 #'       to identify the various fragments. As a result calculations may 
 #'       be slow. In addition, recent versions of Molconn-Z use simplified 
 #'       fragment definitions (i.e., rings without branches etc.) 
-#'       whereas these descriptors use the older more complex fragment definitions.
+#'       whereas these descriptors use the older more complex 
+#'       fragment definitions.
 #' 
 #' @keywords extractDrugChiPathCluster Chi Path Cluster
 #'
@@ -38,17 +42,22 @@
 #' 
 #' @export extractDrugChiPathCluster
 #' 
+#' @importFrom rcdk eval.desc
+#' 
 #' @examples
-#' \dontrun{
-#' mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-#' extractDrugChiPathCluster(mol)}
+#' \donttest{
+#' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' mol = readMolFromSmi(smi, type = 'mol')
+#' dat = extractDrugChiPathCluster(mol)
+#' head(dat)}
+#' 
 
 extractDrugChiPathCluster = function (molecules, silent = TRUE) {
-  
-  x = rcdk::eval.desc(molecules, 
-                      'org.openscience.cdk.qsar.descriptors.molecular.ChiPathClusterDescriptor', 
-                      verbose = !silent)
-  
-  return(x)
-  
+
+    x = eval.desc(molecules, 
+                  'org.openscience.cdk.qsar.descriptors.molecular.ChiPathClusterDescriptor', 
+                  verbose = !silent)
+
+    return(x)
+
 }

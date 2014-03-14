@@ -1,6 +1,7 @@
 \name{extractDrugZagrebIndex}
 \alias{extractDrugZagrebIndex}
-\title{Descriptor that Calculates the Sum of the Squared Atom Degrees of All Heavy Atoms}
+\title{Descriptor that Calculates the Sum of the Squared Atom Degrees
+of All Heavy Atoms}
 \usage{
 extractDrugZagrebIndex(molecules, silent = TRUE)
 }
@@ -12,7 +13,7 @@ extractDrugZagrebIndex(molecules, silent = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one feature, This function returns
+each column represents one feature. This function returns
 one column named \code{Zagreb}.
 }
 \description{
@@ -24,9 +25,11 @@ Zagreb index: the sum of the squares of atom degree over
 all heavy atoms \code{i}.
 }
 \examples{
-\dontrun{
-mol = parse.smiles(c('CCC', 'c1ccccc1', 'CC(=O)C'))
-extractDrugZagrebIndex(mol)}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+dat = extractDrugZagrebIndex(mol)
+head(dat)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

@@ -2,14 +2,17 @@
 #'
 #' Retrieve Protein Sequence in FASTA Format from the KEGG Database
 #' 
-#' This function retrieves protein sequences in FASTA format from the KEGG database.
+#' This function retrieves protein sequences in FASTA format 
+#' from the KEGG database.
 #' 
 #' @param id A character vector, as the protein ID.
-#' @param parallel An integer, the parallel parameter, indicates how many process 
-#'                 the user would like to use for retrieving the data (using RCurl), 
-#'                 default is \code{5}. For regular cases, we recommend a number less than \code{20}.
+#' @param parallel An integer, the parallel parameter, indicates how many 
+#'                 process the user would like to use for retrieving 
+#'                 the data (using RCurl), default is \code{5}. 
+#'                 For regular cases, we recommend a number less than \code{20}.
 #'
-#' @return A list, each component contains one of the protein sequences in FASTA format.
+#' @return A list, each component contains one of the protein sequences 
+#' in FASTA format.
 #' 
 #' @keywords getProt getFASTAFromKEGG KEGG
 #'
@@ -23,40 +26,44 @@
 #' 
 #' @export getFASTAFromKEGG
 #' 
+#' @importFrom RCurl getURLAsynchronous
+#' 
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' id = c('hsa:10161', 'hsa:10162')
 #' getFASTAFromKEGG(id)}
 #' 
 
 getFASTAFromKEGG = function (id, parallel = 5) {
-  
-  # example id : hsa:10161
-  # example url: http://rest.kegg.jp/get/hsa:10161/aaseq
-  
-  fastaURL = paste0('http://rest.kegg.jp/get/', id, '/aaseq')
-  
-  fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
-  
-  return(fastaTxt)
-  
+
+    # example id : hsa:10161
+    # example url: http://rest.kegg.jp/get/hsa:10161/aaseq
+
+    fastaURL = paste0('http://rest.kegg.jp/get/', id, '/aaseq')
+
+    fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
+
+    return(fastaTxt)
+
 }
 
 #' Retrieve Protein Sequence from the KEGG Database
 #'
 #' Retrieve Protein Sequence from the KEGG Database
 #' 
-#' This function retrieves protein represented by amino acid sequence from the KEGG database.
+#' This function retrieves protein represented by amino acid sequence 
+#' from the KEGG database.
 #' 
 #' @param id A character vector, as the protein ID.
-#' @param parallel An integer, the parallel parameter, indicates how many process 
-#'                 the user would like to use for retrieving the data (using RCurl), 
-#'                 default is \code{5}. For regular cases, we recommend a number less than \code{20}.
-#'
+#' @param parallel An integer, the parallel parameter, indicates how many 
+#'                 process the user would like to use for retrieving 
+#'                 the data (using RCurl), default is \code{5}. 
+#'                 For regular cases, we recommend a number less than \code{20}.
+#' 
 #' @return A list, each component contains one of the protein represented by amino acid sequence(s).
 #' 
 #' @keywords getProt getSeqFromKEGG KEGG
-#'
+#' 
 #' @aliases getSeqFromKEGG
 #' 
 #' @author Nan Xiao <\url{http://www.road2stat.com}>
@@ -67,25 +74,25 @@ getFASTAFromKEGG = function (id, parallel = 5) {
 #' @export getSeqFromKEGG
 #' 
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' id = c('hsa:10161', 'hsa:10162')
 #' getSeqFromKEGG(id)}
 #' 
 
 getSeqFromKEGG = function (id, parallel = 5) {
-  
-  # example id : hsa:10161
-  # example url: http://rest.kegg.jp/get/hsa:10161/aaseq
-  
-  fastaTxt = getFASTAFromKEGG(id, parallel)
-  
-  tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'fasta')
-  for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])
-  
-  AASeq = lapply(tmpfile, readFASTA)
-  
-  unlink(tmpfile)
-  
-  return(AASeq)
-  
+
+    # example id : hsa:10161
+    # example url: http://rest.kegg.jp/get/hsa:10161/aaseq
+
+    fastaTxt = getFASTAFromKEGG(id, parallel)
+
+    tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'fasta')
+    for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])
+
+    AASeq = lapply(tmpfile, readFASTA)
+
+    unlink(tmpfile)
+
+    return(AASeq)
+
 }

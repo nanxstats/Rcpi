@@ -24,11 +24,11 @@ Format)
 Calculate the 881 bit fingerprints defined by PubChem.
 }
 \examples{
-\dontrun{
-smiles = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1','C1CCC1CC(CN(C)(C))CC(=O)CC')
-mols = parse.smiles(smiles)
-extractDrugPubChem(mols)
-extractDrugPubChem(mols[[1]])}
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+fp  = extractDrugPubChem(mol)
+head(fp)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

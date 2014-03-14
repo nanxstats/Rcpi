@@ -1,6 +1,6 @@
 \name{checkProt}
 \alias{checkProt}
-\title{Check if the protein sequence's amino acid types are in the 20 default types}
+\title{Check if the protein sequence's amino acid types are the 20 default types}
 \usage{
 checkProt(x)
 }
@@ -13,17 +13,17 @@ Logical. \code{TRUE} if all of the amino acid types of the
 sequence are within the 20 default types.
 }
 \description{
-Check if the protein sequence's amino acid types are in the
-20 default types
+Check if the protein sequence's amino acid types are the 20
+default types
 }
 \details{
 This function checks if the protein sequence's amino acid
-types are in the 20.
+types are the 20 default types.
 }
 \examples{
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
-checkProt(x) # TRUE
-checkProt(paste(x, 'Z', sep = '')) # FALSE
+checkProt(x)  # TRUE
+checkProt(paste(x, 'Z', sep = ''))  # FALSE
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>

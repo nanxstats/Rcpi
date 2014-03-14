@@ -16,7 +16,7 @@ extractDrugAIO(molecules, silent = TRUE, warn = TRUE)
 }
 \value{
 A data frame, each row represents one of the molecules,
-each column represents one descriptor, Currently, this
+each column represents one descriptor. Currently, this
 function returns total 293 descriptors composed of 48
 descriptor types.
 }
@@ -34,10 +34,11 @@ calculate some of the descriptors, if not provided, these
 descriptors values will be \code{NA}.
 }
 \examples{
-\dontrun{
+\donttest{
+# Load 20 small molecules that have 3D coordinates
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
 mol = readMolFromSDF(sdf)
-descmat = extractDrugAIO(mol, warn = FALSE)}
+dat = extractDrugAIO(mol, warn = FALSE)}
 }
 \author{
 Nan Xiao <\url{http://www.road2stat.com}>
