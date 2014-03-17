@@ -16,7 +16,6 @@
 #' @name Rcpi-package
 #' @aliases Rcpi
 #' @docType package
-#' @exportPattern "^[^\\.]"
 #' @author Nan Xiao <\email{road2stat@@gmail.com}>
 #'         Dongsheng Cao <\email{oriental-cds@@163.com}>
 #'         Qingsong Xu <\email{dasongxu@@gmail.com}>
