@@ -41,7 +41,7 @@
 #'
 #' @aliases extractProtMoreauBroto
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{extractProtMoran}} and \code{\link{extractProtGeary}} 
 #'          for Moran autocorrelation descriptors and 

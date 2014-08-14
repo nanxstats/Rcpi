@@ -44,7 +44,7 @@
 #'
 #' @aliases extractPCMDescScales
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{extractPCMScales}} for generalized 
 #' AA-descriptor based scales descriptors.

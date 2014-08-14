@@ -1,0 +1,435 @@
+\documentclass[shortnames,nojss,notitle,article]{jss}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\VignetteIndexEntry{Rcpi Quick Reference Card}
+%\VignetteKeywords{protein sequence, drug discovery, molecular descriptor, molecular fingerprint, similarity, drug-target interaction}
+%\VignettePackage{Rcpi}
+
+% header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE]{\pkg{Rcpi} Quick Reference Card}
+\fancyhead[RO]{\pkg{Rcpi} Quick Reference Card}
+\fancyhead[RE]{}
+\fancyhead[LO]{}
+\cfoot{\thepage}
+
+\author{Nan Xiao\\Central South University \And 
+        Dongsheng Cao\\Central South University \And
+        Qingsong Xu\\Central South University 
+        }
+\Plainauthor{Nan Xiao, Dongsheng Cao, Qingsong Xu}
+
+\title{\pkg{Rcpi} Quick Reference Card}
+\Plaintitle{Rcpi Quick Reference Card}
+\Shorttitle{\pkg{Rcpi} Quick Reference Card}
+
+\Address{
+  Nan Xiao \\
+  School of Mathematics and Statistics\\
+  Central South University\\
+  Changsha, Hunan, P. R. China\\
+  E-mail: \email{road2stat@gmail.com}\\
+  URL: \url{http://r2s.name}\\
+  
+  Dongsheng Cao\\
+  School of Pharmaceutical Sciences\\
+  Central South University\\
+  Changsha, Hunan, P. R. China\\
+  E-mail: \email{oriental-cds@163.com}\\
+  URL: \url{http://cbdd.csu.edu.cn}\\
+  
+  Qingsong Xu\\
+  School of Mathematics and Statistics\\
+  Central South University\\
+  Changsha, Hunan, P. R. China\\
+  E-mail: \email{dasongxu@gmail.com}
+}
+
+%
+<<prelim,echo=FALSE,print=FALSE>>=
+Rcpi.version = 'Release 2'
+now.date = strftime(Sys.Date(), "%Y-%m-%d")
+@
+%
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+    \begin{center}
+    \vspace*{\baselineskip}
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.4pt}\\[2\baselineskip]
+    {\LARGE \pkg{Rcpi} \ \textbf{Quick Reference Card}}\\[1.2\baselineskip]
+    \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+    \rule{\textwidth}{1.6pt}\\[2\baselineskip]
+    {\Large Nan Xiao, Dongsheng Cao, Qingsong Xu}\\[\baselineskip]
+    {\large Package Version: \Sexpr{Rcpi.version}}\par
+    {\large \Sexpr{now.date}}\par
+    \vfill
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig/logo-panel-text.pdf}
+    \end{figure}
+    
+%    {\scshape Computational Biology and Drug Design Group} \\
+%    {\scshape Central South University, China}\par
+    \end{center}
+
+\thispagestyle{empty}
+
+\clearpage
+
+\setcounter{page}{1}
+
+\phantom{}
+\vskip 1in
+
+\begin{table}[htbp]
+  \centering
+  \caption{Retrieving protein sequence data from various online databases}
+  \footnotesize{
+    \begin{tabular}{p{120pt}p{260pt}}
+    \addlinespace
+    \toprule
+    Function name & Function description\\
+    \midrule
+    \code{getProt()} & Retrieve protein sequence in FASTA format or PDB format from various online databases\\
+    \code{getFASTAFromUniProt()} & Retrieve protein sequence in FASTA format from UniProt\\
+    \code{getFASTAFromKEGG()} & Retrieve protein sequence in FASTA format from KEGG\\
+    \code{getPDBFromRCSBPDB()} & Retrieve protein sequence in PDB Format from RCSB PDB\\
+    \code{getSeqFromUniProt()} & Retrieve protein sequence from UniProt\\
+    \code{getSeqFromKEGG()} & Retrieve protein sequence from KEGG\\
+    \code{getSeqFromRCSBPDB()} & Retrieve protein sequence from RCSB PDB\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:dlprot}
+\end{table}
+
+\vskip 1in
+
+\begin{table}[htbp]
+  \centering
+  \caption{Retrieving drug molecular data from various online databases}
+  \footnotesize{
+    \begin{tabular}{p{120pt}p{260pt}}
+    \addlinespace
+    \toprule
+    Function name & Function description\\
+    \midrule
+    \code{getDrug()} & Retrieve drug molecules in MOL format and SMILES format from various online databases\\
+    \code{getMolFromDrugBank()} & Retrieve drug molecules in MOL format from DrugBank\\
+    \code{getMolFromPubChem()} & Retrieve drug molecules in MOL format from PubChem\\ 
+    \code{getMolFromChEMBL()} & Retrieve drug molecules in MOL format from ChEMBL\\
+    \code{getMolFromKEGG()} & Retrieve drug molecules in MOL format from the KEGG\\
+    \code{getMolFromCAS()} & Retrieve drug molecules in InChI format from CAS\\
+    \code{getSmiFromDrugBank()} & Retrieve drug molecules in SMILES format from DrugBank\\
+    \code{getSmiFromPubChem()} & Retrieve drug molecules in SMILES format from PubChem\\
+    \code{getSmiFromChEMBL()} & Retrieve drug molecules in SMILES format from ChEMBL\\
+    \code{getSmiFromKEGG()} & Retrieve drug molecules in SMILES format from KEGG\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:dldrug}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Calculating commonly used protein sequence derived descriptors}
+  \scriptsize{
+    \begin{tabular}{p{100pt}p{180pt}p{120pt}}
+    \addlinespace
+    \toprule
+    Function name & Descriptor name & Descriptor group\\
+    \midrule
+    \code{extractProtAAC()} & Amino acid composition & Amino acid composition\\
+    \code{extractProtDC()} & Dipeptide composition & \\
+    \code{extractProtTC()} & Tripeptide composition & \\
+    \code{extractProtMoreauBroto()} & Normalized Moreau-Broto autocorrelation & Autocorrelation\\
+    \code{extractProtMoran()} & Moran autocorrelation & \\
+    \code{extractProtGeary()} & Geary autocorrelation & \\
+    \code{extractProtCTDC()} & Composition & CTD\\
+    \code{extractProtCTDT()} & Transition & \\
+    \code{extractProtCTDD()} & Distribution & \\
+    \code{extractProtCTriad()} & Conjoint Triad & Conjoint Triad\\
+    \code{extractProtSOCN()} & Sequence-order-coupling number & Quasi-sequence-order\\
+    \code{extractProtQSO()} & Quasi-sequence-order descriptors & \\
+    \code{extractProtPAAC()} & Pseudo-amino acid composition & Pseudo-amino acid composition\\
+    \code{extractProtAPAAC()} & Amphiphilic pseudo-amino acid composition & \\
+    \code{AAindex} & AAindex data of 544 physicochemical and biological properties for 20 amino acids & Dataset\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:common}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Generating profile-based protein representations}
+  \footnotesize{
+    \begin{tabular}{p{140pt}p{240pt}}
+    \addlinespace
+    \toprule
+    Function name & Function description\\
+    \midrule
+    \code{extractProtPSSM()} & Compute PSSM (Position-Specific Scoring Matrix) for given protein sequence or peptides\\
+    \code{extractProtPSSMFeature()} & Profile-based protein representation derived by PSSM\\
+    \code{extractProtPSSMAcc()} & Profile-based protein representation derived by PSSM and auto cross covariance (ACC)\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:pssm}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{Generating scales-based descriptors for proteochemometrics modeling}
+  \scriptsize{
+    \begin{tabular}{p{100pt}p{180pt}p{130pt}}
+    \addlinespace
+    \toprule
+    Function name & Descriptor class & Derived by\\
+    \midrule
+    \code{extractPCMScales()} & Generalized scales-based descriptors derived by principal components analysis (PCA) & Principal components analysis\\
+    \code{extractPCMPropScales()} & Generalized scales-based descriptors derived by amino acid properties (AAindex) & \\
+    \code{extractPCMDescScales()} & Generalized scales-based descriptors derived by 2D and 3D molecular descriptors (Topological, WHIM, VHSE, etc.) & \\
+    \code{extractPCMFAScales()} & Generalized scales-based descriptors derived by factor analysis & Factor analysis\\
+    \code{extractPCMMDSScales()} & Generalized scales-based descriptors derived by multidimensional scaling (MDS) & Multidimensional scaling\\
+    \code{extractPCMBLOSUM()} & Generalized BLOSUM and PAM matrix-derived descriptors & Substitution matrix\\
+    \code{acc()} & Auto cross covariance (ACC) for generating scales-based descriptors of the same length & \\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:pcm}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Pre-calculated molecular descriptor sets of the 20 amino acids in \pkg{Rcpi} for generating scales-based descriptors for proteochemometrics modeling. Note that the non-informative descriptors (like the descriptors have only one value across all the 20 amino acids) in these datasets have already been filtered out.}
+  \footnotesize{
+    \begin{tabular}{llll}
+    \addlinespace
+    \toprule
+    Dataset name & Dataset description & Dimensionality & Calculated by \\
+    \midrule
+    \code{OptAA3d} & Optimized 20 amino acids & -- & MOE\\
+    \code{AA2DACOR} & 2D autocorrelations descriptors & 92 & Dragon \\
+    \code{AA3DMoRSE} & 3D-MoRSE descriptors & 160 & Dragon \\
+    \code{AAACF} & Atom-centred fragments descriptors & 6 & Dragon \\
+    \code{AABurden} & Burden Eigenvalues descriptors & 62 & Dragon \\
+    \code{AAConn} & Connectivity indices descriptors & 33 & Dragon \\
+    \code{AAConst} & Constitutional descriptors & 23 & Dragon \\
+    \code{AAEdgeAdj} & Edge adjacency indices descriptors & 97 & Dragon \\
+    \code{AAEigIdx} & Eigenvalue-based indices descriptors & 44 & Dragon \\
+    \code{AAFGC} & Functional group counts descriptors & 5 & Dragon \\
+    \code{AAGeom} & Geometrical descriptors & 41 & Dragon \\
+    \code{AAGETAWAY} & GETAWAY descriptors & 194 & Dragon \\
+    \code{AAInfo} & Information indices descriptors & 47 & Dragon \\
+    \code{AAMolProp} & Molecular properties descriptors & 12 & Dragon \\
+    \code{AARandic} & Randic molecular profiles descriptors & 41 & Dragon \\
+    \code{AARDF} & RDF descriptors & 82 & Dragon \\
+    \code{AATopo} & Topological descriptors & 78 & Dragon \\
+    \code{AATopoChg} & Topological charge indices descriptors & 15 & Dragon \\
+    \code{AAWalk} & Walk and path counts descriptors & 40 & Dragon \\
+    \code{AAWHIM} & WHIM descriptors & 99 & Dragon \\
+    \code{AACPSA} & CPSA descriptors & 41 & Accelrys Discovery Studio \\
+    \code{AADescAll} & All the 2D descriptors calculated by Dragon & 1171 & Dragon \\
+    \code{AAMOE2D} & All the 2D descriptors calculated by MOE & 148 & MOE \\
+    \code{AAMOE3D} & All the 3D descriptors calculated by MOE & 143 & MOE \\
+    \code{AABLOSUM45} & BLOSUM45 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AABLOSUM50} & BLOSUM50 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AABLOSUM62} & BLOSUM62 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AABLOSUM80} & BLOSUM80 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AABLOSUM100} & BLOSUM100 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AAPAM30} & PAM30 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AAPAM40} & PAM40 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AAPAM70} & PAM70 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AAPAM120} & PAM120 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \code{AAPAM250} & PAM250 matrix for 20 amino acids & $20 \times 20$ & Biostrings\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:pcmdata}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Molecular descriptors}
+  \scriptsize{
+  \begin{tabular}{p{180pt}p{240pt}}
+    \addlinespace
+    \toprule
+    Function name & Descriptor name \\
+    \midrule
+    \code{extractDrugAIO()} & All the molecular descriptors in the \pkg{Rcpi} package\\
+    \code{extractDrugALOGP()} & Atom additive logP and molar refractivity values descriptor\\
+    \code{extractDrugAminoAcidCount()} & Number of amino acids\\
+    \code{extractDrugApol()} & Sum of the atomic polarizabilities\\
+    \code{extractDrugAromaticAtomsCount()} & Number of aromatic atoms\\
+    \code{extractDrugAromaticBondsCount()} & Number of aromatic bonds\\
+    \code{extractDrugAtomCount()} & Number of atom descriptor\\
+    \code{extractDrugAutocorrelationCharge()} & Moreau-Broto autocorrelation descriptors using partial charges\\
+\code{extractDrugAutocorrelationMass()} & Moreau-Broto autocorrelation descriptors using atomic weight\\
+\code{extractDrugAutocorrelationPolarizability()} & Moreau-Broto autocorrelation descriptors using polarizability\\
+\code{extractDrugBCUT()} & BCUT, the eigenvalue based descriptor\\
+\code{extractDrugBondCount()} & Number of bonds of a certain bond order\\
+\code{extractDrugBPol()} & Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule\\
+\code{extractDrugCarbonTypes()} & Topological descriptor characterizing the carbon connectivity in terms of hybridization\\
+\code{extractDrugChiChain()} & Kier \& Hall Chi chain indices of orders 3, 4, 5, 6 and 7\\
+\code{extractDrugChiCluster()} & Kier \& Hall Chi cluster indices of orders 3, 4, 5 and 6\\
+\code{extractDrugChiPath()} & Kier \& Hall Chi path indices of orders 0 to 7\\
+\code{extractDrugChiPathCluster()} & Kier \& Hall Chi path cluster indices of orders 4, 5 and 6\\
+\code{extractDrugCPSA()} & Descriptors combining surface area and partial charge information\\
+\code{extractDrugDescOB()} & Molecular descriptors provided by OpenBabel\\
+\code{extractDrugECI()} & Eccentric connectivity index descriptor\\
+\code{extractDrugFMF()} & FMF descriptor\\
+\code{extractDrugFragmentComplexity()} & Complexity of a system\\
+\code{extractDrugGravitationalIndex()} & Mass distribution of the molecule\\
+\code{extractDrugHBondAcceptorCount()} & Number of hydrogen bond acceptors\\
+\code{extractDrugHBondDonorCount()} & Number of hydrogen bond donors\\
+\code{extractDrugHybridizationRatio()} & Molecular complexity in terms of carbon hybridization states\\
+\code{extractDrugIPMolecularLearning()} & Ionization potential\\
+\code{extractDrugKappaShapeIndices()} & Kier \& Hall Kappa molecular shape indices\\
+\code{extractDrugKierHallSmarts()} & Number of occurrences of the E-State fragments\\
+\code{extractDrugLargestChain()} & Number of atoms in the largest chain\\
+\code{extractDrugLargestPiSystem()} & Number of atoms in the largest Pi chain\\
+\code{extractDrugLengthOverBreadth()} & Ratio of length to breadth descriptor\\
+\code{extractDrugLongestAliphaticChain()} & Number of atoms in the longest aliphatic chain\\
+\code{extractDrugMannholdLogP()} & LogP based on the number of carbons and hetero atoms\\
+\code{extractDrugMDE()} & Molecular Distance Edge (MDE) descriptors for C, N and O\\
+\code{extractDrugMomentOfInertia()} & Principal moments of inertia and ratios of the principal moments\\
+\code{extractDrugPetitjeanNumber()} & Petitjean number of a molecule\\
+\code{extractDrugPetitjeanShapeIndex()} & Petitjean shape indices\\
+\code{extractDrugRotatableBondsCount()} & Number of non-rotatable bonds on a molecule\\
+\code{extractDrugRuleOfFive()} & Number failures of the Lipinski's Rule Of Five\\
+\code{extractDrugTPSA()} & Topological Polar Surface Area (TPSA)\\
+\code{extractDrugVABC()} & Volume of a molecule\\
+\code{extractDrugVAdjMa()} & Vertex adjacency information of a molecule\\
+\code{extractDrugWeight()} & Total weight of atoms\\
+\code{extractDrugWeightedPath()} & Weighted path (Molecular ID)\\
+\code{extractDrugWHIM()} & Holistic descriptors described by Todeschini et al.\\
+\code{extractDrugWienerNumbers()} & Wiener path number and wiener polarity number\\
+\code{extractDrugXLogP()} & Prediction of logP based on the atom-type method called XLogP\\
+\code{extractDrugZagrebIndex()} & Sum of the squared atom degrees of all heavy atoms\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:drug}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Molecular fingerprints}
+  \scriptsize{
+  \begin{tabular}{p{160pt}p{260pt}}
+    \addlinespace
+    \toprule
+    Function name & Fingerprint type \\
+    \midrule
+    \code{extractDrugStandard()} & Standard molecular fingerprints (in compact format)\\
+    \code{extractDrugStandardComplete()} & Standard molecular fingerprints (in complete format)\\
+    \code{extractDrugExtended()} & Extended molecular fingerprints (in compact format)\\
+    \code{extractDrugExtendedComplete()} & Extended molecular fingerprints (in complete format)\\
+    \code{extractDrugGraph()} & Graph molecular fingerprints (in compact format)\\
+    \code{extractDrugGraphComplete()} & Graph molecular fingerprints (in complete format)\\
+    \code{extractDrugHybridization()} & Hybridization molecular fingerprints (in compact format)\\
+    \code{extractDrugHybridizationComplete()} & Hybridization molecular fingerprints (in complete format)\\
+    \code{extractDrugMACCS()} & MACCS molecular fingerprints (in compact format)\\
+    \code{extractDrugMACCSComplete()} & MACCS molecular fingerprints (in complete format)\\
+    \code{extractDrugEstate()} & E-State molecular fingerprints (in compact format)\\
+    \code{extractDrugEstateComplete()} & E-State molecular fingerprints (in complete format)\\
+    \code{extractDrugPubChem()} & PubChem molecular fingerprints (in compact format)\\
+    \code{extractDrugPubChemComplete()} & PubChem molecular fingerprints (in complete format)\\
+    \code{extractDrugKR()} & KR (Klekota and Roth) molecular fingerprints (in compact format)\\
+    \code{extractDrugKRComplete()} & KR (Klekota and Roth) molecular fingerprints (in complete format)\\
+    \code{extractDrugShortestPath()} & Shortest Path molecular fingerprints (in compact format)\\
+    \code{extractDrugShortestPathComplete()} & Shortest Path molecular fingerprints (in complete format)\\
+    \code{extractDrugOBFP2()} & FP2 molecular fingerprints\\
+    \code{extractDrugOBFP3()} & FP3 molecular fingerprints\\
+    \code{extractDrugOBFP4()} & FP4 molecular fingerprints\\
+    \code{extractDrugOBMACCS()} & MACCS molecular fingerprints\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:fp}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Protein-protein and compound-protein interation descriptors}
+  \footnotesize{
+    \begin{tabular}{p{140pt}p{220pt}}
+    \addlinespace
+    \toprule
+    Function name & Function description\\
+    \midrule
+    \code{getPPI()} & Generating protein-protein interaction descriptors\\
+    \code{getCPI()} & Generating compound-protein interaction descriptors\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:cpi}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Similarity and similarity searching}
+  \footnotesize{
+    \begin{tabular}{p{140pt}p{220pt}}
+    \addlinespace
+    \toprule
+    Function name & Function description\\
+    \midrule
+    \code{calcDrugFPSim()} & Calculate drug molecule similarity derived by molecular fingerprints\\
+    \code{calcDrugMCSSim()} & Calculate drug molecule similarity derived by maximum common substructure search\\
+    \code{searchDrug()} & Parallelized drug molecule similarity search by molecular fingerprints similarity or maximum common substructure search\\
+    \code{calcTwoProtSeqSim()} & Similarity calculation based on sequence alignment for a pair of protein sequences\\
+    \code{calcParProtSeqSim()} & Parallellized protein sequence similarity calculation based on sequence alignment\\
+    \code{calcTwoProtGOSim()} & Similarity calculation based on Gene Ontology (GO) similarity between two proteins\\
+    \code{calcParProtGOSim()} & Protein similarity calculation based on Gene Ontology (GO) similarity\\
+    \bottomrule
+    \end{tabular}
+  }
+  \label{tab:sim}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Protein sequence data manipulation}
+    \begin{tabular}{p{140pt}p{200pt}}
+    \addlinespace
+    \toprule
+    Function name & Function description\\
+    \midrule
+\code{readFASTA()} & Read protein sequences in FASTA format\\
+\code{readPDB()} & Read protein sequences in PDB format\\
+\code{segProt()} & Protein sequence segmentation\\
+\code{checkProt()} & Check if the protein sequence's amino acid types are the 20 default types\\
+    \bottomrule
+    \end{tabular}
+  \label{tab:miscprot}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Molecular data manipulation}
+    \begin{tabular}{p{140pt}p{200pt}}
+    \addlinespace
+    \toprule
+    Function name & Function description\\
+    \midrule
+    \code{readMolFromSDF()} & Read molecules from SDF files and return parsed Java molecular object\\
+    \code{readMolFromSmi()} & Read molecules from SMILES files and return parsed Java molecular object or plain text list\\
+    \code{convMolFormat()} & Chemical file formats conversion\\
+    \bottomrule
+    \end{tabular}
+  \label{tab:miscdrug}
+\end{table}
+
+\clearpage
+
+\vspace*{-0.35cm}
+
+\end{document}

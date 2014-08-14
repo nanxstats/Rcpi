@@ -59,7 +59,7 @@
 #'
 #' @aliases calcParProtSeqSim
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{calcTwoProtSeqSim} for protein sequence alignment 
 #' for two protein sequences. See \code{\link{calcParProtGOSim}} for 
@@ -132,7 +132,7 @@ calcParProtSeqSim = function (protlist, cores = 2,
 #'
 #' @aliases calcTwoProtSeqSim
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{calcParProtSeqSim}} for paralleled pairwise 
 #' protein similarity calculation based on sequence alignment.

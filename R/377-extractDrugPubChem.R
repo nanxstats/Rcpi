@@ -16,7 +16,7 @@
 #'
 #' @aliases extractDrugPubChem
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @export extractDrugPubChem
 #' 
@@ -79,7 +79,7 @@ extractDrugPubChem = function (molecules, silent = TRUE) {
 #'
 #' @aliases extractDrugPubChemComplete
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @export extractDrugPubChemComplete
 #' 

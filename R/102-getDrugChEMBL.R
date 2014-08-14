@@ -17,7 +17,7 @@
 #'
 #' @aliases getMolFromChEMBL
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{getSmiFromChEMBL}} for retrieving drug molecules
 #' in SMILES format from the ChEMBL database.
@@ -80,7 +80,7 @@ getMolFromChEMBL = function (id, parallel = 5) {
 #'
 #' @aliases getSmiFromChEMBL
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{getMolFromChEMBL}} for retrieving drug molecules
 #' in MOL format from the ChEMBL database.

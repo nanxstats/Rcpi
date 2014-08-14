@@ -20,7 +20,7 @@
 #'
 #' @aliases getMolFromCAS
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{getDrug}} for retrieving drug molecules
 #' in MOL and SMILES Format from other databases.

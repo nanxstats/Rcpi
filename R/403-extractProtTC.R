@@ -12,7 +12,7 @@
 #'
 #' @aliases extractProtTC
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{extractProtAAC}} and \code{\link{extractProtDC}} 
 #'          for Amino Acid Composition and Dipeptide Composition descriptors.

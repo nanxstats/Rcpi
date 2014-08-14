@@ -67,7 +67,7 @@
 #'
 #' @aliases calcParProtGOSim
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{calcTwoProtGOSim}} for calculating the 
 #' GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
@@ -157,7 +157,7 @@ calcParProtGOSim = function (golist, type = c('go', 'gene'),
 #'
 #' @aliases calcTwoProtGOSim
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @seealso See \code{\link{calcParProtGOSim}} for 
 #' protein similarity calculation based on 

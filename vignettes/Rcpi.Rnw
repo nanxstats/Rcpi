@@ -31,14 +31,14 @@
   Central South University\\
   Changsha, Hunan, P. R. China\\
   E-mail: \email{road2stat@gmail.com}\\
-  URL: \url{http://www.road2stat.com/}\\
+  URL: \url{http://r2s.name}\\
   
   Dongsheng Cao\\
   School of Pharmaceutical Sciences\\
   Central South University\\
   Changsha, Hunan, P. R. China\\
   E-mail: \email{oriental-cds@163.com}\\
-  URL: \url{http://cbdd.csu.edu.cn/}\\
+  URL: \url{http://cbdd.csu.edu.cn}\\
   
   Qingsong Xu\\
   School of Mathematics and Statistics\\
@@ -50,7 +50,7 @@
 
 %
 <<prelim,echo=FALSE,print=FALSE>>=
-Rcpi.version = 'Release 1'
+Rcpi.version = 'Release 2'
 now.date = strftime(Sys.Date(), "%Y-%m-%d")
 @
 %
@@ -97,7 +97,8 @@ The \pkg{Rcpi} package \citep{Rcpi} presented in this manual offers an \proglang
 \pkg{Rcpi} implemented and integrated the state-of-the-art protein sequence descriptors and molecular descriptors/fingerprints with \proglang{R}. For protein sequences, the \pkg{Rcpi} package could
 
 \begin{itemize}
-\item Calculate six protein descriptor groups composed of fourteen types of commonly used structural and physicochemical descriptors that include 9920 descriptors.
+\item Calculate six protein descriptor groups composed of fourteen types of commonly used structural and physicochemical descriptors that include 9,920 descriptors.
+\item Calculate profile-based protein representation derived by PSSM (Position-Specific Scoring Matrix).
 \item Calculate six types of generalized scales-based descriptors derived by various dimensionality reduction methods for proteochemometric (PCM) modeling.
 \item Parallellized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.
 \end{itemize}

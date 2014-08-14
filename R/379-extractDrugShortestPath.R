@@ -19,7 +19,7 @@
 #'
 #' @aliases extractDrugShortestPath
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @export extractDrugShortestPath
 #' 
@@ -87,7 +87,7 @@ extractDrugShortestPath = function (molecules, depth = 6,
 #' 
 #' @aliases extractDrugShortestPathComplete
 #' 
-#' @author Nan Xiao <\url{http://www.road2stat.com}>
+#' @author Nan Xiao <\url{http://r2s.name}>
 #' 
 #' @export extractDrugShortestPathComplete
 #' 
