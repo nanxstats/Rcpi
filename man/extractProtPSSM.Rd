@@ -5,7 +5,13 @@
 \usage{
 extractProtPSSM(seq, start.pos = 1L, end.pos = nchar(seq),
   psiblast.path = NULL, makeblastdb.path = NULL, database.path = NULL,
-  iter = 5, silent = TRUE)
+  iter = 5, silent = TRUE, evalue = 10L, word.size = NULL,
+  gapopen = NULL, gapextend = NULL, matrix = "BLOSUM62",
+  threshold = NULL, seg = "no", soft.masking = FALSE,
+  culling.limit = NULL, best.hit.overhang = NULL,
+  best.hit.score.edge = NULL, xdrop.ungap = NULL, xdrop.gap = NULL,
+  xdrop.gap.final = NULL, window.size = NULL, gap.trigger = 22L,
+  num.threads = 1L, pseudocount = 0L, inclusion.ethresh = 0.002)
 }
 \arguments{
 \item{seq}{Character vector, as the input protein sequence.}
@@ -36,6 +42,60 @@ a reference database (a FASTA file).}
 \item{silent}{Logical. Whether the PSI-Blast running output
 should be shown or not (May not work on some Windows versions and
 PSI-Blast versions), default is \code{TRUE}.}
+
+\item{evalue}{Expectation value (E) threshold for saving hits.
+Default is \code{10}.}
+
+\item{word.size}{Word size for wordfinder algorithm. An integer >= 2.}
+
+\item{gapopen}{Integer. Cost to open a gap.}
+
+\item{gapextend}{Integer. Cost to extend a gap.}
+
+\item{matrix}{Character string. The scoring matrix name
+(default is \code{'BLOSUM62'}).}
+
+\item{threshold}{Minimum word score such that the word is added to
+the BLAST lookup table. A real value >= 0.}
+
+\item{seg}{Character string. Filter query sequence with SEG (\code{'yes'},
+\code{'window locut hicut'}, or \code{'no'} to disable) Default is \code{'no'}.}
+
+\item{soft.masking}{Logical. Apply filtering locations as soft masks?
+Default is \code{FALSE}.}
+
+\item{culling.limit}{An integer >= 0. If the query range of a hit is
+enveloped by that of at least this many higher-scoring hits,
+delete the hit. Incompatible with \code{best.hit.overhang} and
+\code{best_hit_score_edge}.}
+
+\item{best.hit.overhang}{Best Hit algorithm overhang value
+(A real value >= 0 and =< 0.5, recommended value: 0.1).
+Incompatible with \code{culling_limit}.}
+
+\item{best.hit.score.edge}{Best Hit algorithm score edge value
+(A real value >=0 and =< 0.5, recommended value: 0.1).
+Incompatible with \code{culling_limit}.}
+
+\item{xdrop.ungap}{X-dropoff value (in bits) for ungapped extensions.}
+
+\item{xdrop.gap}{X-dropoff value (in bits) for preliminary gapped extensions.}
+
+\item{xdrop.gap.final}{X-dropoff value (in bits) for final gapped alignment.}
+
+\item{window.size}{An integer >= 0. Multiple hits window size,
+To specify 1-hit algorithm, use \code{0}.}
+
+\item{gap.trigger}{Number of bits to trigger gapping. Default is \code{22}.}
+
+\item{num.threads}{Integer. Number of threads (CPUs) to use in the
+BLAST search. Default is \code{1}.}
+
+\item{pseudocount}{Integer. Pseudo-count value used when constructing PSSM.
+Default is \code{0}.}
+
+\item{inclusion.ethresh}{E-value inclusion threshold for pairwise alignments.
+Default is \code{0.002}.}
 }
 \value{
 The original PSSM, a numeric matrix which has

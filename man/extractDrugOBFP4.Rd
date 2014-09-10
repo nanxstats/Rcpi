@@ -9,7 +9,7 @@ extractDrugOBFP4(molecules, type = c("smile", "sdf"))
 \item{molecules}{R character string object containing the molecules.
 See the example section for details.}
 
-\item{type}{'smile' or 'sdf'}
+\item{type}{\code{'smile'} or \code{'sdf'}.}
 }
 \value{
 A matrix. Each row represents one molecule,

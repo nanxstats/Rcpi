@@ -6,7 +6,7 @@
 #' 
 #' @param molecules R character string object containing the molecules. 
 #' See the example section for details.
-#' @param type 'smile' or 'sdf'
+#' @param type \code{'smile'} or \code{'sdf'}.
 #' 
 #' @return A matrix. Each row represents one molecule, 
 #' the columns represent the fingerprints.

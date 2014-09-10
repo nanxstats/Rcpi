@@ -10,8 +10,11 @@ segProt(x, aa = c("A", "R", "N", "D", "C", "E", "Q", "G", "H", "I", "L", "K",
 \item{x}{A character vector, as the input protein sequence.}
 
 \item{aa}{A character, the amino acid type. one of
-          \code{'A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H',
-          'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V'}}
+          \code{'A'}, \code{'R'}, \code{'N'}, \code{'D'}, \code{'C'},
+          \code{'E'}, \code{'Q'}, \code{'G'}, \code{'H'},
+          \code{'I'}, \code{'L'}, \code{'K'}, \code{'M'},
+          \code{'F'}, \code{'P'}, \code{'S'}, \code{'T'},
+          \code{'W'}, \code{'Y'}, \code{'V'}.}
 
 \item{k}{A positive integer, specifys the window size (half of the window),
          default is 7.}

@@ -22,7 +22,7 @@ Calculate Complexity of a System
 \details{
 This descriptor calculates the complexity of a system.
 The complexity is defined in Nilakantan, R. et al. as:
-\deqn{C = abs(B^2 - A^2 + A) + frac{H}{100}}
+\deqn{C = abs(B^2 - A^2 + A) + \frac{H}{100}}
 where C is complexity, A is the number of non-hydrogen atoms,
 B is the number of bonds and H is the number of heteroatoms.
 }

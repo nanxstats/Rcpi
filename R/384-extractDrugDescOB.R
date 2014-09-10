@@ -7,7 +7,7 @@
 #' 
 #' @param molecules R character string object containing the molecules. 
 #' See the example section for details.
-#' @param type 'smile' or 'sdf'
+#' @param type \code{'smile'} or \code{'sdf'}.
 #' 
 #' @return A data frame, each row represents one of the molecules, 
 #' each column represents one descriptor.
