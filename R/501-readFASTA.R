@@ -1,52 +1,52 @@
 #' Read Protein Sequences in FASTA Format
 #'
 #' Read Protein Sequences in FASTA Format
-#' 
+#'
 #' This function reads protein sequences in FASTA format.
-#' 
-#' @param file   The name of the file which the sequences in fasta format are 
-#'               to be read from. If it does not contain an absolute or 
-#'               relative path, the file name is relative to the current 
-#'               working directory, \code{\link{getwd}}. 
-#'               The default here is to read the \code{P00750.fasta} file which 
+#'
+#' @param file   The name of the file which the sequences in fasta format are
+#'               to be read from. If it does not contain an absolute or
+#'               relative path, the file name is relative to the current
+#'               working directory, \code{\link{getwd}}.
+#'               The default here is to read the \code{P00750.fasta} file which
 #'               is present in the \code{protseq} directory of the Rcpi package.
-#' 
+#'
 #' @param legacy.mode If set to \code{TRUE}, lines starting with a semicolon ';'
 #'                    are ignored. Default value is \code{TRUE}.
-#' @param seqonly     If set to \code{TRUE}, only sequences as returned without 
-#'                    attempt to modify them or to get their names and 
+#' @param seqonly     If set to \code{TRUE}, only sequences as returned without
+#'                    attempt to modify them or to get their names and
 #'                    annotations (execution time is divided approximately
 #'                    by a factor 3). Default value is \code{FALSE}.
-#' 
+#'
 #' @return The result character vector
-#' 
+#'
 #' @keywords Rcpi FASTA readFASTA
 #'
 #' @aliases readFASTA
-#' 
+#'
 #' @note Note that any different sets of instances (chunklets),
-#'       e.g. {1, 3, 7} and {4, 6}, might belong to the 
+#'       e.g. {1, 3, 7} and {4, 6}, might belong to the
 #'       same class and might belong to different classes.
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
-#' @seealso See \code{\link{readPDB}} for reading protein sequences 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
+#' @seealso See \code{\link{readPDB}} for reading protein sequences
 #' in PDB format.
-#' 
+#'
 #' @export readFASTA
-#' 
+#'
 #' @references
-#' Pearson, W.R. and Lipman, D.J. (1988) 
-#' Improved tools for biological sequence comparison. 
-#' \emph{Proceedings of the National Academy of Sciences 
+#' Pearson, W.R. and Lipman, D.J. (1988)
+#' Improved tools for biological sequence comparison.
+#' \emph{Proceedings of the National Academy of Sciences
 #' of the United States of America}, \bold{85}: 2444-2448
-#' 
+#'
 #' @examples
 #' P00750 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))
-#' 
+#'
 
-readFASTA = function (file = system.file('protseq/P00750.fasta', 
-                                         package = 'Rcpi'), 
+readFASTA = function (file = system.file('protseq/P00750.fasta',
+                                         package = 'Rcpi'),
                       legacy.mode = TRUE, seqonly = FALSE) {
 
     # Read the fasta file as a vector of strings
@@ -80,7 +80,7 @@ readFASTA = function (file = system.file('protseq/P00750.fasta',
 
     # Read in sequences
 
-    sequences = lapply(seq_len(nseq), 
+    sequences = lapply(seq_len(nseq),
                        function(i) paste(lines[start[i]:end[i]], collapse = ""))
 
     if (seqonly) return(sequences)
@@ -95,7 +95,7 @@ readFASTA = function (file = system.file('protseq/P00750.fasta',
     # Give the sequences names to the list elements
 
     names(sequences) = nomseq
-    
+
     return(sequences)
 
 }

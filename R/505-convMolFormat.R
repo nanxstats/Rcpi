@@ -1,30 +1,30 @@
 #' Chemical File Formats Conversion
-#' 
+#'
 #' Chemical File Formats Conversion
-#' 
-#' This function converts between various chemical file formats via OpenBabel. 
-#' The complete supported file format list could be found at 
+#'
+#' This function converts between various chemical file formats via OpenBabel.
+#' The complete supported file format list could be found at
 #' \url{http://openbabel.org/docs/dev/FileFormats/Overview.html}.
-#' 
+#'
 #' @param infile A character string. Indicating the input file location.
 #' @param outfile A character string. Indicating the output file location.
-#' @param from The format of \code{infile}. 
-#'             A character string supported by OpenBabel. 
+#' @param from The format of \code{infile}.
+#'             A character string supported by OpenBabel.
 #'             See the note section for the supported formats.
-#' @param to The desired format of \code{outfile}. 
-#'           A character string supported by OpenBabel. 
+#' @param to The desired format of \code{outfile}.
+#'           A character string supported by OpenBabel.
 #'           See the note section for the supported formats.
-#' 
+#'
 #' @return \code{NULL}
-#' 
+#'
 #' @keywords convMolFormat OpenBabel convert molecular format
-#' 
+#'
 #' @aliases convMolFormat
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export convMolFormat
-#' 
+#'
 #' @note The supported formats include:
 #'             \itemize{
 #'             \item abinit -- ABINIT Output Format [Read-only]
@@ -185,14 +185,14 @@
 #'             \item yob -- YASARA.org YOB format
 #'             \item zin -- ZINDO input format [Write-only]
 #'             }
-#' 
+#'
 #' @examples
 #' \donttest{
-#' convMolFormat(infile = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'), 
+#' convMolFormat(infile = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
 #'               outfile = 'aa.smi', from = 'sdf', to = 'smiles')  # SDF to SMILES
-#' convMolFormat(infile = 'aa.smi', outfile = 'aa.mop', 
+#' convMolFormat(infile = 'aa.smi', outfile = 'aa.mop',
 #'               from = 'smiles', to = 'mop')  # SMILES to MOPAC Cartesian format}
-#' 
+#'
 
 convMolFormat = function (infile, outfile, from, to) {
 

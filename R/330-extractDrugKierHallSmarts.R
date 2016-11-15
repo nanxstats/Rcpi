@@ -1,26 +1,26 @@
 #' Descriptor that Counts the Number of Occurrences of the E-State Fragments
 #'
 #' Descriptor that Counts the Number of Occurrences of the E-State Fragments
-#' 
-#' A fragment count descriptor that uses e-state fragments. 
-#' Traditionally the e-state descriptors identify the relevant 
-#' fragments and then evaluate the actual e-state value. 
-#' However it has been shown in Butina et al. 
-#' that simply using the counts of the e-state fragments can 
-#' lead to QSAR models that exhibit similar performance to those 
+#'
+#' A fragment count descriptor that uses e-state fragments.
+#' Traditionally the e-state descriptors identify the relevant
+#' fragments and then evaluate the actual e-state value.
+#' However it has been shown in Butina et al.
+#' that simply using the counts of the e-state fragments can
+#' lead to QSAR models that exhibit similar performance to those
 #' built using the actual e-state indices.
-#' 
-#' Atom typing and aromaticity perception should be 
-#' performed prior to calling this descriptor. 
+#'
+#' Atom typing and aromaticity perception should be
+#' performed prior to calling this descriptor.
 #' The atom type definitions are taken from Hall et al.
 #' The SMARTS definitions were obtained from RDKit.
-#' 
+#'
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process 
+#' @param silent Logical. Whether the calculating process
 #' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, 
-#' each column represents one feature. 
+#' @return A data frame, each row represents one of the molecules,
+#' each column represents one feature.
 #' This function returns 79 columns:
 #' \tabular{ccc}{
 #' ID \tab Name \tab Pattern\cr
@@ -104,42 +104,42 @@
 #' \code{77} \tab \code{khs.sssPbH} \tab \code{[PbD3H1](-*)(-*)-*}\cr
 #' \code{78} \tab \code{khs.ssssPb} \tab \code{[PbD4H0](-*)(-*)(-*)-*}
 #' }
-#' 
+#'
 #' @keywords extractDrugKierHallSmarts Kier Hall Smarts
 #'
 #' @aliases extractDrugKierHallSmarts
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export extractDrugKierHallSmarts
-#' 
+#'
 #' @importFrom rcdk eval.desc
-#' 
+#'
 #' @references
-#' Butina, D. , 
-#' Performance of Kier-Hall E-state Descriptors 
-#' in Quantitative Structure Activity Relationship (QSAR) 
-#' Studies of Multifunctional Molecules, 
+#' Butina, D. ,
+#' Performance of Kier-Hall E-state Descriptors
+#' in Quantitative Structure Activity Relationship (QSAR)
+#' Studies of Multifunctional Molecules,
 #' Molecules, 2004, 9:1004-1009.
-#' 
-#' Hall, L.H. and Kier, L.B. , 
-#' Electrotopological State Indices for Atom Types: 
-#' A Novel Combination of Electronic, Topological, 
-#' and Valence State Information, 
+#'
+#' Hall, L.H. and Kier, L.B. ,
+#' Electrotopological State Indices for Atom Types:
+#' A Novel Combination of Electronic, Topological,
+#' and Valence State Information,
 #' Journal of Chemical Information and Computer Science, 1995, 35:1039-1045.
-#' 
+#'
 #' @examples
 #' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugKierHallSmarts(mol)
 #' head(dat)}
-#' 
+#'
 
 extractDrugKierHallSmarts = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules, 
-                  'org.openscience.cdk.qsar.descriptors.molecular.KierHallSmartsDescriptor', 
+    x = eval.desc(molecules,
+                  'org.openscience.cdk.qsar.descriptors.molecular.KierHallSmartsDescriptor',
                   verbose = !silent)
 
     return(x)

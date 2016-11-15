@@ -1,39 +1,39 @@
 #' CTD Descriptors - Distribution
 #'
 #' CTD Descriptors - Distribution
-#' 
-#' This function calculates the Distribution descriptor of the 
+#'
+#' This function calculates the Distribution descriptor of the
 #' CTD descriptors (Dim: 105).
-#' 
-#' @param x A character vector, as the input protein sequence. 
+#'
+#' @param x A character vector, as the input protein sequence.
 #'
 #' @return A length 105 named vector
-#' 
+#'
 #' @keywords extract CTD CTDD extractProtCTDD Composition
 #'
 #' @aliases extractProtCTDD
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
-#' @seealso See \code{\link{extractProtCTDC}} and \code{\link{extractProtCTDT}} 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
+#' @seealso See \code{\link{extractProtCTDC}} and \code{\link{extractProtCTDT}}
 #'          for Composition and Transition of the CTD descriptors.
-#' 
+#'
 #' @export extractProtCTDD
-#' 
+#'
 #' @references
-#' Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim. 
-#' Prediction of protein folding class using global description of 
-#' amino acid sequence. \emph{Proceedings of the National Academy of Sciences}. 
+#' Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim.
+#' Prediction of protein folding class using global description of
+#' amino acid sequence. \emph{Proceedings of the National Academy of Sciences}.
 #' USA, 1995, 92, 8700-8704.
-#' 
+#'
 #' Inna Dubchak, Ilya Muchink, Christopher Mayor, Igor Dralyuk and Sung-Hou Kim.
-#' Recognition of a Protein Fold in the Context of the SCOP classification. 
+#' Recognition of a Protein Fold in the Context of the SCOP classification.
 #' \emph{Proteins: Structure, Function and Genetics}, 1999, 35, 401-407.
-#' 
+#'
 #' @examples
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 #' extractProtCTDD(x)
-#' 
+#'
 
 extractProtCTDD = function (x) {
 
@@ -51,7 +51,7 @@ extractProtCTDD = function (x) {
                   normwaalsvolume = c('N', 'V', 'E', 'Q', 'I', 'L'),
                   polarity        = c('P', 'A', 'T', 'G', 'S'),
                   polarizability  = c('C', 'P', 'N', 'V', 'E', 'Q', 'I', 'L'),
-                  charge          = c('A', 'N', 'C', 'Q', 'G', 'H', 'I', 'L', 
+                  charge          = c('A', 'N', 'C', 'Q', 'G', 'H', 'I', 'L',
                                       'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V'),
                   secondarystruct = c('V', 'I', 'Y', 'C', 'W', 'F', 'T'),
                   solventaccess   = c('R', 'K', 'Q', 'E', 'N', 'D'))
@@ -85,11 +85,23 @@ extractProtCTDD = function (x) {
 
     for (i in 1:7) {
         inds = which(G[[i]] == 'G1')
-        D[[i]][1, ] = (inds[c(1, floor(length(inds) * c(0.25, 0.5, 0.75)), length(inds))])*100/n
+        quartiles = floor(length(inds) * c(0.25, 0.5, 0.75))
+        D[[i]][1, ] = ifelse(length(inds) > 0,
+                             (inds[c(1, ifelse(quartiles > 0, quartiles, 1),
+                                     length(inds))]) * 100/n,
+                             0)
         inds = which(G[[i]] == 'G2')
-        D[[i]][2, ] = (inds[c(1, floor(length(inds) * c(0.25, 0.5, 0.75)), length(inds))])*100/n
+        quartiles <- floor(length(inds) * c(0.25, 0.5, 0.75))
+        D[[i]][2, ] = ifelse(length(inds) > 0,
+                             (inds[c(1, ifelse(quartiles > 0, quartiles, 1),
+                                     length(inds))]) * 100/n,
+                             0)
         inds = which(G[[i]] == 'G3')
-        D[[i]][3, ] = (inds[c(1, floor(length(inds) * c(0.25, 0.5, 0.75)), length(inds))])*100/n
+        quartiles <- floor(length(inds) * c(0.25, 0.5, 0.75))
+        D[[i]][3, ] = ifelse(length(inds) > 0,
+                             (inds[c(1, ifelse(quartiles > 0, quartiles, 1),
+                                     length(inds))]) * 100/n,
+                             0)
     }
 
     D = do.call(rbind, D)
@@ -97,7 +109,7 @@ extractProtCTDD = function (x) {
 
     names(D) = paste(rep(paste('prop', 1:7, sep = ''), each = 15),
                      rep(rep(c('.G1', '.G2', '.G3'), each = 5), times = 7),
-                     rep(paste('.residue', c('0', '25', '50', '75', '100'), 
+                     rep(paste('.residue', c('0', '25', '50', '75', '100'),
                                sep = ''), times = 21), sep = '')
 
     return(D)

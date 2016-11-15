@@ -1,39 +1,39 @@
 #' CTD Descriptors - Transition
 #'
 #' CTD Descriptors - Transition
-#' 
-#' This function calculates the Transition descriptor of the 
+#'
+#' This function calculates the Transition descriptor of the
 #' CTD descriptors (Dim: 21).
-#' 
-#' @param x A character vector, as the input protein sequence. 
+#'
+#' @param x A character vector, as the input protein sequence.
 #'
 #' @return A length 21 named vector
-#' 
+#'
 #' @keywords extract CTD CTDT extractProtCTDT Transition
 #'
 #' @aliases extractProtCTDT
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
-#' @seealso See \code{\link{extractProtCTDC}} and \code{\link{extractProtCTDD}} 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
+#' @seealso See \code{\link{extractProtCTDC}} and \code{\link{extractProtCTDD}}
 #'          for Composition and Distribution of the CTD descriptors.
-#' 
+#'
 #' @export extractProtCTDT
-#' 
+#'
 #' @references
-#' Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim. 
-#' Prediction of protein folding class using global description of 
-#' amino acid sequence. \emph{Proceedings of the National Academy of Sciences}. 
+#' Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim.
+#' Prediction of protein folding class using global description of
+#' amino acid sequence. \emph{Proceedings of the National Academy of Sciences}.
 #' USA, 1995, 92, 8700-8704.
-#' 
+#'
 #' Inna Dubchak, Ilya Muchink, Christopher Mayor, Igor Dralyuk and Sung-Hou Kim.
-#' Recognition of a Protein Fold in the Context of the SCOP classification. 
+#' Recognition of a Protein Fold in the Context of the SCOP classification.
 #' \emph{Proteins: Structure, Function and Genetics}, 1999, 35, 401-407.
-#' 
+#'
 #' @examples
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 #' extractProtCTDT(x)
-#' 
+#'
 
 extractProtCTDT = function (x) {
 
@@ -51,7 +51,7 @@ extractProtCTDT = function (x) {
                   normwaalsvolume = c('N', 'V', 'E', 'Q', 'I', 'L'),
                   polarity        = c('P', 'A', 'T', 'G', 'S'),
                   polarizability  = c('C', 'P', 'N', 'V', 'E', 'Q', 'I', 'L'),
-                  charge          = c('A', 'N', 'C', 'Q', 'G', 'H', 'I', 'L', 
+                  charge          = c('A', 'N', 'C', 'Q', 'G', 'H', 'I', 'L',
                                       'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V'),
                   secondarystruct = c('V', 'I', 'Y', 'C', 'W', 'F', 'T'),
                   solventaccess   = c('R', 'K', 'Q', 'E', 'N', 'D'))
@@ -81,7 +81,7 @@ extractProtCTDT = function (x) {
     # Combine single amino acids by a 2-length step
 
     for (i in 1:7) G[[i]] = paste(G[[i]][-n], G[[i]][-1], sep = '')
-    G = lapply(G, as.factor)
+    G = lapply(G, function(x) factor(x, levels=c('G1G2', 'G2G1', 'G1G3', 'G3G1', 'G2G3', 'G3G2', 'G1G1', 'G2G2', 'G3G3')))
 
     GSummary = lapply(G, summary)
 
@@ -97,9 +97,8 @@ extractProtCTDT = function (x) {
 
     CTDT = unlist(CTDT)
 
-    names(CTDT) = paste('prop', rep(1:7, each = 3), '.', 
-                        rep(c('Tr1221', 'Tr1331', 'Tr2332'), times = 7) , 
-                        sep = '')
+    names(CTDT) = paste('prop', rep(1:7, each = 3), '.',
+                        rep(c('Tr1221', 'Tr1331', 'Tr2332'), times = 7) , sep = '')
 
     return(CTDT)
 

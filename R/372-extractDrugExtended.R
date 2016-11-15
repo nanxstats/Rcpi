@@ -1,49 +1,49 @@
 #' Calculate the Extended Molecular Fingerprints (in Compact Format)
 #'
 #' Calculate the Extended Molecular Fingerprints (in Compact Format)
-#' 
-#' Calculate the extended molecular fingerprints. 
-#' Considers paths of a given length, similar to the standard type, 
+#'
+#' Calculate the extended molecular fingerprints.
+#' Considers paths of a given length, similar to the standard type,
 #' but takes rings and atomic properties into account into account.
 #' This is hashed fingerprints, with a default length of 1024.
-#' 
+#'
 #' @param molecules Parsed molucule object.
 #' @param depth The search depth. Default is \code{6}.
 #' @param size The length of the fingerprint bit string. Default is \code{1024}.
-#' @param silent Logical. Whether the calculating process 
+#' @param silent Logical. Whether the calculating process
 #' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A list, each component represents one of the molecules, each element 
-#' in the component represents the index of which element 
+#' @return A list, each component represents one of the molecules, each element
+#' in the component represents the index of which element
 #' in the fingerprint is 1.
 #' Each component's name is the length of the fingerprints.
-#' 
+#'
 #' @keywords extractDrugExtended
 #'
 #' @aliases extractDrugExtended
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export extractDrugExtended
-#' 
+#'
 #' @importFrom rcdk get.fingerprint
-#' 
+#'
 #' @seealso \link{extractDrugExtendedComplete}
-#' 
+#'
 #' @examples
 #' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugExtended(mol)
 #' head(fp)}
-#' 
+#'
 
-extractDrugExtended = function (molecules, depth = 6, 
+extractDrugExtended = function (molecules, depth = 6,
                                 size = 1024, silent = TRUE) {
 
     if (length(molecules) == 1) {
-        
-        x = get.fingerprint(molecules, type = 'extended', 
+
+        x = get.fingerprint(molecules, type = 'extended',
                             depth = depth, size = size, verbose = !silent)
 
         fp = vector('list', 1)
@@ -52,7 +52,7 @@ extractDrugExtended = function (molecules, depth = 6,
 
         } else {
 
-            x = lapply(molecules, get.fingerprint, type = 'extended', 
+            x = lapply(molecules, get.fingerprint, type = 'extended',
                        depth = depth, size = size, verbose = !silent)
 
             fp = vector('list', length(molecules))
@@ -73,55 +73,55 @@ extractDrugExtended = function (molecules, depth = 6,
 #' Calculate the Extended Molecular Fingerprints (in Complete Format)
 #'
 #' Calculate the Extended Molecular Fingerprints (in Complete Format)
-#' 
-#' Calculate the extended molecular fingerprints. 
-#' Considers paths of a given length, similar to the standard type, 
+#'
+#' Calculate the extended molecular fingerprints.
+#' Considers paths of a given length, similar to the standard type,
 #' but takes rings and atomic properties into account into account.
 #' This is hashed fingerprints, with a default length of 1024.
-#' 
+#'
 #' @param molecules Parsed molucule object.
 #' @param depth The search depth. Default is \code{6}.
 #' @param size The length of the fingerprint bit string. Default is \code{1024}.
-#' @param silent Logical. Whether the calculating process 
+#' @param silent Logical. Whether the calculating process
 #' should be shown or not, default is \code{TRUE}.
 #'
-#' @return An integer vector or a matrix. Each row represents one molecule, 
+#' @return An integer vector or a matrix. Each row represents one molecule,
 #' the columns represent the fingerprints.
-#' 
+#'
 #' @keywords extractDrugExtendedComplete
 #'
 #' @aliases extractDrugExtendedComplete
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export extractDrugExtendedComplete
-#' 
+#'
 #' @importFrom rcdk get.fingerprint
-#' 
+#'
 #' @seealso \link{extractDrugExtended}
-#' 
+#'
 #' @examples
 #' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugExtendedComplete(mol)
 #' dim(fp)}
-#' 
+#'
 
-extractDrugExtendedComplete = function (molecules, depth = 6, 
+extractDrugExtendedComplete = function (molecules, depth = 6,
                                         size = 1024, silent = TRUE) {
 
     if (length(molecules) == 1) {
-        
-        x = get.fingerprint(molecules, type = 'extended', 
+
+        x = get.fingerprint(molecules, type = 'extended',
                             depth = depth, size = size, verbose = !silent)
-        
+
         fp = integer(x@nbit)
         fp[x@bits] = 1L
 
         } else {
 
-            x = lapply(molecules, get.fingerprint, type = 'extended', 
+            x = lapply(molecules, get.fingerprint, type = 'extended',
                        depth = depth, size = size, verbose = !silent)
 
             fp = matrix(0L, nrow = length(molecules), ncol = size)

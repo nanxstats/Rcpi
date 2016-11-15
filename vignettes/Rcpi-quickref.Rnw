@@ -15,9 +15,9 @@
 \fancyhead[LO]{}
 \cfoot{\thepage}
 
-\author{Nan Xiao\\Central South University \And 
+\author{Nan Xiao\\Central South University \And
         Dongsheng Cao\\Central South University \And
-        Qingsong Xu\\Central South University 
+        Qingsong Xu\\Central South University
         }
 \Plainauthor{Nan Xiao, Dongsheng Cao, Qingsong Xu}
 
@@ -29,27 +29,24 @@
   Nan Xiao \\
   School of Mathematics and Statistics\\
   Central South University\\
-  Changsha, Hunan, P. R. China\\
-  E-mail: \email{road2stat@gmail.com}\\
-  URL: \url{http://r2s.name}\\
-  
+  Changsha, Hunan, China\\
+  E-mail: \email{me@nanx.me}\\
+  URL: \url{http://nanx.me}\\
+
   Dongsheng Cao\\
   School of Pharmaceutical Sciences\\
   Central South University\\
-  Changsha, Hunan, P. R. China\\
-  E-mail: \email{oriental-cds@163.com}\\
-  URL: \url{http://cbdd.csu.edu.cn}\\
-  
+  Changsha, Hunan, China\\
+
   Qingsong Xu\\
   School of Mathematics and Statistics\\
   Central South University\\
-  Changsha, Hunan, P. R. China\\
-  E-mail: \email{dasongxu@gmail.com}
+  Changsha, Hunan, China
 }
 
 %
 <<prelim,echo=FALSE,print=FALSE>>=
-Rcpi.version = 'Release 3'
+Rcpi.version = '1.11.1'
 now.date = strftime(Sys.Date(), "%Y-%m-%d")
 @
 %
@@ -72,7 +69,7 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
     \centering
     \includegraphics[width=0.6\textwidth]{fig/logo-panel-text.pdf}
     \end{figure}
-    
+
 %    {\scshape Computational Biology and Drug Design Group} \\
 %    {\scshape Central South University, China}\par
     \end{center}
@@ -121,7 +118,7 @@ now.date = strftime(Sys.Date(), "%Y-%m-%d")
     \midrule
     \code{getDrug()} & Retrieve drug molecules in MOL format and SMILES format from various online databases\\
     \code{getMolFromDrugBank()} & Retrieve drug molecules in MOL format from DrugBank\\
-    \code{getMolFromPubChem()} & Retrieve drug molecules in MOL format from PubChem\\ 
+    \code{getMolFromPubChem()} & Retrieve drug molecules in MOL format from PubChem\\
     \code{getMolFromChEMBL()} & Retrieve drug molecules in MOL format from ChEMBL\\
     \code{getMolFromKEGG()} & Retrieve drug molecules in MOL format from the KEGG\\
     \code{getMolFromCAS()} & Retrieve drug molecules in InChI format from CAS\\

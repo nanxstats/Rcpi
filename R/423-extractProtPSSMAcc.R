@@ -1,14 +1,14 @@
-#' Profile-based protein representation derived by PSSM 
+#' Profile-based protein representation derived by PSSM
 #' (Position-Specific Scoring Matrix) and auto cross covariance
 #'
-#' Profile-based protein representation derived by PSSM 
+#' Profile-based protein representation derived by PSSM
 #' (Position-Specific Scoring Matrix) and auto cross covariance
 #'
-#' This function calculates the feature vector based on the PSSM 
+#' This function calculates the feature vector based on the PSSM
 #' by running PSI-Blast and auto cross covariance tranformation.
 #'
 #' @param pssmmat The PSSM computed by \code{\link{extractProtPSSM}}.
-#' @param lag The lag parameter. Must be less than the number of amino acids 
+#' @param lag The lag parameter. Must be less than the number of amino acids
 #' in the sequence (i.e. the number of columns in the PSSM matrix).
 #'
 #' @return A length \code{lag * 20^2} named numeric vector,
@@ -21,18 +21,18 @@
 #'
 #' @aliases extractProtPSSMAcc
 #'
-#' @author Nan Xiao <\url{http://r2s.name}>
+#' @author Nan Xiao <\url{http://nanx.me}>
 #'
 #' @export extractProtPSSMAcc
 #'
 #' @references
-#' Wold, S., Jonsson, J., Sj\"{o}rstr\"{o}m, M., Sandberg, 
-#' M., & R\"{a}nnar, S. (1993). 
-#' DNA and peptide sequences and chemical processes multivariately modelled 
-#' by principal component analysis and partial least-squares projections 
-#' to latent structures. 
+#' Wold, S., Jonsson, J., Sj\"{o}rstr\"{o}m, M., Sandberg,
+#' M., & R\"{a}nnar, S. (1993).
+#' DNA and peptide sequences and chemical processes multivariately modelled
+#' by principal component analysis and partial least-squares projections
+#' to latent structures.
 #' \emph{Analytica chimica acta}, 277(2), 239--253.
-#' 
+#'
 #' @examples
 #' \donttest{
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
@@ -68,9 +68,9 @@ extractProtPSSMAcc = function(pssmmat, lag) {
 
         acc1 = as.vector(acc1)
 
-        AADict = c('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 
+        AADict = c('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I',
                    'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
-        names(acc1) = as.vector(outer(AADict, paste0('lag', 1:lag), 
+        names(acc1) = as.vector(outer(AADict, paste0('lag', 1:lag),
                                       paste, sep = '.'))
 
         # auto cross covariance: p^2 - p elements
@@ -86,8 +86,8 @@ extractProtPSSMAcc = function(pssmmat, lag) {
         }
 
         acc2 = as.vector(acc2)
-        names(acc2) = as.vector(outer(paste(AADict[idx[1, ]], AADict[idx[2, ]], 
-                                            sep = '.'), 
+        names(acc2) = as.vector(outer(paste(AADict[idx[1, ]], AADict[idx[2, ]],
+                                            sep = '.'),
                                       paste0('lag', 1:lag), paste, sep = '.'))
 
         ACC = c(acc1, acc2)

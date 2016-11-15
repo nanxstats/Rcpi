@@ -22,44 +22,44 @@
 #' Generating Compound-Protein Interaction Descriptors
 #'
 #' Generating Compound-Protein Interaction Descriptors
-#' 
+#'
 #' This function calculates the compound-protein interaction descriptors
 #' by three types of interaction:
 #' \itemize{
-#' \item \code{combine} - combine the two descriptor matrix, 
+#' \item \code{combine} - combine the two descriptor matrix,
 #' result has \code{(p1 + p2)} columns
-#' \item \code{tensorprod} - calculate column-by-column 
-#' (pseudo)-tensor product type interactions, result has 
+#' \item \code{tensorprod} - calculate column-by-column
+#' (pseudo)-tensor product type interactions, result has
 #' \code{(p1 * p2)} columns
 #' }
-#' 
+#'
 #' @param drugmat The compound descriptor matrix.
 #' @param protmat The protein descriptor matrix.
-#' @param type The interaction type, one or two of 
+#' @param type The interaction type, one or two of
 #' \code{"combine"} and \code{"tensorprod"}.
-#' 
+#'
 #' @return A matrix containing the compound-protein interaction descriptors
-#' 
+#'
 #' @keywords getCPI compound-protein interaction cpi
 #'
 #' @aliases getCPI
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
-#' @seealso See \code{\link{getPPI}} for generating 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
+#' @seealso See \code{\link{getPPI}} for generating
 #' protein-protein interaction descriptors.
-#' 
+#'
 #' @export getCPI
-#' 
+#'
 #' @examples
 #' x = matrix(1:10, ncol = 2)
 #' y = matrix(1:15, ncol = 3)
-#' 
+#'
 #' getCPI(x, y, 'combine')
 #' getCPI(x, y, 'tensorprod')
 #' getCPI(x, y, type = c('combine', 'tensorprod'))
 #' getCPI(x, y, type = c('tensorprod', 'combine'))
-#' 
+#'
 
 getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
 
@@ -82,17 +82,17 @@ getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
 
         } else if (all(type == 'tensorprod')) {
 
-            result = .getCPITensor(drugmat, protmat, row = drugrow, 
+            result = .getCPITensor(drugmat, protmat, row = drugrow,
                                    dcol = drugcol, pcol = protcol)
 
             } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
 
-                result = cbind(.getCPICombine(drugmat, protmat), 
-                               .getCPITensor(drugmat, protmat, row = drugrow, 
+                result = cbind(.getCPICombine(drugmat, protmat),
+                               .getCPITensor(drugmat, protmat, row = drugrow,
                                              dcol = drugcol, pcol = protcol))
 
                 } else {
-                    
+
                     stop('Interaction type must be in "tensorprod" and "combine" or both')
 
                 }

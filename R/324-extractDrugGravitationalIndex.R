@@ -1,19 +1,19 @@
 #' Descriptor Characterizing the Mass Distribution of the Molecule.
 #'
 #' Descriptor Characterizing the Mass Distribution of the Molecule.
-#' 
-#' Descriptor characterizing the mass distribution of the molecule described by 
-#' Katritzky et al. For modelling purposes the value of the descriptor is 
-#' calculated both with and without H atoms. 
-#' Furthermore the square and cube roots of the descriptor 
+#'
+#' Descriptor characterizing the mass distribution of the molecule described by
+#' Katritzky et al. For modelling purposes the value of the descriptor is
+#' calculated both with and without H atoms.
+#' Furthermore the square and cube roots of the descriptor
 #' are also generated as described by Wessel et al.
-#' 
+#'
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process 
+#' @param silent Logical. Whether the calculating process
 #' should be shown or not, default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, 
-#' each column represents one feature. 
+#' @return A data frame, each row represents one of the molecules,
+#' each column represents one feature.
 #' This function returns 9 columns:
 #' \itemize{
 #' \item \code{GRAV.1} - gravitational index of heavy atoms
@@ -26,41 +26,41 @@
 #' \item \code{GRAV.5} - grav2 for all pairs of atoms (not just bonded pairs)
 #' \item \code{GRAV.6} - grav3 for all pairs of atoms (not just bonded pairs)
 #' }
-#' 
+#'
 #' @keywords extractDrugGravitationalIndex Gravitational Index
 #'
 #' @aliases extractDrugGravitationalIndex
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export extractDrugGravitationalIndex
-#' 
+#'
 #' @importFrom rcdk eval.desc
-#' 
+#'
 #' @references
-#' Katritzky, A.R. and Mu, L. and Lobanov, V.S. and Karelson, M., 
-#' Correlation of Boiling Points With Molecular Structure. 
-#' 1. A Training Set of 298 Diverse Organics and a 
-#' Test Set of 9 Simple Inorganics, 
+#' Katritzky, A.R. and Mu, L. and Lobanov, V.S. and Karelson, M.,
+#' Correlation of Boiling Points With Molecular Structure.
+#' 1. A Training Set of 298 Diverse Organics and a
+#' Test Set of 9 Simple Inorganics,
 #' J. Phys. Chem., 1996, 100:10400-10407.
-#' 
-#' Wessel, M.D. and Jurs, P.C. and Tolan, J.W. and Muskal, S.M. , 
-#' Prediction of Human Intestinal Absorption of Drug Compounds 
-#' From Molecular Structure, 
+#'
+#' Wessel, M.D. and Jurs, P.C. and Tolan, J.W. and Muskal, S.M. ,
+#' Prediction of Human Intestinal Absorption of Drug Compounds
+#' From Molecular Structure,
 #' Journal of Chemical Information and Computer Sciences, 1998, 38:726-735.
-#' 
+#'
 #' @examples
 #' \donttest{
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugGravitationalIndex(mol)
 #' head(dat)}
-#' 
+#'
 
 extractDrugGravitationalIndex = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules, 
-                  'org.openscience.cdk.qsar.descriptors.molecular.GravitationalIndexDescriptor', 
+    x = eval.desc(molecules,
+                  'org.openscience.cdk.qsar.descriptors.molecular.GravitationalIndexDescriptor',
                   verbose = !silent)
 
     return(x)

@@ -1,51 +1,51 @@
-#' Parallelized Drug Molecule Similarity Search by 
+#' Parallelized Drug Molecule Similarity Search by
 #' Molecular Fingerprints Similarity or Maximum Common Substructure Search
-#' 
-#' Parallelized Drug Molecule Similarity Search by 
+#'
+#' Parallelized Drug Molecule Similarity Search by
 #' Molecular Fingerprints Similarity or Maximum Common Substructure Search
-#' 
-#' This function does compound similarity search derived by 
-#' various molecular fingerprints with various similarity measures or 
+#'
+#' This function does compound similarity search derived by
+#' various molecular fingerprints with various similarity measures or
 #' derived by maximum common substructure search.
 #' This function runs for a query compound against a set of molecules.
-#' 
-#' @param mol The query molecule. The location of a \code{sdf} file 
+#'
+#' @param mol The query molecule. The location of a \code{sdf} file
 #' containing one molecule.
-#' @param moldb The molecule database. The location of a \code{sdf} file 
+#' @param moldb The molecule database. The location of a \code{sdf} file
 #' containing all the molecules to be searched with.
-#' @param cores Integer. The number of CPU cores to use for parallel search, 
+#' @param cores Integer. The number of CPU cores to use for parallel search,
 #'        default is \code{2}. Users could use the \code{detectCores()} function
 #'        in the \code{parallel} package to see how many cores they could use.
 #' @param method \code{'fp'} or \code{'mcs'}. Search by molecular fingerprints
 #'               or by maximum common substructure searching.
 #' @param fptype The fingerprint type, only available when \code{method = 'fp'}.
-#'               Rcpi supports 13 types of fingerprints, including 
+#'               Rcpi supports 13 types of fingerprints, including
 #'               \code{'standard'}, \code{'extended'}, \code{'graph'},
-#'               \code{'hybrid'}, \code{'maccs'}, \code{'estate'}, 
+#'               \code{'hybrid'}, \code{'maccs'}, \code{'estate'},
 #'               \code{'pubchem'}, \code{'kr'}, \code{'shortestpath'},
 #'               \code{'fp2'}, \code{'fp3'}, \code{'fp4'}, \code{'obmaccs'}.
-#' @param fpsim Similarity measure type for fingerprint, 
+#' @param fpsim Similarity measure type for fingerprint,
 #'              only available when \code{method = 'fp'}.
-#'              Including \code{'tanimoto'}, \code{'euclidean'}, 
-#'              \code{'cosine'}, \code{'dice'} and \code{'hamming'}. 
+#'              Including \code{'tanimoto'}, \code{'euclidean'},
+#'              \code{'cosine'}, \code{'dice'} and \code{'hamming'}.
 #'              See \code{calcDrugFPSim} for details.
-#' @param mcssim Similarity measure type for maximum common substructure search, 
-#'               only available when \code{method = 'mcs'}. 
+#' @param mcssim Similarity measure type for maximum common substructure search,
+#'               only available when \code{method = 'mcs'}.
 #'               Including \code{'tanimoto'} and \code{'overlap'}.
-#' @param ... Other possible parameter for maximum common substructure search, 
+#' @param ... Other possible parameter for maximum common substructure search,
 #'            see \code{calcDrugMCSSim} for available options.
-#' 
+#'
 #' @return Named numerical vector.
 #' With the decreasing similarity value of the molecules in the database.
-#' 
+#'
 #' @keywords searchDrug Drug Molecule Similarity Search MCS
-#' 
+#'
 #' @aliases searchDrug
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export searchDrug
-#' 
+#'
 #' @examples
 #' \donttest{
 #' mol = system.file('compseq/DB00530.sdf', package = 'Rcpi')
@@ -55,23 +55,23 @@
 #' searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'maccs', fpsim = 'hamming')
 #' searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'fp2', fpsim = 'tanimoto')
 #' searchDrug(mol, moldb, cores = 4, method = 'mcs', mcssim = 'tanimoto')}
-#' 
+#'
 
-searchDrug = function (mol, moldb, cores = 2, 
-                       method = c('fp', 'mcs'), 
+searchDrug = function (mol, moldb, cores = 2,
+                       method = c('fp', 'mcs'),
                        fptype = c('standard', 'extended', 'graph',
                                   'hybrid', 'maccs', 'estate',
                                   'pubchem', 'kr', 'shortestpath',
-                                  'fp2', 'fp3', 'fp4', 'obmaccs'), 
-                       fpsim = c('tanimoto', 'euclidean', 'cosine', 
-                                 'dice', 'hamming'), 
+                                  'fp2', 'fp3', 'fp4', 'obmaccs'),
+                       fpsim = c('tanimoto', 'euclidean', 'cosine',
+                                 'dice', 'hamming'),
                        mcssim = c('tanimoto', 'overlap'), ...) {
 
     doParallel::registerDoParallel(cores)
 
     if (method == 'fp') {
 
-        if ( fptype %in% c('standard', 'extended', 'graph', 
+        if ( fptype %in% c('standard', 'extended', 'graph',
                            'hybrid',   'maccs',    'estate',
                            'pubchem',  'kr',       'shortestpath') ) {
 
@@ -200,12 +200,12 @@ searchDrug = function (mol, moldb, cores = 2,
         fmcsresult = fmcsR::fmcsBatch(mol, moldb, ...)
 
         if (mcssim == 'tanimoto') {
-            rankvec = fmcsresult[order(fmcsresult[, 'Tanimoto_Coefficient'], 
+            rankvec = fmcsresult[order(fmcsresult[, 'Tanimoto_Coefficient'],
                                        decreasing = TRUE), 'Tanimoto_Coefficient']
         }
 
         if (mcssim == 'overlap') {
-            rankvec = fmcsresult[order(fmcsresult[, 'Overlap_Coefficient'], 
+            rankvec = fmcsresult[order(fmcsresult[, 'Overlap_Coefficient'],
                                        decreasing = TRUE), 'Overlap_Coefficient']
         }
 

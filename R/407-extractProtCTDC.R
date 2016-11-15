@@ -1,39 +1,39 @@
 #' CTD Descriptors - Composition
 #'
 #' CTD Descriptors - Composition
-#' 
-#' This function calculates the Composition descriptor of the 
+#'
+#' This function calculates the Composition descriptor of the
 #' CTD descriptors (Dim: 21).
-#' 
-#' @param x A character vector, as the input protein sequence. 
+#'
+#' @param x A character vector, as the input protein sequence.
 #'
 #' @return A length 21 named vector
-#' 
+#'
 #' @keywords extract CTD CTDC extractProtCTDC Composition
 #'
 #' @aliases extractProtCTDC
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
-#' @seealso See \code{\link{extractProtCTDT}} and \code{\link{extractProtCTDD}} 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
+#' @seealso See \code{\link{extractProtCTDT}} and \code{\link{extractProtCTDD}}
 #'          for Transition and Distribution of the CTD descriptors.
-#' 
+#'
 #' @export extractProtCTDC
-#' 
+#'
 #' @references
-#' Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim. 
-#' Prediction of protein folding class using global description of 
-#' amino acid sequence. \emph{Proceedings of the National Academy of Sciences}. 
+#' Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim.
+#' Prediction of protein folding class using global description of
+#' amino acid sequence. \emph{Proceedings of the National Academy of Sciences}.
 #' USA, 1995, 92, 8700-8704.
-#' 
+#'
 #' Inna Dubchak, Ilya Muchink, Christopher Mayor, Igor Dralyuk and Sung-Hou Kim.
-#' Recognition of a Protein Fold in the Context of the SCOP classification. 
+#' Recognition of a Protein Fold in the Context of the SCOP classification.
 #' \emph{Proteins: Structure, Function and Genetics}, 1999, 35, 401-407.
-#' 
+#'
 #' @examples
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 #' extractProtCTDC(x)
-#' 
+#'
 
 extractProtCTDC = function (x) {
 
@@ -51,7 +51,7 @@ extractProtCTDC = function (x) {
                   normwaalsvolume = c('N', 'V', 'E', 'Q', 'I', 'L'),
                   polarity        = c('P', 'A', 'T', 'G', 'S'),
                   polarizability  = c('C', 'P', 'N', 'V', 'E', 'Q', 'I', 'L'),
-                  charge          = c('A', 'N', 'C', 'Q', 'G', 'H', 'I', 'L', 
+                  charge          = c('A', 'N', 'C', 'Q', 'G', 'H', 'I', 'L',
                                       'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V'),
                   secondarystruct = c('V', 'I', 'Y', 'C', 'W', 'F', 'T'),
                   solventaccess   = c('R', 'K', 'Q', 'E', 'N', 'D'))
@@ -67,23 +67,17 @@ extractProtCTDC = function (x) {
     xSplitted = strsplit(x, split = '')[[1]]
     n  = nchar(x)
 
-    G = vector('list', 7)
-    for (i in 1:7) G[[i]] = rep(NA, n)
-
     # Get groups for each property & each amino acid
 
-    for (i in 1:7) {
-        try(G[[i]][which(xSplitted %in% group1[[i]])] <- 'G1')
-        try(G[[i]][which(xSplitted %in% group2[[i]])] <- 'G2')
-        try(G[[i]][which(xSplitted %in% group3[[i]])] <- 'G3')
-    }
+    g1 = lapply(group1, function(g) length(which(xSplitted %in% g)))
+    names(g1) = paste(names(g1), 'Group1', sep = '.')
+    g2 = lapply(group2, function(g) length(which(xSplitted %in% g)))
+    names(g2) = paste(names(g2), 'Group2', sep = '.')
+    g3 = lapply(group3, function(g) length(which(xSplitted %in% g)))
+    names(g3) = paste(names(g3), 'Group3', sep = '.')
+    CTDC = unlist(c(g1, g2, g3))/n
+    ids = unlist(lapply(1:7, function(x) x + c(0, 7, 14)))
 
-    G = lapply(G, as.factor)
-
-    CTDC = unlist(lapply(G, summary))/n
-    names(CTDC) = paste('prop', rep(1:7, each = 3), 
-                        '.', names(CTDC), sep = '')
-
-    return(CTDC)
+    return(CTDC[ids])
 
 }

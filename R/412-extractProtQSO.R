@@ -1,61 +1,59 @@
 #' Quasi-Sequence-Order (QSO) Descriptor
 #'
 #' Quasi-Sequence-Order (QSO) Descriptor
-#' 
+#'
 #' This function calculates the Quasi-Sequence-Order (QSO) descriptor
 #' (Dim: \code{20 + 20 + (2 * nlag)}, default is 100).
-#' 
+#'
 #' @param x A character vector, as the input protein sequence.
 #'
 #' @param nlag The maximum lag, defualt is 30.
-#' 
+#'
 #' @param w The weighting factor, default is 0.1.
 #'
 #' @return A length \code{20 + 20 + (2 * nlag)} named vector
-#' 
+#'
 #' @keywords extract QSO extractProtQSO Quasi Sequence Order Quasi-Sequence-Order
 #'
 #' @aliases extractProtQSO
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
-#' @seealso See \code{\link{extractProtSOCN}} 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
+#' @seealso See \code{\link{extractProtSOCN}}
 #' for sequence-order-coupling numbers.
-#' 
+#'
 #' @export extractProtQSO
-#' 
+#'
 #' @references
-#' Kuo-Chen Chou. Prediction of Protein Subcellar Locations by 
+#' Kuo-Chen Chou. Prediction of Protein Subcellar Locations by
 #' Incorporating Quasi-Sequence-Order Effect.
 #' \emph{Biochemical and Biophysical Research Communications},
 #' 2000, 278, 477-483.
-#' 
+#'
 #' Kuo-Chen Chou and Yu-Dong Cai. Prediction of Protein Sucellular Locations by
-#' GO-FunD-PseAA Predictor. 
+#' GO-FunD-PseAA Predictor.
 #' \emph{Biochemical and Biophysical Research Communications},
 #' 2004, 320, 1236-1239.
-#' 
-#' Gisbert Schneider and Paul Wrede. The Rational Design of 
-#' Amino Acid Sequences by Artifical Neural Networks and Simulated 
+#'
+#' Gisbert Schneider and Paul Wrede. The Rational Design of
+#' Amino Acid Sequences by Artifical Neural Networks and Simulated
 #' Molecular Evolution: Do Novo Design of an Idealized Leader Cleavge Site.
 #' \emph{Biophys Journal}, 1994, 66, 335-344.
-#' 
+#'
 #' @examples
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 #' extractProtQSO(x)
-#' 
+#'
 
 extractProtQSO = function (x, nlag = 30, w = 0.1) {
 
     if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
 
     N = nchar(x)
-    if (N < nlag) stop("Length of the protein sequence must be no less than 'nlag'")
+    if (N <= nlag) stop('Length of the protein sequence must be greater than "nlag"')
 
-    DistMat1 = read.csv(system.file('sysdata/Schneider-Wrede.csv', 
-                                    package = 'Rcpi'), header = TRUE)
-    DistMat2 = read.csv(system.file('sysdata/Grantham.csv', 
-                                    package = 'Rcpi'), header = TRUE)
+    DistMat1 = read.csv(system.file('sysdata/Schneider-Wrede.csv', package = 'protr'), header = TRUE)
+    DistMat2 = read.csv(system.file('sysdata/Grantham.csv', package = 'protr'), header = TRUE)
     row.names(DistMat1) = as.character(DistMat1[, 1])
     DistMat1 = DistMat1[, -1]
     row.names(DistMat2) = as.character(DistMat2[, 1])
@@ -89,7 +87,7 @@ extractProtQSO = function (x, nlag = 30, w = 0.1) {
 
     # Compute fr
 
-    AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 
+    AADict = c('A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I',
                'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
 
     fr = summary(factor(xSplitted, levels = AADict), maxsum = 21)

@@ -1,40 +1,40 @@
 #' Retrieve Protein Sequence in various Formats from Databases
 #'
 #' Retrieve Protein Sequence in various Formats from Databases
-#' 
+#'
 #' This function retrieves protein sequence in various formats from three databases.
-#' 
+#'
 #' @param id A character vector, as the protein ID(s).
 #' @param from The database, one of \code{'uniprot'}, \code{'kegg'}, \code{'pdb'}.
 #' @param type The returned protein format, one of \code{fasta}, \code{pdb}, \code{aaseq}.
-#' @param parallel An integer, the parallel parameter, indicates how many 
-#'                 process the user would like to use for retrieving 
-#'                 the data (using RCurl), default is \code{5}. 
+#' @param parallel An integer, the parallel parameter, indicates how many
+#'                 process the user would like to use for retrieving
+#'                 the data (using RCurl), default is \code{5}.
 #'                 For regular cases, we recommend a number less than \code{20}.
-#' 
-#' @return A length of \code{id} character list, each element 
+#'
+#' @return A length of \code{id} character list, each element
 #' containing the corresponding protein sequence(s) or file(s).
-#' 
+#'
 #' @keywords getProt
 #'
 #' @aliases getProt
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
-#' @seealso See \code{\link{getDrug}} for retrieving drug molecules 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
+#' @seealso See \code{\link{getDrug}} for retrieving drug molecules
 #' from five databases.
-#' 
+#'
 #' @export getProt
-#' 
+#'
 #' @examples
 #' \donttest{
 #' id = c('P00750', 'P00751', 'P00752')
 #' getProt(id, from = 'uniprot', type = 'aaseq')}
-#' 
+#'
 
 getProt = function (id,
                     from = c('uniprot', 'kegg', 'pdb'),
-                    type = c('fasta', 'pdb', 'aaseq'), 
+                    type = c('fasta', 'pdb', 'aaseq'),
                     parallel = 5) {
 
     if (is.null(from)) stop('Must specify a data source')
@@ -46,7 +46,7 @@ getProt = function (id,
     if (from == 'kegg' & type == 'pdb') stop('KEGG only supports type = "fasta" or type = "aaseq"')
     if (from == 'pdb' & type == 'fasta') stop('RCSB PDB only supports type = "pdb" or type = "aaseq"')
 
-    FromDict = c('uniprot' = 'UniProt', 'kegg' = 'KEGG', 'pdb' = 'RCSBPDB')  
+    FromDict = c('uniprot' = 'UniProt', 'kegg' = 'KEGG', 'pdb' = 'RCSBPDB')
     TypeDict = c('fasta' = 'FASTA', 'pdb' = 'PDB', 'aaseq' = 'Seq')
 
     NamePart1 = TypeDict[type]
@@ -54,8 +54,8 @@ getProt = function (id,
 
     FunctionName = paste('get', NamePart1, 'From', NamePart2, sep = '')
 
-    Prot = eval(parse(text = paste(FunctionName, '(', 
-                                   gsub('\\"', '\'', capture.output(dput(id))), 
+    Prot = eval(parse(text = paste(FunctionName, '(',
+                                   gsub('\\"', '\'', capture.output(dput(id))),
                                    ', ', parallel, ')', sep = '')))
 
     return(Prot)

@@ -1,19 +1,19 @@
 #' Calculate Molecular Descriptors Provided by OpenBabel
-#' 
+#'
 #' Calculate Molecular Descriptors Provided by OpenBabel
-#' 
-#' This function calculates 14 types of the \emph{numerical} 
+#'
+#' This function calculates 14 types of the \emph{numerical}
 #' molecular descriptors provided in OpenBabel.
-#' 
-#' @param molecules R character string object containing the molecules. 
+#'
+#' @param molecules R character string object containing the molecules.
 #' See the example section for details.
 #' @param type \code{'smile'} or \code{'sdf'}.
-#' 
-#' @return A data frame, each row represents one of the molecules, 
+#'
+#' @return A data frame, each row represents one of the molecules,
 #' each column represents one descriptor.
-#' This function returns 14 columns named 
-#' \code{abonds}, \code{atoms}, \code{bonds}, \code{dbonds}, 
-#' \code{HBA1}, \code{HBA2}, \code{HBD}, \code{logP}, 
+#' This function returns 14 columns named
+#' \code{abonds}, \code{atoms}, \code{bonds}, \code{dbonds},
+#' \code{HBA1}, \code{HBA2}, \code{HBD}, \code{logP},
 #' \code{MR}, \code{MW}, \code{nF}, \code{sbonds}, \code{tbonds}, \code{TPSA}:
 #'         \itemize{
 #'         \item \code{abonds} - Number of aromatic bonds
@@ -31,36 +31,36 @@
 #'         \item \code{tbonds} - Number of triple bonds
 #'         \item \code{TPSA} - Topological Polar Surface Area
 #'         }
-#' 
+#'
 #' @keywords extractDrugDescOB OpenBabel Descriptors
-#' 
+#'
 #' @aliases extractDrugDescOB
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export extractDrugDescOB
-#' 
+#'
 #' @examples
 #' \donttest{
 #' mol1 = 'CC(=O)NCCC1=CNc2c1cc(OC)cc2'  # one molecule SMILE in a vector
-#' mol2 = c('OCCc1c(C)[n+](=cs1)Cc2cnc(C)nc(N)2', 
-#'          'CCc(c1)ccc2[n+]1ccc3c2Nc4c3cccc4', 
+#' mol2 = c('OCCc1c(C)[n+](=cs1)Cc2cnc(C)nc(N)2',
+#'          'CCc(c1)ccc2[n+]1ccc3c2Nc4c3cccc4',
 #'          '[Cu+2].[O-]S(=O)(=O)[O-]')  # multiple SMILEs in a vector
-#' mol3 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'), 
+#' mol3 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'),
 #'                 nchars = 1e+6)  # single molecule in single sdf file
-#' mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'), 
+#' mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
 #'                 nchars = 1e+6)  # multiple molecules in single sdf file
-#' 
+#'
 #' smidesc0 = extractDrugDescOB(mol1, type = 'smile')
 #' smidesc1 = extractDrugDescOB(mol2, type = 'smile')
 #' sdfdesc0 = extractDrugDescOB(mol3, type = 'sdf')
 #' sdfdesc1 = extractDrugDescOB(mol4, type = 'sdf')}
-#' 
+#'
 
 extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
 
     strDesc = c('cansmi', 'cansmiNS', 'formula', 'title')
-    numDesc = c('abonds', 'atoms', 'bonds', 'dbonds', 'HBA1', 'HBA2', 'HBD', 
+    numDesc = c('abonds', 'atoms', 'bonds', 'dbonds', 'HBA1', 'HBA2', 'HBD',
                 'logP', 'MR', 'MW', 'nF', 'sbonds', 'tbonds', 'TPSA')
 
     if (type == 'smile') {
@@ -69,41 +69,41 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
 
             x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
 
-            } else if ( length(molecules) > 1L ) {
+        } else if ( length(molecules) > 1L ) {
 
-                x = matrix(NA, nrow = length(molecules), ncol = length(numDesc))
+            x = matrix(NA, nrow = length(molecules), ncol = length(numDesc))
 
-                for ( i in 1:length(molecules) ) {
-                    x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
-                }
-
+            for ( i in 1:length(molecules) ) {
+                x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
             }
 
-        } else if (type == 'sdf') {
+        }
 
-            smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES', 
-                                            source = molecules)
-            smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
+    } else if (type == 'sdf') {
 
-            if ( length(smiclean) == 1L ) {
+        smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES',
+                                        source = molecules)
+        smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
 
-                x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+        if ( length(smiclean) == 1L ) {
 
-                } else if ( length(smiclean) > 1L ) {
+            x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
 
-                    x = matrix(NA, nrow = length(smiclean), ncol = length(numDesc))
+        } else if ( length(smiclean) > 1L ) {
 
-                    for ( i in 1:length(smiclean) ) {
-                        x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
-                    }
+            x = matrix(NA, nrow = length(smiclean), ncol = length(numDesc))
 
-                }
-
-            } else {
-
-                stop('Molecule type must be "smile" or "sdf"')
-
+            for ( i in 1:length(smiclean) ) {
+                x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
             }
+
+        }
+
+    } else {
+
+        stop('Molecule type must be "smile" or "sdf"')
+
+    }
 
     colnames(x) = numDesc
 

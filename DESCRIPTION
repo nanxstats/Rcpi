@@ -1,19 +1,24 @@
 Package: Rcpi
 Type: Package
 Title: Toolkit for Compound-Protein Interaction in Drug Discovery
-Version: 1.0.2
-Date: 2014-07-20
-Description: The Rcpi package offers an R/Bioconductor package emphasizing the
-    comprehensive integration of bioinformatics and chemoinformatics into a
-    molecular informatics platform for drug discovery.
-Author: Nan Xiao <road2stat@gmail.com>, Dongsheng Cao <oriental-cds@163.com>,
-    Qingsong Xu <dasongxu@gmail.com>
-Maintainer: Nan Xiao <road2stat@gmail.com>
+Version: 1.11.1
+Date: 2016-11-12
+Description: Rcpi offers a molecular informatics toolkit with a
+    comprehensive integration of bioinformatics and
+    chemoinformatics tools for drug discovery.
+Authors@R: c(
+    person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre")),
+    person("Dongsheng", "Cao", role = "aut"),
+    person("Qingsong", "Xu", email = "qsxu@csu.edu.cn", role = c("aut"))
+    )
+Author: Nan Xiao <me@nanx.me>, Dongsheng Cao, Qingsong Xu <qsxu@csu.edu.cn>
+Maintainer: Nan Xiao <me@nanx.me>
 License: Artistic-2.0
 URL: https://github.com/road2stat/Rcpi
 BugReports: https://github.com/road2stat/Rcpi/issues
 LazyData: yes
 Imports:
+    methods,
     RCurl,
     rjson,
     rcdk,
@@ -30,3 +35,4 @@ Enhances: ChemmineOB
 biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
     Cheminformatics, BiomedicalInformatics, Proteomics, GO,
     GraphAndNetwork, SystemsBiology
+RoxygenNote: 5.0.1

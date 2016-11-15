@@ -1,44 +1,44 @@
 #' Calculates All the Molecular Descriptors in the Rcpi Package at Once
 #'
 #' Calculates All the Molecular Descriptors in the Rcpi Package at Once
-#' 
-#' This function calculates all the molecular descriptors 
+#'
+#' This function calculates all the molecular descriptors
 #' in the Rcpi package at once.
-#' 
+#'
 #' @param molecules Parsed molucule object.
-#' @param silent Logical. Whether the calculating process should be 
+#' @param silent Logical. Whether the calculating process should be
 #' shown or not, default is \code{TRUE}.
-#' @param warn Logical. Whether the warning about some descriptors 
-#' need the 3D coordinates should be shown or not after the calculation, 
+#' @param warn Logical. Whether the warning about some descriptors
+#' need the 3D coordinates should be shown or not after the calculation,
 #' default is \code{TRUE}.
 #'
-#' @return A data frame, each row represents one of the molecules, 
-#' each column represents one descriptor. 
-#' Currently, this function returns total 293 descriptors 
+#' @return A data frame, each row represents one of the molecules,
+#' each column represents one descriptor.
+#' Currently, this function returns total 293 descriptors
 #' composed of 48 descriptor types.
-#' 
+#'
 #' @keywords extractDrugAIO
-#' 
+#'
 #' @aliases extractDrugAIO
-#' 
-#' @author Nan Xiao <\url{http://r2s.name}>
-#' 
+#'
+#' @author Nan Xiao <\url{http://nanx.me}>
+#'
 #' @export extractDrugAIO
-#' 
+#'
 #' @importFrom rcdk eval.desc
-#' 
+#'
 #' @note
-#' Note that we need 3-D coordinates of the molecules to calculate 
-#' some of the descriptors, if not provided, these descriptors 
+#' Note that we need 3-D coordinates of the molecules to calculate
+#' some of the descriptors, if not provided, these descriptors
 #' values will be \code{NA}.
-#' 
+#'
 #' @examples
 #' \donttest{
 #' # Load 20 small molecules that have 3D coordinates
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugAIO(mol, warn = FALSE)}
-#' 
+#'
 
 extractDrugAIO = function (molecules, silent = TRUE, warn = TRUE) {
 
@@ -54,12 +54,12 @@ extractDrugAIO = function (molecules, silent = TRUE, warn = TRUE) {
                   'org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor',
                   'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorCharge',
                   'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorMass',
-                  'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorPolarizability', 
+                  'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorPolarizability',
                   'org.openscience.cdk.qsar.descriptors.molecular.BCUTDescriptor',
                   'org.openscience.cdk.qsar.descriptors.molecular.BPolDescriptor',
                   'org.openscience.cdk.qsar.descriptors.molecular.BondCountDescriptor',
                   'org.openscience.cdk.qsar.descriptors.molecular.CPSADescriptor',
-                  'org.openscience.cdk.qsar.descriptors.molecular.CarbonTypesDescriptor', 
+                  'org.openscience.cdk.qsar.descriptors.molecular.CarbonTypesDescriptor',
                   'org.openscience.cdk.qsar.descriptors.molecular.ChiChainDescriptor',
                   'org.openscience.cdk.qsar.descriptors.molecular.ChiClusterDescriptor',
                   'org.openscience.cdk.qsar.descriptors.molecular.ChiPathClusterDescriptor',
