@@ -2,7 +2,7 @@
 
 ## NEW FEATURES
 
-- initial release
+- Initial release
 
 # Rcpi 1.0.2 (2014-07-20)
 
