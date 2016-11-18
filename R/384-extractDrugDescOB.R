@@ -90,7 +90,7 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
 
         } else if ( length(smiclean) > 1L ) {
 
-            x = matrix(NA, nrow = length(smiclean), ncol = length(numDesc))
+            x = matrix(NA, nrow = length(smiclean), ncol = 16)
 
             for ( i in 1:length(smiclean) ) {
                 molRefs = forEachMol('SMILES', smiclean[i], identity)
