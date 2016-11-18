@@ -42,7 +42,7 @@ Users could provide customized amino acid property matrices.
 This function implements the core computation procedure needed for
 the generalized scales-based descriptors derived by AA-Properties (AAindex)
 and generalized scales-based descriptors derived by 20+ classes of 2D and 3D
-molecular descriptors (Topological, WHIM, VHSE, etc.) in the protr package.
+molecular descriptors (Topological, WHIM, VHSE, etc.).
 }
 \examples{
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]

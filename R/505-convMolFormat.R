@@ -17,7 +17,7 @@
 #'
 #' @return \code{NULL}
 #'
-#' @keywords convMolFormat OpenBabel convert molecular format
+#' @keywords convMolFormat OpenBabel convert format
 #'
 #' @aliases convMolFormat
 #'
@@ -192,10 +192,12 @@
 #'               outfile = 'aa.smi', from = 'sdf', to = 'smiles')  # SDF to SMILES
 #' convMolFormat(infile = 'aa.smi', outfile = 'aa.mop',
 #'               from = 'smiles', to = 'mop')  # SMILES to MOPAC Cartesian format}
-#'
 
 convMolFormat = function (infile, outfile, from, to) {
 
-    eval(parse(text = "invisible(.Call('ob_convert_file', as.character(from), as.character(to), as.character(infile), as.character(outfile), PACKAGE = 'ChemmineOB'))"))
+    ChemmineOB::convertFormatFile(from = from, to = to,
+                                  fromFile = infile, toFile = outfile)
+
+    invisible()
 
 }

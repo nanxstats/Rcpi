@@ -27,7 +27,7 @@ and return the amino acid sequences represented by single-letter code.
 }
 \examples{
 Seq4HHB = readPDB(system.file('protseq/4HHB.pdb', package = 'Rcpi'))
-
+Seq4HHB
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

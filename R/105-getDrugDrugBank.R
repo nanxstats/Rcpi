@@ -2,7 +2,8 @@
 #'
 #' Retrieve Drug Molecules in MOL Format from the DrugBank Database
 #'
-#' This function retrieves drug molecules in MOL format from the DrugBank database.
+#' This function retrieves drug molecules in MOL format from the
+#' DrugBank database.
 #'
 #' @param id A character vector, as the DrugBank drug ID.
 #' @param parallel An integer, the parallel parameter, indicates how many
@@ -35,9 +36,9 @@
 getMolFromDrugBank = function (id, parallel = 5) {
 
     # example id : DB00859 (Penicillamine)
-    # example url: http://www.drugbank.ca/drugs/DB00859.sdf
+    # example url: http://www.drugbank.ca/structures/structures/small_molecule_drugs/DB00859.sdf
 
-    SdfURL = paste0('http://www.drugbank.ca/drugs/', id, '.sdf')
+    SdfURL = paste0('http://www.drugbank.ca/structures/structures/small_molecule_drugs/', id, '.sdf')
 
     SdfTxt = getURLAsynchronous(url = SdfURL, perform = parallel)
 
@@ -49,7 +50,8 @@ getMolFromDrugBank = function (id, parallel = 5) {
 #'
 #' Retrieve Drug Molecules in SMILES Format from the DrugBank Database
 #'
-#' This function retrieves drug molecules in SMILES format from the DrugBank database.
+#' This function retrieves drug molecules in SMILES format from the
+#' DrugBank database.
 #'
 #' @param id A character vector, as the DrugBank drug ID.
 #' @param parallel An integer, the parallel parameter, indicates how many
@@ -82,14 +84,12 @@ getMolFromDrugBank = function (id, parallel = 5) {
 getSmiFromDrugBank = function (id, parallel = 5) {
 
     # example id : DB00859 (Penicillamine)
-    # example url: http://www.drugbank.ca/drugs/DB00859.sdf
+    # example url: http://www.drugbank.ca/structures/structures/small_molecule_drugs/DB00859.sdf
 
     SdfTxt = getMolFromDrugBank(id, parallel)
 
-    # rcdk::load.molecules() only loads files on the disk
-    # so we have to do this
     tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'sdf')
-    for (i in 1:length(id)) write(SdfTxt[[i]], tmpfile[i])
+    for (i in 1:length(id)) cat(SdfTxt[[i]], file = tmpfile[i])
 
     Mol = load.molecules(tmpfile)
     Smi = sapply(Mol, get.smiles)

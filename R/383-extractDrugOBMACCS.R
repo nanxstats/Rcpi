@@ -21,6 +21,7 @@
 #'
 #' @examples
 #' \donttest{
+#' # MACCS may not be available in current version of ChemmineOB
 #' mol1 = 'C1CCC1CC(CN(C)(C))CC(=O)CC'  # one molecule SMILE in a vector
 #' mol2 = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1',
 #'          'C1CCC1CC(CN(C)(C))CC(=O)CC')  # multiple SMILEs in a vector
@@ -33,7 +34,6 @@
 #' smifp1 = extractDrugOBMACCS(mol2, type = 'smile')
 #' sdffp0 = extractDrugOBMACCS(mol3, type = 'sdf')
 #' sdffp1 = extractDrugOBMACCS(mol4, type = 'sdf')}
-#'
 
 extractDrugOBMACCS = function (molecules, type = c('smile', 'sdf')) {
 
@@ -41,43 +41,46 @@ extractDrugOBMACCS = function (molecules, type = c('smile', 'sdf')) {
 
         if ( length(molecules) == 1L ) {
 
-            fp = ChemmineOB::fingerprint_OB('SMI', molecules, 'MACCS')
+            molRefs = forEachMol('SMILES', molecules, identity)
+            fp = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
 
-            } else if ( length(molecules) > 1L ) {
+        } else if ( length(molecules) > 1L ) {
 
-                fp = matrix(0L, nrow = length(molecules), ncol = 256L)
-                for ( i in 1:length(molecules) ) {
-                    fp[i, ] = ChemmineOB::fingerprint_OB('SMI',
-                                                         molecules[i], 'MACCS')
-                }
+            fp = matrix(0L, nrow = length(molecules), ncol = 256L)
 
+            for ( i in 1:length(molecules) ) {
+                molRefs = forEachMol('SMILES', molecules[i], identity)
+                fp[i, ] = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
             }
 
-        } else if (type == 'sdf') {
+        }
 
-            smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES',
-                                            source = molecules)
-            smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
+    } else if (type == 'sdf') {
 
-            if ( length(smiclean) == 1L ) {
+        smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES',
+                                        source = molecules)
+        smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
 
-                fp = ChemmineOB::fingerprint_OB('SMI', smiclean, 'MACCS')
+        if ( length(smiclean) == 1L ) {
 
-                } else if ( length(smiclean) > 1L ) {
+            molRefs = forEachMol('SMILES', smiclean, identity)
+            fp = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
 
-                    fp = matrix(0L, nrow = length(smiclean), ncol = 256L)
-                    for ( i in 1:length(smiclean) ) {
-                        fp[i, ] = ChemmineOB::fingerprint_OB('SMI', smiclean[i],
-                                                             'MACCS')
-                    }
+        } else if ( length(smiclean) > 1L ) {
 
-                }
-
-            } else {
-
-                stop('Molecule type must be "smile" or "sdf"')
-
+            fp = matrix(0L, nrow = length(smiclean), ncol = 256L)
+            for ( i in 1:length(smiclean) ) {
+                molRefs = forEachMol('SMILES', smiclean[i], identity)
+                fp[i, ] = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
             }
+
+        }
+
+    } else {
+
+        stop('Molecule type must be "smile" or "sdf"')
+
+    }
 
     return(fp)
 

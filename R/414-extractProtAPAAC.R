@@ -105,7 +105,7 @@ extractProtAPAAC = function (x, props = c('Hydrophobicity', 'Hydrophilicity'),
 
     if (nchar(x) <= lambda) stop('Length of the protein sequence must be greater than "lambda"')
 
-    AAidx = read.csv(system.file('sysdata/AAidx.csv', package = 'protr'), header = TRUE)
+    AAidx = read.csv(system.file('sysdata/AAidx.csv', package = 'Rcpi'), header = TRUE)
 
     tmp = data.frame(AccNo = c("Hydrophobicity", "Hydrophilicity", "SideChainMass"),
                      A = c(0.62,  -0.5, 15),  R = c(-2.53,   3, 101),

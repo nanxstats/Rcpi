@@ -8,7 +8,7 @@
 #' This function implements the core computation procedure needed for
 #' the generalized scales-based descriptors derived by AA-Properties (AAindex)
 #' and generalized scales-based descriptors derived by 20+ classes of 2D and 3D
-#' molecular descriptors (Topological, WHIM, VHSE, etc.) in the protr package.
+#' molecular descriptors (Topological, WHIM, VHSE, etc.).
 #'
 #' @param x A character vector, as the input protein sequence.
 #' @param propmat A matrix containing the properties for the amino acids.

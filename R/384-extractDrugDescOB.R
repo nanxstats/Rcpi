@@ -42,6 +42,7 @@
 #'
 #' @examples
 #' \donttest{
+#' # May cause core dump under Ubuntu 16.04
 #' mol1 = 'CC(=O)NCCC1=CNc2c1cc(OC)cc2'  # one molecule SMILE in a vector
 #' mol2 = c('OCCc1c(C)[n+](=cs1)Cc2cnc(C)nc(N)2',
 #'          'CCc(c1)ccc2[n+]1ccc3c2Nc4c3cccc4',
@@ -55,26 +56,23 @@
 #' smidesc1 = extractDrugDescOB(mol2, type = 'smile')
 #' sdfdesc0 = extractDrugDescOB(mol3, type = 'sdf')
 #' sdfdesc1 = extractDrugDescOB(mol4, type = 'sdf')}
-#'
 
 extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
-
-    strDesc = c('cansmi', 'cansmiNS', 'formula', 'title')
-    numDesc = c('abonds', 'atoms', 'bonds', 'dbonds', 'HBA1', 'HBA2', 'HBD',
-                'logP', 'MR', 'MW', 'nF', 'sbonds', 'tbonds', 'TPSA')
 
     if (type == 'smile') {
 
         if ( length(molecules) == 1L ) {
 
-            x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+            molRefs = forEachMol('SMILES', molecules, identity)
+            x = ChemmineOB::prop_OB(molRefs)
 
         } else if ( length(molecules) > 1L ) {
 
-            x = matrix(NA, nrow = length(molecules), ncol = length(numDesc))
+            x = matrix(NA, nrow = length(molecules), ncol = 16)
 
             for ( i in 1:length(molecules) ) {
-                x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(molecules[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+                molRefs = forEachMol('SMILES', molecules[i], identity)
+                fp[i, ] = ChemmineOB::prop_OB(molRefs)
             }
 
         }
@@ -87,14 +85,16 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
 
         if ( length(smiclean) == 1L ) {
 
-            x = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+            molRefs = forEachMol('SMILES', smiclean, identity)
+            fp = ChemmineOB::prop_OB(molRefs)
 
         } else if ( length(smiclean) > 1L ) {
 
             x = matrix(NA, nrow = length(smiclean), ncol = length(numDesc))
 
             for ( i in 1:length(smiclean) ) {
-                x[i, ] = eval(parse(text = ".Call('propOB', 'SMILES', as.character(smiclean[i]), numDesc, strDesc, PACKAGE = 'ChemmineOB')[[1]]"))
+                molRefs = forEachMol('SMILES', smiclean[i], identity)
+                fp[i, ] = ChemmineOB::prop_OB(molRefs)
             }
 
         }
@@ -104,8 +104,6 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
         stop('Molecule type must be "smile" or "sdf"')
 
     }
-
-    colnames(x) = numDesc
 
     return(x)
 

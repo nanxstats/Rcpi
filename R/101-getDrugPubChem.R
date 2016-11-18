@@ -88,11 +88,9 @@ getSmiFromPubChem = function (id, parallel = 5) {
 
     SdfTxt = getMolFromPubChem(id, parallel)
 
-    # rcdk::load.molecules() only loads files on the disk
-    # so we have to do this
     tmpfile = tempfile(pattern = paste0(id, '-'), fileext = '.sdf')
-    for (i in 1:length(id)) write(SdfTxt[[i]], tmpfile[i])
-    Mol = load.molecules(tmpfile)
+    for (i in 1:length(id)) cat(SdfTxt[[i]], file = tmpfile[i])
+    Mol = readMolFromSDF(tmpfile)
     Smi = sapply(Mol, get.smiles)
     unlink(tmpfile)
 

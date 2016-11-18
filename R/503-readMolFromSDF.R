@@ -31,7 +31,7 @@
 
 readMolFromSDF = function (sdffile) {
 
-    mol = load.molecules(sdffile)
+    mol = load.molecules(normalizePath(sdffile))
 
     return(mol)
 

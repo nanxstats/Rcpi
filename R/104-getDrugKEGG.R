@@ -88,10 +88,8 @@ getSmiFromKEGG = function (id, parallel = 5) {
 
     MolTxt = getMolFromKEGG(id, parallel)
 
-    # rcdk::load.molecules() only loads files on the disk
-    # so we have to do this
     tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'mol')
-    for (i in 1:length(id)) write(MolTxt[[i]], tmpfile[i])
+    for (i in 1:length(id)) cat(MolTxt[[i]], file = tmpfile[i])
 
     Mol = load.molecules(tmpfile)
     Smi = sapply(Mol, get.smiles)

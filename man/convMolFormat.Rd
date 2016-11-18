@@ -198,7 +198,6 @@ convMolFormat(infile = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
               outfile = 'aa.smi', from = 'sdf', to = 'smiles')  # SDF to SMILES
 convMolFormat(infile = 'aa.smi', outfile = 'aa.mop',
               from = 'smiles', to = 'mop')  # SMILES to MOPAC Cartesian format}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>
@@ -207,5 +206,4 @@ Nan Xiao <\url{http://nanx.me}>
 \keyword{convMolFormat}
 \keyword{convert}
 \keyword{format}
-\keyword{molecular}
 

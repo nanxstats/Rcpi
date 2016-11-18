@@ -33,7 +33,7 @@
 #'
 #' @examples
 #' Seq4HHB = readPDB(system.file('protseq/4HHB.pdb', package = 'Rcpi'))
-#'
+#' Seq4HHB
 
 readPDB = function(file = system.file('protseq/4HHB.pdb', package = 'Rcpi')) {
 

@@ -22,7 +22,8 @@ the corresponding drug molecule.
 Retrieve Drug Molecules in SMILES Format from the DrugBank Database
 }
 \details{
-This function retrieves drug molecules in SMILES format from the DrugBank database.
+This function retrieves drug molecules in SMILES format from the
+DrugBank database.
 }
 \examples{
 \donttest{

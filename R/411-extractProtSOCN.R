@@ -50,8 +50,8 @@ extractProtSOCN = function (x, nlag = 30) {
     N = nchar(x)
     if (N <= nlag) stop('Length of the protein sequence must be greater than "nlag"')
 
-    DistMat1 = read.csv(system.file('sysdata/Schneider-Wrede.csv', package = 'protr'), header = TRUE)
-    DistMat2 = read.csv(system.file('sysdata/Grantham.csv', package = 'protr'), header = TRUE)
+    DistMat1 = read.csv(system.file('sysdata/Schneider-Wrede.csv', package = 'Rcpi'), header = TRUE)
+    DistMat2 = read.csv(system.file('sysdata/Grantham.csv', package = 'Rcpi'), header = TRUE)
     row.names(DistMat1) = as.character(DistMat1[, 1])
     DistMat1 = DistMat1[, -1]
     row.names(DistMat2) = as.character(DistMat2[, 1])

@@ -45,6 +45,7 @@ molecular descriptors provided in OpenBabel.
 }
 \examples{
 \donttest{
+# May cause core dump under Ubuntu 16.04
 mol1 = 'CC(=O)NCCC1=CNc2c1cc(OC)cc2'  # one molecule SMILE in a vector
 mol2 = c('OCCc1c(C)[n+](=cs1)Cc2cnc(C)nc(N)2',
          'CCc(c1)ccc2[n+]1ccc3c2Nc4c3cccc4',
@@ -58,7 +59,6 @@ smidesc0 = extractDrugDescOB(mol1, type = 'smile')
 smidesc1 = extractDrugDescOB(mol2, type = 'smile')
 sdfdesc0 = extractDrugDescOB(mol3, type = 'sdf')
 sdfdesc1 = extractDrugDescOB(mol4, type = 'sdf')}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

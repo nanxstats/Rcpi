@@ -36,7 +36,6 @@ smifp0 = extractDrugOBFP2(mol1, type = 'smile')
 smifp1 = extractDrugOBFP2(mol2, type = 'smile')
 sdffp0 = extractDrugOBFP2(mol3, type = 'sdf')
 sdffp1 = extractDrugOBFP2(mol4, type = 'sdf')}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

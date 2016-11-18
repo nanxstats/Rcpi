@@ -14,7 +14,8 @@
 #' @param lag The lag parameter. Must be less than the amino acids.
 #'
 #' @return A length \code{lag * p^2} named vector, the element names are
-#'         constructed by: the scales index (crossed scales index) and lag index.
+#'         constructed by: the scales index (crossed scales index) and
+#'         lag index.
 #'
 #' @note To know more details about auto cross covariance, see the references.
 #'

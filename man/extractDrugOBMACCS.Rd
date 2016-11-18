@@ -24,6 +24,7 @@ Calculate the 256 bit MACCS fingerprints provided by OpenBabel.
 }
 \examples{
 \donttest{
+# MACCS may not be available in current version of ChemmineOB
 mol1 = 'C1CCC1CC(CN(C)(C))CC(=O)CC'  # one molecule SMILE in a vector
 mol2 = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1',
          'C1CCC1CC(CN(C)(C))CC(=O)CC')  # multiple SMILEs in a vector
@@ -36,7 +37,6 @@ smifp0 = extractDrugOBMACCS(mol1, type = 'smile')
 smifp1 = extractDrugOBMACCS(mol2, type = 'smile')
 sdffp0 = extractDrugOBMACCS(mol3, type = 'sdf')
 sdffp1 = extractDrugOBMACCS(mol4, type = 'sdf')}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>
