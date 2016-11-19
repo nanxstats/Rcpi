@@ -22,7 +22,6 @@
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 #' checkProt(x)  # TRUE
 #' checkProt(paste(x, 'Z', sep = ''))  # FALSE
-#'
 
 checkProt = function (x) {
 

@@ -21,7 +21,6 @@ This function calculates the Conjoint Triad descriptor (Dim: 343).
 \examples{
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 extractProtCTriad(x)
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

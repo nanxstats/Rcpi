@@ -1,7 +1,7 @@
 Package: Rcpi
 Type: Package
 Title: Toolkit for Compound-Protein Interaction in Drug Discovery
-Version: 1.11.2
+Version: 1.11.3
 Date: 2016-11-18
 Description: Rcpi offers a molecular informatics toolkit with a
     comprehensive integration of bioinformatics and
