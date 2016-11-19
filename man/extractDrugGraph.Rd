@@ -30,12 +30,11 @@ Similar to the standard type by simply considers connectivity.
 This is hashed fingerprints, with a default length of 1024.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugGraph(mol)
 head(fp)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

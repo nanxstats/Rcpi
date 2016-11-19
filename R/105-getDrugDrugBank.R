@@ -28,10 +28,9 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = 'DB00859'  # Penicillamine
+#' \donttest{
 #' getMolFromDrugBank(id)}
-#'
 
 getMolFromDrugBank = function (id, parallel = 5) {
 
@@ -76,10 +75,9 @@ getMolFromDrugBank = function (id, parallel = 5) {
 #' @importFrom rcdk load.molecules get.smiles
 #'
 #' @examples
-#' \donttest{
 #' id = 'DB00859'  # Penicillamine
+#' \donttest{
 #' getSmiFromDrugBank(id)}
-#'
 
 getSmiFromDrugBank = function (id, parallel = 5) {
 

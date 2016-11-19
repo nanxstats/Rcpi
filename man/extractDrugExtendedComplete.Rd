@@ -31,12 +31,11 @@ but takes rings and atomic properties into account into account.
 This is hashed fingerprints, with a default length of 1024.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugExtendedComplete(mol)
 dim(fp)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

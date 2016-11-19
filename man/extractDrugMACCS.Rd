@@ -24,12 +24,11 @@ Calculate the MACCS Molecular Fingerprints (in Compact Format)
 The popular 166 bit MACCS keys described by MDL.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugMACCS(mol)
 head(fp)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

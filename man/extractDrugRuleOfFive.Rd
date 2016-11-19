@@ -25,12 +25,11 @@ This descriptor calculates the number failures of the Lipinski's Rule Of Five:
 \url{http://en.wikipedia.org/wiki/Lipinski\%27s_Rule_of_Five}.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugRuleOfFive(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

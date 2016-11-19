@@ -9,28 +9,28 @@
 
         sim = 0L
 
+    } else {
+
+        id1good = 1:length(golist[[id1]])
+        id2good = 1:length(golist[[id2]])
+
+        gid1 = as.character(golist[[id1]][id1good])
+        gid2 = as.character(golist[[id2]][id2good])
+
+        res = try(suppressWarnings(GOSemSim::mgoSim(gid1, gid2,
+                                                    ont = ont,
+                                                    organism = organism,
+                                                    measure = measure,
+                                                    combine = combine)),
+                  silent = TRUE)
+
+        if ( is.numeric(res) ) {
+            sim = res
         } else {
-
-            id1good = 1:length(golist[[id1]])
-            id2good = 1:length(golist[[id2]])
-
-            gid1 = as.character(golist[[id1]][id1good])
-            gid2 = as.character(golist[[id2]][id2good])
-
-            res = try(suppressWarnings(GOSemSim::mgoSim(gid1, gid2,
-                                                        ont = ont,
-                                                        organism = organism,
-                                                        measure = measure,
-                                                        combine = combine)),
-                      silent = TRUE)
-
-            if ( is.numeric(res) ) {
-                sim = res
-                } else {
-                    sim = 0L
-                }
-
+            sim = 0L
         }
+
+    }
 
     return(sim)
 
@@ -77,27 +77,29 @@
 #' @export calcParProtGOSim
 #'
 #' @examples
-#' \donttest{
 #' # by GO Terms
 #' go1 = c('GO:0005215', 'GO:0005488', 'GO:0005515', 'GO:0005625', 'GO:0005802', 'GO:0005905')  # AP4B1
 #' go2 = c('GO:0005515', 'GO:0005634', 'GO:0005681', 'GO:0008380', 'GO:0031202')  # BCAS2
 #' go3 = c('GO:0003735', 'GO:0005622', 'GO:0005840', 'GO:0006412')  # PDE4DIP
 #' glist = list(go1, go2, go3)
+#' \donttest{
 #' gsimmat1 = calcParProtGOSim(glist, type = 'go', ont = 'CC')
-#' print(gsimmat1)
+#' print(gsimmat1)}
 #'
 #' # by Entrez gene id
 #' genelist = list(c('150', '151', '152', '1814', '1815', '1816'))
+#' \donttest{
 #' gsimmat2 = calcParProtGOSim(genelist, type = 'gene')
-#' print(gsimmat2) }
-#'
+#' print(gsimmat2)}
 
 calcParProtGOSim = function (golist, type = c('go', 'gene'),
-                     ont = 'MF', organism = 'human',
-                     measure = 'Resnik', combine = 'BMA') {
+                             ont = 'MF', organism = 'human',
+                             measure = 'Resnik', combine = 'BMA') {
 
     if ( type == 'gene' ) {
-        gosimmat = GOSemSim::mgeneSim(unlist(golist), ont = ont, organism = organism, measure = measure, combine = combine, verbose = FALSE)
+        gosimmat = GOSemSim::mgeneSim(
+            unlist(golist), ont = ont, organism = organism,
+            measure = measure, combine = combine, verbose = FALSE)
     }
 
     if ( type == 'go' ) {
@@ -109,7 +111,9 @@ calcParProtGOSim = function (golist, type = c('go', 'gene'),
         gosimlist = vector('list', ncol(idx))
 
         for ( i in 1:ncol(idx) ) {
-            gosimlist[[i]] = .calcgoPairSim(rev(idx[, i]), golist = golist, ont = ont, organism = organism, measure = measure, combine = combine)
+            gosimlist[[i]] = .calcgoPairSim(
+                rev(idx[, i]), golist = golist, ont = ont, organism = organism,
+                measure = measure, combine = combine)
         }
 
         # convert list to matrix
@@ -168,23 +172,23 @@ calcParProtGOSim = function (golist, type = c('go', 'gene'),
 #' @export calcTwoProtGOSim
 #'
 #' @examples
-#' \donttest{
 #' # by GO terms
 #' go1 = c("GO:0004022", "GO:0004024", "GO:0004023")
 #' go2 = c("GO:0009055", "GO:0020037")
+#' \donttest{
 #' gsim1 = calcTwoProtGOSim(go1, go2, type = 'go', ont = 'MF', measure = 'Wang')
-#' print(gsim1)
+#' print(gsim1)}
 #'
 #' # by Entrez gene id
 #' gene1 = '241'
 #' gene2 = '251'
+#' \donttest{
 #' gsim2 = calcTwoProtGOSim(gene1, gene2, type = 'gene', ont = 'CC', measure = 'Lin')
-#' print(gsim2) }
-#'
+#' print(gsim2)}
 
 calcTwoProtGOSim = function (id1, id2, type = c('go', 'gene'),
-                     ont = 'MF', organism = 'human',
-                     measure = 'Resnik', combine = 'BMA') {
+                             ont = 'MF', organism = 'human',
+                             measure = 'Resnik', combine = 'BMA') {
 
     if ( type == 'go' ) {
         sim = GOSemSim::mgoSim(id1, id2,

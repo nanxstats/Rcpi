@@ -46,12 +46,11 @@
 #' @importFrom rcdk eval.desc
 #'
 #' @examples
-#' \donttest{
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugMomentOfInertia(mol)
 #' head(dat)}
-#'
 
 extractDrugMomentOfInertia = function (molecules, silent = TRUE) {
 

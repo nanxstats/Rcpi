@@ -46,19 +46,19 @@ This function calculates the Gene Ontology (GO) similarity
 between two groups of GO terms or two Entrez gene IDs.
 }
 \examples{
-\donttest{
 # by GO terms
 go1 = c("GO:0004022", "GO:0004024", "GO:0004023")
 go2 = c("GO:0009055", "GO:0020037")
+\donttest{
 gsim1 = calcTwoProtGOSim(go1, go2, type = 'go', ont = 'MF', measure = 'Wang')
-print(gsim1)
+print(gsim1)}
 
 # by Entrez gene id
 gene1 = '241'
 gene2 = '251'
+\donttest{
 gsim2 = calcTwoProtGOSim(gene1, gene2, type = 'gene', ont = 'CC', measure = 'Lin')
-print(gsim2) }
-
+print(gsim2)}
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

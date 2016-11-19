@@ -32,12 +32,11 @@ But for the case of molecules obtained from SMILES,
 hydrogens must be made explicit.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugALOGP(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

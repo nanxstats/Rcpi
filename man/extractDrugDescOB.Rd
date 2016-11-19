@@ -44,17 +44,17 @@ This function calculates 14 types of the \emph{numerical}
 molecular descriptors provided in OpenBabel.
 }
 \examples{
-\donttest{
-# May cause core dump under Ubuntu 16.04
 mol1 = 'CC(=O)NCCC1=CNc2c1cc(OC)cc2'  # one molecule SMILE in a vector
 mol2 = c('OCCc1c(C)[n+](=cs1)Cc2cnc(C)nc(N)2',
          'CCc(c1)ccc2[n+]1ccc3c2Nc4c3cccc4',
          '[Cu+2].[O-]S(=O)(=O)[O-]')  # multiple SMILEs in a vector
 mol3 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'),
-                nchars = 1e+6)  # single molecule in single sdf file
+                nchars = 1e+6)  # single molecule in a sdf file
 mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
-                nchars = 1e+6)  # multiple molecules in single sdf file
+                nchars = 1e+6)  # multiple molecules in a sdf file
 
+\donttest{
+# Problem (core dump) under Ubuntu 16.04
 smidesc0 = extractDrugDescOB(mol1, type = 'smile')
 smidesc1 = extractDrugDescOB(mol2, type = 'smile')
 sdfdesc0 = extractDrugDescOB(mol3, type = 'sdf')

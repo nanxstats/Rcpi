@@ -31,12 +31,11 @@
 #' @seealso \link{extractDrugExtendedComplete}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugExtended(mol)
 #' head(fp)}
-#'
 
 extractDrugExtended = function (molecules, depth = 6,
                                 size = 1024, silent = TRUE) {
@@ -101,12 +100,11 @@ extractDrugExtended = function (molecules, depth = 6,
 #' @seealso \link{extractDrugExtended}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugExtendedComplete(mol)
 #' dim(fp)}
-#'
 
 extractDrugExtendedComplete = function (molecules, depth = 6,
                                         size = 1024, silent = TRUE) {

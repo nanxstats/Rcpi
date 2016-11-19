@@ -28,12 +28,11 @@
 #' @seealso \link{extractDrugShortestPathComplete}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugShortestPath(mol)
 #' head(fp)}
-#'
 
 extractDrugShortestPath = function (molecules, depth = 6,
                                     size = 1024, silent = TRUE) {
@@ -96,12 +95,11 @@ extractDrugShortestPath = function (molecules, depth = 6,
 #' @seealso \link{extractDrugShortestPath}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugShortestPathComplete(mol)
 #' dim(fp)}
-#'
 
 extractDrugShortestPathComplete = function (molecules, depth = 6,
                                             size = 1024, silent = TRUE) {

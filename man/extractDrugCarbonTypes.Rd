@@ -41,12 +41,11 @@ The function calculates 9 descriptors in the following order:
 }
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugCarbonTypes(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

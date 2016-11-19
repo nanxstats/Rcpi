@@ -26,12 +26,11 @@ Vertex adjacency information (magnitude):
 If \eqn{m} is zero, then \code{0} is returned.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugVAdjMa(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

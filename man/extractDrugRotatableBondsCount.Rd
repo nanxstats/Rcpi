@@ -26,12 +26,11 @@ Daylight on SMARTS tutorial
 (\url{http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html#EXMPL})
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugRotatableBondsCount(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

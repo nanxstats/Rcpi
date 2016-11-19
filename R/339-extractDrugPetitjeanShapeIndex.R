@@ -38,12 +38,11 @@
 #' Journal of Chemical Information and Computer Science, 1995, 35:714-716.
 #'
 #' @examples
-#' \donttest{
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugPetitjeanShapeIndex(mol)
 #' head(dat)}
-#'
 
 extractDrugPetitjeanShapeIndex = function (molecules, silent = TRUE) {
 

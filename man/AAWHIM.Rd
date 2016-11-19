@@ -7,6 +7,9 @@
 \usage{
 data(AAWHIM)
 }
+\value{
+AAWHIM data
+}
 \description{
 WHIM Descriptors for 20 Amino Acids calculated by Dragon
 }

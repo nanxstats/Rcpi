@@ -27,12 +27,11 @@ The topological and geometric shape indices described Petitjean
 and Bath et al. respectively. Both measure the anisotropy in a molecule.
 }
 \examples{
-\donttest{
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+\donttest{
 mol = readMolFromSDF(sdf)
 dat = extractDrugPetitjeanShapeIndex(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

@@ -7,6 +7,9 @@
 \usage{
 data(AATopo)
 }
+\value{
+AATopo data
+}
 \description{
 Topological Descriptors for 20 Amino Acids calculated by Dragon
 }

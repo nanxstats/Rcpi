@@ -33,12 +33,11 @@ the largest vertex eccentricity in the graph.
 (\url{http://www.edusoft-lc.com/molconn/manuals/400/chaptwo.html})
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugPetitjeanNumber(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

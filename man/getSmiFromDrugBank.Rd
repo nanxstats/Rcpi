@@ -26,10 +26,9 @@ This function retrieves drug molecules in SMILES format from the
 DrugBank database.
 }
 \examples{
-\donttest{
 id = 'DB00859'  # Penicillamine
+\donttest{
 getSmiFromDrugBank(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

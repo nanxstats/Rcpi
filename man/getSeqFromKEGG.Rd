@@ -15,7 +15,8 @@ the data (using RCurl), default is \code{5}.
 For regular cases, we recommend a number less than \code{20}.}
 }
 \value{
-A list, each component contains one of the protein represented by amino acid sequence(s).
+A list, each component contains one of the protein represented by
+amino acid sequence(s).
 }
 \description{
 Retrieve Protein Sequence from the KEGG Database
@@ -25,10 +26,9 @@ This function retrieves protein represented by amino acid sequence
 from the KEGG database.
 }
 \examples{
-\donttest{
 id = c('hsa:10161', 'hsa:10162')
+\donttest{
 getSeqFromKEGG(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

@@ -20,11 +20,12 @@ This function reads molecules from SDF files and return
 parsed Java molecular object needed by \code{extractDrug...} functions.
 }
 \examples{
+sdf  = system.file('compseq/DB00859.sdf', package = 'Rcpi')
+sdfs = c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
+         system.file('compseq/DB00860.sdf', package = 'Rcpi'))
 \donttest{
-mol  = readMolFromSDF(system.file('compseq/DB00859.sdf', package = 'Rcpi'))
-mols = readMolFromSDF(c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
-                        system.file('compseq/DB00860.sdf', package = 'Rcpi')))}
-
+mol  = readMolFromSDF(sdf)
+mols = readMolFromSDF(sdfs)}
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

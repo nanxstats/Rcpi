@@ -2,7 +2,8 @@
 #'
 #' Retrieve Drug Molecules in MOL Format from the ChEMBL Database
 #'
-#' This function retrieves drug molecules in MOL format from the ChEMBL database.
+#' This function retrieves drug molecules in MOL format from the
+#' ChEMBL database.
 #'
 #' @param id A character vector, as the ChEMBL drug ID.
 #' @param parallel An integer, the parallel parameter, indicates how many
@@ -27,8 +28,8 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = 'CHEMBL1430'  # Penicillamine
+#' \donttest{
 #' getMolFromChEMBL(id)}
 
 getMolFromChEMBL = function (id, parallel = 5) {
@@ -64,7 +65,8 @@ getMolFromChEMBL = function (id, parallel = 5) {
 #'
 #' Retrieve Drug Molecules in SMILES Format from the ChEMBL Database
 #'
-#' This function retrieves drug molecules in SMILES format from the ChEMBL database.
+#' This function retrieves drug molecules in SMILES format from the
+#' ChEMBL database.
 #'
 #' @param id A character vector, as the ChEMBL drug ID.
 #' @param parallel An integer, the parallel parameter, indicates how many
@@ -90,8 +92,8 @@ getMolFromChEMBL = function (id, parallel = 5) {
 #' @importFrom rjson fromJSON
 #'
 #' @examples
-#' \donttest{
 #' id = 'CHEMBL1430'  # Penicillamine
+#' \donttest{
 #' getSmiFromChEMBL(id)}
 
 getSmiFromChEMBL = function (id, parallel = 5) {

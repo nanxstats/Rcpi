@@ -25,12 +25,11 @@ Calculate the E-State Molecular Fingerprints (in Compact Format)
 described by Hall and Kier.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugEstate(mol)
 head(fp)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

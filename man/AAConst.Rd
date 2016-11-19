@@ -7,6 +7,9 @@
 \usage{
 data(AAConst)
 }
+\value{
+AAConst data
+}
 \description{
 Constitutional Descriptors for 20 Amino Acids calculated by Dragon
 }

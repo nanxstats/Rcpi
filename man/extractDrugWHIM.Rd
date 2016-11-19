@@ -74,12 +74,11 @@ Though Todeschini et al. mentions that for planar molecules
 only 8 directional WHIM descriptors are required the current code will return all 11.
 }
 \examples{
-\donttest{
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+\donttest{
 mol = readMolFromSDF(sdf)
 dat = extractDrugWHIM(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

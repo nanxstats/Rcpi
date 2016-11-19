@@ -65,12 +65,11 @@ a molecule, you should set nlow to 0 and specify the number of heavy atoms
 (or some large number) for nhigh (or vice versa).
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugBCUT(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

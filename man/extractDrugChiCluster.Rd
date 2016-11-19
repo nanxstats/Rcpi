@@ -45,12 +45,11 @@ definitions (i.e., rings without branches etc.)
 whereas these descriptors use the older more complex fragment definitions.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugChiCluster(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

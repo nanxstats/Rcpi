@@ -27,12 +27,11 @@ Polarizabilities are taken from
 \url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugApol(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

@@ -39,12 +39,11 @@ Furthermore the square and cube roots of the descriptor
 are also generated as described by Wessel et al.
 }
 \examples{
-\donttest{
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+\donttest{
 mol = readMolFromSDF(sdf)
 dat = extractDrugGravitationalIndex(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

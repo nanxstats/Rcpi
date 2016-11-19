@@ -32,12 +32,11 @@
 #' Journal of the American Chemical Society, 69(1), 17-20.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugWienerNumbers(mol)
 #' head(dat)}
-#'
 
 extractDrugWienerNumbers = function (molecules, silent = TRUE) {
 

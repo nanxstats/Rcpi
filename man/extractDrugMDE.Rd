@@ -26,12 +26,11 @@ described in Liu, S., Cao, C., & Li, Z, and in addition it calculates
 variants where O and N are considered.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugMDE(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

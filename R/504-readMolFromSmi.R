@@ -32,11 +32,10 @@
 #' @importFrom rcdk parse.smiles
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol1 = readMolFromSmi(smi, type = 'mol')
 #' mol2 = readMolFromSmi(smi, type = 'text')}
-#'
 
 readMolFromSmi = function (smifile, type = c('mol', 'text')) {
 

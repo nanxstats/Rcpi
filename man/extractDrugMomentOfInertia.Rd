@@ -47,12 +47,11 @@ Finally it also calculates the radius of
 gyration of the molecule.
 }
 \examples{
-\donttest{
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+\donttest{
 mol = readMolFromSDF(sdf)
 dat = extractDrugMomentOfInertia(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

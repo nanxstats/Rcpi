@@ -26,8 +26,8 @@ This function retrieves drug molecules in SMILES format from
 the PubChem database.
 }
 \examples{
-\donttest{
 id = c('7847562', '7847563')  # Penicillamine
+\donttest{
 getSmiFromPubChem(id)}
 }
 \author{

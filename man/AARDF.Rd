@@ -7,6 +7,9 @@
 \usage{
 data(AARDF)
 }
+\value{
+AARDF data
+}
 \description{
 RDF Descriptors for 20 Amino Acids calculated by Dragon
 }

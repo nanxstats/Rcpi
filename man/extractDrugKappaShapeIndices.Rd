@@ -39,12 +39,11 @@ Also, let p2 denote the number of paths of length 2
 and let p3 denote the number of paths of length 3".
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugKappaShapeIndices(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

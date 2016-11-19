@@ -47,15 +47,14 @@
 #' @export searchDrug
 #'
 #' @examples
-#' \donttest{
 #' mol = system.file('compseq/DB00530.sdf', package = 'Rcpi')
 #' # DrugBank ID DB00530: Erlotinib
 #' moldb = system.file('compseq/tyrphostin.sdf', package = 'Rcpi')
 #' # Database composed by searching 'tyrphostin' in PubChem and filtered by Lipinski's Rule of Five
+#' \donttest{
 #' searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'maccs', fpsim = 'hamming')
 #' searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'fp2', fpsim = 'tanimoto')
 #' searchDrug(mol, moldb, cores = 4, method = 'mcs', mcssim = 'tanimoto')}
-#'
 
 searchDrug = function (mol, moldb, cores = 2,
                        method = c('fp', 'mcs'),
@@ -183,7 +182,8 @@ searchDrug = function (mol, moldb, cores = 2,
         rankvec = rep(NA, nrow(moldbfp))
 
         rankvec <- foreach (i = 1:nrow(moldbfp), .combine = 'c', .errorhandling = 'pass') %dopar% {
-            tmp <- calcDrugFPSim(as.vector(molfp), as.vector(moldbfp[i, ]), fptype = 'complete', metric = fpsim)
+            tmp <- calcDrugFPSim(as.vector(molfp), as.vector(moldbfp[i, ]),
+                                 fptype = 'complete', metric = fpsim)
         }
 
         rankvec.ord = order(rankvec, decreasing = TRUE)

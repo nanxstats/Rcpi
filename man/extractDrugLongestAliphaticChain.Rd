@@ -24,12 +24,11 @@ Descriptor that Calculates the Number of Atoms in the Longest Aliphatic Chain
 This descriptor calculates the number of atoms in the longest aliphatic chain.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugLongestAliphaticChain(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

@@ -26,10 +26,9 @@ This function retrieves protein represented by amino acid sequence
 from the UniProt database.
 }
 \examples{
-\donttest{
 id = c('P00750', 'P00751', 'P00752')
+\donttest{
 getSeqFromUniProt(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>
@@ -40,8 +39,8 @@ UniProt. \url{http://www.uniprot.org/}
 UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
 }
 \seealso{
-See \code{\link{getFASTAFromUniProt}} for retrieving protein sequence
-in FASTA format from the UniProt database.
+See \code{\link{getFASTAFromUniProt}} for retrieving protein
+sequences in FASTA format from the UniProt database.
 }
 \keyword{UniProt}
 \keyword{getProt}

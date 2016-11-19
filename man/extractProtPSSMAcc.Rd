@@ -27,15 +27,13 @@ This function calculates the feature vector based on the PSSM
 by running PSI-Blast and auto cross covariance tranformation.
 }
 \examples{
-\donttest{
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
+\donttest{
 dbpath = tempfile('tempdb', fileext = '.fasta')
 invisible(file.copy(from = system.file('protseq/Plasminogen.fasta', package = 'Rcpi'), to = dbpath))
 pssmmat = extractProtPSSM(seq = x, database.path = dbpath)
 pssmacc = extractProtPSSMAcc(pssmmat, lag = 3)
-tail(pssmacc)
-}
-
+tail(pssmacc)}
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

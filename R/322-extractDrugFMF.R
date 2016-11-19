@@ -34,12 +34,11 @@
 #' 53(21), 7709-7714.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugFMF(mol)
 #' head(dat)}
-#'
 
 extractDrugFMF = function (molecules, silent = TRUE) {
 

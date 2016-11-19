@@ -50,12 +50,11 @@
 #' Journal of Chemical Information and Computer Sciences, 1998, 38:726-735.
 #'
 #' @examples
-#' \donttest{
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugGravitationalIndex(mol)
 #' head(dat)}
-#'
 
 extractDrugGravitationalIndex = function (molecules, silent = TRUE) {
 

@@ -23,15 +23,15 @@ Calculate the FP2 Molecular Fingerprints
 Calculate the 1024 bit FP2 fingerprints provided by OpenBabel.
 }
 \examples{
-\donttest{
 mol1 = 'C1CCC1CC(CN(C)(C))CC(=O)CC'  # one molecule SMILE in a vector
 mol2 = c('CCC', 'CCN', 'CCN(C)(C)', 'c1ccccc1Cc1ccccc1',
          'C1CCC1CC(CN(C)(C))CC(=O)CC')  # multiple SMILEs in a vector
 mol3 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'),
-                nchars = 1e+6)  # single molecule in single sdf file
+                nchars = 1e+6)  # single molecule in a sdf file
 mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
-                nchars = 1e+6)  # multiple molecules in single sdf file
+                nchars = 1e+6)  # multiple molecules in a sdf file
 
+\donttest{
 smifp0 = extractDrugOBFP2(mol1, type = 'smile')
 smifp1 = extractDrugOBFP2(mol2, type = 'smile')
 sdffp0 = extractDrugOBFP2(mol3, type = 'sdf')

@@ -7,6 +7,9 @@
 \usage{
 data(AAGETAWAY)
 }
+\value{
+AAGETAWAY data
+}
 \description{
 GETAWAY Descriptors for 20 Amino Acids calculated by Dragon
 }

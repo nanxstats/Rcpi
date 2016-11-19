@@ -23,16 +23,17 @@
 #' @importFrom rcdk load.molecules
 #'
 #' @examples
+#' sdf  = system.file('compseq/DB00859.sdf', package = 'Rcpi')
+#' sdfs = c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
+#'          system.file('compseq/DB00860.sdf', package = 'Rcpi'))
 #' \donttest{
-#' mol  = readMolFromSDF(system.file('compseq/DB00859.sdf', package = 'Rcpi'))
-#' mols = readMolFromSDF(c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
-#'                         system.file('compseq/DB00860.sdf', package = 'Rcpi')))}
-#'
+#' mol  = readMolFromSDF(sdf)
+#' mols = readMolFromSDF(sdfs)}
 
 readMolFromSDF = function (sdffile) {
 
-    mol = load.molecules(normalizePath(sdffile))
+  mol = load.molecules(normalizePath(sdffile))
 
-    return(mol)
+  return(mol)
 
 }

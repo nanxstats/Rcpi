@@ -26,10 +26,9 @@ This function retrieves protein sequences in FASTA format
 from the KEGG database.
 }
 \examples{
-\donttest{
 id = c('hsa:10161', 'hsa:10162')
+\donttest{
 getFASTAFromKEGG(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

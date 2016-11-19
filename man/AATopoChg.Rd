@@ -8,6 +8,9 @@ calculated by Dragon}
 \usage{
 data(AATopoChg)
 }
+\value{
+AATopoChg data
+}
 \description{
 Topological Charge Indices Descriptors for 20 Amino Acids
 calculated by Dragon

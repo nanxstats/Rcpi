@@ -35,12 +35,11 @@ extents for a series of rotations about the Z axis
 The descriptor assumes that the atoms have been configured.
 }
 \examples{
-\donttest{
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+\donttest{
 mol = readMolFromSDF(sdf)
 dat = extractDrugLengthOverBreadth(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

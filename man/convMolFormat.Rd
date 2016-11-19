@@ -193,11 +193,15 @@ The supported formats include:
             }
 }
 \examples{
+sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+# SDF to SMILES
 \donttest{
-convMolFormat(infile = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
-              outfile = 'aa.smi', from = 'sdf', to = 'smiles')  # SDF to SMILES
+convMolFormat(infile = sdf, outfile = 'aa.smi',
+              from = 'sdf', to = 'smiles')}
+# SMILES to MOPAC Cartesian format
+\donttest{
 convMolFormat(infile = 'aa.smi', outfile = 'aa.mop',
-              from = 'smiles', to = 'mop')  # SMILES to MOPAC Cartesian format}
+              from = 'smiles', to = 'mop')}
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

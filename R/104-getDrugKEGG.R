@@ -27,10 +27,9 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = 'D00496'  # Penicillamine
+#' \donttest{
 #' getMolFromKEGG(id)}
-#'
 
 getMolFromKEGG = function (id, parallel = 5) {
 
@@ -50,7 +49,8 @@ getMolFromKEGG = function (id, parallel = 5) {
 #'
 #' Retrieve Drug Molecules in SMILES Format from the KEGG Database
 #'
-#' This function retrieves drug molecules in SMILES format from the KEGG database.
+#' This function retrieves drug molecules in SMILES format from the
+#' KEGG database.
 #'
 #' @param id A character vector, as the KEGG drug ID.
 #' @param parallel An integer, the parallel parameter, indicates how many
@@ -75,10 +75,9 @@ getMolFromKEGG = function (id, parallel = 5) {
 #' @importFrom rcdk load.molecules get.smiles
 #'
 #' @examples
-#' \donttest{
 #' id = 'D00496'  # Penicillamine
+#' \donttest{
 #' getSmiFromKEGG(id)}
-#'
 
 getSmiFromKEGG = function (id, parallel = 5) {
 

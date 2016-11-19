@@ -36,12 +36,11 @@ non-positive (i.e. formal charge <= 0) except a nitrogen
 that is adjacent to an oxygen.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugHBondAcceptorCount(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

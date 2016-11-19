@@ -30,12 +30,11 @@ Considers paths of a given length.
 This is hashed fingerprints, with a default length of 1024.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugStandardComplete(mol)
 dim(fp)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

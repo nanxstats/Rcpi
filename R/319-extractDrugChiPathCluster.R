@@ -45,12 +45,11 @@
 #' @importFrom rcdk eval.desc
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugChiPathCluster(mol)
 #' head(dat)}
-#'
 
 extractDrugChiPathCluster = function (molecules, silent = TRUE) {
 

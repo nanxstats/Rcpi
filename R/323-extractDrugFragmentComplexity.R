@@ -35,12 +35,11 @@
 #' Journal of chemical information and modeling, 2006, 46:1069-1077
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugFragmentComplexity(mol)
 #' head(dat)}
-#'
 
 extractDrugFragmentComplexity = function (molecules, silent = TRUE) {
 

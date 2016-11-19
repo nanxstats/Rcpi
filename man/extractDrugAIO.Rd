@@ -35,12 +35,11 @@ some of the descriptors, if not provided, these descriptors
 values will be \code{NA}.
 }
 \examples{
-\donttest{
 # Load 20 small molecules that have 3D coordinates
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+\donttest{
 mol = readMolFromSDF(sdf)
 dat = extractDrugAIO(mol, warn = FALSE)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

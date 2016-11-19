@@ -10,8 +10,8 @@ getDrug(id, from = c("pubchem", "chembl", "cas", "kegg", "drugbank"),
 \arguments{
 \item{id}{A character vector, as the drug ID(s).}
 
-\item{from}{The database, one of \code{'pubchem'}, \code{'chembl'}, \code{'cas'},
-\code{'kegg'}, \code{'drugbank'}.}
+\item{from}{The database, one of \code{'pubchem'}, \code{'chembl'},
+\code{'cas'}, \code{'kegg'}, \code{'drugbank'}.}
 
 \item{type}{The returned molecule format, \code{mol} or \code{smile}.}
 
@@ -28,13 +28,13 @@ each element containing the corresponding drug molecule.
 Retrieve Drug Molecules in MOL and SMILES Format from Databases
 }
 \details{
-This function retrieves drug molecules in MOL and SMILES format from five databases.
+This function retrieves drug molecules in MOL and SMILES format from
+five databases.
 }
 \examples{
-\donttest{
 id = c('DB00859', 'DB00860')
+\donttest{
 getDrug(id, 'drugbank', 'smile')}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

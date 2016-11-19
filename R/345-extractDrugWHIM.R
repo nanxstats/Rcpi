@@ -78,12 +78,11 @@
 #' Persepectives in Drug Discovery and Design, 1998, ?:355-380.
 #'
 #' @examples
-#' \donttest{
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugWHIM(mol)
 #' head(dat)}
-#'
 
 extractDrugWHIM = function (molecules, silent = TRUE) {
 

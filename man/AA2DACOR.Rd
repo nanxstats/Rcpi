@@ -7,6 +7,9 @@
 \usage{
 data(AA2DACOR)
 }
+\value{
+AA2DACOR data
+}
 \description{
 2D Autocorrelations Descriptors for 20 Amino Acids calculated by Dragon
 }

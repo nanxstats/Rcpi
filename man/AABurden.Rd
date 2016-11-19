@@ -7,6 +7,9 @@
 \usage{
 data(AABurden)
 }
+\value{
+AABurden data
+}
 \description{
 Burden Eigenvalues Descriptors for 20 Amino Acids calculated by Dragon
 }

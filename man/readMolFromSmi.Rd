@@ -30,11 +30,10 @@ parsed Java molecular object or plain text list
 needed by \code{extractDrug...()} functions.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol1 = readMolFromSmi(smi, type = 'mol')
 mol2 = readMolFromSmi(smi, type = 'text')}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

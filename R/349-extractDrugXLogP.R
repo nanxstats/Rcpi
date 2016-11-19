@@ -34,12 +34,11 @@
 #' Perspectives in Drug Discovery and Design, 2000, 19:47-66.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugXLogP(mol)
 #' head(dat)}
-#'
 
 extractDrugXLogP = function (molecules, silent = TRUE) {
 

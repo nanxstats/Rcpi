@@ -24,12 +24,11 @@ Calculates the Number of Aromatic Bonds Descriptor
 Calculates the number of aromatic bonds of a molecule.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugAromaticBondsCount(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

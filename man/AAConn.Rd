@@ -7,6 +7,9 @@
 \usage{
 data(AAConn)
 }
+\value{
+AAConn data
+}
 \description{
 Connectivity Indices Descriptors for 20 Amino Acids calculated by Dragon
 }

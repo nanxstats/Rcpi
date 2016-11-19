@@ -38,16 +38,16 @@ This function implemented the parallellized version for calculating
 protein sequence similarity based on sequence alignment.
 }
 \examples{
-\donttest{
 s1 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 s2 = readFASTA(system.file('protseq/P08218.fasta', package = 'Rcpi'))[[1]]
 s3 = readFASTA(system.file('protseq/P10323.fasta', package = 'Rcpi'))[[1]]
 s4 = readFASTA(system.file('protseq/P20160.fasta', package = 'Rcpi'))[[1]]
 s5 = readFASTA(system.file('protseq/Q9NZP8.fasta', package = 'Rcpi'))[[1]]
 plist = list(s1, s2, s3, s4, s5)
-psimmat = calcParProtSeqSim(plist, cores = 2, type = 'local', submat = 'BLOSUM62')
-print(psimmat) }
-
+\donttest{
+psimmat = calcParProtSeqSim(plist, cores = 2, type = 'local',
+                            submat = 'BLOSUM62')
+print(psimmat)}
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

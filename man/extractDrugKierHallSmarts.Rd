@@ -117,12 +117,11 @@ The atom type definitions are taken from Hall et al.
 The SMARTS definitions were obtained from RDKit.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugKierHallSmarts(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

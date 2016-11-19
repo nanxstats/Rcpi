@@ -7,6 +7,9 @@
 \usage{
 data(AAMetaInfo)
 }
+\value{
+AAMetaInfo data
+}
 \description{
 Meta Information for the 20 Amino Acids
 }

@@ -33,12 +33,11 @@
 #' values will be \code{NA}.
 #'
 #' @examples
-#' \donttest{
 #' # Load 20 small molecules that have 3D coordinates
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugAIO(mol, warn = FALSE)}
-#'
 
 extractDrugAIO = function (molecules, silent = TRUE, warn = TRUE) {
 

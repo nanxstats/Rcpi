@@ -7,6 +7,9 @@
 \usage{
 data(AAMolProp)
 }
+\value{
+AAMolProp data
+}
 \description{
 Molecular Properties Descriptors for 20 Amino Acids calculated by Dragon
 }

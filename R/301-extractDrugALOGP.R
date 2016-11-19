@@ -44,12 +44,11 @@
 #' Journal of Chemical Information and Computer Science, 1987, 27:21-35.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugALOGP(mol)
 #' head(dat)}
-#'
 
 extractDrugALOGP = function (molecules, silent = TRUE) {
 

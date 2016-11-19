@@ -32,13 +32,12 @@ Protein Sequence Alignment for Two Protein Sequences
 This function implements the sequence alignment between two protein sequences.
 }
 \examples{
-\donttest{
 s1 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 s2 = readFASTA(system.file('protseq/P10323.fasta', package = 'Rcpi'))[[1]]
+\donttest{
 seqalign = calcTwoProtSeqSim(s1, s2)
-summary(seqalign)
-print(seqalign@score) }
-
+print(seqalign)
+print(seqalign@score)}
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

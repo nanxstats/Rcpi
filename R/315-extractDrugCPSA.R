@@ -71,12 +71,11 @@
 #' Analytical Chemistry, 1990, 62:2323.2329.
 #'
 #' @examples
-#' \donttest{
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugCPSA(mol)
 #' head(dat)}
-#'
 
 extractDrugCPSA = function (molecules, silent = TRUE) {
 

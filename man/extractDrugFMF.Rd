@@ -29,12 +29,11 @@ will have a value of 0. Note that the authors consider an isolated ring
 system to be a framework (even though there is no linker).
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugFMF(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

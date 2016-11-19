@@ -28,12 +28,11 @@ half the sum of all the distance matrix entries; Wiener polarity number:
 half the sum of all the distance matrix entries with a value of 3.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugWienerNumbers(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

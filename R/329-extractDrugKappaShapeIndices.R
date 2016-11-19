@@ -38,12 +38,11 @@
 #' @importFrom rcdk eval.desc
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugKappaShapeIndices(mol)
 #' head(dat)}
-#'
 
 extractDrugKappaShapeIndices = function (molecules, silent = TRUE) {
 

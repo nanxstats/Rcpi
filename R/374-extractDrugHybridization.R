@@ -29,12 +29,11 @@
 #' @seealso \link{extractDrugHybridizationComplete}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugHybridization(mol)
 #' head(fp)}
-#'
 
 extractDrugHybridization = function (molecules, depth = 6,
                                      size = 1024, silent = TRUE) {
@@ -98,12 +97,11 @@ extractDrugHybridization = function (molecules, depth = 6,
 #' @seealso \link{extractDrugHybridization}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugHybridizationComplete(mol)
 #' dim(fp)}
-#'
 
 extractDrugHybridizationComplete = function (molecules, depth = 6,
                                              size = 1024, silent = TRUE) {

@@ -28,10 +28,9 @@ in InChI format, users could convert them to SMILES format using
 Open Babel (\url{http://openbabel.org/}) or other third-party tools.
 }
 \examples{
-\donttest{
 id = '52-67-5'  # Penicillamine
+\donttest{
 getMolFromCAS(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

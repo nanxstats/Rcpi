@@ -24,12 +24,11 @@ Calculate the KR (Klekota and Roth) Molecular Fingerprints (in Compact Format)
 Calculate the 4860 bit fingerprint defined by Klekota and Roth.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugKR(mol)
 head(fp)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

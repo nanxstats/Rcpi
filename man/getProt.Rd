@@ -10,9 +10,11 @@ getProt(id, from = c("uniprot", "kegg", "pdb"), type = c("fasta", "pdb",
 \arguments{
 \item{id}{A character vector, as the protein ID(s).}
 
-\item{from}{The database, one of \code{'uniprot'}, \code{'kegg'}, \code{'pdb'}.}
+\item{from}{The database, one of \code{'uniprot'}, \code{'kegg'},
+or \code{'pdb'}.}
 
-\item{type}{The returned protein format, one of \code{fasta}, \code{pdb}, \code{aaseq}.}
+\item{type}{The returned protein format, one of \code{fasta}, \code{pdb},
+or \code{aaseq}.}
 
 \item{parallel}{An integer, the parallel parameter, indicates how many
 process the user would like to use for retrieving
@@ -27,13 +29,13 @@ containing the corresponding protein sequence(s) or file(s).
 Retrieve Protein Sequence in various Formats from Databases
 }
 \details{
-This function retrieves protein sequence in various formats from three databases.
+This function retrieves protein sequence in various formats from
+three databases.
 }
 \examples{
-\donttest{
 id = c('P00750', 'P00751', 'P00752')
+\donttest{
 getProt(id, from = 'uniprot', type = 'aaseq')}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

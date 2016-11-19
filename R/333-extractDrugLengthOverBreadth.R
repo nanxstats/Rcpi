@@ -33,12 +33,11 @@
 #' @note The descriptor assumes that the atoms have been configured.
 #'
 #' @examples
-#' \donttest{
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSDF(sdf)
 #' dat = extractDrugLengthOverBreadth(mol)
 #' head(dat)}
-#'
 
 extractDrugLengthOverBreadth = function (molecules, silent = TRUE) {
 

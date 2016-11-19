@@ -24,12 +24,11 @@ Calculates the Moreau-Broto Autocorrelation Descriptors using Polarizability
 Calculates the ATS autocorrelation descriptor using polarizability.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugAutocorrelationPolarizability(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

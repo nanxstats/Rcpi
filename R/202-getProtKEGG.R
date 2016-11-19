@@ -29,10 +29,9 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = c('hsa:10161', 'hsa:10162')
+#' \donttest{
 #' getFASTAFromKEGG(id)}
-#'
 
 getFASTAFromKEGG = function (id, parallel = 5) {
 
@@ -60,7 +59,8 @@ getFASTAFromKEGG = function (id, parallel = 5) {
 #'                 the data (using RCurl), default is \code{5}.
 #'                 For regular cases, we recommend a number less than \code{20}.
 #'
-#' @return A list, each component contains one of the protein represented by amino acid sequence(s).
+#' @return A list, each component contains one of the protein represented by
+#' amino acid sequence(s).
 #'
 #' @keywords getProt getSeqFromKEGG KEGG
 #'
@@ -74,10 +74,9 @@ getFASTAFromKEGG = function (id, parallel = 5) {
 #' @export getSeqFromKEGG
 #'
 #' @examples
-#' \donttest{
 #' id = c('hsa:10161', 'hsa:10162')
+#' \donttest{
 #' getSeqFromKEGG(id)}
-#'
 
 getSeqFromKEGG = function (id, parallel = 5) {
 

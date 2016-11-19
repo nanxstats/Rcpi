@@ -30,10 +30,9 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = '52-67-5'  # Penicillamine
+#' \donttest{
 #' getMolFromCAS(id)}
-#'
 
 getMolFromCAS = function (id, parallel = 5) {
 

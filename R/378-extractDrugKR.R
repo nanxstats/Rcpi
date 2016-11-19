@@ -25,12 +25,11 @@
 #' @seealso \link{extractDrugKRComplete}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugKR(mol)
 #' head(fp)}
-#'
 
 extractDrugKR = function (molecules, silent = TRUE) {
 
@@ -88,12 +87,11 @@ extractDrugKR = function (molecules, silent = TRUE) {
 #' @seealso \link{extractDrugKR}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugKRComplete(mol)
 #' dim(fp)}
-#'
 
 extractDrugKRComplete = function (molecules, silent = TRUE) {
 

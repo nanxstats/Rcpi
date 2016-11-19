@@ -25,10 +25,9 @@ Retrieve Drug Molecules in MOL Format from the KEGG Database
 This function retrieves drug molecules in MOL format from the KEGG database.
 }
 \examples{
-\donttest{
 id = 'D00496'  # Penicillamine
+\donttest{
 getMolFromKEGG(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

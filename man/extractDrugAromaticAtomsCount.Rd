@@ -24,12 +24,11 @@ Calculates the Number of Aromatic Atoms Descriptor
 Calculates the number of aromatic atoms of a molecule.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugAromaticAtomsCount(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

@@ -7,6 +7,9 @@
 \usage{
 data(AAMOE2D)
 }
+\value{
+AAMOE2D data
+}
 \description{
 2D Descriptors for 20 Amino Acids calculated by MOE 2011.10
 }

@@ -2,11 +2,12 @@
 #'
 #' Retrieve Drug Molecules in MOL and SMILES Format from Databases
 #'
-#' This function retrieves drug molecules in MOL and SMILES format from five databases.
+#' This function retrieves drug molecules in MOL and SMILES format from
+#' five databases.
 #'
 #' @param id A character vector, as the drug ID(s).
-#' @param from The database, one of \code{'pubchem'}, \code{'chembl'}, \code{'cas'},
-#'             \code{'kegg'}, \code{'drugbank'}.
+#' @param from The database, one of \code{'pubchem'}, \code{'chembl'},
+#' \code{'cas'}, \code{'kegg'}, \code{'drugbank'}.
 #' @param type The returned molecule format, \code{mol} or \code{smile}.
 #' @param parallel An integer, the parallel parameter, indicates how many
 #'                 process the user would like to use for retrieving
@@ -28,10 +29,9 @@
 #' @export getDrug
 #'
 #' @examples
-#' \donttest{
 #' id = c('DB00859', 'DB00860')
+#' \donttest{
 #' getDrug(id, 'drugbank', 'smile')}
-#'
 
 getDrug = function (id,
                     from = c('pubchem', 'chembl', 'cas', 'kegg', 'drugbank'),
@@ -43,7 +43,8 @@ getDrug = function (id,
 
     # Exclude 1 special case from total 10 possible combinations
 
-    if (from == 'cas' & type == 'smile') stop('CAS only supports type = "mol" (InChI)')
+    if (from == 'cas' & type == 'smile')
+        stop('CAS only supports type = "mol" (InChI)')
 
     FromDict = c('pubchem' = 'PubChem', 'chembl' = 'ChEMBL',
                  'cas' = 'CAS', 'kegg' = 'KEGG', 'drugbank' = 'DrugBank')

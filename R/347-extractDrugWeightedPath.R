@@ -40,12 +40,11 @@
 #' Journal of Chemical Information and Computer Science, 24:164-175.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugWeightedPath(mol)
 #' head(dat)}
-#'
 
 extractDrugWeightedPath = function (molecules, silent = TRUE) {
 

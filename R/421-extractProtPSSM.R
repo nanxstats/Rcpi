@@ -111,14 +111,12 @@
 #' \emph{Bioinformatics} 21.23 (2005): 4239--4247.
 #'
 #' @examples
-#' \donttest{
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
+#' \donttest{
 #' dbpath = tempfile('tempdb', fileext = '.fasta')
 #' invisible(file.copy(from = system.file('protseq/Plasminogen.fasta', package = 'Rcpi'), to = dbpath))
 #' pssmmat = extractProtPSSM(seq = x, database.path = dbpath)
-#' dim(pssmmat)  # 20 x 562 (P00750: length 562, 20 Amino Acids)
-#' }
-#'
+#' dim(pssmmat)  # 20 x 562 (P00750: length 562, 20 Amino Acids)}
 
 extractProtPSSM = function(seq, start.pos = 1L, end.pos = nchar(seq),
                            psiblast.path = NULL, makeblastdb.path = NULL,

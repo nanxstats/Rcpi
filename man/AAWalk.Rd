@@ -7,6 +7,9 @@
 \usage{
 data(AAWalk)
 }
+\value{
+AAWalk data
+}
 \description{
 Walk and Path Counts Descriptors for 20 Amino Acids calculated by Dragon
 }

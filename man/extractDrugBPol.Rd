@@ -32,12 +32,11 @@ taken from \url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
 This descriptor assumes 2-centered bonds.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugBPol(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

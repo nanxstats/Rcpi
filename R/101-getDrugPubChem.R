@@ -2,7 +2,8 @@
 #'
 #' Retrieve Drug Molecules in MOL Format from the PubChem Database
 #'
-#' This function retrieves drug molecules in MOL format from the PubChem database.
+#' This function retrieves drug molecules in MOL format from the
+#' PubChem database.
 #'
 #' @param id A character vector, as the PubChem drug ID.
 #' @param parallel An integer, the parallel parameter, indicates how many
@@ -27,8 +28,8 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = c('7847562', '7847563')  # Penicillamine
+#' \donttest{
 #' getMolFromPubChem(id)}
 
 getMolFromPubChem = function (id, parallel = 5) {
@@ -77,8 +78,8 @@ getMolFromPubChem = function (id, parallel = 5) {
 #' @importFrom rcdk load.molecules get.smiles
 #'
 #' @examples
-#' \donttest{
 #' id = c('7847562', '7847563')  # Penicillamine
+#' \donttest{
 #' getSmiFromPubChem(id)}
 
 getSmiFromPubChem = function (id, parallel = 5) {

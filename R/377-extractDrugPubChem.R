@@ -25,12 +25,11 @@
 #' @seealso \link{extractDrugPubChemComplete}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugPubChem(mol)
 #' head(fp)}
-#'
 
 extractDrugPubChem = function (molecules, silent = TRUE) {
 
@@ -42,21 +41,21 @@ extractDrugPubChem = function (molecules, silent = TRUE) {
         fp[[1]] = x@bits
         names(fp) = x@nbit
 
-        } else {
+    } else {
 
-            x = lapply(molecules, get.fingerprint,
-                       type = 'pubchem', verbose = !silent)
+        x = lapply(molecules, get.fingerprint,
+                   type = 'pubchem', verbose = !silent)
 
-            fp = vector('list', length(molecules))
+        fp = vector('list', length(molecules))
 
-            for (i in 1:length(molecules)) {
+        for (i in 1:length(molecules)) {
 
-                fp[[i]] = x[[i]]@bits
-                names(fp)[i] = x[[i]]@nbit
-
-            }
+            fp[[i]] = x[[i]]@bits
+            names(fp)[i] = x[[i]]@nbit
 
         }
+
+    }
 
     return(fp)
 
@@ -88,12 +87,11 @@ extractDrugPubChem = function (molecules, silent = TRUE) {
 #' @seealso \link{extractDrugPubChem}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugPubChemComplete(mol)
 #' dim(fp)}
-#'
 
 extractDrugPubChemComplete = function (molecules, silent = TRUE) {
 
@@ -104,16 +102,16 @@ extractDrugPubChemComplete = function (molecules, silent = TRUE) {
         fp = integer(881)
         fp[x@bits] = 1L
 
-        } else {
+    } else {
 
-            x = lapply(molecules, get.fingerprint,
-                       type = 'pubchem', verbose = !silent)
+        x = lapply(molecules, get.fingerprint,
+                   type = 'pubchem', verbose = !silent)
 
-            fp = matrix(0L, nrow = length(molecules), ncol = 881)
+        fp = matrix(0L, nrow = length(molecules), ncol = 881)
 
-            for (i in 1:length(molecules)) fp[ i, x[[i]]@bits ] = 1L
+        for (i in 1:length(molecules)) fp[ i, x[[i]]@bits ] = 1L
 
-        }
+    }
 
     return(fp)
 

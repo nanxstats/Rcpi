@@ -33,12 +33,11 @@
 #' Journal of medicinal chemistry, 43(20), 3714-3717.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugTPSA(mol)
 #' head(dat)}
-#'
 
 extractDrugTPSA = function (molecules, silent = TRUE) {
 

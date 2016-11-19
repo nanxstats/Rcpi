@@ -34,21 +34,20 @@
 #' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
 #'
 #' @examples
-#' \donttest{
 #' id = c('P00750', 'P00751', 'P00752')
+#' \donttest{
 #' getFASTAFromUniProt(id)}
-#'
 
 getFASTAFromUniProt = function (id, parallel = 5) {
 
-    # example id:  P00750
-    # example url: http://www.uniprot.org/uniprot/P00750.fasta
+  # example id:  P00750
+  # example url: http://www.uniprot.org/uniprot/P00750.fasta
 
-    fastaURL = paste0('http://www.uniprot.org/uniprot/', id, '.fasta')
+  fastaURL = paste0('http://www.uniprot.org/uniprot/', id, '.fasta')
 
-    fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
+  fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
 
-    return(fastaTxt)
+  return(fastaTxt)
 
 }
 
@@ -74,8 +73,8 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #'
 #' @author Nan Xiao <\url{http://nanx.me}>
 #'
-#' @seealso See \code{\link{getFASTAFromUniProt}} for retrieving protein sequence
-#' in FASTA format from the UniProt database.
+#' @seealso See \code{\link{getFASTAFromUniProt}} for retrieving protein
+#' sequences in FASTA format from the UniProt database.
 #'
 #' @export getSeqFromUniProt
 #'
@@ -85,25 +84,24 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
 #'
 #' @examples
-#' \donttest{
 #' id = c('P00750', 'P00751', 'P00752')
+#' \donttest{
 #' getSeqFromUniProt(id)}
-#'
 
 getSeqFromUniProt = function (id, parallel = 5) {
 
-    # example id:  P00750
-    # example url: http://www.uniprot.org/uniprot/P00750.fasta
+  # example id:  P00750
+  # example url: http://www.uniprot.org/uniprot/P00750.fasta
 
-    fastaTxt = getFASTAFromUniProt(id, parallel)
+  fastaTxt = getFASTAFromUniProt(id, parallel)
 
-    tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'fasta')
-    for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])
+  tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'fasta')
+  for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])
 
-    AASeq = lapply(tmpfile, readFASTA)
+  AASeq = lapply(tmpfile, readFASTA)
 
-    unlink(tmpfile)
+  unlink(tmpfile)
 
-    return(AASeq)
+  return(AASeq)
 
 }

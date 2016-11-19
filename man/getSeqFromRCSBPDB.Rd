@@ -15,7 +15,8 @@ the data (using RCurl), default is \code{5}.
 For regular cases, we recommend a number less than \code{20}.}
 }
 \value{
-A list, each component contains one of the protein represented by amino acid sequence(s).
+A list, each component contains one of the protein represented by
+amino acid sequence(s).
 }
 \description{
 Retrieve Protein Sequence from RCSB PDB
@@ -24,10 +25,9 @@ Retrieve Protein Sequence from RCSB PDB
 This function retrieves protein sequences from RCSB PDB.
 }
 \examples{
-\donttest{
 id = c('4HHB', '4FF9')
+\donttest{
 getSeqFromRCSBPDB(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

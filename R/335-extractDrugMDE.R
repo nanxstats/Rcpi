@@ -31,12 +31,11 @@
 #' Journal of chemical information and computer sciences, 38(3), 387-394.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugMDE(mol)
 #' head(dat)}
-#'
 
 extractDrugMDE = function (molecules, silent = TRUE) {
 

@@ -7,6 +7,9 @@
 \usage{
 data(AAEdgeAdj)
 }
+\value{
+AAEdgeAdj data
+}
 \description{
 Edge Adjacency Indices Descriptors for 20 Amino Acids calculated by Dragon
 }

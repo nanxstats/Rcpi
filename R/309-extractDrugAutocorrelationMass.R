@@ -29,12 +29,11 @@
 #' Nouv. J. Chim 4 (1980): 359-360.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugAutocorrelationMass(mol)
 #' head(dat)}
-#'
 
 extractDrugAutocorrelationMass = function (molecules, silent = TRUE) {
 

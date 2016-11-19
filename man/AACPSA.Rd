@@ -7,6 +7,9 @@
 \usage{
 data(AACPSA)
 }
+\value{
+AACPSA data
+}
 \description{
 CPSA Descriptors for 20 Amino Acids calculated by Discovery Studio
 }

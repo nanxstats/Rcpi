@@ -129,12 +129,11 @@
 #' Journal of Chemical Information and Computer Science, 1995, 35:1039-1045.
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugKierHallSmarts(mol)
 #' head(dat)}
-#'
 
 extractDrugKierHallSmarts = function (molecules, silent = TRUE) {
 

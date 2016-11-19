@@ -25,12 +25,11 @@ Calculate the ionization potential of a molecule.
 The descriptor assumes that explicit hydrogens have been added to the molecules.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugIPMolecularLearning(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

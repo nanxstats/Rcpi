@@ -7,6 +7,9 @@
 \usage{
 data(AABLOSUM62)
 }
+\value{
+AABLOSUM62 data
+}
 \description{
 BLOSUM62 Matrix for 20 Amino Acids
 }

@@ -7,6 +7,9 @@
 \usage{
 data(AAEigIdx)
 }
+\value{
+AAEigIdx data
+}
 \description{
 Eigenvalue-Based Indices Descriptors for 20 Amino Acids calculated by Dragon
 }

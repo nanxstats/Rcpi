@@ -27,21 +27,20 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = c('4HHB', '4FF9')
+#' \donttest{
 #' getPDBFromRCSBPDB(id)}
-#'
 
 getPDBFromRCSBPDB = function (id, parallel = 5) {
 
-    # example id : 4HHB
-    # example url: http://www.rcsb.org/pdb/files/4HHB.pdb
+  # example id : 4HHB
+  # example url: http://www.rcsb.org/pdb/files/4HHB.pdb
 
-    pdbURL = paste0('http://www.rcsb.org/pdb/files/', id, '.pdb')
+  pdbURL = paste0('http://www.rcsb.org/pdb/files/', id, '.pdb')
 
-    pdbTxt = getURLAsynchronous(url = pdbURL, perform = parallel)
+  pdbTxt = getURLAsynchronous(url = pdbURL, perform = parallel)
 
-    return(pdbTxt)
+  return(pdbTxt)
 
 }
 
@@ -57,7 +56,8 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 #'                 the data (using RCurl), default is \code{5}.
 #'                 For regular cases, we recommend a number less than \code{20}.
 #'
-#' @return A list, each component contains one of the protein represented by amino acid sequence(s).
+#' @return A list, each component contains one of the protein represented by
+#' amino acid sequence(s).
 #'
 #' @keywords getProt getSeqFromRCSBPDB PDB
 #'
@@ -73,27 +73,26 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @examples
-#' \donttest{
 #' id = c('4HHB', '4FF9')
+#' \donttest{
 #' getSeqFromRCSBPDB(id)}
-#'
 
 getSeqFromRCSBPDB = function (id, parallel = 5) {
 
-    # example id : 4HHB
-    # example url: http://www.rcsb.org/pdb/files/fasta.txt?structureIdList=4HHB
+  # example id : 4HHB
+  # example url: http://www.rcsb.org/pdb/files/fasta.txt?structureIdList=4HHB
 
-    fastaURL = paste0('http://www.rcsb.org/pdb/files/fasta.txt?structureIdList=', id)
+  fastaURL = paste0('http://www.rcsb.org/pdb/files/fasta.txt?structureIdList=', id)
 
-    fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
+  fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
 
-    tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'fasta')
-    for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])
+  tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'fasta')
+  for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])
 
-    AASeq = lapply(tmpfile, readFASTA)
+  AASeq = lapply(tmpfile, readFASTA)
 
-    unlink(tmpfile)
+  unlink(tmpfile)
 
-    return(AASeq)
+  return(AASeq)
 
 }

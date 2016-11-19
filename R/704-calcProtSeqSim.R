@@ -7,23 +7,23 @@
 
         sim = 0L
 
+    } else {
+
+        s1  = try(Biostrings::AAString(protlist[[id1]]), silent = TRUE)
+        s2  = try(Biostrings::AAString(protlist[[id2]]), silent = TRUE)
+        s12 = try(Biostrings::pairwiseAlignment(s1, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s11 = try(Biostrings::pairwiseAlignment(s1, s1, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s22 = try(Biostrings::pairwiseAlignment(s2, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+
+        if ( is.numeric(s12) == FALSE | is.numeric(s11) == FALSE | is.numeric(s22) == FALSE ) {
+            sim = 0L
+        } else if ( abs(s11) < .Machine$double.eps | abs(s22) < .Machine$double.eps ) {
+            sim = 0L
         } else {
-
-            s1  = try(Biostrings::AAString(protlist[[id1]]), silent = TRUE)
-            s2  = try(Biostrings::AAString(protlist[[id2]]), silent = TRUE)
-            s12 = try(Biostrings::pairwiseAlignment(s1, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
-            s11 = try(Biostrings::pairwiseAlignment(s1, s1, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
-            s22 = try(Biostrings::pairwiseAlignment(s2, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
-
-            if ( is.numeric(s12) == FALSE | is.numeric(s11) == FALSE | is.numeric(s22) == FALSE ) {
-                sim = 0L
-                } else if ( abs(s11) < .Machine$double.eps | abs(s22) < .Machine$double.eps ) {
-                    sim = 0L
-                    } else {
-                        sim = s12/sqrt(s11 * s22)
-                    }
-
+            sim = s12/sqrt(s11 * s22)
         }
+
+    }
 
     return(sim)
 
@@ -69,16 +69,16 @@
 #' @export calcParProtSeqSim
 #'
 #' @examples
-#' \donttest{
 #' s1 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 #' s2 = readFASTA(system.file('protseq/P08218.fasta', package = 'Rcpi'))[[1]]
 #' s3 = readFASTA(system.file('protseq/P10323.fasta', package = 'Rcpi'))[[1]]
 #' s4 = readFASTA(system.file('protseq/P20160.fasta', package = 'Rcpi'))[[1]]
 #' s5 = readFASTA(system.file('protseq/Q9NZP8.fasta', package = 'Rcpi'))[[1]]
 #' plist = list(s1, s2, s3, s4, s5)
-#' psimmat = calcParProtSeqSim(plist, cores = 2, type = 'local', submat = 'BLOSUM62')
-#' print(psimmat) }
-#'
+#' \donttest{
+#' psimmat = calcParProtSeqSim(plist, cores = 2, type = 'local',
+#'                             submat = 'BLOSUM62')
+#' print(psimmat)}
 
 calcParProtSeqSim = function (protlist, cores = 2,
                               type = 'local', submat = 'BLOSUM62') {
@@ -90,7 +90,6 @@ calcParProtSeqSim = function (protlist, cores = 2,
 
     # then use foreach parallelization
     # input is all pair combination
-
     seqsimlist = vector('list', ncol(idx))
 
     seqsimlist <- foreach (i = 1:length(seqsimlist), .errorhandling = 'pass') %dopar% {
@@ -142,15 +141,15 @@ calcParProtSeqSim = function (protlist, cores = 2,
 #' @export calcTwoProtSeqSim
 #'
 #' @examples
-#' \donttest{
 #' s1 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 #' s2 = readFASTA(system.file('protseq/P10323.fasta', package = 'Rcpi'))[[1]]
+#' \donttest{
 #' seqalign = calcTwoProtSeqSim(s1, s2)
-#' summary(seqalign)
-#' print(seqalign@@score) }
-#'
+#' print(seqalign)
+#' print(seqalign@@score)}
 
-calcTwoProtSeqSim = function (seq1, seq2, type = 'local', submat = 'BLOSUM62') {
+calcTwoProtSeqSim = function (seq1, seq2, type = 'local',
+                              submat = 'BLOSUM62') {
 
     # sequence alignment for two protein sequences
     s1  = try(Biostrings::AAString(seq1), silent = TRUE)

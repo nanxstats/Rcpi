@@ -23,12 +23,11 @@
 #' @importFrom rcdk eval.desc
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugLargestPiSystem(mol)
 #' head(dat)}
-#'
 
 extractDrugLargestPiSystem = function (molecules, silent = TRUE) {
 

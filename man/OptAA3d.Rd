@@ -4,6 +4,9 @@
 \name{OptAA3d}
 \alias{OptAA3d}
 \title{OptAA3d.sdf - 20 Amino Acids Optimized with MOE 2011.10 (Semiempirical AM1)}
+\value{
+OptAA3d data
+}
 \description{
 OptAA3d.sdf - 20 Amino Acids Optimized with MOE 2011.10 (Semiempirical AM1)
 }
@@ -11,10 +14,10 @@ OptAA3d.sdf - 20 Amino Acids Optimized with MOE 2011.10 (Semiempirical AM1)
 OptAA3d.sdf - 20 Amino Acids Optimized with MOE 2011.10 (Semiempirical AM1)
 }
 \examples{
-# This operation requires the rcdk package
-# require(rcdk)
+# This example requires the rcdk package
+# library('rcdk')
 # optaa3d = load.molecules(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'))
-# view.molecule.2d(optaa3d[[1]])  # view the first AA
+# view.molecule.2d(optaa3d[[1]])  # view the first amino acid
 }
 \keyword{Acid}
 \keyword{Amino}

@@ -22,13 +22,13 @@ each element containing the corresponding drug molecule.
 Retrieve Drug Molecules in SMILES Format from the KEGG Database
 }
 \details{
-This function retrieves drug molecules in SMILES format from the KEGG database.
+This function retrieves drug molecules in SMILES format from the
+KEGG database.
 }
 \examples{
-\donttest{
 id = 'D00496'  # Penicillamine
+\donttest{
 getSmiFromKEGG(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

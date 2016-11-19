@@ -7,6 +7,9 @@
 \usage{
 data(AAGeom)
 }
+\value{
+AAGeom data
+}
 \description{
 Geometrical Descriptors for 20 Amino Acids calculated by Dragon
 }

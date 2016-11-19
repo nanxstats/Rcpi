@@ -38,15 +38,13 @@
 #' \emph{Bioinformatics} 21.23 (2005): 4239--4247.
 #'
 #' @examples
-#' \donttest{
 #' x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
+#' \donttest{
 #' dbpath = tempfile('tempdb', fileext = '.fasta')
 #' invisible(file.copy(from = system.file('protseq/Plasminogen.fasta', package = 'Rcpi'), to = dbpath))
 #' pssmmat = extractProtPSSM(seq = x, database.path = dbpath)
 #' pssmfeature = extractProtPSSMFeature(pssmmat)
-#' head(pssmfeature)
-#' }
-#'
+#' head(pssmfeature)}
 
 extractProtPSSMFeature = function(pssmmat) {
 

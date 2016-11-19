@@ -7,6 +7,9 @@
 \usage{
 data(AAACF)
 }
+\value{
+AAACF data
+}
 \description{
 Atom-Centred Fragments Descriptors for 20 Amino Acids calculated by Dragon
 }

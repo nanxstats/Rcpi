@@ -65,12 +65,11 @@ Calculates 29 Charged Partial Surface Area (CPSA) descriptors.
 The CPSA's were developed by Stanton et al.
 }
 \examples{
-\donttest{
 sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
+\donttest{
 mol = readMolFromSDF(sdf)
 dat = extractDrugCPSA(mol)
 head(dat)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

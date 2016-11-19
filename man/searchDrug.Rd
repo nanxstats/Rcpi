@@ -60,15 +60,14 @@ derived by maximum common substructure search.
 This function runs for a query compound against a set of molecules.
 }
 \examples{
-\donttest{
 mol = system.file('compseq/DB00530.sdf', package = 'Rcpi')
 # DrugBank ID DB00530: Erlotinib
 moldb = system.file('compseq/tyrphostin.sdf', package = 'Rcpi')
 # Database composed by searching 'tyrphostin' in PubChem and filtered by Lipinski's Rule of Five
+\donttest{
 searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'maccs', fpsim = 'hamming')
 searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'fp2', fpsim = 'tanimoto')
 searchDrug(mol, moldb, cores = 4, method = 'mcs', mcssim = 'tanimoto')}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

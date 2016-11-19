@@ -7,6 +7,9 @@
 \usage{
 data(AA3DMoRSE)
 }
+\value{
+AA3DMoRSE data
+}
 \description{
 3D-MoRSE Descriptors for 20 Amino Acids calculated by Dragon
 }

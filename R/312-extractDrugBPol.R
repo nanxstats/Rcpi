@@ -31,12 +31,11 @@
 #' @importFrom rcdk eval.desc
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' dat = extractDrugBPol(mol)
 #' head(dat)}
-#'
 
 extractDrugBPol = function (molecules, silent = TRUE) {
 

@@ -7,6 +7,9 @@
 \usage{
 data(AARandic)
 }
+\value{
+AARandic data
+}
 \description{
 Randic Molecular Profiles Descriptors for 20 Amino Acids calculated by Dragon
 }

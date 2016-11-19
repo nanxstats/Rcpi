@@ -7,6 +7,9 @@
 \usage{
 data(AAPAM40)
 }
+\value{
+AAPAM40 data
+}
 \description{
 PAM40 Matrix for 20 Amino Acids
 }

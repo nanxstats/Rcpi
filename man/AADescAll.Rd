@@ -7,6 +7,9 @@
 \usage{
 data(AADescAll)
 }
+\value{
+AADescAll data
+}
 \description{
 All 2D Descriptors for 20 Amino Acids calculated by Dragon
 }

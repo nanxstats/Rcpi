@@ -26,10 +26,9 @@ This function retrieves protein sequences in FASTA format
 from the UniProt database.
 }
 \examples{
-\donttest{
 id = c('P00750', 'P00751', 'P00752')
+\donttest{
 getFASTAFromUniProt(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

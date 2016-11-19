@@ -29,12 +29,11 @@
 #' @seealso \link{extractDrugStandardComplete}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugStandard(mol)
 #' head(fp)}
-#'
 
 extractDrugStandard = function (molecules, depth = 6,
                                 size = 1024, silent = TRUE) {
@@ -98,12 +97,11 @@ extractDrugStandard = function (molecules, depth = 6,
 #' @seealso \link{extractDrugStandard}
 #'
 #' @examples
-#' \donttest{
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+#' \donttest{
 #' mol = readMolFromSmi(smi, type = 'mol')
 #' fp  = extractDrugStandardComplete(mol)
 #' dim(fp)}
-#'
 
 extractDrugStandardComplete = function (molecules, depth = 6,
                                         size = 1024, silent = TRUE) {

@@ -29,12 +29,11 @@ Calculate the fingerprint based on the shortest paths between pairs
 of atoms and takes into account ring systems, charges etc.
 }
 \examples{
-\donttest{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+\donttest{
 mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugShortestPath(mol)
 head(fp)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

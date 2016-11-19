@@ -25,10 +25,9 @@ Retrieve Protein Sequence in PDB Format from RCSB PDB
 This function retrieves protein sequences in PDB format from RCSB PDB.
 }
 \examples{
-\donttest{
 id = c('4HHB', '4FF9')
+\donttest{
 getPDBFromRCSBPDB(id)}
-
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

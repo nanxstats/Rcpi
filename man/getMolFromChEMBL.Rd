@@ -22,11 +22,12 @@ each element containing the corresponding drug molecule.
 Retrieve Drug Molecules in MOL Format from the ChEMBL Database
 }
 \details{
-This function retrieves drug molecules in MOL format from the ChEMBL database.
+This function retrieves drug molecules in MOL format from the
+ChEMBL database.
 }
 \examples{
-\donttest{
 id = 'CHEMBL1430'  # Penicillamine
+\donttest{
 getMolFromChEMBL(id)}
 }
 \author{

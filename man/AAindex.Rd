@@ -8,6 +8,9 @@ for 20 Amino Acids}
 \usage{
 data(AAindex)
 }
+\value{
+AAindex data
+}
 \description{
 AAindex Data of 544 Physicochemical and Biological Properties
 for 20 Amino Acids

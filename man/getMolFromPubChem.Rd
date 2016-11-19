@@ -22,11 +22,12 @@ each element containing the corresponding drug molecule.
 Retrieve Drug Molecules in MOL Format from the PubChem Database
 }
 \details{
-This function retrieves drug molecules in MOL format from the PubChem database.
+This function retrieves drug molecules in MOL format from the
+PubChem database.
 }
 \examples{
-\donttest{
 id = c('7847562', '7847563')  # Penicillamine
+\donttest{
 getMolFromPubChem(id)}
 }
 \author{
