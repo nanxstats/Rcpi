@@ -41,7 +41,7 @@ extractDrugOBMACCS = function (molecules, type = c('smile', 'sdf')) {
 
         if ( length(molecules) == 1L ) {
 
-            molRefs = forEachMol('SMILES', molecules, identity)
+            molRefs = ChemmineOB::forEachMol('SMILES', molecules, identity)
             fp = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
 
         } else if ( length(molecules) > 1L ) {
@@ -49,7 +49,7 @@ extractDrugOBMACCS = function (molecules, type = c('smile', 'sdf')) {
             fp = matrix(0L, nrow = length(molecules), ncol = 256L)
 
             for ( i in 1:length(molecules) ) {
-                molRefs = forEachMol('SMILES', molecules[i], identity)
+                molRefs = ChemmineOB::forEachMol('SMILES', molecules[i], identity)
                 fp[i, ] = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
             }
 
@@ -63,14 +63,14 @@ extractDrugOBMACCS = function (molecules, type = c('smile', 'sdf')) {
 
         if ( length(smiclean) == 1L ) {
 
-            molRefs = forEachMol('SMILES', smiclean, identity)
+            molRefs = ChemmineOB::forEachMol('SMILES', smiclean, identity)
             fp = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
 
         } else if ( length(smiclean) > 1L ) {
 
             fp = matrix(0L, nrow = length(smiclean), ncol = 256L)
             for ( i in 1:length(smiclean) ) {
-                molRefs = forEachMol('SMILES', smiclean[i], identity)
+                molRefs = ChemmineOB::forEachMol('SMILES', smiclean[i], identity)
                 fp[i, ] = ChemmineOB::fingerprint_OB(molRefs, 'MACCS')
             }
 

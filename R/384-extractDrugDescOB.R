@@ -63,7 +63,7 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
 
         if ( length(molecules) == 1L ) {
 
-            molRefs = forEachMol('SMILES', molecules, identity)
+            molRefs = ChemmineOB::forEachMol('SMILES', molecules, identity)
             x = ChemmineOB::prop_OB(molRefs)
 
         } else if ( length(molecules) > 1L ) {
@@ -71,7 +71,7 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
             x = matrix(NA, nrow = length(molecules), ncol = 16)
 
             for ( i in 1:length(molecules) ) {
-                molRefs = forEachMol('SMILES', molecules[i], identity)
+                molRefs = ChemmineOB::forEachMol('SMILES', molecules[i], identity)
                 fp[i, ] = ChemmineOB::prop_OB(molRefs)
             }
 
@@ -85,7 +85,7 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
 
         if ( length(smiclean) == 1L ) {
 
-            molRefs = forEachMol('SMILES', smiclean, identity)
+            molRefs = ChemmineOB::forEachMol('SMILES', smiclean, identity)
             fp = ChemmineOB::prop_OB(molRefs)
 
         } else if ( length(smiclean) > 1L ) {
@@ -93,7 +93,7 @@ extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
             x = matrix(NA, nrow = length(smiclean), ncol = 16)
 
             for ( i in 1:length(smiclean) ) {
-                molRefs = forEachMol('SMILES', smiclean[i], identity)
+                molRefs = ChemmineOB::forEachMol('SMILES', smiclean[i], identity)
                 fp[i, ] = ChemmineOB::prop_OB(molRefs)
             }
 
