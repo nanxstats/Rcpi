@@ -36,8 +36,8 @@ s1 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 s2 = readFASTA(system.file('protseq/P10323.fasta', package = 'Rcpi'))[[1]]
 \donttest{
 seqalign = calcTwoProtSeqSim(s1, s2)
-print(seqalign)
-print(seqalign@score)}
+seqalign
+slot(seqalign, "score")}
 }
 \author{
 Nan Xiao <\url{http://nanx.me}>

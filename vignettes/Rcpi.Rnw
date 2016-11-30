@@ -47,7 +47,7 @@
 
 %
 <<prelim,echo=FALSE,print=FALSE>>=
-Rcpi.version = '1.11.3'
+Rcpi.version = '1.11.4'
 now.date = strftime(Sys.Date(), "%Y-%m-%d")
 @
 %

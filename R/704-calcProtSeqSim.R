@@ -145,8 +145,8 @@ calcParProtSeqSim = function (protlist, cores = 2,
 #' s2 = readFASTA(system.file('protseq/P10323.fasta', package = 'Rcpi'))[[1]]
 #' \donttest{
 #' seqalign = calcTwoProtSeqSim(s1, s2)
-#' print(seqalign)
-#' print(seqalign@@score)}
+#' seqalign
+#' slot(seqalign, "score")}
 
 calcTwoProtSeqSim = function (seq1, seq2, type = 'local',
                               submat = 'BLOSUM62') {
