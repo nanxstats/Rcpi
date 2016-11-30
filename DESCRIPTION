@@ -23,18 +23,17 @@ Imports:
     methods,
     RCurl,
     rjson,
-    rcdk,
     foreach,
     doParallel,
     Biostrings,
     GOSemSim,
     ChemmineR,
-    fmcsR
+    fmcsR,
+    rcdk (>= 3.3.8)
 Suggests:
     RUnit,
     BiocGenerics
 Enhances: ChemmineOB
 biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
-    Cheminformatics, BiomedicalInformatics, Proteomics, GO,
-    GraphAndNetwork, SystemsBiology
+    Cheminformatics, BiomedicalInformatics, Proteomics, GO, SystemsBiology
 RoxygenNote: 5.0.1
