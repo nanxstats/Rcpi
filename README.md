@@ -6,9 +6,30 @@
 
 [BioC (Release)](https://www.bioconductor.org/packages/release/bioc/html/Rcpi.html) · [BioC (Development)](https://www.bioconductor.org/packages/devel/bioc/html/Rcpi.html) · [GitHub (Latest)](https://github.com/road2stat/Rcpi)
 
-## Introduction
-
 Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and chemoinformatics tools for drug discovery. See `vignette("Rcpi")` for the package vignette.
+
+## Paper Citation
+
+Formatted citation:
+
+Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions. _Bioinformatics_ 31 (2), 279-281.
+
+BibTeX entry:
+
+```
+@article{Rcpi2015,
+author = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Alex F. Chen.},
+title = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
+journal = {Bioinformatics},
+year = {2015},
+volume = {31},
+number = {2},
+pages = {279--281},
+doi = {10.1093/bioinformatics/btu624},
+issn = {1367-4803},
+url = {http://bioinformatics.oxfordjournals.org/content/31/2/279}
+}
+```
 
 ## Installation
 
@@ -61,26 +82,3 @@ Several useful auxiliary utilities are also shipped with Rcpi:
   * Molecular file format conversion
 
 The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, chemoinformatics, proteochemometrics, and chemogenomics.
-
-## Paper Citation
-
-Formatted citation:
-
-Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions. _Bioinformatics_ 31 (2), 279-281.
-
-BibTeX entry:
-
-```
-@article{Rcpi2015,
-author = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Alex F. Chen.},
-title = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
-journal = {Bioinformatics},
-year = {2015},
-volume = {31},
-number = {2},
-pages = {279--281},
-doi = {10.1093/bioinformatics/btu624},
-issn = {1367-4803},
-url = {http://bioinformatics.oxfordjournals.org/content/31/2/279}
-}
-```
