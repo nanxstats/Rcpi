@@ -6,6 +6,8 @@
 
 [BioC (Release)](https://www.bioconductor.org/packages/release/bioc/html/Rcpi.html) · [BioC (Development)](https://www.bioconductor.org/packages/devel/bioc/html/Rcpi.html) · [GitHub (Latest)](https://github.com/road2stat/Rcpi)
 
+## Overview
+
 Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and chemoinformatics tools for drug discovery. See `vignette("Rcpi")` for the package vignette.
 
 ## Paper Citation
