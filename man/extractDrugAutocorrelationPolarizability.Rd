@@ -2,7 +2,7 @@
 % Please edit documentation in R/310-extractDrugAutocorrelationPolarizability.R
 \name{extractDrugAutocorrelationPolarizability}
 \alias{extractDrugAutocorrelationPolarizability}
-\title{Calculates the Moreau-Broto Autocorrelation Descriptors using Polarizability}
+\title{Calculate the Moreau-Broto Autocorrelation Descriptors using Polarizability}
 \usage{
 extractDrugAutocorrelationPolarizability(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature. This function returns 5 columns named
 \code{ATSp1}, \code{ATSp2}, \code{ATSp3}, \code{ATSp4}, \code{ATSp5}.
 }
 \description{
-Calculates the Moreau-Broto Autocorrelation Descriptors using Polarizability
+Calculate the Moreau-Broto Autocorrelation Descriptors using Polarizability
 }
 \details{
 Calculates the ATS autocorrelation descriptor using polarizability.

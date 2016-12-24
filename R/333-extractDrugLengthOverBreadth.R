@@ -1,6 +1,6 @@
-#' Calculates the Ratio of Length to Breadth Descriptor
+#' Calculate the Ratio of Length to Breadth Descriptor
 #'
-#' Calculates the Ratio of Length to Breadth Descriptor
+#' Calculate the Ratio of Length to Breadth Descriptor
 #'
 #' Calculates the Ratio of Length to Breadth, as a result ti does not perform
 #' any orientation and only considers the X & Y

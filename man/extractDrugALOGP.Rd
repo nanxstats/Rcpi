@@ -2,7 +2,7 @@
 % Please edit documentation in R/301-extractDrugALOGP.R
 \name{extractDrugALOGP}
 \alias{extractDrugALOGP}
-\title{Calculates Atom Additive logP and Molar Refractivity Values Descriptor}
+\title{Calculate Atom Additive logP and Molar Refractivity Values Descriptor}
 \usage{
 extractDrugALOGP(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature. This function returns three columns
 named \code{ALogP}, \code{ALogp2} and \code{AMR}.
 }
 \description{
-Calculates Atom Additive logP and Molar Refractivity Values Descriptor
+Calculate Atom Additive logP and Molar Refractivity Values Descriptor
 }
 \details{
 Calculates ALOGP (Ghose-Crippen LogKow) and the Ghose-Crippen molar

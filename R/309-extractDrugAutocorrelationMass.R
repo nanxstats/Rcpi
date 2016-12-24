@@ -1,6 +1,6 @@
-#' Calculates the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
+#' Calculate the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
 #'
-#' Calculates the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
+#' Calculate the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
 #'
 #' Calculates the ATS autocorrelation descriptor,
 #' where the weight equal to the scaled atomic mass.

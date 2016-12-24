@@ -2,7 +2,7 @@
 % Please edit documentation in R/314-extractDrugBondCount.R
 \name{extractDrugBondCount}
 \alias{extractDrugBondCount}
-\title{Calculates the Descriptor Based on the Number of Bonds of a
+\title{Calculate the Descriptor Based on the Number of Bonds of a
 Certain Bond Order}
 \usage{
 extractDrugBondCount(molecules, silent = TRUE)
@@ -19,7 +19,7 @@ each column represents one feature.
 This function returns one column named \code{nB}.
 }
 \description{
-Calculates the Descriptor Based on the Number of Bonds of a
+Calculate the Descriptor Based on the Number of Bonds of a
 Certain Bond Order
 }
 \details{

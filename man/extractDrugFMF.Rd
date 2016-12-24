@@ -2,7 +2,7 @@
 % Please edit documentation in R/322-extractDrugFMF.R
 \name{extractDrugFMF}
 \alias{extractDrugFMF}
-\title{Calculates the FMF Descriptor}
+\title{Calculate the FMF Descriptor}
 \usage{
 extractDrugFMF(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{FMF}.
 }
 \description{
-Calculates the FMF Descriptor
+Calculate the FMF Descriptor
 }
 \details{
 Calculates the FMF descriptor characterizing molecular complexity

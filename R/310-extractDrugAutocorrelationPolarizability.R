@@ -1,6 +1,6 @@
-#' Calculates the Moreau-Broto Autocorrelation Descriptors using Polarizability
+#' Calculate the Moreau-Broto Autocorrelation Descriptors using Polarizability
 #'
-#' Calculates the Moreau-Broto Autocorrelation Descriptors using Polarizability
+#' Calculate the Moreau-Broto Autocorrelation Descriptors using Polarizability
 #'
 #' Calculates the ATS autocorrelation descriptor using polarizability.
 #'

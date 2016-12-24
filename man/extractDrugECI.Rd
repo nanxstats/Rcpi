@@ -2,7 +2,7 @@
 % Please edit documentation in R/321-extractDrugECI.R
 \name{extractDrugECI}
 \alias{extractDrugECI}
-\title{Calculates the Eccentric Connectivity Index Descriptor}
+\title{Calculate the Eccentric Connectivity Index Descriptor}
 \usage{
 extractDrugECI(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{ECCEN}.
 }
 \description{
-Calculates the Eccentric Connectivity Index Descriptor
+Calculate the Eccentric Connectivity Index Descriptor
 }
 \details{
 Eccentric Connectivity Index (ECI) is a topological descriptor combining

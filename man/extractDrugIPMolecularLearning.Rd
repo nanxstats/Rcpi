@@ -2,7 +2,7 @@
 % Please edit documentation in R/328-extractDrugIPMolecularLearning.R
 \name{extractDrugIPMolecularLearning}
 \alias{extractDrugIPMolecularLearning}
-\title{Calculates the Descriptor that Evaluates the Ionization Potential}
+\title{Calculate the Descriptor that Evaluates the Ionization Potential}
 \usage{
 extractDrugIPMolecularLearning(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{MolIP}.
 }
 \description{
-Calculates the Descriptor that Evaluates the Ionization Potential
+Calculate the Descriptor that Evaluates the Ionization Potential
 }
 \details{
 Calculate the ionization potential of a molecule.

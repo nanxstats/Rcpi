@@ -1,6 +1,6 @@
-#' Calculates the Descriptor that Evaluates the Ionization Potential
+#' Calculate the Descriptor that Evaluates the Ionization Potential
 #'
-#' Calculates the Descriptor that Evaluates the Ionization Potential
+#' Calculate the Descriptor that Evaluates the Ionization Potential
 #'
 #' Calculate the ionization potential of a molecule.
 #' The descriptor assumes that explicit hydrogens have been added to the molecules.

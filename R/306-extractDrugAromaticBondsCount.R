@@ -1,6 +1,6 @@
-#' Calculates the Number of Aromatic Bonds Descriptor
+#' Calculate the Number of Aromatic Bonds Descriptor
 #'
-#' Calculates the Number of Aromatic Bonds Descriptor
+#' Calculate the Number of Aromatic Bonds Descriptor
 #'
 #' Calculates the number of aromatic bonds of a molecule.
 #'

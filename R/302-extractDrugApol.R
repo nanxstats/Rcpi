@@ -1,6 +1,6 @@
-#' Calculates the Sum of the Atomic Polarizabilities Descriptor
+#' Calculate the Sum of the Atomic Polarizabilities Descriptor
 #'
-#' Calculates the Sum of the Atomic Polarizabilities Descriptor
+#' Calculate the Sum of the Atomic Polarizabilities Descriptor
 #'
 #' Calculates the sum of the atomic polarizabilities
 #' (including implicit hydrogens) descriptor.

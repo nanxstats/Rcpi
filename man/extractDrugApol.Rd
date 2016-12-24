@@ -2,7 +2,7 @@
 % Please edit documentation in R/302-extractDrugApol.R
 \name{extractDrugApol}
 \alias{extractDrugApol}
-\title{Calculates the Sum of the Atomic Polarizabilities Descriptor}
+\title{Calculate the Sum of the Atomic Polarizabilities Descriptor}
 \usage{
 extractDrugApol(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{apol}.
 }
 \description{
-Calculates the Sum of the Atomic Polarizabilities Descriptor
+Calculate the Sum of the Atomic Polarizabilities Descriptor
 }
 \details{
 Calculates the sum of the atomic polarizabilities

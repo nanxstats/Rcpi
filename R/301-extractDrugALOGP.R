@@ -1,6 +1,6 @@
-#' Calculates Atom Additive logP and Molar Refractivity Values Descriptor
+#' Calculate Atom Additive logP and Molar Refractivity Values Descriptor
 #'
-#' Calculates Atom Additive logP and Molar Refractivity Values Descriptor
+#' Calculate Atom Additive logP and Molar Refractivity Values Descriptor
 #'
 #' Calculates ALOGP (Ghose-Crippen LogKow) and the Ghose-Crippen molar
 #' refractivity as described by Ghose, A.K. and Crippen, G.M.

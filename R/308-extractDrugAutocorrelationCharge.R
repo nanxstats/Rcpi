@@ -1,6 +1,6 @@
-#' Calculates the Moreau-Broto Autocorrelation Descriptors using Partial Charges
+#' Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges
 #'
-#' Calculates the Moreau-Broto Autocorrelation Descriptors using Partial Charges
+#' Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges
 #'
 #' Calculates the ATS autocorrelation descriptor,
 #' where the weight equal to the charges.

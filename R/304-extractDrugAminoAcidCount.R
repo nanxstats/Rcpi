@@ -1,6 +1,6 @@
-#' Calculates the Number of Amino Acids Descriptor
+#' Calculate the Number of Amino Acids Descriptor
 #'
-#' Calculates the Number of Amino Acids Descriptor
+#' Calculate the Number of Amino Acids Descriptor
 #'
 #' Calculates the number of each amino acids (total 20 types)
 #' found in the molecues.

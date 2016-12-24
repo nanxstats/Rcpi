@@ -1,6 +1,6 @@
-#' Descriptor that Calculates the Number of Hydrogen Bond Donors
+#' Number of Hydrogen Bond Donors
 #'
-#' Descriptor that Calculates the Number of Hydrogen Bond Donors
+#' Number of Hydrogen Bond Donors
 #'
 #' This descriptor calculates the number of hydrogen bond donors using
 #' a slightly simplified version of the PHACIR atom types

@@ -2,7 +2,7 @@
 % Please edit documentation in R/309-extractDrugAutocorrelationMass.R
 \name{extractDrugAutocorrelationMass}
 \alias{extractDrugAutocorrelationMass}
-\title{Calculates the Moreau-Broto Autocorrelation Descriptors using Atomic Weight}
+\title{Calculate the Moreau-Broto Autocorrelation Descriptors using Atomic Weight}
 \usage{
 extractDrugAutocorrelationMass(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature. This function returns 5 columns named
 \code{ATSm1}, \code{ATSm2}, \code{ATSm3}, \code{ATSm4}, \code{ATSm5}.
 }
 \description{
-Calculates the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
+Calculate the Moreau-Broto Autocorrelation Descriptors using Atomic Weight
 }
 \details{
 Calculates the ATS autocorrelation descriptor,

@@ -1,6 +1,6 @@
-#' Descriptor that Calculates the Number of Hydrogen Bond Acceptors
+#' Number of Hydrogen Bond Acceptors
 #'
-#' Descriptor that Calculates the Number of Hydrogen Bond Acceptors
+#' Number of Hydrogen Bond Acceptors
 #'
 #' This descriptor calculates the number of hydrogen bond acceptors
 #' using a slightly simplified version of the PHACIR atom types.

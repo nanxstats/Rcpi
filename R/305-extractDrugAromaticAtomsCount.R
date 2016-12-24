@@ -1,6 +1,6 @@
-#' Calculates the Number of Aromatic Atoms Descriptor
+#' Calculate the Number of Aromatic Atoms Descriptor
 #'
-#' Calculates the Number of Aromatic Atoms Descriptor
+#' Calculate the Number of Aromatic Atoms Descriptor
 #'
 #' Calculates the number of aromatic atoms of a molecule.
 #'

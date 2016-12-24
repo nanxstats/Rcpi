@@ -1,6 +1,6 @@
-#' Calculates the Number of Atom Descriptor
+#' Calculate the Number of Atom Descriptor
 #'
-#' Calculates the Number of Atom Descriptor
+#' Calculate the Number of Atom Descriptor
 #'
 #' Calculates the number of atoms of a certain element type in a molecule.
 #' By default it returns the count of all atoms.

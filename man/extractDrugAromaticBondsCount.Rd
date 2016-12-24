@@ -2,7 +2,7 @@
 % Please edit documentation in R/306-extractDrugAromaticBondsCount.R
 \name{extractDrugAromaticBondsCount}
 \alias{extractDrugAromaticBondsCount}
-\title{Calculates the Number of Aromatic Bonds Descriptor}
+\title{Calculate the Number of Aromatic Bonds Descriptor}
 \usage{
 extractDrugAromaticBondsCount(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{nAromBond}.
 }
 \description{
-Calculates the Number of Aromatic Bonds Descriptor
+Calculate the Number of Aromatic Bonds Descriptor
 }
 \details{
 Calculates the number of aromatic bonds of a molecule.

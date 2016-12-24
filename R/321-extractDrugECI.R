@@ -1,6 +1,6 @@
-#' Calculates the Eccentric Connectivity Index Descriptor
+#' Calculate the Eccentric Connectivity Index Descriptor
 #'
-#' Calculates the Eccentric Connectivity Index Descriptor
+#' Calculate the Eccentric Connectivity Index Descriptor
 #'
 #' Eccentric Connectivity Index (ECI) is a topological descriptor combining
 #' distance and adjacency information. This descriptor is described by Sharma et al.

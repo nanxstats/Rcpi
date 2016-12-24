@@ -1,6 +1,6 @@
-#' Calculates All the Molecular Descriptors in the Rcpi Package at Once
+#' Calculate All Molecular Descriptors in Rcpi at Once
 #'
-#' Calculates All the Molecular Descriptors in the Rcpi Package at Once
+#' Calculate All Molecular Descriptors in Rcpi at Once
 #'
 #' This function calculates all the molecular descriptors
 #' in the Rcpi package at once.

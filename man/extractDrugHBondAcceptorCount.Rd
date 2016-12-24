@@ -2,7 +2,7 @@
 % Please edit documentation in R/325-extractDrugHBondAcceptorCount.R
 \name{extractDrugHBondAcceptorCount}
 \alias{extractDrugHBondAcceptorCount}
-\title{Descriptor that Calculates the Number of Hydrogen Bond Acceptors}
+\title{Number of Hydrogen Bond Acceptors}
 \usage{
 extractDrugHBondAcceptorCount(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{nHBAcc}.
 }
 \description{
-Descriptor that Calculates the Number of Hydrogen Bond Acceptors
+Number of Hydrogen Bond Acceptors
 }
 \details{
 This descriptor calculates the number of hydrogen bond acceptors

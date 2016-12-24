@@ -1,6 +1,6 @@
-#' Calculates the FMF Descriptor
+#' Calculate the FMF Descriptor
 #'
-#' Calculates the FMF Descriptor
+#' Calculate the FMF Descriptor
 #'
 #' Calculates the FMF descriptor characterizing molecular complexity
 #' in terms of its Murcko framework. This descriptor is the ratio of

@@ -2,7 +2,7 @@
 % Please edit documentation in R/300-extractDrugAIO.R
 \name{extractDrugAIO}
 \alias{extractDrugAIO}
-\title{Calculates All the Molecular Descriptors in the Rcpi Package at Once}
+\title{Calculate All Molecular Descriptors in Rcpi at Once}
 \usage{
 extractDrugAIO(molecules, silent = TRUE, warn = TRUE)
 }
@@ -23,7 +23,7 @@ Currently, this function returns total 293 descriptors
 composed of 48 descriptor types.
 }
 \description{
-Calculates All the Molecular Descriptors in the Rcpi Package at Once
+Calculate All Molecular Descriptors in Rcpi at Once
 }
 \details{
 This function calculates all the molecular descriptors

@@ -1,7 +1,7 @@
-#' Calculates the Descriptor Based on the Number of Bonds of a
+#' Calculate the Descriptor Based on the Number of Bonds of a
 #' Certain Bond Order
 #'
-#' Calculates the Descriptor Based on the Number of Bonds of a
+#' Calculate the Descriptor Based on the Number of Bonds of a
 #' Certain Bond Order
 #'
 #' Calculates the descriptor based on the number of bonds of a

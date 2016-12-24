@@ -2,7 +2,7 @@
 % Please edit documentation in R/304-extractDrugAminoAcidCount.R
 \name{extractDrugAminoAcidCount}
 \alias{extractDrugAminoAcidCount}
-\title{Calculates the Number of Amino Acids Descriptor}
+\title{Calculate the Number of Amino Acids Descriptor}
 \usage{
 extractDrugAminoAcidCount(molecules, silent = TRUE)
 }
@@ -22,7 +22,7 @@ This function returns 20 columns named
 \code{nS}, \code{nT}, \code{nY} \code{nV}, \code{nW}.
 }
 \description{
-Calculates the Number of Amino Acids Descriptor
+Calculate the Number of Amino Acids Descriptor
 }
 \details{
 Calculates the number of each amino acids (total 20 types)

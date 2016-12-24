@@ -2,7 +2,7 @@
 % Please edit documentation in R/333-extractDrugLengthOverBreadth.R
 \name{extractDrugLengthOverBreadth}
 \alias{extractDrugLengthOverBreadth}
-\title{Calculates the Ratio of Length to Breadth Descriptor}
+\title{Calculate the Ratio of Length to Breadth Descriptor}
 \usage{
 extractDrugLengthOverBreadth(molecules, silent = TRUE)
 }
@@ -23,7 +23,7 @@ minimum area (defined by the product of the X & Y extents for that orientation).
 }
 }
 \description{
-Calculates the Ratio of Length to Breadth Descriptor
+Calculate the Ratio of Length to Breadth Descriptor
 }
 \details{
 Calculates the Ratio of Length to Breadth, as a result ti does not perform

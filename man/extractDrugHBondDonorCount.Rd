@@ -2,7 +2,7 @@
 % Please edit documentation in R/326-extractDrugHBondDonorCount.R
 \name{extractDrugHBondDonorCount}
 \alias{extractDrugHBondDonorCount}
-\title{Descriptor that Calculates the Number of Hydrogen Bond Donors}
+\title{Number of Hydrogen Bond Donors}
 \usage{
 extractDrugHBondDonorCount(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{nHBDon}.
 }
 \description{
-Descriptor that Calculates the Number of Hydrogen Bond Donors
+Number of Hydrogen Bond Donors
 }
 \details{
 This descriptor calculates the number of hydrogen bond donors using

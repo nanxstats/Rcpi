@@ -2,7 +2,7 @@
 % Please edit documentation in R/307-extractDrugAtomCount.R
 \name{extractDrugAtomCount}
 \alias{extractDrugAtomCount}
-\title{Calculates the Number of Atom Descriptor}
+\title{Calculate the Number of Atom Descriptor}
 \usage{
 extractDrugAtomCount(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{nAtom}.
 }
 \description{
-Calculates the Number of Atom Descriptor
+Calculate the Number of Atom Descriptor
 }
 \details{
 Calculates the number of atoms of a certain element type in a molecule.

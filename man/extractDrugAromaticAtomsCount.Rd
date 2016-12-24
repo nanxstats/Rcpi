@@ -2,7 +2,7 @@
 % Please edit documentation in R/305-extractDrugAromaticAtomsCount.R
 \name{extractDrugAromaticAtomsCount}
 \alias{extractDrugAromaticAtomsCount}
-\title{Calculates the Number of Aromatic Atoms Descriptor}
+\title{Calculate the Number of Aromatic Atoms Descriptor}
 \usage{
 extractDrugAromaticAtomsCount(molecules, silent = TRUE)
 }
@@ -18,7 +18,7 @@ each column represents one feature.
 This function returns one column named \code{naAromAtom}.
 }
 \description{
-Calculates the Number of Aromatic Atoms Descriptor
+Calculate the Number of Aromatic Atoms Descriptor
 }
 \details{
 Calculates the number of aromatic atoms of a molecule.

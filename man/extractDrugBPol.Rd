@@ -2,7 +2,7 @@
 % Please edit documentation in R/312-extractDrugBPol.R
 \name{extractDrugBPol}
 \alias{extractDrugBPol}
-\title{Calculates the Descriptor that Describes the Sum of the Absolute
+\title{Calculate the Descriptor that Describes the Sum of the Absolute
 Value of the Difference between Atomic Polarizabilities of
 All Bonded Atoms in the Molecule}
 \usage{

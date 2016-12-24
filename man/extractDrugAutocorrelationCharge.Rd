@@ -2,7 +2,7 @@
 % Please edit documentation in R/308-extractDrugAutocorrelationCharge.R
 \name{extractDrugAutocorrelationCharge}
 \alias{extractDrugAutocorrelationCharge}
-\title{Calculates the Moreau-Broto Autocorrelation Descriptors using Partial Charges}
+\title{Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges}
 \usage{
 extractDrugAutocorrelationCharge(molecules, silent = TRUE)
 }
@@ -19,7 +19,7 @@ This function returns 5 columns named
 \code{ATSc1}, \code{ATSc2}, \code{ATSc3}, \code{ATSc4}, \code{ATSc5}.
 }
 \description{
-Calculates the Moreau-Broto Autocorrelation Descriptors using Partial Charges
+Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges
 }
 \details{
 Calculates the ATS autocorrelation descriptor,
