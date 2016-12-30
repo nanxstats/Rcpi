@@ -1,23 +1,23 @@
 # Rcpi 1.0.0 (2014-03-01)
 
-## NEW FEATURES
+## New Features
 
 - Initial release
 
 # Rcpi 1.0.2 (2014-07-20)
 
-## NEW FEATURES
+## New Features
 
 - Added the profile-based representation for proteins derived by PSSM
 
-## DOCUMENTATION
+## Documentation
 
 - Added a vignette which grouped similar functions into the same category. See vignette('Rcpi-quickref') . This makes the package structure clearer and enhances its usability.
 - Other documentation improvements
 
 # Rcpi 1.11.1 (2016-11-12)
 
-## BUG FIXES
+## Bug Fixes
 
 - Fixed known problems in `extractProt` functions
 - Fixed some build and dependency related problems
@@ -26,7 +26,7 @@
 
 # Rcpi 1.11.2 (2016-11-18)
 
-## BUG FIXES
+## Bug Fixes
 
 - Fixed some `R CMD check` errors
 - ChemmineOB related fixes

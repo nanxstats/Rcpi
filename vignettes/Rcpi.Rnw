@@ -47,7 +47,7 @@
 
 %
 <<prelim,echo=FALSE,print=FALSE>>=
-Rcpi.version = '1.11.4'
+Rcpi.version = '1.11.6'
 now.date = strftime(Sys.Date(), "%Y-%m-%d")
 @
 %
@@ -955,12 +955,6 @@ The ROC curve is shown in figure \ref{fig:ex6-2}.
 \includegraphics[width=0.6\textwidth]{fig/ex6-2.pdf}
 \caption{ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest} \label{fig:ex6-2}
 \end{figure}
-
-\section*{Acknowledgments}\addcontentsline{toc}{section}{Acknowledgments}
-
-The authors thank all members of the Computational Biology and Drug Design (CBDD) Group (\url{http://cbdd.csu.edu.cn/}) of Central South University for their support.
-
-This work is financially supported by the National Natural Science Foundation of China (Grant No. 11271374) and the Postdoctoral Science Foundation of Central South University. The studies meet with the approval of the university's review board.
 
 \clearpage
 

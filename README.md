@@ -8,7 +8,7 @@
 
 ## Overview
 
-Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and chemoinformatics tools for drug discovery. See `vignette("Rcpi")` for the package vignette.
+Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and chemoinformatics tools for drug discovery. For more information, please see our paper <[DOI:10.1093/bioinformatics/btu624](https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btu624)> ([PDF](https://drive.google.com/file/d/0B1YdO4YnMkAxMWVSbXdqVUIxWjg/view)).
 
 ## Paper Citation
 
