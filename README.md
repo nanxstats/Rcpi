@@ -1,4 +1,4 @@
-# Rcpi  <a href="http://nanx.me/Rcpi/"><img src="http://nanx.me/images/project-Rcpi.png" align="right" alt="logo" height="180" width="180" /></a>
+# Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://nanx.me/images/project-Rcpi.png" align="right" alt="logo" height="180" width="180" /></a>
 
 [![platform](https://www.bioconductor.org/shields/availability/devel/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#archives)
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
@@ -8,7 +8,7 @@
 
 ## Overview
 
-Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and chemoinformatics tools for drug discovery. For more information, please see our paper <[DOI:10.1093/bioinformatics/btu624](https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btu624)> ([PDF](https://drive.google.com/file/d/0B1YdO4YnMkAxMWVSbXdqVUIxWjg/view)).
+Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and cheminformatics tools for drug discovery. For more information, please see our paper <[DOI:10.1093/bioinformatics/btu624](https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btu624)> ([PDF](https://drive.google.com/file/d/0B1YdO4YnMkAxMWVSbXdqVUIxWjg/view)).
 
 ## Paper Citation
 
@@ -83,4 +83,4 @@ Several useful auxiliary utilities are also shipped with Rcpi:
 
   * Molecular file format conversion
 
-The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, chemoinformatics, proteochemometrics, and chemogenomics.
+The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, cheminformatics, proteochemometrics, and chemogenomics.

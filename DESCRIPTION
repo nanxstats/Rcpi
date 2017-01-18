@@ -1,8 +1,8 @@
 Package: Rcpi
 Type: Package
 Title: Molecular Informatics Toolkit for Compound-Protein Interaction in Drug Discovery
-Version: 1.11.6
-Date: 2016-12-29
+Version: 1.11.7
+Date: 2017-01-18
 Description: Rcpi offers a molecular informatics toolkit with a
     comprehensive integration of bioinformatics and
     chemoinformatics tools for drug discovery.
@@ -13,7 +13,7 @@ Authors@R: c(
     )
 Maintainer: Nan Xiao <me@nanx.me>
 License: Artistic-2.0
-URL: http://nanx.me/Rcpi/, https://github.com/road2stat/Rcpi
+URL: https://nanx.me/Rcpi/, https://github.com/road2stat/Rcpi
 BugReports: https://github.com/road2stat/Rcpi/issues
 LazyData: yes
 Imports:
