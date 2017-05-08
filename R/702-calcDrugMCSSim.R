@@ -51,9 +51,10 @@
 #' print(sim1[[2]])  # Tanimoto Coefficient
 #' print(sim2[[3]])  # Overlap Coefficient}
 
-calcDrugMCSSim = function (mol1, mol2, type = c('smile', 'sdf'), plot = FALSE,
-                           al = 0, au = 0, bl = 0, bu = 0,
-                           matching.mode = 'static', ...) {
+calcDrugMCSSim = function(
+    mol1, mol2, type = c('smile', 'sdf'), plot = FALSE,
+    al = 0, au = 0, bl = 0, bu = 0,
+    matching.mode = 'static', ...) {
 
     if (type == 'smile') {
 

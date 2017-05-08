@@ -79,9 +79,10 @@
 
 extractDrugCPSA = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.CPSADescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.CPSADescriptor',
+        verbose = !silent)
 
     return(x)
 

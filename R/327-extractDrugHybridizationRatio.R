@@ -39,9 +39,10 @@
 
 extractDrugHybridizationRatio = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.HybridizationRatioDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.HybridizationRatioDescriptor',
+        verbose = !silent)
 
     return(x)
 

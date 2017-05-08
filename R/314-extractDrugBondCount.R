@@ -34,9 +34,10 @@
 
 extractDrugBondCount = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.BondCountDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.BondCountDescriptor',
+        verbose = !silent)
 
     return(x)
 

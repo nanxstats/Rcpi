@@ -53,9 +53,10 @@
 
 extractDrugChiPathCluster = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.ChiPathClusterDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.ChiPathClusterDescriptor',
+        verbose = !silent)
 
     return(x)
 

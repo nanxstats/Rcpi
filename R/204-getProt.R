@@ -34,10 +34,11 @@
 #' \donttest{
 #' getProt(id, from = 'uniprot', type = 'aaseq')}
 
-getProt = function (id,
-                    from = c('uniprot', 'kegg', 'pdb'),
-                    type = c('fasta', 'pdb', 'aaseq'),
-                    parallel = 5) {
+getProt = function(
+    id,
+    from = c('uniprot', 'kegg', 'pdb'),
+    type = c('fasta', 'pdb', 'aaseq'),
+    parallel = 5) {
 
     if (is.null(from)) stop('Must specify a data source')
     if (is.null(type)) stop('Must specify a data type')
@@ -59,9 +60,10 @@ getProt = function (id,
 
     FunctionName = paste('get', NamePart1, 'From', NamePart2, sep = '')
 
-    Prot = eval(parse(text = paste(FunctionName, '(',
-                                   gsub('\\"', '\'', capture.output(dput(id))),
-                                   ', ', parallel, ')', sep = '')))
+    Prot = eval(parse(text = paste(
+        FunctionName, '(',
+        gsub('\\"', '\'', capture.output(dput(id))),
+        ', ', parallel, ')', sep = '')))
 
     return(Prot)
 

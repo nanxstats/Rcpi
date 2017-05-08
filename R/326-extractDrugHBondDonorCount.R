@@ -40,9 +40,10 @@
 
 extractDrugHBondDonorCount = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.HBondDonorCountDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.HBondDonorCountDescriptor',
+        verbose = !silent)
 
     return(x)
 

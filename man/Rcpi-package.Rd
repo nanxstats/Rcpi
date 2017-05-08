@@ -20,5 +20,4 @@ License: \tab Artistic-2.0\cr }
 Bug reports and feature requests should be sent to
 \url{https://github.com/road2stat/Rcpi/issues}.
 }
-\keyword{Rcpi}
 

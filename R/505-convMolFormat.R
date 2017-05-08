@@ -199,9 +199,10 @@
 
 convMolFormat = function (infile, outfile, from, to) {
 
-  ChemmineOB::convertFormatFile(from = from, to = to,
-                                fromFile = infile, toFile = outfile)
+    ChemmineOB::convertFormatFile(
+        from = from, to = to,
+        fromFile = infile, toFile = outfile)
 
-  invisible()
+    invisible()
 
 }

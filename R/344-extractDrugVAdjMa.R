@@ -33,9 +33,10 @@
 
 extractDrugVAdjMa = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.VAdjMaDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.VAdjMaDescriptor',
+        verbose = !silent)
 
     return(x)
 

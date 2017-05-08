@@ -31,9 +31,10 @@
 
 extractDrugAromaticAtomsCount = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.AromaticAtomsCountDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.AromaticAtomsCountDescriptor',
+        verbose = !silent)
 
     return(x)
 

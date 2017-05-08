@@ -80,22 +80,22 @@ getCPI = function (drugmat, protmat, type = c('combine', 'tensorprod')) {
 
         result = .getCPICombine(drugmat, protmat)
 
-        } else if (all(type == 'tensorprod')) {
+    } else if (all(type == 'tensorprod')) {
 
-            result = .getCPITensor(drugmat, protmat, row = drugrow,
-                                   dcol = drugcol, pcol = protcol)
+        result = .getCPITensor(drugmat, protmat, row = drugrow,
+                               dcol = drugcol, pcol = protcol)
 
-            } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
+    } else if (length(setdiff(type, c('tensorprod', 'combine'))) == 0L) {
 
-                result = cbind(.getCPICombine(drugmat, protmat),
-                               .getCPITensor(drugmat, protmat, row = drugrow,
-                                             dcol = drugcol, pcol = protcol))
+        result = cbind(.getCPICombine(drugmat, protmat),
+                       .getCPITensor(drugmat, protmat, row = drugrow,
+                                     dcol = drugcol, pcol = protcol))
 
-                } else {
+    } else {
 
-                    stop('Interaction type must be in "tensorprod" and "combine" or both')
+        stop('Interaction type must be in "tensorprod" and "combine" or both')
 
-                }
+    }
 
     return(result)
 

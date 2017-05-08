@@ -87,9 +87,9 @@ acc = function (mat, lag) {
     }
 
     acc2 = as.vector(acc2)
-    names(acc2) = as.vector(outer(paste0('scl',
-                                         paste(idx[1, ], idx[2, ], sep = '.')),
-                                  paste0('lag', 1:lag), paste, sep = '.'))
+    names(acc2) = as.vector(outer(
+        paste0('scl', paste(idx[1, ], idx[2, ], sep = '.')),
+        paste0('lag', 1:lag), paste, sep = '.'))
 
     ACC = c(acc1, acc2)
 

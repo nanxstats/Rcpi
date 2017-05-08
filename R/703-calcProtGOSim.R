@@ -1,6 +1,7 @@
-.calcgoPairSim = function (twoid, golist = golist,
-                           ont = ont, organism = organism, measure = measure,
-                           combine = combine) {
+.calcgoPairSim = function(
+    twoid, golist = golist,
+    ont = ont, organism = organism, measure = measure,
+    combine = combine) {
 
     id1 = twoid[1]
     id2 = twoid[2]
@@ -17,12 +18,13 @@
         gid1 = as.character(golist[[id1]][id1good])
         gid2 = as.character(golist[[id2]][id2good])
 
-        res = try(suppressWarnings(GOSemSim::mgoSim(gid1, gid2,
-                                                    ont = ont,
-                                                    organism = organism,
-                                                    measure = measure,
-                                                    combine = combine)),
-                  silent = TRUE)
+        res = try(suppressWarnings(GOSemSim::mgoSim(
+            gid1, gid2,
+            ont = ont,
+            organism = organism,
+            measure = measure,
+            combine = combine)),
+            silent = TRUE)
 
         if ( is.numeric(res) ) {
             sim = res
@@ -92,9 +94,10 @@
 #' gsimmat2 = calcParProtGOSim(genelist, type = 'gene')
 #' print(gsimmat2)}
 
-calcParProtGOSim = function (golist, type = c('go', 'gene'),
-                             ont = 'MF', organism = 'human',
-                             measure = 'Resnik', combine = 'BMA') {
+calcParProtGOSim = function(
+    golist, type = c('go', 'gene'),
+    ont = 'MF', organism = 'human',
+    measure = 'Resnik', combine = 'BMA') {
 
     if ( type == 'gene' ) {
         gosimmat = GOSemSim::mgeneSim(
@@ -186,20 +189,23 @@ calcParProtGOSim = function (golist, type = c('go', 'gene'),
 #' gsim2 = calcTwoProtGOSim(gene1, gene2, type = 'gene', ont = 'CC', measure = 'Lin')
 #' print(gsim2)}
 
-calcTwoProtGOSim = function (id1, id2, type = c('go', 'gene'),
-                             ont = 'MF', organism = 'human',
-                             measure = 'Resnik', combine = 'BMA') {
+calcTwoProtGOSim = function(
+    id1, id2, type = c('go', 'gene'),
+    ont = 'MF', organism = 'human',
+    measure = 'Resnik', combine = 'BMA') {
 
     if ( type == 'go' ) {
-        sim = GOSemSim::mgoSim(id1, id2,
-                               ont = ont, organism = organism,
-                               measure = measure, combine = combine)
+        sim = GOSemSim::mgoSim(
+            id1, id2,
+            ont = ont, organism = organism,
+            measure = measure, combine = combine)
     }
 
     if ( type == 'gene' ) {
-        sim = GOSemSim::geneSim(id1, id2,
-                                ont = ont, organism = organism,
-                                measure = measure, combine = combine)$geneSim
+        sim = GOSemSim::geneSim(
+            id1, id2,
+            ont = ont, organism = organism,
+            measure = measure, combine = combine)$geneSim
     }
 
     return(sim)

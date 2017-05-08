@@ -86,9 +86,10 @@
 
 extractDrugWHIM = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.WHIMDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.WHIMDescriptor',
+        verbose = !silent)
 
     return(x)
 

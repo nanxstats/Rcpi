@@ -33,9 +33,10 @@
 
 extractDrugAutocorrelationCharge = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorCharge',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorCharge',
+        verbose = !silent)
 
     return(x)
 

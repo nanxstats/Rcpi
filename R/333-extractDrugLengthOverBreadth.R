@@ -41,9 +41,10 @@
 
 extractDrugLengthOverBreadth = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor',
+        verbose = !silent)
 
     return(x)
 

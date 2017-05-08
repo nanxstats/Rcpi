@@ -46,9 +46,10 @@
 
 extractDrugECI = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.EccentricConnectivityIndexDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.EccentricConnectivityIndexDescriptor',
+        verbose = !silent)
 
     return(x)
 

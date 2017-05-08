@@ -48,9 +48,10 @@
 
 extractDrugWeightedPath = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.WeightedPathDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.WeightedPathDescriptor',
+        verbose = !silent)
 
     return(x)
 

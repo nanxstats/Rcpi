@@ -34,9 +34,10 @@
 
 extractDrugZagrebIndex = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.ZagrebIndexDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.ZagrebIndexDescriptor',
+        verbose = !silent)
 
     return(x)
 

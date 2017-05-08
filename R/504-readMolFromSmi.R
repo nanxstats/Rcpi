@@ -45,15 +45,15 @@ readMolFromSmi = function (smifile, type = c('mol', 'text')) {
         smi = as.character(txt)
         mol = parse.smiles(smi)
 
-        } else if (type == 'text') {
+    } else if (type == 'text') {
 
-            mol = scan(smifile, what = 'complex', quiet = TRUE)
+        mol = scan(smifile, what = 'complex', quiet = TRUE)
 
-            } else {
+    } else {
 
-                stop('type must be one of "mol" or "text"')
+        stop('type must be one of "mol" or "text"')
 
-            }
+    }
 
     return(mol)
 

@@ -44,9 +44,10 @@
 
 extractDrugChiPath = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.ChiPathDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.ChiPathDescriptor',
+        verbose = !silent)
 
     return(x)
 

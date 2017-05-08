@@ -41,21 +41,22 @@ extractDrugMACCS = function (molecules, silent = TRUE) {
         fp[[1]] = x@bits
         names(fp) = x@nbit
 
-        } else {
+    } else {
 
-            x = lapply(molecules, get.fingerprint,
-                       type = 'maccs', verbose = !silent)
+        x = lapply(
+            molecules, get.fingerprint,
+            type = 'maccs', verbose = !silent)
 
-            fp = vector('list', length(molecules))
+        fp = vector('list', length(molecules))
 
-            for (i in 1:length(molecules)) {
+        for (i in 1:length(molecules)) {
 
-                fp[[i]] = x[[i]]@bits
-                names(fp)[i] = x[[i]]@nbit
-
-            }
+            fp[[i]] = x[[i]]@bits
+            names(fp)[i] = x[[i]]@nbit
 
         }
+
+    }
 
     return(fp)
 
@@ -102,16 +103,17 @@ extractDrugMACCSComplete = function (molecules, silent = TRUE) {
         fp = integer(166)
         fp[x@bits] = 1L
 
-        } else {
+    } else {
 
-            x = lapply(molecules, get.fingerprint,
-                       type = 'maccs', verbose = !silent)
+        x = lapply(
+            molecules, get.fingerprint,
+            type = 'maccs', verbose = !silent)
 
-            fp = matrix(0L, nrow = length(molecules), ncol = 166)
+        fp = matrix(0L, nrow = length(molecules), ncol = 166)
 
-            for (i in 1:length(molecules)) fp[ i, x[[i]]@bits ] = 1L
+        for (i in 1:length(molecules)) fp[ i, x[[i]]@bits ] = 1L
 
-        }
+    }
 
     return(fp)
 

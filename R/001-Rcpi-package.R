@@ -17,8 +17,6 @@
 #' Bug reports and feature requests should be sent to
 #' \url{https://github.com/road2stat/Rcpi/issues}.
 #'
-#' @keywords Rcpi
-#'
 #' @import foreach doParallel Biostrings GOSemSim ChemmineR fmcsR
 #' @importFrom methods as
 #' @importFrom stats cmdscale dist factanal na.omit prcomp predict sd

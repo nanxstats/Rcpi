@@ -54,9 +54,10 @@
 
 extractDrugMomentOfInertia = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.MomentOfInertiaDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.MomentOfInertiaDescriptor',
+        verbose = !silent)
 
     return(x)
 

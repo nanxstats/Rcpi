@@ -32,9 +32,10 @@
 
 extractDrugAutocorrelationPolarizability = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorPolarizability',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorPolarizability',
+        verbose = !silent)
 
     return(x)
 

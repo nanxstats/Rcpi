@@ -33,10 +33,11 @@
 #' \donttest{
 #' getDrug(id, 'drugbank', 'smile')}
 
-getDrug = function (id,
-                    from = c('pubchem', 'chembl', 'cas', 'kegg', 'drugbank'),
-                    type = c('mol', 'smile'),
-                    parallel = 5) {
+getDrug = function(
+    id,
+    from = c('pubchem', 'chembl', 'cas', 'kegg', 'drugbank'),
+    type = c('mol', 'smile'),
+    parallel = 5) {
 
     if (is.null(from)) stop('Must specify a data source')
     if (is.null(type)) stop('Must specify a data type')
@@ -56,9 +57,10 @@ getDrug = function (id,
 
     FunctionName = paste('get', NamePart1, 'From', NamePart2, sep = '')
 
-    Drug = eval(parse(text = paste(FunctionName, '(',
-                                   gsub('\\"', '\'', capture.output(dput(id))),
-                                   ', ', parallel, ')', sep = '')))
+    Drug = eval(parse(text = paste(
+        FunctionName, '(',
+        gsub('\\"', '\'', capture.output(dput(id))),
+        ', ', parallel, ')', sep = '')))
 
     return(Drug)
 

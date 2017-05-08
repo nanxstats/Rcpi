@@ -31,9 +31,10 @@
 
 extractDrugLargestPiSystem = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.LargestPiSystemDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.LargestPiSystemDescriptor',
+        verbose = !silent)
 
     return(x)
 

@@ -37,33 +37,35 @@
 #' fp  = extractDrugExtended(mol)
 #' head(fp)}
 
-extractDrugExtended = function (molecules, depth = 6,
-                                size = 1024, silent = TRUE) {
+extractDrugExtended = function(
+    molecules, depth = 6, size = 1024, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'extended',
-                            depth = depth, size = size, verbose = !silent)
+        x = get.fingerprint(
+            molecules, type = 'extended',
+            depth = depth, size = size, verbose = !silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
         names(fp) = x@nbit
 
-        } else {
+    } else {
 
-            x = lapply(molecules, get.fingerprint, type = 'extended',
-                       depth = depth, size = size, verbose = !silent)
+        x = lapply(
+            molecules, get.fingerprint, type = 'extended',
+            depth = depth, size = size, verbose = !silent)
 
-            fp = vector('list', length(molecules))
+        fp = vector('list', length(molecules))
 
-            for (i in 1:length(molecules)) {
+        for (i in 1:length(molecules)) {
 
-                fp[[i]] = x[[i]]@bits
-                names(fp)[i] = x[[i]]@nbit
-
-            }
+            fp[[i]] = x[[i]]@bits
+            names(fp)[i] = x[[i]]@nbit
 
         }
+
+    }
 
     return(fp)
 
@@ -106,27 +108,29 @@ extractDrugExtended = function (molecules, depth = 6,
 #' fp  = extractDrugExtendedComplete(mol)
 #' dim(fp)}
 
-extractDrugExtendedComplete = function (molecules, depth = 6,
-                                        size = 1024, silent = TRUE) {
+extractDrugExtendedComplete = function(
+    molecules, depth = 6, size = 1024, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'extended',
-                            depth = depth, size = size, verbose = !silent)
+        x = get.fingerprint(
+            molecules, type = 'extended',
+            depth = depth, size = size, verbose = !silent)
 
         fp = integer(x@nbit)
         fp[x@bits] = 1L
 
-        } else {
+    } else {
 
-            x = lapply(molecules, get.fingerprint, type = 'extended',
-                       depth = depth, size = size, verbose = !silent)
+        x = lapply(
+            molecules, get.fingerprint, type = 'extended',
+            depth = depth, size = size, verbose = !silent)
 
-            fp = matrix(0L, nrow = length(molecules), ncol = size)
+        fp = matrix(0L, nrow = length(molecules), ncol = size)
 
-            for (i in 1:length(molecules)) fp[ i, x[[i]]@bits ] = 1L
+        for (i in 1:length(molecules)) fp[ i, x[[i]]@bits ] = 1L
 
-        }
+    }
 
     return(fp)
 

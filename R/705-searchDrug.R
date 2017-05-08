@@ -56,15 +56,16 @@
 #' searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'fp2', fpsim = 'tanimoto')
 #' searchDrug(mol, moldb, cores = 4, method = 'mcs', mcssim = 'tanimoto')}
 
-searchDrug = function (mol, moldb, cores = 2,
-                       method = c('fp', 'mcs'),
-                       fptype = c('standard', 'extended', 'graph',
-                                  'hybrid', 'maccs', 'estate',
-                                  'pubchem', 'kr', 'shortestpath',
-                                  'fp2', 'fp3', 'fp4', 'obmaccs'),
-                       fpsim = c('tanimoto', 'euclidean', 'cosine',
-                                 'dice', 'hamming'),
-                       mcssim = c('tanimoto', 'overlap'), ...) {
+searchDrug = function(
+    mol, moldb, cores = 2,
+    method = c('fp', 'mcs'),
+    fptype = c('standard', 'extended', 'graph',
+               'hybrid', 'maccs', 'estate',
+               'pubchem', 'kr', 'shortestpath',
+               'fp2', 'fp3', 'fp4', 'obmaccs'),
+    fpsim = c('tanimoto', 'euclidean', 'cosine',
+              'dice', 'hamming'),
+    mcssim = c('tanimoto', 'overlap'), ...) {
 
     doParallel::registerDoParallel(cores)
 

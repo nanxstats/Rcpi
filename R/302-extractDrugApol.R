@@ -34,9 +34,10 @@
 
 extractDrugApol = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.APolDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.APolDescriptor',
+        verbose = !silent)
 
     return(x)
 

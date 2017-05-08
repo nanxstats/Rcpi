@@ -39,9 +39,10 @@
 
 extractDrugMDE = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.MDEDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.MDEDescriptor',
+        verbose = !silent)
 
     return(x)
 

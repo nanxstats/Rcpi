@@ -41,9 +41,10 @@
 
 extractDrugMannholdLogP = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.MannholdLogPDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.MannholdLogPDescriptor',
+        verbose = !silent)
 
     return(x)
 
