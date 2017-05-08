@@ -31,7 +31,7 @@ id = c('7847562', '7847563')  # Penicillamine
 getSmiFromPubChem(id)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getMolFromPubChem}} for retrieving drug molecules

@@ -37,7 +37,7 @@ id = c('DB00859', 'DB00860')
 getDrug(id, 'drugbank', 'smile')}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getProt}} for retrieving protein sequences

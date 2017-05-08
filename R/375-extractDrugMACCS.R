@@ -16,7 +16,7 @@
 #'
 #' @aliases extractDrugMACCS
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugMACCS
 #'
@@ -79,7 +79,7 @@ extractDrugMACCS = function (molecules, silent = TRUE) {
 #'
 #' @aliases extractDrugMACCSComplete
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugMACCSComplete
 #'

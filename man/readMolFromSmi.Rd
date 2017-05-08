@@ -36,7 +36,7 @@ mol1 = readMolFromSmi(smi, type = 'mol')
 mol2 = readMolFromSmi(smi, type = 'text')}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{readMolFromSDF}} for reading molecules

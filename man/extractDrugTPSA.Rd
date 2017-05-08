@@ -34,7 +34,7 @@ dat = extractDrugTPSA(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Ertl, P., Rohde, B., & Selzer, P. (2000).

@@ -40,7 +40,7 @@ seqalign
 slot(seqalign, "score")}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{calcParProtSeqSim}} for paralleled pairwise

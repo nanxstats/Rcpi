@@ -36,7 +36,7 @@ fp  = extractDrugShortestPathComplete(mol)
 dim(fp)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 \link{extractDrugShortestPath}

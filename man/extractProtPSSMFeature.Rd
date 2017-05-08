@@ -38,7 +38,7 @@ pssmfeature = extractProtPSSMFeature(pssmmat)
 head(pssmfeature)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Ye, Xugang, Guoli Wang, and Stephen F. Altschul.

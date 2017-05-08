@@ -81,7 +81,7 @@ dat = extractDrugWHIM(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Todeschini, R. and Gramatica, P.,

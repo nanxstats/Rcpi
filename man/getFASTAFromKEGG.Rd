@@ -31,7 +31,7 @@ id = c('hsa:10161', 'hsa:10162')
 getFASTAFromKEGG(id)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getSeqFromKEGG}} for retrieving protein

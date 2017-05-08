@@ -20,7 +20,7 @@
 #'
 #' @aliases extractDrugHybridization
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugHybridization
 #'
@@ -90,7 +90,7 @@ extractDrugHybridization = function(
 #'
 #' @aliases extractDrugHybridizationComplete
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugHybridizationComplete
 #'

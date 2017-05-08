@@ -19,7 +19,7 @@
 #'
 #' @aliases readPDB
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{readFASTA}} for reading protein sequences
 #'          in FASTA format.

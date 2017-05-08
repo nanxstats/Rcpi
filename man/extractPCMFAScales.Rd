@@ -54,7 +54,7 @@ fa = extractPCMFAScales(x, propmat = tprops, factors = 5, lag = 7, silent = FALS
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Atchley, W. R., Zhao, J., Fernandes, A. D., & Druke, T. (2005).

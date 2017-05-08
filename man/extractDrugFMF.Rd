@@ -36,7 +36,7 @@ dat = extractDrugFMF(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Yang, Y., Chen, H., Nilsson, I., Muresan, S., & Engkvist, O. (2010).

@@ -50,7 +50,7 @@
 #'
 #' @aliases extractProtPAAC
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{extractProtAPAAC}} for amphiphilic pseudo
 #'          amino acid composition descriptor.

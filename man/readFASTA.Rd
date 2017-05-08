@@ -42,7 +42,7 @@ P00750 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))
 P00750
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Pearson, W.R. and Lipman, D.J. (1988)

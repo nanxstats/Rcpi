@@ -31,7 +31,7 @@ id = 'CHEMBL1430'  # Penicillamine
 getSmiFromChEMBL(id)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getMolFromChEMBL}} for retrieving drug molecules

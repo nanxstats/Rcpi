@@ -30,7 +30,7 @@ id = c('4HHB', '4FF9')
 getSeqFromRCSBPDB(id)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getPDBFromRCSBPDB}} for retrieving protein

@@ -18,7 +18,7 @@
 #'
 #' @aliases getMolFromChEMBL
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getSmiFromChEMBL}} for retrieving drug molecules
 #' in SMILES format from the ChEMBL database.
@@ -81,7 +81,7 @@ getMolFromChEMBL = function (id, parallel = 5) {
 #'
 #' @aliases getSmiFromChEMBL
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getMolFromChEMBL}} for retrieving drug molecules
 #' in MOL format from the ChEMBL database.

@@ -34,7 +34,7 @@ dat = extractDrugApol(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Apol}
 \keyword{extractDrugApol}

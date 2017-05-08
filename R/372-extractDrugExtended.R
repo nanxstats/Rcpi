@@ -22,7 +22,7 @@
 #'
 #' @aliases extractDrugExtended
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugExtended
 #'
@@ -93,7 +93,7 @@ extractDrugExtended = function(
 #'
 #' @aliases extractDrugExtendedComplete
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugExtendedComplete
 #'

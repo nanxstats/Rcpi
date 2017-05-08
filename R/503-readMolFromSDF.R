@@ -13,7 +13,7 @@
 #'
 #' @aliases readMolFromSDF
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{readMolFromSmi}} for reading molecules by SMILES
 #' string and returning parsed Java molecular object.

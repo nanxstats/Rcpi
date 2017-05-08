@@ -30,7 +30,7 @@ Seq4HHB = readPDB(system.file('protseq/4HHB.pdb', package = 'Rcpi'))
 Seq4HHB
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Protein Data Bank Contents Guide: Atomic Coordinate Entry Format Description,

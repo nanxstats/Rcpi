@@ -59,7 +59,7 @@ gsimmat2 = calcParProtGOSim(genelist, type = 'gene')
 print(gsimmat2)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{calcTwoProtGOSim}} for calculating the

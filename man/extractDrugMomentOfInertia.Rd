@@ -54,7 +54,7 @@ dat = extractDrugMomentOfInertia(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Inertia}
 \keyword{Moment}

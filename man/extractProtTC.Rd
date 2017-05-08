@@ -24,7 +24,7 @@ extractProtTC(x)
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 M. Bhasin, G. P. S. Raghava.

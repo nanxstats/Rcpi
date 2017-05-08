@@ -64,7 +64,7 @@ descscales = extractPCMDescScales(x, propmat = 'AATopo', index = c(37:41, 43:47)
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{extractPCMScales}} for generalized

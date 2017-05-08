@@ -46,7 +46,7 @@ dat = extractDrugGravitationalIndex(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Katritzky, A.R. and Mu, L. and Lobanov, V.S. and Karelson, M.,

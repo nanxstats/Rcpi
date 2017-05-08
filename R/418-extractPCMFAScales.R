@@ -33,7 +33,7 @@
 #'
 #' @aliases extractPCMFAScales
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractPCMFAScales
 #'

@@ -39,7 +39,7 @@ dat = extractDrugALOGP(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Ghose, A.K. and Crippen, G.M. ,

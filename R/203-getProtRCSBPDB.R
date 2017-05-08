@@ -17,7 +17,7 @@
 #'
 #' @aliases getPDBFromRCSBPDB
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getSeqFromRCSBPDB}} for retrieving protein
 #' represented by amino acid sequence from the RCSB PDB database.
@@ -63,7 +63,7 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 #'
 #' @aliases getSeqFromRCSBPDB
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getPDBFromRCSBPDB}} for retrieving protein
 #' in PDB format from the RCSB PDB database.

@@ -42,7 +42,7 @@ getCPI(x, y, type = c('tensorprod', 'combine'))
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getPPI}} for generating

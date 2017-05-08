@@ -45,7 +45,7 @@
 #'
 #' @aliases extractProtMoreauBroto
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{extractProtMoran}} and \code{\link{extractProtGeary}}
 #'          for Moran autocorrelation descriptors and

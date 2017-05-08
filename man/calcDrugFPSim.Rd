@@ -61,7 +61,7 @@ calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'dice')
 calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'hamming')}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Gasteiger, Johann, and Thomas Engel, eds.

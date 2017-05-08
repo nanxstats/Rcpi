@@ -20,7 +20,7 @@
 #'
 #' @aliases extractDrugStandard
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugStandard
 #'
@@ -90,7 +90,7 @@ extractDrugStandard = function(
 #'
 #' @aliases extractDrugStandardComplete
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugStandardComplete
 #'

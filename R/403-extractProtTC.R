@@ -12,7 +12,7 @@
 #'
 #' @aliases extractProtTC
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{extractProtAAC}} and \code{\link{extractProtDC}}
 #'          for Amino Acid Composition and Dipeptide Composition descriptors.

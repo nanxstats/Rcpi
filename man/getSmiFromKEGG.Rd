@@ -31,7 +31,7 @@ id = 'D00496'  # Penicillamine
 getSmiFromKEGG(id)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getMolFromKEGG}} for retrieving drug molecules

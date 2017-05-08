@@ -48,7 +48,7 @@ mds = extractPCMMDSScales(x, propmat = tprops, k = 5, lag = 7, silent = FALSE)
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Venkatarajan, M. S., & Braun, W. (2001).

@@ -50,7 +50,7 @@ psimmat = calcParProtSeqSim(plist, cores = 2, type = 'local',
 print(psimmat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{calcTwoProtSeqSim} for protein sequence alignment

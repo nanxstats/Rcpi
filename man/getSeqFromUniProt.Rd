@@ -31,7 +31,7 @@ id = c('P00750', 'P00751', 'P00752')
 getSeqFromUniProt(id)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 UniProt. \url{http://www.uniprot.org/}

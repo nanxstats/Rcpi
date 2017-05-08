@@ -70,7 +70,7 @@ searchDrug(mol, moldb, cores = 4, method = 'fp', fptype = 'fp2', fpsim = 'tanimo
 searchDrug(mol, moldb, cores = 4, method = 'mcs', mcssim = 'tanimoto')}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Drug}
 \keyword{MCS}

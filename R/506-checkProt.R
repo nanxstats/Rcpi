@@ -14,7 +14,7 @@
 #'
 #' @aliases checkProt
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export checkProt
 #'

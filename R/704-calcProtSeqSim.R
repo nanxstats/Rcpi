@@ -60,7 +60,7 @@
 #'
 #' @aliases calcParProtSeqSim
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{calcTwoProtSeqSim} for protein sequence alignment
 #' for two protein sequences. See \code{\link{calcParProtGOSim}} for
@@ -132,7 +132,7 @@ calcParProtSeqSim = function(
 #'
 #' @aliases calcTwoProtSeqSim
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{calcParProtSeqSim}} for paralleled pairwise
 #' protein similarity calculation based on sequence alignment.

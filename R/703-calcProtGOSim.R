@@ -69,7 +69,7 @@
 #'
 #' @aliases calcParProtGOSim
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{calcTwoProtGOSim}} for calculating the
 #' GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
@@ -164,7 +164,7 @@ calcParProtGOSim = function(
 #'
 #' @aliases calcTwoProtGOSim
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{calcParProtGOSim}} for
 #' protein similarity calculation based on

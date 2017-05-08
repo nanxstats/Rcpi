@@ -28,7 +28,7 @@ mol  = readMolFromSDF(sdf)
 mols = readMolFromSDF(sdfs)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{readMolFromSmi}} for reading molecules by SMILES

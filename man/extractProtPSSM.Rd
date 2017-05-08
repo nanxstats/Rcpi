@@ -139,7 +139,7 @@ pssmmat = extractProtPSSM(seq = x, database.path = dbpath)
 dim(pssmmat)  # 20 x 562 (P00750: length 562, 20 Amino Acids)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Altschul, Stephen F., et al.

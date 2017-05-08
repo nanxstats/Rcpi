@@ -37,7 +37,7 @@ segProt(x, aa = 'R', k = 5)
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{acid}
 \keyword{amino}

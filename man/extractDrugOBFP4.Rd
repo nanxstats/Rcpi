@@ -38,7 +38,7 @@ sdffp0 = extractDrugOBFP4(mol3, type = 'sdf')
 sdffp1 = extractDrugOBFP4(mol4, type = 'sdf')}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{extractDrugOBFP4}
 

@@ -16,7 +16,7 @@
 #'
 #' @aliases extractDrugKR
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugKR
 #'
@@ -79,7 +79,7 @@ extractDrugKR = function (molecules, silent = TRUE) {
 #'
 #' @aliases extractDrugKRComplete
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugKRComplete
 #'

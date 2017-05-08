@@ -17,7 +17,7 @@
 #'
 #' @aliases extractDrugEstate
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugEstate
 #'
@@ -80,7 +80,7 @@ extractDrugEstate = function (molecules, silent = TRUE) {
 #'
 #' @aliases extractDrugEstateComplete
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugEstateComplete
 #'

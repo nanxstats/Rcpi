@@ -33,7 +33,7 @@
 #'
 #' @aliases extractPCMScales
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{extractPCMDescScales}} for generalized
 #' AA property based scales descriptors, and \code{\link{extractPCMPropScales}}

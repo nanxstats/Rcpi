@@ -76,7 +76,7 @@ extractProtMoran(x, customprops = myprops,
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 AAindex: Amino acid index database.

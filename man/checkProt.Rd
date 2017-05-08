@@ -26,7 +26,7 @@ checkProt(x)  # TRUE
 checkProt(paste(x, 'Z', sep = ''))  # FALSE
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{acid}
 \keyword{amino}

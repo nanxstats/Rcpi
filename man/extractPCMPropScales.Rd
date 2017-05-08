@@ -50,7 +50,7 @@ propscales = extractPCMPropScales(x, index = c(160:165, 258:296), pc = 5, lag = 
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{extractPCMScales}} for

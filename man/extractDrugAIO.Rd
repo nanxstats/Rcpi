@@ -42,7 +42,7 @@ mol = readMolFromSDF(sdf)
 dat = extractDrugAIO(mol, warn = FALSE)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{extractDrugAIO}
 

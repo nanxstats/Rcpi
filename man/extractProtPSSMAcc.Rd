@@ -36,7 +36,7 @@ pssmacc = extractProtPSSMAcc(pssmmat, lag = 3)
 tail(pssmacc)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Wold, S., Jonsson, J., Sj\"{o}rstr\"{o}m, M., Sandberg,

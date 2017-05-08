@@ -18,7 +18,7 @@
 #'
 #' @aliases getFASTAFromUniProt
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getSeqFromUniProt}} for retrieving protein
 #' represented by amino acid sequence from the UniProt database.
@@ -71,7 +71,7 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #'
 #' @aliases getSeqFromUniProt
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getFASTAFromUniProt}} for retrieving protein
 #' sequences in FASTA format from the UniProt database.

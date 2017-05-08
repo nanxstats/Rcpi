@@ -44,7 +44,7 @@
 #'
 #' @aliases getCPI
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getPPI}} for generating
 #' protein-protein interaction descriptors.

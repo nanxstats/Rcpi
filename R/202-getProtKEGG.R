@@ -18,7 +18,7 @@
 #'
 #' @aliases getFASTAFromKEGG
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getSeqFromKEGG}} for retrieving protein
 #' represented by amino acid sequence from the KEGG database.
@@ -66,7 +66,7 @@ getFASTAFromKEGG = function (id, parallel = 5) {
 #'
 #' @aliases getSeqFromKEGG
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getFASTAFromKEGG}} for retrieving protein sequence
 #' in FASTA format from the KEGG database.

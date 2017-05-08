@@ -35,7 +35,7 @@ dat = extractDrugMannholdLogP(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Mannhold, R., Poda, G. I., Ostermann, C., & Tetko, I. V. (2009).

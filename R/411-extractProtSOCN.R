@@ -15,7 +15,7 @@
 #'
 #' @aliases extractProtSOCN
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{extractProtQSO}} for
 #' quasi-sequence-order descriptors.

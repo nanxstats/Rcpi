@@ -72,7 +72,7 @@ dat = extractDrugBCUT(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Pearlman, R.S. and Smith, K.M.,

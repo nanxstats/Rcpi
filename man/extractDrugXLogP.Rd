@@ -33,7 +33,7 @@ dat = extractDrugXLogP(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Wang, R., Fu, Y., and Lai, L.,

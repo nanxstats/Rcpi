@@ -22,7 +22,7 @@
 #'
 #' @aliases readMolFromSmi
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{readMolFromSDF}} for reading molecules
 #' from SDF files and returning parsed Java molecular object.

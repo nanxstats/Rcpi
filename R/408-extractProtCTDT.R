@@ -13,7 +13,7 @@
 #'
 #' @aliases extractProtCTDT
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{extractProtCTDC}} and \code{\link{extractProtCTDD}}
 #'          for Composition and Distribution of the CTD descriptors.

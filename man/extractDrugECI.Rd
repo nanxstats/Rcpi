@@ -40,7 +40,7 @@ dat = extractDrugECI(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Sharma, V. and Goswami, R. and Madan, A.K. (1997),

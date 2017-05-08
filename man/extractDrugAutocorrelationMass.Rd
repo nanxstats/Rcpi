@@ -32,7 +32,7 @@ dat = extractDrugAutocorrelationMass(mol)
 head(dat)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Moreau, Gilles, and Pierre Broto.

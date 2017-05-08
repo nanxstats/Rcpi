@@ -38,7 +38,7 @@ id = c('P00750', 'P00751', 'P00752')
 getProt(id, from = 'uniprot', type = 'aaseq')}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getDrug}} for retrieving drug molecules

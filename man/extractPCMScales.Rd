@@ -52,7 +52,7 @@ scales = extractPCMScales(x, propmat = AAidxmat, pc = 5, lag = 7, silent = FALSE
 
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{extractPCMDescScales}} for generalized

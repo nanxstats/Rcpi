@@ -18,7 +18,7 @@
 #'
 #' @aliases getMolFromPubChem
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getSmiFromPubChem}} for retrieving drug molecules
 #' in SMILES format from the PubChem database.
@@ -68,7 +68,7 @@ getMolFromPubChem = function (id, parallel = 5) {
 #'
 #' @aliases getSmiFromPubChem
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getMolFromPubChem}} for retrieving drug molecules
 #' in MOL format from the PubChem database.

@@ -59,7 +59,7 @@ print(sim1[[2]])  # Tanimoto Coefficient
 print(sim2[[3]])  # Overlap Coefficient}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \references{
 Wang, Y., Backman, T. W., Horan, K., & Girke, T. (2013).

@@ -31,7 +31,7 @@ id = 'DB00859'  # Penicillamine
 getMolFromDrugBank(id)}
 }
 \author{
-Nan Xiao <\url{http://nanx.me}>
+Nan Xiao <\url{https://nanx.me}>
 }
 \seealso{
 See \code{\link{getSmiFromDrugBank}} for retrieving drug molecules

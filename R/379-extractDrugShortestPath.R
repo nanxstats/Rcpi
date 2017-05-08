@@ -19,7 +19,7 @@
 #'
 #' @aliases extractDrugShortestPath
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugShortestPath
 #'
@@ -89,7 +89,7 @@ extractDrugShortestPath = function(
 #'
 #' @aliases extractDrugShortestPathComplete
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugShortestPathComplete
 #'
