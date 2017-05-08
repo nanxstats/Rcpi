@@ -29,24 +29,24 @@
   Nan Xiao \\
   School of Mathematics and Statistics\\
   Central South University\\
-  Changsha, Hunan, China\\
+  Changsha, China\\
   E-mail: \email{me@nanx.me}\\
-  URL: \url{http://nanx.me}\\
+  URL: \url{https://nanx.me}\\
 
   Dongsheng Cao\\
   School of Pharmaceutical Sciences\\
   Central South University\\
-  Changsha, Hunan, China\\
+  Changsha, China\\
 
   Qingsong Xu\\
   School of Mathematics and Statistics\\
   Central South University\\
-  Changsha, Hunan, China
+  Changsha, China
 }
 
 %
 <<prelim,echo=FALSE,print=FALSE>>=
-Rcpi.version = '1.11.6'
+Rcpi.version = '1.13.1'
 now.date = strftime(Sys.Date(), "%Y-%m-%d")
 @
 %
