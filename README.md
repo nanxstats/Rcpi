@@ -35,7 +35,7 @@ url = {http://bioinformatics.oxfordjournals.org/content/31/2/279}
 
 ## Installation
 
-To install the `Rcpi` package in R, simply use
+To install the `Rcpi` package:
 
 ```r
 source("https://bioconductor.org/biocLite.R")
