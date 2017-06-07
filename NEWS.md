@@ -1,3 +1,9 @@
+# Rcpi 1.13.2 (2017-06-07)
+
+## Improvements
+
+- Migrated from Sweave-based PDF vignette to knitr-based HTML vignette
+
 # Rcpi 1.13.1 (2017-05-07)
 
 ## Improvements
