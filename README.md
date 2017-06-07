@@ -1,4 +1,4 @@
-# Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://nanx.me/images/project-Rcpi.png" align="right" alt="logo" height="180" width="180" /></a>
+# Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://i.imgur.com/v8lHCn9.png" align="right" alt="logo" height="180" width="180" /></a>
 
 [![platform](https://www.bioconductor.org/shields/availability/devel/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#archives)
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
