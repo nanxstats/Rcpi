@@ -1,3 +1,10 @@
+# Rcpi 1.13.3 (2017-06-09)
+
+## Improvements
+
+- Added Travis CI for continuous integration under Linux
+- Added Appveyor for continuous integration under Windows
+
 # Rcpi 1.13.2 (2017-06-07)
 
 ## Improvements
