@@ -1,0 +1,14 @@
+language: r
+cache: packages
+r: bioc-devel
+addons:
+  apt:
+    packages:
+      - r-cran-rjava
+bioc_packages:
+  - BiocGenerics
+  - Biostrings
+  - org.Hs.eg.db
+  - GOSemSim
+  - ChemmineR
+  - fmcsR
