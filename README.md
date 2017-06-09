@@ -1,5 +1,6 @@
 # Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://i.imgur.com/v8lHCn9.png" align="right" alt="logo" height="180" width="180" /></a>
 
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/road2stat/rcpi?branch=master&svg=true)](https://ci.appveyor.com/project/road2stat/rcpi)
 [![platform](https://www.bioconductor.org/shields/availability/devel/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#archives)
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
 [![downloads](https://www.bioconductor.org/shields/downloads/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
