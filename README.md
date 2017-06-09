@@ -52,6 +52,8 @@ biocLite("Rcpi", dependencies = c("Imports", "Enhances"))
 
 Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.
 
+[Browse the vignette](https://bioconductor.org/packages/release/bioc/vignettes/Rcpi/inst/doc/Rcpi.html) for a quick-start.
+
 ## Features
 
 Rcpi implemented and integrated the state-of-the-art protein sequence descriptors and molecular descriptors/fingerprints with R. For protein sequences, the Rcpi package could
