@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/road2stat/Rcpi.svg?branch=master)](https://travis-ci.org/road2stat/Rcpi)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/road2stat/rcpi?branch=master&svg=true)](https://ci.appveyor.com/project/road2stat/rcpi)
-[![platform](https://www.bioconductor.org/shields/availability/devel/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#archives)
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
 [![downloads](https://www.bioconductor.org/shields/downloads/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
 
