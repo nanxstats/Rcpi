@@ -5,6 +5,7 @@ addons:
   apt:
     packages:
       - r-cran-rjava
+r_packages: gridExtra
 bioc_packages:
   - BiocGenerics
   - Biostrings
