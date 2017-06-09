@@ -1,5 +1,5 @@
 Package: Rcpi
-Version: 1.13.2
+Version: 1.13.3
 Type: Package
 Title: Molecular Informatics Toolkit for Compound-Protein
     Interaction in Drug Discovery
@@ -8,8 +8,8 @@ Description: Rcpi offers a molecular informatics toolkit with a
     chemoinformatics tools for drug discovery.
 Authors@R: c(
     person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre")),
-    person("Dongsheng", "Cao", role = "aut"),
-    person("Qingsong", "Xu", email = "qsxu@csu.edu.cn", role = c("aut"))
+    person("Dong-Sheng", "Cao", role = "aut"),
+    person("Qing-Song", "Xu", email = "qsxu@csu.edu.cn", role = c("aut"))
     )
 Maintainer: Nan Xiao <me@nanx.me>
 License: Artistic-2.0
