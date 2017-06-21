@@ -1,3 +1,13 @@
+# Rcpi 1.13.4 (2017-06-21)
+
+## Bug Fixes
+
+- Fixed the ALOGP unit test to make it work under the recently updated CDK
+
+## Improvements
+
+- Added more unit tests for molecular descriptor calculation to improve code coverage
+
 # Rcpi 1.13.3 (2017-06-09)
 
 ## Improvements
