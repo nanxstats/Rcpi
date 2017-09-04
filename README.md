@@ -87,3 +87,7 @@ Several useful auxiliary utilities are also shipped with Rcpi:
   * Molecular file format conversion
 
 The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, cheminformatics, proteochemometrics, and chemogenomics.
+
+## Contribute
+
+To contribute to this project, please take a look at the [Contributing Guidelines](CONTRIBUTING.md) first. Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
