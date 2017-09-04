@@ -4,3 +4,5 @@
 ^appveyor\.yml$
 ^_pkgdown\.yml$
 ^\NEWS\.md$
+^CONDUCT\.md$
+^CONTRIBUTING\.md$
