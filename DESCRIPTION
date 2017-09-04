@@ -1,5 +1,5 @@
 Package: Rcpi
-Version: 1.13.4
+Version: 1.13.5
 Type: Package
 Title: Molecular Informatics Toolkit for Compound-Protein
     Interaction in Drug Discovery
@@ -41,4 +41,4 @@ Suggests:
 Enhances: ChemmineOB
 biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
     Cheminformatics, BiomedicalInformatics, Proteomics, GO, SystemsBiology
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
