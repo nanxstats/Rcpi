@@ -71,9 +71,6 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugBCUT(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Pearlman, R.S. and Smith, K.M.,
 Metric Validation and the Receptor-Relevant Subspace Concept,
@@ -89,6 +86,8 @@ Kang, Y.K. and Jhon, M.S.,
 Additivity of Atomic Static Polarizabilities and Dispersion Coefficients,
 Theoretica Chimica Acta, 1982, 61:41-48
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{BCUT}
 \keyword{extractDrugBCUT}
-

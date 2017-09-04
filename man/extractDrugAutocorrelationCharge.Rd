@@ -38,4 +38,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Autocorrelation}
 \keyword{Charge}
 \keyword{extractDrugAutocorrelationCharge}
-

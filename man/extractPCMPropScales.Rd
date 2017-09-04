@@ -49,16 +49,15 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 propscales = extractPCMPropScales(x, index = c(160:165, 258:296), pc = 5, lag = 7, silent = FALSE)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{extractPCMScales}} for
 generalized scales-based descriptors.
+}
+\author{
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{AAindex}
 \keyword{descriptor}
 \keyword{extract}
 \keyword{extractPCMPropScales}
 \keyword{scales}
-

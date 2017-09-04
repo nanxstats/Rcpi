@@ -48,15 +48,14 @@ getPPI(x, y, type = c('entrywise', 'tensorprod'))
 getPPI(x, y, type = c('combine', 'entrywise', 'tensorprod'))
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getCPI}} for generating
 compound-protein interaction descriptors.
+}
+\author{
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{getPPI}
 \keyword{interaction}
 \keyword{ppi}
 \keyword{protein-protein}
-

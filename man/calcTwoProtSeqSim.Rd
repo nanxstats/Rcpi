@@ -39,14 +39,14 @@ seqalign = calcTwoProtSeqSim(s1, s2)
 seqalign
 slot(seqalign, "score")}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{calcParProtSeqSim}} for paralleled pairwise
 protein similarity calculation based on sequence alignment.
 See \code{\link{calcTwoProtGOSim}} for calculating the
 GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
+}
+\author{
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Needleman-Wunsch}
 \keyword{Smith-Waterman}
@@ -57,4 +57,3 @@ GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
 \keyword{parallel}
 \keyword{sequence}
 \keyword{similarity}
-

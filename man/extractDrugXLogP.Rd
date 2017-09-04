@@ -32,9 +32,6 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugXLogP(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Wang, R., Fu, Y., and Lai, L.,
 A New Atom-Additive Method for Calculating Partition Coefficients,
@@ -44,6 +41,8 @@ Wang, R., Gao, Y., and Lai, L.,
 Calculating partition coefficient by atom-additive method,
 Perspectives in Drug Discovery and Design, 2000, 19:47-66.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{XLogP}
 \keyword{extractDrugXLogP}
-

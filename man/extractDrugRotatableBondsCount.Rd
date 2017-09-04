@@ -39,4 +39,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Count}
 \keyword{Rotatable}
 \keyword{extractDrugRotatableBondsCount}
-

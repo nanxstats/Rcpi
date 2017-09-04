@@ -80,14 +80,13 @@ mol = readMolFromSDF(sdf)
 dat = extractDrugWHIM(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Todeschini, R. and Gramatica, P.,
 New 3D Molecular Descriptors: The WHIM theory and QAR Applications,
 Persepectives in Drug Discovery and Design, 1998, ?:355-380.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{WHIM}
 \keyword{extractDrugWHIM}
-

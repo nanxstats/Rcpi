@@ -59,4 +59,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Chain}
 \keyword{Chi}
 \keyword{extractDrugChiChain}
-

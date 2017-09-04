@@ -38,4 +38,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Lipinski}
 \keyword{Rule}
 \keyword{extractDrugRuleOfFive}
-

@@ -24,4 +24,3 @@ data(AAPAM40)
 \keyword{AAPAM40}
 \keyword{PAM}
 \keyword{datasets}
-

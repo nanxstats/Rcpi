@@ -51,13 +51,13 @@ AAidxmat = t(na.omit(as.matrix(AAindex[, 7:26])))
 scales = extractPCMScales(x, propmat = AAidxmat, pc = 5, lag = 7, silent = FALSE)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{extractPCMDescScales}} for generalized
 AA property based scales descriptors, and \code{\link{extractPCMPropScales}}
 for (19 classes) AA descriptor based scales descriptors.
+}
+\author{
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Analysis}
 \keyword{Components}
@@ -67,4 +67,3 @@ for (19 classes) AA descriptor based scales descriptors.
 \keyword{extract}
 \keyword{extractPCMScales}
 \keyword{scales}
-

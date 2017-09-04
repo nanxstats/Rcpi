@@ -39,17 +39,16 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugECI(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Sharma, V. and Goswami, R. and Madan, A.K. (1997),
 Eccentric Connectivity Index: A Novel Highly Discriminating
 Topological Descriptor for Structure-Property and Structure-Activity Studies,
 Journal of Chemical Information and Computer Sciences, 37:273-282
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Connectivity}
 \keyword{Eccentric}
 \keyword{Index}
 \keyword{extractDrugECI}
-

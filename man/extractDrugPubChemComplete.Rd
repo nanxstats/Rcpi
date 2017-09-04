@@ -29,11 +29,10 @@ mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugPubChemComplete(mol)
 dim(fp)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 \link{extractDrugPubChem}
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{extractDrugPubChemComplete}
-

@@ -49,4 +49,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Count}
 \keyword{HBond}
 \keyword{extractDrugHBondAcceptorCount}
-

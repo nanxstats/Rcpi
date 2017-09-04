@@ -23,4 +23,3 @@ data(AAACF)
 
 }
 \keyword{AAACF}
-

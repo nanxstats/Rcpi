@@ -30,15 +30,14 @@ id = c('hsa:10161', 'hsa:10162')
 \donttest{
 getFASTAFromKEGG(id)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getSeqFromKEGG}} for retrieving protein
 represented by amino acid sequence from the KEGG database.
 See \code{\link{readFASTA}} for reading FASTA format files.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{KEGG}
 \keyword{getFASTAFromKEGG}
 \keyword{getProt}
-

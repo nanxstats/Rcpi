@@ -23,4 +23,3 @@ data(AAConn)
 
 }
 \keyword{AAConn}
-

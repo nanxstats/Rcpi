@@ -30,14 +30,13 @@ id = c('7847562', '7847563')  # Penicillamine
 \donttest{
 getSmiFromPubChem(id)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getMolFromPubChem}} for retrieving drug molecules
 in MOL format from the PubChem database.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{PubChem}
 \keyword{getDrug}
 \keyword{getSmiFromPubChem}
-

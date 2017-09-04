@@ -35,9 +35,6 @@ pssmmat = extractProtPSSM(seq = x, database.path = dbpath)
 pssmacc = extractProtPSSMAcc(pssmmat, lag = 3)
 tail(pssmacc)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Wold, S., Jonsson, J., Sj\"{o}rstr\"{o}m, M., Sandberg,
 M., & R\"{a}nnar, S. (1993).
@@ -49,8 +46,10 @@ to latent structures.
 \seealso{
 \link{extractProtPSSM} \link{extractProtPSSMFeature}
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Alignment}
 \keyword{Blast}
 \keyword{PSSM}
 \keyword{extract}
-

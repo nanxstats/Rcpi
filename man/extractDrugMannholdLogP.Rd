@@ -34,16 +34,15 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugMannholdLogP(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Mannhold, R., Poda, G. I., Ostermann, C., & Tetko, I. V. (2009).
 Calculation of molecular lipophilicity: State-of-the-art and
 comparison of log P methods on more than 96,000 compounds.
 Journal of pharmaceutical sciences, 98(3), 861-893.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{LogP}
 \keyword{Mannhold}
 \keyword{extractDrugMannholdLogP}
-

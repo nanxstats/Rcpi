@@ -23,4 +23,3 @@ data(AAConst)
 
 }
 \keyword{AAConst}
-

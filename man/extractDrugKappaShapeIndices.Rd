@@ -52,4 +52,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Kappa}
 \keyword{Shape}
 \keyword{extractDrugKappaShapeIndices}
-

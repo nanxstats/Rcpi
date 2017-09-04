@@ -34,15 +34,14 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugWienerNumbers(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Wiener, H. (1947).
 Structural determination of paraffin boiling points.
 Journal of the American Chemical Society, 69(1), 17-20.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Numbers}
 \keyword{Wiener}
 \keyword{extractDrugWienerNumbers}
-

@@ -38,9 +38,6 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugALOGP(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Ghose, A.K. and Crippen, G.M. ,
 Atomic physicochemical parameters for three-dimensional structure-directed
@@ -54,6 +51,8 @@ quantitative structure-activity relationships.
 2. Modeling dispersive and hydrophobic interactions,
 Journal of Chemical Information and Computer Science, 1987, 27:21-35.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{ALOGP}
 \keyword{extractDrugALOGP}
-

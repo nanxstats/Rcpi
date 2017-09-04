@@ -29,14 +29,13 @@ id = c('4HHB', '4FF9')
 \donttest{
 getPDBFromRCSBPDB(id)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getSeqFromRCSBPDB}} for retrieving protein
 represented by amino acid sequence from the RCSB PDB database.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{PDB}
 \keyword{getPDBFromRCSBPDB}
 \keyword{getProt}
-

@@ -23,4 +23,3 @@ data(AAInfo)
 
 }
 \keyword{AAInfo}
-

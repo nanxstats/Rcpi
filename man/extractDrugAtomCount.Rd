@@ -37,4 +37,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Atom}
 \keyword{Count}
 \keyword{extractDrugAtomCount}
-

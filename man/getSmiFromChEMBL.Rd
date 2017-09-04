@@ -30,14 +30,13 @@ id = 'CHEMBL1430'  # Penicillamine
 \donttest{
 getSmiFromChEMBL(id)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getMolFromChEMBL}} for retrieving drug molecules
 in MOL format from the ChEMBL database.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{ChEMBL}
 \keyword{getDrug}
 \keyword{getSmiFromChEMBL}
-

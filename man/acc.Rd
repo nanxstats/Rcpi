@@ -38,9 +38,6 @@ mat = matrix(rnorm(p * n), nrow = p, ncol = n)
 acc(mat, lag)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Wold, S., Jonsson, J., Sj\"{o}rstr\"{o}m, M., Sandberg,
 M., & R\"{a}nnar, S. (1993).
@@ -60,8 +57,10 @@ generalized scales-based descriptors.
 For more details, see \code{\link{extractPCMDescScales}}
 and \code{\link{extractPCMPropScales}}.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{acc}
 \keyword{auto}
 \keyword{covariance}
 \keyword{cross}
-

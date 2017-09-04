@@ -58,13 +58,13 @@ sim2 = calcDrugMCSSim(mol3, mol4, type = 'sdf', plot = TRUE)
 print(sim1[[2]])  # Tanimoto Coefficient
 print(sim2[[3]])  # Overlap Coefficient}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Wang, Y., Backman, T. W., Horan, K., & Girke, T. (2013).
 fmcsR: mismatch tolerant maximum common substructure searching in R.
 Bioinformatics, 29(21), 2792--2794.
+}
+\author{
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Common}
 \keyword{Drug}
@@ -73,4 +73,3 @@ Bioinformatics, 29(21), 2792--2794.
 \keyword{Similarity}
 \keyword{Substructure}
 \keyword{calcDrugMCSSim}
-

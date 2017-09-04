@@ -44,4 +44,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Hybridization}
 \keyword{Ratio}
 \keyword{extractDrugHybridizationRatio}
-

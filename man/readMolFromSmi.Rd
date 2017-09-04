@@ -35,14 +35,13 @@ smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 mol1 = readMolFromSmi(smi, type = 'mol')
 mol2 = readMolFromSmi(smi, type = 'text')}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{readMolFromSDF}} for reading molecules
 from SDF files and returning parsed Java molecular object.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{MOL}
 \keyword{SMILES}
 \keyword{readMolFromSmi}
-

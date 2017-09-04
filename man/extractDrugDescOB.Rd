@@ -66,4 +66,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Descriptors}
 \keyword{OpenBabel}
 \keyword{extractDrugDescOB}
-

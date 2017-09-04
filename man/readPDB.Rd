@@ -29,9 +29,6 @@ and return the amino acid sequences represented by single-letter code.
 Seq4HHB = readPDB(system.file('protseq/4HHB.pdb', package = 'Rcpi'))
 Seq4HHB
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Protein Data Bank Contents Guide: Atomic Coordinate Entry Format Description,
 Version 3.30. Accessed 2013-06-26.
@@ -41,7 +38,9 @@ Version 3.30. Accessed 2013-06-26.
 See \code{\link{readFASTA}} for reading protein sequences
          in FASTA format.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{PDB}
 \keyword{Rcpi}
 \keyword{readPDB}
-

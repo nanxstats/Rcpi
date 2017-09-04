@@ -34,4 +34,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{protein}
 \keyword{sequence}
 \keyword{type}
-

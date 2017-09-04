@@ -37,4 +37,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Chain}
 \keyword{Longest}
 \keyword{extractDrugLongestAliphaticChain}
-

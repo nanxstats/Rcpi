@@ -23,4 +23,3 @@ data(AAEigIdx)
 
 }
 \keyword{AAEigIdx}
-

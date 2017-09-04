@@ -60,9 +60,6 @@ gene2 = '251'
 gsim2 = calcTwoProtGOSim(gene1, gene2, type = 'gene', ont = 'CC', measure = 'Lin')
 print(gsim2)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{calcParProtGOSim}} for
 protein similarity calculation based on
@@ -70,9 +67,11 @@ Gene Ontology (GO) semantic similarity.
 See \code{\link{calcParProtSeqSim}} for paralleled protein similarity
 calculation based on sequence alignment.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{GO}
 \keyword{Gene}
 \keyword{Ontology}
 \keyword{calcTwoProtGOSim}
 \keyword{similarity}
-

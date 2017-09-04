@@ -53,4 +53,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Carbon}
 \keyword{Types}
 \keyword{extractDrugCarbonTypes}
-

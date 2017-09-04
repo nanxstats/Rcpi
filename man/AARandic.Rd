@@ -23,4 +23,3 @@ data(AARandic)
 
 }
 \keyword{AARandic}
-

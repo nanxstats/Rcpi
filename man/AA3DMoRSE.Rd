@@ -23,4 +23,3 @@ data(AA3DMoRSE)
 
 }
 \keyword{AA3DMoRSE}
-

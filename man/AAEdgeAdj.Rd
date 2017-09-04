@@ -23,4 +23,3 @@ data(AAEdgeAdj)
 
 }
 \keyword{AAEdgeAdj}
-

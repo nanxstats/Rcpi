@@ -45,4 +45,3 @@ dat = extractDrugAIO(mol, warn = FALSE)}
 Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{extractDrugAIO}
-

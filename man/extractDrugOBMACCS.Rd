@@ -42,4 +42,3 @@ sdffp1 = extractDrugOBMACCS(mol4, type = 'sdf')}
 Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{extractDrugOBMACCS}
-

@@ -46,4 +46,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{segment}
 \keyword{segmentation}
 \keyword{sequence}
-

@@ -23,4 +23,3 @@ data(AAFGC)
 
 }
 \keyword{AAFGC}
-

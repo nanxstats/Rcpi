@@ -44,4 +44,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{BPol}
 \keyword{Polarizability}
 \keyword{extractDrugBPol}
-

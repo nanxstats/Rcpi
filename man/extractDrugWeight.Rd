@@ -35,4 +35,3 @@ Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Weight}
 \keyword{extractDrugWeight}
-

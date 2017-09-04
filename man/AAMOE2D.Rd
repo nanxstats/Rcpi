@@ -23,4 +23,3 @@ data(AAMOE2D)
 
 }
 \keyword{AAMOE2D}
-

@@ -23,4 +23,3 @@ data(AAWHIM)
 
 }
 \keyword{AAWHIM}
-

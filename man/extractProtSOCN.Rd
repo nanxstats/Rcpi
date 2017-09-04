@@ -26,9 +26,6 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 extractProtSOCN(x)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Kuo-Chen Chou. Prediction of Protein Subcellar Locations by
 Incorporating Quasi-Sequence-Order Effect.
@@ -49,6 +46,9 @@ Molecular Evolution: Do Novo Design of an Idealized Leader Cleavge Site.
 See \code{\link{extractProtQSO}} for
 quasi-sequence-order descriptors.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Coupling}
 \keyword{Number}
 \keyword{Order}
@@ -56,4 +56,3 @@ quasi-sequence-order descriptors.
 \keyword{Sequence}
 \keyword{extract}
 \keyword{extractProtSOCN}
-

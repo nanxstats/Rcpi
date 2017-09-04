@@ -33,9 +33,6 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugTPSA(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Ertl, P., Rohde, B., & Selzer, P. (2000).
 Fast calculation of molecular polar surface area as a sum of
@@ -43,9 +40,11 @@ fragment-based contributions and its application to the prediction
 of drug transport properties.
 Journal of medicinal chemistry, 43(20), 3714-3717.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Area}
 \keyword{Polar}
 \keyword{Surface}
 \keyword{Topological}
 \keyword{extractDrugTPSA}
-

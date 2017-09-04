@@ -30,14 +30,13 @@ id = 'DB00859'  # Penicillamine
 \donttest{
 getSmiFromDrugBank(id)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getMolFromDrugBank}} for retrieving drug molecules
 in MOL format from the DrugBank database.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{DrugBank}
 \keyword{getDrug}
 \keyword{getSmiFromDrugBank}
-

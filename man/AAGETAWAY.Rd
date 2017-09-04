@@ -23,4 +23,3 @@ data(AAGETAWAY)
 
 }
 \keyword{AAGETAWAY}
-

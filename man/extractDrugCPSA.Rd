@@ -71,9 +71,6 @@ mol = readMolFromSDF(sdf)
 dat = extractDrugCPSA(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Stanton, D.T. and Jurs, P.C. ,
 Development and Use of Charged Partial Surface
@@ -81,6 +78,8 @@ Area Structural Descriptors in Computer Assissted
 Quantitative Structure Property Relationship Studies,
 Analytical Chemistry, 1990, 62:2323.2329.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{CPSA}
 \keyword{extractDrugCPSA}
-

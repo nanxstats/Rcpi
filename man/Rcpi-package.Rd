@@ -2,8 +2,8 @@
 % Please edit documentation in R/001-Rcpi-package.R
 \docType{package}
 \name{Rcpi-package}
-\alias{Rcpi}
 \alias{Rcpi-package}
+\alias{Rcpi}
 \title{Toolkit for Compound-Protein Interaction in Drug Discovery}
 \description{
 Rcpi offers a molecular informatics toolkit with a
@@ -20,4 +20,3 @@ License: \tab Artistic-2.0\cr }
 Bug reports and feature requests should be sent to
 \url{https://github.com/road2stat/Rcpi/issues}.
 }
-

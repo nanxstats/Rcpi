@@ -31,4 +31,3 @@ data(AAMetaInfo)
 
 }
 \keyword{AAMetaInfo}
-

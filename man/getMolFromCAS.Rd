@@ -32,14 +32,13 @@ id = '52-67-5'  # Penicillamine
 \donttest{
 getMolFromCAS(id)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getDrug}} for retrieving drug molecules
 in MOL and SMILES Format from other databases.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{CAS}
 \keyword{getDrug}
 \keyword{getMolFromCAS}
-

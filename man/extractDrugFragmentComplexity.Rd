@@ -34,9 +34,6 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugFragmentComplexity(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Nilakantan, R. and Nunn, D.S. and Greenblatt,
 L. and Walker, G. and Haraki, K. and Mobilio, D.,
@@ -45,7 +42,9 @@ for use in structure-activity studies:
 database mining and recursive partitioning.,
 Journal of chemical information and modeling, 2006, 46:1069-1077
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Complexity}
 \keyword{Fragment}
 \keyword{extractDrugFragmentComplexity}
-

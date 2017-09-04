@@ -22,18 +22,17 @@ This function calculates the Conjoint Triad descriptor (Dim: 343).
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 extractProtCTriad(x)
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 J.W. Shen, J. Zhang, X.M. Luo, W.L. Zhu,
 K.Q. Yu, K.X. Chen, Y.X. Li, H.L. Jiang.
 Predicting Protein-protein Interactions Based Only on Sequences Information.
 \emph{Proceedings of the National Academy of Sciences}. 007, 104, 4337--4341.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{CTriad}
 \keyword{Conjoint}
 \keyword{Triad}
 \keyword{extract}
 \keyword{extractProtCTriad}
-

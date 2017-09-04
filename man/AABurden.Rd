@@ -23,4 +23,3 @@ data(AABurden)
 
 }
 \keyword{AABurden}
-

@@ -24,4 +24,3 @@ data(AABLOSUM80)
 \keyword{AABLOSUM80}
 \keyword{BLOSUM}
 \keyword{datasets}
-

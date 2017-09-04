@@ -23,4 +23,3 @@ data(AA2DACOR)
 
 }
 \keyword{AA2DACOR}
-

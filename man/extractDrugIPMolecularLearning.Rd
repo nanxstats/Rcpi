@@ -37,4 +37,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Ionization}
 \keyword{Potential}
 \keyword{extractDrugIPMolecularLearning}
-

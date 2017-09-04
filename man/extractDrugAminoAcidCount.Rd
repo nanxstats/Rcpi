@@ -42,4 +42,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Amino}
 \keyword{Count}
 \keyword{extractDrugAminoAcidCount}
-

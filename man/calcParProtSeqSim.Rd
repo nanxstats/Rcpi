@@ -49,14 +49,14 @@ psimmat = calcParProtSeqSim(plist, cores = 2, type = 'local',
                             submat = 'BLOSUM62')
 print(psimmat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{calcTwoProtSeqSim} for protein sequence alignment
 for two protein sequences. See \code{\link{calcParProtGOSim}} for
 protein similarity calculation based on
 Gene Ontology (GO) semantic similarity.
+}
+\author{
+Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{Needleman-Wunsch}
 \keyword{Smith-Waterman}
@@ -67,4 +67,3 @@ Gene Ontology (GO) semantic similarity.
 \keyword{parallel}
 \keyword{sequence}
 \keyword{similarity}
-

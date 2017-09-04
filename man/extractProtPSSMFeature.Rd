@@ -37,9 +37,6 @@ pssmmat = extractProtPSSM(seq = x, database.path = dbpath)
 pssmfeature = extractProtPSSMFeature(pssmmat)
 head(pssmfeature)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Ye, Xugang, Guoli Wang, and Stephen F. Altschul.
 "An assessment of substitution scores for protein profile-profile comparison."
@@ -52,8 +49,10 @@ Rangwala, Huzefa, and George Karypis.
 \seealso{
 \link{extractProtPSSM} \link{extractProtPSSMAcc}
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Alignment}
 \keyword{Blast}
 \keyword{PSSM}
 \keyword{extract}
-

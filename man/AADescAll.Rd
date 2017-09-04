@@ -23,4 +23,3 @@ data(AADescAll)
 
 }
 \keyword{AADescAll}
-

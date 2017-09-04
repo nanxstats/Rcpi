@@ -123,9 +123,6 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugKierHallSmarts(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Butina, D. ,
 Performance of Kier-Hall E-state Descriptors
@@ -139,8 +136,10 @@ A Novel Combination of Electronic, Topological,
 and Valence State Information,
 Journal of Chemical Information and Computer Science, 1995, 35:1039-1045.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Hall}
 \keyword{Kier}
 \keyword{Smarts}
 \keyword{extractDrugKierHallSmarts}
-

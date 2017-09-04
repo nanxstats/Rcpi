@@ -23,4 +23,3 @@ data(AAMolProp)
 
 }
 \keyword{AAMolProp}
-

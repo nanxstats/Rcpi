@@ -35,11 +35,10 @@ mol = readMolFromSmi(smi, type = 'mol')
 fp  = extractDrugShortestPathComplete(mol)
 dim(fp)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 \link{extractDrugShortestPath}
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{extractDrugShortestPathComplete}
-

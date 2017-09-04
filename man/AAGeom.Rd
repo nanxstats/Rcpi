@@ -23,4 +23,3 @@ data(AAGeom)
 
 }
 \keyword{AAGeom}
-

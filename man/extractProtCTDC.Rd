@@ -24,9 +24,6 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 extractProtCTDC(x)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim.
 Prediction of protein folding class using global description of
@@ -41,9 +38,11 @@ Recognition of a Protein Fold in the Context of the SCOP classification.
 See \code{\link{extractProtCTDT}} and \code{\link{extractProtCTDD}}
          for Transition and Distribution of the CTD descriptors.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{CTD}
 \keyword{CTDC}
 \keyword{Composition}
 \keyword{extract}
 \keyword{extractProtCTDC}
-

@@ -138,9 +138,6 @@ invisible(file.copy(from = system.file('protseq/Plasminogen.fasta', package = 'R
 pssmmat = extractProtPSSM(seq = x, database.path = dbpath)
 dim(pssmmat)  # 20 x 562 (P00750: length 562, 20 Amino Acids)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Altschul, Stephen F., et al.
 "Gapped BLAST and PSI-BLAST: a new generation of protein database search programs."
@@ -157,8 +154,10 @@ Rangwala, Huzefa, and George Karypis.
 \seealso{
 \link{extractProtPSSMFeature} \link{extractProtPSSMAcc}
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Alignment}
 \keyword{Blast}
 \keyword{PSSM}
 \keyword{extract}
-

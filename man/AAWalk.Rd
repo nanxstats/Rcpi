@@ -23,4 +23,3 @@ data(AAWalk)
 
 }
 \keyword{AAWalk}
-

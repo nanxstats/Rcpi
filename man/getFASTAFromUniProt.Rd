@@ -30,9 +30,6 @@ id = c('P00750', 'P00751', 'P00752')
 \donttest{
 getFASTAFromUniProt(id)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 UniProt. \url{http://www.uniprot.org/}
 
@@ -43,7 +40,9 @@ See \code{\link{getSeqFromUniProt}} for retrieving protein
 represented by amino acid sequence from the UniProt database.
 See \code{\link{readFASTA}} for reading FASTA format files.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{UniProt}
 \keyword{getFASTAFromUniProt}
 \keyword{getProt}
-

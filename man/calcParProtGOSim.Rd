@@ -58,18 +58,17 @@ genelist = list(c('150', '151', '152', '1814', '1815', '1816'))
 gsimmat2 = calcParProtGOSim(genelist, type = 'gene')
 print(gsimmat2)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{calcTwoProtGOSim}} for calculating the
 GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
 See \code{\link{calcParProtSeqSim}} for paralleled protein similarity
 calculation based on sequence alignment.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{GO}
 \keyword{Gene}
 \keyword{Ontology}
 \keyword{calcParProtGOSim}
 \keyword{similarity}
-

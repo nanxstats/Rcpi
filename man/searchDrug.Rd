@@ -78,4 +78,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Search}
 \keyword{Similarity}
 \keyword{searchDrug}
-

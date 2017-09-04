@@ -36,4 +36,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Autocorrelation}
 \keyword{Polarizability}
 \keyword{extractDrugAutocorrelationPolarizability}
-

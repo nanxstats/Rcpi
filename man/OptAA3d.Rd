@@ -22,4 +22,3 @@ OptAA3d.sdf - 20 Amino Acids Optimized with MOE 2011.10 (Semiempirical AM1)
 \keyword{Acid}
 \keyword{Amino}
 \keyword{OptAA3d}
-

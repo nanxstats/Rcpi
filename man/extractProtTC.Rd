@@ -23,9 +23,6 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 extractProtTC(x)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 M. Bhasin, G. P. S. Raghava.
 Classification of Nuclear Receptors Based on
@@ -36,9 +33,11 @@ Amino Acid Composition and Dipeptide Composition.
 See \code{\link{extractProtAAC}} and \code{\link{extractProtDC}}
          for Amino Acid Composition and Dipeptide Composition descriptors.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Composition}
 \keyword{TC}
 \keyword{Tripeptide}
 \keyword{extract}
 \keyword{extractProtTC}
-

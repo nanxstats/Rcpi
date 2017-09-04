@@ -27,14 +27,13 @@ sdfs = c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
 mol  = readMolFromSDF(sdf)
 mols = readMolFromSDF(sdfs)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{readMolFromSmi}} for reading molecules by SMILES
 string and returning parsed Java molecular object.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{MOL}
 \keyword{SDF}
 \keyword{readMolFromSDF}
-

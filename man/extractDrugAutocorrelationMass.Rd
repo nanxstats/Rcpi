@@ -31,15 +31,14 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugAutocorrelationMass(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \references{
 Moreau, Gilles, and Pierre Broto.
 The autocorrelation of a topological structure: a new molecular descriptor.
 Nouv. J. Chim 4 (1980): 359-360.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{Autocorrelation}
 \keyword{Mass}
 \keyword{extractDrugAutocorrelationMass}
-

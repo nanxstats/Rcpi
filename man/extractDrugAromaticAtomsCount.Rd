@@ -37,4 +37,3 @@ Nan Xiao <\url{https://nanx.me}>
 \keyword{Atoms}
 \keyword{Count}
 \keyword{extractDrugAromaticAtomsCount}
-

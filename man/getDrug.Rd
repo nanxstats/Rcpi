@@ -36,12 +36,11 @@ id = c('DB00859', 'DB00860')
 \donttest{
 getDrug(id, 'drugbank', 'smile')}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
 \seealso{
 See \code{\link{getProt}} for retrieving protein sequences
 from three databases.
 }
+\author{
+Nan Xiao <\url{https://nanx.me}>
+}
 \keyword{getDrug}
-
