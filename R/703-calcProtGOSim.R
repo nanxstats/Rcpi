@@ -65,7 +65,7 @@
 #' associated with protein.
 #' @return A \code{n} x \code{n} similarity matrix.
 #'
-#' @keywords GO Gene Ontology similarity calcParProtGOSim
+#' @keywords GO similarity calcParProtGOSim
 #'
 #' @aliases calcParProtGOSim
 #'
@@ -160,7 +160,7 @@ calcParProtGOSim = function(
 #' associated with protein.
 #' @return A n x n matrix.
 #'
-#' @keywords GO Gene Ontology similarity calcTwoProtGOSim
+#' @keywords GO similarity calcTwoProtGOSim
 #'
 #' @aliases calcTwoProtGOSim
 #'

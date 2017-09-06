@@ -71,7 +71,5 @@ calculation based on sequence alignment.
 Nan Xiao <\url{https://nanx.me}>
 }
 \keyword{GO}
-\keyword{Gene}
-\keyword{Ontology}
 \keyword{calcTwoProtGOSim}
 \keyword{similarity}
