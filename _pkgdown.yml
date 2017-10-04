@@ -1,3 +1,4 @@
 template:
   params:
     bootswatch: readable
+    ganalytics: UA-66394392-1
