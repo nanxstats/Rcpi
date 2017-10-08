@@ -1,4 +1,219 @@
 template:
   params:
-    bootswatch: readable
     ganalytics: UA-66394392-1
+
+reference:
+  - title: "Protein Sequence Retrivial"
+    desc: >
+      Functions for retrieving protein sequence data from online databases.
+    contents:
+    - getProt
+    - getFASTAFromUniProt
+    - getFASTAFromKEGG
+    - getPDBFromRCSBPDB
+    - getSeqFromUniProt
+    - getSeqFromKEGG
+    - getSeqFromRCSBPDB
+  - title: "Drug Molecular Data Retrivial"
+    desc: >
+      Functions for retrieving drug molecular data from online databases.
+    contents:
+    - getDrug
+    - getMolFromDrugBank
+    - getMolFromPubChem
+    - getMolFromChEMBL
+    - getMolFromKEGG
+    - getMolFromCAS
+    - getSmiFromDrugBank
+    - getSmiFromPubChem
+    - getSmiFromChEMBL
+    - getSmiFromKEGG
+  - title: "Protein Sequence Descriptors"
+    desc: >
+      Functions and datasets for computing commonly used protein sequence derived descriptors.
+    contents:
+    - extractProtAAC
+    - extractProtDC
+    - extractProtTC
+    - extractProtMoreauBroto
+    - extractProtMoran
+    - extractProtGeary
+    - extractProtCTDC
+    - extractProtCTDT
+    - extractProtCTDD
+    - extractProtCTriad
+    - extractProtSOCN
+    - extractProtQSO
+    - extractProtPAAC
+    - extractProtAPAAC
+    - AAindex
+  - title: "Profile-Based Protein Sequence Descriptors"
+    desc: >
+      Functions for generating profile-based protein representations.
+    contents:
+    - extractProtPSSM
+    - extractProtPSSMFeature
+    - extractProtPSSMAcc
+  - title: "Scales-Based Descriptors for Proteochemometrics Modeling"
+    desc: >
+      Functions for generating scales-based descriptors for proteochemometrics (PCM) modeling.
+    contents:
+    - extractPCMScales
+    - extractPCMPropScales
+    - extractPCMDescScales
+    - extractPCMFAScales
+    - extractPCMMDSScales
+    - extractPCMBLOSUM
+    - acc
+  - title: "Molecular Descriptor Sets for Generating Scales-Based Descriptors"
+    desc: >
+      Molecular descriptor sets of the 20 amino acids for generating scales-based descriptors.
+    contents:
+    - OptAA3d
+    - AAMetaInfo
+    - AA2DACOR
+    - AA3DMoRSE
+    - AAACF
+    - AABurden
+    - AAConn
+    - AAConst
+    - AAEdgeAdj
+    - AAEigIdx
+    - AAFGC
+    - AAGeom
+    - AAGETAWAY
+    - AAInfo
+    - AAMolProp
+    - AARandic
+    - AARDF
+    - AATopo
+    - AATopoChg
+    - AAWalk
+    - AAWHIM
+    - AACPSA
+    - AADescAll
+    - AAMOE2D
+    - AAMOE3D
+    - AABLOSUM45
+    - AABLOSUM50
+    - AABLOSUM62
+    - AABLOSUM80
+    - AABLOSUM100
+    - AAPAM30
+    - AAPAM40
+    - AAPAM70
+    - AAPAM120
+    - AAPAM250
+  - title: "Molecular Descriptors"
+    desc: >
+      Functions for computing commonly used molecular descriptors.
+    contents:
+    - extractDrugAIO
+    - extractDrugALOGP
+    - extractDrugAminoAcidCount
+    - extractDrugApol
+    - extractDrugAromaticAtomsCount
+    - extractDrugAromaticBondsCount
+    - extractDrugAtomCount
+    - extractDrugAutocorrelationCharge
+    - extractDrugAutocorrelationMass
+    - extractDrugAutocorrelationPolarizability
+    - extractDrugBCUT
+    - extractDrugBondCount
+    - extractDrugBPol
+    - extractDrugCarbonTypes
+    - extractDrugChiChain
+    - extractDrugChiCluster
+    - extractDrugChiPath
+    - extractDrugChiPathCluster
+    - extractDrugCPSA
+    - extractDrugDescOB
+    - extractDrugECI
+    - extractDrugFMF
+    - extractDrugFragmentComplexity
+    - extractDrugGravitationalIndex
+    - extractDrugHBondAcceptorCount
+    - extractDrugHBondDonorCount
+    - extractDrugHybridizationRatio
+    - extractDrugIPMolecularLearning
+    - extractDrugKappaShapeIndices
+    - extractDrugKierHallSmarts
+    - extractDrugLargestChain
+    - extractDrugLargestPiSystem
+    - extractDrugLengthOverBreadth
+    - extractDrugLongestAliphaticChain
+    - extractDrugMannholdLogP
+    - extractDrugMDE
+    - extractDrugMomentOfInertia
+    - extractDrugPetitjeanNumber
+    - extractDrugPetitjeanShapeIndex
+    - extractDrugRotatableBondsCount
+    - extractDrugRuleOfFive
+    - extractDrugTPSA
+    - extractDrugVABC
+    - extractDrugVAdjMa
+    - extractDrugWeight
+    - extractDrugWeightedPath
+    - extractDrugWHIM
+    - extractDrugWienerNumbers
+    - extractDrugXLogP
+    - extractDrugZagrebIndex
+  - title: "Molecular Fingerprints"
+    desc: >
+      Functions for computing commonly used molecular fingerprints.
+    contents:
+    - extractDrugStandard
+    - extractDrugStandardComplete
+    - extractDrugExtended
+    - extractDrugExtendedComplete
+    - extractDrugGraph
+    - extractDrugGraphComplete
+    - extractDrugHybridization
+    - extractDrugHybridizationComplete
+    - extractDrugMACCS
+    - extractDrugMACCSComplete
+    - extractDrugEstate
+    - extractDrugEstateComplete
+    - extractDrugPubChem
+    - extractDrugPubChemComplete
+    - extractDrugKR
+    - extractDrugKRComplete
+    - extractDrugShortestPath
+    - extractDrugShortestPathComplete
+    - extractDrugOBFP2
+    - extractDrugOBFP3
+    - extractDrugOBFP4
+    - extractDrugOBMACCS
+  - title: "PPI and CPI Descriptors"
+    desc: >
+      Functions for computing protein-protein and compound-protein interation descriptors.
+    contents:
+    - getPPI
+    - getCPI
+  - title: "Similarity and Similarity Searching"
+    desc: >
+      Functions for computing sequence/molecular similarities and similarity searching.
+    contents:
+    - calcDrugFPSim
+    - calcDrugMCSSim
+    - searchDrug
+    - calcTwoProtSeqSim
+    - calcParProtSeqSim
+    - calcTwoProtGOSim
+    - calcParProtGOSim
+  - title: "Protein Sequence Data Processing"
+    desc: >
+      Functions for processing protein sequence data.
+    contents:
+    - readFASTA
+    - readPDB
+    - segProt
+    - checkProt
+  - title: "Molecular Data Processing"
+    desc: >
+      Functions for processing molecular data.
+    contents:
+    - readMolFromSDF
+    - readMolFromSmi
+    - convMolFormat
+    - Rcpi-package
