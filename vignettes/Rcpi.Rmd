@@ -669,7 +669,7 @@ mols = readMolFromSDF(system.file(
     "compseq/tyrphostin.sdf", package = "Rcpi"))
 ```
 
-Then compute the E-state fingerprints for all the molecules using
+Then we compute the E-state fingerprints for all the molecules using
 `extractDrugEstate()`, and calculate their pairwise similarity matrix
 with `calcDrugFPSim()`:
 
@@ -687,12 +687,12 @@ for (i in 1:length(mols)) {
 }
 ```
 
-For the computed similarity matrix `simmat`, we will try to
-do hierarchical clustering with it, then visualize the
-clustering result:
+With the computed similarity matrix `simmat`, we will try to
+cluster the molecules using hierarchical clustering, then
+visualize the clustering result:
 
 ```{r, eval = FALSE}
-mol.hc = hclust(as.dist(1 - simmat), method = "ward")
+mol.hc = hclust(as.dist(1 - simmat), method = "ward.D")
 
 library("ape")  # tree visualization of clusters
 clus5 = cutree(mol.hc, 5)  # cut dendrogram into 5 clusters
@@ -705,7 +705,7 @@ plot(as.phylo(mol.hc), type = "fan",
      label.offset = 0.1, cex = 0.7)
 ```
 
-The clustering result for these molecules is shown in Figure 5.
+The hierarchical clustering result for these molecules is shown in Figure 5.
 
 <img src="figures/ex4-1.png" width="65%" class="img-responsive" align="center" alt="Tree visualization of the molecular clustering result">
 <p align="center">Figure 5: Tree visualization of the molecular clustering result</p>
