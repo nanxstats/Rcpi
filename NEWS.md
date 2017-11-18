@@ -1,3 +1,9 @@
+# Rcpi 1.15.1 (2017-11-17)
+
+## Bug Fixes
+
+- Resolved a critical bug due to improper `ifelse` conditioning for the distribution descriptor in CTD.
+
 # Rcpi 1.13.4 (2017-06-21)
 
 ## Bug Fixes
