@@ -22,7 +22,6 @@ CTD descriptors (Dim: 21).
 \examples{
 x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 extractProtCTDC(x)
-
 }
 \references{
 Inna Dubchak, Ilya Muchink, Stephen R. Holbrook and Sung-Hou Kim.
@@ -36,7 +35,7 @@ Recognition of a Protein Fold in the Context of the SCOP classification.
 }
 \seealso{
 See \code{\link{extractProtCTDT}} and \code{\link{extractProtCTDD}}
-         for Transition and Distribution of the CTD descriptors.
+for the Transition and Distribution descriptors.
 }
 \author{
 Nan Xiao <\url{https://nanx.me}>
