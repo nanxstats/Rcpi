@@ -69,7 +69,7 @@
 #'
 #' Sokal, R.R. and Thomson, B.A. (2006)
 #' Population structure inferred by local spatial autocorrelation:
-#' an Usage from an Amerindian tribal population.
+#' an usage from an Amerindian tribal population.
 #' \emph{American Journal of Physical Anthropology}, 129, 121-131.
 #'
 #' @examples
@@ -95,17 +95,18 @@
 #'                            'MyProp1', 'MyProp2', 'MyProp3'))
 #'
 
-extractProtMoran = function (x, props = c('CIDH920105', 'BHAR880101',
-                                          'CHAM820101', 'CHAM820102',
-                                          'CHOC760101', 'BIGC670101',
-                                          'CHAM810101', 'DAYM780201'),
-                             nlag = 30L, customprops = NULL) {
+extractProtMoran = function (
+    x, props = c('CIDH920105', 'BHAR880101',
+                 'CHAM820101', 'CHAM820102',
+                 'CHOC760101', 'BIGC670101',
+                 'CHAM810101', 'DAYM780201'),
+    nlag = 30L, customprops = NULL) {
 
-    if (checkProt(x) == FALSE) stop('x has unrecognized amino acid type')
+    if (checkProt(x) == FALSE)
+        stop('x has unrecognized amino acid type')
 
-    if (nchar(x) <= nlag) {
+    if (nchar(x) <= nlag)
         warning('extractMoran: length of the sequence is <= nlag; NAs will be generated')
-    }
 
     # 1. Compute Pr values for each type of property
 
@@ -149,17 +150,19 @@ extractProtMoran = function (x, props = c('CIDH920105', 'BHAR880101',
 
     for (i in 1:n) {
         for (j in 1:nlag) {
-            Moran[[i]][j] = ifelse(N - j > 0,
-                                   (N/(N - j)) * ((sum((P[[i]][1:(N - j)] - Pbar[i]) * (P[[i]][(1:(N - j)) + j] - Pbar[i])))/(sum((P[[i]] - Pbar[i])^2))),
-                                   NA)
+            Moran[[i]][j] = ifelse(
+                N - j > 0,
+                (N/(N - j)) * ((sum((P[[i]][1:(N - j)] - Pbar[i]) * (P[[i]][(1:(N - j)) + j] - Pbar[i])))/(sum((P[[i]] - Pbar[i])^2))),
+                NA)
         }
     }
 
     Moran = unlist(Moran)
 
-    names(Moran) = as.vector(t(outer(props,
-                                     paste('.lag', 1:nlag, sep = ''),
-                                     paste, sep = '')))
+    names(Moran) = as.vector(t(outer(
+        props,
+        paste('.lag', 1:nlag, sep = ''),
+        paste, sep = '')))
 
     return(Moran)
 
