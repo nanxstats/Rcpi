@@ -12,7 +12,7 @@ Authors@R: c(
     person("Qing-Song", "Xu", email = "qsxu@csu.edu.cn", role = c("aut"))
     )
 Maintainer: Nan Xiao <me@nanx.me>
-License: Artistic-2.0
+License: Artistic-2.0 | file LICENSE
 URL: https://nanx.me/Rcpi/, https://github.com/road2stat/Rcpi
 Encoding: UTF-8
 BugReports: https://github.com/road2stat/Rcpi/issues
