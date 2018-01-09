@@ -4,9 +4,6 @@
 \name{AAInfo}
 \alias{AAInfo}
 \title{Information Indices Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAInfo)
-}
 \value{
 AAInfo data
 }

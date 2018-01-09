@@ -4,9 +4,6 @@
 \name{AAEdgeAdj}
 \alias{AAEdgeAdj}
 \title{Edge Adjacency Indices Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAEdgeAdj)
-}
 \value{
 AAEdgeAdj data
 }

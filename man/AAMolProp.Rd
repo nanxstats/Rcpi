@@ -4,9 +4,6 @@
 \name{AAMolProp}
 \alias{AAMolProp}
 \title{Molecular Properties Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAMolProp)
-}
 \value{
 AAMolProp data
 }

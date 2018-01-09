@@ -4,9 +4,6 @@
 \name{AAGETAWAY}
 \alias{AAGETAWAY}
 \title{GETAWAY Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAGETAWAY)
-}
 \value{
 AAGETAWAY data
 }

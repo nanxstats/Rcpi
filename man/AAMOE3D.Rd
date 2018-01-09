@@ -4,9 +4,6 @@
 \name{AAMOE3D}
 \alias{AAMOE3D}
 \title{3D Descriptors for 20 Amino Acids calculated by MOE 2011.10}
-\usage{
-data(AAMOE3D)
-}
 \value{
 AAMOE3D data
 }

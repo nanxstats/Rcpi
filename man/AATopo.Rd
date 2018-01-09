@@ -4,9 +4,6 @@
 \name{AATopo}
 \alias{AATopo}
 \title{Topological Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AATopo)
-}
 \value{
 AATopo data
 }

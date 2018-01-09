@@ -4,9 +4,6 @@
 \name{AAConn}
 \alias{AAConn}
 \title{Connectivity Indices Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAConn)
-}
 \value{
 AAConn data
 }

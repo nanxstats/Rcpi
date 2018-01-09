@@ -4,9 +4,6 @@
 \name{AAACF}
 \alias{AAACF}
 \title{Atom-Centred Fragments Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAACF)
-}
 \value{
 AAACF data
 }

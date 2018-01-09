@@ -4,9 +4,6 @@
 \name{AACPSA}
 \alias{AACPSA}
 \title{CPSA Descriptors for 20 Amino Acids calculated by Discovery Studio}
-\usage{
-data(AACPSA)
-}
 \value{
 AACPSA data
 }

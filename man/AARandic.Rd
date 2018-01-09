@@ -4,9 +4,6 @@
 \name{AARandic}
 \alias{AARandic}
 \title{Randic Molecular Profiles Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AARandic)
-}
 \value{
 AARandic data
 }

@@ -4,9 +4,6 @@
 \name{AAWalk}
 \alias{AAWalk}
 \title{Walk and Path Counts Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAWalk)
-}
 \value{
 AAWalk data
 }

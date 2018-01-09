@@ -4,9 +4,6 @@
 \name{AAWHIM}
 \alias{AAWHIM}
 \title{WHIM Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAWHIM)
-}
 \value{
 AAWHIM data
 }

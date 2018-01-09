@@ -4,9 +4,6 @@
 \name{AARDF}
 \alias{AARDF}
 \title{RDF Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AARDF)
-}
 \value{
 AARDF data
 }

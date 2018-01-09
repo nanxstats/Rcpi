@@ -4,9 +4,6 @@
 \name{AAConst}
 \alias{AAConst}
 \title{Constitutional Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAConst)
-}
 \value{
 AAConst data
 }

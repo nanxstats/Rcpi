@@ -4,9 +4,6 @@
 \name{AAEigIdx}
 \alias{AAEigIdx}
 \title{Eigenvalue-Based Indices Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAEigIdx)
-}
 \value{
 AAEigIdx data
 }

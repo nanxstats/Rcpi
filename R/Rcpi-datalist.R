@@ -16,7 +16,6 @@
 #' @name AAindex
 #' @return AAindex data
 #' @aliases AAindex
-#' @usage data(AAindex)
 #' @keywords AAindex aaindex datasets
 #' @examples
 #' data(AAindex)
@@ -61,7 +60,6 @@ NULL
 #' @name AAMetaInfo
 #' @return AAMetaInfo data
 #' @aliases AAMetaInfo
-#' @usage data(AAMetaInfo)
 #' @keywords AAMetaInfo
 #' @examples
 #' data(AAMetaInfo)
@@ -80,7 +78,6 @@ NULL
 #' @name AAMOE2D
 #' @return AAMOE2D data
 #' @aliases AAMOE2D
-#' @usage data(AAMOE2D)
 #' @keywords AAMOE2D
 #' @examples
 #' data(AAMOE2D)
@@ -102,7 +99,6 @@ NULL
 #' @name AAMOE3D
 #' @return AAMOE3D data
 #' @aliases AAMOE3D
-#' @usage data(AAMOE3D)
 #' @keywords AAMOE3D
 #' @examples
 #' data(AAMOE3D)
@@ -126,7 +122,6 @@ NULL
 #' @name AACPSA
 #' @return AACPSA data
 #' @aliases AACPSA
-#' @usage data(AACPSA)
 #' @keywords AACPSA
 #' @examples
 #' data(AACPSA)
@@ -145,7 +140,6 @@ NULL
 #' @name AADescAll
 #' @return AADescAll data
 #' @aliases AADescAll
-#' @usage data(AADescAll)
 #' @keywords AADescAll
 #' @examples
 #' data(AADescAll)
@@ -166,7 +160,6 @@ NULL
 #' @name AA2DACOR
 #' @return AA2DACOR data
 #' @aliases AA2DACOR
-#' @usage data(AA2DACOR)
 #' @keywords AA2DACOR
 #' @examples
 #' data(AA2DACOR)
@@ -185,7 +178,6 @@ NULL
 #' @name AA3DMoRSE
 #' @return AA3DMoRSE data
 #' @aliases AA3DMoRSE
-#' @usage data(AA3DMoRSE)
 #' @keywords AA3DMoRSE
 #' @examples
 #' data(AA3DMoRSE)
@@ -204,7 +196,6 @@ NULL
 #' @name AAACF
 #' @return AAACF data
 #' @aliases AAACF
-#' @usage data(AAACF)
 #' @keywords AAACF
 #' @examples
 #' data(AAACF)
@@ -223,7 +214,6 @@ NULL
 #' @name AABurden
 #' @return AABurden data
 #' @aliases AABurden
-#' @usage data(AABurden)
 #' @keywords AABurden
 #' @examples
 #' data(AABurden)
@@ -242,7 +232,6 @@ NULL
 #' @name AAConn
 #' @return AAConn data
 #' @aliases AAConn
-#' @usage data(AAConn)
 #' @keywords AAConn
 #' @examples
 #' data(AAConn)
@@ -261,7 +250,6 @@ NULL
 #' @name AAConst
 #' @return AAConst data
 #' @aliases AAConst
-#' @usage data(AAConst)
 #' @keywords AAConst
 #' @examples
 #' data(AAConst)
@@ -280,7 +268,6 @@ NULL
 #' @name AAEdgeAdj
 #' @return AAEdgeAdj data
 #' @aliases AAEdgeAdj
-#' @usage data(AAEdgeAdj)
 #' @keywords AAEdgeAdj
 #' @examples
 #' data(AAEdgeAdj)
@@ -299,7 +286,6 @@ NULL
 #' @name AAEigIdx
 #' @return AAEigIdx data
 #' @aliases AAEigIdx
-#' @usage data(AAEigIdx)
 #' @keywords AAEigIdx
 #' @examples
 #' data(AAEigIdx)
@@ -318,7 +304,6 @@ NULL
 #' @name AAFGC
 #' @return AAFGC data
 #' @aliases AAFGC
-#' @usage data(AAFGC)
 #' @keywords AAFGC
 #' @examples
 #' data(AAFGC)
@@ -337,7 +322,6 @@ NULL
 #' @name AAGeom
 #' @return AAGeom data
 #' @aliases AAGeom
-#' @usage data(AAGeom)
 #' @keywords AAGeom
 #' @examples
 #' data(AAGeom)
@@ -356,7 +340,6 @@ NULL
 #' @name AAGETAWAY
 #' @return AAGETAWAY data
 #' @aliases AAGETAWAY
-#' @usage data(AAGETAWAY)
 #' @keywords AAGETAWAY
 #' @examples
 #' data(AAGETAWAY)
@@ -375,7 +358,6 @@ NULL
 #' @name AAInfo
 #' @return AAInfo data
 #' @aliases AAInfo
-#' @usage data(AAInfo)
 #' @keywords AAInfo
 #' @examples
 #' data(AAInfo)
@@ -394,7 +376,6 @@ NULL
 #' @name AAMolProp
 #' @return AAMolProp data
 #' @aliases AAMolProp
-#' @usage data(AAMolProp)
 #' @keywords AAMolProp
 #' @examples
 #' data(AAMolProp)
@@ -413,7 +394,6 @@ NULL
 #' @name AARandic
 #' @return AARandic data
 #' @aliases AARandic
-#' @usage data(AARandic)
 #' @keywords AARandic
 #' @examples
 #' data(AARandic)
@@ -432,7 +412,6 @@ NULL
 #' @name AARDF
 #' @return AARDF data
 #' @aliases AARDF
-#' @usage data(AARDF)
 #' @keywords AARDF
 #' @examples
 #' data(AARDF)
@@ -451,7 +430,6 @@ NULL
 #' @name AATopo
 #' @return AATopo data
 #' @aliases AATopo
-#' @usage data(AATopo)
 #' @keywords AATopo
 #' @examples
 #' data(AATopo)
@@ -472,7 +450,6 @@ NULL
 #' @name AATopoChg
 #' @return AATopoChg data
 #' @aliases AATopoChg
-#' @usage data(AATopoChg)
 #' @keywords AATopoChg
 #' @examples
 #' data(AATopoChg)
@@ -491,7 +468,6 @@ NULL
 #' @name AAWalk
 #' @return AAWalk data
 #' @aliases AAWalk
-#' @usage data(AAWalk)
 #' @keywords AAWalk
 #' @examples
 #' data(AAWalk)
@@ -510,7 +486,6 @@ NULL
 #' @name AAWHIM
 #' @return AAWHIM data
 #' @aliases AAWHIM
-#' @usage data(AAWHIM)
 #' @keywords AAWHIM
 #' @examples
 #' data(AAWHIM)
@@ -530,7 +505,6 @@ NULL
 #' @name AABLOSUM45
 #' @return AABLOSUM45 data
 #' @aliases AABLOSUM45
-#' @usage data(AABLOSUM45)
 #' @keywords AABLOSUM45 BLOSUM datasets
 #' @examples
 #' data(AABLOSUM45)
@@ -548,7 +522,6 @@ NULL
 #' @name AABLOSUM50
 #' @return AABLOSUM50 data
 #' @aliases AABLOSUM50
-#' @usage data(AABLOSUM50)
 #' @keywords AABLOSUM50 BLOSUM datasets
 #' @examples
 #' data(AABLOSUM50)
@@ -566,7 +539,6 @@ NULL
 #' @name AABLOSUM62
 #' @return AABLOSUM62 data
 #' @aliases AABLOSUM62
-#' @usage data(AABLOSUM62)
 #' @keywords AABLOSUM62 BLOSUM datasets
 #' @examples
 #' data(AABLOSUM62)
@@ -584,7 +556,6 @@ NULL
 #' @name AABLOSUM80
 #' @return AABLOSUM80 data
 #' @aliases AABLOSUM80
-#' @usage data(AABLOSUM80)
 #' @keywords AABLOSUM80 BLOSUM datasets
 #' @examples
 #' data(AABLOSUM80)
@@ -602,7 +573,6 @@ NULL
 #' @name AABLOSUM100
 #' @return AABLOSUM100 data
 #' @aliases AABLOSUM100
-#' @usage data(AABLOSUM100)
 #' @keywords AABLOSUM100 BLOSUM datasets
 #' @examples
 #' data(AABLOSUM100)
@@ -620,7 +590,6 @@ NULL
 #' @name AAPAM30
 #' @return AAPAM30 data
 #' @aliases AAPAM30
-#' @usage data(AAPAM30)
 #' @keywords AAPAM30 PAM datasets
 #' @examples
 #' data(AAPAM30)
@@ -638,7 +607,6 @@ NULL
 #' @name AAPAM40
 #' @return AAPAM40 data
 #' @aliases AAPAM40
-#' @usage data(AAPAM40)
 #' @keywords AAPAM40 PAM datasets
 #' @examples
 #' data(AAPAM40)
@@ -656,7 +624,6 @@ NULL
 #' @name AAPAM70
 #' @return AAPAM70 data
 #' @aliases AAPAM70
-#' @usage data(AAPAM70)
 #' @keywords AAPAM70 PAM datasets
 #' @examples
 #' data(AAPAM70)
@@ -674,7 +641,6 @@ NULL
 #' @name AAPAM120
 #' @return AAPAM120 data
 #' @aliases AAPAM120
-#' @usage data(AAPAM120)
 #' @keywords AAPAM120 PAM datasets
 #' @examples
 #' data(AAPAM120)
@@ -692,7 +658,6 @@ NULL
 #' @name AAPAM250
 #' @return AAPAM250 data
 #' @aliases AAPAM250
-#' @usage data(AAPAM250)
 #' @keywords AAPAM250 PAM datasets
 #' @examples
 #' data(AAPAM250)

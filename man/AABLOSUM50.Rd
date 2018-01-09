@@ -4,9 +4,6 @@
 \name{AABLOSUM50}
 \alias{AABLOSUM50}
 \title{BLOSUM50 Matrix for 20 Amino Acids}
-\usage{
-data(AABLOSUM50)
-}
 \value{
 AABLOSUM50 data
 }

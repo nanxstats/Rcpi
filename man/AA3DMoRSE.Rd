@@ -4,9 +4,6 @@
 \name{AA3DMoRSE}
 \alias{AA3DMoRSE}
 \title{3D-MoRSE Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AA3DMoRSE)
-}
 \value{
 AA3DMoRSE data
 }

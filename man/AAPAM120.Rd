@@ -4,9 +4,6 @@
 \name{AAPAM120}
 \alias{AAPAM120}
 \title{PAM120 Matrix for 20 Amino Acids}
-\usage{
-data(AAPAM120)
-}
 \value{
 AAPAM120 data
 }

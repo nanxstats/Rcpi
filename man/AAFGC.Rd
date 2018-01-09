@@ -4,9 +4,6 @@
 \name{AAFGC}
 \alias{AAFGC}
 \title{Functional Group Counts Descriptors for 20 Amino Acids calculated by Dragon}
-\usage{
-data(AAFGC)
-}
 \value{
 AAFGC data
 }

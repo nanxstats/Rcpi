@@ -4,9 +4,6 @@
 \name{AAMetaInfo}
 \alias{AAMetaInfo}
 \title{Meta Information for the 20 Amino Acids}
-\usage{
-data(AAMetaInfo)
-}
 \value{
 AAMetaInfo data
 }
