@@ -16,7 +16,8 @@ cache:
 # Adapt as necessary starting from here
 
 environment:
-  R_CHECK_ARGS: --no-multiarch
+  R_BUILD_ARGS: --no-build-vignettes --no-manual
+  R_CHECK_ARGS: --no-build-vignettes --no-manual --no-multiarch
   R_INSTALL_ARGS: --no-multiarch
 
   global:
