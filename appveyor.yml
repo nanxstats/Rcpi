@@ -16,6 +16,9 @@ cache:
 # Adapt as necessary starting from here
 
 environment:
+  R_CHECK_ARGS: --no-multiarch
+  R_INSTALL_ARGS: --no-multiarch
+
   global:
     WARNINGS_ARE_ERRORS: 1
 
