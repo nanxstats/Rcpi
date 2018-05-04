@@ -10,12 +10,16 @@ init:
 install:
   ps: Bootstrap
 
-# cache:
-#   - C:\RLibrary
+cache:
+  - C:\RLibrary
 
 # Adapt as necessary starting from here
 
+platform: x64
+
 environment:
+  R_ARCH: x64
+
   global:
     WARNINGS_ARE_ERRORS: 1
 
