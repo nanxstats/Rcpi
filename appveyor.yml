@@ -15,17 +15,14 @@ cache:
 
 # Adapt as necessary starting from here
 
-platform: x64
-
 environment:
-  R_ARCH: x64
-
   global:
     WARNINGS_ARE_ERRORS: 1
 
   matrix:
   - R_VERSION: release
     BIOC_USE_DEVEL: FALSE
+    platform: x64
     R_ARCH: x64
 
 build_script:
