@@ -91,9 +91,9 @@
       <h1>Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
             
-            <h4 class="date">2018-04-19</h4>
+            <h4 class="date">2018-05-13</h4>
       
-      <small>Source: <a href="https://github.com/road2stat/Rcpi/blob/master/vignettes/Rcpi.Rmd"><code>vignettes/Rcpi.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/road2stat/Rcpi/blob/master/vignettes/Rcpi.Rmd"><code>vignettes/Rcpi.Rmd</code></a></small>
       <div class="hidden name"><code>Rcpi.Rmd</code></div>
 
     </div>
@@ -236,7 +236,7 @@ Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Biocon
 <a class="sourceLine" id="cb18-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb18-4" data-line-number="4"><span class="co"># plot ROC curve</span></a>
 <a class="sourceLine" id="cb18-5" data-line-number="5"><span class="kw">library</span>(<span class="st">"pROC"</span>)</a>
-<a class="sourceLine" id="cb18-6" data-line-number="6"><span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/plot.roc">plot.roc</a></span>(y.te, rf.pred, <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb18-6" data-line-number="6"><span class="kw">plot.roc</span>(y.te, rf.pred, <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <img src="figures/ex1-1.png" width="65%" class="img-responsive" align="center" alt="ROC curve for the test set of protein subcellular localization data"><p align="center">
 Figure 1: ROC curve for the test set of protein subcellular localization data
 </p>
@@ -288,13 +288,13 @@ Figure 1: ROC curve for the test set of protein subcellular localization data
 <a class="sourceLine" id="cb22-3" data-line-number="3"><span class="kw">library</span>(<span class="st">"pls"</span>)</a>
 <a class="sourceLine" id="cb22-4" data-line-number="4"></a>
 <a class="sourceLine" id="cb22-5" data-line-number="5"><span class="co"># cross-validation settings</span></a>
-<a class="sourceLine" id="cb22-6" data-line-number="6">ctrl =<span class="st"> </span><span class="kw">trainControl</span>(</a>
+<a class="sourceLine" id="cb22-6" data-line-number="6">ctrl =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/trainControl">trainControl</a></span>(</a>
 <a class="sourceLine" id="cb22-7" data-line-number="7">  <span class="dt">method =</span> <span class="st">"repeatedcv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</a>
 <a class="sourceLine" id="cb22-8" data-line-number="8">  <span class="dt">summaryFunction =</span> defaultSummary)</a>
 <a class="sourceLine" id="cb22-9" data-line-number="9"></a>
 <a class="sourceLine" id="cb22-10" data-line-number="10"><span class="co"># train a pls model</span></a>
 <a class="sourceLine" id="cb22-11" data-line-number="11"><span class="kw">set.seed</span>(<span class="dv">1002</span>)</a>
-<a class="sourceLine" id="cb22-12" data-line-number="12">pls.fit =<span class="st"> </span><span class="kw">train</span>(</a>
+<a class="sourceLine" id="cb22-12" data-line-number="12">pls.fit =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/train">train</a></span>(</a>
 <a class="sourceLine" id="cb22-13" data-line-number="13">  x, y, <span class="dt">method =</span> <span class="st">"pls"</span>, <span class="dt">tuneLength =</span> <span class="dv">10</span>, <span class="dt">trControl =</span> ctrl,</a>
 <a class="sourceLine" id="cb22-14" data-line-number="14">  <span class="dt">metric =</span> <span class="st">"RMSE"</span>, <span class="dt">preProc =</span> <span class="kw">c</span>(<span class="st">"center"</span>, <span class="st">"scale"</span>))</a>
 <a class="sourceLine" id="cb22-15" data-line-number="15"></a>
@@ -361,13 +361,13 @@ Figure 3: Experimental RIs vs. Predicted RIs
 <a class="sourceLine" id="cb27-2" data-line-number="2">x1 =<span class="st"> </span><span class="kw"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span>(x.mol)</a>
 <a class="sourceLine" id="cb27-3" data-line-number="3">x2 =<span class="st"> </span><span class="kw"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span>(x.mol)</a>
 <a class="sourceLine" id="cb27-4" data-line-number="4">x3 =<span class="st"> </span><span class="kw"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span>(x.smi, <span class="dt">type =</span> <span class="st">"smile"</span>)</a></code></pre></div>
-<p>As the nature of fingerprint-based structure representation, the calculated 0-1 matrix <code>x1</code>, <code>x2</code>, and <code>x3</code> will be very sparse. Since there are several columns have nearly exactly the same value for all the molecules, we should remove them with <code>nearZeroVar()</code> in <code>caret</code> before modeling, and split our training set and test set:</p>
+<p>As the nature of fingerprint-based structure representation, the calculated 0-1 matrix <code>x1</code>, <code>x2</code>, and <code>x3</code> will be very sparse. Since there are several columns have nearly exactly the same value for all the molecules, we should remove them with <code><a href="http://www.rdocumentation.org/packages/caret/topics/nearZeroVar">nearZeroVar()</a></code> in <code>caret</code> before modeling, and split our training set and test set:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"caret"</span>)</a>
 <a class="sourceLine" id="cb28-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb28-3" data-line-number="3"><span class="co"># remove near-zero variance variables</span></a>
-<a class="sourceLine" id="cb28-4" data-line-number="4">x1 =<span class="st"> </span>x1[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x1)]</a>
-<a class="sourceLine" id="cb28-5" data-line-number="5">x2 =<span class="st"> </span>x2[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x2)]</a>
-<a class="sourceLine" id="cb28-6" data-line-number="6">x3 =<span class="st"> </span>x3[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x3)]</a>
+<a class="sourceLine" id="cb28-4" data-line-number="4">x1 =<span class="st"> </span>x1[, <span class="op">-</span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/nearZeroVar">nearZeroVar</a></span>(x1)]</a>
+<a class="sourceLine" id="cb28-5" data-line-number="5">x2 =<span class="st"> </span>x2[, <span class="op">-</span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/nearZeroVar">nearZeroVar</a></span>(x2)]</a>
+<a class="sourceLine" id="cb28-6" data-line-number="6">x3 =<span class="st"> </span>x3[, <span class="op">-</span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/nearZeroVar">nearZeroVar</a></span>(x3)]</a>
 <a class="sourceLine" id="cb28-7" data-line-number="7"></a>
 <a class="sourceLine" id="cb28-8" data-line-number="8"><span class="co"># split training and test set</span></a>
 <a class="sourceLine" id="cb28-9" data-line-number="9"><span class="kw">set.seed</span>(<span class="dv">1003</span>)</a>
@@ -386,18 +386,18 @@ Figure 3: Experimental RIs vs. Predicted RIs
 <a class="sourceLine" id="cb29-2" data-line-number="2"><span class="kw">library</span>(<span class="st">"kernlab"</span>)</a>
 <a class="sourceLine" id="cb29-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb29-4" data-line-number="4"><span class="co"># cross-validation settings</span></a>
-<a class="sourceLine" id="cb29-5" data-line-number="5">ctrl =<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">"cv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb29-5" data-line-number="5">ctrl =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/trainControl">trainControl</a></span>(<span class="dt">method =</span> <span class="st">"cv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</a>
 <a class="sourceLine" id="cb29-6" data-line-number="6">                    <span class="dt">classProbs =</span> <span class="ot">TRUE</span>,</a>
 <a class="sourceLine" id="cb29-7" data-line-number="7">                    <span class="dt">summaryFunction =</span> twoClassSummary)</a>
 <a class="sourceLine" id="cb29-8" data-line-number="8"></a>
 <a class="sourceLine" id="cb29-9" data-line-number="9"><span class="co"># SVM with RBF kernel</span></a>
-<a class="sourceLine" id="cb29-10" data-line-number="10">svm.fit1 =<span class="st"> </span><span class="kw">train</span>(</a>
+<a class="sourceLine" id="cb29-10" data-line-number="10">svm.fit1 =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/train">train</a></span>(</a>
 <a class="sourceLine" id="cb29-11" data-line-number="11">  x1.tr, y.tr, <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</a>
 <a class="sourceLine" id="cb29-12" data-line-number="12">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw">c</span>(<span class="st">"center"</span>, <span class="st">"scale"</span>))</a>
-<a class="sourceLine" id="cb29-13" data-line-number="13">svm.fit2 =<span class="st"> </span><span class="kw">train</span>(</a>
+<a class="sourceLine" id="cb29-13" data-line-number="13">svm.fit2 =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/train">train</a></span>(</a>
 <a class="sourceLine" id="cb29-14" data-line-number="14">  x2.tr, y.tr, <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</a>
 <a class="sourceLine" id="cb29-15" data-line-number="15">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw">c</span>(<span class="st">"center"</span>, <span class="st">"scale"</span>))</a>
-<a class="sourceLine" id="cb29-16" data-line-number="16">svm.fit3 =<span class="st"> </span><span class="kw">train</span>(</a>
+<a class="sourceLine" id="cb29-16" data-line-number="16">svm.fit3 =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/train">train</a></span>(</a>
 <a class="sourceLine" id="cb29-17" data-line-number="17">  x3.tr, y.tr, <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</a>
 <a class="sourceLine" id="cb29-18" data-line-number="18">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw">c</span>(<span class="st">"center"</span>, <span class="st">"scale"</span>))</a>
 <a class="sourceLine" id="cb29-19" data-line-number="19"></a>
@@ -486,9 +486,9 @@ Figure 3: Experimental RIs vs. Predicted RIs
 <a class="sourceLine" id="cb33-9" data-line-number="9"></a>
 <a class="sourceLine" id="cb33-10" data-line-number="10"><span class="co"># ROC curves of different fingerprints</span></a>
 <a class="sourceLine" id="cb33-11" data-line-number="11"><span class="kw">library</span>(<span class="st">"pROC"</span>)</a>
-<a class="sourceLine" id="cb33-12" data-line-number="12"><span class="kw">plot</span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/smooth">smooth</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/roc">roc</a></span>(y.te, svm.pred1)), <span class="dt">col =</span> pal[<span class="dv">1</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb33-13" data-line-number="13"><span class="kw">plot</span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/smooth">smooth</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/roc">roc</a></span>(y.te, svm.pred2)), <span class="dt">col =</span> pal[<span class="dv">2</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb33-14" data-line-number="14"><span class="kw">plot</span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/smooth">smooth</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/roc">roc</a></span>(y.te, svm.pred3)), <span class="dt">col =</span> pal[<span class="dv">3</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb33-12" data-line-number="12"><span class="kw">plot</span>(<span class="kw">smooth</span>(<span class="kw">roc</span>(y.te, svm.pred1)), <span class="dt">col =</span> pal[<span class="dv">1</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb33-13" data-line-number="13"><span class="kw">plot</span>(<span class="kw">smooth</span>(<span class="kw">roc</span>(y.te, svm.pred2)), <span class="dt">col =</span> pal[<span class="dv">2</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb33-14" data-line-number="14"><span class="kw">plot</span>(<span class="kw">smooth</span>(<span class="kw">roc</span>(y.te, svm.pred3)), <span class="dt">col =</span> pal[<span class="dv">3</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <img src="figures/ex3-1.png" width="65%" class="img-responsive" align="center" alt="Smoothed ROC curves for different fingerprint types"><p align="center">
 Figure 4: Smoothed ROC curves for different fingerprint types
 </p>
@@ -499,7 +499,7 @@ Figure 4: Smoothed ROC curves for different fingerprint types
 <p>Apart from supervised methods (classification and regression), unsupervised approaches, like clustering, is also widely applied in the quantitative research of drugs.</p>
 <p>In reality, there are usually too many chemical compounds available for identifying drug-like molecules. Thus it would be attractive using clustering methods to aid the selection of a representative subset of all available compounds. For a clustering approach that groups compounds together by their structural similarity, applying the principle <em>similar compounds have similar properties</em> means that we only need to test the representative compounds from each individual cluster, rather than do the time-consuming complete set of experiments, and this should be sufficient to understand the structure-activity relationships of the whole compound set.</p>
 <p>The Rcpi package provides easy-to-use functions for computing the similarity between small molecules derived by molecular fingerprints and maximum common substructure search.</p>
-<p>As a example, the SDF file <code>tyrphostin.sdf</code> below is a database composed by searching <em>tyrphostin</em> in PubChem and filtered by _Lipinski“s rule of five_. We load this SDF file using <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code>:</p>
+<p>As a example, the SDF file <code>tyrphostin.sdf</code> below is a database composed by searching <em>tyrphostin</em> in PubChem and filtered by <em>Lipinski"s rule of five</em>. We load this SDF file using <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code>:</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"Rcpi"</span>)</a>
 <a class="sourceLine" id="cb34-2" data-line-number="2">mols =<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSDF.html">readMolFromSDF</a></span>(<span class="kw">system.file</span>(</a>
 <a class="sourceLine" id="cb34-3" data-line-number="3">    <span class="st">"compseq/tyrphostin.sdf"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>))</a></code></pre></div>
@@ -524,7 +524,7 @@ Figure 4: Smoothed ROC curves for different fingerprint types
 <a class="sourceLine" id="cb36-6" data-line-number="6"><span class="co"># generate colors</span></a>
 <a class="sourceLine" id="cb36-7" data-line-number="7"><span class="kw">library</span>(<span class="st">"RColorBrewer"</span>)</a>
 <a class="sourceLine" id="cb36-8" data-line-number="8">pal5 =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/RColorBrewer/topics/ColorBrewer">brewer.pal</a></span>(<span class="dv">5</span>, <span class="st">"Set1"</span>)</a>
-<a class="sourceLine" id="cb36-9" data-line-number="9"><span class="kw">plot</span>(<span class="kw">as.phylo</span>(mol.hc), <span class="dt">type =</span> <span class="st">"fan"</span>,</a>
+<a class="sourceLine" id="cb36-9" data-line-number="9"><span class="kw">plot</span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ape/topics/as.phylo">as.phylo</a></span>(mol.hc), <span class="dt">type =</span> <span class="st">"fan"</span>,</a>
 <a class="sourceLine" id="cb36-10" data-line-number="10">     <span class="dt">tip.color =</span> pal5[clus5],</a>
 <a class="sourceLine" id="cb36-11" data-line-number="11">     <span class="dt">label.offset =</span> <span class="fl">0.1</span>, <span class="dt">cex =</span> <span class="fl">0.7</span>)</a></code></pre></div>
 <p>The hierarchical clustering result for these molecules is shown in Figure 5.</p>
@@ -710,10 +710,10 @@ Figure 7: Arc diagram visualization of the GPCR drug-target interaction network
 </ol>
 <p>Train a random forest classification model with 5-fold repeated CV:</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"caret"</span>)</a>
-<a class="sourceLine" id="cb50-2" data-line-number="2">x =<span class="st"> </span>x[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x)]</a>
+<a class="sourceLine" id="cb50-2" data-line-number="2">x =<span class="st"> </span>x[, <span class="op">-</span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/nearZeroVar">nearZeroVar</a></span>(x)]</a>
 <a class="sourceLine" id="cb50-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb50-4" data-line-number="4"><span class="co"># cross-validation settings</span></a>
-<a class="sourceLine" id="cb50-5" data-line-number="5">ctrl =<span class="st"> </span><span class="kw">trainControl</span>(</a>
+<a class="sourceLine" id="cb50-5" data-line-number="5">ctrl =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/trainControl">trainControl</a></span>(</a>
 <a class="sourceLine" id="cb50-6" data-line-number="6">    <span class="dt">method =</span> <span class="st">"cv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</a>
 <a class="sourceLine" id="cb50-7" data-line-number="7">    <span class="dt">classProbs =</span> <span class="ot">TRUE</span>,</a>
 <a class="sourceLine" id="cb50-8" data-line-number="8">    <span class="dt">summaryFunction =</span> twoClassSummary)</a>
@@ -722,7 +722,7 @@ Figure 7: Arc diagram visualization of the GPCR drug-target interaction network
 <a class="sourceLine" id="cb50-11" data-line-number="11"><span class="kw">library</span>(<span class="st">"randomForest"</span>)</a>
 <a class="sourceLine" id="cb50-12" data-line-number="12"></a>
 <a class="sourceLine" id="cb50-13" data-line-number="13"><span class="kw">set.seed</span>(<span class="dv">1006</span>)</a>
-<a class="sourceLine" id="cb50-14" data-line-number="14">rf.fit =<span class="st"> </span><span class="kw">train</span>(</a>
+<a class="sourceLine" id="cb50-14" data-line-number="14">rf.fit =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/caret/topics/train">train</a></span>(</a>
 <a class="sourceLine" id="cb50-15" data-line-number="15">  x, y, <span class="dt">method =</span> <span class="st">"rf"</span>, <span class="dt">trControl =</span> ctrl,</a>
 <a class="sourceLine" id="cb50-16" data-line-number="16">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw">c</span>(<span class="st">"center"</span>, <span class="st">"scale"</span>))</a>
 <a class="sourceLine" id="cb50-17" data-line-number="17">\end{CodeInput}</a>
@@ -755,7 +755,7 @@ Figure 7: Arc diagram visualization of the GPCR drug-target interaction network
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">rf.pred =<span class="st"> </span><span class="kw">predict</span>(rf.fit<span class="op">$</span>finalModel, x, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb52-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb52-3" data-line-number="3"><span class="kw">library</span>(<span class="st">"pROC"</span>)</a>
-<a class="sourceLine" id="cb52-4" data-line-number="4"><span class="kw">plot</span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/smooth">smooth</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/pROC/topics/roc">roc</a></span>(y, rf.pred)), <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb52-4" data-line-number="4"><span class="kw">plot</span>(<span class="kw">smooth</span>(<span class="kw">roc</span>(y, rf.pred)), <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p>The ROC curve is shown in Figure 8.</p>
 <img src="figures/ex6-2.png" width="65%" class="img-responsive" align="center" alt="ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest"><p align="center">
 Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest

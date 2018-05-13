@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Descriptor that Counts the Number of Occurrences of the E-State Fragments — extractDrugKierHallSmarts" />
 
 <meta property="og:description" content="Descriptor that Counts the Number of Occurrences of the E-State Fragments" />
@@ -49,8 +52,6 @@
 
   gtag('config', 'UA-66394392-1');
 </script>
-
-
 
   </head>
 
@@ -122,13 +123,15 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Descriptor that Counts the Number of Occurrences of the E-State Fragments</h1>
-    <small>Source: <a href='https://github.com/road2stat/Rcpi/blob/master/R/330-extractDrugKierHallSmarts.R'><code>R/330-extractDrugKierHallSmarts.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/road2stat/Rcpi/blob/master/R/330-extractDrugKierHallSmarts.R'><code>R/330-extractDrugKierHallSmarts.R</code></a></small>
     <div class="hidden name"><code>extractDrugKierHallSmarts.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Descriptor that Counts the Number of Occurrences of the E-State Fragments</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>extractDrugKierHallSmarts</span>(<span class='no'>molecules</span>, <span class='kw'>silent</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
@@ -150,323 +153,88 @@ should be shown or not, default is <code>TRUE</code>.</p></td>
 
     <p>A data frame, each row represents one of the molecules,
 each column represents one feature.
-This function returns 79 columns:</p><table><tr><td>
-ID </td>
-<td> Name </td>
-<td> Pattern</td>
-</tr><tr><td><br />
-<code>0</code> </td>
-<td> <code>khs.sLi</code> </td>
-<td> <code>[LiD1]-*</code></td>
-</tr><tr><td><br />
-<code>1</code> </td>
-<td> <code>khs.ssBe</code> </td>
-<td> <code>[BeD2](-*)-*</code></td>
-</tr><tr><td><br />
-<code>2</code> </td>
-<td> <code>khs.ssssBe</code> </td>
-<td> <code>[BeD4](-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>3</code> </td>
-<td> <code>khs.ssBH</code> </td>
-<td> <code>[BD2H](-*)-*</code></td>
-</tr><tr><td><br />
-<code>4</code> </td>
-<td> <code>khs.sssB</code> </td>
-<td> <code>[BD3](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>5</code> </td>
-<td> <code>khs.ssssB</code> </td>
-<td> <code>[BD4](-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>6</code> </td>
-<td> <code>khs.sCH3</code> </td>
-<td> <code>[CD1H3]-*</code></td>
-</tr><tr><td><br />
-<code>7</code> </td>
-<td> <code>khs.dCH2</code> </td>
-<td> <code>[CD1H2]=*</code></td>
-</tr><tr><td><br />
-<code>8</code> </td>
-<td> <code>khs.ssCH2</code> </td>
-<td> <code>[CD2H2](-*)-*</code></td>
-</tr><tr><td><br />
-<code>9</code> </td>
-<td> <code>khs.tCH</code> </td>
-<td> <code>[CD1H]#*</code></td>
-</tr><tr><td><br />
-<code>10</code> </td>
-<td> <code>khs.dsCH</code> </td>
-<td> <code>[CD2H](=*)-*</code></td>
-</tr><tr><td><br />
-<code>11</code> </td>
-<td> <code>khs.aaCH</code> </td>
-<td> <code>[C,c;D2H](:*):*</code></td>
-</tr><tr><td><br />
-<code>12</code> </td>
-<td> <code>khs.sssCH</code> </td>
-<td> <code>[CD3H](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>13</code> </td>
-<td> <code>khs.ddC</code> </td>
-<td> <code>[CD2H0](=*)=*</code></td>
-</tr><tr><td><br />
-<code>14</code> </td>
-<td> <code>khs.tsC</code> </td>
-<td> <code>[CD2H0](#*)-*</code></td>
-</tr><tr><td><br />
-<code>15</code> </td>
-<td> <code>khs.dssC</code> </td>
-<td> <code>[CD3H0](=*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>16</code> </td>
-<td> <code>khs.aasC</code> </td>
-<td> <code>[C,c;D3H0](:*)(:*)-*</code></td>
-</tr><tr><td><br />
-<code>17</code> </td>
-<td> <code>khs.aaaC</code> </td>
-<td> <code>[C,c;D3H0](:*)(:*):*</code></td>
-</tr><tr><td><br />
-<code>18</code> </td>
-<td> <code>khs.ssssC</code> </td>
-<td> <code>[CD4H0](-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>19</code> </td>
-<td> <code>khs.sNH3</code> </td>
-<td> <code>[ND1H3]-*</code></td>
-</tr><tr><td><br />
-<code>20</code> </td>
-<td> <code>khs.sNH2</code> </td>
-<td> <code>[ND1H2]-*</code></td>
-</tr><tr><td><br />
-<code>21</code> </td>
-<td> <code>khs.ssNH2</code> </td>
-<td> <code>[ND2H2](-*)-*</code></td>
-</tr><tr><td><br />
-<code>22</code> </td>
-<td> <code>khs.dNH</code> </td>
-<td> <code>[ND1H]=*</code></td>
-</tr><tr><td><br />
-<code>23</code> </td>
-<td> <code>khs.ssNH</code> </td>
-<td> <code>[ND2H](-*)-*</code></td>
-</tr><tr><td><br />
-<code>24</code> </td>
-<td> <code>khs.aaNH</code> </td>
-<td> <code>[N,nD2H](:*):*</code></td>
-</tr><tr><td><br />
-<code>25</code> </td>
-<td> <code>khs.tN</code> </td>
-<td> <code>[ND1H0]#*</code></td>
-</tr><tr><td><br />
-<code>26</code> </td>
-<td> <code>khs.sssNH</code> </td>
-<td> <code>[ND3H](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>27</code> </td>
-<td> <code>khs.dsN</code> </td>
-<td> <code>[ND2H0](=*)-*</code></td>
-</tr><tr><td><br />
-<code>28</code> </td>
-<td> <code>khs.aaN</code> </td>
-<td> <code>[N,nD2H0](:*):*</code></td>
-</tr><tr><td><br />
-<code>29</code> </td>
-<td> <code>khs.sssN</code> </td>
-<td> <code>[ND3H0](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>30</code> </td>
-<td> <code>khs.ddsN</code> </td>
-<td> <code>[ND3H0](~[OD1H0])(~[OD1H0])-,:*</code></td>
-</tr><tr><td><br />
-<code>31</code> </td>
-<td> <code>khs.aasN</code> </td>
-<td> <code>[N,nD3H0](:*)(:*)-,:*</code></td>
-</tr><tr><td><br />
-<code>32</code> </td>
-<td> <code>khs.ssssN</code> </td>
-<td> <code>[ND4H0](-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>33</code> </td>
-<td> <code>khs.sOH</code> </td>
-<td> <code>[OD1H]-*</code></td>
-</tr><tr><td><br />
-<code>34</code> </td>
-<td> <code>khs.dO</code> </td>
-<td> <code>[OD1H0]=*</code></td>
-</tr><tr><td><br />
-<code>35</code> </td>
-<td> <code>khs.ssO</code> </td>
-<td> <code>[OD2H0](-*)-*</code></td>
-</tr><tr><td><br />
-<code>36</code> </td>
-<td> <code>khs.aaO</code> </td>
-<td> <code>[O,oD2H0](:*):*</code></td>
-</tr><tr><td><br />
-<code>37</code> </td>
-<td> <code>khs.sF</code> </td>
-<td> <code>[FD1]-*</code></td>
-</tr><tr><td><br />
-<code>38</code> </td>
-<td> <code>khs.sSiH3</code> </td>
-<td> <code>[SiD1H3]-*</code></td>
-</tr><tr><td><br />
-<code>39</code> </td>
-<td> <code>khs.ssSiH2</code> </td>
-<td> <code>[SiD2H2](-*)-*</code></td>
-</tr><tr><td><br />
-<code>40</code> </td>
-<td> <code>khs.sssSiH</code> </td>
-<td> <code>[SiD3H1](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>41</code> </td>
-<td> <code>khs.ssssSi</code> </td>
-<td> <code>[SiD4H0](-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>42</code> </td>
-<td> <code>khs.sPH2</code> </td>
-<td> <code>[PD1H2]-*</code></td>
-</tr><tr><td><br />
-<code>43</code> </td>
-<td> <code>khs.ssPH</code> </td>
-<td> <code>[PD2H1](-*)-*</code></td>
-</tr><tr><td><br />
-<code>44</code> </td>
-<td> <code>khs.sssP</code> </td>
-<td> <code>[PD3H0](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>45</code> </td>
-<td> <code>khs.dsssP</code> </td>
-<td> <code>[PD4H0](=*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>46</code> </td>
-<td> <code>khs.sssssP</code> </td>
-<td> <code>[PD5H0](-*)(-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>47</code> </td>
-<td> <code>khs.sSH</code> </td>
-<td> <code>[SD1H1]-*</code></td>
-</tr><tr><td><br />
-<code>48</code> </td>
-<td> <code>khs.dS</code> </td>
-<td> <code>[SD1H0]=*</code></td>
-</tr><tr><td><br />
-<code>49</code> </td>
-<td> <code>khs.ssS</code> </td>
-<td> <code>[SD2H0](-*)-*</code></td>
-</tr><tr><td><br />
-<code>50</code> </td>
-<td> <code>khs.aaS</code> </td>
-<td> <code>[S,sD2H0](:*):*</code></td>
-</tr><tr><td><br />
-<code>51</code> </td>
-<td> <code>khs.dssS</code> </td>
-<td> <code>[SD3H0](=*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>52</code> </td>
-<td> <code>khs.ddssS</code> </td>
-<td> <code>[SD4H0](~[OD1H0])(~[OD1H0])(-*)-*</code></td>
-</tr><tr><td><br />
-<code>53</code> </td>
-<td> <code>khs.sCl</code> </td>
-<td> <code>[ClD1]-*</code></td>
-</tr><tr><td><br />
-<code>54</code> </td>
-<td> <code>khs.sGeH3</code> </td>
-<td> <code>[GeD1H3](-*)</code></td>
-</tr><tr><td><br />
-<code>55</code> </td>
-<td> <code>khs.ssGeH2</code> </td>
-<td> <code>[GeD2H2](-*)-*</code></td>
-</tr><tr><td><br />
-<code>56</code> </td>
-<td> <code>khs.sssGeH</code> </td>
-<td> <code>[GeD3H1](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>57</code> </td>
-<td> <code>khs.ssssGe</code> </td>
-<td> <code>[GeD4H0](-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>58</code> </td>
-<td> <code>khs.sAsH2</code> </td>
-<td> <code>[AsD1H2]-*</code></td>
-</tr><tr><td><br />
-<code>59</code> </td>
-<td> <code>khs.ssAsH</code> </td>
-<td> <code>[AsD2H1](-*)-*</code></td>
-</tr><tr><td><br />
-<code>60</code> </td>
-<td> <code>khs.sssAs</code> </td>
-<td> <code>[AsD3H0](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>61</code> </td>
-<td> <code>khs.sssdAs</code> </td>
-<td> <code>[AsD4H0](=*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>62</code> </td>
-<td> <code>khs.sssssAs</code> </td>
-<td> <code>[AsD5H0](-*)(-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>63</code> </td>
-<td> <code>khs.sSeH</code> </td>
-<td> <code>[SeD1H1]-*</code></td>
-</tr><tr><td><br />
-<code>64</code> </td>
-<td> <code>khs.dSe</code> </td>
-<td> <code>[SeD1H0]=*</code></td>
-</tr><tr><td><br />
-<code>65</code> </td>
-<td> <code>khs.ssSe</code> </td>
-<td> <code>[SeD2H0](-*)-*</code></td>
-</tr><tr><td><br />
-<code>66</code> </td>
-<td> <code>khs.aaSe</code> </td>
-<td> <code>[SeD2H0](:*):*</code></td>
-</tr><tr><td><br />
-<code>67</code> </td>
-<td> <code>khs.dssSe</code> </td>
-<td> <code>[SeD3H0](=*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>68</code> </td>
-<td> <code>khs.ddssSe</code> </td>
-<td> <code>[SeD4H0](=*)(=*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>69</code> </td>
-<td> <code>khs.sBr</code> </td>
-<td> <code>[BrD1]-*</code></td>
-</tr><tr><td><br />
-<code>70</code> </td>
-<td> <code>khs.sSnH3</code> </td>
-<td> <code>[SnD1H3]-*</code></td>
-</tr><tr><td><br />
-<code>71</code> </td>
-<td> <code>khs.ssSnH2</code> </td>
-<td> <code>[SnD2H2](-*)-*</code></td>
-</tr><tr><td><br />
-<code>72</code> </td>
-<td> <code>khs.sssSnH</code> </td>
-<td> <code>[SnD3H1](-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>73</code> </td>
-<td> <code>khs.ssssSn</code> </td>
-<td> <code>[SnD4H0](-*)(-*)(-*)-*</code></td>
-</tr><tr><td><br />
-<code>74</code> </td>
-<td> <code>khs.sI</code> </td>
-<td> <code>[ID1]-*</code></td>
-</tr><tr><td><br />
-<code>75</code> </td>
-<td> <code>khs.sPbH3</code> </td>
-<td> <code>[PbD1H3]-*</code></td>
-</tr><tr><td><br />
-<code>76</code> </td>
-<td> <code>khs.ssPbH2</code> </td>
-<td> <code>[PbD2H2](-*)-*</code></td>
-</tr><tr><td><br />
-<code>77</code> </td>
-<td> <code>khs.sssPbH</code> </td>
-<td> <code>[PbD3H1](-*)(-*)-*</code></td>
-</tr></table>
+This function returns 79 columns:</p><table class='table'>
+<tr><td>ID</td><td>Name</td><td>Pattern</td></tr>
+<tr><td><code>0</code></td><td><code>khs.sLi</code></td><td><code>[LiD1]-*</code></td></tr>
+<tr><td><code>1</code></td><td><code>khs.ssBe</code></td><td><code>[BeD2](-*)-*</code></td></tr>
+<tr><td><code>2</code></td><td><code>khs.ssssBe</code></td><td><code>[BeD4](-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>3</code></td><td><code>khs.ssBH</code></td><td><code>[BD2H](-*)-*</code></td></tr>
+<tr><td><code>4</code></td><td><code>khs.sssB</code></td><td><code>[BD3](-*)(-*)-*</code></td></tr>
+<tr><td><code>5</code></td><td><code>khs.ssssB</code></td><td><code>[BD4](-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>6</code></td><td><code>khs.sCH3</code></td><td><code>[CD1H3]-*</code></td></tr>
+<tr><td><code>7</code></td><td><code>khs.dCH2</code></td><td><code>[CD1H2]=*</code></td></tr>
+<tr><td><code>8</code></td><td><code>khs.ssCH2</code></td><td><code>[CD2H2](-*)-*</code></td></tr>
+<tr><td><code>9</code></td><td><code>khs.tCH</code></td><td><code>[CD1H]#*</code></td></tr>
+<tr><td><code>10</code></td><td><code>khs.dsCH</code></td><td><code>[CD2H](=*)-*</code></td></tr>
+<tr><td><code>11</code></td><td><code>khs.aaCH</code></td><td><code>[C,c;D2H](:*):*</code></td></tr>
+<tr><td><code>12</code></td><td><code>khs.sssCH</code></td><td><code>[CD3H](-*)(-*)-*</code></td></tr>
+<tr><td><code>13</code></td><td><code>khs.ddC</code></td><td><code>[CD2H0](=*)=*</code></td></tr>
+<tr><td><code>14</code></td><td><code>khs.tsC</code></td><td><code>[CD2H0](#*)-*</code></td></tr>
+<tr><td><code>15</code></td><td><code>khs.dssC</code></td><td><code>[CD3H0](=*)(-*)-*</code></td></tr>
+<tr><td><code>16</code></td><td><code>khs.aasC</code></td><td><code>[C,c;D3H0](:*)(:*)-*</code></td></tr>
+<tr><td><code>17</code></td><td><code>khs.aaaC</code></td><td><code>[C,c;D3H0](:*)(:*):*</code></td></tr>
+<tr><td><code>18</code></td><td><code>khs.ssssC</code></td><td><code>[CD4H0](-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>19</code></td><td><code>khs.sNH3</code></td><td><code>[ND1H3]-*</code></td></tr>
+<tr><td><code>20</code></td><td><code>khs.sNH2</code></td><td><code>[ND1H2]-*</code></td></tr>
+<tr><td><code>21</code></td><td><code>khs.ssNH2</code></td><td><code>[ND2H2](-*)-*</code></td></tr>
+<tr><td><code>22</code></td><td><code>khs.dNH</code></td><td><code>[ND1H]=*</code></td></tr>
+<tr><td><code>23</code></td><td><code>khs.ssNH</code></td><td><code>[ND2H](-*)-*</code></td></tr>
+<tr><td><code>24</code></td><td><code>khs.aaNH</code></td><td><code>[N,nD2H](:*):*</code></td></tr>
+<tr><td><code>25</code></td><td><code>khs.tN</code></td><td><code>[ND1H0]#*</code></td></tr>
+<tr><td><code>26</code></td><td><code>khs.sssNH</code></td><td><code>[ND3H](-*)(-*)-*</code></td></tr>
+<tr><td><code>27</code></td><td><code>khs.dsN</code></td><td><code>[ND2H0](=*)-*</code></td></tr>
+<tr><td><code>28</code></td><td><code>khs.aaN</code></td><td><code>[N,nD2H0](:*):*</code></td></tr>
+<tr><td><code>29</code></td><td><code>khs.sssN</code></td><td><code>[ND3H0](-*)(-*)-*</code></td></tr>
+<tr><td><code>30</code></td><td><code>khs.ddsN</code></td><td><code>[ND3H0](~[OD1H0])(~[OD1H0])-,:*</code></td></tr>
+<tr><td><code>31</code></td><td><code>khs.aasN</code></td><td><code>[N,nD3H0](:*)(:*)-,:*</code></td></tr>
+<tr><td><code>32</code></td><td><code>khs.ssssN</code></td><td><code>[ND4H0](-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>33</code></td><td><code>khs.sOH</code></td><td><code>[OD1H]-*</code></td></tr>
+<tr><td><code>34</code></td><td><code>khs.dO</code></td><td><code>[OD1H0]=*</code></td></tr>
+<tr><td><code>35</code></td><td><code>khs.ssO</code></td><td><code>[OD2H0](-*)-*</code></td></tr>
+<tr><td><code>36</code></td><td><code>khs.aaO</code></td><td><code>[O,oD2H0](:*):*</code></td></tr>
+<tr><td><code>37</code></td><td><code>khs.sF</code></td><td><code>[FD1]-*</code></td></tr>
+<tr><td><code>38</code></td><td><code>khs.sSiH3</code></td><td><code>[SiD1H3]-*</code></td></tr>
+<tr><td><code>39</code></td><td><code>khs.ssSiH2</code></td><td><code>[SiD2H2](-*)-*</code></td></tr>
+<tr><td><code>40</code></td><td><code>khs.sssSiH</code></td><td><code>[SiD3H1](-*)(-*)-*</code></td></tr>
+<tr><td><code>41</code></td><td><code>khs.ssssSi</code></td><td><code>[SiD4H0](-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>42</code></td><td><code>khs.sPH2</code></td><td><code>[PD1H2]-*</code></td></tr>
+<tr><td><code>43</code></td><td><code>khs.ssPH</code></td><td><code>[PD2H1](-*)-*</code></td></tr>
+<tr><td><code>44</code></td><td><code>khs.sssP</code></td><td><code>[PD3H0](-*)(-*)-*</code></td></tr>
+<tr><td><code>45</code></td><td><code>khs.dsssP</code></td><td><code>[PD4H0](=*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>46</code></td><td><code>khs.sssssP</code></td><td><code>[PD5H0](-*)(-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>47</code></td><td><code>khs.sSH</code></td><td><code>[SD1H1]-*</code></td></tr>
+<tr><td><code>48</code></td><td><code>khs.dS</code></td><td><code>[SD1H0]=*</code></td></tr>
+<tr><td><code>49</code></td><td><code>khs.ssS</code></td><td><code>[SD2H0](-*)-*</code></td></tr>
+<tr><td><code>50</code></td><td><code>khs.aaS</code></td><td><code>[S,sD2H0](:*):*</code></td></tr>
+<tr><td><code>51</code></td><td><code>khs.dssS</code></td><td><code>[SD3H0](=*)(-*)-*</code></td></tr>
+<tr><td><code>52</code></td><td><code>khs.ddssS</code></td><td><code>[SD4H0](~[OD1H0])(~[OD1H0])(-*)-*</code></td></tr>
+<tr><td><code>53</code></td><td><code>khs.sCl</code></td><td><code>[ClD1]-*</code></td></tr>
+<tr><td><code>54</code></td><td><code>khs.sGeH3</code></td><td><code>[GeD1H3](-*)</code></td></tr>
+<tr><td><code>55</code></td><td><code>khs.ssGeH2</code></td><td><code>[GeD2H2](-*)-*</code></td></tr>
+<tr><td><code>56</code></td><td><code>khs.sssGeH</code></td><td><code>[GeD3H1](-*)(-*)-*</code></td></tr>
+<tr><td><code>57</code></td><td><code>khs.ssssGe</code></td><td><code>[GeD4H0](-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>58</code></td><td><code>khs.sAsH2</code></td><td><code>[AsD1H2]-*</code></td></tr>
+<tr><td><code>59</code></td><td><code>khs.ssAsH</code></td><td><code>[AsD2H1](-*)-*</code></td></tr>
+<tr><td><code>60</code></td><td><code>khs.sssAs</code></td><td><code>[AsD3H0](-*)(-*)-*</code></td></tr>
+<tr><td><code>61</code></td><td><code>khs.sssdAs</code></td><td><code>[AsD4H0](=*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>62</code></td><td><code>khs.sssssAs</code></td><td><code>[AsD5H0](-*)(-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>63</code></td><td><code>khs.sSeH</code></td><td><code>[SeD1H1]-*</code></td></tr>
+<tr><td><code>64</code></td><td><code>khs.dSe</code></td><td><code>[SeD1H0]=*</code></td></tr>
+<tr><td><code>65</code></td><td><code>khs.ssSe</code></td><td><code>[SeD2H0](-*)-*</code></td></tr>
+<tr><td><code>66</code></td><td><code>khs.aaSe</code></td><td><code>[SeD2H0](:*):*</code></td></tr>
+<tr><td><code>67</code></td><td><code>khs.dssSe</code></td><td><code>[SeD3H0](=*)(-*)-*</code></td></tr>
+<tr><td><code>68</code></td><td><code>khs.ddssSe</code></td><td><code>[SeD4H0](=*)(=*)(-*)-*</code></td></tr>
+<tr><td><code>69</code></td><td><code>khs.sBr</code></td><td><code>[BrD1]-*</code></td></tr>
+<tr><td><code>70</code></td><td><code>khs.sSnH3</code></td><td><code>[SnD1H3]-*</code></td></tr>
+<tr><td><code>71</code></td><td><code>khs.ssSnH2</code></td><td><code>[SnD2H2](-*)-*</code></td></tr>
+<tr><td><code>72</code></td><td><code>khs.sssSnH</code></td><td><code>[SnD3H1](-*)(-*)-*</code></td></tr>
+<tr><td><code>73</code></td><td><code>khs.ssssSn</code></td><td><code>[SnD4H0](-*)(-*)(-*)-*</code></td></tr>
+<tr><td><code>74</code></td><td><code>khs.sI</code></td><td><code>[ID1]-*</code></td></tr>
+<tr><td><code>75</code></td><td><code>khs.sPbH3</code></td><td><code>[PbD1H3]-*</code></td></tr>
+<tr><td><code>76</code></td><td><code>khs.ssPbH2</code></td><td><code>[PbD2H2](-*)-*</code></td></tr>
+<tr><td><code>77</code></td><td><code>khs.sssPbH</code></td><td><code>[PbD3H1](-*)(-*)-*</code></td></tr>
+</table>
+
 
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
