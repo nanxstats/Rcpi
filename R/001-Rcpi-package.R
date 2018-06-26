@@ -6,8 +6,10 @@
 #'
 #' The package vignette can be opened with \code{vignette('Rcpi')}.
 #'
-#' \tabular{ll}{Package: \tab Rcpi\cr Type: \tab Package\cr
-#' License: \tab Artistic-2.0\cr }
+#' \tabular{ll}{
+#' Package: \tab Rcpi\cr
+#' Type: \tab Package\cr
+#' License: \tab Artistic-2.0}
 #'
 #' @name Rcpi-package
 #' @aliases Rcpi
