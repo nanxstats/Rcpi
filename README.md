@@ -1,4 +1,4 @@
-# Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://i.imgur.com/v8lHCn9.png" align="right" alt="logo" height="180" width="180" /></a>
+# Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://i.imgur.com/KriPYZ7.png" align="right" alt="logo" height="180" width="180" /></a>
 
 [![Build Status](https://travis-ci.org/road2stat/Rcpi.svg?branch=master)](https://travis-ci.org/road2stat/Rcpi)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/road2stat/rcpi?branch=master&svg=true)](https://ci.appveyor.com/project/road2stat/rcpi)
