@@ -39,15 +39,14 @@ BibTeX entry:
 To install the `Rcpi` package:
 
 ```r
-source("https://bioconductor.org/biocLite.R")
-biocLite("Rcpi")
+install.packages("BiocManager")
+BiocManager::install("Rcpi")
 ```
 
 To make the package fully functional (especially the Open Babel related functions), we recommend installing the _Enhances_ packages by:
 
 ```r
-source("https://bioconductor.org/biocLite.R")
-biocLite("Rcpi", dependencies = c("Imports", "Enhances"))
+BiocManager::install("Rcpi", dependencies = c("Imports", "Enhances"))
 ```
 
 Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.

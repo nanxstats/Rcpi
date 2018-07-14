@@ -59,8 +59,8 @@ chemoinformatics, proteochemometrics and chemogenomics.
 To install the Rcpi package, use:
 
 ```{r, eval = FALSE}
-source("https://bioconductor.org/biocLite.R")
-biocLite("Rcpi")
+install.packages("BiocManager")
+BiocManager::install("Rcpi")
 ```
 
 To make the Rcpi package fully functional (especially the Open Babel
@@ -68,8 +68,7 @@ related functionalities), we recommend the users also install
 the _Enhances_ packages by:
 
 ```{r, eval = FALSE}
-source("https://bioconductor.org/biocLite.R")
-biocLite("Rcpi", dependencies = c("Imports", "Enhances"))
+BiocManager::install("Rcpi", dependencies = c("Imports", "Enhances"))
 ```
 
 Several dependencies of the Rcpi package may require some system-level
