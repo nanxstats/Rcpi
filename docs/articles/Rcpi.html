@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.15.1</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.17.1</span>
       </span>
     </div>
 
@@ -91,7 +91,7 @@
       <h1>Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
             
-            <h4 class="date">2018-06-26</h4>
+            <h4 class="date">2018-07-13</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/road2stat/Rcpi/blob/master/vignettes/Rcpi.Rmd"><code>vignettes/Rcpi.Rmd</code></a></small>
       <div class="hidden name"><code>Rcpi.Rmd</code></div>
@@ -133,11 +133,10 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>To install the Rcpi package, use:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">source</span>(<span class="st">"https://bioconductor.org/biocLite.R"</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">biocLite</span>(<span class="st">"Rcpi"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">"BiocManager"</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">BiocManager<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"Rcpi"</span>)</a></code></pre></div>
 <p>To make the Rcpi package fully functional (especially the Open Babel related functionalities), we recommend the users also install the <em>Enhances</em> packages by:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">source</span>(<span class="st">"https://bioconductor.org/biocLite.R"</span>)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">biocLite</span>(<span class="st">"Rcpi"</span>, <span class="dt">dependencies =</span> <span class="kw">c</span>(<span class="st">"Imports"</span>, <span class="st">"Enhances"</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">BiocManager<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"Rcpi"</span>, <span class="dt">dependencies =</span> <span class="kw">c</span>(<span class="st">"Imports"</span>, <span class="st">"Enhances"</span>))</a></code></pre></div>
 <p>Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.</p>
 </div>
 <div id="how-to-cite-rcpi" class="section level2">
