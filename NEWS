@@ -1,3 +1,9 @@
+# Rcpi 1.17.2 (2018-07-15)
+
+## Improvements
+
+- Further remove all words related to the previous installation method per Bioconductor's request.
+
 # Rcpi 1.17.1 (2018-07-13)
 
 ## Improvements
