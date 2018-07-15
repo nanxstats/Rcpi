@@ -2,7 +2,7 @@
 
 ## Improvements
 
-- Use the new `BiocManager` instead of `biocLite()` for installation instructions.
+- Use the new `BiocManager` for installation instructions.
 
 # Rcpi 1.15.1 (2017-11-17)
 
