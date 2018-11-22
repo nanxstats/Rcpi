@@ -129,10 +129,14 @@ in two separated FASTA files with `readFASTA()`:
 library("Rcpi")
 
 # load FASTA files
-extracell = readFASTA(system.file(
-  "vignettedata/extracell.fasta", package = "Rcpi"))
-mitonchon = readFASTA(system.file(
-  "vignettedata/mitochondrion.fasta", package = "Rcpi"))
+extracell <- readFASTA(system.file(
+  "vignettedata/extracell.fasta",
+  package = "Rcpi"
+))
+mitonchon <- readFASTA(system.file(
+  "vignettedata/mitochondrion.fasta",
+  package = "Rcpi"
+))
 ```
 
 The loaded sequences are stored as two lists in R, and each component
@@ -162,8 +166,8 @@ we use the `checkProt()` function to do the amino acid type sanity
 checking and remove the _non-standard_ protein sequences:
 
 ```{r, eval = FALSE}
-extracell = extracell[(sapply(extracell, checkProt))]
-mitonchon = mitonchon[(sapply(mitonchon, checkProt))]
+extracell <- extracell[(sapply(extracell, checkProt))]
+mitonchon <- mitonchon[(sapply(mitonchon, checkProt))]
 ```
 
 ```{r, eval = FALSE}
@@ -189,12 +193,12 @@ forest classification modeling.
 
 ```{r, eval = FALSE}
 # calculate APAAC descriptors
-x1 = t(sapply(extracell, extractProtAPAAC))
-x2 = t(sapply(mitonchon, extractProtAPAAC))
-x  = rbind(x1, x2)
+x1 <- t(sapply(extracell, extractProtAPAAC))
+x2 <- t(sapply(mitonchon, extractProtAPAAC))
+x <- rbind(x1, x2)
 
 # make class labels
-labels = as.factor(c(rep(0, length(extracell)), rep(1, length(mitonchon))))
+labels <- as.factor(c(rep(0, length(extracell)), rep(1, length(mitonchon))))
 ```
 
 In Rcpi, the functions of commonly used descriptors for protein sequences
@@ -207,22 +211,23 @@ Next, we will split the data into a 75% training set and a 25% test set.
 set.seed(1001)
 
 # split training and test set
-tr.idx = c(
+tr.idx <- c(
   sample(1:nrow(x1), round(nrow(x1) * 0.75)),
-  sample(nrow(x1) + 1:nrow(x2), round(nrow(x2) * 0.75)))
-te.idx = setdiff(1:nrow(x), tr.idx)
+  sample(nrow(x1) + 1:nrow(x2), round(nrow(x2) * 0.75))
+)
+te.idx <- setdiff(1:nrow(x), tr.idx)
 
-x.tr   = x[tr.idx, ]
-x.te   = x[te.idx, ]
-y.tr   = labels[tr.idx]
-y.te   = labels[te.idx]
+x.tr <- x[tr.idx, ]
+x.te <- x[te.idx, ]
+y.tr <- labels[tr.idx]
+y.te <- labels[te.idx]
 ```
 
 We will train a random forest classification model on the training set with 5-fold cross-validation, using the \pkg{randomForest} package.
 
 ```{r, eval = FALSE}
 library("randomForest")
-rf.fit = randomForest(x.tr, y.tr, cv.fold = 5)
+rf.fit <- randomForest(x.tr, y.tr, cv.fold = 5)
 print(rf.fit)
 ```
 
@@ -248,7 +253,7 @@ Figure 1.
 
 ```{r, eval = FALSE}
 # predict on test set
-rf.pred = predict(rf.fit, newdata = x.te, type = "prob")[, 1]
+rf.pred <- predict(rf.fit, newdata = x.te, type = "prob")[, 1]
 
 # plot ROC curve
 library("pROC")
@@ -302,14 +307,18 @@ molecules stored in a SMILES file:
 ```{r, eval = FALSE}
 library("Rcpi")
 
-RI.smi = system.file(
-  "vignettedata/FDAMDD.smi", package = "Rcpi")
-RI.csv = system.file(
-  "vignettedata/RI.csv", package = "Rcpi")
+RI.smi <- system.file(
+  "vignettedata/RI.smi",
+  package = "Rcpi"
+)
+RI.csv <- system.file(
+  "vignettedata/RI.csv",
+  package = "Rcpi"
+)
 
-x.mol = readMolFromSmi(RI.smi, type = "mol")
-x.tab = read.table(RI.csv, sep = "\t", header = TRUE)
-y = x.tab$RI
+x.mol <- readMolFromSmi(RI.smi, type = "mol")
+x.tab <- read.table(RI.csv, sep = "\t", header = TRUE)
+y <- x.tab$RI
 ```
 
 The `readMolFromSmi()` function is used for reading molecules from
@@ -325,14 +334,15 @@ calculation are all named after `extractDrug...()` in `Rcpi`:
 
 ```{r, eval = FALSE}
 # calculate selected molecular descriptors
-x = suppressWarnings(cbind(
-    extractDrugALOGP(x.mol),
-    extractDrugApol(x.mol),
-    extractDrugECI(x.mol),
-    extractDrugTPSA(x.mol),
-    extractDrugWeight(x.mol),
-    extractDrugWienerNumbers(x.mol),
-    extractDrugZagrebIndex(x.mol)))
+x <- suppressWarnings(cbind(
+  extractDrugALOGP(x.mol),
+  extractDrugApol(x.mol),
+  extractDrugECI(x.mol),
+  extractDrugTPSA(x.mol),
+  extractDrugWeight(x.mol),
+  extractDrugWienerNumbers(x.mol),
+  extractDrugZagrebIndex(x.mol)
+))
 ```
 
 After the descriptors were calculated, the result `x` will be a data frame,
@@ -351,15 +361,18 @@ library("caret")
 library("pls")
 
 # cross-validation settings
-ctrl = trainControl(
+ctrl <- trainControl(
   method = "repeatedcv", number = 5, repeats = 10,
-  summaryFunction = defaultSummary)
+  summaryFunction = defaultSummary
+)
 
 # train a pls model
 set.seed(1002)
-pls.fit = train(
-  x, y, method = "pls", tuneLength = 10, trControl = ctrl,
-  metric = "RMSE", preProc = c("center", "scale"))
+pls.fit <- train(
+  x, y,
+  method = "pls", tuneLength = 10, trControl = ctrl,
+  metric = "RMSE", preProc = c("center", "scale")
+)
 
 # print cross-validation result
 print(pls.fit)
@@ -367,32 +380,30 @@ print(pls.fit)
 
 The cross-validation result is:
 
-```{r, eval = FALSE}
-## Partial Least Squares
-##
-## 297 samples
-##  10 predictors
-##
-## Pre-processing: centered, scaled
-## Resampling: Cross-Validated (5 fold, repeated 10 times)
-##
-## Summary of sample sizes: 237, 237, 237, 238, 239, 238, ...
-##
-## Resampling results across tuning parameters:
-##
-##   ncomp  RMSE  Rsquared  RMSE SD  Rsquared SD
-##   1      104   0.884     9.44     0.0285
-##   2      86.4  0.92      6.99     0.0194
-##   3      83.8  0.924     6.56     0.0185
-##   4      79.6  0.931     6.98     0.0194
-##   5      76.3  0.937     7.45     0.0187
-##   6      74.7  0.94      6.85     0.0162
-##   7      73.7  0.941     6.75     0.0159
-##   8      73.5  0.942     6.5      0.0142
-##   9      72.5  0.944     6.18     0.0137
-##
-## RMSE was used to select the optimal model using  the smallest value.
-## The final value used for the model was ncomp = 9.
+```
+Partial Least Squares 
+
+297 samples
+ 10 predictor
+
+Pre-processing: centered (10), scaled (10) 
+Resampling: Cross-Validated (5 fold, repeated 10 times) 
+Summary of sample sizes: 237, 239, 238, 237, 237, 238, ... 
+Resampling results across tuning parameters:
+
+  ncomp  RMSE       Rsquared   MAE     
+  1      104.19653  0.8822135  81.30798
+  2       88.79911  0.9153172  69.67190
+  3       87.65849  0.9169335  68.90654
+  4       87.03159  0.9180740  68.45516
+  5       84.66035  0.9227619  66.65136
+  6       80.29620  0.9309492  62.57300
+  7       79.06348  0.9333719  61.51886
+  8       78.17443  0.9346922  59.81325
+  9       77.68815  0.9353269  59.48581
+
+RMSE was used to select the optimal model using the smallest value.
+The final value used for the model was ncomp = 9.
 ```
 
 We see that the RMSE of the PLS regression model was decreasing when
@@ -414,8 +425,10 @@ fits well on the training set (Figure 3):
 
 ```{r, eval = FALSE}
 # plot experimental RIs vs predicted RIs
-plot(y, predict(pls.fit, x), xlim = range(y), ylim = range(y),
-     xlab = "Experimental RIs", ylab = "Predicted RIs")
+plot(y, predict(pls.fit, x),
+  xlim = range(y), ylim = range(y),
+  xlab = "Experimental RIs", ylab = "Predicted RIs"
+)
 abline(a = 0, b = 1)
 ```
 
@@ -441,12 +454,12 @@ First, load the drug molecules stored in a SMILES file into R:
 ```{r, eval = FALSE}
 library("Rcpi")
 
-fdamdd.smi = system.file("vignettedata/FDAMDD.smi", package = "Rcpi")
-fdamdd.csv = system.file("vignettedata/FDAMDD.csv", package = "Rcpi")
+fdamdd.smi <- system.file("vignettedata/FDAMDD.smi", package = "Rcpi")
+fdamdd.csv <- system.file("vignettedata/FDAMDD.csv", package = "Rcpi")
 
-x.mol = readMolFromSmi(fdamdd.smi, type = "mol")
-x.smi = readMolFromSmi(fdamdd.smi, type = "text")
-y = as.factor(paste0("class", scan(fdamdd.csv)))
+x.mol <- readMolFromSmi(fdamdd.smi, type = "mol")
+x.smi <- readMolFromSmi(fdamdd.smi, type = "text")
+y <- as.factor(paste0("class", scan(fdamdd.csv)))
 ```
 
 The object `x.mol` is used for computing the MACCS and E-state fingerprints;
@@ -459,9 +472,9 @@ Then we calculate three different types of molecular fingerprints
 
 ```{r, eval = FALSE}
 # calculate molecular fingerprints
-x1 = extractDrugEstateComplete(x.mol)
-x2 = extractDrugMACCSComplete(x.mol)
-x3 = extractDrugOBFP4(x.smi, type = "smile")
+x1 <- extractDrugEstateComplete(x.mol)
+x2 <- extractDrugMACCSComplete(x.mol)
+x3 <- extractDrugOBFP4(x.smi, type = "smile")
 ```
 
 As the nature of fingerprint-based structure representation,
@@ -474,22 +487,22 @@ in `caret` before modeling, and split our training set and test set:
 library("caret")
 
 # remove near-zero variance variables
-x1 = x1[, -nearZeroVar(x1)]
-x2 = x2[, -nearZeroVar(x2)]
-x3 = x3[, -nearZeroVar(x3)]
+x1 <- x1[, -nearZeroVar(x1)]
+x2 <- x2[, -nearZeroVar(x2)]
+x3 <- x3[, -nearZeroVar(x3)]
 
 # split training and test set
 set.seed(1003)
-tr.idx = sample(1:nrow(x1), round(nrow(x1) * 0.75))
-te.idx = setdiff(1:nrow(x1), tr.idx)
-x1.tr  = x1[tr.idx, ]
-x1.te  = x1[te.idx, ]
-x2.tr  = x2[tr.idx, ]
-x2.te  = x2[te.idx, ]
-x3.tr  = x3[tr.idx, ]
-x3.te  = x3[te.idx, ]
-y.tr   = y[tr.idx]
-y.te   = y[te.idx]
+tr.idx <- sample(1:nrow(x1), round(nrow(x1) * 0.75))
+te.idx <- setdiff(1:nrow(x1), tr.idx)
+x1.tr <- x1[tr.idx, ]
+x1.te <- x1[te.idx, ]
+x2.tr <- x2[tr.idx, ]
+x2.te <- x2[te.idx, ]
+x3.tr <- x3[tr.idx, ]
+x3.te <- x3[te.idx, ]
+y.tr <- y[tr.idx]
+y.te <- y[te.idx]
 ```
 
 On the training sets, we will train three classification models separately
@@ -501,20 +514,28 @@ The cross-validation setting is 5-fold repeated CV (repeat for 10 times).
 library("kernlab")
 
 # cross-validation settings
-ctrl = trainControl(method = "cv", number = 5, repeats = 10,
-                    classProbs = TRUE,
-                    summaryFunction = twoClassSummary)
+ctrl <- trainControl(
+  method = "cv", number = 5, repeats = 10,
+  classProbs = TRUE,
+  summaryFunction = twoClassSummary
+)
 
 # SVM with RBF kernel
-svm.fit1 = train(
-  x1.tr, y.tr, method = "svmRadial", trControl = ctrl,
-  metric = "ROC", preProc = c("center", "scale"))
-svm.fit2 = train(
-  x2.tr, y.tr, method = "svmRadial", trControl = ctrl,
-  metric = "ROC", preProc = c("center", "scale"))
-svm.fit3 = train(
-  x3.tr, y.tr, method = "svmRadial", trControl = ctrl,
-  metric = "ROC", preProc = c("center", "scale"))
+svm.fit1 <- train(
+  x1.tr, y.tr,
+  method = "svmRadial", trControl = ctrl,
+  metric = "ROC", preProc = c("center", "scale")
+)
+svm.fit2 <- train(
+  x2.tr, y.tr,
+  method = "svmRadial", trControl = ctrl,
+  metric = "ROC", preProc = c("center", "scale")
+)
+svm.fit3 <- train(
+  x3.tr, y.tr,
+  method = "svmRadial", trControl = ctrl,
+  metric = "ROC", preProc = c("center", "scale")
+)
 
 # print cross-validation result
 print(svm.fit1)
@@ -618,13 +639,13 @@ and plot the ROC curves in one figure, as is shown in Figure 4.
 
 ```{r, eval = FALSE}
 # predict on test set
-svm.pred1 = predict(svm.fit1, newdata = x1.te, type = "prob")[, 1]
-svm.pred2 = predict(svm.fit2, newdata = x2.te, type = "prob")[, 1]
-svm.pred3 = predict(svm.fit3, newdata = x3.te, type = "prob")[, 1]
+svm.pred1 <- predict(svm.fit1, newdata = x1.te, type = "prob")[, 1]
+svm.pred2 <- predict(svm.fit2, newdata = x2.te, type = "prob")[, 1]
+svm.pred3 <- predict(svm.fit3, newdata = x3.te, type = "prob")[, 1]
 
 # generate colors
 library("RColorBrewer")
-pal = brewer.pal(3, "Set1")
+pal <- brewer.pal(3, "Set1")
 
 # ROC curves of different fingerprints
 library("pROC")
@@ -664,8 +685,10 @@ using `readMolFromSDF()`:
 
 ```{r, eval = FALSE}
 library("Rcpi")
-mols = readMolFromSDF(system.file(
-    "compseq/tyrphostin.sdf", package = "Rcpi"))
+mols <- readMolFromSDF(system.file(
+  "compseq/tyrphostin.sdf",
+  package = "Rcpi"
+))
 ```
 
 Then we compute the E-state fingerprints for all the molecules using
@@ -673,16 +696,16 @@ Then we compute the E-state fingerprints for all the molecules using
 with `calcDrugFPSim()`:
 
 ```{r, eval = FALSE}
-simmat = diag(length(mols))
+simmat <- diag(length(mols))
 
 for (i in 1:length(mols)) {
- for (j in i:length(mols)) {
-   fp1 = extractDrugEstate(mols[[i]])
-   fp2 = extractDrugEstate(mols[[j]])
-   tmp = calcDrugFPSim(fp1, fp2, fptype = "compact", metric = "tanimoto")
-   simmat[i, j] = tmp
-   simmat[j, i] = tmp
- }
+  for (j in i:length(mols)) {
+    fp1 <- extractDrugEstate(mols[[i]])
+    fp2 <- extractDrugEstate(mols[[j]])
+    tmp <- calcDrugFPSim(fp1, fp2, fptype = "compact", metric = "tanimoto")
+    simmat[i, j] <- tmp
+    simmat[j, i] <- tmp
+  }
 }
 ```
 
@@ -691,17 +714,19 @@ cluster the molecules using hierarchical clustering, then
 visualize the clustering result:
 
 ```{r, eval = FALSE}
-mol.hc = hclust(as.dist(1 - simmat), method = "ward.D")
+mol.hc <- hclust(as.dist(1 - simmat), method = "ward.D")
 
-library("ape")  # tree visualization of clusters
-clus5 = cutree(mol.hc, 5)  # cut dendrogram into 5 clusters
+library("ape") # tree visualization of clusters
+clus5 <- cutree(mol.hc, 5) # cut dendrogram into 5 clusters
 
 # generate colors
 library("RColorBrewer")
-pal5 = brewer.pal(5, "Set1")
-plot(as.phylo(mol.hc), type = "fan",
-     tip.color = pal5[clus5],
-     label.offset = 0.1, cex = 0.7)
+pal5 <- brewer.pal(5, "Set1")
+plot(as.phylo(mol.hc),
+  type = "fan",
+  tip.color = pal5[clus5],
+  label.offset = 0.1, cex = 0.7
+)
 ```
 
 The hierarchical clustering result for these molecules is shown in Figure 5.
@@ -727,8 +752,8 @@ presented in the last subsection.
 ```{r, eval = FALSE}
 library("Rcpi")
 
-mol   = system.file("compseq/DB00530.sdf", package = "Rcpi")
-moldb = system.file("compseq/tyrphostin.sdf", package = "Rcpi")
+mol <- system.file("compseq/DB00530.sdf", package = "Rcpi")
+moldb <- system.file("compseq/tyrphostin.sdf", package = "Rcpi")
 ```
 
 We can do parallelized drug molecular similarity search with the
@@ -738,15 +763,21 @@ fingerprints with tanimoto similarity, and maximum common
 substructure search with tanimoto similarity.
 
 ```{r, eval = FALSE}
-rank1 = searchDrug(
-  mol, moldb, cores = 4, method = "fp",
-  fptype = "maccs", fpsim = "tanimoto")
-rank2 = searchDrug(
-  mol, moldb, cores = 4, method = "fp",
-  fptype = "fp2", fpsim = "cosine")
-rank3 = searchDrug(
-  mol, moldb, cores = 4, method = "mcs",
-  mcssim = "tanimoto")
+rank1 <- searchDrug(
+  mol, moldb,
+  cores = 4, method = "fp",
+  fptype = "maccs", fpsim = "tanimoto"
+)
+rank2 <- searchDrug(
+  mol, moldb,
+  cores = 4, method = "fp",
+  fptype = "fp2", fpsim = "cosine"
+)
+rank3 <- searchDrug(
+  mol, moldb,
+  cores = 4, method = "mcs",
+  mcssim = "tanimoto"
+)
 ```
 
 The returned search result is stored as a numerical vector,
@@ -779,12 +810,14 @@ search between the query molecule and the #92 molecule using
 ```{r, eval = FALSE}
 # convert SDF format to SMILES format
 convMolFormat(
-    infile = mol, outfile = "DB00530.smi", from = "sdf", to = "smiles")
+  infile = mol, outfile = "DB00530.smi", from = "sdf", to = "smiles"
+)
 convMolFormat(
-    infile = moldb, outfile = "tyrphostin.smi", from = "sdf", to = "smiles")
+  infile = moldb, outfile = "tyrphostin.smi", from = "sdf", to = "smiles"
+)
 
-smi1 = readLines("DB00530.smi")
-smi2 = readLines("tyrphostin.smi")[92]  # select the #92 molecule
+smi1 <- readLines("DB00530.smi")
+smi2 <- readLines("tyrphostin.smi")[92] # select the #92 molecule
 calcDrugMCSSim(smi1, smi2, type = "smile", plot = TRUE)
 ```
 
@@ -852,9 +885,12 @@ is KEGG drug ID. The first 635 rows form the positive set, and the last
 ```{r, eval = FALSE}
 library("Rcpi")
 
-gpcr = read.table(system.file(
-    "vignettedata/GPCR.csv", package = "Rcpi"),
-    header = FALSE, as.is = TRUE)
+gpcr <- read.table(system.file(
+  "vignettedata/GPCR.csv",
+  package = "Rcpi"
+),
+header = FALSE, as.is = TRUE
+)
 ```
 
 Take a look at the data:
@@ -882,24 +918,26 @@ library("igraph")
 library("arcdiagram")
 library("reshape")
 
-g = graph.data.frame(gpcr[1:(nrow(gpcr)/2), ], directed = FALSE)
-edgelist = get.edgelist(g)
-vlabels  = V(g)$name
-vgroups  = c(rep(0, 95), rep(1, 223))
-vfill    = c(rep("#8B91D4", 95), rep("#B2C771", 223))
-vborders = c(rep("#6F74A9", 95), rep("#8E9F5A", 223))
-degrees  = degree(g)
+g <- graph.data.frame(gpcr[1:(nrow(gpcr) / 2), ], directed = FALSE)
+edgelist <- get.edgelist(g)
+vlabels <- V(g)$name
+vgroups <- c(rep(0, 95), rep(1, 223))
+vfill <- c(rep("#8B91D4", 95), rep("#B2C771", 223))
+vborders <- c(rep("#6F74A9", 95), rep("#8E9F5A", 223))
+degrees <- degree(g)
 
-xx = data.frame(vgroups, degrees, vlabels, ind = 1:vcount(g))
-yy = arrange(xx, desc(vgroups), desc(degrees))
-new.ord = yy$ind
+xx <- data.frame(vgroups, degrees, vlabels, ind = 1:vcount(g))
+yy <- arrange(xx, desc(vgroups), desc(degrees))
+new.ord <- yy$ind
 
 arcplot(
-  edgelist, ordering = new.ord, labels = vlabels,
+  edgelist,
+  ordering = new.ord, labels = vlabels,
   cex.labels = 0.1, show.nodes = TRUE,
   col.nodes = vborders, bg.nodes = vfill,
   cex.nodes = log10(degrees) + 0.1,
-  pch.nodes = 21, line = -0.5, col.arcs = hsv(0, 0, 0.2, 0.25))
+  pch.nodes = 21, line = -0.5, col.arcs = hsv(0, 0, 0.2, 0.25)
+)
 ```
 
 <img src="figures/ex6-1.png" width="85%" class="img-responsive" align="center" alt="Arc diagram visualization of the GPCR drug-target interaction network">
@@ -915,15 +953,18 @@ drug molecule (in SMILES format) from the KEGG database, in parallel:
 ```{r, eval = FALSE}
 library("Rcpi")
 
-gpcr = read.table(system.file(
-  "vignettedata/GPCR.csv", package = "Rcpi"),
-  header = FALSE, as.is = TRUE)
+gpcr <- read.table(system.file(
+  "vignettedata/GPCR.csv",
+  package = "Rcpi"
+),
+header = FALSE, as.is = TRUE
+)
 
-protid = unique(gpcr[, 1])
-drugid = unique(gpcr[, 2])
+protid <- unique(gpcr[, 1])
+drugid <- unique(gpcr[, 2])
 
-protseq = getSeqFromKEGG(protid, parallel = 5)
-drugseq = getSmiFromKEGG(drugid, parallel = 50)
+protseq <- getSeqFromKEGG(protid, parallel = 5)
+drugseq <- getSmiFromKEGG(drugid, parallel = 50)
 ```
 
 If the connection is slow or accidentally interrupts,
@@ -942,14 +983,16 @@ After the sequences were downloaded, we can calculate the protein
 sequence descriptors and molecular descriptors for the targets and drugs:
 
 ```{r, eval = FALSE}
-x0.prot = cbind(
+x0.prot <- cbind(
   t(sapply(unlist(protseq), extractProtAPAAC)),
-  t(sapply(unlist(protseq), extractProtCTriad)))
+  t(sapply(unlist(protseq), extractProtCTriad))
+)
 
-x0.drug = cbind(
+x0.drug <- cbind(
   extractDrugEstateComplete(readMolFromSmi(textConnection(drugseq))),
   extractDrugMACCSComplete(readMolFromSmi(textConnection(drugseq))),
-  extractDrugOBFP4(drugseq, type = "smile"))
+  extractDrugOBFP4(drugseq, type = "smile")
+)
 ```
 
 Since the descriptors is only for the _deduplicated_ drug and target list,
@@ -957,18 +1000,18 @@ we need to generate the full descriptor matrix for the training data:
 
 ```{r, eval = FALSE}
 # generate drug x / protein x / y
-x.prot = matrix(NA, nrow = nrow(gpcr), ncol = ncol(x0.prot))
-x.drug = matrix(NA, nrow = nrow(gpcr), ncol = ncol(x0.drug))
-for (i in 1:nrow(gpcr)) x.prot[i, ] = x0.prot[which(gpcr[, 1][i] == protid), ]
-for (i in 1:nrow(gpcr)) x.drug[i, ] = x0.drug[which(gpcr[, 2][i] == drugid), ]
+x.prot <- matrix(NA, nrow = nrow(gpcr), ncol = ncol(x0.prot))
+x.drug <- matrix(NA, nrow = nrow(gpcr), ncol = ncol(x0.drug))
+for (i in 1:nrow(gpcr)) x.prot[i, ] <- x0.prot[which(gpcr[, 1][i] == protid), ]
+for (i in 1:nrow(gpcr)) x.drug[i, ] <- x0.drug[which(gpcr[, 2][i] == drugid), ]
 
-y = as.factor(c(rep("pos", nrow(gpcr)/2), rep("neg", nrow(gpcr)/2)))
+y <- as.factor(c(rep("pos", nrow(gpcr) / 2), rep("neg", nrow(gpcr) / 2)))
 ```
 
 Generate drug-target interaction descriptors using `getCPI()`.
 
 ```{r, eval = FALSE}
-x = getCPI(x.prot, x.drug, type = "combine")
+x <- getCPI(x.prot, x.drug, type = "combine")
 ```
 
 The pairwise interaction is another useful type of representation in
@@ -1001,26 +1044,29 @@ Train a random forest classification model with 5-fold repeated CV:
 
 ```{r, eval = FALSE}
 library("caret")
-x = x[, -nearZeroVar(x)]
+x <- x[, -nearZeroVar(x)]
 
 # cross-validation settings
-ctrl = trainControl(
-    method = "cv", number = 5, repeats = 10,
-    classProbs = TRUE,
-    summaryFunction = twoClassSummary)
+ctrl <- trainControl(
+  method = "cv", number = 5, repeats = 10,
+  classProbs = TRUE,
+  summaryFunction = twoClassSummary
+)
 
 # train a random forest classifier
 library("randomForest")
 
 set.seed(1006)
-rf.fit = train(
-  x, y, method = "rf", trControl = ctrl,
-  metric = "ROC", preProc = c("center", "scale"))
-\end{CodeInput}
+rf.fit <- train(
+  x, y,
+  method = "rf", trControl = ctrl,
+  metric = "ROC", preProc = c("center", "scale")
+)
+```
 
 Print the cross-validation result:
 
-\begin{CodeInput}
+```
 print(rf.fit)
 ```
 
@@ -1050,7 +1096,7 @@ print(rf.fit)
 Predict on the training set (for demonstration purpose only) and plot ROC curve.
 
 ```{r, eval = FALSE}
-rf.pred = predict(rf.fit$finalModel, x, type = "prob")[, 1]
+rf.pred <- predict(rf.fit$finalModel, x, type = "prob")[, 1]
 
 library("pROC")
 plot(smooth(roc(y, rf.pred)), grid = TRUE, print.auc = TRUE)
