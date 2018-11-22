@@ -99,15 +99,16 @@ getMolFromChEMBL = function (id, parallel = 5) {
 getSmiFromChEMBL = function (id, parallel = 5) {
 
     # example id : CHEMBL1430 (Penicillamine)
-    # example url: https://www.ebi.ac.uk/chemblws/compounds/CHEMBL1430.json
+    # example url: https://www.ebi.ac.uk/chembl/api/data/molecule?molecule_chembl_id__in=CHEMBL1430&format=json
 
-    MolURL = paste0('https://www.ebi.ac.uk/chemblws/compounds/', id, '.json')
+    MolURL = paste0('https://www.ebi.ac.uk/chembl/api/data/molecule?molecule_chembl_id__in=', id, '&format=json')
 
     MolTxt = getURLAsynchronous(url = MolURL, perform = parallel)
 
     SmiTxt = lapply(MolTxt, fromJSON)
+    SmiTxt = sapply(SmiTxt, `[[`, 'molecules')
 
-    Smi = sapply(unlist(SmiTxt, recursive = FALSE), `[[`, 'smiles')
+    Smi = sapply(lapply(SmiTxt, `[[`, 'molecule_structures'), `[[`, 'canonical_smiles')
 
     names(Smi) = NULL
 

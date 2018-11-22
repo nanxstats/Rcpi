@@ -35,9 +35,9 @@
 getMolFromDrugBank = function (id, parallel = 5) {
 
     # example id : DB00859 (Penicillamine)
-    # example url: http://www.drugbank.ca/structures/structures/small_molecule_drugs/DB00859.sdf
+    # example url: https://www.drugbank.ca/structures/small_molecule_drugs/DB00859.sdf
 
-    SdfURL = paste0('http://www.drugbank.ca/structures/structures/small_molecule_drugs/', id, '.sdf')
+    SdfURL = paste0('https://www.drugbank.ca/structures/small_molecule_drugs/', id, '.sdf')
 
     SdfTxt = getURLAsynchronous(url = SdfURL, perform = parallel)
 
@@ -82,7 +82,7 @@ getMolFromDrugBank = function (id, parallel = 5) {
 getSmiFromDrugBank = function (id, parallel = 5) {
 
     # example id : DB00859 (Penicillamine)
-    # example url: http://www.drugbank.ca/structures/structures/small_molecule_drugs/DB00859.sdf
+    # example url: https://www.drugbank.ca/structures/small_molecule_drugs/DB00859.sdf
 
     SdfTxt = getMolFromDrugBank(id, parallel)
 

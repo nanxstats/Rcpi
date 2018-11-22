@@ -29,9 +29,9 @@
 #' @importFrom RCurl getURLAsynchronous
 #'
 #' @references
-#' UniProt. \url{http://www.uniprot.org/}
+#' UniProt. \url{https://www.uniprot.org/}
 #'
-#' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
+#' UniProt REST API Documentation. \url{https://www.uniprot.org/faq/28}
 #'
 #' @examples
 #' id = c('P00750', 'P00751', 'P00752')
@@ -41,9 +41,9 @@
 getFASTAFromUniProt = function (id, parallel = 5) {
 
   # example id:  P00750
-  # example url: http://www.uniprot.org/uniprot/P00750.fasta
+  # example url: https://www.uniprot.org/uniprot/P00750.fasta
 
-  fastaURL = paste0('http://www.uniprot.org/uniprot/', id, '.fasta')
+  fastaURL = paste0('https://www.uniprot.org/uniprot/', id, '.fasta')
 
   fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
 
@@ -79,9 +79,9 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #' @export getSeqFromUniProt
 #'
 #' @references
-#' UniProt. \url{http://www.uniprot.org/}
+#' UniProt. \url{https://www.uniprot.org/}
 #'
-#' UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
+#' UniProt REST API Documentation. \url{https://www.uniprot.org/faq/28}
 #'
 #' @examples
 #' id = c('P00750', 'P00751', 'P00752')
@@ -91,7 +91,7 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 getSeqFromUniProt = function (id, parallel = 5) {
 
   # example id:  P00750
-  # example url: http://www.uniprot.org/uniprot/P00750.fasta
+  # example url: https://www.uniprot.org/uniprot/P00750.fasta
 
   fastaTxt = getFASTAFromUniProt(id, parallel)
 
