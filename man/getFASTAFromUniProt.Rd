@@ -31,9 +31,9 @@ id = c('P00750', 'P00751', 'P00752')
 getFASTAFromUniProt(id)}
 }
 \references{
-UniProt. \url{http://www.uniprot.org/}
+UniProt. \url{https://www.uniprot.org/}
 
-UniProt REST API Documentation. \url{http://www.uniprot.org/faq/28}
+UniProt REST API Documentation. \url{https://www.uniprot.org/faq/28}
 }
 \seealso{
 See \code{\link{getSeqFromUniProt}} for retrieving protein

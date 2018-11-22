@@ -4,7 +4,8 @@
 \alias{extractDrugShortestPath}
 \title{Calculate the Shortest Path Molecular Fingerprints (in Compact Format)}
 \usage{
-extractDrugShortestPath(molecules, depth = 6, size = 1024, silent = TRUE)
+extractDrugShortestPath(molecules, depth = 6, size = 1024,
+  silent = TRUE)
 }
 \arguments{
 \item{molecules}{Parsed molucule object.}

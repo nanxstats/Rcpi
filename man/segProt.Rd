@@ -4,8 +4,8 @@
 \alias{segProt}
 \title{Protein Sequence Segmentation}
 \usage{
-segProt(x, aa = c("A", "R", "N", "D", "C", "E", "Q", "G", "H", "I", "L", "K",
-  "M", "F", "P", "S", "T", "W", "Y", "V"), k = 7)
+segProt(x, aa = c("A", "R", "N", "D", "C", "E", "Q", "G", "H", "I", "L",
+  "K", "M", "F", "P", "S", "T", "W", "Y", "V"), k = 7)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}
