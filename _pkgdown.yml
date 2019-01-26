@@ -1,7 +1,3 @@
-template:
-  params:
-    ganalytics: UA-66394392-1
-
 reference:
   - title: "Protein Sequence Retrivial"
     desc: >
