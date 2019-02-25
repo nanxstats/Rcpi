@@ -21,6 +21,7 @@ environment:
   R_INSTALL_ARGS: --no-multiarch
 
   global:
+    BIOC_USE_DEVEL: "FALSE"
     WARNINGS_ARE_ERRORS: 1
 
   matrix:
