@@ -1,3 +1,9 @@
+# Rcpi 1.19.2 (2019-02-24)
+
+## Bug Fixes
+
+- Fixed the issues in `calcTwoProtGOSim()` and `calcParProtGOSim()` to use the latest GOSemSim API for computing GO based semantic similarity.
+
 # Rcpi 1.19.1 (2018-11-21)
 
 ## Bug Fixes
