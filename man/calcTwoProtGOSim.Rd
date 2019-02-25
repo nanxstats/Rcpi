@@ -4,8 +4,8 @@
 \alias{calcTwoProtGOSim}
 \title{Protein Similarity Calculation based on Gene Ontology (GO) Similarity}
 \usage{
-calcTwoProtGOSim(id1, id2, type = c("go", "gene"), ont = "MF",
-  organism = "human", measure = "Resnik", combine = "BMA")
+calcTwoProtGOSim(id1, id2, type = c("go", "gene"), ont = c("MF", "BP",
+  "CC"), organism = "human", measure = "Resnik", combine = "BMA")
 }
 \arguments{
 \item{id1}{A character vector. length > 1: each element is a GO term;
@@ -46,19 +46,15 @@ This function calculates the Gene Ontology (GO) similarity
 between two groups of GO terms or two Entrez gene IDs.
 }
 \examples{
-# by GO terms
+# By GO terms
 go1 = c("GO:0004022", "GO:0004024", "GO:0004023")
 go2 = c("GO:0009055", "GO:0020037")
-\donttest{
-gsim1 = calcTwoProtGOSim(go1, go2, type = 'go', ont = 'MF', measure = 'Wang')
-print(gsim1)}
+\donttest{calcTwoProtGOSim(go1, go2, type = 'go', ont = 'MF', measure = 'Wang')}
 
-# by Entrez gene id
+# By Entrez gene id
 gene1 = '241'
 gene2 = '251'
-\donttest{
-gsim2 = calcTwoProtGOSim(gene1, gene2, type = 'gene', ont = 'CC', measure = 'Lin')
-print(gsim2)}
+\donttest{calcTwoProtGOSim(gene1, gene2, type = 'gene', ont = 'CC', measure = 'Lin')}
 }
 \seealso{
 See \code{\link{calcParProtGOSim}} for

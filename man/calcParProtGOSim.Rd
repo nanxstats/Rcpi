@@ -4,8 +4,8 @@
 \alias{calcParProtGOSim}
 \title{Protein Sequence Similarity Calculation based on Gene Ontology (GO) Similarity}
 \usage{
-calcParProtGOSim(golist, type = c("go", "gene"), ont = "MF",
-  organism = "human", measure = "Resnik", combine = "BMA")
+calcParProtGOSim(golist, type = c("go", "gene"), ont = c("MF", "BP",
+  "CC"), organism = "human", measure = "Resnik", combine = "BMA")
 }
 \arguments{
 \item{golist}{A character vector, each component contains
@@ -43,20 +43,16 @@ This function calculates
 protein sequence similarity based on Gene Ontology (GO) similarity.
 }
 \examples{
-# by GO Terms
+# By GO Terms
 go1 = c('GO:0005215', 'GO:0005488', 'GO:0005515', 'GO:0005625', 'GO:0005802', 'GO:0005905')  # AP4B1
 go2 = c('GO:0005515', 'GO:0005634', 'GO:0005681', 'GO:0008380', 'GO:0031202')  # BCAS2
 go3 = c('GO:0003735', 'GO:0005622', 'GO:0005840', 'GO:0006412')  # PDE4DIP
 glist = list(go1, go2, go3)
-\donttest{
-gsimmat1 = calcParProtGOSim(glist, type = 'go', ont = 'CC')
-print(gsimmat1)}
+\donttest{calcParProtGOSim(glist, type = 'go', ont = 'CC', measure = 'Wang')}
 
-# by Entrez gene id
+# By Entrez gene id
 genelist = list(c('150', '151', '152', '1814', '1815', '1816'))
-\donttest{
-gsimmat2 = calcParProtGOSim(genelist, type = 'gene')
-print(gsimmat2)}
+\donttest{calcParProtGOSim(genelist, type = 'gene', ont = 'BP', measure = 'Wang')}
 }
 \seealso{
 See \code{\link{calcTwoProtGOSim}} for calculating the
