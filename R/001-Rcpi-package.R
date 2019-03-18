@@ -17,7 +17,7 @@
 #'
 #' @note
 #' Bug reports and feature requests should be sent to
-#' \url{https://github.com/road2stat/Rcpi/issues}.
+#' \url{https://github.com/nanxstats/Rcpi/issues}.
 #'
 #' @import foreach doParallel Biostrings GOSemSim ChemmineR fmcsR
 #' @importFrom methods as

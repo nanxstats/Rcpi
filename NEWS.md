@@ -8,8 +8,8 @@
 
 ## Bug Fixes
 
-- Fixed API endpoints that are not working due to their changes across time ([#5](https://github.com/road2stat/Rcpi/issues/5)).
-- Fixed the vignette example for QSRR study ([#6](https://github.com/road2stat/Rcpi/issues/6)).
+- Fixed API endpoints that are not working due to their changes across time ([#5](https://github.com/nanxstats/Rcpi/issues/5)).
+- Fixed the vignette example for QSRR study ([#6](https://github.com/nanxstats/Rcpi/issues/6)).
 
 ## Improvements
 

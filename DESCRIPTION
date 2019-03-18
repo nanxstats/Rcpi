@@ -13,9 +13,9 @@ Authors@R: c(
     )
 Maintainer: Nan Xiao <me@nanx.me>
 License: Artistic-2.0 | file LICENSE
-URL: https://nanx.me/Rcpi/, https://github.com/road2stat/Rcpi
+URL: https://nanx.me/Rcpi/, https://github.com/nanxstats/Rcpi
 Encoding: UTF-8
-BugReports: https://github.com/road2stat/Rcpi/issues
+BugReports: https://github.com/nanxstats/Rcpi/issues
 LazyData: true
 VignetteBuilder: knitr
 Depends:
