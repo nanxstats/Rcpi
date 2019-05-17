@@ -5,10 +5,13 @@ date: "`r Sys.Date()`"
 bibliography: Rcpi.bib
 csl: bioinformatics.csl
 output:
-  rmarkdown::html_vignette:
+  rmarkdown::html_document:
     toc: true
+    toc_float: true
+    toc_depth: 4
     number_sections: true
-    css: Rcpi.css
+    highlight: "textmate"
+    css: "custom.css"
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery}
@@ -75,7 +78,7 @@ Several dependencies of the Rcpi package may require some system-level
 libraries, check the corresponding manuals of these packages for
 detailed installation guides.
 
-## How to Cite Rcpi
+## How to cite Rcpi
 
 If you feel Rcpi is useful in your research, please cite our paper:
 
@@ -108,7 +111,7 @@ and proteochemometric (PCM) modeling descriptors for protein sequences.
 Rcpi also computes pairwise similarities derived by GO semantic
 similarity and sequence alignment.
 
-## Predicting Protein Subcellular Localization
+## Predicting protein subcellular localization
 
 Protein subcellular localization prediction involves the computational
 prediction of where a protein resides in a cell. It is an important
@@ -282,7 +285,7 @@ fingerprints and maximum common substructure search. Rcpi also provides
 the `searchDrug()` function for parallelized molecular similarity
 search based on these similarity types.
 
-## Regression Modeling in QSRR Study of Retention Indices
+## Regression modeling in QSRR study of retention indices
 
 In @yan2012comparison, a quantitative structure-retention relationship
 study was performed for 656 flavor compounds on four stationary phases
@@ -435,7 +438,7 @@ abline(a = 0, b = 1)
 <img src="figures/ex2-2.png" width="65%" class="img-responsive" align="center" alt="Experimental RIs vs. Predicted RIs">
 <p align="center">Figure 3: Experimental RIs vs. Predicted RIs</p>
 
-## _In Silico_ Toxicity Classification for Drug Discovery
+## _In silico_ toxicity classification for drug discovery
 
 In the perspective of quantitative pharmacology, the successful discovery
 of novel drugs depends on the pharmacokinetics properties, like
@@ -657,7 +660,7 @@ plot(smooth(roc(y.te, svm.pred3)), col = pal[3], grid = TRUE, add = TRUE)
 <img src="figures/ex3-1.png" width="65%" class="img-responsive" align="center" alt="Smoothed ROC curves for different fingerprint types">
 <p align="center">Figure 4: Smoothed ROC curves for different fingerprint types</p>
 
-## Clustering of Molecules Based on Structural Similarities
+## Clustering of molecules based on structural similarities
 
 Apart from supervised methods (classification and regression),
 unsupervised approaches, like clustering, is also widely applied
@@ -734,7 +737,7 @@ The hierarchical clustering result for these molecules is shown in Figure 5.
 <img src="figures/ex4-1.png" width="65%" class="img-responsive" align="center" alt="Tree visualization of the molecular clustering result">
 <p align="center">Figure 5: Tree visualization of the molecular clustering result</p>
 
-## Structure-Based Chemical Similarity Searching
+## Structure-based chemical similarity searching
 
 Structure-based chemical similarity searching ranks molecules in a
 database by their similarity degree to one query molecule structure.
@@ -855,7 +858,7 @@ substructure of the two molecules is presented in Figure 6.
 For chemogenomics modeling, Rcpi calculates compound-protein interaction
 (CPI) descriptors and protein-protein interaction (PPI) descriptors.
 
-## Predicting Drug-Target Interaction by Integrating Chemical and Genomic Spaces
+## Predicting drug-target interaction by integrating chemical and genomic spaces
 
 The prediction of novel interactions between drugs and target proteins
 is a key area in genomic drug discovery. In this example, we use the
