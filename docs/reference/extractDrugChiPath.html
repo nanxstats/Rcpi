@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -173,13 +173,64 @@ more complex fragment definitions.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
-<span class='co'># }</span><span class='co'># NOT RUN {</span>
-<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
+    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugChiPath</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
-<span class='co'># }</span></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;                                                              SP.0      SP.1
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 18.844571 12.379918
+#&gt; c1(ccc(cc1)O)NC(=O)C                                     8.267585  5.181541
+#&gt; c1ccccc1NC(=O)C                                          7.397341  4.787694
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              10.060478  5.892865
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                16.164926 10.381847
+#&gt; CC(=O)NO                                                 4.284457  2.270056
+#&gt;                                                              SP.2      SP.3
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 11.570125 9.1847024
+#&gt; c1(ccc(cc1)O)NC(=O)C                                     4.755447 2.9401663
+#&gt; c1ccccc1NC(=O)C                                          4.133585 2.5294827
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                               6.371576 3.5707105
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                 9.893336 7.1548274
+#&gt; CC(=O)NO                                                 1.802095 0.8164966
+#&gt;                                                             SP.4     SP.5
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 7.919385 6.404528
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    2.231484 1.745558
+#&gt; c1ccccc1NC(=O)C                                         2.089509 1.454568
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              2.742267 1.705791
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                5.707323 3.806775
+#&gt; CC(=O)NO                                                0.000000 0.000000
+#&gt;                                                              SP.6      SP.7
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 4.6414117 3.0349134
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    0.7889911 0.5326570
+#&gt; c1ccccc1NC(=O)C                                         0.5955220 0.3190356
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              1.1733040 0.6512287
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                2.4947518 1.8451355
+#&gt; CC(=O)NO                                                0.0000000 0.0000000
+#&gt;                                                              VP.0     VP.1
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 13.690573 7.920201
+#&gt; c1(ccc(cc1)O)NC(=O)C                                     6.164863 3.249098
+#&gt; c1ccccc1NC(=O)C                                          5.795000 3.114808
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                               7.533257 4.235098
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                12.667268 7.696465
+#&gt; CC(=O)NO                                                 2.855462 1.177731
+#&gt;                                                              VP.2      VP.3
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 5.9926052 4.2086673
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    2.2280602 1.1876733
+#&gt; c1ccccc1NC(=O)C                                         2.0472116 1.0941577
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              3.4816990 2.1186185
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                5.9142707 4.0746883
+#&gt; CC(=O)NO                                                0.6679896 0.1574469
+#&gt;                                                              VP.4      VP.5
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 2.9753813 2.1000778
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    0.7480266 0.4541008
+#&gt; c1ccccc1NC(=O)C                                         0.7247493 0.4134722
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              1.3500910 0.6781185
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                2.7399233 1.8180018
+#&gt; CC(=O)NO                                                0.0000000 0.0000000
+#&gt;                                                              VP.6       VP.7
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 1.2066002 0.68416719
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    0.1539902 0.07400724
+#&gt; c1ccccc1NC(=O)C                                         0.1276072 0.05515552
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              0.3611446 0.15650696
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                0.8366621 0.48579813
+#&gt; CC(=O)NO                                                0.0000000 0.00000000</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

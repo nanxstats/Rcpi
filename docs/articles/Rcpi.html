@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
       <h1>Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
             
-            <h4 class="date">2019-03-18</h4>
+            <h4 class="date">2019-05-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/vignettes/Rcpi.Rmd"><code>vignettes/Rcpi.Rmd</code></a></small>
       <div class="hidden name"><code>Rcpi.Rmd</code></div>
@@ -137,7 +137,7 @@
 </div>
 <div id="how-to-cite-rcpi" class="section level2">
 <h2 class="hasAnchor">
-<a href="#how-to-cite-rcpi" class="anchor"></a>How to Cite Rcpi</h2>
+<a href="#how-to-cite-rcpi" class="anchor"></a>How to cite Rcpi</h2>
 <p>If you feel Rcpi is useful in your research, please cite our paper:</p>
 <blockquote>
 Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions. <em>Bioinformatics</em> 31 (2), 279-281.
@@ -164,7 +164,7 @@ Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Biocon
 <p>For bioinformatics research, Rcpi calculates commonly used descriptors and proteochemometric (PCM) modeling descriptors for protein sequences. Rcpi also computes pairwise similarities derived by GO semantic similarity and sequence alignment.</p>
 <div id="predicting-protein-subcellular-localization" class="section level2">
 <h2 class="hasAnchor">
-<a href="#predicting-protein-subcellular-localization" class="anchor"></a>Predicting Protein Subcellular Localization</h2>
+<a href="#predicting-protein-subcellular-localization" class="anchor"></a>Predicting protein subcellular localization</h2>
 <p>Protein subcellular localization prediction involves the computational prediction of where a protein resides in a cell. It is an important component of bioinformatics-based prediction of protein function and genome annotation, and can also aid us to identify novel drug targets.</p>
 <p>Here we use the subcellular localization dataset of human proteins presented in the study of <span class="citation">Chou and Shen (2008)</span> for a demonstration. The complete dataset includes 3,134 protein sequences (2,750 different proteins), classified into 14 human subcellular locations. We selected two classes of proteins as our benchmark dataset. Class 1 contains 325 <em>extracell</em> proteins, and class 2 includes 307 <em>mitochondrion</em> proteins.</p>
 <p>First, we load the Rcpi package, then read the protein sequences stored in two separated FASTA files with <code><a href="../reference/readFASTA.html">readFASTA()</a></code>:</p>
@@ -255,7 +255,7 @@ Figure 1: ROC curve for the test set of protein subcellular localization data
 <p>For chemoinformatics research, Rcpi calculates various types of molecular descriptors/fingerprints, and computes pairwise similarities derived by fingerprints and maximum common substructure search. Rcpi also provides the <code><a href="../reference/searchDrug.html">searchDrug()</a></code> function for parallelized molecular similarity search based on these similarity types.</p>
 <div id="regression-modeling-in-qsrr-study-of-retention-indices" class="section level2">
 <h2 class="hasAnchor">
-<a href="#regression-modeling-in-qsrr-study-of-retention-indices" class="anchor"></a>Regression Modeling in QSRR Study of Retention Indices</h2>
+<a href="#regression-modeling-in-qsrr-study-of-retention-indices" class="anchor"></a>Regression modeling in QSRR study of retention indices</h2>
 <p>In <span class="citation">Yan <em>et al.</em> (2012)</span>, a quantitative structure-retention relationship study was performed for 656 flavor compounds on four stationary phases of different polarities, using constitutional, topological and geometrical molecular descriptors. The gas chromatographic retention indices (RIs) of these compounds were accurately predicted using linear models. Here we choose the molecules and their RIs of one stationary phase (OV101) as our benchmark dataset.</p>
 <p>Since it would be rather tedious to implement the complete cross-validation procedures, the R package <code>caret</code> is used here. To run the R code below, users need to install the  package and the required predictive modeling packages first. The  package provides a unified interface for the modeling tuning task across different statistical machine learning packages. It is particularly helpful in QSAR modeling, for it contains tools for data splitting, pre-processing, feature selection, model tuning and other functionalities.</p>
 <p>Just like the last section, we load the Rcpi package, and read the molecules stored in a SMILES file:</p>
@@ -351,7 +351,7 @@ Figure 3: Experimental RIs vs. Predicted RIs
 </div>
 <div id="in-silico-toxicity-classification-for-drug-discovery" class="section level2">
 <h2 class="hasAnchor">
-<a href="#in-silico-toxicity-classification-for-drug-discovery" class="anchor"></a><em>In Silico</em> Toxicity Classification for Drug Discovery</h2>
+<a href="#in-silico-toxicity-classification-for-drug-discovery" class="anchor"></a><em>In silico</em> toxicity classification for drug discovery</h2>
 <p>In the perspective of quantitative pharmacology, the successful discovery of novel drugs depends on the pharmacokinetics properties, like <strong>a</strong>bsorption, <strong>d</strong>istribution, <strong>m</strong>etabolism, and <strong>e</strong>xcretion. In addition, the potential <strong>t</strong>oxicity of chemical compounds is taken into account. QSAR or QSPR methods are usually employed to predict the ADME/T qualities of potential drug candidates.</p>
 <p>In <span class="citation">D-S Cao <em>et al.</em> (2012)</span>, quantitative structure-toxicity relationship (QSTR) models were established for classifying five toxicity datasets. Here we use the maximum recommended daily dose dataset (FDAMDD) from FDA Center for Drug Evaluation and Research as the benchmark dataset.</p>
 <p>First, load the drug molecules stored in a SMILES file into R:</p>
@@ -511,7 +511,7 @@ Figure 4: Smoothed ROC curves for different fingerprint types
 </div>
 <div id="clustering-of-molecules-based-on-structural-similarities" class="section level2">
 <h2 class="hasAnchor">
-<a href="#clustering-of-molecules-based-on-structural-similarities" class="anchor"></a>Clustering of Molecules Based on Structural Similarities</h2>
+<a href="#clustering-of-molecules-based-on-structural-similarities" class="anchor"></a>Clustering of molecules based on structural similarities</h2>
 <p>Apart from supervised methods (classification and regression), unsupervised approaches, like clustering, is also widely applied in the quantitative research of drugs.</p>
 <p>In reality, there are usually too many chemical compounds available for identifying drug-like molecules. Thus it would be attractive using clustering methods to aid the selection of a representative subset of all available compounds. For a clustering approach that groups compounds together by their structural similarity, applying the principle <em>similar compounds have similar properties</em> means that we only need to test the representative compounds from each individual cluster, rather than do the time-consuming complete set of experiments, and this should be sufficient to understand the structure-activity relationships of the whole compound set.</p>
 <p>The Rcpi package provides easy-to-use functions for computing the similarity between small molecules derived by molecular fingerprints and maximum common substructure search.</p>
@@ -542,7 +542,7 @@ Figure 4: Smoothed ROC curves for different fingerprint types
 <a class="sourceLine" id="cb36-6" title="6"><span class="co"># generate colors</span></a>
 <a class="sourceLine" id="cb36-7" title="7"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"RColorBrewer"</span>)</a>
 <a class="sourceLine" id="cb36-8" title="8">pal5 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/RColorBrewer/topics/ColorBrewer">brewer.pal</a></span>(<span class="dv">5</span>, <span class="st">"Set1"</span>)</a>
-<a class="sourceLine" id="cb36-9" title="9"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(<span class="kw">as.phylo</span>(mol.hc),</a>
+<a class="sourceLine" id="cb36-9" title="9"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/ape/topics/as.phylo">as.phylo</a></span>(mol.hc),</a>
 <a class="sourceLine" id="cb36-10" title="10">  <span class="dt">type =</span> <span class="st">"fan"</span>,</a>
 <a class="sourceLine" id="cb36-11" title="11">  <span class="dt">tip.color =</span> pal5[clus5],</a>
 <a class="sourceLine" id="cb36-12" title="12">  <span class="dt">label.offset =</span> <span class="fl">0.1</span>, <span class="dt">cex =</span> <span class="fl">0.7</span></a>
@@ -554,7 +554,7 @@ Figure 5: Tree visualization of the molecular clustering result
 </div>
 <div id="structure-based-chemical-similarity-searching" class="section level2">
 <h2 class="hasAnchor">
-<a href="#structure-based-chemical-similarity-searching" class="anchor"></a>Structure-Based Chemical Similarity Searching</h2>
+<a href="#structure-based-chemical-similarity-searching" class="anchor"></a>Structure-based chemical similarity searching</h2>
 <p>Structure-based chemical similarity searching ranks molecules in a database by their similarity degree to one query molecule structure. The numerical similarity value is usually computed based on the molecular fingerprints with selected metrics or by maximum common structure search. It is one of the core techniques for ligand-based virtual screening in drug discovery.</p>
 <p>The SDF file <code>DB00530.sdf</code> below is retrieved from DrugBank, the drug ID DB00530 is <em>Erlotinib</em>, which is a reversible tyrosine kinase inhibitor. Given this molecule as the query molecule, we will do a similarity searching in the database <code>tyrphostin.sdf</code> presented in the last subsection.</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
@@ -630,7 +630,7 @@ Figure 6: Maximum common structure of the query molecule and the #92 molecule in
 <p>For chemogenomics modeling, Rcpi calculates compound-protein interaction (CPI) descriptors and protein-protein interaction (PPI) descriptors.</p>
 <div id="predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces" class="section level2">
 <h2 class="hasAnchor">
-<a href="#predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces" class="anchor"></a>Predicting Drug-Target Interaction by Integrating Chemical and Genomic Spaces</h2>
+<a href="#predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces" class="anchor"></a>Predicting drug-target interaction by integrating chemical and genomic spaces</h2>
 <p>The prediction of novel interactions between drugs and target proteins is a key area in genomic drug discovery. In this example, we use the G Protein-Coupled Receptor (GPCR) dataset provided by <span class="citation">Yamanishi <em>et al.</em> (2008)</span> as our benchmark dataset.</p>
 <p>A drug-target interaction network can be naturally modeled as a bipartite graph, where the nodes are target proteins or drug molecules and edges (only drugs and proteins could be connected by edges) represent drug-target interactions. Initially, the graph only contains edges describing the <em>real</em> drug-target interactions determined by experiments or other ways. In this example, all real drug-target interaction pairs (i.e., 635 drug-target interactions) are used as the positive samples. For negative samples we select random, non-interacting pairs from these drugs and proteins. They are constructed as follows:</p>
 <ol style="list-style-type: decimal">
@@ -846,25 +846,25 @@ Figure 8: ROC curve for predicting on the training set of the GPCR drug-target i
 <li>
 <a href="#introduction">Introduction</a><ul class="nav nav-pills nav-stacked">
 <li><a href="#installation">Installation</a></li>
-      <li><a href="#how-to-cite-rcpi">How to Cite Rcpi</a></li>
+      <li><a href="#how-to-cite-rcpi">How to cite Rcpi</a></li>
       </ul>
 </li>
       <li>
 <a href="#applications-in-bioinformatics">Applications in Bioinformatics</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#predicting-protein-subcellular-localization">Predicting Protein Subcellular Localization</a></li>
+<li><a href="#predicting-protein-subcellular-localization">Predicting protein subcellular localization</a></li>
       </ul>
 </li>
       <li>
 <a href="#applications-in-chemoinformatics">Applications in Chemoinformatics</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#regression-modeling-in-qsrr-study-of-retention-indices">Regression Modeling in QSRR Study of Retention Indices</a></li>
-      <li><a href="#in-silico-toxicity-classification-for-drug-discovery"><em>In Silico</em> Toxicity Classification for Drug Discovery</a></li>
-      <li><a href="#clustering-of-molecules-based-on-structural-similarities">Clustering of Molecules Based on Structural Similarities</a></li>
-      <li><a href="#structure-based-chemical-similarity-searching">Structure-Based Chemical Similarity Searching</a></li>
+<li><a href="#regression-modeling-in-qsrr-study-of-retention-indices">Regression modeling in QSRR study of retention indices</a></li>
+      <li><a href="#in-silico-toxicity-classification-for-drug-discovery"><em>In silico</em> toxicity classification for drug discovery</a></li>
+      <li><a href="#clustering-of-molecules-based-on-structural-similarities">Clustering of molecules based on structural similarities</a></li>
+      <li><a href="#structure-based-chemical-similarity-searching">Structure-based chemical similarity searching</a></li>
       </ul>
 </li>
       <li>
 <a href="#applications-in-chemogenomics">Applications in Chemogenomics</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces">Predicting Drug-Target Interaction by Integrating Chemical and Genomic Spaces</a></li>
+<li><a href="#predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces">Predicting drug-target interaction by integrating chemical and genomic spaces</a></li>
       </ul>
 </li>
       <li><a href="#references">References</a></li>

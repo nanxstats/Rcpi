@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -158,10 +158,61 @@ Predicting Protein-protein Interactions Based Only on Sequences Information.
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtCTriad</span>(<span class='no'>x</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtCTriad</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt; VS111 VS211 VS311 VS411 VS511 VS611 VS711 VS121 VS221 VS321 VS421 VS521 VS621 
+#&gt;   0.1   0.3   0.6   0.2   0.4   0.0   0.3   1.0   0.6   0.5   0.0   0.2   0.3 
+#&gt; VS721 VS131 VS231 VS331 VS431 VS531 VS631 VS731 VS141 VS241 VS341 VS441 VS541 
+#&gt;   0.0   0.2   0.4   0.5   0.2   0.3   0.3   0.1   0.3   0.3   0.2   0.2   0.0 
+#&gt; VS641 VS741 VS151 VS251 VS351 VS451 VS551 VS651 VS751 VS161 VS261 VS361 VS461 
+#&gt;   0.1   0.2   0.2   0.2   0.5   0.1   0.2   0.0   0.0   0.1   0.4   0.2   0.3 
+#&gt; VS561 VS661 VS761 VS171 VS271 VS371 VS471 VS571 VS671 VS771 VS112 VS212 VS312 
+#&gt;   0.2   0.0   0.1   0.1   0.3   0.1   0.0   0.1   0.0   0.1   0.8   0.4   0.4 
+#&gt; VS412 VS512 VS612 VS712 VS122 VS222 VS322 VS422 VS522 VS622 VS722 VS132 VS232 
+#&gt;   0.6   0.1   0.5   0.2   0.8   0.5   0.2   0.3   0.2   0.0   0.2   0.1   0.3 
+#&gt; VS332 VS432 VS532 VS632 VS732 VS142 VS242 VS342 VS442 VS542 VS642 VS742 VS152 
+#&gt;   0.3   0.4   0.2   0.0   0.1   0.1   0.3   0.3   0.3   0.2   0.1   0.1   0.3 
+#&gt; VS252 VS352 VS452 VS552 VS652 VS752 VS162 VS262 VS362 VS462 VS562 VS662 VS762 
+#&gt;   0.3   0.2   0.2   0.2   0.3   0.0   0.2   0.0   0.3   0.2   0.1   0.0   0.2 
+#&gt; VS172 VS272 VS372 VS472 VS572 VS672 VS772 VS113 VS213 VS313 VS413 VS513 VS613 
+#&gt;   0.2   0.0   0.1   0.2   0.1   0.0   0.0   0.3   0.2   0.3   0.1   0.5   0.1 
+#&gt; VS713 VS123 VS223 VS323 VS423 VS523 VS623 VS723 VS133 VS233 VS333 VS433 VS533 
+#&gt;   0.0   0.4   0.4   0.5   0.2   0.3   0.1   0.0   0.2   0.5   0.1   0.4   0.4 
+#&gt; VS633 VS733 VS143 VS243 VS343 VS443 VS543 VS643 VS743 VS153 VS253 VS353 VS453 
+#&gt;   0.3   0.3   0.1   0.0   0.4   0.5   0.1   0.3   0.2   0.6   0.2   0.1   0.1 
+#&gt; VS553 VS653 VS753 VS163 VS263 VS363 VS463 VS563 VS663 VS763 VS173 VS273 VS373 
+#&gt;   0.1   0.2   0.0   0.4   0.1   0.2   0.2   0.1   0.1   0.0   0.1   0.1   0.3 
+#&gt; VS473 VS573 VS673 VS773 VS114 VS214 VS314 VS414 VS514 VS614 VS714 VS124 VS224 
+#&gt;   0.1   0.1   0.2   0.0   0.1   0.4   0.2   0.1   0.1   0.2   0.2   0.1   0.4 
+#&gt; VS324 VS424 VS524 VS624 VS724 VS134 VS234 VS334 VS434 VS534 VS634 VS734 VS144 
+#&gt;   0.0   0.3   0.2   0.2   0.3   0.4   0.4   0.3   0.1   0.2   0.0   0.1   0.2 
+#&gt; VS244 VS344 VS444 VS544 VS644 VS744 VS154 VS254 VS354 VS454 VS554 VS654 VS754 
+#&gt;   0.3   0.3   0.4   0.1   0.0   0.1   0.3   0.2   0.0   0.0   0.0   0.0   0.2 
+#&gt; VS164 VS264 VS364 VS464 VS564 VS664 VS764 VS174 VS274 VS374 VS474 VS574 VS674 
+#&gt;   0.0   0.2   0.2   0.0   0.1   0.2   0.0   0.2   0.0   0.3   0.3   0.0   0.0 
+#&gt; VS774 VS115 VS215 VS315 VS415 VS515 VS615 VS715 VS125 VS225 VS325 VS425 VS525 
+#&gt;   0.0   0.4   0.5   0.3   0.2   0.0   0.2   0.0   0.5   0.0   0.0   0.4   0.3 
+#&gt; VS625 VS725 VS135 VS235 VS335 VS435 VS535 VS635 VS735 VS145 VS245 VS345 VS445 
+#&gt;   0.1   0.0   0.2   0.0   0.5   0.1   0.0   0.3   0.0   0.3   0.1   0.1   0.0 
+#&gt; VS545 VS645 VS745 VS155 VS255 VS355 VS455 VS555 VS655 VS755 VS165 VS265 VS365 
+#&gt;   0.2   0.1   0.0   0.1   0.1   0.1   0.2   0.0   0.0   0.0   0.2   0.1   0.1 
+#&gt; VS465 VS565 VS665 VS765 VS175 VS275 VS375 VS475 VS575 VS675 VS775 VS116 VS216 
+#&gt;   0.1   0.0   0.1   0.0   0.0   0.1   0.2   0.0   0.0   0.0   0.0   0.2   0.4 
+#&gt; VS316 VS416 VS516 VS616 VS716 VS126 VS226 VS326 VS426 VS526 VS626 VS726 VS136 
+#&gt;   0.1   0.1   0.1   0.2   0.0   0.0   0.1   0.1   0.2   0.2   0.2   0.1   0.1 
+#&gt; VS236 VS336 VS436 VS536 VS636 VS736 VS146 VS246 VS346 VS446 VS546 VS646 VS746 
+#&gt;   0.2   0.3   0.2   0.1   0.0   0.3   0.1   0.3   0.2   0.0   0.1   0.1   0.0 
+#&gt; VS156 VS256 VS356 VS456 VS556 VS656 VS756 VS166 VS266 VS366 VS466 VS566 VS666 
+#&gt;   0.0   0.2   0.0   0.2   0.0   0.1   0.1   0.1   0.1   0.1   0.0   0.1   0.2 
+#&gt; VS766 VS176 VS276 VS376 VS476 VS576 VS676 VS776 VS117 VS217 VS317 VS417 VS517 
+#&gt;   0.0   0.0   0.0   0.1   0.0   0.0   0.1   0.1   0.0   0.4   0.1   0.0   0.0 
+#&gt; VS617 VS717 VS127 VS227 VS327 VS427 VS527 VS627 VS727 VS137 VS237 VS337 VS437 
+#&gt;   0.1   0.0   0.2   0.2   0.1   0.0   0.0   0.1   0.0   0.3   0.1   0.2   0.2 
+#&gt; VS537 VS637 VS737 VS147 VS247 VS347 VS447 VS547 VS647 VS747 VS157 VS257 VS357 
+#&gt;   0.1   0.2   0.0   0.2   0.2   0.0   0.0   0.0   0.0   0.2   0.1   0.1   0.2 
+#&gt; VS457 VS557 VS657 VS757 VS167 VS267 VS367 VS467 VS567 VS667 VS767 VS177 VS277 
+#&gt;   0.0   0.0   0.0   0.0   0.1   0.0   0.2   0.0   0.0   0.0   0.0   0.0   0.1 
+#&gt; VS377 VS477 VS577 VS677 VS777 
+#&gt;   0.0   0.0   0.1   0.0   0.0 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

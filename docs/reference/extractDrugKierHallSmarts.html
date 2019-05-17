@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -423,13 +423,281 @@ Journal of Chemical Information and Computer Science, 1995, 35:1039-1045.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
-<span class='co'># }</span><span class='co'># NOT RUN {</span>
-<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
+    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugKierHallSmarts</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
-<span class='co'># }</span></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;                                                         khs.sLi khs.ssBe
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O       0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                          0        0
+#&gt; c1ccccc1NC(=O)C                                               0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                    0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                      0        0
+#&gt; CC(=O)NO                                                      0        0
+#&gt;                                                         khs.ssssBe khs.ssBH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0        0
+#&gt; c1ccccc1NC(=O)C                                                  0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0        0
+#&gt; CC(=O)NO                                                         0        0
+#&gt;                                                         khs.sssB khs.ssssB
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        0         0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           0         0
+#&gt; c1ccccc1NC(=O)C                                                0         0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     0         0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       0         0
+#&gt; CC(=O)NO                                                       0         0
+#&gt;                                                         khs.sCH3 khs.dCH2
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        1        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           1        0
+#&gt; c1ccccc1NC(=O)C                                                1        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     1        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       1        0
+#&gt; CC(=O)NO                                                       1        0
+#&gt;                                                         khs.ssCH2 khs.tCH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         1       0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0       0
+#&gt; c1ccccc1NC(=O)C                                                 0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        5       0
+#&gt; CC(=O)NO                                                        0       0
+#&gt;                                                         khs.dsCH khs.aaCH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        0        8
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           0        4
+#&gt; c1ccccc1NC(=O)C                                                0        5
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       0        4
+#&gt; CC(=O)NO                                                       0        0
+#&gt;                                                         khs.sssCH khs.ddC
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         1       0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0       0
+#&gt; c1ccccc1NC(=O)C                                                 0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        1       0
+#&gt; CC(=O)NO                                                        0       0
+#&gt;                                                         khs.tsC khs.dssC
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O       0        1
+#&gt; c1(ccc(cc1)O)NC(=O)C                                          0        1
+#&gt; c1ccccc1NC(=O)C                                               0        1
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                    0        1
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                      0        2
+#&gt; CC(=O)NO                                                      0        1
+#&gt;                                                         khs.aasC khs.aaaC
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        4        2
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           2        0
+#&gt; c1ccccc1NC(=O)C                                                1        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     2        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       2        0
+#&gt; CC(=O)NO                                                       0        0
+#&gt;                                                         khs.ssssC khs.sNH3
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0        0
+#&gt; c1ccccc1NC(=O)C                                                 0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0        0
+#&gt; CC(=O)NO                                                        0        0
+#&gt;                                                         khs.sNH2 khs.ssNH2
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        0         0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           0         0
+#&gt; c1ccccc1NC(=O)C                                                0         0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     1         0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       0         0
+#&gt; CC(=O)NO                                                       0         0
+#&gt;                                                         khs.dNH khs.ssNH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O       0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                          0        1
+#&gt; c1ccccc1NC(=O)C                                               0        1
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                    0        1
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                      0        2
+#&gt; CC(=O)NO                                                      0        1
+#&gt;                                                         khs.aaNH khs.tN
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        0      0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           0      0
+#&gt; c1ccccc1NC(=O)C                                                0      0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     0      0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       0      0
+#&gt; CC(=O)NO                                                       0      0
+#&gt;                                                         khs.sssNH khs.dsN
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0       0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0       0
+#&gt; c1ccccc1NC(=O)C                                                 0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0       0
+#&gt; CC(=O)NO                                                        0       0
+#&gt;                                                         khs.aaN khs.sssN
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O       0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                          0        0
+#&gt; c1ccccc1NC(=O)C                                               0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                    2        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                      0        0
+#&gt; CC(=O)NO                                                      0        0
+#&gt;                                                         khs.ddsN khs.aasN
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        1        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           0        0
+#&gt; c1ccccc1NC(=O)C                                                0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       0        0
+#&gt; CC(=O)NO                                                       0        0
+#&gt;                                                         khs.ssssN khs.sOH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0       1
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0       1
+#&gt; c1ccccc1NC(=O)C                                                 0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0       0
+#&gt; CC(=O)NO                                                        0       1
+#&gt;                                                         khs.dO khs.ssO khs.aaO
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O      3       0       1
+#&gt; c1(ccc(cc1)O)NC(=O)C                                         1       0       0
+#&gt; c1ccccc1NC(=O)C                                              1       0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                   3       0       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                     4       0       0
+#&gt; CC(=O)NO                                                     1       0       0
+#&gt;                                                         khs.sF khs.sSiH3
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O      0         0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                         0         0
+#&gt; c1ccccc1NC(=O)C                                              0         0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                   0         0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                     0         0
+#&gt; CC(=O)NO                                                     0         0
+#&gt;                                                         khs.ssSiH2 khs.sssSiH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0          0
+#&gt; c1ccccc1NC(=O)C                                                  0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0          0
+#&gt; CC(=O)NO                                                         0          0
+#&gt;                                                         khs.ssssSi khs.sPH2
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0        0
+#&gt; c1ccccc1NC(=O)C                                                  0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0        0
+#&gt; CC(=O)NO                                                         0        0
+#&gt;                                                         khs.ssPH khs.sssP
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           0        0
+#&gt; c1ccccc1NC(=O)C                                                0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       0        0
+#&gt; CC(=O)NO                                                       0        0
+#&gt;                                                         khs.dsssP khs.sssssP
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0          0
+#&gt; c1ccccc1NC(=O)C                                                 0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0          0
+#&gt; CC(=O)NO                                                        0          0
+#&gt;                                                         khs.sSH khs.dS khs.ssS
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O       0      0       0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                          0      0       0
+#&gt; c1ccccc1NC(=O)C                                               0      0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                    0      0       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                      0      0       0
+#&gt; CC(=O)NO                                                      0      0       0
+#&gt;                                                         khs.aaS khs.dssS
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O       0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                          0        0
+#&gt; c1ccccc1NC(=O)C                                               0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                    1        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                      0        0
+#&gt; CC(=O)NO                                                      0        0
+#&gt;                                                         khs.ddssS khs.sCl
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0       0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0       0
+#&gt; c1ccccc1NC(=O)C                                                 0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      1       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        1       0
+#&gt; CC(=O)NO                                                        0       0
+#&gt;                                                         khs.sGeH3 khs.ssGeH2
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0          0
+#&gt; c1ccccc1NC(=O)C                                                 0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0          0
+#&gt; CC(=O)NO                                                        0          0
+#&gt;                                                         khs.sssGeH khs.ssssGe
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0          0
+#&gt; c1ccccc1NC(=O)C                                                  0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0          0
+#&gt; CC(=O)NO                                                         0          0
+#&gt;                                                         khs.sAsH2 khs.ssAsH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0         0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0         0
+#&gt; c1ccccc1NC(=O)C                                                 0         0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0         0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0         0
+#&gt; CC(=O)NO                                                        0         0
+#&gt;                                                         khs.sssAs khs.sssdAs
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0          0
+#&gt; c1ccccc1NC(=O)C                                                 0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0          0
+#&gt; CC(=O)NO                                                        0          0
+#&gt;                                                         khs.sssssAs khs.sSeH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O           0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                              0        0
+#&gt; c1ccccc1NC(=O)C                                                   0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                        0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                          0        0
+#&gt; CC(=O)NO                                                          0        0
+#&gt;                                                         khs.dSe khs.ssSe
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O       0        0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                          0        0
+#&gt; c1ccccc1NC(=O)C                                               0        0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                    0        0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                      0        0
+#&gt; CC(=O)NO                                                      0        0
+#&gt;                                                         khs.aaSe khs.dssSe
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O        0         0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                           0         0
+#&gt; c1ccccc1NC(=O)C                                                0         0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                     0         0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                       0         0
+#&gt; CC(=O)NO                                                       0         0
+#&gt;                                                         khs.ddssSe khs.sBr
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0       0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0       0
+#&gt; c1ccccc1NC(=O)C                                                  0       0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0       0
+#&gt; CC(=O)NO                                                         0       0
+#&gt;                                                         khs.sSnH3 khs.ssSnH2
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O         0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                            0          0
+#&gt; c1ccccc1NC(=O)C                                                 0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                      0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                        0          0
+#&gt; CC(=O)NO                                                        0          0
+#&gt;                                                         khs.sssSnH khs.ssssSn
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0          0
+#&gt; c1ccccc1NC(=O)C                                                  0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0          0
+#&gt; CC(=O)NO                                                         0          0
+#&gt;                                                         khs.sI khs.sPbH3
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O      0         0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                         0         0
+#&gt; c1ccccc1NC(=O)C                                              0         0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                   0         0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                     0         0
+#&gt; CC(=O)NO                                                     0         0
+#&gt;                                                         khs.ssPbH2 khs.sssPbH
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0          0
+#&gt; c1ccccc1NC(=O)C                                                  0          0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0          0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0          0
+#&gt; CC(=O)NO                                                         0          0
+#&gt;                                                         khs.ssssPb
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O          0
+#&gt; c1(ccc(cc1)O)NC(=O)C                                             0
+#&gt; c1ccccc1NC(=O)C                                                  0
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                       0
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                         0
+#&gt; CC(=O)NO                                                         0</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

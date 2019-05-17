@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -171,11 +171,9 @@ See <code><a href='readFASTA.html'>readFASTA</a></code> for reading FASTA format
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>id</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>'P00750'</span>, <span class='st'>'P00751'</span>, <span class='st'>'P00752'</span>)
-<span class='co'># }</span><span class='co'># NOT RUN {</span>
-<span class='fu'>getFASTAFromUniProt</span>(<span class='no'>id</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='no'>id</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>'P00750'</span>, <span class='st'>'P00751'</span>, <span class='st'>'P00752'</span>)</div><div class='input'><span class='fu'>getFASTAFromUniProt</span>(<span class='no'>id</span>)</div><div class='output co'>#&gt; [1] "&gt;sp|P00750|TPA_HUMAN Tissue-type plasminogen activator OS=Homo sapiens OX=9606 GN=PLAT PE=1 SV=1\nMDAMKRGLCCVLLLCGAVFVSPSQEIHARFRRGARSYQVICRDEKTQMIYQQHQSWLRPV\nLRSNRVEYCWCNSGRAQCHSVPVKSCSEPRCFNGGTCQQALYFSDFVCQCPEGFAGKCCE\nIDTRATCYEDQGISYRGTWSTAESGAECTNWNSSALAQKPYSGRRPDAIRLGLGNHNYCR\nNPDRDSKPWCYVFKAGKYSSEFCSTPACSEGNSDCYFGNGSAYRGTHSLTESGASCLPWN\nSMILIGKVYTAQNPSAQALGLGKHNYCRNPDGDAKPWCHVLKNRRLTWEYCDVPSCSTCG\nLRQYSQPQFRIKGGLFADIASHPWQAAIFAKHRRSPGERFLCGGILISSCWILSAAHCFQ\nERFPPHHLTVILGRTYRVVPGEEEQKFEVEKYIVHKEFDDDTYDNDIALLQLKSDSSRCA\nQESSVVRTVCLPPADLQLPDWTECELSGYGKHEALSPFYSERLKEAHVRLYPSSRCTSQH\nLLNRTVTDNMLCAGDTRSGGPQANLHDACQGDSGGPLVCLNDGRMTLVGIISWGLGCGQK\nDVPGVYTKVTNYLDWIRDNMRP\n"                                                                                                                                                                                                  
+#&gt; [2] "&gt;sp|P00751|CFAB_HUMAN Complement factor B OS=Homo sapiens OX=9606 GN=CFB PE=1 SV=2\nMGSNLSPQLCLMPFILGLLSGGVTTTPWSLARPQGSCSLEGVEIKGGSFRLLQEGQALEY\nVCPSGFYPYPVQTRTCRSTGSWSTLKTQDQKTVRKAECRAIHCPRPHDFENGEYWPRSPY\nYNVSDEISFHCYDGYTLRGSANRTCQVNGRWSGQTAICDNGAGYCSNPGIPIGTRKVGSQ\nYRLEDSVTYHCSRGLTLRGSQRRTCQEGGSWSGTEPSCQDSFMYDTPQEVAEAFLSSLTE\nTIEGVDAEDGHGPGEQQKRKIVLDPSGSMNIYLVLDGSDSIGASNFTGAKKCLVNLIEKV\nASYGVKPRYGLVTYATYPKIWVKVSEADSSNADWVTKQLNEINYEDHKLKSGTNTKKALQ\nAVYSMMSWPDDVPPEGWNRTRHVIILMTDGLHNMGGDPITVIDEIRDLLYIGKDRKNPRE\nDYLDVYVFGVGPLVNQVNINALASKKDNEQHVFKVKDMENLEDVFYQMIDESQSLSLCGM\nVWEHRKGTDYHKQPWQAKISVIRPSKGHESCMGAVVSEYFVLTAAHCFTVDDKEHSIKVS\nVGGEKRDLEIEVVLFHPNYNINGKKEAGIPEFYDYDVALIKLKNKLKYGQTIRPICLPCT\nEGTTRALRLPPTTTCQQQKEELLPAQDIKALFVSEEEKKLTRKEVYIKNGDKKGSCERDA\nQYAPGYDKVKDISEVVTPRFLCTGGVSPYADPNTCRGDSGGPLIVHKRSRFIQVGVISWG\nVVDVCKNQKRQKQVPAHARDFHINLFQVLPWLKEKLQDEDLGFL\n"
+#&gt; [3] "&gt;sp|P00752|KLK_PIG Glandular kallikrein OS=Sus scrofa OX=9823 PE=1 SV=4\nAPPIQSRIIGGRECEKNSHPWQVAIYHYSSFQCGGVLVNPKWVLTAAHCKNDNYEVWLGR\nHNLFENENTAQFFGVTADFPHPGFNLSLLKXHTKADGKDYSHDLMLLRLQSPAKITDAVK\nVLELPTQEPELGSTCEASGWGSIEPGPDBFEFPDEIQCVQLTLLQNTFCABAHPBKVTES\nMLCAGYLPGGKDTCMGDSGGPLICNGMWQGITSWGHTPCGSANKPSIYTKLIFYLDWIND\nTITENP\n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

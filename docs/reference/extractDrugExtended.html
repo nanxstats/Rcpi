@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -174,13 +174,52 @@ This is hashed fingerprints, with a default length of 1024.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
-<span class='co'># }</span><span class='co'># NOT RUN {</span>
-<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
+    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
 <span class='no'>fp</span>  <span class='kw'>=</span> <span class='fu'>extractDrugExtended</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>fp</span>)
-<span class='co'># }</span></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>fp</span>)</div><div class='output co'>#&gt; $`1024`
+#&gt;   [1]   10   15   29   42   54   59   62   65   66   69   76   77   79   86   89
+#&gt;  [16]  100  110  113  118  119  123  130  134  141  147  157  160  165  167  171
+#&gt;  [31]  176  179  184  188  191  196  223  225  236  245  252  253  260  272  280
+#&gt;  [46]  283  289  297  302  303  305  326  331  335  345  351  361  389  400  402
+#&gt;  [61]  405  407  408  417  424  439  441  447  451  454  456  460  468  474  478
+#&gt;  [76]  482  508  521  542  545  548  566  577  579  580  589  591  597  598  606
+#&gt;  [91]  607  610  611  613  622  645  652  654  661  672  679  687  691  704  705
+#&gt; [106]  713  718  724  728  729  738  742  746  753  760  762  766  773  777  782
+#&gt; [121]  785  788  794  797  811  813  819  827  834  841  843  846  849  855  862
+#&gt; [136]  869  872  874  877  926  927  928  935  939  950  953  955  968  970  973
+#&gt; [151]  977  990  996 1010 1011 1012 1014 1015
+#&gt; 
+#&gt; $`1024`
+#&gt;  [1]   26   54   79  103  123  147  184  188  202  227  228  260  339  368  402
+#&gt; [16]  451  478  482  520  542  545  572  582  606  613  705  713  718  791  811
+#&gt; [31]  813  908  926  927  950  977  980  996 1010 1014
+#&gt; 
+#&gt; $`1024`
+#&gt;  [1]   26   54   79  147  184  188  227  228  260  339  368  402  478  520  542
+#&gt; [16]  572  582  606  613  705  713  718  791  813  908  926  927  950  977  980
+#&gt; [31]  996 1010 1014
+#&gt; 
+#&gt; $`1024`
+#&gt;  [1]   17   21   23   32   63   76  103  129  135  145  147  159  170  172  184
+#&gt; [16]  191  196  202  225  228  239  251  255  258  260  265  282  283  290  307
+#&gt; [31]  313  326  327  331  332  341  347  360  361  383  384  399  400  404  407
+#&gt; [46]  416  437  446  471  478  488  506  513  520  526  535  545  551  575  582
+#&gt; [61]  591  606  613  616  618  619  676  704  713  727  728  755  772  810  812
+#&gt; [76]  819  827  828  833  858  878  903  908  910  924  950  954  955  976  980
+#&gt; [91]  982  992  996 1010 1014
+#&gt; 
+#&gt; $`1024`
+#&gt;  [1]    5   23   33   42   54   62   63   69   70   76   79   87   92  112  147
+#&gt; [16]  151  170  174  184  188  199  217  228  260  265  268  273  285  313  322
+#&gt; [31]  364  372  387  394  424  437  467  468  478  504  506  510  520  542  551
+#&gt; [46]  567  578  606  607  611  613  617  623  641  650  672  702  705  713  718
+#&gt; [61]  723  742  750  753  765  776  787  788  805  810  829  833  835  841  851
+#&gt; [76]  858  903  910  919  927  929  941  944  950  962  964  970  977  980  988
+#&gt; [91]  990  996 1010 1011 1014
+#&gt; 
+#&gt; $`1024`
+#&gt;  [1] 147 228 260 304 321 389 439 520 606 613 713 950 996
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

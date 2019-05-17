@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -217,10 +217,61 @@ to Predict Enzyme Subfamily Classes. <em>Bioinformatics</em>, 2005, 21, 10-19.</
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtAPAAC</span>(<span class='no'>x</span>)
-
+    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtAPAAC</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;                 Pc1.A                 Pc1.R                 Pc1.N 
+#&gt;          3.537412e+01          3.930458e+01          2.161752e+01 
+#&gt;                 Pc1.D                 Pc1.C                 Pc1.E 
+#&gt;          2.849582e+01          3.733935e+01          2.653059e+01 
+#&gt;                 Pc1.Q                 Pc1.G                 Pc1.H 
+#&gt;          2.653059e+01          4.520027e+01          1.670445e+01 
+#&gt;                 Pc1.I                 Pc1.L                 Pc1.K 
+#&gt;          1.965229e+01          4.225242e+01          2.161752e+01 
+#&gt;                 Pc1.M                 Pc1.F                 Pc1.P 
+#&gt;          6.878302e+00          1.768706e+01          2.947844e+01 
+#&gt;                 Pc1.S                 Pc1.T                 Pc1.W 
+#&gt;          4.913073e+01          2.456536e+01          1.277399e+01 
+#&gt;                 Pc1.Y                 Pc1.V  Pc2.Hydrophobicity.1 
+#&gt;          2.358275e+01          2.751321e+01          2.196320e-04 
+#&gt;  Pc2.Hydrophilicity.1  Pc2.Hydrophobicity.2  Pc2.Hydrophilicity.2 
+#&gt;          1.025766e-03         -3.088876e-04         -1.834385e-04 
+#&gt;  Pc2.Hydrophobicity.3  Pc2.Hydrophilicity.3  Pc2.Hydrophobicity.4 
+#&gt;          1.174146e-03          7.400156e-04         -1.105715e-03 
+#&gt;  Pc2.Hydrophilicity.4  Pc2.Hydrophobicity.5  Pc2.Hydrophilicity.5 
+#&gt;         -4.493680e-04          1.766358e-03          1.471212e-03 
+#&gt;  Pc2.Hydrophobicity.6  Pc2.Hydrophilicity.6  Pc2.Hydrophobicity.7 
+#&gt;         -1.441572e-03         -4.913600e-03         -1.678053e-05 
+#&gt;  Pc2.Hydrophilicity.7  Pc2.Hydrophobicity.8  Pc2.Hydrophilicity.8 
+#&gt;          7.312356e-04         -1.885399e-03         -1.928708e-03 
+#&gt;  Pc2.Hydrophobicity.9  Pc2.Hydrophilicity.9 Pc2.Hydrophobicity.10 
+#&gt;         -2.931177e-03         -1.555660e-03          2.916597e-03 
+#&gt; Pc2.Hydrophilicity.10 Pc2.Hydrophobicity.11 Pc2.Hydrophilicity.11 
+#&gt;          3.602591e-03          1.055082e-04          8.697920e-04 
+#&gt; Pc2.Hydrophobicity.12 Pc2.Hydrophilicity.12 Pc2.Hydrophobicity.13 
+#&gt;         -9.276413e-04         -2.001384e-03          1.705044e-03 
+#&gt; Pc2.Hydrophilicity.13 Pc2.Hydrophobicity.14 Pc2.Hydrophilicity.14 
+#&gt;          4.364007e-03          7.883453e-04         -9.441693e-04 
+#&gt; Pc2.Hydrophobicity.15 Pc2.Hydrophilicity.15 Pc2.Hydrophobicity.16 
+#&gt;         -3.133437e-04         -3.599332e-03          3.689079e-05 
+#&gt; Pc2.Hydrophilicity.16 Pc2.Hydrophobicity.17 Pc2.Hydrophilicity.17 
+#&gt;          2.483867e-03          4.832798e-04          2.465788e-03 
+#&gt; Pc2.Hydrophobicity.18 Pc2.Hydrophilicity.18 Pc2.Hydrophobicity.19 
+#&gt;         -3.142728e-04          2.021961e-03          6.421283e-05 
+#&gt; Pc2.Hydrophilicity.19 Pc2.Hydrophobicity.20 Pc2.Hydrophilicity.20 
+#&gt;         -8.896690e-04         -2.986886e-04          9.304039e-04 
+#&gt; Pc2.Hydrophobicity.21 Pc2.Hydrophilicity.21 Pc2.Hydrophobicity.22 
+#&gt;         -6.777458e-04          1.646818e-03          3.193506e-03 
+#&gt; Pc2.Hydrophilicity.22 Pc2.Hydrophobicity.23 Pc2.Hydrophilicity.23 
+#&gt;          3.270656e-03          2.533569e-03          2.478252e-03 
+#&gt; Pc2.Hydrophobicity.24 Pc2.Hydrophilicity.24 Pc2.Hydrophobicity.25 
+#&gt;         -2.489106e-03         -1.031008e-03         -3.992322e-03 
+#&gt; Pc2.Hydrophilicity.25 Pc2.Hydrophobicity.26 Pc2.Hydrophilicity.26 
+#&gt;         -2.596060e-03          8.690771e-04         -1.221378e-03 
+#&gt; Pc2.Hydrophobicity.27 Pc2.Hydrophilicity.27 Pc2.Hydrophobicity.28 
+#&gt;          5.208649e-03          4.617400e-03         -1.088584e-03 
+#&gt; Pc2.Hydrophilicity.28 Pc2.Hydrophobicity.29 Pc2.Hydrophilicity.29 
+#&gt;         -2.512263e-03          1.387641e-03          2.060890e-03 
+#&gt; Pc2.Hydrophobicity.30 Pc2.Hydrophilicity.30 
+#&gt;          3.177340e-04          1.451909e-03 </div><div class='input'>
 <span class='no'>myprops</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(<span class='kw'>AccNo</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"MyProp1"</span>, <span class='st'>"MyProp2"</span>, <span class='st'>"MyProp3"</span>),
                      <span class='kw'>A</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>0.62</span>,  -<span class='fl'>0.5</span>, <span class='fl'>15</span>),  <span class='kw'>R</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(-<span class='fl'>2.53</span>,   <span class='fl'>3</span>, <span class='fl'>101</span>),
                      <span class='kw'>N</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(-<span class='fl'>0.78</span>,  <span class='fl'>0.2</span>, <span class='fl'>58</span>),  <span class='kw'>D</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(-<span class='fl'>0.9</span>,    <span class='fl'>3</span>, <span class='fl'>59</span>),
@@ -239,9 +290,201 @@ to Predict Enzyme Subfamily Classes. <em>Bioinformatics</em>, 2005, 21, 10-19.</
                  <span class='kw'>props</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>'Hydrophobicity'</span>, <span class='st'>'Hydrophilicity'</span>,
                            <span class='st'>'CIDH920105'</span>, <span class='st'>'BHAR880101'</span>,
                            <span class='st'>'CHAM820101'</span>, <span class='st'>'CHAM820102'</span>,
-                           <span class='st'>'MyProp1'</span>, <span class='st'>'MyProp2'</span>, <span class='st'>'MyProp3'</span>))
-
-<span class='co'># }</span></pre>
+                           <span class='st'>'MyProp1'</span>, <span class='st'>'MyProp2'</span>, <span class='st'>'MyProp3'</span>))</div><div class='output co'>#&gt;                 Pc1.A                 Pc1.R                 Pc1.N 
+#&gt;          2.726537e+01          3.029486e+01          1.666217e+01 
+#&gt;                 Pc1.D                 Pc1.C                 Pc1.E 
+#&gt;          2.196377e+01          2.878011e+01          2.044903e+01 
+#&gt;                 Pc1.Q                 Pc1.G                 Pc1.H 
+#&gt;          2.044903e+01          3.483909e+01          1.287531e+01 
+#&gt;                 Pc1.I                 Pc1.L                 Pc1.K 
+#&gt;          1.514743e+01          3.256697e+01          1.666217e+01 
+#&gt;                 Pc1.M                 Pc1.F                 Pc1.P 
+#&gt;          5.301600e+00          1.363269e+01          2.272114e+01 
+#&gt;                 Pc1.S                 Pc1.T                 Pc1.W 
+#&gt;          3.786857e+01          1.893429e+01          9.845828e+00 
+#&gt;                 Pc1.Y                 Pc1.V  Pc2.Hydrophobicity.1 
+#&gt;          1.817691e+01          2.120640e+01          1.692861e-04 
+#&gt;  Pc2.Hydrophilicity.1      Pc2.CIDH920105.1      Pc2.BHAR880101.1 
+#&gt;          7.906313e-04          3.089061e-03          1.997195e-03 
+#&gt;      Pc2.CHAM820101.1      Pc2.CHAM820102.1         Pc2.MyProp1.1 
+#&gt;          1.525781e-03          2.118788e-03          1.692861e-04 
+#&gt;         Pc2.MyProp2.1         Pc2.MyProp3.1  Pc2.Hydrophobicity.2 
+#&gt;          7.906313e-04          1.439530e-03         -2.380818e-04 
+#&gt;  Pc2.Hydrophilicity.2      Pc2.CIDH920105.2      Pc2.BHAR880101.2 
+#&gt;         -1.413892e-04         -6.083517e-04          1.166533e-03 
+#&gt;      Pc2.CHAM820101.2      Pc2.CHAM820102.2         Pc2.MyProp1.2 
+#&gt;          1.928231e-03         -1.406107e-03         -2.380818e-04 
+#&gt;         Pc2.MyProp2.2         Pc2.MyProp3.2  Pc2.Hydrophobicity.3 
+#&gt;         -1.413892e-04          3.095179e-03          9.049982e-04 
+#&gt;  Pc2.Hydrophilicity.3      Pc2.CIDH920105.3      Pc2.BHAR880101.3 
+#&gt;          5.703830e-04         -6.052530e-04          1.407593e-03 
+#&gt;      Pc2.CHAM820101.3      Pc2.CHAM820102.3         Pc2.MyProp1.3 
+#&gt;          1.208629e-05         -3.818626e-03          9.049982e-04 
+#&gt;         Pc2.MyProp2.3         Pc2.MyProp3.3  Pc2.Hydrophobicity.4 
+#&gt;          5.703830e-04          7.898860e-05         -8.522536e-04 
+#&gt;  Pc2.Hydrophilicity.4      Pc2.CIDH920105.4      Pc2.BHAR880101.4 
+#&gt;         -3.463601e-04         -9.747006e-04         -2.234010e-03 
+#&gt;      Pc2.CHAM820101.4      Pc2.CHAM820102.4         Pc2.MyProp1.4 
+#&gt;          1.447898e-03         -3.222112e-03         -8.522536e-04 
+#&gt;         Pc2.MyProp2.4         Pc2.MyProp3.4  Pc2.Hydrophobicity.5 
+#&gt;         -3.463601e-04          1.759628e-03          1.361459e-03 
+#&gt;  Pc2.Hydrophilicity.5      Pc2.CIDH920105.5      Pc2.BHAR880101.5 
+#&gt;          1.133968e-03          2.993837e-03          2.675103e-03 
+#&gt;      Pc2.CHAM820101.5      Pc2.CHAM820102.5         Pc2.MyProp1.5 
+#&gt;          4.224830e-03          8.000519e-04          1.361459e-03 
+#&gt;         Pc2.MyProp2.5         Pc2.MyProp3.5  Pc2.Hydrophobicity.6 
+#&gt;          1.133968e-03          2.824775e-03         -1.111123e-03 
+#&gt;  Pc2.Hydrophilicity.6      Pc2.CIDH920105.6      Pc2.BHAR880101.6 
+#&gt;         -3.787263e-03         -1.619698e-03         -3.377592e-03 
+#&gt;      Pc2.CHAM820101.6      Pc2.CHAM820102.6         Pc2.MyProp1.6 
+#&gt;          3.047700e-03          5.464276e-04         -1.111123e-03 
+#&gt;         Pc2.MyProp2.6         Pc2.MyProp3.6  Pc2.Hydrophobicity.7 
+#&gt;         -3.787263e-03          4.399177e-03         -1.293396e-05 
+#&gt;  Pc2.Hydrophilicity.7      Pc2.CIDH920105.7      Pc2.BHAR880101.7 
+#&gt;          5.636157e-04         -1.375419e-03         -9.471565e-04 
+#&gt;      Pc2.CHAM820101.7      Pc2.CHAM820102.7         Pc2.MyProp1.7 
+#&gt;          2.510108e-03         -8.127858e-05         -1.293396e-05 
+#&gt;         Pc2.MyProp2.7         Pc2.MyProp3.7  Pc2.Hydrophobicity.8 
+#&gt;          5.636157e-04          2.327124e-03         -1.453212e-03 
+#&gt;  Pc2.Hydrophilicity.8      Pc2.CIDH920105.8      Pc2.BHAR880101.8 
+#&gt;         -1.486593e-03          9.121515e-04          2.923706e-03 
+#&gt;      Pc2.CHAM820101.8      Pc2.CHAM820102.8         Pc2.MyProp1.8 
+#&gt;          3.951525e-03          1.697524e-03         -1.453212e-03 
+#&gt;         Pc2.MyProp2.8         Pc2.MyProp3.8  Pc2.Hydrophobicity.9 
+#&gt;         -1.486593e-03          4.742073e-03         -2.259268e-03 
+#&gt;  Pc2.Hydrophilicity.9      Pc2.CIDH920105.9      Pc2.BHAR880101.9 
+#&gt;         -1.199058e-03         -1.997173e-04          1.563555e-05 
+#&gt;      Pc2.CHAM820101.9      Pc2.CHAM820102.9         Pc2.MyProp1.9 
+#&gt;          3.657590e-03         -2.088309e-03         -2.259268e-03 
+#&gt;         Pc2.MyProp2.9         Pc2.MyProp3.9 Pc2.Hydrophobicity.10 
+#&gt;         -1.199058e-03          3.186717e-03          2.248030e-03 
+#&gt; Pc2.Hydrophilicity.10     Pc2.CIDH920105.10     Pc2.BHAR880101.10 
+#&gt;          2.776775e-03          1.979571e-03          4.562424e-03 
+#&gt;     Pc2.CHAM820101.10     Pc2.CHAM820102.10        Pc2.MyProp1.10 
+#&gt;          3.953245e-04          1.488532e-03          2.248030e-03 
+#&gt;        Pc2.MyProp2.10        Pc2.MyProp3.10 Pc2.Hydrophobicity.11 
+#&gt;          2.776775e-03          7.015885e-05          8.132275e-05 
+#&gt; Pc2.Hydrophilicity.11     Pc2.CIDH920105.11     Pc2.BHAR880101.11 
+#&gt;          6.704110e-04          3.111663e-03          1.930726e-03 
+#&gt;     Pc2.CHAM820101.11     Pc2.CHAM820102.11        Pc2.MyProp1.11 
+#&gt;          2.920811e-03         -4.381601e-05          8.132275e-05 
+#&gt;        Pc2.MyProp2.11        Pc2.MyProp3.11 Pc2.Hydrophobicity.12 
+#&gt;          6.704110e-04          1.943423e-03         -7.149996e-04 
+#&gt; Pc2.Hydrophilicity.12     Pc2.CIDH920105.12     Pc2.BHAR880101.12 
+#&gt;         -1.542610e-03          2.052446e-04          7.637776e-04 
+#&gt;     Pc2.CHAM820101.12     Pc2.CHAM820102.12        Pc2.MyProp1.12 
+#&gt;          2.629436e-03          1.082862e-03         -7.149996e-04 
+#&gt;        Pc2.MyProp2.12        Pc2.MyProp3.12 Pc2.Hydrophobicity.13 
+#&gt;         -1.542610e-03          3.152375e-03          1.314200e-03 
+#&gt; Pc2.Hydrophilicity.13     Pc2.CIDH920105.13     Pc2.BHAR880101.13 
+#&gt;          3.363653e-03          3.154151e-03          3.770682e-03 
+#&gt;     Pc2.CHAM820101.13     Pc2.CHAM820102.13        Pc2.MyProp1.13 
+#&gt;          4.367833e-03          3.287165e-03          1.314200e-03 
+#&gt;        Pc2.MyProp2.13        Pc2.MyProp3.13 Pc2.Hydrophobicity.14 
+#&gt;          3.363653e-03          4.548631e-03          6.076342e-04 
+#&gt; Pc2.Hydrophilicity.14     Pc2.CIDH920105.14     Pc2.BHAR880101.14 
+#&gt;         -7.277389e-04          1.821700e-04          1.136616e-03 
+#&gt;     Pc2.CHAM820101.14     Pc2.CHAM820102.14        Pc2.MyProp1.14 
+#&gt;          2.725934e-03         -2.422624e-03          6.076342e-04 
+#&gt;        Pc2.MyProp2.14        Pc2.MyProp3.14 Pc2.Hydrophobicity.15 
+#&gt;         -7.277389e-04          3.644842e-03         -2.415164e-04 
+#&gt; Pc2.Hydrophilicity.15     Pc2.CIDH920105.15     Pc2.BHAR880101.15 
+#&gt;         -2.774263e-03          7.090685e-05          1.886016e-03 
+#&gt;     Pc2.CHAM820101.15     Pc2.CHAM820102.15        Pc2.MyProp1.15 
+#&gt;          3.086345e-03         -8.290011e-04         -2.415164e-04 
+#&gt;        Pc2.MyProp2.15        Pc2.MyProp3.15 Pc2.Hydrophobicity.16 
+#&gt;         -2.774263e-03          3.455495e-03          2.843438e-05 
+#&gt; Pc2.Hydrophilicity.16     Pc2.CIDH920105.16     Pc2.BHAR880101.16 
+#&gt;          1.914495e-03         -5.799552e-05          2.209231e-03 
+#&gt;     Pc2.CHAM820101.16     Pc2.CHAM820102.16        Pc2.MyProp1.16 
+#&gt;          9.447110e-04         -1.832162e-04          2.843438e-05 
+#&gt;        Pc2.MyProp2.16        Pc2.MyProp3.16 Pc2.Hydrophobicity.17 
+#&gt;          1.914495e-03          1.706065e-03          3.724984e-04 
+#&gt; Pc2.Hydrophilicity.17     Pc2.CIDH920105.17     Pc2.BHAR880101.17 
+#&gt;          1.900560e-03         -4.512885e-04          6.174000e-04 
+#&gt;     Pc2.CHAM820101.17     Pc2.CHAM820102.17        Pc2.MyProp1.17 
+#&gt;         -1.942794e-04          5.385367e-04          3.724984e-04 
+#&gt;        Pc2.MyProp2.17        Pc2.MyProp3.17 Pc2.Hydrophobicity.18 
+#&gt;          1.900560e-03         -2.383272e-04         -2.422325e-04 
+#&gt; Pc2.Hydrophilicity.18     Pc2.CIDH920105.18     Pc2.BHAR880101.18 
+#&gt;          1.558471e-03          2.694786e-03         -9.023092e-04 
+#&gt;     Pc2.CHAM820101.18     Pc2.CHAM820102.18        Pc2.MyProp1.18 
+#&gt;          3.617169e-03          2.025085e-03         -2.422325e-04 
+#&gt;        Pc2.MyProp2.18        Pc2.MyProp3.18 Pc2.Hydrophobicity.19 
+#&gt;          1.558471e-03          3.331545e-03          4.949343e-05 
+#&gt; Pc2.Hydrophilicity.19     Pc2.CIDH920105.19     Pc2.BHAR880101.19 
+#&gt;         -6.857316e-04          1.267582e-03         -3.028707e-04 
+#&gt;     Pc2.CHAM820101.19     Pc2.CHAM820102.19        Pc2.MyProp1.19 
+#&gt;          1.116845e-03         -9.942419e-04          4.949343e-05 
+#&gt;        Pc2.MyProp2.19        Pc2.MyProp3.19 Pc2.Hydrophobicity.20 
+#&gt;         -6.857316e-04          1.336517e-03         -2.302207e-04 
+#&gt; Pc2.Hydrophilicity.20     Pc2.CIDH920105.20     Pc2.BHAR880101.20 
+#&gt;          7.171290e-04          1.018011e-03          2.024248e-04 
+#&gt;     Pc2.CHAM820101.20     Pc2.CHAM820102.20        Pc2.MyProp1.20 
+#&gt;          3.103507e-03         -4.292626e-04         -2.302207e-04 
+#&gt;        Pc2.MyProp2.20        Pc2.MyProp3.20 Pc2.Hydrophobicity.21 
+#&gt;          7.171290e-04          2.234626e-03         -5.223873e-04 
+#&gt; Pc2.Hydrophilicity.21     Pc2.CIDH920105.21     Pc2.BHAR880101.21 
+#&gt;          1.269321e-03          2.767261e-03          6.379400e-04 
+#&gt;     Pc2.CHAM820101.21     Pc2.CHAM820102.21        Pc2.MyProp1.21 
+#&gt;          2.719312e-03         -5.515094e-04         -5.223873e-04 
+#&gt;        Pc2.MyProp2.21        Pc2.MyProp3.21 Pc2.Hydrophobicity.22 
+#&gt;          1.269321e-03          3.148752e-03          2.461464e-03 
+#&gt; Pc2.Hydrophilicity.22     Pc2.CIDH920105.22     Pc2.BHAR880101.22 
+#&gt;          2.520929e-03          4.365216e-03          4.823171e-03 
+#&gt;     Pc2.CHAM820101.22     Pc2.CHAM820102.22        Pc2.MyProp1.22 
+#&gt;          6.004310e-03         -3.525639e-04          2.461464e-03 
+#&gt;        Pc2.MyProp2.22        Pc2.MyProp3.22 Pc2.Hydrophobicity.23 
+#&gt;          2.520929e-03          5.044113e-03          1.952803e-03 
+#&gt; Pc2.Hydrophilicity.23     Pc2.CIDH920105.23     Pc2.BHAR880101.23 
+#&gt;          1.910167e-03          1.572223e-03          1.023679e-04 
+#&gt;     Pc2.CHAM820101.23     Pc2.CHAM820102.23        Pc2.MyProp1.23 
+#&gt;          2.158838e-03         -1.900535e-03          1.952803e-03 
+#&gt;        Pc2.MyProp2.23        Pc2.MyProp3.23 Pc2.Hydrophobicity.24 
+#&gt;          1.910167e-03          2.118122e-03         -1.918533e-03 
+#&gt; Pc2.Hydrophilicity.24     Pc2.CIDH920105.24     Pc2.BHAR880101.24 
+#&gt;         -7.946720e-04         -1.023436e-03          4.326760e-04 
+#&gt;     Pc2.CHAM820101.24     Pc2.CHAM820102.24        Pc2.MyProp1.24 
+#&gt;          8.041312e-04         -3.096339e-04         -1.918533e-03 
+#&gt;        Pc2.MyProp2.24        Pc2.MyProp3.24 Pc2.Hydrophobicity.25 
+#&gt;         -7.946720e-04          7.919708e-04         -3.077168e-03 
+#&gt; Pc2.Hydrophilicity.25     Pc2.CIDH920105.25     Pc2.BHAR880101.25 
+#&gt;         -2.000970e-03          1.267741e-03          1.367532e-03 
+#&gt;     Pc2.CHAM820101.25     Pc2.CHAM820102.25        Pc2.MyProp1.25 
+#&gt;          3.039638e-03          9.110689e-04         -3.077168e-03 
+#&gt;        Pc2.MyProp2.25        Pc2.MyProp3.25 Pc2.Hydrophobicity.26 
+#&gt;         -2.000970e-03          2.346114e-03          6.698600e-04 
+#&gt; Pc2.Hydrophilicity.26     Pc2.CIDH920105.26     Pc2.BHAR880101.26 
+#&gt;         -9.414037e-04         -1.228932e-04          6.990684e-04 
+#&gt;     Pc2.CHAM820101.26     Pc2.CHAM820102.26        Pc2.MyProp1.26 
+#&gt;          3.889658e-03         -3.211254e-05          6.698600e-04 
+#&gt;        Pc2.MyProp2.26        Pc2.MyProp3.26 Pc2.Hydrophobicity.27 
+#&gt;         -9.414037e-04          5.287878e-03          4.014679e-03 
+#&gt; Pc2.Hydrophilicity.27     Pc2.CIDH920105.27     Pc2.BHAR880101.27 
+#&gt;          3.558961e-03          2.958180e-03          3.952585e-03 
+#&gt;     Pc2.CHAM820101.27     Pc2.CHAM820102.27        Pc2.MyProp1.27 
+#&gt;          3.050843e-03          3.261111e-04          4.014679e-03 
+#&gt;        Pc2.MyProp2.27        Pc2.MyProp3.27 Pc2.Hydrophobicity.28 
+#&gt;          3.558961e-03          2.621260e-03         -8.390496e-04 
+#&gt; Pc2.Hydrophilicity.28     Pc2.CIDH920105.28     Pc2.BHAR880101.28 
+#&gt;         -1.936381e-03         -1.067034e-03          2.741618e-05 
+#&gt;     Pc2.CHAM820101.28     Pc2.CHAM820102.28        Pc2.MyProp1.28 
+#&gt;          2.754108e-03         -4.269171e-04         -8.390496e-04 
+#&gt;        Pc2.MyProp2.28        Pc2.MyProp3.28 Pc2.Hydrophobicity.29 
+#&gt;         -1.936381e-03          1.931571e-03          1.069554e-03 
+#&gt; Pc2.Hydrophilicity.29     Pc2.CIDH920105.29     Pc2.BHAR880101.29 
+#&gt;          1.588476e-03          1.768304e-03          2.975706e-03 
+#&gt;     Pc2.CHAM820101.29     Pc2.CHAM820102.29        Pc2.MyProp1.29 
+#&gt;          7.609157e-04          1.224138e-03          1.069554e-03 
+#&gt;        Pc2.MyProp2.29        Pc2.MyProp3.29 Pc2.Hydrophobicity.30 
+#&gt;          1.588476e-03          5.908359e-04          2.449004e-04 
+#&gt; Pc2.Hydrophilicity.30     Pc2.CIDH920105.30     Pc2.BHAR880101.30 
+#&gt;          1.119090e-03          7.795027e-04          1.672987e-03 
+#&gt;     Pc2.CHAM820101.30     Pc2.CHAM820102.30        Pc2.MyProp1.30 
+#&gt;          3.002246e-03          3.108433e-03          2.449004e-04 
+#&gt;        Pc2.MyProp2.30        Pc2.MyProp3.30 
+#&gt;          1.119090e-03          3.398358e-03 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

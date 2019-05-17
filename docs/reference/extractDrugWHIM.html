@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -209,13 +209,29 @@ Persepectives in Drug Discovery and Design, 1998, ?:355-380.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
-<span class='co'># }</span><span class='co'># NOT RUN {</span>
-<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
+    <pre class="examples"><div class='input'><span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugWHIM</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
-<span class='co'># }</span></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;   Wlambda1.unity Wlambda2.unity Wlambda3.unity Wnu1.unity Wnu2.unity
+#&gt; 1      0.9148748       1.701534       6.056852 0.10548221  0.1961816
+#&gt; 2      0.8052440       2.366736       7.105803 0.07834802  0.2302769
+#&gt; 3      1.0418358       1.743401       2.260112 0.20649429  0.3455462
+#&gt; 4      0.7630751       1.778282       2.037981 0.16663435  0.3883273
+#&gt; 5      0.5726677       1.586719       1.948499 0.13940694  0.3862616
+#&gt; 6      0.5693994       1.861933       7.803989 0.05563083  0.1819125
+#&gt;   Wgamma1.unity Wgamma2.unity Wgamma3.unity Weta1.unity Weta2.unity Weta3.unity
+#&gt; 1           NaN           NaN           NaN   0.4181859   0.4843001   0.5091855
+#&gt; 2           NaN           NaN           NaN   0.3537120   0.4569316   0.5467652
+#&gt; 3           NaN           NaN           NaN   0.5090874   0.4764000   0.6107750
+#&gt; 4           NaN           NaN           NaN   0.5168376   0.4269940   0.5609107
+#&gt; 5           NaN           NaN           NaN   0.3795667   0.4857948   0.5923140
+#&gt; 6           NaN           NaN           NaN   0.3763019   0.4371447   0.5757821
+#&gt;    WT.unity  WA.unity WV.unity   WK.unity WG.unity WD.unity
+#&gt; 1  8.673261 17.403893 35.50580 0.27375215      NaN 1.411672
+#&gt; 2 10.277784 24.445269 48.26530 0.26853129      NaN 1.357409
+#&gt; 3  5.045349  8.111285 17.26176 0.08596964      NaN 1.596262
+#&gt; 4  4.579339  6.536201 13.88100 0.08377878      NaN 1.504742
+#&gt; 5  4.107886  5.116225 10.99464 0.10574856      NaN 1.457675
+#&gt; 6 10.235321 20.034277 38.54326 0.32184247      NaN 1.389229</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

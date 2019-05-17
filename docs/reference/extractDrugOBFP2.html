@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -157,21 +157,13 @@ the columns represent the fingerprints.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>mol1</span> <span class='kw'>=</span> <span class='st'>'C1CCC1CC(CN(C)(C))CC(=O)CC'</span>  <span class='co'># one molecule SMILE in a vector</span>
+    <pre class="examples"><div class='input'><span class='no'>mol1</span> <span class='kw'>=</span> <span class='st'>'C1CCC1CC(CN(C)(C))CC(=O)CC'</span>  <span class='co'># one molecule SMILE in a vector</span>
 <span class='no'>mol2</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>'CCC'</span>, <span class='st'>'CCN'</span>, <span class='st'>'CCN(C)(C)'</span>, <span class='st'>'c1ccccc1Cc1ccccc1'</span>,
          <span class='st'>'C1CCC1CC(CN(C)(C))CC(=O)CC'</span>)  <span class='co'># multiple SMILEs in a vector</span>
 <span class='no'>mol3</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/readChar'>readChar</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'compseq/DB00860.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>),
                 <span class='kw'>nchars</span> <span class='kw'>=</span> <span class='fl'>1e+6</span>)  <span class='co'># single molecule in a sdf file</span>
 <span class='no'>mol4</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/readChar'>readChar</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>),
-                <span class='kw'>nchars</span> <span class='kw'>=</span> <span class='fl'>1e+6</span>)  <span class='co'># multiple molecules in a sdf file</span>
-
-<span class='co'># }</span><span class='co'># NOT RUN {</span>
-<span class='no'>smifp0</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol1</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'smile'</span>)
-<span class='no'>smifp1</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol2</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'smile'</span>)
-<span class='no'>sdffp0</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol3</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'sdf'</span>)
-<span class='no'>sdffp1</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol4</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'sdf'</span>)
-<span class='co'># }</span></pre>
+                <span class='kw'>nchars</span> <span class='kw'>=</span> <span class='fl'>1e+6</span>)  <span class='co'># multiple molecules in a sdf file</span></div><div class='input'><span class='no'>smifp0</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol1</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'smile'</span>)</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘ChemmineOB’</span></div><div class='input'><span class='no'>smifp1</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol2</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'smile'</span>)</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘ChemmineOB’</span></div><div class='input'><span class='no'>sdffp0</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol3</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'sdf'</span>)</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘ChemmineOB’</span></div><div class='input'><span class='no'>sdffp1</span> <span class='kw'>=</span> <span class='fu'>extractDrugOBFP2</span>(<span class='no'>mol4</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'sdf'</span>)</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘ChemmineOB’</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

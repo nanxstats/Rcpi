@@ -68,7 +68,7 @@ Molecular Fingerprints Similarity or Maximum Common Substructure Search" />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -209,16 +209,64 @@ This function runs for a query compound against a set of molecules.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'compseq/DB00530.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+    <pre class="examples"><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'compseq/DB00530.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
 <span class='co'># DrugBank ID DB00530: Erlotinib</span>
 <span class='no'>moldb</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'compseq/tyrphostin.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
-<span class='co'># Database composed by searching 'tyrphostin' in PubChem and filtered by Lipinski's Rule of Five</span>
-<span class='co'># }</span><span class='co'># NOT RUN {</span>
-<span class='fu'>searchDrug</span>(<span class='no'>mol</span>, <span class='no'>moldb</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>'fp'</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'maccs'</span>, <span class='kw'>fpsim</span> <span class='kw'>=</span> <span class='st'>'hamming'</span>)
-<span class='fu'>searchDrug</span>(<span class='no'>mol</span>, <span class='no'>moldb</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>'fp'</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'fp2'</span>, <span class='kw'>fpsim</span> <span class='kw'>=</span> <span class='st'>'tanimoto'</span>)
-<span class='fu'>searchDrug</span>(<span class='no'>mol</span>, <span class='no'>moldb</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>'mcs'</span>, <span class='kw'>mcssim</span> <span class='kw'>=</span> <span class='st'>'tanimoto'</span>)
-<span class='co'># }</span></pre>
+<span class='co'># Database composed by searching 'tyrphostin' in PubChem and filtered by Lipinski's Rule of Five</span></div><div class='input'><span class='fu'>searchDrug</span>(<span class='no'>mol</span>, <span class='no'>moldb</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>'fp'</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'maccs'</span>, <span class='kw'>fpsim</span> <span class='kw'>=</span> <span class='st'>'hamming'</span>)</div><div class='output co'>#&gt;        66         9        14        13        73         2        12        26 
+#&gt; 0.3313253 0.3253012 0.3253012 0.3192771 0.3192771 0.3072289 0.3012048 0.2951807 
+#&gt;        67         5         8        15        32        78       103        25 
+#&gt; 0.2951807 0.2891566 0.2891566 0.2891566 0.2891566 0.2891566 0.2891566 0.2831325 
+#&gt;        72        51        68        88       105        27        85        86 
+#&gt; 0.2831325 0.2771084 0.2771084 0.2771084 0.2771084 0.2710843 0.2710843 0.2710843 
+#&gt;       104        34        50        65        70        81         6        17 
+#&gt; 0.2710843 0.2650602 0.2650602 0.2650602 0.2650602 0.2650602 0.2590361 0.2590361 
+#&gt;        52        55        64        75        21        30        31        40 
+#&gt; 0.2530120 0.2530120 0.2530120 0.2530120 0.2469880 0.2469880 0.2469880 0.2469880 
+#&gt;        41        48        59        60        69        89        91        93 
+#&gt; 0.2469880 0.2469880 0.2469880 0.2469880 0.2469880 0.2469880 0.2469880 0.2469880 
+#&gt;        19        33        42        61        62        87        97        11 
+#&gt; 0.2409639 0.2409639 0.2409639 0.2409639 0.2409639 0.2409639 0.2409639 0.2349398 
+#&gt;        20        22        46        63        74        84        96        98 
+#&gt; 0.2349398 0.2349398 0.2349398 0.2349398 0.2349398 0.2349398 0.2349398 0.2349398 
+#&gt;        99         4         7        10        23        29        37        43 
+#&gt; 0.2349398 0.2289157 0.2289157 0.2289157 0.2289157 0.2289157 0.2289157 0.2289157 
+#&gt;        44        47        49        53        54        57        58        71 
+#&gt; 0.2289157 0.2289157 0.2289157 0.2289157 0.2289157 0.2289157 0.2289157 0.2289157 
+#&gt;        76        77        79        82         1         3        28        56 
+#&gt; 0.2289157 0.2289157 0.2289157 0.2289157 0.2228916 0.2228916 0.2228916 0.2228916 
+#&gt;        90        95        24        36        45        35        38        80 
+#&gt; 0.2228916 0.2228916 0.2168675 0.2168675 0.2168675 0.2108434 0.2108434 0.2108434 
+#&gt;        39       102        94        16        18        83       101        92 
+#&gt; 0.2048193 0.2048193 0.1927711 0.1686747 0.1686747 0.1686747 0.1385542 0.1204819 
+#&gt;       100 
+#&gt; 0.1204819 </div><div class='input'><span class='fu'>searchDrug</span>(<span class='no'>mol</span>, <span class='no'>moldb</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>'fp'</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'fp2'</span>, <span class='kw'>fpsim</span> <span class='kw'>=</span> <span class='st'>'tanimoto'</span>)</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘ChemmineOB’</span></div><div class='input'><span class='fu'>searchDrug</span>(<span class='no'>mol</span>, <span class='no'>moldb</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>'mcs'</span>, <span class='kw'>mcssim</span> <span class='kw'>=</span> <span class='st'>'tanimoto'</span>)</div><div class='output co'>#&gt;        92       100        23        39        94        64        60        59 
+#&gt; 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784 0.3636364 0.3529412 
+#&gt;        45        37        42        10        35        44        47        71 
+#&gt; 0.3513514 0.3421053 0.3421053 0.3333333 0.3333333 0.3333333 0.3333333 0.3333333 
+#&gt;        76        77        83       101        38        58        73         4 
+#&gt; 0.3333333 0.3333333 0.3255814 0.3243243 0.3170732 0.3055556 0.3055556 0.3000000 
+#&gt;        43        81        16        18        62        40        95        99 
+#&gt; 0.3000000 0.2941176 0.2894737 0.2894737 0.2777778 0.2666667 0.2647059 0.2647059 
+#&gt;         6        33        48        69        93        97        61        63 
+#&gt; 0.2571429 0.2571429 0.2571429 0.2571429 0.2571429 0.2571429 0.2500000 0.2500000 
+#&gt;        79        86        88        84        90        19        50         7 
+#&gt; 0.2500000 0.2500000 0.2500000 0.2352941 0.2352941 0.2325581 0.2307692 0.2250000 
+#&gt;        29        30        53        80        91        65        82        52 
+#&gt; 0.2250000 0.2250000 0.2250000 0.2250000 0.2250000 0.2222222 0.2222222 0.2195122 
+#&gt;        54        55        75        57       103         3        56         1 
+#&gt; 0.2195122 0.2195122 0.2195122 0.2162162 0.2162162 0.2142857 0.2142857 0.2127660 
+#&gt;        67        70        72        24        49        51        87         2 
+#&gt; 0.2121212 0.2121212 0.2105263 0.2093023 0.2093023 0.2093023 0.2058824 0.2051282 
+#&gt;        31       102       104        22        46        74        98        21 
+#&gt; 0.2051282 0.2051282 0.2051282 0.2045455 0.2045455 0.2045455 0.2045455 0.2000000 
+#&gt;        41        36        68       105        78        85        11        20 
+#&gt; 0.2000000 0.1956522 0.1951220 0.1951220 0.1944444 0.1944444 0.1914894 0.1914894 
+#&gt;        26        96         9        14        89         5         8        15 
+#&gt; 0.1914894 0.1914894 0.1904762 0.1904762 0.1904762 0.1891892 0.1891892 0.1891892 
+#&gt;        32        66        27        34        25        17        12        28 
+#&gt; 0.1891892 0.1891892 0.1851852 0.1794872 0.1764706 0.1750000 0.1666667 0.1666667 
+#&gt;        13 
+#&gt; 0.1333333 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.19.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
       </span>
     </div>
 
@@ -176,11 +176,32 @@ quasi-sequence-order descriptors.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtSOCN</span>(<span class='no'>x</span>)
-
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtSOCN</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;  Schneider.lag1  Schneider.lag2  Schneider.lag3  Schneider.lag4  Schneider.lag5 
+#&gt;        204.2036        199.8708        206.8102        197.4828        193.3366 
+#&gt;  Schneider.lag6  Schneider.lag7  Schneider.lag8  Schneider.lag9 Schneider.lag10 
+#&gt;        208.1936        195.5476        200.9789        196.7110        193.9931 
+#&gt; Schneider.lag11 Schneider.lag12 Schneider.lag13 Schneider.lag14 Schneider.lag15 
+#&gt;        199.7031        204.9389        187.0140        198.4702        205.4526 
+#&gt; Schneider.lag16 Schneider.lag17 Schneider.lag18 Schneider.lag19 Schneider.lag20 
+#&gt;        193.1274        187.3529        190.4949        202.8853        198.5299 
+#&gt; Schneider.lag21 Schneider.lag22 Schneider.lag23 Schneider.lag24 Schneider.lag25 
+#&gt;        191.1013        185.0074        189.9857        202.7113        201.6267 
+#&gt; Schneider.lag26 Schneider.lag27 Schneider.lag28 Schneider.lag29 Schneider.lag30 
+#&gt;        194.5770        185.9939        204.1297        191.1629        183.9073 
+#&gt;   Grantham.lag1   Grantham.lag2   Grantham.lag3   Grantham.lag4   Grantham.lag5 
+#&gt;    6674686.0000    6761609.0000    7138892.0000    6748261.0000    6291229.0000 
+#&gt;   Grantham.lag6   Grantham.lag7   Grantham.lag8   Grantham.lag9  Grantham.lag10 
+#&gt;    6839853.0000    6594164.0000    6556148.0000    6620183.0000    6770614.0000 
+#&gt;  Grantham.lag11  Grantham.lag12  Grantham.lag13  Grantham.lag14  Grantham.lag15 
+#&gt;    6495689.0000    6865537.0000    6297267.0000    6498247.0000    6615566.0000 
+#&gt;  Grantham.lag16  Grantham.lag17  Grantham.lag18  Grantham.lag19  Grantham.lag20 
+#&gt;    6572680.0000    6569081.0000    6173947.0000    6570829.0000    6471308.0000 
+#&gt;  Grantham.lag21  Grantham.lag22  Grantham.lag23  Grantham.lag24  Grantham.lag25 
+#&gt;    6461649.0000    5939432.0000    6532121.0000    6652472.0000    6480660.0000 
+#&gt;  Grantham.lag26  Grantham.lag27  Grantham.lag28  Grantham.lag29  Grantham.lag30 
+#&gt;    6382281.0000    6276521.0000    6537634.0000    6442991.0000    6350157.0000 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
