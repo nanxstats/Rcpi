@@ -180,48 +180,11 @@ for sequence-order-coupling numbers.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtQSO</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;  Schneider.Xr.A  Schneider.Xr.R  Schneider.Xr.N  Schneider.Xr.D  Schneider.Xr.C 
-#&gt;    6.096218e-02    6.773576e-02    3.725467e-02    4.910842e-02    6.434897e-02 
-#&gt;  Schneider.Xr.E  Schneider.Xr.Q  Schneider.Xr.G  Schneider.Xr.H  Schneider.Xr.I 
-#&gt;    4.572164e-02    4.572164e-02    7.789612e-02    2.878770e-02    3.386788e-02 
-#&gt;  Schneider.Xr.L  Schneider.Xr.K  Schneider.Xr.M  Schneider.Xr.F  Schneider.Xr.P 
-#&gt;    7.281594e-02    3.725467e-02    1.185376e-02    3.048109e-02    5.080182e-02 
-#&gt;  Schneider.Xr.S  Schneider.Xr.T  Schneider.Xr.W  Schneider.Xr.Y  Schneider.Xr.V 
-#&gt;    8.466970e-02    4.233485e-02    2.201412e-02    4.064145e-02    4.741503e-02 
-#&gt;   Grantham.Xr.A   Grantham.Xr.R   Grantham.Xr.N   Grantham.Xr.D   Grantham.Xr.C 
-#&gt;    1.835033e-06    2.038926e-06    1.121409e-06    1.478221e-06    1.936980e-06 
-#&gt;   Grantham.Xr.E   Grantham.Xr.Q   Grantham.Xr.G   Grantham.Xr.H   Grantham.Xr.I 
-#&gt;    1.376275e-06    1.376275e-06    2.344765e-06    8.665435e-07    1.019463e-06 
-#&gt;   Grantham.Xr.L   Grantham.Xr.K   Grantham.Xr.M   Grantham.Xr.F   Grantham.Xr.P 
-#&gt;    2.191845e-06    1.121409e-06    3.568120e-07    9.175167e-07    1.529194e-06 
-#&gt;   Grantham.Xr.S   Grantham.Xr.T   Grantham.Xr.W   Grantham.Xr.Y   Grantham.Xr.V 
-#&gt;    2.548657e-06    1.274329e-06    6.626509e-07    1.223356e-06    1.427248e-06 
-#&gt;  Schneider.Xd.1  Schneider.Xd.2  Schneider.Xd.3  Schneider.Xd.4  Schneider.Xd.5 
-#&gt;    3.457972e-02    3.384600e-02    3.502111e-02    3.344162e-02    3.273951e-02 
-#&gt;  Schneider.Xd.6  Schneider.Xd.7  Schneider.Xd.8  Schneider.Xd.9 Schneider.Xd.10 
-#&gt;    3.525537e-02    3.311390e-02    3.403364e-02    3.331093e-02    3.285068e-02 
-#&gt; Schneider.Xd.11 Schneider.Xd.12 Schneider.Xd.13 Schneider.Xd.14 Schneider.Xd.15 
-#&gt;    3.381760e-02    3.470422e-02    3.166883e-02    3.360882e-02    3.479121e-02 
-#&gt; Schneider.Xd.16 Schneider.Xd.17 Schneider.Xd.18 Schneider.Xd.19 Schneider.Xd.20 
-#&gt;    3.270408e-02    3.172623e-02    3.225829e-02    3.435647e-02    3.361893e-02 
-#&gt; Schneider.Xd.21 Schneider.Xd.22 Schneider.Xd.23 Schneider.Xd.24 Schneider.Xd.25 
-#&gt;    3.236099e-02    3.132904e-02    3.217206e-02    3.432701e-02    3.414334e-02 
-#&gt; Schneider.Xd.26 Schneider.Xd.27 Schneider.Xd.28 Schneider.Xd.29 Schneider.Xd.30 
-#&gt;    3.294954e-02    3.149609e-02    3.456720e-02    3.237140e-02    3.114275e-02 
-#&gt;   Grantham.Xd.1   Grantham.Xd.2   Grantham.Xd.3   Grantham.Xd.4   Grantham.Xd.5 
-#&gt;    3.402298e-02    3.446605e-02    3.638918e-02    3.439801e-02    3.206838e-02 
-#&gt;   Grantham.Xd.6   Grantham.Xd.7   Grantham.Xd.8   Grantham.Xd.9  Grantham.Xd.10 
-#&gt;    3.486488e-02    3.361253e-02    3.341875e-02    3.374516e-02    3.451195e-02 
-#&gt;  Grantham.Xd.11  Grantham.Xd.12  Grantham.Xd.13  Grantham.Xd.14  Grantham.Xd.15 
-#&gt;    3.311057e-02    3.499580e-02    3.209915e-02    3.312361e-02    3.372162e-02 
-#&gt;  Grantham.Xd.16  Grantham.Xd.17  Grantham.Xd.18  Grantham.Xd.19  Grantham.Xd.20 
-#&gt;    3.350302e-02    3.348467e-02    3.147055e-02    3.349358e-02    3.298629e-02 
-#&gt;  Grantham.Xd.21  Grantham.Xd.22  Grantham.Xd.23  Grantham.Xd.24  Grantham.Xd.25 
-#&gt;    3.293706e-02    3.027516e-02    3.329628e-02    3.390974e-02    3.303396e-02 
-#&gt;  Grantham.Xd.26  Grantham.Xd.27  Grantham.Xd.28  Grantham.Xd.29  Grantham.Xd.30 
-#&gt;    3.253250e-02    3.199340e-02    3.332438e-02    3.284195e-02    3.236875e-02 </div><div class='input'>
-</div></pre>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtQSO</span>(<span class='no'>x</span>)
+
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

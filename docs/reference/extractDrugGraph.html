@@ -172,40 +172,13 @@ This is hashed fingerprints, with a default length of 1024.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
 <span class='no'>fp</span>  <span class='kw'>=</span> <span class='fu'>extractDrugGraph</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>fp</span>)</div><div class='output co'>#&gt; $`1024`
-#&gt;  [1]   31   96  140  186  188  190  195  230  243  245  256  286  287  294  307
-#&gt; [16]  317  319  321  323  334  339  348  358  359  367  397  485  486  504  542
-#&gt; [31]  563  596  716  742  743  756  760  884  928  943  947  965  967  970 1003
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]  114  120  186  228  243  245  255  256  294  309  317  321  334  339  356
-#&gt; [16]  367  388  422  504  544  573  588  596  678  737  742  743  756  785  884
-#&gt; [31]  928  967  970 1003
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]  114  120  186  228  243  245  294  309  334  339  388  422  504  544  573
-#&gt; [16]  588  596  678  737  742  743  756  785  884  928  967  970 1003
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]   41   45  113  114  129  138  163  173  177  179  196  200  219  224  230
-#&gt; [16]  231  243  245  256  290  308  309  315  398  487  544  547  554  587  594
-#&gt; [31]  611  621  680  699  707  730  735  736  738  740  742  743  745  746  747
-#&gt; [46]  779  856  869  884  885  886  895  905  917  926  928  936  946  948  954
-#&gt; [61]  960  963  964  966  967  970  974  978  979  983 1002 1003 1004 1014 1017
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]   10   14   24   26   58  114  120  130  131  155  175  180  186  196  199
-#&gt; [16]  200  213  228  243  245  256  272  286  294  296  309  316  317  321  334
-#&gt; [31]  339  367  393  396  422  444  457  486  504  544  553  583  588  596  630
-#&gt; [46]  678  685  692  699  737  742  743  745  756  785  789  808  839  852  884
-#&gt; [61]  885  886  890  893  899  926  928  935  960  967  970  983 1003 1004 1007
-#&gt; [76] 1012 1015
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]  188  243  245  486  505  742  743  928  967  970 1003
-#&gt; </div></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>fp</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

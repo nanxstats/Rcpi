@@ -199,40 +199,13 @@ United States of America,
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
 <span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='no'>AATopo</span>)
 <span class='no'>tprops</span> <span class='kw'>=</span> <span class='no'>AATopo</span>[, <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>37</span>:<span class='fl'>41</span>, <span class='fl'>43</span>:<span class='fl'>47</span>)]  <span class='co'># select a set of topological descriptors</span>
-<span class='no'>fa</span> <span class='kw'>=</span> <span class='fu'>extractPCMFAScales</span>(<span class='no'>x</span>, <span class='kw'>propmat</span> <span class='kw'>=</span> <span class='no'>tprops</span>, <span class='kw'>factors</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>lag</span> <span class='kw'>=</span> <span class='fl'>7</span>, <span class='kw'>silent</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; Summary of the factor analysis result:
-#&gt; 
-#&gt; Call:
-#&gt; factanal(x = propmat, factors = factors, scores = scores)
-#&gt; 
-#&gt; Uniquenesses:
-#&gt; WhetZ Whetm Whetv Whete Whetp JhetZ Jhetm Jhetv Jhete Jhetp 
-#&gt; 0.005 0.005 0.005 0.005 0.005 0.005 0.005 0.005 0.005 0.005 
-#&gt; 
-#&gt; Loadings:
-#&gt;       Factor1 Factor2 Factor3 Factor4 Factor5
-#&gt; WhetZ  0.982  -0.166                         
-#&gt; Whetm  0.982  -0.166                         
-#&gt; Whetv  0.989  -0.133                         
-#&gt; Whete  0.982  -0.159                         
-#&gt; Whetp  0.989  -0.131                         
-#&gt; JhetZ -0.399   0.881   0.162   0.192         
-#&gt; Jhetm -0.399   0.881   0.162   0.192         
-#&gt; Jhetv          0.985          -0.131         
-#&gt; Jhete -0.378   0.872   0.300                 
-#&gt; Jhetp          0.970  -0.210                 
-#&gt; 
-#&gt;                Factor1 Factor2 Factor3 Factor4 Factor5
-#&gt; SS loadings      5.313   4.340   0.212   0.107   0.003
-#&gt; Proportion Var   0.531   0.434   0.021   0.011   0.000
-#&gt; Cumulative Var   0.531   0.965   0.986   0.997   0.997
-#&gt; 
-#&gt; Test of the hypothesis that 5 factors are sufficient.
-#&gt; The chi square statistic is 472.2 on 5 degrees of freedom.
-#&gt; The p-value is 7.96e-100 </div><div class='input'>
-</div></pre>
+<span class='no'>fa</span> <span class='kw'>=</span> <span class='fu'>extractPCMFAScales</span>(<span class='no'>x</span>, <span class='kw'>propmat</span> <span class='kw'>=</span> <span class='no'>tprops</span>, <span class='kw'>factors</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>lag</span> <span class='kw'>=</span> <span class='fl'>7</span>, <span class='kw'>silent</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

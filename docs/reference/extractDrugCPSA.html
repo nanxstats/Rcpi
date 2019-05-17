@@ -207,36 +207,13 @@ Analytical Chemistry, 1990, 62:2323.2329.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugCPSA</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;     PPSA.1   PPSA.2   PPSA.3   PNSA.1    PNSA.2    PNSA.3   DPSA.1   DPSA.2
-#&gt; 1 327.5371 490.8187 41.15625 181.0096 -271.2453 -38.96328 146.5275 762.0639
-#&gt; 2 313.7180 451.8749 32.42346 194.4487 -280.0811 -29.18968 119.2693 731.9560
-#&gt; 3 330.5395 349.5257 31.84418 107.8858 -114.0828 -26.48350 222.6537 463.6085
-#&gt; 4 326.9037 437.7832 41.35795 159.9431 -214.1927 -43.44578 166.9606 651.9759
-#&gt; 5 329.0320 429.5409 45.43773 160.0877 -208.9894 -52.69737 168.9443 638.5302
-#&gt; 6 397.9809 712.7809 46.72667 116.9178 -209.3989 -33.16350 281.0631 922.1798
-#&gt;     DPSA.3    FPSA.1    FPSA.2     FPSA.3    FNSA.1     FNSA.2      FNSA.3
-#&gt; 1 80.11953 0.6440650 0.9651398 0.08092915 0.3559350 -0.5333733 -0.07661691
-#&gt; 2 61.61315 0.6173525 0.8892257 0.06380477 0.3826475 -0.5511599 -0.05744115
-#&gt; 3 58.32769 0.7539243 0.7972297 0.07263308 0.2460757 -0.2602103 -0.06040595
-#&gt; 4 84.80374 0.6714714 0.8992216 0.08495066 0.3285286 -0.4399592 -0.08923913
-#&gt; 5 98.13511 0.6727025 0.8781918 0.09289697 0.3272975 -0.4272766 -0.10773923
-#&gt; 6 79.89018 0.7729305 1.3843128 0.09074925 0.2270695 -0.4066798 -0.06440782
-#&gt;     WPSA.1   WPSA.2   WPSA.3   WNSA.1    WNSA.2    WNSA.3      RPCG      RNCG
-#&gt; 1 166.5679 249.6042 20.92988 92.05183 -137.9409 -19.81465 0.1843093 0.2405045
-#&gt; 2 159.4210 229.6278 16.47653 98.81237 -142.3279 -14.83323 0.1917478 0.2293170
-#&gt; 3 144.9169 153.2409 13.96130 47.29989  -50.0168 -11.61104 0.2611178 0.3123638
-#&gt; 4 159.1520 213.1333 20.13499 77.86778 -104.2790 -21.15144 0.2079386 0.2916922
-#&gt; 5 160.9360 210.0969 22.22449 78.30201 -102.2208 -25.77532 0.2130907 0.3014902
-#&gt; 6 204.9199 367.0100 24.05950 60.20082 -107.8192 -17.07585 0.1538340 0.1844904
-#&gt;       RPCS      RNCS     THSA     TPSA      RHSA      RPSA
-#&gt; 1 4.602246  8.321894 286.4968 222.0499 0.5633638 0.4366362
-#&gt; 2 2.014090  6.249868 375.6811 132.4856 0.7392871 0.2607129
-#&gt; 3 6.323088  9.643010 273.8336 164.5918 0.6245842 0.3754158
-#&gt; 4 9.691373 10.591504 237.4827 249.3640 0.4877977 0.5122023
-#&gt; 5 7.445272 14.690814 208.0820 281.0376 0.4254215 0.5745785
-#&gt; 6 3.967054  4.434442 330.4110 184.4877 0.6417010 0.3582990</div></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

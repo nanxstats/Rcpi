@@ -182,15 +182,13 @@ gyration of the molecule.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugMomentOfInertia</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;      MOMI.X    MOMI.Y   MOMI.Z  MOMI.XY  MOMI.XZ  MOMI.YZ   MOMI.R
-#&gt; 1 1273.6497 1171.0788 306.7954 1.087587 4.151463 3.817133 5.171376
-#&gt; 2 1551.0291 1303.5888 450.6547 1.189815 3.441724 2.892655 5.463571
-#&gt; 3  365.1318  290.3866 211.5703 1.257399 1.725818 1.372530 3.890696
-#&gt; 4  372.8907  277.4748 194.3705 1.343872 1.918453 1.427556 3.788606
-#&gt; 5  313.0617  217.0054 158.2076 1.442645 1.978803 1.371649 3.633500
-#&gt; 6 1516.4741 1341.8793 282.4184 1.130112 5.369601 4.751387 5.477884</div></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

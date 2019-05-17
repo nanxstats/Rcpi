@@ -185,22 +185,13 @@ Journal of Chemical Information and Computer Sciences, 1998, 38:726-735.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugGravitationalIndex</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;      GRAV.1   GRAV.2    GRAV.3   GRAVH.1  GRAVH.2   GRAVH.3    GRAV.4   GRAV.5
-#&gt; 1 1043.1603 32.29799 10.141846 1174.1792 34.26630 10.549814 2014.8030 44.88656
-#&gt; 2 1262.1186 35.52631 10.806873 1400.0996 37.41790 11.187155 2495.5487 49.95547
-#&gt; 3  555.1187 23.56096  8.218551  678.6475 26.05086  8.787825 1014.4004 31.84965
-#&gt; 4  587.5330 24.23908  8.375500  697.4401 26.40909  8.868203 1102.8203 33.20874
-#&gt; 5  528.8768 22.99732  8.086951  619.2162 24.88406  8.523424  916.9202 30.28069
-#&gt; 6  920.7589 30.34401  9.728562 1089.2443 33.00370 10.289046 1719.6475 41.46863
-#&gt;      GRAV.6
-#&gt; 1 12.630218
-#&gt; 2 13.564028
-#&gt; 3 10.047773
-#&gt; 4 10.331616
-#&gt; 5  9.715023
-#&gt; 6 11.980634</div></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

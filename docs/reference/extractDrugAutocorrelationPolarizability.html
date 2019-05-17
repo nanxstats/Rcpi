@@ -158,29 +158,13 @@ each column represents one feature. This function returns 5 columns named
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugAutocorrelationPolarizability</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;                                                              ATSp1      ATSp2
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 1701.60650 2029.27116
-#&gt; c1(ccc(cc1)O)NC(=O)C                                     495.89994  534.72399
-#&gt; c1ccccc1NC(=O)C                                          455.50726  482.93302
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                               946.53883 1063.80389
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                1534.05845 1739.62219
-#&gt; CC(=O)NO                                                  96.94154   84.55513
-#&gt;                                                              ATSp3      ATSp4
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 2901.03502 3172.98368
-#&gt; c1(ccc(cc1)O)NC(=O)C                                     652.61195  515.81747
-#&gt; c1ccccc1NC(=O)C                                          564.95833  429.88335
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              1456.61225 1023.75834
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                2353.10273 2228.20181
-#&gt; CC(=O)NO                                                  74.25709   29.21835
-#&gt;                                                             ATSp5
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 2944.2852
-#&gt; c1(ccc(cc1)O)NC(=O)C                                     326.0907
-#&gt; c1ccccc1NC(=O)C                                          276.8267
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                               829.6893
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                1901.6994
-#&gt; CC(=O)NO                                                   0.0000</div></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

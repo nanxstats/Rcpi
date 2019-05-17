@@ -160,36 +160,13 @@ where the weight equal to the charges.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugAutocorrelationCharge</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;                                                             ATSc1       ATSc2
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 0.4881987 -0.18184066
-#&gt; c1(ccc(cc1)O)NC(=O)C                                    0.2162844 -0.09614005
-#&gt; c1ccccc1NC(=O)C                                         0.1610223 -0.07980602
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              0.4482949 -0.18396138
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                0.4874214 -0.26408945
-#&gt; CC(=O)NO                                                0.1594416 -0.04328479
-#&gt;                                                                ATSc3
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O  0.061389482
-#&gt; c1(ccc(cc1)O)NC(=O)C                                     0.005670185
-#&gt; c1ccccc1NC(=O)C                                          0.009036194
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              -0.048254404
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                 0.143679832
-#&gt; CC(=O)NO                                                -0.053112581
-#&gt;                                                                ATSc4
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O -0.178985322
-#&gt; c1(ccc(cc1)O)NC(=O)C                                    -0.008711630
-#&gt; c1ccccc1NC(=O)C                                         -0.004998613
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              -0.003141433
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                -0.221230718
-#&gt; CC(=O)NO                                                 0.016676545
-#&gt;                                                                ATSc5
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O  0.116421715
-#&gt; c1(ccc(cc1)O)NC(=O)C                                    -0.021083366
-#&gt; c1ccccc1NC(=O)C                                         -0.004347956
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              -0.006710063
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                 0.162998648
-#&gt; CC(=O)NO                                                 0.000000000</div></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

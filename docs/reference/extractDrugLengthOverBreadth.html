@@ -170,15 +170,13 @@ extents for a series of rotations about the Z axis
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)</div><div class='input'><span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugLengthOverBreadth</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt;     LOBMAX   LOBMIN
-#&gt; 1 1.662321 1.662321
-#&gt; 2 1.584020 1.584020
-#&gt; 3 1.186100 1.149565
-#&gt; 4 1.154386 1.018091
-#&gt; 5 1.087556 1.087556
-#&gt; 6 1.735749 1.735749</div></pre>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>dat</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

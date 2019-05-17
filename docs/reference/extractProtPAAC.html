@@ -221,27 +221,10 @@ Data for Biochemical Research 3rd ed., Clarendon Press Oxford (1986).
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtPAAC</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;         Xc1.A         Xc1.R         Xc1.N         Xc1.D         Xc1.C 
-#&gt;    9.07025432   10.07806035    5.54293319    7.30659376    9.57415734 
-#&gt;         Xc1.E         Xc1.Q         Xc1.G         Xc1.H         Xc1.I 
-#&gt;    6.80269074    6.80269074   11.58976941    4.28317565    5.03903018 
-#&gt;         Xc1.L         Xc1.K         Xc1.M         Xc1.F         Xc1.P 
-#&gt;   10.83391488    5.54293319    1.76366056    4.53512716    7.55854527 
-#&gt;         Xc1.S         Xc1.T         Xc1.W         Xc1.Y         Xc1.V 
-#&gt;   12.59757544    6.29878772    3.27536961    6.04683621    7.05464225 
-#&gt;  Xc2.lambda.1  Xc2.lambda.2  Xc2.lambda.3  Xc2.lambda.4  Xc2.lambda.5 
-#&gt;    0.02514092    0.02500357    0.02527773    0.02553159    0.02445265 
-#&gt;  Xc2.lambda.6  Xc2.lambda.7  Xc2.lambda.8  Xc2.lambda.9 Xc2.lambda.10 
-#&gt;    0.02561910    0.02486131    0.02506656    0.02553952    0.02437663 
-#&gt; Xc2.lambda.11 Xc2.lambda.12 Xc2.lambda.13 Xc2.lambda.14 Xc2.lambda.15 
-#&gt;    0.02491262    0.02533803    0.02351915    0.02479912    0.02548431 
-#&gt; Xc2.lambda.16 Xc2.lambda.17 Xc2.lambda.18 Xc2.lambda.19 Xc2.lambda.20 
-#&gt;    0.02478210    0.02513770    0.02457224    0.02543046    0.02500889 
-#&gt; Xc2.lambda.21 Xc2.lambda.22 Xc2.lambda.23 Xc2.lambda.24 Xc2.lambda.25 
-#&gt;    0.02476967    0.02342389    0.02431684    0.02610300    0.02626722 
-#&gt; Xc2.lambda.26 Xc2.lambda.27 Xc2.lambda.28 Xc2.lambda.29 Xc2.lambda.30 
-#&gt;    0.02457082    0.02343049    0.02588823    0.02490463    0.02451951 </div><div class='input'>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtPAAC</span>(<span class='no'>x</span>)
+
 <span class='no'>myprops</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(<span class='kw'>AccNo</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"MyProp1"</span>, <span class='st'>"MyProp2"</span>, <span class='st'>"MyProp3"</span>),
                      <span class='kw'>A</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>0.62</span>,  -<span class='fl'>0.5</span>, <span class='fl'>15</span>),  <span class='kw'>R</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(-<span class='fl'>2.53</span>,   <span class='fl'>3</span>, <span class='fl'>101</span>),
                      <span class='kw'>N</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(-<span class='fl'>0.78</span>,  <span class='fl'>0.2</span>, <span class='fl'>58</span>),  <span class='kw'>D</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(-<span class='fl'>0.9</span>,    <span class='fl'>3</span>, <span class='fl'>59</span>),
@@ -260,27 +243,9 @@ Data for Biochemical Research 3rd ed., Clarendon Press Oxford (1986).
                 <span class='kw'>props</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>'Hydrophobicity'</span>, <span class='st'>'Hydrophilicity'</span>, <span class='st'>'SideChainMass'</span>,
                           <span class='st'>'CIDH920105'</span>, <span class='st'>'BHAR880101'</span>,
                           <span class='st'>'CHAM820101'</span>, <span class='st'>'CHAM820102'</span>,
-                          <span class='st'>'MyProp1'</span>, <span class='st'>'MyProp2'</span>, <span class='st'>'MyProp3'</span>))</div><div class='output co'>#&gt;         Xc1.A         Xc1.R         Xc1.N         Xc1.D         Xc1.C 
-#&gt;    9.12536927   10.13929919    5.57661456    7.35099191    9.63233423 
-#&gt;         Xc1.E         Xc1.Q         Xc1.G         Xc1.H         Xc1.I 
-#&gt;    6.84402695    6.84402695   11.66019407    4.30920216    5.06964960 
-#&gt;         Xc1.L         Xc1.K         Xc1.M         Xc1.F         Xc1.P 
-#&gt;   10.89974663    5.57661456    1.77437736    4.56268464    7.60447439 
-#&gt;         Xc1.S         Xc1.T         Xc1.W         Xc1.Y         Xc1.V 
-#&gt;   12.67412399    6.33706199    3.29527224    6.08357951    7.09750943 
-#&gt;  Xc2.lambda.1  Xc2.lambda.2  Xc2.lambda.3  Xc2.lambda.4  Xc2.lambda.5 
-#&gt;    0.02472188    0.02515055    0.02559236    0.02588471    0.02419172 
-#&gt;  Xc2.lambda.6  Xc2.lambda.7  Xc2.lambda.8  Xc2.lambda.9 Xc2.lambda.10 
-#&gt;    0.02570312    0.02514005    0.02462544    0.02544711    0.02427250 
-#&gt; Xc2.lambda.11 Xc2.lambda.12 Xc2.lambda.13 Xc2.lambda.14 Xc2.lambda.15 
-#&gt;    0.02462431    0.02510916    0.02335959    0.02501099    0.02525138 
-#&gt; Xc2.lambda.16 Xc2.lambda.17 Xc2.lambda.18 Xc2.lambda.19 Xc2.lambda.20 
-#&gt;    0.02491325    0.02527924    0.02448639    0.02542024    0.02498247 
-#&gt; Xc2.lambda.21 Xc2.lambda.22 Xc2.lambda.23 Xc2.lambda.24 Xc2.lambda.25 
-#&gt;    0.02473118    0.02329787    0.02470748    0.02592993    0.02557742 
-#&gt; Xc2.lambda.26 Xc2.lambda.27 Xc2.lambda.28 Xc2.lambda.29 Xc2.lambda.30 
-#&gt;    0.02469289    0.02360989    0.02570375    0.02473739    0.02436325 </div><div class='input'>
-</div></pre>
+                          <span class='st'>'MyProp1'</span>, <span class='st'>'MyProp2'</span>, <span class='st'>'MyProp3'</span>))
+
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
