@@ -2,6 +2,7 @@
 
 ## Improvements
 
+- Removed AppVeyor CI due to the frequent Bioconductor installation and dependency issues which are not related to the package itself.
 - Updated GitHub repository links due to the recent handle change.
 - Updated the vignette style.
 
