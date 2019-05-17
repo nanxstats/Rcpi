@@ -21,12 +21,12 @@ environment:
   R_INSTALL_ARGS: --no-multiarch
 
   global:
-    BIOC_USE_DEVEL: "FALSE"
+    BIOC_USE_DEVEL: "TRUE"
     WARNINGS_ARE_ERRORS: 1
 
   matrix:
   - R_VERSION: release
-    BIOC_USE_DEVEL: FALSE
+    BIOC_USE_DEVEL: TRUE
     platform: x64
     R_ARCH: x64
 
