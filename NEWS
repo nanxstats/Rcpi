@@ -1,3 +1,10 @@
+# Rcpi 1.21.1 (2019-05-17)
+
+## Improvements
+
+- Updated GitHub repository links due to the recent handle change.
+- Updated the vignette style.
+
 # Rcpi 1.19.2 (2019-02-24)
 
 ## Bug Fixes
