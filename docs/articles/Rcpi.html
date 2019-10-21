@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery • Rcpi</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery">
 <meta property="og:description" content="">
@@ -39,7 +40,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -68,7 +69,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/nanxstats/Rcpi">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -81,13 +82,14 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
             
-            <h4 class="date">2019-05-17</h4>
+            <h4 class="date">2019-10-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/vignettes/Rcpi.Rmd"><code>vignettes/Rcpi.Rmd</code></a></small>
       <div class="hidden name"><code>Rcpi.Rmd</code></div>
@@ -129,10 +131,10 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>To install the Rcpi package, use:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"BiocManager"</span>)</a>
-<a class="sourceLine" id="cb1-2" title="2">BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"Rcpi"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"BiocManager"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>BiocManager<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span>(<span class="st">"Rcpi"</span>)</span></code></pre></div>
 <p>To make the Rcpi package fully functional (especially the Open Babel related functionalities), we recommend the users also install the <em>Enhances</em> packages by:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"Rcpi"</span>, <span class="dt">dependencies =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Imports"</span>, <span class="st">"Enhances"</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>BiocManager<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span>(<span class="st">"Rcpi"</span>, <span class="dt">dependencies =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Imports"</span>, <span class="st">"Enhances"</span>))</span></code></pre></div>
 <p>Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.</p>
 </div>
 <div id="how-to-cite-rcpi" class="section level2">
@@ -143,19 +145,19 @@
 Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions. <em>Bioinformatics</em> 31 (2), 279-281.
 </blockquote>
 <p>BibTeX entry:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><a class="sourceLine" id="cb3-1" title="1"><span class="va">@article</span>{<span class="ot">Rcpi2015</span>,</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="dt">author</span> = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Alex F. Chen.},</a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="dt">title</span> = {{Rcpi: R/Bioconductor package to generate various descriptors</a>
-<a class="sourceLine" id="cb3-4" title="4">  of proteins, compounds and their interactions}},</a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="dt">journal</span> = {Bioinformatics},</a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="dt">year</span> = {2015},</a>
-<a class="sourceLine" id="cb3-7" title="7"><span class="dt">volume</span> = {31},</a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="dt">number</span> = {2},</a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="dt">pages</span> = {279--281},</a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="dt">doi</span> = {10.1093/bioinformatics/btu624},</a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="dt">issn</span> = {1367-4803},</a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="dt">url</span> = {http://bioinformatics.oxfordjournals.org/content/31/2/279}</a>
-<a class="sourceLine" id="cb3-13" title="13">}</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">@article</span>{<span class="ot">Rcpi2015</span>,</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="dt">author</span> = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Alex F. Chen.},</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="dt">title</span> = {{Rcpi: R/Bioconductor package to generate various descriptors</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  of proteins, compounds and their interactions}},</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="dt">journal</span> = {Bioinformatics},</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="dt">year</span> = {2015},</span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="dt">volume</span> = {31},</span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="dt">number</span> = {2},</span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="dt">pages</span> = {279--281},</span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="dt">doi</span> = {10.1093/bioinformatics/btu624},</span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="dt">issn</span> = {1367-4803},</span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="dt">url</span> = {http://bioinformatics.oxfordjournals.org/content/31/2/279}</span>
+<span id="cb3-13"><a href="#cb3-13"></a>}</span></code></pre></div>
 </div>
 </div>
 <div id="applications-in-bioinformatics" class="section level1">
@@ -168,85 +170,85 @@ Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Biocon
 <p>Protein subcellular localization prediction involves the computational prediction of where a protein resides in a cell. It is an important component of bioinformatics-based prediction of protein function and genome annotation, and can also aid us to identify novel drug targets.</p>
 <p>Here we use the subcellular localization dataset of human proteins presented in the study of <span class="citation">Chou and Shen (2008)</span> for a demonstration. The complete dataset includes 3,134 protein sequences (2,750 different proteins), classified into 14 human subcellular locations. We selected two classes of proteins as our benchmark dataset. Class 1 contains 325 <em>extracell</em> proteins, and class 2 includes 307 <em>mitochondrion</em> proteins.</p>
 <p>First, we load the Rcpi package, then read the protein sequences stored in two separated FASTA files with <code><a href="../reference/readFASTA.html">readFASTA()</a></code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb4-2" title="2"></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="co"># load FASTA files</span></a>
-<a class="sourceLine" id="cb4-4" title="4">extracell &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readFASTA.html">readFASTA</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(</a>
-<a class="sourceLine" id="cb4-5" title="5">  <span class="st">"vignettedata/extracell.fasta"</span>,</a>
-<a class="sourceLine" id="cb4-6" title="6">  <span class="dt">package =</span> <span class="st">"Rcpi"</span></a>
-<a class="sourceLine" id="cb4-7" title="7">))</a>
-<a class="sourceLine" id="cb4-8" title="8">mitonchon &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readFASTA.html">readFASTA</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(</a>
-<a class="sourceLine" id="cb4-9" title="9">  <span class="st">"vignettedata/mitochondrion.fasta"</span>,</a>
-<a class="sourceLine" id="cb4-10" title="10">  <span class="dt">package =</span> <span class="st">"Rcpi"</span></a>
-<a class="sourceLine" id="cb4-11" title="11">))</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"Rcpi"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># load FASTA files</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>extracell &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readFASTA.html">readFASTA</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="st">"vignettedata/extracell.fasta"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="dt">package =</span> <span class="st">"Rcpi"</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>))</span>
+<span id="cb4-8"><a href="#cb4-8"></a>mitonchon &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readFASTA.html">readFASTA</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(</span>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="st">"vignettedata/mitochondrion.fasta"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="dt">package =</span> <span class="st">"Rcpi"</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>))</span></code></pre></div>
 <p>The loaded sequences are stored as two lists in R, and each component in the list is a character string representing one protein sequence. In this case, there are 325 <em>extracell</em> protein sequences and 306 <em>mitonchon</em> protein sequences:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(extracell)</a></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co">## [1] 325</span></a></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(mitonchon)</a></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co">## [1] 306</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(extracell)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">## [1] 325</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(mitonchon)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">## [1] 306</span></span></code></pre></div>
 <p>To assure that the protein sequences only have the twenty standard amino acid types which is required for the descriptor computation, we use the <code><a href="../reference/checkProt.html">checkProt()</a></code> function to do the amino acid type sanity checking and remove the <em>non-standard</em> protein sequences:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">extracell &lt;-<span class="st"> </span>extracell[(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(extracell, checkProt))]</a>
-<a class="sourceLine" id="cb9-2" title="2">mitonchon &lt;-<span class="st"> </span>mitonchon[(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(mitonchon, checkProt))]</a></code></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(extracell)</a></code></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co">## [1] 323</span></a></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(mitonchon)</a></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co">## [1] 304</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>extracell &lt;-<span class="st"> </span>extracell[(<span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(extracell, checkProt))]</span>
+<span id="cb9-2"><a href="#cb9-2"></a>mitonchon &lt;-<span class="st"> </span>mitonchon[(<span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(mitonchon, checkProt))]</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(extracell)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">## [1] 323</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(mitonchon)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">## [1] 304</span></span></code></pre></div>
 <p>Two protein sequences were removed from each class. For the remaining sequences, we calculate the amphiphilic pseudo amino acid composition (APAAC) descriptor <span class="citation">Chou (2005)</span> and create class labels for the random forest classification modeling.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co"># calculate APAAC descriptors</span></a>
-<a class="sourceLine" id="cb14-2" title="2">x1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/t">t</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(extracell, extractProtAPAAC))</a>
-<a class="sourceLine" id="cb14-3" title="3">x2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/t">t</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(mitonchon, extractProtAPAAC))</a>
-<a class="sourceLine" id="cb14-4" title="4">x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(x1, x2)</a>
-<a class="sourceLine" id="cb14-5" title="5"></a>
-<a class="sourceLine" id="cb14-6" title="6"><span class="co"># make class labels</span></a>
-<a class="sourceLine" id="cb14-7" title="7">labels &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">as.factor</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="dv">0</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(extracell)), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="dv">1</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(mitonchon))))</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># calculate APAAC descriptors</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>x1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/t.html">t</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(extracell, extractProtAPAAC))</span>
+<span id="cb14-3"><a href="#cb14-3"></a>x2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/t.html">t</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(mitonchon, extractProtAPAAC))</span>
+<span id="cb14-4"><a href="#cb14-4"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(x1, x2)</span>
+<span id="cb14-5"><a href="#cb14-5"></a></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="co"># make class labels</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a>labels &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="dv">0</span>, <span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(extracell)), <span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="dv">1</span>, <span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(mitonchon))))</span></code></pre></div>
 <p>In Rcpi, the functions of commonly used descriptors for protein sequences and proteochemometric (PCM) modeling descriptors are named after <code>extractProt...()</code> and <code>extractPCM...()</code>.</p>
 <p>Next, we will split the data into a 75% training set and a 25% test set.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">1001</span>)</a>
-<a class="sourceLine" id="cb15-2" title="2"></a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="co"># split training and test set</span></a>
-<a class="sourceLine" id="cb15-4" title="4">tr.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(</a>
-<a class="sourceLine" id="cb15-5" title="5">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sample">sample</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x1), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Round">round</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x1) <span class="op">*</span><span class="st"> </span><span class="fl">0.75</span>)),</a>
-<a class="sourceLine" id="cb15-6" title="6">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sample">sample</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x1) <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x2), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Round">round</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x2) <span class="op">*</span><span class="st"> </span><span class="fl">0.75</span>))</a>
-<a class="sourceLine" id="cb15-7" title="7">)</a>
-<a class="sourceLine" id="cb15-8" title="8">te.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sets">setdiff</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x), tr.idx)</a>
-<a class="sourceLine" id="cb15-9" title="9"></a>
-<a class="sourceLine" id="cb15-10" title="10">x.tr &lt;-<span class="st"> </span>x[tr.idx, ]</a>
-<a class="sourceLine" id="cb15-11" title="11">x.te &lt;-<span class="st"> </span>x[te.idx, ]</a>
-<a class="sourceLine" id="cb15-12" title="12">y.tr &lt;-<span class="st"> </span>labels[tr.idx]</a>
-<a class="sourceLine" id="cb15-13" title="13">y.te &lt;-<span class="st"> </span>labels[te.idx]</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">1001</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="co"># split training and test set</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>tr.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(</span>
+<span id="cb15-5"><a href="#cb15-5"></a>  <span class="kw"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x1), <span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x1) <span class="op">*</span><span class="st"> </span><span class="fl">0.75</span>)),</span>
+<span id="cb15-6"><a href="#cb15-6"></a>  <span class="kw"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x1) <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x2), <span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x2) <span class="op">*</span><span class="st"> </span><span class="fl">0.75</span>))</span>
+<span id="cb15-7"><a href="#cb15-7"></a>)</span>
+<span id="cb15-8"><a href="#cb15-8"></a>te.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x), tr.idx)</span>
+<span id="cb15-9"><a href="#cb15-9"></a></span>
+<span id="cb15-10"><a href="#cb15-10"></a>x.tr &lt;-<span class="st"> </span>x[tr.idx, ]</span>
+<span id="cb15-11"><a href="#cb15-11"></a>x.te &lt;-<span class="st"> </span>x[te.idx, ]</span>
+<span id="cb15-12"><a href="#cb15-12"></a>y.tr &lt;-<span class="st"> </span>labels[tr.idx]</span>
+<span id="cb15-13"><a href="#cb15-13"></a>y.te &lt;-<span class="st"> </span>labels[te.idx]</span></code></pre></div>
 <p>We will train a random forest classification model on the training set with 5-fold cross-validation, using the  package.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"randomForest"</span>)</a>
-<a class="sourceLine" id="cb16-2" title="2">rf.fit &lt;-<span class="st"> </span><span class="kw">randomForest</span>(x.tr, y.tr, <span class="dt">cv.fold =</span> <span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb16-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(rf.fit)</a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"randomForest"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2"></a>rf.fit &lt;-<span class="st"> </span><span class="kw">randomForest</span>(x.tr, y.tr, <span class="dt">cv.fold =</span> <span class="dv">5</span>)</span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(rf.fit)</span></code></pre></div>
 <p>The training result is:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="co">## Call:</span></a>
-<a class="sourceLine" id="cb17-2" title="2"><span class="co">##  randomForest(x = x.tr, y = y.tr, cv.fold = 5)</span></a>
-<a class="sourceLine" id="cb17-3" title="3"><span class="co">##                Type of random forest: classification</span></a>
-<a class="sourceLine" id="cb17-4" title="4"><span class="co">##                      Number of trees: 500</span></a>
-<a class="sourceLine" id="cb17-5" title="5"><span class="co">## No. of variables tried at each split: 8</span></a>
-<a class="sourceLine" id="cb17-6" title="6"><span class="co">##</span></a>
-<a class="sourceLine" id="cb17-7" title="7"><span class="co">##         OOB estimate of  error rate: 25.11%</span></a>
-<a class="sourceLine" id="cb17-8" title="8"><span class="co">## Confusion matrix:</span></a>
-<a class="sourceLine" id="cb17-9" title="9"><span class="co">##     0   1 class.error</span></a>
-<a class="sourceLine" id="cb17-10" title="10"><span class="co">## 0 196  46   0.1900826</span></a>
-<a class="sourceLine" id="cb17-11" title="11"><span class="co">## 1  72 156   0.3157895</span></a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">## Call:</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="co">##  randomForest(x = x.tr, y = y.tr, cv.fold = 5)</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co">##                Type of random forest: classification</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="co">##                      Number of trees: 500</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="co">## No. of variables tried at each split: 8</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="co">##</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a><span class="co">##         OOB estimate of  error rate: 25.11%</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="co">## Confusion matrix:</span></span>
+<span id="cb17-9"><a href="#cb17-9"></a><span class="co">##     0   1 class.error</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a><span class="co">## 0 196  46   0.1900826</span></span>
+<span id="cb17-11"><a href="#cb17-11"></a><span class="co">## 1  72 156   0.3157895</span></span></code></pre></div>
 <p>With the model trained on the training set, we predict on the test set and plot the ROC curve with the  package, as is shown in Figure 1.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="co"># predict on test set</span></a>
-<a class="sourceLine" id="cb18-2" title="2">rf.pred &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(rf.fit, <span class="dt">newdata =</span> x.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb18-3" title="3"></a>
-<a class="sourceLine" id="cb18-4" title="4"><span class="co"># plot ROC curve</span></a>
-<a class="sourceLine" id="cb18-5" title="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"pROC"</span>)</a>
-<a class="sourceLine" id="cb18-6" title="6"><span class="kw">plot.roc</span>(y.te, rf.pred, <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># predict on test set</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>rf.pred &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(rf.fit, <span class="dt">newdata =</span> x.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</span>
+<span id="cb18-3"><a href="#cb18-3"></a></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="co"># plot ROC curve</span></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"pROC"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6"></a><span class="kw"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html">plot.roc</a></span>(y.te, rf.pred, <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <img src="figures/ex1-1.png" width="65%" class="img-responsive" align="center" alt="ROC curve for the test set of protein subcellular localization data"><p align="center">
 Figure 1: ROC curve for the test set of protein subcellular localization data
 </p>
 <p>The area under the ROC curve (AUC) is:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="co">## Call:</span></a>
-<a class="sourceLine" id="cb19-2" title="2"><span class="co">## plot.roc.default(x = y.te, predictor = rf.pred, col = "#0080ff",</span></a>
-<a class="sourceLine" id="cb19-3" title="3"><span class="co">##                  grid = TRUE, print.auc = TRUE)</span></a>
-<a class="sourceLine" id="cb19-4" title="4"><span class="co">##</span></a>
-<a class="sourceLine" id="cb19-5" title="5"><span class="co">## Data: rf.pred in 81 controls (y.te 0) &gt; 76 cases (y.te 1).</span></a>
-<a class="sourceLine" id="cb19-6" title="6"><span class="co">## Area under the curve: 0.8697</span></a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">## Call:</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="co">## plot.roc.default(x = y.te, predictor = rf.pred, col = "#0080ff",</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co">##                  grid = TRUE, print.auc = TRUE)</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="co">##</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="co">## Data: rf.pred in 81 controls (y.te 0) &gt; 76 cases (y.te 1).</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="co">## Area under the curve: 0.8697</span></span></code></pre></div>
 </div>
 </div>
 <div id="applications-in-chemoinformatics" class="section level1">
@@ -259,55 +261,55 @@ Figure 1: ROC curve for the test set of protein subcellular localization data
 <p>In <span class="citation">Yan <em>et al.</em> (2012)</span>, a quantitative structure-retention relationship study was performed for 656 flavor compounds on four stationary phases of different polarities, using constitutional, topological and geometrical molecular descriptors. The gas chromatographic retention indices (RIs) of these compounds were accurately predicted using linear models. Here we choose the molecules and their RIs of one stationary phase (OV101) as our benchmark dataset.</p>
 <p>Since it would be rather tedious to implement the complete cross-validation procedures, the R package <code>caret</code> is used here. To run the R code below, users need to install the  package and the required predictive modeling packages first. The  package provides a unified interface for the modeling tuning task across different statistical machine learning packages. It is particularly helpful in QSAR modeling, for it contains tools for data splitting, pre-processing, feature selection, model tuning and other functionalities.</p>
 <p>Just like the last section, we load the Rcpi package, and read the molecules stored in a SMILES file:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb20-2" title="2"></a>
-<a class="sourceLine" id="cb20-3" title="3">RI.smi &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(</a>
-<a class="sourceLine" id="cb20-4" title="4">  <span class="st">"vignettedata/RI.smi"</span>,</a>
-<a class="sourceLine" id="cb20-5" title="5">  <span class="dt">package =</span> <span class="st">"Rcpi"</span></a>
-<a class="sourceLine" id="cb20-6" title="6">)</a>
-<a class="sourceLine" id="cb20-7" title="7">RI.csv &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(</a>
-<a class="sourceLine" id="cb20-8" title="8">  <span class="st">"vignettedata/RI.csv"</span>,</a>
-<a class="sourceLine" id="cb20-9" title="9">  <span class="dt">package =</span> <span class="st">"Rcpi"</span></a>
-<a class="sourceLine" id="cb20-10" title="10">)</a>
-<a class="sourceLine" id="cb20-11" title="11"></a>
-<a class="sourceLine" id="cb20-12" title="12">x.mol &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(RI.smi, <span class="dt">type =</span> <span class="st">"mol"</span>)</a>
-<a class="sourceLine" id="cb20-13" title="13">x.tab &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/read.table">read.table</a></span>(RI.csv, <span class="dt">sep =</span> <span class="st">"</span><span class="ch">\t</span><span class="st">"</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb20-14" title="14">y &lt;-<span class="st"> </span>x.tab<span class="op">$</span>RI</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"Rcpi"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2"></a></span>
+<span id="cb20-3"><a href="#cb20-3"></a>RI.smi &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(</span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="st">"vignettedata/RI.smi"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5"></a>  <span class="dt">package =</span> <span class="st">"Rcpi"</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a>)</span>
+<span id="cb20-7"><a href="#cb20-7"></a>RI.csv &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(</span>
+<span id="cb20-8"><a href="#cb20-8"></a>  <span class="st">"vignettedata/RI.csv"</span>,</span>
+<span id="cb20-9"><a href="#cb20-9"></a>  <span class="dt">package =</span> <span class="st">"Rcpi"</span></span>
+<span id="cb20-10"><a href="#cb20-10"></a>)</span>
+<span id="cb20-11"><a href="#cb20-11"></a></span>
+<span id="cb20-12"><a href="#cb20-12"></a>x.mol &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(RI.smi, <span class="dt">type =</span> <span class="st">"mol"</span>)</span>
+<span id="cb20-13"><a href="#cb20-13"></a>x.tab &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span>(RI.csv, <span class="dt">sep =</span> <span class="st">"</span><span class="ch">\t</span><span class="st">"</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb20-14"><a href="#cb20-14"></a>y &lt;-<span class="st"> </span>x.tab<span class="op">$</span>RI</span></code></pre></div>
 <p>The <code><a href="../reference/readMolFromSmi.html">readMolFromSmi()</a></code> function is used for reading molecules from SMILES files, for molecules stored in SDF files, use <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code> instead.</p>
 <p>The CSV file <code>RI.csv</code> contains tabular data for the retention indices, compound name, and odor information of the compounds. Here we only extracted the RI values by calling <code>x.tab$RI</code>.</p>
 <p>After the molecules were properly loaded, we calculate several selected molecular descriptors. The corresponding functions for molecular descriptor calculation are all named after <code>extractDrug...()</code> in <code>Rcpi</code>:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="co"># calculate selected molecular descriptors</span></a>
-<a class="sourceLine" id="cb21-2" title="2">x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/warning">suppressWarnings</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">cbind</a></span>(</a>
-<a class="sourceLine" id="cb21-3" title="3">  <span class="kw"><a href="../reference/extractDrugALOGP.html">extractDrugALOGP</a></span>(x.mol),</a>
-<a class="sourceLine" id="cb21-4" title="4">  <span class="kw"><a href="../reference/extractDrugApol.html">extractDrugApol</a></span>(x.mol),</a>
-<a class="sourceLine" id="cb21-5" title="5">  <span class="kw"><a href="../reference/extractDrugECI.html">extractDrugECI</a></span>(x.mol),</a>
-<a class="sourceLine" id="cb21-6" title="6">  <span class="kw"><a href="../reference/extractDrugTPSA.html">extractDrugTPSA</a></span>(x.mol),</a>
-<a class="sourceLine" id="cb21-7" title="7">  <span class="kw"><a href="../reference/extractDrugWeight.html">extractDrugWeight</a></span>(x.mol),</a>
-<a class="sourceLine" id="cb21-8" title="8">  <span class="kw"><a href="../reference/extractDrugWienerNumbers.html">extractDrugWienerNumbers</a></span>(x.mol),</a>
-<a class="sourceLine" id="cb21-9" title="9">  <span class="kw"><a href="../reference/extractDrugZagrebIndex.html">extractDrugZagrebIndex</a></span>(x.mol)</a>
-<a class="sourceLine" id="cb21-10" title="10">))</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># calculate selected molecular descriptors</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/warning.html">suppressWarnings</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span>(</span>
+<span id="cb21-3"><a href="#cb21-3"></a>  <span class="kw"><a href="../reference/extractDrugALOGP.html">extractDrugALOGP</a></span>(x.mol),</span>
+<span id="cb21-4"><a href="#cb21-4"></a>  <span class="kw"><a href="../reference/extractDrugApol.html">extractDrugApol</a></span>(x.mol),</span>
+<span id="cb21-5"><a href="#cb21-5"></a>  <span class="kw"><a href="../reference/extractDrugECI.html">extractDrugECI</a></span>(x.mol),</span>
+<span id="cb21-6"><a href="#cb21-6"></a>  <span class="kw"><a href="../reference/extractDrugTPSA.html">extractDrugTPSA</a></span>(x.mol),</span>
+<span id="cb21-7"><a href="#cb21-7"></a>  <span class="kw"><a href="../reference/extractDrugWeight.html">extractDrugWeight</a></span>(x.mol),</span>
+<span id="cb21-8"><a href="#cb21-8"></a>  <span class="kw"><a href="../reference/extractDrugWienerNumbers.html">extractDrugWienerNumbers</a></span>(x.mol),</span>
+<span id="cb21-9"><a href="#cb21-9"></a>  <span class="kw"><a href="../reference/extractDrugZagrebIndex.html">extractDrugZagrebIndex</a></span>(x.mol)</span>
+<span id="cb21-10"><a href="#cb21-10"></a>))</span></code></pre></div>
 <p>After the descriptors were calculated, the result <code>x</code> will be a data frame, each row represents one molecule, and each column is one descriptor (predictor). The Rcpi package integrated the molecular descriptors and chemical fingerprints calculated by the <code>rcdk</code> package <span class="citation">Steinbeck <em>et al.</em> (2003)</span> and the ChemmineOB package <span class="citation">Horan and Girke (2013)</span>.</p>
 <p>Next, a partial least squares model will be fitted with the <code>pls</code> and the <code>caret</code> package. The cross-validation setting is 5-fold repeated cross-validation (repeat for 10 times).</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="co"># regression on training set</span></a>
-<a class="sourceLine" id="cb22-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"caret"</span>)</a>
-<a class="sourceLine" id="cb22-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"pls"</span>)</a>
-<a class="sourceLine" id="cb22-4" title="4"></a>
-<a class="sourceLine" id="cb22-5" title="5"><span class="co"># cross-validation settings</span></a>
-<a class="sourceLine" id="cb22-6" title="6">ctrl &lt;-<span class="st"> </span><span class="kw">trainControl</span>(</a>
-<a class="sourceLine" id="cb22-7" title="7">  <span class="dt">method =</span> <span class="st">"repeatedcv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</a>
-<a class="sourceLine" id="cb22-8" title="8">  <span class="dt">summaryFunction =</span> defaultSummary</a>
-<a class="sourceLine" id="cb22-9" title="9">)</a>
-<a class="sourceLine" id="cb22-10" title="10"></a>
-<a class="sourceLine" id="cb22-11" title="11"><span class="co"># train a pls model</span></a>
-<a class="sourceLine" id="cb22-12" title="12"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">1002</span>)</a>
-<a class="sourceLine" id="cb22-13" title="13">pls.fit &lt;-<span class="st"> </span><span class="kw">train</span>(</a>
-<a class="sourceLine" id="cb22-14" title="14">  x, y,</a>
-<a class="sourceLine" id="cb22-15" title="15">  <span class="dt">method =</span> <span class="st">"pls"</span>, <span class="dt">tuneLength =</span> <span class="dv">10</span>, <span class="dt">trControl =</span> ctrl,</a>
-<a class="sourceLine" id="cb22-16" title="16">  <span class="dt">metric =</span> <span class="st">"RMSE"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</a>
-<a class="sourceLine" id="cb22-17" title="17">)</a>
-<a class="sourceLine" id="cb22-18" title="18"></a>
-<a class="sourceLine" id="cb22-19" title="19"><span class="co"># print cross-validation result</span></a>
-<a class="sourceLine" id="cb22-20" title="20"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(pls.fit)</a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># regression on training set</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"caret"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"pls"</span>)</span>
+<span id="cb22-4"><a href="#cb22-4"></a></span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="co"># cross-validation settings</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a>ctrl &lt;-<span class="st"> </span><span class="kw">trainControl</span>(</span>
+<span id="cb22-7"><a href="#cb22-7"></a>  <span class="dt">method =</span> <span class="st">"repeatedcv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</span>
+<span id="cb22-8"><a href="#cb22-8"></a>  <span class="dt">summaryFunction =</span> defaultSummary</span>
+<span id="cb22-9"><a href="#cb22-9"></a>)</span>
+<span id="cb22-10"><a href="#cb22-10"></a></span>
+<span id="cb22-11"><a href="#cb22-11"></a><span class="co"># train a pls model</span></span>
+<span id="cb22-12"><a href="#cb22-12"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">1002</span>)</span>
+<span id="cb22-13"><a href="#cb22-13"></a>pls.fit &lt;-<span class="st"> </span><span class="kw">train</span>(</span>
+<span id="cb22-14"><a href="#cb22-14"></a>  x, y,</span>
+<span id="cb22-15"><a href="#cb22-15"></a>  <span class="dt">method =</span> <span class="st">"pls"</span>, <span class="dt">tuneLength =</span> <span class="dv">10</span>, <span class="dt">trControl =</span> ctrl,</span>
+<span id="cb22-16"><a href="#cb22-16"></a>  <span class="dt">metric =</span> <span class="st">"RMSE"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</span>
+<span id="cb22-17"><a href="#cb22-17"></a>)</span>
+<span id="cb22-18"><a href="#cb22-18"></a></span>
+<span id="cb22-19"><a href="#cb22-19"></a><span class="co"># print cross-validation result</span></span>
+<span id="cb22-20"><a href="#cb22-20"></a><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(pls.fit)</span></code></pre></div>
 <p>The cross-validation result is:</p>
 <pre><code>Partial Least Squares 
 
@@ -333,18 +335,18 @@ Resampling results across tuning parameters:
 RMSE was used to select the optimal model using the smallest value.
 The final value used for the model was ncomp = 9.</code></pre>
 <p>We see that the RMSE of the PLS regression model was decreasing when the number of principal components (<code>ncomp</code>) was increasing. We can plot the components and RMSE to helps us select the desired number of principal components used in the model.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="co"># # of components vs RMSE</span></a>
-<a class="sourceLine" id="cb24-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(pls.fit, <span class="dt">asp =</span> <span class="fl">0.5</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># # of components vs RMSE</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(pls.fit, <span class="dt">asp =</span> <span class="fl">0.5</span>))</span></code></pre></div>
 <img src="figures/ex2-1.png" width="85%" class="img-responsive" align="center" alt="Number of principal components vs. RMSE for the PLS regression model"><p align="center">
 Figure 2: Number of principal components vs. RMSE for the PLS regression model
 </p>
 <p>From Figure 2, we consider that selecting six or seven components is acceptable. At last, we plot the experimental RIs and the predicted RIs to see if the model fits well on the training set (Figure 3):</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1"><span class="co"># plot experimental RIs vs predicted RIs</span></a>
-<a class="sourceLine" id="cb25-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(y, <span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(pls.fit, x),</a>
-<a class="sourceLine" id="cb25-3" title="3">  <span class="dt">xlim =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/range">range</a></span>(y), <span class="dt">ylim =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/range">range</a></span>(y),</a>
-<a class="sourceLine" id="cb25-4" title="4">  <span class="dt">xlab =</span> <span class="st">"Experimental RIs"</span>, <span class="dt">ylab =</span> <span class="st">"Predicted RIs"</span></a>
-<a class="sourceLine" id="cb25-5" title="5">)</a>
-<a class="sourceLine" id="cb25-6" title="6"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/abline">abline</a></span>(<span class="dt">a =</span> <span class="dv">0</span>, <span class="dt">b =</span> <span class="dv">1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># plot experimental RIs vs predicted RIs</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(y, <span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(pls.fit, x),</span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="dt">xlim =</span> <span class="kw"><a href="https://rdrr.io/r/base/range.html">range</a></span>(y), <span class="dt">ylim =</span> <span class="kw"><a href="https://rdrr.io/r/base/range.html">range</a></span>(y),</span>
+<span id="cb25-4"><a href="#cb25-4"></a>  <span class="dt">xlab =</span> <span class="st">"Experimental RIs"</span>, <span class="dt">ylab =</span> <span class="st">"Predicted RIs"</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>)</span>
+<span id="cb25-6"><a href="#cb25-6"></a><span class="kw"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span>(<span class="dt">a =</span> <span class="dv">0</span>, <span class="dt">b =</span> <span class="dv">1</span>)</span></code></pre></div>
 <img src="figures/ex2-2.png" width="65%" class="img-responsive" align="center" alt="Experimental RIs vs. Predicted RIs"><p align="center">
 Figure 3: Experimental RIs vs. Predicted RIs
 </p>
@@ -355,156 +357,156 @@ Figure 3: Experimental RIs vs. Predicted RIs
 <p>In the perspective of quantitative pharmacology, the successful discovery of novel drugs depends on the pharmacokinetics properties, like <strong>a</strong>bsorption, <strong>d</strong>istribution, <strong>m</strong>etabolism, and <strong>e</strong>xcretion. In addition, the potential <strong>t</strong>oxicity of chemical compounds is taken into account. QSAR or QSPR methods are usually employed to predict the ADME/T qualities of potential drug candidates.</p>
 <p>In <span class="citation">D-S Cao <em>et al.</em> (2012)</span>, quantitative structure-toxicity relationship (QSTR) models were established for classifying five toxicity datasets. Here we use the maximum recommended daily dose dataset (FDAMDD) from FDA Center for Drug Evaluation and Research as the benchmark dataset.</p>
 <p>First, load the drug molecules stored in a SMILES file into R:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb26-2" title="2"></a>
-<a class="sourceLine" id="cb26-3" title="3">fdamdd.smi &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"vignettedata/FDAMDD.smi"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb26-4" title="4">fdamdd.csv &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"vignettedata/FDAMDD.csv"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb26-5" title="5"></a>
-<a class="sourceLine" id="cb26-6" title="6">x.mol &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(fdamdd.smi, <span class="dt">type =</span> <span class="st">"mol"</span>)</a>
-<a class="sourceLine" id="cb26-7" title="7">x.smi &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(fdamdd.smi, <span class="dt">type =</span> <span class="st">"text"</span>)</a>
-<a class="sourceLine" id="cb26-8" title="8">y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">as.factor</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(<span class="st">"class"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/scan">scan</a></span>(fdamdd.csv)))</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"Rcpi"</span>)</span>
+<span id="cb26-2"><a href="#cb26-2"></a></span>
+<span id="cb26-3"><a href="#cb26-3"></a>fdamdd.smi &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"vignettedata/FDAMDD.smi"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4"></a>fdamdd.csv &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"vignettedata/FDAMDD.csv"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</span>
+<span id="cb26-5"><a href="#cb26-5"></a></span>
+<span id="cb26-6"><a href="#cb26-6"></a>x.mol &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(fdamdd.smi, <span class="dt">type =</span> <span class="st">"mol"</span>)</span>
+<span id="cb26-7"><a href="#cb26-7"></a>x.smi &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(fdamdd.smi, <span class="dt">type =</span> <span class="st">"text"</span>)</span>
+<span id="cb26-8"><a href="#cb26-8"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">"class"</span>, <span class="kw"><a href="https://rdrr.io/r/base/scan.html">scan</a></span>(fdamdd.csv)))</span></code></pre></div>
 <p>The object <code>x.mol</code> is used for computing the MACCS and E-state fingerprints; the object <code>x.smi</code> is used for computing the FP4 fingerprints. The 0-1 class labels stored in file <code>FDAMDD.csv</code> indicates whether the drug molecule has high toxicity or not.</p>
 <p>Then we calculate three different types of molecular fingerprints (E-state, MACCS, and FP4) for the drug molecules:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1"><span class="co"># calculate molecular fingerprints</span></a>
-<a class="sourceLine" id="cb27-2" title="2">x1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span>(x.mol)</a>
-<a class="sourceLine" id="cb27-3" title="3">x2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span>(x.mol)</a>
-<a class="sourceLine" id="cb27-4" title="4">x3 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span>(x.smi, <span class="dt">type =</span> <span class="st">"smile"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="co"># calculate molecular fingerprints</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>x1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span>(x.mol)</span>
+<span id="cb27-3"><a href="#cb27-3"></a>x2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span>(x.mol)</span>
+<span id="cb27-4"><a href="#cb27-4"></a>x3 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span>(x.smi, <span class="dt">type =</span> <span class="st">"smile"</span>)</span></code></pre></div>
 <p>As the nature of fingerprint-based structure representation, the calculated 0-1 matrix <code>x1</code>, <code>x2</code>, and <code>x3</code> will be very sparse. Since there are several columns have nearly exactly the same value for all the molecules, we should remove them with <code>nearZeroVar()</code> in <code>caret</code> before modeling, and split our training set and test set:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"caret"</span>)</a>
-<a class="sourceLine" id="cb28-2" title="2"></a>
-<a class="sourceLine" id="cb28-3" title="3"><span class="co"># remove near-zero variance variables</span></a>
-<a class="sourceLine" id="cb28-4" title="4">x1 &lt;-<span class="st"> </span>x1[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x1)]</a>
-<a class="sourceLine" id="cb28-5" title="5">x2 &lt;-<span class="st"> </span>x2[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x2)]</a>
-<a class="sourceLine" id="cb28-6" title="6">x3 &lt;-<span class="st"> </span>x3[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x3)]</a>
-<a class="sourceLine" id="cb28-7" title="7"></a>
-<a class="sourceLine" id="cb28-8" title="8"><span class="co"># split training and test set</span></a>
-<a class="sourceLine" id="cb28-9" title="9"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">1003</span>)</a>
-<a class="sourceLine" id="cb28-10" title="10">tr.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sample">sample</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x1), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Round">round</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x1) <span class="op">*</span><span class="st"> </span><span class="fl">0.75</span>))</a>
-<a class="sourceLine" id="cb28-11" title="11">te.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sets">setdiff</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(x1), tr.idx)</a>
-<a class="sourceLine" id="cb28-12" title="12">x1.tr &lt;-<span class="st"> </span>x1[tr.idx, ]</a>
-<a class="sourceLine" id="cb28-13" title="13">x1.te &lt;-<span class="st"> </span>x1[te.idx, ]</a>
-<a class="sourceLine" id="cb28-14" title="14">x2.tr &lt;-<span class="st"> </span>x2[tr.idx, ]</a>
-<a class="sourceLine" id="cb28-15" title="15">x2.te &lt;-<span class="st"> </span>x2[te.idx, ]</a>
-<a class="sourceLine" id="cb28-16" title="16">x3.tr &lt;-<span class="st"> </span>x3[tr.idx, ]</a>
-<a class="sourceLine" id="cb28-17" title="17">x3.te &lt;-<span class="st"> </span>x3[te.idx, ]</a>
-<a class="sourceLine" id="cb28-18" title="18">y.tr &lt;-<span class="st"> </span>y[tr.idx]</a>
-<a class="sourceLine" id="cb28-19" title="19">y.te &lt;-<span class="st"> </span>y[te.idx]</a></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"caret"</span>)</span>
+<span id="cb28-2"><a href="#cb28-2"></a></span>
+<span id="cb28-3"><a href="#cb28-3"></a><span class="co"># remove near-zero variance variables</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a>x1 &lt;-<span class="st"> </span>x1[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x1)]</span>
+<span id="cb28-5"><a href="#cb28-5"></a>x2 &lt;-<span class="st"> </span>x2[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x2)]</span>
+<span id="cb28-6"><a href="#cb28-6"></a>x3 &lt;-<span class="st"> </span>x3[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x3)]</span>
+<span id="cb28-7"><a href="#cb28-7"></a></span>
+<span id="cb28-8"><a href="#cb28-8"></a><span class="co"># split training and test set</span></span>
+<span id="cb28-9"><a href="#cb28-9"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">1003</span>)</span>
+<span id="cb28-10"><a href="#cb28-10"></a>tr.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x1), <span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x1) <span class="op">*</span><span class="st"> </span><span class="fl">0.75</span>))</span>
+<span id="cb28-11"><a href="#cb28-11"></a>te.idx &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span>(<span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(x1), tr.idx)</span>
+<span id="cb28-12"><a href="#cb28-12"></a>x1.tr &lt;-<span class="st"> </span>x1[tr.idx, ]</span>
+<span id="cb28-13"><a href="#cb28-13"></a>x1.te &lt;-<span class="st"> </span>x1[te.idx, ]</span>
+<span id="cb28-14"><a href="#cb28-14"></a>x2.tr &lt;-<span class="st"> </span>x2[tr.idx, ]</span>
+<span id="cb28-15"><a href="#cb28-15"></a>x2.te &lt;-<span class="st"> </span>x2[te.idx, ]</span>
+<span id="cb28-16"><a href="#cb28-16"></a>x3.tr &lt;-<span class="st"> </span>x3[tr.idx, ]</span>
+<span id="cb28-17"><a href="#cb28-17"></a>x3.te &lt;-<span class="st"> </span>x3[te.idx, ]</span>
+<span id="cb28-18"><a href="#cb28-18"></a>y.tr &lt;-<span class="st"> </span>y[tr.idx]</span>
+<span id="cb28-19"><a href="#cb28-19"></a>y.te &lt;-<span class="st"> </span>y[te.idx]</span></code></pre></div>
 <p>On the training sets, we will train three classification models separately using SVM (RBF kernel), using the <code>kernlab</code> package and the <code>caret</code> package. The cross-validation setting is 5-fold repeated CV (repeat for 10 times).</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1"><span class="co"># svm classification on training sets</span></a>
-<a class="sourceLine" id="cb29-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"kernlab"</span>)</a>
-<a class="sourceLine" id="cb29-3" title="3"></a>
-<a class="sourceLine" id="cb29-4" title="4"><span class="co"># cross-validation settings</span></a>
-<a class="sourceLine" id="cb29-5" title="5">ctrl &lt;-<span class="st"> </span><span class="kw">trainControl</span>(</a>
-<a class="sourceLine" id="cb29-6" title="6">  <span class="dt">method =</span> <span class="st">"cv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</a>
-<a class="sourceLine" id="cb29-7" title="7">  <span class="dt">classProbs =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb29-8" title="8">  <span class="dt">summaryFunction =</span> twoClassSummary</a>
-<a class="sourceLine" id="cb29-9" title="9">)</a>
-<a class="sourceLine" id="cb29-10" title="10"></a>
-<a class="sourceLine" id="cb29-11" title="11"><span class="co"># SVM with RBF kernel</span></a>
-<a class="sourceLine" id="cb29-12" title="12">svm.fit1 &lt;-<span class="st"> </span><span class="kw">train</span>(</a>
-<a class="sourceLine" id="cb29-13" title="13">  x1.tr, y.tr,</a>
-<a class="sourceLine" id="cb29-14" title="14">  <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</a>
-<a class="sourceLine" id="cb29-15" title="15">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</a>
-<a class="sourceLine" id="cb29-16" title="16">)</a>
-<a class="sourceLine" id="cb29-17" title="17">svm.fit2 &lt;-<span class="st"> </span><span class="kw">train</span>(</a>
-<a class="sourceLine" id="cb29-18" title="18">  x2.tr, y.tr,</a>
-<a class="sourceLine" id="cb29-19" title="19">  <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</a>
-<a class="sourceLine" id="cb29-20" title="20">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</a>
-<a class="sourceLine" id="cb29-21" title="21">)</a>
-<a class="sourceLine" id="cb29-22" title="22">svm.fit3 &lt;-<span class="st"> </span><span class="kw">train</span>(</a>
-<a class="sourceLine" id="cb29-23" title="23">  x3.tr, y.tr,</a>
-<a class="sourceLine" id="cb29-24" title="24">  <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</a>
-<a class="sourceLine" id="cb29-25" title="25">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</a>
-<a class="sourceLine" id="cb29-26" title="26">)</a>
-<a class="sourceLine" id="cb29-27" title="27"></a>
-<a class="sourceLine" id="cb29-28" title="28"><span class="co"># print cross-validation result</span></a>
-<a class="sourceLine" id="cb29-29" title="29"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(svm.fit1)</a>
-<a class="sourceLine" id="cb29-30" title="30"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(svm.fit2)</a>
-<a class="sourceLine" id="cb29-31" title="31"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(svm.fit3)</a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="co"># svm classification on training sets</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"kernlab"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3"></a></span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="co"># cross-validation settings</span></span>
+<span id="cb29-5"><a href="#cb29-5"></a>ctrl &lt;-<span class="st"> </span><span class="kw">trainControl</span>(</span>
+<span id="cb29-6"><a href="#cb29-6"></a>  <span class="dt">method =</span> <span class="st">"cv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</span>
+<span id="cb29-7"><a href="#cb29-7"></a>  <span class="dt">classProbs =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb29-8"><a href="#cb29-8"></a>  <span class="dt">summaryFunction =</span> twoClassSummary</span>
+<span id="cb29-9"><a href="#cb29-9"></a>)</span>
+<span id="cb29-10"><a href="#cb29-10"></a></span>
+<span id="cb29-11"><a href="#cb29-11"></a><span class="co"># SVM with RBF kernel</span></span>
+<span id="cb29-12"><a href="#cb29-12"></a>svm.fit1 &lt;-<span class="st"> </span><span class="kw">train</span>(</span>
+<span id="cb29-13"><a href="#cb29-13"></a>  x1.tr, y.tr,</span>
+<span id="cb29-14"><a href="#cb29-14"></a>  <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</span>
+<span id="cb29-15"><a href="#cb29-15"></a>  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</span>
+<span id="cb29-16"><a href="#cb29-16"></a>)</span>
+<span id="cb29-17"><a href="#cb29-17"></a>svm.fit2 &lt;-<span class="st"> </span><span class="kw">train</span>(</span>
+<span id="cb29-18"><a href="#cb29-18"></a>  x2.tr, y.tr,</span>
+<span id="cb29-19"><a href="#cb29-19"></a>  <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</span>
+<span id="cb29-20"><a href="#cb29-20"></a>  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</span>
+<span id="cb29-21"><a href="#cb29-21"></a>)</span>
+<span id="cb29-22"><a href="#cb29-22"></a>svm.fit3 &lt;-<span class="st"> </span><span class="kw">train</span>(</span>
+<span id="cb29-23"><a href="#cb29-23"></a>  x3.tr, y.tr,</span>
+<span id="cb29-24"><a href="#cb29-24"></a>  <span class="dt">method =</span> <span class="st">"svmRadial"</span>, <span class="dt">trControl =</span> ctrl,</span>
+<span id="cb29-25"><a href="#cb29-25"></a>  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</span>
+<span id="cb29-26"><a href="#cb29-26"></a>)</span>
+<span id="cb29-27"><a href="#cb29-27"></a></span>
+<span id="cb29-28"><a href="#cb29-28"></a><span class="co"># print cross-validation result</span></span>
+<span id="cb29-29"><a href="#cb29-29"></a><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(svm.fit1)</span>
+<span id="cb29-30"><a href="#cb29-30"></a><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(svm.fit2)</span>
+<span id="cb29-31"><a href="#cb29-31"></a><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(svm.fit3)</span></code></pre></div>
 <p>The training result when using E-state fingerprints:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1"><span class="co">## Support Vector Machines with Radial Basis Function Kernel</span></a>
-<a class="sourceLine" id="cb30-2" title="2"><span class="co">##</span></a>
-<a class="sourceLine" id="cb30-3" title="3"><span class="co">## 597 samples</span></a>
-<a class="sourceLine" id="cb30-4" title="4"><span class="co">##  23 predictors</span></a>
-<a class="sourceLine" id="cb30-5" title="5"><span class="co">##   2 classes: "class0", "class1"</span></a>
-<a class="sourceLine" id="cb30-6" title="6"><span class="co">##</span></a>
-<a class="sourceLine" id="cb30-7" title="7"><span class="co">## Pre-processing: centered, scaled</span></a>
-<a class="sourceLine" id="cb30-8" title="8"><span class="co">## Resampling: Cross-Validated (5 fold)</span></a>
-<a class="sourceLine" id="cb30-9" title="9"><span class="co">##</span></a>
-<a class="sourceLine" id="cb30-10" title="10"><span class="co">## Summary of sample sizes: 478, 479, 477, 477, 477</span></a>
-<a class="sourceLine" id="cb30-11" title="11"><span class="co">##</span></a>
-<a class="sourceLine" id="cb30-12" title="12"><span class="co">## Resampling results across tuning parameters:</span></a>
-<a class="sourceLine" id="cb30-13" title="13"><span class="co">##</span></a>
-<a class="sourceLine" id="cb30-14" title="14"><span class="co">##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></a>
-<a class="sourceLine" id="cb30-15" title="15"><span class="co">##   0.25  0.797  0.7    0.765  0.0211  0.0442   0.00666</span></a>
-<a class="sourceLine" id="cb30-16" title="16"><span class="co">##   0.5   0.808  0.696  0.79   0.0173  0.059    0.0236</span></a>
-<a class="sourceLine" id="cb30-17" title="17"><span class="co">##   1     0.812  0.703  0.781  0.0191  0.0664   0.0228</span></a>
-<a class="sourceLine" id="cb30-18" title="18"><span class="co">##</span></a>
-<a class="sourceLine" id="cb30-19" title="19"><span class="co">## Tuning parameter "sigma" was held constant at a value of 0.02921559</span></a>
-<a class="sourceLine" id="cb30-20" title="20"><span class="co">## ROC was used to select the optimal model using  the largest value.</span></a>
-<a class="sourceLine" id="cb30-21" title="21"><span class="co">## The final values used for the model were sigma = 0.0292 and C = 1.</span></a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="co">## Support Vector Machines with Radial Basis Function Kernel</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="co">##</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a><span class="co">## 597 samples</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a><span class="co">##  23 predictors</span></span>
+<span id="cb30-5"><a href="#cb30-5"></a><span class="co">##   2 classes: "class0", "class1"</span></span>
+<span id="cb30-6"><a href="#cb30-6"></a><span class="co">##</span></span>
+<span id="cb30-7"><a href="#cb30-7"></a><span class="co">## Pre-processing: centered, scaled</span></span>
+<span id="cb30-8"><a href="#cb30-8"></a><span class="co">## Resampling: Cross-Validated (5 fold)</span></span>
+<span id="cb30-9"><a href="#cb30-9"></a><span class="co">##</span></span>
+<span id="cb30-10"><a href="#cb30-10"></a><span class="co">## Summary of sample sizes: 478, 479, 477, 477, 477</span></span>
+<span id="cb30-11"><a href="#cb30-11"></a><span class="co">##</span></span>
+<span id="cb30-12"><a href="#cb30-12"></a><span class="co">## Resampling results across tuning parameters:</span></span>
+<span id="cb30-13"><a href="#cb30-13"></a><span class="co">##</span></span>
+<span id="cb30-14"><a href="#cb30-14"></a><span class="co">##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></span>
+<span id="cb30-15"><a href="#cb30-15"></a><span class="co">##   0.25  0.797  0.7    0.765  0.0211  0.0442   0.00666</span></span>
+<span id="cb30-16"><a href="#cb30-16"></a><span class="co">##   0.5   0.808  0.696  0.79   0.0173  0.059    0.0236</span></span>
+<span id="cb30-17"><a href="#cb30-17"></a><span class="co">##   1     0.812  0.703  0.781  0.0191  0.0664   0.0228</span></span>
+<span id="cb30-18"><a href="#cb30-18"></a><span class="co">##</span></span>
+<span id="cb30-19"><a href="#cb30-19"></a><span class="co">## Tuning parameter "sigma" was held constant at a value of 0.02921559</span></span>
+<span id="cb30-20"><a href="#cb30-20"></a><span class="co">## ROC was used to select the optimal model using  the largest value.</span></span>
+<span id="cb30-21"><a href="#cb30-21"></a><span class="co">## The final values used for the model were sigma = 0.0292 and C = 1.</span></span></code></pre></div>
 <p>We can see that, after removing the near zero variance predictors, there were only 23 predictors left for the original 79 E-state fingerprints.</p>
 <p>The training result when using MACCS keys:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="co">## Support Vector Machines with Radial Basis Function Kernel</span></a>
-<a class="sourceLine" id="cb31-2" title="2"><span class="co">##</span></a>
-<a class="sourceLine" id="cb31-3" title="3"><span class="co">## 597 samples</span></a>
-<a class="sourceLine" id="cb31-4" title="4"><span class="co">## 126 predictors</span></a>
-<a class="sourceLine" id="cb31-5" title="5"><span class="co">##   2 classes: "class0", "class1"</span></a>
-<a class="sourceLine" id="cb31-6" title="6"><span class="co">##</span></a>
-<a class="sourceLine" id="cb31-7" title="7"><span class="co">## Pre-processing: centered, scaled</span></a>
-<a class="sourceLine" id="cb31-8" title="8"><span class="co">## Resampling: Cross-Validated (5 fold)</span></a>
-<a class="sourceLine" id="cb31-9" title="9"><span class="co">##</span></a>
-<a class="sourceLine" id="cb31-10" title="10"><span class="co">## Summary of sample sizes: 477, 477, 477, 478, 479</span></a>
-<a class="sourceLine" id="cb31-11" title="11"><span class="co">##</span></a>
-<a class="sourceLine" id="cb31-12" title="12"><span class="co">## Resampling results across tuning parameters:</span></a>
-<a class="sourceLine" id="cb31-13" title="13"><span class="co">##</span></a>
-<a class="sourceLine" id="cb31-14" title="14"><span class="co">##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></a>
-<a class="sourceLine" id="cb31-15" title="15"><span class="co">##   0.25  0.834  0.715  0.775  0.0284  0.0994   0.0589</span></a>
-<a class="sourceLine" id="cb31-16" title="16"><span class="co">##   0.5   0.848  0.726  0.79   0.0299  0.065    0.0493</span></a>
-<a class="sourceLine" id="cb31-17" title="17"><span class="co">##   1     0.863  0.769  0.793  0.0307  0.0229   0.0561</span></a>
-<a class="sourceLine" id="cb31-18" title="18"><span class="co">##</span></a>
-<a class="sourceLine" id="cb31-19" title="19"><span class="co">## Tuning parameter "sigma" was held constant at a value of 0.004404305</span></a>
-<a class="sourceLine" id="cb31-20" title="20"><span class="co">## ROC was used to select the optimal model using  the largest value.</span></a>
-<a class="sourceLine" id="cb31-21" title="21"><span class="co">## The final values used for the model were sigma = 0.0044 and C = 1.</span></a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co">## Support Vector Machines with Radial Basis Function Kernel</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="co">##</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="co">## 597 samples</span></span>
+<span id="cb31-4"><a href="#cb31-4"></a><span class="co">## 126 predictors</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a><span class="co">##   2 classes: "class0", "class1"</span></span>
+<span id="cb31-6"><a href="#cb31-6"></a><span class="co">##</span></span>
+<span id="cb31-7"><a href="#cb31-7"></a><span class="co">## Pre-processing: centered, scaled</span></span>
+<span id="cb31-8"><a href="#cb31-8"></a><span class="co">## Resampling: Cross-Validated (5 fold)</span></span>
+<span id="cb31-9"><a href="#cb31-9"></a><span class="co">##</span></span>
+<span id="cb31-10"><a href="#cb31-10"></a><span class="co">## Summary of sample sizes: 477, 477, 477, 478, 479</span></span>
+<span id="cb31-11"><a href="#cb31-11"></a><span class="co">##</span></span>
+<span id="cb31-12"><a href="#cb31-12"></a><span class="co">## Resampling results across tuning parameters:</span></span>
+<span id="cb31-13"><a href="#cb31-13"></a><span class="co">##</span></span>
+<span id="cb31-14"><a href="#cb31-14"></a><span class="co">##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></span>
+<span id="cb31-15"><a href="#cb31-15"></a><span class="co">##   0.25  0.834  0.715  0.775  0.0284  0.0994   0.0589</span></span>
+<span id="cb31-16"><a href="#cb31-16"></a><span class="co">##   0.5   0.848  0.726  0.79   0.0299  0.065    0.0493</span></span>
+<span id="cb31-17"><a href="#cb31-17"></a><span class="co">##   1     0.863  0.769  0.793  0.0307  0.0229   0.0561</span></span>
+<span id="cb31-18"><a href="#cb31-18"></a><span class="co">##</span></span>
+<span id="cb31-19"><a href="#cb31-19"></a><span class="co">## Tuning parameter "sigma" was held constant at a value of 0.004404305</span></span>
+<span id="cb31-20"><a href="#cb31-20"></a><span class="co">## ROC was used to select the optimal model using  the largest value.</span></span>
+<span id="cb31-21"><a href="#cb31-21"></a><span class="co">## The final values used for the model were sigma = 0.0044 and C = 1.</span></span></code></pre></div>
 <p>There are 126 predictors left for the original 166 MACCS keys after removing the near-zero variance predictors. The model performance by AUC values is slightly better than using the E-state fingerprints.</p>
 <p>The training result when using FP4 fingerprints:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co">## Support Vector Machines with Radial Basis Function Kernel</span></a>
-<a class="sourceLine" id="cb32-2" title="2"><span class="co">##</span></a>
-<a class="sourceLine" id="cb32-3" title="3"><span class="co">## 597 samples</span></a>
-<a class="sourceLine" id="cb32-4" title="4"><span class="co">##  58 predictors</span></a>
-<a class="sourceLine" id="cb32-5" title="5"><span class="co">##   2 classes: "class0", "class1"</span></a>
-<a class="sourceLine" id="cb32-6" title="6"><span class="co">##</span></a>
-<a class="sourceLine" id="cb32-7" title="7"><span class="co">## Pre-processing: centered, scaled</span></a>
-<a class="sourceLine" id="cb32-8" title="8"><span class="co">## Resampling: Cross-Validated (5 fold)</span></a>
-<a class="sourceLine" id="cb32-9" title="9"><span class="co">##</span></a>
-<a class="sourceLine" id="cb32-10" title="10"><span class="co">## Summary of sample sizes: 478, 478, 477, 478, 477</span></a>
-<a class="sourceLine" id="cb32-11" title="11"><span class="co">##</span></a>
-<a class="sourceLine" id="cb32-12" title="12"><span class="co">## Resampling results across tuning parameters:</span></a>
-<a class="sourceLine" id="cb32-13" title="13"><span class="co">##</span></a>
-<a class="sourceLine" id="cb32-14" title="14"><span class="co">##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></a>
-<a class="sourceLine" id="cb32-15" title="15"><span class="co">##   0.25  0.845  0.769  0.746  0.0498  0.0458   0.0877</span></a>
-<a class="sourceLine" id="cb32-16" title="16"><span class="co">##   0.5   0.856  0.744  0.777  0.0449  0.0148   0.0728</span></a>
-<a class="sourceLine" id="cb32-17" title="17"><span class="co">##   1     0.863  0.751  0.777  0.0428  0.036    0.0651</span></a>
-<a class="sourceLine" id="cb32-18" title="18"><span class="co">##</span></a>
-<a class="sourceLine" id="cb32-19" title="19"><span class="co">## Tuning parameter "sigma" was held constant at a value of 0.01077024</span></a>
-<a class="sourceLine" id="cb32-20" title="20"><span class="co">## ROC was used to select the optimal model using  the largest value.</span></a>
-<a class="sourceLine" id="cb32-21" title="21"><span class="co">## The final values used for the model were sigma = 0.0108 and C = 1.</span></a></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">## Support Vector Machines with Radial Basis Function Kernel</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a><span class="co">##</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a><span class="co">## 597 samples</span></span>
+<span id="cb32-4"><a href="#cb32-4"></a><span class="co">##  58 predictors</span></span>
+<span id="cb32-5"><a href="#cb32-5"></a><span class="co">##   2 classes: "class0", "class1"</span></span>
+<span id="cb32-6"><a href="#cb32-6"></a><span class="co">##</span></span>
+<span id="cb32-7"><a href="#cb32-7"></a><span class="co">## Pre-processing: centered, scaled</span></span>
+<span id="cb32-8"><a href="#cb32-8"></a><span class="co">## Resampling: Cross-Validated (5 fold)</span></span>
+<span id="cb32-9"><a href="#cb32-9"></a><span class="co">##</span></span>
+<span id="cb32-10"><a href="#cb32-10"></a><span class="co">## Summary of sample sizes: 478, 478, 477, 478, 477</span></span>
+<span id="cb32-11"><a href="#cb32-11"></a><span class="co">##</span></span>
+<span id="cb32-12"><a href="#cb32-12"></a><span class="co">## Resampling results across tuning parameters:</span></span>
+<span id="cb32-13"><a href="#cb32-13"></a><span class="co">##</span></span>
+<span id="cb32-14"><a href="#cb32-14"></a><span class="co">##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></span>
+<span id="cb32-15"><a href="#cb32-15"></a><span class="co">##   0.25  0.845  0.769  0.746  0.0498  0.0458   0.0877</span></span>
+<span id="cb32-16"><a href="#cb32-16"></a><span class="co">##   0.5   0.856  0.744  0.777  0.0449  0.0148   0.0728</span></span>
+<span id="cb32-17"><a href="#cb32-17"></a><span class="co">##   1     0.863  0.751  0.777  0.0428  0.036    0.0651</span></span>
+<span id="cb32-18"><a href="#cb32-18"></a><span class="co">##</span></span>
+<span id="cb32-19"><a href="#cb32-19"></a><span class="co">## Tuning parameter "sigma" was held constant at a value of 0.01077024</span></span>
+<span id="cb32-20"><a href="#cb32-20"></a><span class="co">## ROC was used to select the optimal model using  the largest value.</span></span>
+<span id="cb32-21"><a href="#cb32-21"></a><span class="co">## The final values used for the model were sigma = 0.0108 and C = 1.</span></span></code></pre></div>
 <p>There are 58 predictors left for the original 512 FP4 fingerprints after the screening. The model performance by AUC values is almost the same comparing to using MACCS keys, and better than using E-state fingerprints.</p>
 <p>We predict on the test sets with the established models, and plot the ROC curves in one figure, as is shown in Figure 4.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="co"># predict on test set</span></a>
-<a class="sourceLine" id="cb33-2" title="2">svm.pred1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(svm.fit1, <span class="dt">newdata =</span> x1.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb33-3" title="3">svm.pred2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(svm.fit2, <span class="dt">newdata =</span> x2.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb33-4" title="4">svm.pred3 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(svm.fit3, <span class="dt">newdata =</span> x3.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb33-5" title="5"></a>
-<a class="sourceLine" id="cb33-6" title="6"><span class="co"># generate colors</span></a>
-<a class="sourceLine" id="cb33-7" title="7"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"RColorBrewer"</span>)</a>
-<a class="sourceLine" id="cb33-8" title="8">pal &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/RColorBrewer/topics/ColorBrewer">brewer.pal</a></span>(<span class="dv">3</span>, <span class="st">"Set1"</span>)</a>
-<a class="sourceLine" id="cb33-9" title="9"></a>
-<a class="sourceLine" id="cb33-10" title="10"><span class="co"># ROC curves of different fingerprints</span></a>
-<a class="sourceLine" id="cb33-11" title="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"pROC"</span>)</a>
-<a class="sourceLine" id="cb33-12" title="12"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/smooth">smooth</a></span>(<span class="kw">roc</span>(y.te, svm.pred1)), <span class="dt">col =</span> pal[<span class="dv">1</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb33-13" title="13"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/smooth">smooth</a></span>(<span class="kw">roc</span>(y.te, svm.pred2)), <span class="dt">col =</span> pal[<span class="dv">2</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb33-14" title="14"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/smooth">smooth</a></span>(<span class="kw">roc</span>(y.te, svm.pred3)), <span class="dt">col =</span> pal[<span class="dv">3</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># predict on test set</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>svm.pred1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(svm.fit1, <span class="dt">newdata =</span> x1.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</span>
+<span id="cb33-3"><a href="#cb33-3"></a>svm.pred2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(svm.fit2, <span class="dt">newdata =</span> x2.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</span>
+<span id="cb33-4"><a href="#cb33-4"></a>svm.pred3 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(svm.fit3, <span class="dt">newdata =</span> x3.te, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</span>
+<span id="cb33-5"><a href="#cb33-5"></a></span>
+<span id="cb33-6"><a href="#cb33-6"></a><span class="co"># generate colors</span></span>
+<span id="cb33-7"><a href="#cb33-7"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"RColorBrewer"</span>)</span>
+<span id="cb33-8"><a href="#cb33-8"></a>pal &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal</a></span>(<span class="dv">3</span>, <span class="st">"Set1"</span>)</span>
+<span id="cb33-9"><a href="#cb33-9"></a></span>
+<span id="cb33-10"><a href="#cb33-10"></a><span class="co"># ROC curves of different fingerprints</span></span>
+<span id="cb33-11"><a href="#cb33-11"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"pROC"</span>)</span>
+<span id="cb33-12"><a href="#cb33-12"></a><span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/smooth.html">smooth</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/roc.html">roc</a></span>(y.te, svm.pred1)), <span class="dt">col =</span> pal[<span class="dv">1</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb33-13"><a href="#cb33-13"></a><span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/smooth.html">smooth</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/roc.html">roc</a></span>(y.te, svm.pred2)), <span class="dt">col =</span> pal[<span class="dv">2</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb33-14"><a href="#cb33-14"></a><span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/smooth.html">smooth</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/roc.html">roc</a></span>(y.te, svm.pred3)), <span class="dt">col =</span> pal[<span class="dv">3</span>], <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">add =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <img src="figures/ex3-1.png" width="65%" class="img-responsive" align="center" alt="Smoothed ROC curves for different fingerprint types"><p align="center">
 Figure 4: Smoothed ROC curves for different fingerprint types
 </p>
@@ -516,37 +518,37 @@ Figure 4: Smoothed ROC curves for different fingerprint types
 <p>In reality, there are usually too many chemical compounds available for identifying drug-like molecules. Thus it would be attractive using clustering methods to aid the selection of a representative subset of all available compounds. For a clustering approach that groups compounds together by their structural similarity, applying the principle <em>similar compounds have similar properties</em> means that we only need to test the representative compounds from each individual cluster, rather than do the time-consuming complete set of experiments, and this should be sufficient to understand the structure-activity relationships of the whole compound set.</p>
 <p>The Rcpi package provides easy-to-use functions for computing the similarity between small molecules derived by molecular fingerprints and maximum common substructure search.</p>
 <p>As a example, the SDF file <code>tyrphostin.sdf</code> below is a database composed by searching <em>tyrphostin</em> in PubChem and filtered by <em>Lipinski"s rule of five</em>. We load this SDF file using <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code>:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb34-2" title="2">mols &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSDF.html">readMolFromSDF</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(</a>
-<a class="sourceLine" id="cb34-3" title="3">  <span class="st">"compseq/tyrphostin.sdf"</span>,</a>
-<a class="sourceLine" id="cb34-4" title="4">  <span class="dt">package =</span> <span class="st">"Rcpi"</span></a>
-<a class="sourceLine" id="cb34-5" title="5">))</a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"Rcpi"</span>)</span>
+<span id="cb34-2"><a href="#cb34-2"></a>mols &lt;-<span class="st"> </span><span class="kw"><a href="../reference/readMolFromSDF.html">readMolFromSDF</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(</span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="st">"compseq/tyrphostin.sdf"</span>,</span>
+<span id="cb34-4"><a href="#cb34-4"></a>  <span class="dt">package =</span> <span class="st">"Rcpi"</span></span>
+<span id="cb34-5"><a href="#cb34-5"></a>))</span></code></pre></div>
 <p>Then we compute the E-state fingerprints for all the molecules using <code><a href="../reference/extractDrugEstate.html">extractDrugEstate()</a></code>, and calculate their pairwise similarity matrix with <code><a href="../reference/calcDrugFPSim.html">calcDrugFPSim()</a></code>:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1">simmat &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/diag">diag</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(mols))</a>
-<a class="sourceLine" id="cb35-2" title="2"></a>
-<a class="sourceLine" id="cb35-3" title="3"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(mols)) {</a>
-<a class="sourceLine" id="cb35-4" title="4">  <span class="cf">for</span> (j <span class="cf">in</span> i<span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(mols)) {</a>
-<a class="sourceLine" id="cb35-5" title="5">    fp1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span>(mols[[i]])</a>
-<a class="sourceLine" id="cb35-6" title="6">    fp2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span>(mols[[j]])</a>
-<a class="sourceLine" id="cb35-7" title="7">    tmp &lt;-<span class="st"> </span><span class="kw"><a href="../reference/calcDrugFPSim.html">calcDrugFPSim</a></span>(fp1, fp2, <span class="dt">fptype =</span> <span class="st">"compact"</span>, <span class="dt">metric =</span> <span class="st">"tanimoto"</span>)</a>
-<a class="sourceLine" id="cb35-8" title="8">    simmat[i, j] &lt;-<span class="st"> </span>tmp</a>
-<a class="sourceLine" id="cb35-9" title="9">    simmat[j, i] &lt;-<span class="st"> </span>tmp</a>
-<a class="sourceLine" id="cb35-10" title="10">  }</a>
-<a class="sourceLine" id="cb35-11" title="11">}</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>simmat &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/diag.html">diag</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(mols))</span>
+<span id="cb35-2"><a href="#cb35-2"></a></span>
+<span id="cb35-3"><a href="#cb35-3"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(mols)) {</span>
+<span id="cb35-4"><a href="#cb35-4"></a>  <span class="cf">for</span> (j <span class="cf">in</span> i<span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(mols)) {</span>
+<span id="cb35-5"><a href="#cb35-5"></a>    fp1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span>(mols[[i]])</span>
+<span id="cb35-6"><a href="#cb35-6"></a>    fp2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span>(mols[[j]])</span>
+<span id="cb35-7"><a href="#cb35-7"></a>    tmp &lt;-<span class="st"> </span><span class="kw"><a href="../reference/calcDrugFPSim.html">calcDrugFPSim</a></span>(fp1, fp2, <span class="dt">fptype =</span> <span class="st">"compact"</span>, <span class="dt">metric =</span> <span class="st">"tanimoto"</span>)</span>
+<span id="cb35-8"><a href="#cb35-8"></a>    simmat[i, j] &lt;-<span class="st"> </span>tmp</span>
+<span id="cb35-9"><a href="#cb35-9"></a>    simmat[j, i] &lt;-<span class="st"> </span>tmp</span>
+<span id="cb35-10"><a href="#cb35-10"></a>  }</span>
+<span id="cb35-11"><a href="#cb35-11"></a>}</span></code></pre></div>
 <p>With the computed similarity matrix <code>simmat</code>, we will try to cluster the molecules using hierarchical clustering, then visualize the clustering result:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1">mol.hc &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/hclust">hclust</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/dist">as.dist</a></span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>simmat), <span class="dt">method =</span> <span class="st">"ward.D"</span>)</a>
-<a class="sourceLine" id="cb36-2" title="2"></a>
-<a class="sourceLine" id="cb36-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"ape"</span>) <span class="co"># tree visualization of clusters</span></a>
-<a class="sourceLine" id="cb36-4" title="4">clus5 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/cutree">cutree</a></span>(mol.hc, <span class="dv">5</span>) <span class="co"># cut dendrogram into 5 clusters</span></a>
-<a class="sourceLine" id="cb36-5" title="5"></a>
-<a class="sourceLine" id="cb36-6" title="6"><span class="co"># generate colors</span></a>
-<a class="sourceLine" id="cb36-7" title="7"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"RColorBrewer"</span>)</a>
-<a class="sourceLine" id="cb36-8" title="8">pal5 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/RColorBrewer/topics/ColorBrewer">brewer.pal</a></span>(<span class="dv">5</span>, <span class="st">"Set1"</span>)</a>
-<a class="sourceLine" id="cb36-9" title="9"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/ape/topics/as.phylo">as.phylo</a></span>(mol.hc),</a>
-<a class="sourceLine" id="cb36-10" title="10">  <span class="dt">type =</span> <span class="st">"fan"</span>,</a>
-<a class="sourceLine" id="cb36-11" title="11">  <span class="dt">tip.color =</span> pal5[clus5],</a>
-<a class="sourceLine" id="cb36-12" title="12">  <span class="dt">label.offset =</span> <span class="fl">0.1</span>, <span class="dt">cex =</span> <span class="fl">0.7</span></a>
-<a class="sourceLine" id="cb36-13" title="13">)</a></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>mol.hc &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/hclust.html">hclust</a></span>(<span class="kw"><a href="https://rdrr.io/r/stats/dist.html">as.dist</a></span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>simmat), <span class="dt">method =</span> <span class="st">"ward.D"</span>)</span>
+<span id="cb36-2"><a href="#cb36-2"></a></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"ape"</span>) <span class="co"># tree visualization of clusters</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a>clus5 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/cutree.html">cutree</a></span>(mol.hc, <span class="dv">5</span>) <span class="co"># cut dendrogram into 5 clusters</span></span>
+<span id="cb36-5"><a href="#cb36-5"></a></span>
+<span id="cb36-6"><a href="#cb36-6"></a><span class="co"># generate colors</span></span>
+<span id="cb36-7"><a href="#cb36-7"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"RColorBrewer"</span>)</span>
+<span id="cb36-8"><a href="#cb36-8"></a>pal5 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal</a></span>(<span class="dv">5</span>, <span class="st">"Set1"</span>)</span>
+<span id="cb36-9"><a href="#cb36-9"></a><span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="kw">as.phylo</span>(mol.hc),</span>
+<span id="cb36-10"><a href="#cb36-10"></a>  <span class="dt">type =</span> <span class="st">"fan"</span>,</span>
+<span id="cb36-11"><a href="#cb36-11"></a>  <span class="dt">tip.color =</span> pal5[clus5],</span>
+<span id="cb36-12"><a href="#cb36-12"></a>  <span class="dt">label.offset =</span> <span class="fl">0.1</span>, <span class="dt">cex =</span> <span class="fl">0.7</span></span>
+<span id="cb36-13"><a href="#cb36-13"></a>)</span></code></pre></div>
 <p>The hierarchical clustering result for these molecules is shown in Figure 5.</p>
 <img src="figures/ex4-1.png" width="65%" class="img-responsive" align="center" alt="Tree visualization of the molecular clustering result"><p align="center">
 Figure 5: Tree visualization of the molecular clustering result
@@ -557,67 +559,67 @@ Figure 5: Tree visualization of the molecular clustering result
 <a href="#structure-based-chemical-similarity-searching" class="anchor"></a>Structure-based chemical similarity searching</h2>
 <p>Structure-based chemical similarity searching ranks molecules in a database by their similarity degree to one query molecule structure. The numerical similarity value is usually computed based on the molecular fingerprints with selected metrics or by maximum common structure search. It is one of the core techniques for ligand-based virtual screening in drug discovery.</p>
 <p>The SDF file <code>DB00530.sdf</code> below is retrieved from DrugBank, the drug ID DB00530 is <em>Erlotinib</em>, which is a reversible tyrosine kinase inhibitor. Given this molecule as the query molecule, we will do a similarity searching in the database <code>tyrphostin.sdf</code> presented in the last subsection.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb37-2" title="2"></a>
-<a class="sourceLine" id="cb37-3" title="3">mol &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"compseq/DB00530.sdf"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb37-4" title="4">moldb &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"compseq/tyrphostin.sdf"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"Rcpi"</span>)</span>
+<span id="cb37-2"><a href="#cb37-2"></a></span>
+<span id="cb37-3"><a href="#cb37-3"></a>mol &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"compseq/DB00530.sdf"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</span>
+<span id="cb37-4"><a href="#cb37-4"></a>moldb &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"compseq/tyrphostin.sdf"</span>, <span class="dt">package =</span> <span class="st">"Rcpi"</span>)</span></code></pre></div>
 <p>We can do parallelized drug molecular similarity search with the <code><a href="../reference/searchDrug.html">searchDrug()</a></code> function in Rcpi. Here we choose the search criterion to be MACCS keys with cosine similarity, FP2 fingerprints with tanimoto similarity, and maximum common substructure search with tanimoto similarity.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1">rank1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/searchDrug.html">searchDrug</a></span>(</a>
-<a class="sourceLine" id="cb38-2" title="2">  mol, moldb,</a>
-<a class="sourceLine" id="cb38-3" title="3">  <span class="dt">cores =</span> <span class="dv">4</span>, <span class="dt">method =</span> <span class="st">"fp"</span>,</a>
-<a class="sourceLine" id="cb38-4" title="4">  <span class="dt">fptype =</span> <span class="st">"maccs"</span>, <span class="dt">fpsim =</span> <span class="st">"tanimoto"</span></a>
-<a class="sourceLine" id="cb38-5" title="5">)</a>
-<a class="sourceLine" id="cb38-6" title="6">rank2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/searchDrug.html">searchDrug</a></span>(</a>
-<a class="sourceLine" id="cb38-7" title="7">  mol, moldb,</a>
-<a class="sourceLine" id="cb38-8" title="8">  <span class="dt">cores =</span> <span class="dv">4</span>, <span class="dt">method =</span> <span class="st">"fp"</span>,</a>
-<a class="sourceLine" id="cb38-9" title="9">  <span class="dt">fptype =</span> <span class="st">"fp2"</span>, <span class="dt">fpsim =</span> <span class="st">"cosine"</span></a>
-<a class="sourceLine" id="cb38-10" title="10">)</a>
-<a class="sourceLine" id="cb38-11" title="11">rank3 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/searchDrug.html">searchDrug</a></span>(</a>
-<a class="sourceLine" id="cb38-12" title="12">  mol, moldb,</a>
-<a class="sourceLine" id="cb38-13" title="13">  <span class="dt">cores =</span> <span class="dv">4</span>, <span class="dt">method =</span> <span class="st">"mcs"</span>,</a>
-<a class="sourceLine" id="cb38-14" title="14">  <span class="dt">mcssim =</span> <span class="st">"tanimoto"</span></a>
-<a class="sourceLine" id="cb38-15" title="15">)</a></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>rank1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/searchDrug.html">searchDrug</a></span>(</span>
+<span id="cb38-2"><a href="#cb38-2"></a>  mol, moldb,</span>
+<span id="cb38-3"><a href="#cb38-3"></a>  <span class="dt">cores =</span> <span class="dv">4</span>, <span class="dt">method =</span> <span class="st">"fp"</span>,</span>
+<span id="cb38-4"><a href="#cb38-4"></a>  <span class="dt">fptype =</span> <span class="st">"maccs"</span>, <span class="dt">fpsim =</span> <span class="st">"tanimoto"</span></span>
+<span id="cb38-5"><a href="#cb38-5"></a>)</span>
+<span id="cb38-6"><a href="#cb38-6"></a>rank2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/searchDrug.html">searchDrug</a></span>(</span>
+<span id="cb38-7"><a href="#cb38-7"></a>  mol, moldb,</span>
+<span id="cb38-8"><a href="#cb38-8"></a>  <span class="dt">cores =</span> <span class="dv">4</span>, <span class="dt">method =</span> <span class="st">"fp"</span>,</span>
+<span id="cb38-9"><a href="#cb38-9"></a>  <span class="dt">fptype =</span> <span class="st">"fp2"</span>, <span class="dt">fpsim =</span> <span class="st">"cosine"</span></span>
+<span id="cb38-10"><a href="#cb38-10"></a>)</span>
+<span id="cb38-11"><a href="#cb38-11"></a>rank3 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/searchDrug.html">searchDrug</a></span>(</span>
+<span id="cb38-12"><a href="#cb38-12"></a>  mol, moldb,</span>
+<span id="cb38-13"><a href="#cb38-13"></a>  <span class="dt">cores =</span> <span class="dv">4</span>, <span class="dt">method =</span> <span class="st">"mcs"</span>,</span>
+<span id="cb38-14"><a href="#cb38-14"></a>  <span class="dt">mcssim =</span> <span class="st">"tanimoto"</span></span>
+<span id="cb38-15"><a href="#cb38-15"></a>)</span></code></pre></div>
 <p>The returned search result is stored as a numerical vector, the name of each element is the molecule number in the database, and the value is the similarity value between the query molecule and this molecule. We print the top search results here:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(rank1)</a>
-<a class="sourceLine" id="cb39-2" title="2"><span class="co">##        92       100        83       101         1        36</span></a>
-<a class="sourceLine" id="cb39-3" title="3"><span class="co">## 0.6491228 0.6491228 0.5882353 0.5660377 0.5000000 0.4861111</span></a>
-<a class="sourceLine" id="cb39-4" title="4"></a>
-<a class="sourceLine" id="cb39-5" title="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(rank2)</a>
-<a class="sourceLine" id="cb39-6" title="6"><span class="co">##       100        92        83       101        94        16</span></a>
-<a class="sourceLine" id="cb39-7" title="7"><span class="co">## 0.8310005 0.8208663 0.5405856 0.5033150 0.4390790 0.4274081</span></a>
-<a class="sourceLine" id="cb39-8" title="8"></a>
-<a class="sourceLine" id="cb39-9" title="9"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(rank3)</a>
-<a class="sourceLine" id="cb39-10" title="10"><span class="co">##        92       100        23        39        94        64</span></a>
-<a class="sourceLine" id="cb39-11" title="11"><span class="co">## 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784</span></a></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(rank1)</span>
+<span id="cb39-2"><a href="#cb39-2"></a><span class="co">##        92       100        83       101         1        36</span></span>
+<span id="cb39-3"><a href="#cb39-3"></a><span class="co">## 0.6491228 0.6491228 0.5882353 0.5660377 0.5000000 0.4861111</span></span>
+<span id="cb39-4"><a href="#cb39-4"></a></span>
+<span id="cb39-5"><a href="#cb39-5"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(rank2)</span>
+<span id="cb39-6"><a href="#cb39-6"></a><span class="co">##       100        92        83       101        94        16</span></span>
+<span id="cb39-7"><a href="#cb39-7"></a><span class="co">## 0.8310005 0.8208663 0.5405856 0.5033150 0.4390790 0.4274081</span></span>
+<span id="cb39-8"><a href="#cb39-8"></a></span>
+<span id="cb39-9"><a href="#cb39-9"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(rank3)</span>
+<span id="cb39-10"><a href="#cb39-10"></a><span class="co">##        92       100        23        39        94        64</span></span>
+<span id="cb39-11"><a href="#cb39-11"></a><span class="co">## 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784</span></span></code></pre></div>
 <p>The Rcpi package also integrated the functionality of converting molecular file formats. For example, we can convert the SDF files to SMILES files using <code><a href="../reference/convMolFormat.html">convMolFormat()</a></code>. Since the #92 molecule ranks the highest in the three searches performed, we will calculate the similarity derived by maximum common substructure search between the query molecule and the #92 molecule using <code><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim()</a></code>:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1"><span class="co"># convert SDF format to SMILES format</span></a>
-<a class="sourceLine" id="cb40-2" title="2"><span class="kw"><a href="../reference/convMolFormat.html">convMolFormat</a></span>(</a>
-<a class="sourceLine" id="cb40-3" title="3">  <span class="dt">infile =</span> mol, <span class="dt">outfile =</span> <span class="st">"DB00530.smi"</span>, <span class="dt">from =</span> <span class="st">"sdf"</span>, <span class="dt">to =</span> <span class="st">"smiles"</span></a>
-<a class="sourceLine" id="cb40-4" title="4">)</a>
-<a class="sourceLine" id="cb40-5" title="5"><span class="kw"><a href="../reference/convMolFormat.html">convMolFormat</a></span>(</a>
-<a class="sourceLine" id="cb40-6" title="6">  <span class="dt">infile =</span> moldb, <span class="dt">outfile =</span> <span class="st">"tyrphostin.smi"</span>, <span class="dt">from =</span> <span class="st">"sdf"</span>, <span class="dt">to =</span> <span class="st">"smiles"</span></a>
-<a class="sourceLine" id="cb40-7" title="7">)</a>
-<a class="sourceLine" id="cb40-8" title="8"></a>
-<a class="sourceLine" id="cb40-9" title="9">smi1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(<span class="st">"DB00530.smi"</span>)</a>
-<a class="sourceLine" id="cb40-10" title="10">smi2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/readLines">readLines</a></span>(<span class="st">"tyrphostin.smi"</span>)[<span class="dv">92</span>] <span class="co"># select the #92 molecule</span></a>
-<a class="sourceLine" id="cb40-11" title="11"><span class="kw"><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim</a></span>(smi1, smi2, <span class="dt">type =</span> <span class="st">"smile"</span>, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="co"># convert SDF format to SMILES format</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a><span class="kw"><a href="../reference/convMolFormat.html">convMolFormat</a></span>(</span>
+<span id="cb40-3"><a href="#cb40-3"></a>  <span class="dt">infile =</span> mol, <span class="dt">outfile =</span> <span class="st">"DB00530.smi"</span>, <span class="dt">from =</span> <span class="st">"sdf"</span>, <span class="dt">to =</span> <span class="st">"smiles"</span></span>
+<span id="cb40-4"><a href="#cb40-4"></a>)</span>
+<span id="cb40-5"><a href="#cb40-5"></a><span class="kw"><a href="../reference/convMolFormat.html">convMolFormat</a></span>(</span>
+<span id="cb40-6"><a href="#cb40-6"></a>  <span class="dt">infile =</span> moldb, <span class="dt">outfile =</span> <span class="st">"tyrphostin.smi"</span>, <span class="dt">from =</span> <span class="st">"sdf"</span>, <span class="dt">to =</span> <span class="st">"smiles"</span></span>
+<span id="cb40-7"><a href="#cb40-7"></a>)</span>
+<span id="cb40-8"><a href="#cb40-8"></a></span>
+<span id="cb40-9"><a href="#cb40-9"></a>smi1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/readLines.html">readLines</a></span>(<span class="st">"DB00530.smi"</span>)</span>
+<span id="cb40-10"><a href="#cb40-10"></a>smi2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/readLines.html">readLines</a></span>(<span class="st">"tyrphostin.smi"</span>)[<span class="dv">92</span>] <span class="co"># select the #92 molecule</span></span>
+<span id="cb40-11"><a href="#cb40-11"></a><span class="kw"><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim</a></span>(smi1, smi2, <span class="dt">type =</span> <span class="st">"smile"</span>, <span class="dt">plot =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>The MCS search result is stored in a list, which contains the original MCS result provided by the <code>fmcsR</code> package <span class="citation">Wang <em>et al.</em> (2013)</span>, the Tanimoto coefficient and the overlap coefficient.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1"><span class="co">## [[1]]</span></a>
-<a class="sourceLine" id="cb41-2" title="2"><span class="co">## An instance of "MCS"</span></a>
-<a class="sourceLine" id="cb41-3" title="3"><span class="co">##  Number of MCSs: 1</span></a>
-<a class="sourceLine" id="cb41-4" title="4"><span class="co">##  530: 29 atoms</span></a>
-<a class="sourceLine" id="cb41-5" title="5"><span class="co">##  4705: 22 atoms</span></a>
-<a class="sourceLine" id="cb41-6" title="6"><span class="co">##  MCS: 18 atoms</span></a>
-<a class="sourceLine" id="cb41-7" title="7"><span class="co">##  Tanimoto Coefficient: 0.54545</span></a>
-<a class="sourceLine" id="cb41-8" title="8"><span class="co">##  Overlap Coefficient: 0.81818</span></a>
-<a class="sourceLine" id="cb41-9" title="9"><span class="co">##</span></a>
-<a class="sourceLine" id="cb41-10" title="10"><span class="co">## [[2]]</span></a>
-<a class="sourceLine" id="cb41-11" title="11"><span class="co">## Tanimoto_Coefficient</span></a>
-<a class="sourceLine" id="cb41-12" title="12"><span class="co">##            0.5454545</span></a>
-<a class="sourceLine" id="cb41-13" title="13"><span class="co">##</span></a>
-<a class="sourceLine" id="cb41-14" title="14"><span class="co">## [[3]]</span></a>
-<a class="sourceLine" id="cb41-15" title="15"><span class="co">## Overlap_Coefficient</span></a>
-<a class="sourceLine" id="cb41-16" title="16"><span class="co">##           0.8181818</span></a></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="co">## [[1]]</span></span>
+<span id="cb41-2"><a href="#cb41-2"></a><span class="co">## An instance of "MCS"</span></span>
+<span id="cb41-3"><a href="#cb41-3"></a><span class="co">##  Number of MCSs: 1</span></span>
+<span id="cb41-4"><a href="#cb41-4"></a><span class="co">##  530: 29 atoms</span></span>
+<span id="cb41-5"><a href="#cb41-5"></a><span class="co">##  4705: 22 atoms</span></span>
+<span id="cb41-6"><a href="#cb41-6"></a><span class="co">##  MCS: 18 atoms</span></span>
+<span id="cb41-7"><a href="#cb41-7"></a><span class="co">##  Tanimoto Coefficient: 0.54545</span></span>
+<span id="cb41-8"><a href="#cb41-8"></a><span class="co">##  Overlap Coefficient: 0.81818</span></span>
+<span id="cb41-9"><a href="#cb41-9"></a><span class="co">##</span></span>
+<span id="cb41-10"><a href="#cb41-10"></a><span class="co">## [[2]]</span></span>
+<span id="cb41-11"><a href="#cb41-11"></a><span class="co">## Tanimoto_Coefficient</span></span>
+<span id="cb41-12"><a href="#cb41-12"></a><span class="co">##            0.5454545</span></span>
+<span id="cb41-13"><a href="#cb41-13"></a><span class="co">##</span></span>
+<span id="cb41-14"><a href="#cb41-14"></a><span class="co">## [[3]]</span></span>
+<span id="cb41-15"><a href="#cb41-15"></a><span class="co">## Overlap_Coefficient</span></span>
+<span id="cb41-16"><a href="#cb41-16"></a><span class="co">##           0.8181818</span></span></code></pre></div>
 <p>By using <code><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim(..., plot = TRUE)</a></code>, the maximum common substructure of the two molecules is presented in Figure 6.</p>
 <img src="figures/ex5-1.png" width="50%" class="img-responsive" align="center"><p align="center">
 Figure 6: Maximum common structure of the query molecule and the #92 molecule in the chemical database
@@ -638,90 +640,90 @@ Figure 6: Maximum common structure of the query molecule and the #92 molecule in
 <li>Re-couple these singles into pairs in a way that none of them occurs in the corresponding positive dataset.</li>
 </ol>
 <p>Ten generated negative sets were used in <span class="citation">Dong-Sheng Cao <em>et al.</em> (2012)</span>, here we only used one of them for a demonstration. The drug ID and target ID is stored in <code>GPCR.csv</code>. The first column is KEGG protein ID, and the second column is KEGG drug ID. The first 635 rows form the positive set, and the last 635 rows form the negative set.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb42-2" title="2"></a>
-<a class="sourceLine" id="cb42-3" title="3">gpcr &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/read.table">read.table</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(</a>
-<a class="sourceLine" id="cb42-4" title="4">  <span class="st">"vignettedata/GPCR.csv"</span>,</a>
-<a class="sourceLine" id="cb42-5" title="5">  <span class="dt">package =</span> <span class="st">"Rcpi"</span></a>
-<a class="sourceLine" id="cb42-6" title="6">),</a>
-<a class="sourceLine" id="cb42-7" title="7"><span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">as.is =</span> <span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb42-8" title="8">)</a></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"Rcpi"</span>)</span>
+<span id="cb42-2"><a href="#cb42-2"></a></span>
+<span id="cb42-3"><a href="#cb42-3"></a>gpcr &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(</span>
+<span id="cb42-4"><a href="#cb42-4"></a>  <span class="st">"vignettedata/GPCR.csv"</span>,</span>
+<span id="cb42-5"><a href="#cb42-5"></a>  <span class="dt">package =</span> <span class="st">"Rcpi"</span></span>
+<span id="cb42-6"><a href="#cb42-6"></a>),</span>
+<span id="cb42-7"><a href="#cb42-7"></a><span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">as.is =</span> <span class="ot">TRUE</span></span>
+<span id="cb42-8"><a href="#cb42-8"></a>)</span></code></pre></div>
 <p>Take a look at the data:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(gpcr)</a></code></pre></div>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1"><span class="co">##          V1     V2</span></a>
-<a class="sourceLine" id="cb44-2" title="2"><span class="co">## 1 hsa:10161 D00528</span></a>
-<a class="sourceLine" id="cb44-3" title="3"><span class="co">## 2 hsa:10800 D00411</span></a>
-<a class="sourceLine" id="cb44-4" title="4"><span class="co">## 3 hsa:10800 D01828</span></a>
-<a class="sourceLine" id="cb44-5" title="5"><span class="co">## 4 hsa:10800 D05129</span></a>
-<a class="sourceLine" id="cb44-6" title="6"><span class="co">## 5 hsa:11255 D00234</span></a>
-<a class="sourceLine" id="cb44-7" title="7"><span class="co">## 6 hsa:11255 D00300</span></a></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(gpcr)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="co">##          V1     V2</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a><span class="co">## 1 hsa:10161 D00528</span></span>
+<span id="cb44-3"><a href="#cb44-3"></a><span class="co">## 2 hsa:10800 D00411</span></span>
+<span id="cb44-4"><a href="#cb44-4"></a><span class="co">## 3 hsa:10800 D01828</span></span>
+<span id="cb44-5"><a href="#cb44-5"></a><span class="co">## 4 hsa:10800 D05129</span></span>
+<span id="cb44-6"><a href="#cb44-6"></a><span class="co">## 5 hsa:11255 D00234</span></span>
+<span id="cb44-7"><a href="#cb44-7"></a><span class="co">## 6 hsa:11255 D00300</span></span></code></pre></div>
 <p>We will visualize the network first. Figure 7 shows the connection pattern for the GPCR drug-target interaction network in the form of an <em>arc diagram</em>.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"igraph"</span>)</a>
-<a class="sourceLine" id="cb45-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"arcdiagram"</span>)</a>
-<a class="sourceLine" id="cb45-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"reshape"</span>)</a>
-<a class="sourceLine" id="cb45-4" title="4"></a>
-<a class="sourceLine" id="cb45-5" title="5">g &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/igraph/topics/graph_from_data_frame">graph.data.frame</a></span>(gpcr[<span class="dv">1</span><span class="op">:</span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(gpcr) <span class="op">/</span><span class="st"> </span><span class="dv">2</span>), ], <span class="dt">directed =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb45-6" title="6">edgelist &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/igraph/topics/as_edgelist">get.edgelist</a></span>(g)</a>
-<a class="sourceLine" id="cb45-7" title="7">vlabels &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/igraph/topics/V">V</a></span>(g)<span class="op">$</span>name</a>
-<a class="sourceLine" id="cb45-8" title="8">vgroups &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="dv">0</span>, <span class="dv">95</span>), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="dv">1</span>, <span class="dv">223</span>))</a>
-<a class="sourceLine" id="cb45-9" title="9">vfill &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"#8B91D4"</span>, <span class="dv">95</span>), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"#B2C771"</span>, <span class="dv">223</span>))</a>
-<a class="sourceLine" id="cb45-10" title="10">vborders &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"#6F74A9"</span>, <span class="dv">95</span>), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"#8E9F5A"</span>, <span class="dv">223</span>))</a>
-<a class="sourceLine" id="cb45-11" title="11">degrees &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/igraph/topics/degree">degree</a></span>(g)</a>
-<a class="sourceLine" id="cb45-12" title="12"></a>
-<a class="sourceLine" id="cb45-13" title="13">xx &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(vgroups, degrees, vlabels, <span class="dt">ind =</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/igraph/topics/gorder">vcount</a></span>(g))</a>
-<a class="sourceLine" id="cb45-14" title="14">yy &lt;-<span class="st"> </span><span class="kw">arrange</span>(xx, <span class="kw">desc</span>(vgroups), <span class="kw">desc</span>(degrees))</a>
-<a class="sourceLine" id="cb45-15" title="15">new.ord &lt;-<span class="st"> </span>yy<span class="op">$</span>ind</a>
-<a class="sourceLine" id="cb45-16" title="16"></a>
-<a class="sourceLine" id="cb45-17" title="17"><span class="kw">arcplot</span>(</a>
-<a class="sourceLine" id="cb45-18" title="18">  edgelist,</a>
-<a class="sourceLine" id="cb45-19" title="19">  <span class="dt">ordering =</span> new.ord, <span class="dt">labels =</span> vlabels,</a>
-<a class="sourceLine" id="cb45-20" title="20">  <span class="dt">cex.labels =</span> <span class="fl">0.1</span>, <span class="dt">show.nodes =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb45-21" title="21">  <span class="dt">col.nodes =</span> vborders, <span class="dt">bg.nodes =</span> vfill,</a>
-<a class="sourceLine" id="cb45-22" title="22">  <span class="dt">cex.nodes =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log10</a></span>(degrees) <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span>,</a>
-<a class="sourceLine" id="cb45-23" title="23">  <span class="dt">pch.nodes =</span> <span class="dv">21</span>, <span class="dt">line =</span> <span class="fl">-0.5</span>, <span class="dt">col.arcs =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/grDevices/topics/hsv">hsv</a></span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.2</span>, <span class="fl">0.25</span>)</a>
-<a class="sourceLine" id="cb45-24" title="24">)</a></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"igraph"</span>)</span>
+<span id="cb45-2"><a href="#cb45-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"arcdiagram"</span>)</span>
+<span id="cb45-3"><a href="#cb45-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"reshape"</span>)</span>
+<span id="cb45-4"><a href="#cb45-4"></a></span>
+<span id="cb45-5"><a href="#cb45-5"></a>g &lt;-<span class="st"> </span><span class="kw">graph.data.frame</span>(gpcr[<span class="dv">1</span><span class="op">:</span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(gpcr) <span class="op">/</span><span class="st"> </span><span class="dv">2</span>), ], <span class="dt">directed =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb45-6"><a href="#cb45-6"></a>edgelist &lt;-<span class="st"> </span><span class="kw">get.edgelist</span>(g)</span>
+<span id="cb45-7"><a href="#cb45-7"></a>vlabels &lt;-<span class="st"> </span><span class="kw">V</span>(g)<span class="op">$</span>name</span>
+<span id="cb45-8"><a href="#cb45-8"></a>vgroups &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="dv">0</span>, <span class="dv">95</span>), <span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="dv">1</span>, <span class="dv">223</span>))</span>
+<span id="cb45-9"><a href="#cb45-9"></a>vfill &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="st">"#8B91D4"</span>, <span class="dv">95</span>), <span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="st">"#B2C771"</span>, <span class="dv">223</span>))</span>
+<span id="cb45-10"><a href="#cb45-10"></a>vborders &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="st">"#6F74A9"</span>, <span class="dv">95</span>), <span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="st">"#8E9F5A"</span>, <span class="dv">223</span>))</span>
+<span id="cb45-11"><a href="#cb45-11"></a>degrees &lt;-<span class="st"> </span><span class="kw">degree</span>(g)</span>
+<span id="cb45-12"><a href="#cb45-12"></a></span>
+<span id="cb45-13"><a href="#cb45-13"></a>xx &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span>(vgroups, degrees, vlabels, <span class="dt">ind =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">vcount</span>(g))</span>
+<span id="cb45-14"><a href="#cb45-14"></a>yy &lt;-<span class="st"> </span><span class="kw">arrange</span>(xx, <span class="kw">desc</span>(vgroups), <span class="kw">desc</span>(degrees))</span>
+<span id="cb45-15"><a href="#cb45-15"></a>new.ord &lt;-<span class="st"> </span>yy<span class="op">$</span>ind</span>
+<span id="cb45-16"><a href="#cb45-16"></a></span>
+<span id="cb45-17"><a href="#cb45-17"></a><span class="kw">arcplot</span>(</span>
+<span id="cb45-18"><a href="#cb45-18"></a>  edgelist,</span>
+<span id="cb45-19"><a href="#cb45-19"></a>  <span class="dt">ordering =</span> new.ord, <span class="dt">labels =</span> vlabels,</span>
+<span id="cb45-20"><a href="#cb45-20"></a>  <span class="dt">cex.labels =</span> <span class="fl">0.1</span>, <span class="dt">show.nodes =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb45-21"><a href="#cb45-21"></a>  <span class="dt">col.nodes =</span> vborders, <span class="dt">bg.nodes =</span> vfill,</span>
+<span id="cb45-22"><a href="#cb45-22"></a>  <span class="dt">cex.nodes =</span> <span class="kw"><a href="https://rdrr.io/r/base/Log.html">log10</a></span>(degrees) <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span>,</span>
+<span id="cb45-23"><a href="#cb45-23"></a>  <span class="dt">pch.nodes =</span> <span class="dv">21</span>, <span class="dt">line =</span> <span class="fl">-0.5</span>, <span class="dt">col.arcs =</span> <span class="kw"><a href="https://rdrr.io/r/grDevices/hsv.html">hsv</a></span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.2</span>, <span class="fl">0.25</span>)</span>
+<span id="cb45-24"><a href="#cb45-24"></a>)</span></code></pre></div>
 <img src="figures/ex6-1.png" width="85%" class="img-responsive" align="center" alt="Arc diagram visualization of the GPCR drug-target interaction network"><p align="center">
 Figure 7: Arc diagram visualization of the GPCR drug-target interaction network
 </p>
 <p>An arc diagram visualize the nodes in the network in a one-dimensional layout, while using circular arcs to represent edges. With a good ordering of nodes, it is easy to identify cliques and bridges.</p>
 <p>Next, we will download the target protein sequences (in FASTA format) and drug molecule (in SMILES format) from the KEGG database, in parallel:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"Rcpi"</span>)</a>
-<a class="sourceLine" id="cb46-2" title="2"></a>
-<a class="sourceLine" id="cb46-3" title="3">gpcr &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/read.table">read.table</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(</a>
-<a class="sourceLine" id="cb46-4" title="4">  <span class="st">"vignettedata/GPCR.csv"</span>,</a>
-<a class="sourceLine" id="cb46-5" title="5">  <span class="dt">package =</span> <span class="st">"Rcpi"</span></a>
-<a class="sourceLine" id="cb46-6" title="6">),</a>
-<a class="sourceLine" id="cb46-7" title="7"><span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">as.is =</span> <span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb46-8" title="8">)</a>
-<a class="sourceLine" id="cb46-9" title="9"></a>
-<a class="sourceLine" id="cb46-10" title="10">protid &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(gpcr[, <span class="dv">1</span>])</a>
-<a class="sourceLine" id="cb46-11" title="11">drugid &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(gpcr[, <span class="dv">2</span>])</a>
-<a class="sourceLine" id="cb46-12" title="12"></a>
-<a class="sourceLine" id="cb46-13" title="13">protseq &lt;-<span class="st"> </span><span class="kw"><a href="../reference/getSeqFromKEGG.html">getSeqFromKEGG</a></span>(protid, <span class="dt">parallel =</span> <span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb46-14" title="14">drugseq &lt;-<span class="st"> </span><span class="kw"><a href="../reference/getSmiFromKEGG.html">getSmiFromKEGG</a></span>(drugid, <span class="dt">parallel =</span> <span class="dv">50</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"Rcpi"</span>)</span>
+<span id="cb46-2"><a href="#cb46-2"></a></span>
+<span id="cb46-3"><a href="#cb46-3"></a>gpcr &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(</span>
+<span id="cb46-4"><a href="#cb46-4"></a>  <span class="st">"vignettedata/GPCR.csv"</span>,</span>
+<span id="cb46-5"><a href="#cb46-5"></a>  <span class="dt">package =</span> <span class="st">"Rcpi"</span></span>
+<span id="cb46-6"><a href="#cb46-6"></a>),</span>
+<span id="cb46-7"><a href="#cb46-7"></a><span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">as.is =</span> <span class="ot">TRUE</span></span>
+<span id="cb46-8"><a href="#cb46-8"></a>)</span>
+<span id="cb46-9"><a href="#cb46-9"></a></span>
+<span id="cb46-10"><a href="#cb46-10"></a>protid &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/unique.html">unique</a></span>(gpcr[, <span class="dv">1</span>])</span>
+<span id="cb46-11"><a href="#cb46-11"></a>drugid &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/unique.html">unique</a></span>(gpcr[, <span class="dv">2</span>])</span>
+<span id="cb46-12"><a href="#cb46-12"></a></span>
+<span id="cb46-13"><a href="#cb46-13"></a>protseq &lt;-<span class="st"> </span><span class="kw"><a href="../reference/getSeqFromKEGG.html">getSeqFromKEGG</a></span>(protid, <span class="dt">parallel =</span> <span class="dv">5</span>)</span>
+<span id="cb46-14"><a href="#cb46-14"></a>drugseq &lt;-<span class="st"> </span><span class="kw"><a href="../reference/getSmiFromKEGG.html">getSmiFromKEGG</a></span>(drugid, <span class="dt">parallel =</span> <span class="dv">50</span>)</span></code></pre></div>
 <p>If the connection is slow or accidentally interrupts, just try a few more times until success.</p>
 <p>The functions in Rcpi named after <code>getMolFrom...()</code> and <code>getSmiFrom...()</code> supports the parallelized retrieval of (drug) molecules from PubChem, ChEMBL, CAS, KEGG, and DrugBank. The functions named after <code>getSeqFrom...()</code>, <code>getFASTAFrom...()</code>, and <code>getPDBFrom...()</code> supports the parallelized retrieval of proteins from UniProt, KEGG and RCSB PDB. The functions <code><a href="../reference/getDrug.html">getDrug()</a></code> and <code><a href="../reference/getProt.html">getProt()</a></code> are two integrated wrapper functions for downloading the molecules and protein sequences from these online databases.</p>
 <p>After the sequences were downloaded, we can calculate the protein sequence descriptors and molecular descriptors for the targets and drugs:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1">x0.prot &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">cbind</a></span>(</a>
-<a class="sourceLine" id="cb47-2" title="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/t">t</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unlist">unlist</a></span>(protseq), extractProtAPAAC)),</a>
-<a class="sourceLine" id="cb47-3" title="3">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/t">t</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unlist">unlist</a></span>(protseq), extractProtCTriad))</a>
-<a class="sourceLine" id="cb47-4" title="4">)</a>
-<a class="sourceLine" id="cb47-5" title="5"></a>
-<a class="sourceLine" id="cb47-6" title="6">x0.drug &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">cbind</a></span>(</a>
-<a class="sourceLine" id="cb47-7" title="7">  <span class="kw"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span>(<span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/textconnections">textConnection</a></span>(drugseq))),</a>
-<a class="sourceLine" id="cb47-8" title="8">  <span class="kw"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span>(<span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/textconnections">textConnection</a></span>(drugseq))),</a>
-<a class="sourceLine" id="cb47-9" title="9">  <span class="kw"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span>(drugseq, <span class="dt">type =</span> <span class="st">"smile"</span>)</a>
-<a class="sourceLine" id="cb47-10" title="10">)</a></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>x0.prot &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span>(</span>
+<span id="cb47-2"><a href="#cb47-2"></a>  <span class="kw"><a href="https://rdrr.io/r/base/t.html">t</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span>(protseq), extractProtAPAAC)),</span>
+<span id="cb47-3"><a href="#cb47-3"></a>  <span class="kw"><a href="https://rdrr.io/r/base/t.html">t</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span>(protseq), extractProtCTriad))</span>
+<span id="cb47-4"><a href="#cb47-4"></a>)</span>
+<span id="cb47-5"><a href="#cb47-5"></a></span>
+<span id="cb47-6"><a href="#cb47-6"></a>x0.drug &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span>(</span>
+<span id="cb47-7"><a href="#cb47-7"></a>  <span class="kw"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span>(<span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/textconnections.html">textConnection</a></span>(drugseq))),</span>
+<span id="cb47-8"><a href="#cb47-8"></a>  <span class="kw"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span>(<span class="kw"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/textconnections.html">textConnection</a></span>(drugseq))),</span>
+<span id="cb47-9"><a href="#cb47-9"></a>  <span class="kw"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span>(drugseq, <span class="dt">type =</span> <span class="st">"smile"</span>)</span>
+<span id="cb47-10"><a href="#cb47-10"></a>)</span></code></pre></div>
 <p>Since the descriptors is only for the <em>deduplicated</em> drug and target list, we need to generate the full descriptor matrix for the training data:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="co"># generate drug x / protein x / y</span></a>
-<a class="sourceLine" id="cb48-2" title="2">x.prot &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/matrix">matrix</a></span>(<span class="ot">NA</span>, <span class="dt">nrow =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(gpcr), <span class="dt">ncol =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">ncol</a></span>(x0.prot))</a>
-<a class="sourceLine" id="cb48-3" title="3">x.drug &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/matrix">matrix</a></span>(<span class="ot">NA</span>, <span class="dt">nrow =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(gpcr), <span class="dt">ncol =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">ncol</a></span>(x0.drug))</a>
-<a class="sourceLine" id="cb48-4" title="4"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(gpcr)) x.prot[i, ] &lt;-<span class="st"> </span>x0.prot[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/which">which</a></span>(gpcr[, <span class="dv">1</span>][i] <span class="op">==</span><span class="st"> </span>protid), ]</a>
-<a class="sourceLine" id="cb48-5" title="5"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(gpcr)) x.drug[i, ] &lt;-<span class="st"> </span>x0.drug[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/which">which</a></span>(gpcr[, <span class="dv">2</span>][i] <span class="op">==</span><span class="st"> </span>drugid), ]</a>
-<a class="sourceLine" id="cb48-6" title="6"></a>
-<a class="sourceLine" id="cb48-7" title="7">y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">as.factor</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"pos"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(gpcr) <span class="op">/</span><span class="st"> </span><span class="dv">2</span>), <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"neg"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(gpcr) <span class="op">/</span><span class="st"> </span><span class="dv">2</span>)))</a></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="co"># generate drug x / protein x / y</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>x.prot &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="ot">NA</span>, <span class="dt">nrow =</span> <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(gpcr), <span class="dt">ncol =</span> <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span>(x0.prot))</span>
+<span id="cb48-3"><a href="#cb48-3"></a>x.drug &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="ot">NA</span>, <span class="dt">nrow =</span> <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(gpcr), <span class="dt">ncol =</span> <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span>(x0.drug))</span>
+<span id="cb48-4"><a href="#cb48-4"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(gpcr)) x.prot[i, ] &lt;-<span class="st"> </span>x0.prot[<span class="kw"><a href="https://rdrr.io/r/base/which.html">which</a></span>(gpcr[, <span class="dv">1</span>][i] <span class="op">==</span><span class="st"> </span>protid), ]</span>
+<span id="cb48-5"><a href="#cb48-5"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(gpcr)) x.drug[i, ] &lt;-<span class="st"> </span>x0.drug[<span class="kw"><a href="https://rdrr.io/r/base/which.html">which</a></span>(gpcr[, <span class="dv">2</span>][i] <span class="op">==</span><span class="st"> </span>drugid), ]</span>
+<span id="cb48-6"><a href="#cb48-6"></a></span>
+<span id="cb48-7"><a href="#cb48-7"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="st">"pos"</span>, <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(gpcr) <span class="op">/</span><span class="st"> </span><span class="dv">2</span>), <span class="kw"><a href="https://rdrr.io/r/base/rep.html">rep</a></span>(<span class="st">"neg"</span>, <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(gpcr) <span class="op">/</span><span class="st"> </span><span class="dv">2</span>)))</span></code></pre></div>
 <p>Generate drug-target interaction descriptors using <code><a href="../reference/getCPI.html">getCPI()</a></code>.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1">x &lt;-<span class="st"> </span><span class="kw"><a href="../reference/getCPI.html">getCPI</a></span>(x.prot, x.drug, <span class="dt">type =</span> <span class="st">"combine"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="../reference/getCPI.html">getCPI</a></span>(x.prot, x.drug, <span class="dt">type =</span> <span class="st">"combine"</span>)</span></code></pre></div>
 <p>The pairwise interaction is another useful type of representation in drug-target prediction, protein-protein interaction prediction and related research. Rcpi also provides <code><a href="../reference/getPPI.html">getPPI()</a></code> to generate protein-protein interaction descriptors. <code><a href="../reference/getPPI.html">getPPI()</a></code> provides three types of interactions while <code><a href="../reference/getCPI.html">getCPI()</a></code> provides two types. The argument <code>type</code> is used to control this.</p>
 <div id="compound-protein-interaction-cpi-descriptors" class="section level3">
 <h3 class="hasAnchor">
@@ -747,52 +749,52 @@ Figure 7: Arc diagram visualization of the GPCR drug-target interaction network
 <code>type = "entrywise"</code> - entrywise product and entrywise sum of the two matrices, then combine them, <span class="math inline">\(d\)</span> has <span class="math inline">\(p + p\)</span> columns.</li>
 </ol>
 <p>Train a random forest classification model with 5-fold repeated CV:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"caret"</span>)</a>
-<a class="sourceLine" id="cb50-2" title="2">x &lt;-<span class="st"> </span>x[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x)]</a>
-<a class="sourceLine" id="cb50-3" title="3"></a>
-<a class="sourceLine" id="cb50-4" title="4"><span class="co"># cross-validation settings</span></a>
-<a class="sourceLine" id="cb50-5" title="5">ctrl &lt;-<span class="st"> </span><span class="kw">trainControl</span>(</a>
-<a class="sourceLine" id="cb50-6" title="6">  <span class="dt">method =</span> <span class="st">"cv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</a>
-<a class="sourceLine" id="cb50-7" title="7">  <span class="dt">classProbs =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb50-8" title="8">  <span class="dt">summaryFunction =</span> twoClassSummary</a>
-<a class="sourceLine" id="cb50-9" title="9">)</a>
-<a class="sourceLine" id="cb50-10" title="10"></a>
-<a class="sourceLine" id="cb50-11" title="11"><span class="co"># train a random forest classifier</span></a>
-<a class="sourceLine" id="cb50-12" title="12"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"randomForest"</span>)</a>
-<a class="sourceLine" id="cb50-13" title="13"></a>
-<a class="sourceLine" id="cb50-14" title="14"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">1006</span>)</a>
-<a class="sourceLine" id="cb50-15" title="15">rf.fit &lt;-<span class="st"> </span><span class="kw">train</span>(</a>
-<a class="sourceLine" id="cb50-16" title="16">  x, y,</a>
-<a class="sourceLine" id="cb50-17" title="17">  <span class="dt">method =</span> <span class="st">"rf"</span>, <span class="dt">trControl =</span> ctrl,</a>
-<a class="sourceLine" id="cb50-18" title="18">  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</a>
-<a class="sourceLine" id="cb50-19" title="19">)</a></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"caret"</span>)</span>
+<span id="cb50-2"><a href="#cb50-2"></a>x &lt;-<span class="st"> </span>x[, <span class="op">-</span><span class="kw">nearZeroVar</span>(x)]</span>
+<span id="cb50-3"><a href="#cb50-3"></a></span>
+<span id="cb50-4"><a href="#cb50-4"></a><span class="co"># cross-validation settings</span></span>
+<span id="cb50-5"><a href="#cb50-5"></a>ctrl &lt;-<span class="st"> </span><span class="kw">trainControl</span>(</span>
+<span id="cb50-6"><a href="#cb50-6"></a>  <span class="dt">method =</span> <span class="st">"cv"</span>, <span class="dt">number =</span> <span class="dv">5</span>, <span class="dt">repeats =</span> <span class="dv">10</span>,</span>
+<span id="cb50-7"><a href="#cb50-7"></a>  <span class="dt">classProbs =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb50-8"><a href="#cb50-8"></a>  <span class="dt">summaryFunction =</span> twoClassSummary</span>
+<span id="cb50-9"><a href="#cb50-9"></a>)</span>
+<span id="cb50-10"><a href="#cb50-10"></a></span>
+<span id="cb50-11"><a href="#cb50-11"></a><span class="co"># train a random forest classifier</span></span>
+<span id="cb50-12"><a href="#cb50-12"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"randomForest"</span>)</span>
+<span id="cb50-13"><a href="#cb50-13"></a></span>
+<span id="cb50-14"><a href="#cb50-14"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">1006</span>)</span>
+<span id="cb50-15"><a href="#cb50-15"></a>rf.fit &lt;-<span class="st"> </span><span class="kw">train</span>(</span>
+<span id="cb50-16"><a href="#cb50-16"></a>  x, y,</span>
+<span id="cb50-17"><a href="#cb50-17"></a>  <span class="dt">method =</span> <span class="st">"rf"</span>, <span class="dt">trControl =</span> ctrl,</span>
+<span id="cb50-18"><a href="#cb50-18"></a>  <span class="dt">metric =</span> <span class="st">"ROC"</span>, <span class="dt">preProc =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"center"</span>, <span class="st">"scale"</span>)</span>
+<span id="cb50-19"><a href="#cb50-19"></a>)</span></code></pre></div>
 <p>Print the cross-validation result:</p>
-<pre><code><a href="https://www.rdocumentation.org/packages/base/topics/print">print(rf.fit)</a></code></pre>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1"><span class="co">## Random Forest</span></a>
-<a class="sourceLine" id="cb52-2" title="2"><span class="co">##</span></a>
-<a class="sourceLine" id="cb52-3" title="3"><span class="co">## 1270 samples</span></a>
-<a class="sourceLine" id="cb52-4" title="4"><span class="co">##  562 predictors</span></a>
-<a class="sourceLine" id="cb52-5" title="5"><span class="co">##    2 classes: "neg", "pos"</span></a>
-<a class="sourceLine" id="cb52-6" title="6"><span class="co">##</span></a>
-<a class="sourceLine" id="cb52-7" title="7"><span class="co">## Pre-processing: centered, scaled</span></a>
-<a class="sourceLine" id="cb52-8" title="8"><span class="co">## Resampling: Cross-Validated (5 fold)</span></a>
-<a class="sourceLine" id="cb52-9" title="9"><span class="co">##</span></a>
-<a class="sourceLine" id="cb52-10" title="10"><span class="co">## Summary of sample sizes: 1016, 1016, 1016, 1016, 1016</span></a>
-<a class="sourceLine" id="cb52-11" title="11"><span class="co">##</span></a>
-<a class="sourceLine" id="cb52-12" title="12"><span class="co">## Resampling results across tuning parameters:</span></a>
-<a class="sourceLine" id="cb52-13" title="13"><span class="co">##</span></a>
-<a class="sourceLine" id="cb52-14" title="14"><span class="co">##   mtry  ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></a>
-<a class="sourceLine" id="cb52-15" title="15"><span class="co">##   2     0.83   0.726  0.778  0.0221  0.044    0.0395</span></a>
-<a class="sourceLine" id="cb52-16" title="16"><span class="co">##   33    0.882  0.795  0.82   0.018   0.0522   0.0443</span></a>
-<a class="sourceLine" id="cb52-17" title="17"><span class="co">##   562   0.893  0.822  0.844  0.0161  0.0437   0.0286</span></a>
-<a class="sourceLine" id="cb52-18" title="18"><span class="co">##</span></a>
-<a class="sourceLine" id="cb52-19" title="19"><span class="co">## ROC was used to select the optimal model using  the largest value.</span></a>
-<a class="sourceLine" id="cb52-20" title="20"><span class="co">## The final value used for the model was mtry = 562.</span></a></code></pre></div>
+<pre><code><a href="https://rdrr.io/r/base/print.html">print(rf.fit)</a></code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="co">## Random Forest</span></span>
+<span id="cb52-2"><a href="#cb52-2"></a><span class="co">##</span></span>
+<span id="cb52-3"><a href="#cb52-3"></a><span class="co">## 1270 samples</span></span>
+<span id="cb52-4"><a href="#cb52-4"></a><span class="co">##  562 predictors</span></span>
+<span id="cb52-5"><a href="#cb52-5"></a><span class="co">##    2 classes: "neg", "pos"</span></span>
+<span id="cb52-6"><a href="#cb52-6"></a><span class="co">##</span></span>
+<span id="cb52-7"><a href="#cb52-7"></a><span class="co">## Pre-processing: centered, scaled</span></span>
+<span id="cb52-8"><a href="#cb52-8"></a><span class="co">## Resampling: Cross-Validated (5 fold)</span></span>
+<span id="cb52-9"><a href="#cb52-9"></a><span class="co">##</span></span>
+<span id="cb52-10"><a href="#cb52-10"></a><span class="co">## Summary of sample sizes: 1016, 1016, 1016, 1016, 1016</span></span>
+<span id="cb52-11"><a href="#cb52-11"></a><span class="co">##</span></span>
+<span id="cb52-12"><a href="#cb52-12"></a><span class="co">## Resampling results across tuning parameters:</span></span>
+<span id="cb52-13"><a href="#cb52-13"></a><span class="co">##</span></span>
+<span id="cb52-14"><a href="#cb52-14"></a><span class="co">##   mtry  ROC    Sens   Spec   ROC SD  Sens SD  Spec SD</span></span>
+<span id="cb52-15"><a href="#cb52-15"></a><span class="co">##   2     0.83   0.726  0.778  0.0221  0.044    0.0395</span></span>
+<span id="cb52-16"><a href="#cb52-16"></a><span class="co">##   33    0.882  0.795  0.82   0.018   0.0522   0.0443</span></span>
+<span id="cb52-17"><a href="#cb52-17"></a><span class="co">##   562   0.893  0.822  0.844  0.0161  0.0437   0.0286</span></span>
+<span id="cb52-18"><a href="#cb52-18"></a><span class="co">##</span></span>
+<span id="cb52-19"><a href="#cb52-19"></a><span class="co">## ROC was used to select the optimal model using  the largest value.</span></span>
+<span id="cb52-20"><a href="#cb52-20"></a><span class="co">## The final value used for the model was mtry = 562.</span></span></code></pre></div>
 <p>Predict on the training set (for demonstration purpose only) and plot ROC curve.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">rf.pred &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(rf.fit<span class="op">$</span>finalModel, x, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb53-2" title="2"></a>
-<a class="sourceLine" id="cb53-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"pROC"</span>)</a>
-<a class="sourceLine" id="cb53-4" title="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/smooth">smooth</a></span>(<span class="kw">roc</span>(y, rf.pred)), <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>rf.pred &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(rf.fit<span class="op">$</span>finalModel, x, <span class="dt">type =</span> <span class="st">"prob"</span>)[, <span class="dv">1</span>]</span>
+<span id="cb53-2"><a href="#cb53-2"></a></span>
+<span id="cb53-3"><a href="#cb53-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"pROC"</span>)</span>
+<span id="cb53-4"><a href="#cb53-4"></a><span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/smooth.html">smooth</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/pROC/man/roc.html">roc</a></span>(y, rf.pred)), <span class="dt">grid =</span> <span class="ot">TRUE</span>, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>The ROC curve is shown in Figure 8.</p>
 <img src="figures/ex6-2.png" width="65%" class="img-responsive" align="center" alt="ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest"><p align="center">
 Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest
@@ -839,6 +841,7 @@ Figure 8: ROC curve for predicting on the training set of the GPCR drug-target i
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -875,17 +878,20 @@ Figure 8: ROC curve for predicting on the training set of the GPCR drug-target i
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by Nan Xiao, Dong-Sheng Cao, Qing-Song Xu.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>
