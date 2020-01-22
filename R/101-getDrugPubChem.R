@@ -42,7 +42,7 @@ getMolFromPubChem = function (id, parallel = 5) {
 
     SdfTxt = getURLAsynchronous(url = SdfURL, perform = parallel)
 
-    SdfTxt = sapply(SdfTxt, rawToChar)
+    SdfTxt = if (is.list(SdfTxt)) sapply(SdfTxt, rawToChar) else rawToChar(SdfTxt)
 
     return(SdfTxt)
 
