@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,7 +43,6 @@
 
 <meta property="og:title" content="Moran Autocorrelation Descriptor — extractProtMoran" />
 <meta property="og:description" content="Moran Autocorrelation Descriptor" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -57,7 +60,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -107,7 +110,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/nanxstats/Rcpi">
+  <a href="https://github.com/nanxstats/Rcpi/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -134,9 +137,13 @@
     <p>Moran Autocorrelation Descriptor</p>
     </div>
 
-    <pre class="usage"><span class='fu'>extractProtMoran</span>(<span class='no'>x</span>, <span class='kw'>props</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"CIDH920105"</span>, <span class='st'>"BHAR880101"</span>, <span class='st'>"CHAM820101"</span>,
-  <span class='st'>"CHAM820102"</span>, <span class='st'>"CHOC760101"</span>, <span class='st'>"BIGC670101"</span>, <span class='st'>"CHAM810101"</span>, <span class='st'>"DAYM780201"</span>),
-  <span class='kw'>nlag</span> <span class='kw'>=</span> <span class='fl'>30L</span>, <span class='kw'>customprops</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>extractProtMoran</span>(
+  <span class='no'>x</span>,
+  <span class='kw'>props</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"CIDH920105"</span>, <span class='st'>"BHAR880101"</span>, <span class='st'>"CHAM820101"</span>, <span class='st'>"CHAM820102"</span>, <span class='st'>"CHOC760101"</span>,
+    <span class='st'>"BIGC670101"</span>, <span class='st'>"CHAM810101"</span>, <span class='st'>"DAYM780201"</span>),
+  <span class='kw'>nlag</span> <span class='kw'>=</span> <span class='fl'>30L</span>,
+  <span class='kw'>customprops</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -149,7 +156,7 @@
       <th>props</th>
       <td><p>A character vector, specifying the
 Accession Number of the target properties.
-8 properties are used by default, as listed below:</p><dl class='dl-horizontal'>
+8 properties are used by default, as listed below:</p><dl'>
 <dt>AccNo. CIDH920105</dt><dd><p>Normalized average hydrophobicity scales (Cid et al., 1992)</p></dd>
 <dt>AccNo. BHAR880101</dt><dd><p>Average flexibility indices (Bhaskaran-Ponnuswamy, 1988)</p></dd>
 <dt>AccNo. CHAM820101</dt><dd><p>Polarizability parameter (Charton-Charton, 1982)</p></dd>
@@ -215,9 +222,127 @@ for Moreau-Broto autocorrelation descriptors and
 Geary autocorrelation descriptors.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtMoran</span>(<span class='no'>x</span>)
-
+    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtMoran</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;  CIDH920105.lag1  CIDH920105.lag2  CIDH920105.lag3  CIDH920105.lag4 
+#&gt;     0.0628957240    -0.0448276812    -0.0450651172    -0.0559556782 
+#&gt;  CIDH920105.lag5  CIDH920105.lag6  CIDH920105.lag7  CIDH920105.lag8 
+#&gt;     0.0605863773    -0.0741284119    -0.0673088521    -0.0012933840 
+#&gt;  CIDH920105.lag9 CIDH920105.lag10 CIDH920105.lag11 CIDH920105.lag12 
+#&gt;    -0.0337475878     0.0293921932     0.0617898004    -0.0233684365 
+#&gt; CIDH920105.lag13 CIDH920105.lag14 CIDH920105.lag15 CIDH920105.lag16 
+#&gt;     0.0627694174    -0.0249122640    -0.0282980428    -0.0315840631 
+#&gt; CIDH920105.lag17 CIDH920105.lag18 CIDH920105.lag19 CIDH920105.lag20 
+#&gt;    -0.0434667300     0.0478306937     0.0058839009    -0.0017697691 
+#&gt; CIDH920105.lag21 CIDH920105.lag22 CIDH920105.lag23 CIDH920105.lag24 
+#&gt;     0.0493340478     0.0964279695     0.0151475944    -0.0600925088 
+#&gt; CIDH920105.lag25 CIDH920105.lag26 CIDH920105.lag27 CIDH920105.lag28 
+#&gt;     0.0075491522    -0.0339878848     0.0563076747    -0.0618444531 
+#&gt; CIDH920105.lag29 CIDH920105.lag30  BHAR880101.lag1  BHAR880101.lag2 
+#&gt;     0.0214847799    -0.0084617756     0.0142299506    -0.0091424191 
+#&gt;  BHAR880101.lag3  BHAR880101.lag4  BHAR880101.lag5  BHAR880101.lag6 
+#&gt;    -0.0032722616    -0.1096133317     0.0333462328    -0.1415385983 
+#&gt;  BHAR880101.lag7  BHAR880101.lag8  BHAR880101.lag9 BHAR880101.lag10 
+#&gt;    -0.0703941531     0.0409328968    -0.0436344551     0.0875104047 
+#&gt; BHAR880101.lag11 BHAR880101.lag12 BHAR880101.lag13 BHAR880101.lag14 
+#&gt;     0.0107143877    -0.0234509834     0.0634629637    -0.0136768674 
+#&gt; BHAR880101.lag15 BHAR880101.lag16 BHAR880101.lag17 BHAR880101.lag18 
+#&gt;     0.0077095251     0.0175920242    -0.0291658885    -0.0738567937 
+#&gt; BHAR880101.lag19 BHAR880101.lag20 BHAR880101.lag21 BHAR880101.lag22 
+#&gt;    -0.0565998559    -0.0418922713    -0.0292203651     0.0929470317 
+#&gt; BHAR880101.lag23 BHAR880101.lag24 BHAR880101.lag25 BHAR880101.lag26 
+#&gt;    -0.0436753428    -0.0335888211    -0.0056728997    -0.0254747391 
+#&gt; BHAR880101.lag27 BHAR880101.lag28 BHAR880101.lag29 BHAR880101.lag30 
+#&gt;     0.0688812089    -0.0459053364     0.0406307434     0.0014525774 
+#&gt;  CHAM820101.lag1  CHAM820101.lag2  CHAM820101.lag3  CHAM820101.lag4 
+#&gt;    -0.0139286496    -0.0031774785    -0.0561007348    -0.0165238751 
+#&gt;  CHAM820101.lag5  CHAM820101.lag6  CHAM820101.lag7  CHAM820101.lag8 
+#&gt;     0.0603640362     0.0264796116     0.0121346645     0.0507592124 
+#&gt;  CHAM820101.lag9 CHAM820101.lag10 CHAM820101.lag11 CHAM820101.lag12 
+#&gt;     0.0429513118    -0.0474984658     0.0218889871     0.0137500943 
+#&gt; CHAM820101.lag13 CHAM820101.lag14 CHAM820101.lag15 CHAM820101.lag16 
+#&gt;     0.0619880622     0.0163904824     0.0261899010    -0.0322412396 
+#&gt; CHAM820101.lag17 CHAM820101.lag18 CHAM820101.lag19 CHAM820101.lag20 
+#&gt;    -0.0639839388     0.0417769933    -0.0274431147     0.0277859179 
+#&gt; CHAM820101.lag21 CHAM820101.lag22 CHAM820101.lag23 CHAM820101.lag24 
+#&gt;     0.0176309571     0.1090112290     0.0025546785    -0.0352426985 
+#&gt; CHAM820101.lag25 CHAM820101.lag26 CHAM820101.lag27 CHAM820101.lag28 
+#&gt;     0.0274560224     0.0509827246     0.0281024830     0.0202381193 
+#&gt; CHAM820101.lag29 CHAM820101.lag30  CHAM820102.lag1  CHAM820102.lag2 
+#&gt;    -0.0349253902     0.0253187647     0.0472909282    -0.0365090783 
+#&gt;  CHAM820102.lag3  CHAM820102.lag4  CHAM820102.lag5  CHAM820102.lag6 
+#&gt;    -0.0938150715    -0.0795931788     0.0160017074     0.0101696097 
+#&gt;  CHAM820102.lag7  CHAM820102.lag8  CHAM820102.lag9 CHAM820102.lag10 
+#&gt;    -0.0046945877     0.0375211657    -0.0528134748     0.0319808011 
+#&gt; CHAM820102.lag11 CHAM820102.lag12 CHAM820102.lag13 CHAM820102.lag14 
+#&gt;    -0.0046958694     0.0221070009     0.0745338891    -0.0612460620 
+#&gt; CHAM820102.lag15 CHAM820102.lag16 CHAM820102.lag17 CHAM820102.lag18 
+#&gt;    -0.0235480177    -0.0080840950     0.0088808557     0.0442566241 
+#&gt; CHAM820102.lag19 CHAM820102.lag20 CHAM820102.lag21 CHAM820102.lag22 
+#&gt;    -0.0274928975    -0.0138698888    -0.0166914894    -0.0118719298 
+#&gt; CHAM820102.lag23 CHAM820102.lag24 CHAM820102.lag25 CHAM820102.lag26 
+#&gt;    -0.0485695652    -0.0107514909     0.0182771924    -0.0043974543 
+#&gt; CHAM820102.lag27 CHAM820102.lag28 CHAM820102.lag29 CHAM820102.lag30 
+#&gt;     0.0042313858    -0.0136384843     0.0257957985     0.0705161992 
+#&gt;  CHOC760101.lag1  CHOC760101.lag2  CHOC760101.lag3  CHOC760101.lag4 
+#&gt;    -0.0154525807     0.0265724188    -0.0498887566     0.0070961701 
+#&gt;  CHOC760101.lag5  CHOC760101.lag6  CHOC760101.lag7  CHOC760101.lag8 
+#&gt;     0.0522659111     0.0597617545     0.0412887124     0.0718808668 
+#&gt;  CHOC760101.lag9 CHOC760101.lag10 CHOC760101.lag11 CHOC760101.lag12 
+#&gt;     0.0366314578    -0.0459229502    -0.0181662006     0.0117017279 
+#&gt; CHOC760101.lag13 CHOC760101.lag14 CHOC760101.lag15 CHOC760101.lag16 
+#&gt;     0.0514381387     0.0509980646     0.0279388729    -0.0034876046 
+#&gt; CHOC760101.lag17 CHOC760101.lag18 CHOC760101.lag19 CHOC760101.lag20 
+#&gt;    -0.0660139718     0.0439281120    -0.0060162447    -0.0011672678 
+#&gt; CHOC760101.lag21 CHOC760101.lag22 CHOC760101.lag23 CHOC760101.lag24 
+#&gt;     0.0511767991     0.1040461988     0.0202167200    -0.0311304950 
+#&gt; CHOC760101.lag25 CHOC760101.lag26 CHOC760101.lag27 CHOC760101.lag28 
+#&gt;     0.0042916208     0.0726196884     0.0079204201    -0.0001472768 
+#&gt; CHOC760101.lag29 CHOC760101.lag30  BIGC670101.lag1  BIGC670101.lag2 
+#&gt;    -0.0398625971     0.0512999467    -0.0064385866     0.0069630946 
+#&gt;  BIGC670101.lag3  BIGC670101.lag4  BIGC670101.lag5  BIGC670101.lag6 
+#&gt;    -0.0732640757    -0.0063996223     0.0829841853     0.0343358031 
+#&gt;  BIGC670101.lag7  BIGC670101.lag8  BIGC670101.lag9 BIGC670101.lag10 
+#&gt;     0.0536729890     0.0434912759     0.0247346449    -0.0442464676 
+#&gt; BIGC670101.lag11 BIGC670101.lag12 BIGC670101.lag13 BIGC670101.lag14 
+#&gt;    -0.0053895870     0.0012486134     0.0556911451     0.0284974983 
+#&gt; BIGC670101.lag15 BIGC670101.lag16 BIGC670101.lag17 BIGC670101.lag18 
+#&gt;     0.0109559840    -0.0126063564    -0.0705594309     0.0601765018 
+#&gt; BIGC670101.lag19 BIGC670101.lag20 BIGC670101.lag21 BIGC670101.lag22 
+#&gt;    -0.0152546226     0.0379876110     0.0448148800     0.1131200658 
+#&gt; BIGC670101.lag23 BIGC670101.lag24 BIGC670101.lag25 BIGC670101.lag26 
+#&gt;     0.0121577357    -0.0400014448     0.0139723135     0.0470566766 
+#&gt; BIGC670101.lag27 BIGC670101.lag28 BIGC670101.lag29 BIGC670101.lag30 
+#&gt;     0.0038125395     0.0017197347    -0.0376829287     0.0420533380 
+#&gt;  CHAM810101.lag1  CHAM810101.lag2  CHAM810101.lag3  CHAM810101.lag4 
+#&gt;     0.0058275538     0.0385484463    -0.0657720156    -0.0330380580 
+#&gt;  CHAM810101.lag5  CHAM810101.lag6  CHAM810101.lag7  CHAM810101.lag8 
+#&gt;     0.0121334743     0.0305715775     0.0115838046     0.0540323736 
+#&gt;  CHAM810101.lag9 CHAM810101.lag10 CHAM810101.lag11 CHAM810101.lag12 
+#&gt;    -0.0293222565    -0.0197572361    -0.0597248427     0.0006635199 
+#&gt; CHAM810101.lag13 CHAM810101.lag14 CHAM810101.lag15 CHAM810101.lag16 
+#&gt;     0.0070016632     0.0699989710     0.0403018334     0.0154178230 
+#&gt; CHAM810101.lag17 CHAM810101.lag18 CHAM810101.lag19 CHAM810101.lag20 
+#&gt;    -0.0337609194     0.0103956917    -0.0612327500    -0.0250911500 
+#&gt; CHAM810101.lag21 CHAM810101.lag22 CHAM810101.lag23 CHAM810101.lag24 
+#&gt;     0.0930602757     0.0872294279     0.0215617322    -0.0060435428 
+#&gt; CHAM810101.lag25 CHAM810101.lag26 CHAM810101.lag27 CHAM810101.lag28 
+#&gt;    -0.0116253505     0.0360440638    -0.0280374803    -0.0233970031 
+#&gt; CHAM810101.lag29 CHAM810101.lag30  DAYM780201.lag1  DAYM780201.lag2 
+#&gt;     0.0712107443     0.0626072049     0.0348476917    -0.0521070043 
+#&gt;  DAYM780201.lag3  DAYM780201.lag4  DAYM780201.lag5  DAYM780201.lag6 
+#&gt;    -0.0325404884    -0.1049972273     0.0307503803    -0.0412446408 
+#&gt;  DAYM780201.lag7  DAYM780201.lag8  DAYM780201.lag9 DAYM780201.lag10 
+#&gt;    -0.1073630694     0.0839794772     0.0939770041     0.0327668798 
+#&gt; DAYM780201.lag11 DAYM780201.lag12 DAYM780201.lag13 DAYM780201.lag14 
+#&gt;    -0.0278279405    -0.0227529723     0.0387893928    -0.0312739026 
+#&gt; DAYM780201.lag15 DAYM780201.lag16 DAYM780201.lag17 DAYM780201.lag18 
+#&gt;    -0.0139690192    -0.0792258321     0.0022651525     0.0815660169 
+#&gt; DAYM780201.lag19 DAYM780201.lag20 DAYM780201.lag21 DAYM780201.lag22 
+#&gt;     0.0518317756    -0.0113828762     0.0295481744     0.0122838284 
+#&gt; DAYM780201.lag23 DAYM780201.lag24 DAYM780201.lag25 DAYM780201.lag26 
+#&gt;     0.0040764169     0.0521186819    -0.0844529172    -0.0405209150 
+#&gt; DAYM780201.lag27 DAYM780201.lag28 DAYM780201.lag29 DAYM780201.lag30 
+#&gt;     0.0099613021     0.0534887247     0.0521919187    -0.0428922743 </div><div class='input'>
 <span class='no'>myprops</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>AccNo</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"MyProp1"</span>, <span class='st'>"MyProp2"</span>, <span class='st'>"MyProp3"</span>),
                      <span class='kw'>A</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0.62</span>,  -<span class='fl'>0.5</span>, <span class='fl'>15</span>),  <span class='kw'>R</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>2.53</span>,   <span class='fl'>3</span>, <span class='fl'>101</span>),
                      <span class='kw'>N</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>0.78</span>,  <span class='fl'>0.2</span>, <span class='fl'>58</span>),  <span class='kw'>D</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>0.9</span>,    <span class='fl'>3</span>, <span class='fl'>59</span>),
@@ -234,21 +359,118 @@ Geary autocorrelation descriptors.</p></div>
 <span class='fu'>extractProtMoran</span>(<span class='no'>x</span>, <span class='kw'>customprops</span> <span class='kw'>=</span> <span class='no'>myprops</span>,
                  <span class='kw'>props</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'CIDH920105'</span>, <span class='st'>'BHAR880101'</span>,
                            <span class='st'>'CHAM820101'</span>, <span class='st'>'CHAM820102'</span>,
-                           <span class='st'>'MyProp1'</span>, <span class='st'>'MyProp2'</span>, <span class='st'>'MyProp3'</span>))</pre>
+                           <span class='st'>'MyProp1'</span>, <span class='st'>'MyProp2'</span>, <span class='st'>'MyProp3'</span>))</div><div class='output co'>#&gt;  CIDH920105.lag1  CIDH920105.lag2  CIDH920105.lag3  CIDH920105.lag4 
+#&gt;     0.0628957240    -0.0448276812    -0.0450651172    -0.0559556782 
+#&gt;  CIDH920105.lag5  CIDH920105.lag6  CIDH920105.lag7  CIDH920105.lag8 
+#&gt;     0.0605863773    -0.0741284119    -0.0673088521    -0.0012933840 
+#&gt;  CIDH920105.lag9 CIDH920105.lag10 CIDH920105.lag11 CIDH920105.lag12 
+#&gt;    -0.0337475878     0.0293921932     0.0617898004    -0.0233684365 
+#&gt; CIDH920105.lag13 CIDH920105.lag14 CIDH920105.lag15 CIDH920105.lag16 
+#&gt;     0.0627694174    -0.0249122640    -0.0282980428    -0.0315840631 
+#&gt; CIDH920105.lag17 CIDH920105.lag18 CIDH920105.lag19 CIDH920105.lag20 
+#&gt;    -0.0434667300     0.0478306937     0.0058839009    -0.0017697691 
+#&gt; CIDH920105.lag21 CIDH920105.lag22 CIDH920105.lag23 CIDH920105.lag24 
+#&gt;     0.0493340478     0.0964279695     0.0151475944    -0.0600925088 
+#&gt; CIDH920105.lag25 CIDH920105.lag26 CIDH920105.lag27 CIDH920105.lag28 
+#&gt;     0.0075491522    -0.0339878848     0.0563076747    -0.0618444531 
+#&gt; CIDH920105.lag29 CIDH920105.lag30  BHAR880101.lag1  BHAR880101.lag2 
+#&gt;     0.0214847799    -0.0084617756     0.0142299506    -0.0091424191 
+#&gt;  BHAR880101.lag3  BHAR880101.lag4  BHAR880101.lag5  BHAR880101.lag6 
+#&gt;    -0.0032722616    -0.1096133317     0.0333462328    -0.1415385983 
+#&gt;  BHAR880101.lag7  BHAR880101.lag8  BHAR880101.lag9 BHAR880101.lag10 
+#&gt;    -0.0703941531     0.0409328968    -0.0436344551     0.0875104047 
+#&gt; BHAR880101.lag11 BHAR880101.lag12 BHAR880101.lag13 BHAR880101.lag14 
+#&gt;     0.0107143877    -0.0234509834     0.0634629637    -0.0136768674 
+#&gt; BHAR880101.lag15 BHAR880101.lag16 BHAR880101.lag17 BHAR880101.lag18 
+#&gt;     0.0077095251     0.0175920242    -0.0291658885    -0.0738567937 
+#&gt; BHAR880101.lag19 BHAR880101.lag20 BHAR880101.lag21 BHAR880101.lag22 
+#&gt;    -0.0565998559    -0.0418922713    -0.0292203651     0.0929470317 
+#&gt; BHAR880101.lag23 BHAR880101.lag24 BHAR880101.lag25 BHAR880101.lag26 
+#&gt;    -0.0436753428    -0.0335888211    -0.0056728997    -0.0254747391 
+#&gt; BHAR880101.lag27 BHAR880101.lag28 BHAR880101.lag29 BHAR880101.lag30 
+#&gt;     0.0688812089    -0.0459053364     0.0406307434     0.0014525774 
+#&gt;  CHAM820101.lag1  CHAM820101.lag2  CHAM820101.lag3  CHAM820101.lag4 
+#&gt;    -0.0139286496    -0.0031774785    -0.0561007348    -0.0165238751 
+#&gt;  CHAM820101.lag5  CHAM820101.lag6  CHAM820101.lag7  CHAM820101.lag8 
+#&gt;     0.0603640362     0.0264796116     0.0121346645     0.0507592124 
+#&gt;  CHAM820101.lag9 CHAM820101.lag10 CHAM820101.lag11 CHAM820101.lag12 
+#&gt;     0.0429513118    -0.0474984658     0.0218889871     0.0137500943 
+#&gt; CHAM820101.lag13 CHAM820101.lag14 CHAM820101.lag15 CHAM820101.lag16 
+#&gt;     0.0619880622     0.0163904824     0.0261899010    -0.0322412396 
+#&gt; CHAM820101.lag17 CHAM820101.lag18 CHAM820101.lag19 CHAM820101.lag20 
+#&gt;    -0.0639839388     0.0417769933    -0.0274431147     0.0277859179 
+#&gt; CHAM820101.lag21 CHAM820101.lag22 CHAM820101.lag23 CHAM820101.lag24 
+#&gt;     0.0176309571     0.1090112290     0.0025546785    -0.0352426985 
+#&gt; CHAM820101.lag25 CHAM820101.lag26 CHAM820101.lag27 CHAM820101.lag28 
+#&gt;     0.0274560224     0.0509827246     0.0281024830     0.0202381193 
+#&gt; CHAM820101.lag29 CHAM820101.lag30  CHAM820102.lag1  CHAM820102.lag2 
+#&gt;    -0.0349253902     0.0253187647     0.0472909282    -0.0365090783 
+#&gt;  CHAM820102.lag3  CHAM820102.lag4  CHAM820102.lag5  CHAM820102.lag6 
+#&gt;    -0.0938150715    -0.0795931788     0.0160017074     0.0101696097 
+#&gt;  CHAM820102.lag7  CHAM820102.lag8  CHAM820102.lag9 CHAM820102.lag10 
+#&gt;    -0.0046945877     0.0375211657    -0.0528134748     0.0319808011 
+#&gt; CHAM820102.lag11 CHAM820102.lag12 CHAM820102.lag13 CHAM820102.lag14 
+#&gt;    -0.0046958694     0.0221070009     0.0745338891    -0.0612460620 
+#&gt; CHAM820102.lag15 CHAM820102.lag16 CHAM820102.lag17 CHAM820102.lag18 
+#&gt;    -0.0235480177    -0.0080840950     0.0088808557     0.0442566241 
+#&gt; CHAM820102.lag19 CHAM820102.lag20 CHAM820102.lag21 CHAM820102.lag22 
+#&gt;    -0.0274928975    -0.0138698888    -0.0166914894    -0.0118719298 
+#&gt; CHAM820102.lag23 CHAM820102.lag24 CHAM820102.lag25 CHAM820102.lag26 
+#&gt;    -0.0485695652    -0.0107514909     0.0182771924    -0.0043974543 
+#&gt; CHAM820102.lag27 CHAM820102.lag28 CHAM820102.lag29 CHAM820102.lag30 
+#&gt;     0.0042313858    -0.0136384843     0.0257957985     0.0705161992 
+#&gt;     MyProp1.lag1     MyProp1.lag2     MyProp1.lag3     MyProp1.lag4 
+#&gt;     0.0008415542    -0.0089826237     0.0193940285    -0.0244422592 
+#&gt;     MyProp1.lag5     MyProp1.lag6     MyProp1.lag7     MyProp1.lag8 
+#&gt;     0.0310193180    -0.0301557793    -0.0029608325    -0.0390960674 
+#&gt;     MyProp1.lag9    MyProp1.lag10    MyProp1.lag11    MyProp1.lag12 
+#&gt;    -0.0591531134     0.0531417370    -0.0010627092    -0.0209697065 
+#&gt;    MyProp1.lag13    MyProp1.lag14    MyProp1.lag15    MyProp1.lag16 
+#&gt;     0.0295367516     0.0116742692    -0.0093957053    -0.0027183836 
+#&gt;    MyProp1.lag17    MyProp1.lag18    MyProp1.lag19    MyProp1.lag20 
+#&gt;     0.0057604102    -0.0098153866    -0.0027265839    -0.0098448511 
+#&gt;    MyProp1.lag21    MyProp1.lag22    MyProp1.lag23    MyProp1.lag24 
+#&gt;    -0.0172425572     0.0572658534     0.0447406380    -0.0516721832 
+#&gt;    MyProp1.lag25    MyProp1.lag26    MyProp1.lag27    MyProp1.lag28 
+#&gt;    -0.0805627707     0.0127246860     0.0961473917    -0.0251347343 
+#&gt;    MyProp1.lag29    MyProp1.lag30     MyProp2.lag1     MyProp2.lag2 
+#&gt;     0.0226862280     0.0018843110     0.0094920511    -0.0169857388 
+#&gt;     MyProp2.lag3     MyProp2.lag4     MyProp2.lag5     MyProp2.lag6 
+#&gt;     0.0035609325    -0.0232931717     0.0205684755    -0.1222127965 
+#&gt;     MyProp2.lag7     MyProp2.lag8     MyProp2.lag9    MyProp2.lag10 
+#&gt;     0.0044370014    -0.0559435951    -0.0473222323     0.0682730086 
+#&gt;    MyProp2.lag11    MyProp2.lag12    MyProp2.lag13    MyProp2.lag14 
+#&gt;     0.0064153700    -0.0582942109     0.0844962043    -0.0351822588 
+#&gt;    MyProp2.lag15    MyProp2.lag16    MyProp2.lag17    MyProp2.lag18 
+#&gt;    -0.0946131823     0.0420472336     0.0413090619     0.0309780970 
+#&gt;    MyProp2.lag19    MyProp2.lag20    MyProp2.lag21    MyProp2.lag22 
+#&gt;    -0.0347529408     0.0059692058     0.0219243377     0.0587756605 
+#&gt;    MyProp2.lag23    MyProp2.lag24    MyProp2.lag25    MyProp2.lag26 
+#&gt;     0.0413646875    -0.0374497592    -0.0722582273    -0.0417029870 
+#&gt;    MyProp2.lag27    MyProp2.lag28    MyProp2.lag29    MyProp2.lag30 
+#&gt;     0.0894505412    -0.0710519977     0.0320843436     0.0176801053 
+#&gt;     MyProp3.lag1     MyProp3.lag2     MyProp3.lag3     MyProp3.lag4 
+#&gt;    -0.0151909325     0.0270495815    -0.0507840359    -0.0075348884 
+#&gt;     MyProp3.lag5     MyProp3.lag6     MyProp3.lag7     MyProp3.lag8 
+#&gt;     0.0197836987     0.0593447616     0.0064005884     0.0679328466 
+#&gt;     MyProp3.lag9    MyProp3.lag10    MyProp3.lag11    MyProp3.lag12 
+#&gt;     0.0277213330    -0.0529023740    -0.0049029722     0.0263659265 
+#&gt;    MyProp3.lag13    MyProp3.lag14    MyProp3.lag15    MyProp3.lag16 
+#&gt;     0.0626646373     0.0394133147     0.0343934904    -0.0100172766 
+#&gt;    MyProp3.lag17    MyProp3.lag18    MyProp3.lag19    MyProp3.lag20 
+#&gt;    -0.0605245713     0.0323015699    -0.0191015693     0.0045343719 
+#&gt;    MyProp3.lag21    MyProp3.lag22    MyProp3.lag23    MyProp3.lag24 
+#&gt;     0.0287396054     0.0779873138     0.0023063774    -0.0324932490 
+#&gt;    MyProp3.lag25    MyProp3.lag26    MyProp3.lag27    MyProp3.lag28 
+#&gt;     0.0082948913     0.0846071851     0.0159416525    -0.0013589449 
+#&gt;    MyProp3.lag29    MyProp3.lag30 
+#&gt;    -0.0359451704     0.0352374621 </div><div class='input'>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#references">References</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -259,7 +481,7 @@ Geary autocorrelation descriptors.</p></div>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

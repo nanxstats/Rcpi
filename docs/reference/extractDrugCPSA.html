@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,7 +43,6 @@
 
 <meta property="og:title" content="A Variety of Descriptors Combining Surface Area and Partial Charge Information — extractDrugCPSA" />
 <meta property="og:description" content="A Variety of Descriptors Combining Surface Area and Partial Charge Information" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -57,7 +60,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -107,7 +110,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/nanxstats/Rcpi">
+  <a href="https://github.com/nanxstats/Rcpi/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -208,24 +211,43 @@ Quantitative Structure Property Relationship Studies,
 Analytical Chemistry, 1990, 62:2323.2329.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+    <pre class="examples"><div class='input'><span class='no'>sdf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'sysdata/OptAA3d.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
 <span class='co'># \donttest{</span>
 <span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='no'>sdf</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugCPSA</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>dat</span>)<span class='co'># }</span></pre>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>dat</span>)<span class='co'># }</span></div><div class='output co'>#&gt;     PPSA.1   PPSA.2   PPSA.3    PNSA.1     PNSA.2    PNSA.3    DPSA.1   DPSA.2
+#&gt; 1 217.3909 325.7632 22.89030 157.82863 -236.50828 -37.91801  59.56231 562.2715
+#&gt; 2 256.4949 369.4516 24.08549 147.07806 -211.84912 -26.85431 109.41688 581.3007
+#&gt; 3 218.2677 230.8050 15.71699  80.56272  -85.19024 -20.90756 137.70496 315.9952
+#&gt; 4 178.1162 238.5298 16.78033 105.92785 -141.85655 -32.19461  72.18831 380.3863
+#&gt; 5 151.3214 197.5453 19.57263 114.64248 -149.66213 -36.95420  36.67895 347.2075
+#&gt; 6 279.5318 500.6395 28.63370 113.24052 -202.81294 -32.18667 166.29132 703.4524
+#&gt;     DPSA.3    FPSA.1    FPSA.2     FPSA.3    FNSA.1     FNSA.2      FNSA.3
+#&gt; 1 60.80831 0.5793699 0.8681935 0.06100508 0.4206301 -0.6303197 -0.10105552
+#&gt; 2 50.93980 0.6355602 0.9154518 0.05968064 0.3644398 -0.5249338 -0.06654139
+#&gt; 3 36.62455 0.7304066 0.7723611 0.05259502 0.2695934 -0.2850789 -0.06996463
+#&gt; 4 48.97494 0.6270724 0.8397633 0.05907652 0.3729276 -0.4994175 -0.11334374
+#&gt; 5 56.52683 0.5689547 0.7427524 0.07359131 0.4310453 -0.5627159 -0.13894443
+#&gt; 6 60.82036 0.7116892 1.2746300 0.07290150 0.2883108 -0.5163625 -0.08194738
+#&gt;      WPSA.1    WPSA.2    WPSA.3   WNSA.1    WNSA.2     WNSA.3      RPCG
+#&gt; 1  81.56934 122.23273  8.588889 59.22039 -88.74254 -14.227579 0.1843093
+#&gt; 2 103.51443 149.10070  9.720255 59.35673 -85.49659 -10.837673 0.1917478
+#&gt; 3  65.22502  68.97154  4.696714 24.07459 -25.45743  -6.247813 0.2611178
+#&gt; 4  50.59283  67.75295  4.766353 30.08817 -40.29350  -9.144687 0.2079386
+#&gt; 5  40.24603  52.53993  5.205613 30.49076 -39.80472  -9.828483 0.2130907
+#&gt; 6 109.79239 196.63735 11.246525 44.47775 -79.65932 -12.642033 0.1538340
+#&gt;        RNCG      RPCS     RNCS     THSA      TPSA      RHSA      RPSA
+#&gt; 1 0.2405045 0.4521098 8.321894 212.3968 162.82282 0.5660599 0.4339401
+#&gt; 2 0.2293170 0.7598065 6.249868 294.7051 108.86788 0.7302399 0.2697601
+#&gt; 3 0.3123638 0.7308504 6.760782 202.4131  96.41732 0.6773510 0.3226490
+#&gt; 4 0.2916922 0.5820056 9.146075 149.4775 134.56651 0.5262477 0.4737523
+#&gt; 5 0.3014902 0.7237528 8.981059 100.5617 165.40224 0.3781027 0.6218973
+#&gt; 6 0.1844904 0.5515173 4.339869 253.1220 139.65039 0.6444496 0.3555504</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#references">References</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -236,7 +258,7 @@ Analytical Chemistry, 1990, 62:2323.2329.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

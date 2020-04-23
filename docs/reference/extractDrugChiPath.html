@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,7 +43,6 @@
 
 <meta property="og:title" content="Calculate the Kier and Hall Chi Path Indices of Orders 0 to 7 — extractDrugChiPath" />
 <meta property="og:description" content="Calculate the Kier and Hall Chi Path Indices of Orders 0 to 7" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -57,7 +60,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -107,7 +110,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/nanxstats/Rcpi">
+  <a href="https://github.com/nanxstats/Rcpi/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -174,24 +177,71 @@ In addition, recent versions of Molconn-Z use simplified fragment definitions
 more complex fragment definitions.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
 <span class='co'># \donttest{</span>
 <span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
 <span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugChiPath</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>dat</span>)<span class='co'># }</span></pre>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>dat</span>)<span class='co'># }</span></div><div class='output co'>#&gt;                                                              SP.0      SP.1
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 18.844571 12.379918
+#&gt; c1(ccc(cc1)O)NC(=O)C                                     8.267585  5.181541
+#&gt; c1ccccc1NC(=O)C                                          7.397341  4.787694
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              10.060478  5.892865
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                16.164926 10.381847
+#&gt; CC(=O)NO                                                 4.284457  2.270056
+#&gt;                                                              SP.2      SP.3
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 11.570125 9.1847024
+#&gt; c1(ccc(cc1)O)NC(=O)C                                     4.755447 2.9401663
+#&gt; c1ccccc1NC(=O)C                                          4.133585 2.5294827
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                               6.371576 3.5707105
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                 9.893336 7.1548274
+#&gt; CC(=O)NO                                                 1.802095 0.8164966
+#&gt;                                                             SP.4     SP.5
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 7.919385 6.404528
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    2.231484 1.745558
+#&gt; c1ccccc1NC(=O)C                                         2.089509 1.454568
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              2.742267 1.705791
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                5.707323 3.806775
+#&gt; CC(=O)NO                                                0.000000 0.000000
+#&gt;                                                              SP.6      SP.7
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 4.6414117 3.0349134
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    0.7889911 0.5326570
+#&gt; c1ccccc1NC(=O)C                                         0.5955220 0.3190356
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              1.1733040 0.6512287
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                2.4947518 1.8451355
+#&gt; CC(=O)NO                                                0.0000000 0.0000000
+#&gt;                                                              VP.0     VP.1
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 13.690573 7.920201
+#&gt; c1(ccc(cc1)O)NC(=O)C                                     6.164863 3.249098
+#&gt; c1ccccc1NC(=O)C                                          5.795000 3.114808
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                               7.533257 4.235098
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                12.667268 7.696465
+#&gt; CC(=O)NO                                                 2.855462 1.177731
+#&gt;                                                              VP.2      VP.3
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 5.9926052 4.2086673
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    2.2280602 1.1876733
+#&gt; c1ccccc1NC(=O)C                                         2.0472116 1.0941577
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              3.4816990 2.1186185
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                5.9142707 4.0746883
+#&gt; CC(=O)NO                                                0.6679896 0.1574469
+#&gt;                                                              VP.4      VP.5
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 2.9753813 2.1000778
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    0.7480266 0.4541008
+#&gt; c1ccccc1NC(=O)C                                         0.7247493 0.4134722
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              1.3500910 0.6781185
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                2.7399233 1.8180018
+#&gt; CC(=O)NO                                                0.0000000 0.0000000
+#&gt;                                                              VP.6       VP.7
+#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 1.2066002 0.68416719
+#&gt; c1(ccc(cc1)O)NC(=O)C                                    0.1539902 0.07400724
+#&gt; c1ccccc1NC(=O)C                                         0.1276072 0.05515552
+#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                              0.3611446 0.15650696
+#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                0.8366621 0.48579813
+#&gt; CC(=O)NO                                                0.0000000 0.00000000</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#note">Note</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -202,7 +252,7 @@ more complex fragment definitions.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

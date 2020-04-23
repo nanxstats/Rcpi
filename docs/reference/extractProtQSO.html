@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,7 +43,6 @@
 
 <meta property="og:title" content="Quasi-Sequence-Order (QSO) Descriptor — extractProtQSO" />
 <meta property="og:description" content="Quasi-Sequence-Order (QSO) Descriptor" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -57,7 +60,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -107,7 +110,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/nanxstats/Rcpi">
+  <a href="https://github.com/nanxstats/Rcpi/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -180,22 +183,53 @@ Molecular Evolution: Do Novo Design of an Idealized Leader Cleavge Site.
 for sequence-order-coupling numbers.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtQSO</span>(<span class='no'>x</span>)</pre>
+    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtQSO</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;  Schneider.Xr.A  Schneider.Xr.R  Schneider.Xr.N  Schneider.Xr.D  Schneider.Xr.C 
+#&gt;    6.096218e-02    6.773576e-02    3.725467e-02    4.910842e-02    6.434897e-02 
+#&gt;  Schneider.Xr.E  Schneider.Xr.Q  Schneider.Xr.G  Schneider.Xr.H  Schneider.Xr.I 
+#&gt;    4.572164e-02    4.572164e-02    7.789612e-02    2.878770e-02    3.386788e-02 
+#&gt;  Schneider.Xr.L  Schneider.Xr.K  Schneider.Xr.M  Schneider.Xr.F  Schneider.Xr.P 
+#&gt;    7.281594e-02    3.725467e-02    1.185376e-02    3.048109e-02    5.080182e-02 
+#&gt;  Schneider.Xr.S  Schneider.Xr.T  Schneider.Xr.W  Schneider.Xr.Y  Schneider.Xr.V 
+#&gt;    8.466970e-02    4.233485e-02    2.201412e-02    4.064145e-02    4.741503e-02 
+#&gt;   Grantham.Xr.A   Grantham.Xr.R   Grantham.Xr.N   Grantham.Xr.D   Grantham.Xr.C 
+#&gt;    1.835033e-06    2.038926e-06    1.121409e-06    1.478221e-06    1.936980e-06 
+#&gt;   Grantham.Xr.E   Grantham.Xr.Q   Grantham.Xr.G   Grantham.Xr.H   Grantham.Xr.I 
+#&gt;    1.376275e-06    1.376275e-06    2.344765e-06    8.665435e-07    1.019463e-06 
+#&gt;   Grantham.Xr.L   Grantham.Xr.K   Grantham.Xr.M   Grantham.Xr.F   Grantham.Xr.P 
+#&gt;    2.191845e-06    1.121409e-06    3.568120e-07    9.175167e-07    1.529194e-06 
+#&gt;   Grantham.Xr.S   Grantham.Xr.T   Grantham.Xr.W   Grantham.Xr.Y   Grantham.Xr.V 
+#&gt;    2.548657e-06    1.274329e-06    6.626509e-07    1.223356e-06    1.427248e-06 
+#&gt;  Schneider.Xd.1  Schneider.Xd.2  Schneider.Xd.3  Schneider.Xd.4  Schneider.Xd.5 
+#&gt;    3.457972e-02    3.384600e-02    3.502111e-02    3.344162e-02    3.273951e-02 
+#&gt;  Schneider.Xd.6  Schneider.Xd.7  Schneider.Xd.8  Schneider.Xd.9 Schneider.Xd.10 
+#&gt;    3.525537e-02    3.311390e-02    3.403364e-02    3.331093e-02    3.285068e-02 
+#&gt; Schneider.Xd.11 Schneider.Xd.12 Schneider.Xd.13 Schneider.Xd.14 Schneider.Xd.15 
+#&gt;    3.381760e-02    3.470422e-02    3.166883e-02    3.360882e-02    3.479121e-02 
+#&gt; Schneider.Xd.16 Schneider.Xd.17 Schneider.Xd.18 Schneider.Xd.19 Schneider.Xd.20 
+#&gt;    3.270408e-02    3.172623e-02    3.225829e-02    3.435647e-02    3.361893e-02 
+#&gt; Schneider.Xd.21 Schneider.Xd.22 Schneider.Xd.23 Schneider.Xd.24 Schneider.Xd.25 
+#&gt;    3.236099e-02    3.132904e-02    3.217206e-02    3.432701e-02    3.414334e-02 
+#&gt; Schneider.Xd.26 Schneider.Xd.27 Schneider.Xd.28 Schneider.Xd.29 Schneider.Xd.30 
+#&gt;    3.294954e-02    3.149609e-02    3.456720e-02    3.237140e-02    3.114275e-02 
+#&gt;   Grantham.Xd.1   Grantham.Xd.2   Grantham.Xd.3   Grantham.Xd.4   Grantham.Xd.5 
+#&gt;    3.402298e-02    3.446605e-02    3.638918e-02    3.439801e-02    3.206838e-02 
+#&gt;   Grantham.Xd.6   Grantham.Xd.7   Grantham.Xd.8   Grantham.Xd.9  Grantham.Xd.10 
+#&gt;    3.486488e-02    3.361253e-02    3.341875e-02    3.374516e-02    3.451195e-02 
+#&gt;  Grantham.Xd.11  Grantham.Xd.12  Grantham.Xd.13  Grantham.Xd.14  Grantham.Xd.15 
+#&gt;    3.311057e-02    3.499580e-02    3.209915e-02    3.312361e-02    3.372162e-02 
+#&gt;  Grantham.Xd.16  Grantham.Xd.17  Grantham.Xd.18  Grantham.Xd.19  Grantham.Xd.20 
+#&gt;    3.350302e-02    3.348467e-02    3.147055e-02    3.349358e-02    3.298629e-02 
+#&gt;  Grantham.Xd.21  Grantham.Xd.22  Grantham.Xd.23  Grantham.Xd.24  Grantham.Xd.25 
+#&gt;    3.293706e-02    3.027516e-02    3.329628e-02    3.390974e-02    3.303396e-02 
+#&gt;  Grantham.Xd.26  Grantham.Xd.27  Grantham.Xd.28  Grantham.Xd.29  Grantham.Xd.30 
+#&gt;    3.253250e-02    3.199340e-02    3.332438e-02    3.284195e-02    3.236875e-02 </div><div class='input'>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#references">References</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -206,7 +240,7 @@ for sequence-order-coupling numbers.</p></div>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

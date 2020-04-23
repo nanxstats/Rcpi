@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,7 +43,6 @@
 
 <meta property="og:title" content="CTD Descriptors - Distribution — extractProtCTDD" />
 <meta property="og:description" content="CTD Descriptors - Distribution" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -57,7 +60,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -107,7 +110,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/nanxstats/Rcpi">
+  <a href="https://github.com/nanxstats/Rcpi/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -167,22 +170,66 @@ Recognition of a Protein Fold in the Context of the SCOP classification.
 for the Composition and Transition descriptors.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='fu'>extractProtCTDD</span>(<span class='no'>x</span>)</pre>
+    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>=</span> <span class='fu'><a href='readFASTA.html'>readFASTA</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'protseq/P00750.fasta'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='fu'>extractProtCTDD</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt;   prop1.G1.residue0  prop1.G1.residue25  prop1.G1.residue50  prop1.G1.residue75 
+#&gt;           0.3558719          23.1316726          50.1779359          73.8434164 
+#&gt; prop1.G1.residue100   prop1.G2.residue0  prop1.G2.residue25  prop1.G2.residue50 
+#&gt;          99.8220641           0.5338078          27.4021352          47.3309609 
+#&gt;  prop1.G2.residue75 prop1.G2.residue100   prop1.G3.residue0  prop1.G3.residue25 
+#&gt;          75.2669039         100.0000000           0.1779359          19.5729537 
+#&gt;  prop1.G3.residue50  prop1.G3.residue75 prop1.G3.residue100   prop2.G1.residue0 
+#&gt;          51.7793594          75.6227758          99.6441281           0.3558719 
+#&gt;  prop2.G1.residue25  prop2.G1.residue50  prop2.G1.residue75 prop2.G1.residue100 
+#&gt;          25.6227758          48.0427046          75.4448399         100.0000000 
+#&gt;   prop2.G2.residue0  prop2.G2.residue25  prop2.G2.residue50  prop2.G2.residue75 
+#&gt;           1.4234875          23.3096085          54.4483986          76.3345196 
+#&gt; prop2.G2.residue100   prop2.G3.residue0  prop2.G3.residue25  prop2.G3.residue50 
+#&gt;          99.4661922           0.1779359          22.7758007          48.9323843 
+#&gt;  prop2.G3.residue75 prop2.G3.residue100   prop3.G1.residue0  prop3.G1.residue25 
+#&gt;          69.5729537          99.8220641           0.1779359          20.9964413 
+#&gt;  prop3.G1.residue50  prop3.G1.residue75 prop3.G1.residue100   prop3.G2.residue0 
+#&gt;          50.8896797          74.5551601          99.6441281           0.5338078 
+#&gt;  prop3.G2.residue25  prop3.G2.residue50  prop3.G2.residue75 prop3.G2.residue100 
+#&gt;          26.5124555          46.2633452          75.4448399         100.0000000 
+#&gt;   prop3.G3.residue0  prop3.G3.residue25  prop3.G3.residue50  prop3.G3.residue75 
+#&gt;           0.3558719          24.1992883          50.5338078          73.8434164 
+#&gt; prop3.G3.residue100   prop4.G1.residue0  prop4.G1.residue25  prop4.G1.residue50 
+#&gt;          99.8220641           0.3558719          26.5124555          48.3985765 
+#&gt;  prop4.G1.residue75 prop4.G1.residue100   prop4.G2.residue0  prop4.G2.residue25 
+#&gt;          76.1565836          99.2882562           1.4234875          21.5302491 
+#&gt;  prop4.G2.residue50  prop4.G2.residue75 prop4.G2.residue100   prop4.G3.residue0 
+#&gt;          51.4234875          75.8007117         100.0000000           0.1779359 
+#&gt;  prop4.G3.residue25  prop4.G3.residue50  prop4.G3.residue75 prop4.G3.residue100 
+#&gt;          22.7758007          48.9323843          69.5729537          99.8220641 
+#&gt;   prop5.G1.residue0  prop5.G1.residue25  prop5.G1.residue50  prop5.G1.residue75 
+#&gt;           0.8896797          20.8185053          48.9323843          69.5729537 
+#&gt; prop5.G1.residue100   prop5.G2.residue0  prop5.G2.residue25  prop5.G2.residue50 
+#&gt;          99.8220641           0.1779359          24.9110320          49.1103203 
+#&gt;  prop5.G2.residue75 prop5.G2.residue100   prop5.G3.residue0  prop5.G3.residue25 
+#&gt;          75.2669039         100.0000000           0.3558719          26.1565836 
+#&gt;  prop5.G3.residue50  prop5.G3.residue75 prop5.G3.residue100   prop6.G1.residue0 
+#&gt;          64.2348754          77.4021352          99.2882562           0.1779359 
+#&gt;  prop6.G1.residue25  prop6.G1.residue50  prop6.G1.residue75 prop6.G1.residue100 
+#&gt;          22.9537367          50.8896797          74.3772242          99.8220641 
+#&gt;   prop6.G2.residue0  prop6.G2.residue25  prop6.G2.residue50  prop6.G2.residue75 
+#&gt;           1.6014235          21.5302491          49.2882562          70.8185053 
+#&gt; prop6.G2.residue100   prop6.G3.residue0  prop6.G3.residue25  prop6.G3.residue50 
+#&gt;          98.9323843           0.3558719          29.0035587          48.2206406 
+#&gt;  prop6.G3.residue75 prop6.G3.residue100   prop7.G1.residue0  prop7.G1.residue25 
+#&gt;          77.4021352         100.0000000           0.5338078          23.4875445 
+#&gt;  prop7.G1.residue50  prop7.G1.residue75 prop7.G1.residue100   prop7.G2.residue0 
+#&gt;          50.0000000          74.5551601          98.9323843           0.3558719 
+#&gt;  prop7.G2.residue25  prop7.G2.residue50  prop7.G2.residue75 prop7.G2.residue100 
+#&gt;          23.1316726          50.1779359          73.8434164          99.8220641 
+#&gt;   prop7.G3.residue0  prop7.G3.residue25  prop7.G3.residue50  prop7.G3.residue75 
+#&gt;           0.1779359          27.2241993          48.0427046          75.4448399 
+#&gt; prop7.G3.residue100 
+#&gt;         100.0000000 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#references">References</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -193,7 +240,7 @@ for the Composition and Transition descriptors.</p></div>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
