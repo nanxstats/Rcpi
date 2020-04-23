@@ -1,12 +1,14 @@
 language: r
-r: bioc-devel
+r: bioc-release
 
 addons:
   apt:
     packages:
       - r-cran-rjava
 
-r_packages: gridExtra
+r_packages:
+  - gridExtra
+  - rJava
 
 bioc_packages:
   - BiocGenerics
