@@ -4,8 +4,7 @@
 \alias{extractDrugStandardComplete}
 \title{Calculate the Standard Molecular Fingerprints (in Complete Format)}
 \usage{
-extractDrugStandardComplete(molecules, depth = 6, size = 1024,
-  silent = TRUE)
+extractDrugStandardComplete(molecules, depth = 6, size = 1024, silent = TRUE)
 }
 \arguments{
 \item{molecules}{Parsed molucule object.}

@@ -4,8 +4,7 @@
 \alias{extractPCMBLOSUM}
 \title{Generalized BLOSUM and PAM Matrix-Derived Descriptors}
 \usage{
-extractPCMBLOSUM(x, submat = "AABLOSUM62", k, lag, scale = TRUE,
-  silent = TRUE)
+extractPCMBLOSUM(x, submat = "AABLOSUM62", k, lag, scale = TRUE, silent = TRUE)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}

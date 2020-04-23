@@ -4,8 +4,7 @@
 \alias{extractDrugHybridization}
 \title{Calculate the Hybridization Molecular Fingerprints (in Compact Format)}
 \usage{
-extractDrugHybridization(molecules, depth = 6, size = 1024,
-  silent = TRUE)
+extractDrugHybridization(molecules, depth = 6, size = 1024, silent = TRUE)
 }
 \arguments{
 \item{molecules}{Parsed molucule object.}

@@ -4,8 +4,14 @@
 \alias{calcParProtGOSim}
 \title{Protein Sequence Similarity Calculation based on Gene Ontology (GO) Similarity}
 \usage{
-calcParProtGOSim(golist, type = c("go", "gene"), ont = c("MF", "BP",
-  "CC"), organism = "human", measure = "Resnik", combine = "BMA")
+calcParProtGOSim(
+  golist,
+  type = c("go", "gene"),
+  ont = c("MF", "BP", "CC"),
+  organism = "human",
+  measure = "Resnik",
+  combine = "BMA"
+)
 }
 \arguments{
 \item{golist}{A character vector, each component contains

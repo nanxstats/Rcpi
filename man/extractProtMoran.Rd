@@ -4,9 +4,13 @@
 \alias{extractProtMoran}
 \title{Moran Autocorrelation Descriptor}
 \usage{
-extractProtMoran(x, props = c("CIDH920105", "BHAR880101", "CHAM820101",
-  "CHAM820102", "CHOC760101", "BIGC670101", "CHAM810101", "DAYM780201"),
-  nlag = 30L, customprops = NULL)
+extractProtMoran(
+  x,
+  props = c("CIDH920105", "BHAR880101", "CHAM820101", "CHAM820102", "CHOC760101",
+    "BIGC670101", "CHAM810101", "DAYM780201"),
+  nlag = 30L,
+  customprops = NULL
+)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}

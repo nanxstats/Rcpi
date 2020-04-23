@@ -4,8 +4,15 @@
 \alias{extractPCMFAScales}
 \title{Generalized Scales-Based Descriptors derived by Factor Analysis}
 \usage{
-extractPCMFAScales(x, propmat, factors, scores = "regression", lag,
-  scale = TRUE, silent = TRUE)
+extractPCMFAScales(
+  x,
+  propmat,
+  factors,
+  scores = "regression",
+  lag,
+  scale = TRUE,
+  silent = TRUE
+)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}

@@ -5,11 +5,17 @@
 \title{Parallelized Drug Molecule Similarity Search by
 Molecular Fingerprints Similarity or Maximum Common Substructure Search}
 \usage{
-searchDrug(mol, moldb, cores = 2, method = c("fp", "mcs"),
-  fptype = c("standard", "extended", "graph", "hybrid", "maccs",
-  "estate", "pubchem", "kr", "shortestpath", "fp2", "fp3", "fp4",
-  "obmaccs"), fpsim = c("tanimoto", "euclidean", "cosine", "dice",
-  "hamming"), mcssim = c("tanimoto", "overlap"), ...)
+searchDrug(
+  mol,
+  moldb,
+  cores = 2,
+  method = c("fp", "mcs"),
+  fptype = c("standard", "extended", "graph", "hybrid", "maccs", "estate", "pubchem",
+    "kr", "shortestpath", "fp2", "fp3", "fp4", "obmaccs"),
+  fpsim = c("tanimoto", "euclidean", "cosine", "dice", "hamming"),
+  mcssim = c("tanimoto", "overlap"),
+  ...
+)
 }
 \arguments{
 \item{mol}{The query molecule. The location of a \code{sdf} file

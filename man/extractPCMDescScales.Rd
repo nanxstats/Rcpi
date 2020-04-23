@@ -4,8 +4,15 @@
 \alias{extractPCMDescScales}
 \title{Scales-Based Descriptors with 20+ classes of Molecular Descriptors}
 \usage{
-extractPCMDescScales(x, propmat, index = NULL, pc, lag, scale = TRUE,
-  silent = TRUE)
+extractPCMDescScales(
+  x,
+  propmat,
+  index = NULL,
+  pc,
+  lag,
+  scale = TRUE,
+  silent = TRUE
+)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}

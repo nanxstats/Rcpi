@@ -4,8 +4,7 @@
 \alias{extractPCMPropScales}
 \title{Generalized AA-Properties Based Scales Descriptors}
 \usage{
-extractPCMPropScales(x, index = NULL, pc, lag, scale = TRUE,
-  silent = TRUE)
+extractPCMPropScales(x, index = NULL, pc, lag, scale = TRUE, silent = TRUE)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}

@@ -4,8 +4,7 @@
 \alias{extractDrugGraphComplete}
 \title{Calculate the Graph Molecular Fingerprints (in Complete Format)}
 \usage{
-extractDrugGraphComplete(molecules, depth = 6, size = 1024,
-  silent = TRUE)
+extractDrugGraphComplete(molecules, depth = 6, size = 1024, silent = TRUE)
 }
 \arguments{
 \item{molecules}{Parsed molucule object.}

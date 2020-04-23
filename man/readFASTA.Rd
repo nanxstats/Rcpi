@@ -4,8 +4,11 @@
 \alias{readFASTA}
 \title{Read Protein Sequences in FASTA Format}
 \usage{
-readFASTA(file = system.file("protseq/P00750.fasta", package = "Rcpi"),
-  legacy.mode = TRUE, seqonly = FALSE)
+readFASTA(
+  file = system.file("protseq/P00750.fasta", package = "Rcpi"),
+  legacy.mode = TRUE,
+  seqonly = FALSE
+)
 }
 \arguments{
 \item{file}{The name of the file which the sequences in fasta format are

@@ -4,8 +4,7 @@
 \alias{calcParProtSeqSim}
 \title{Parallellized Protein Sequence Similarity Calculation based on Sequence Alignment}
 \usage{
-calcParProtSeqSim(protlist, cores = 2, type = "local",
-  submat = "BLOSUM62")
+calcParProtSeqSim(protlist, cores = 2, type = "local", submat = "BLOSUM62")
 }
 \arguments{
 \item{protlist}{A length \code{n} list containing \code{n} protein sequences,

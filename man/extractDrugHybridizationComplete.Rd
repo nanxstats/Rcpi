@@ -4,8 +4,12 @@
 \alias{extractDrugHybridizationComplete}
 \title{Calculate the Hybridization Molecular Fingerprints (in Complete Format)}
 \usage{
-extractDrugHybridizationComplete(molecules, depth = 6, size = 1024,
-  silent = TRUE)
+extractDrugHybridizationComplete(
+  molecules,
+  depth = 6,
+  size = 1024,
+  silent = TRUE
+)
 }
 \arguments{
 \item{molecules}{Parsed molucule object.}
