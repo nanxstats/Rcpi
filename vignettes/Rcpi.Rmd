@@ -1,7 +1,6 @@
 ---
 title: "Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery"
 author: "Nan Xiao <<https://nanx.me>>"
-date: "`r Sys.Date()`"
 bibliography: Rcpi.bib
 csl: bioinformatics.csl
 output:
