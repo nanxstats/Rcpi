@@ -8,6 +8,13 @@
 
 <title>Read Protein Sequences in PDB Format — readPDB • Rcpi</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -43,6 +50,7 @@
 
 <meta property="og:title" content="Read Protein Sequences in PDB Format — readPDB" />
 <meta property="og:description" content="Read Protein Sequences in PDB Format" />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -82,7 +90,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -111,7 +119,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/nanxstats/Rcpi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,7 +145,7 @@
     <p>Read Protein Sequences in PDB Format</p>
     </div>
 
-    <pre class="usage"><span class='fu'>readPDB</span>(<span class='kw'>file</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"protseq/4HHB.pdb"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"Rcpi"</span>))</pre>
+    <pre class="usage"><span class='fu'>readPDB</span><span class='op'>(</span>file <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"protseq/4HHB.pdb"</span>, package <span class='op'>=</span> <span class='st'>"Rcpi"</span><span class='op'>)</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -170,10 +178,14 @@ Version 3.30. Accessed 2013-06-26.
 
     <div class='dont-index'><p>See <code><a href='readFASTA.html'>readFASTA</a></code> for reading protein sequences
          in FASTA format.</p></div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>Seq4HHB</span> <span class='kw'>=</span> <span class='fu'>readPDB</span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'protseq/4HHB.pdb'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))
-<span class='no'>Seq4HHB</span></div><div class='output co'>#&gt; $chain_A
+    <pre class="examples"><div class='input'><span class='va'>Seq4HHB</span> <span class='op'>=</span> <span class='fu'>readPDB</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'protseq/4HHB.pdb'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>Seq4HHB</span>
+</div><div class='output co'>#&gt; $chain_A
 #&gt; [1] "VLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR"
 #&gt; 
 #&gt; $chain_B
@@ -200,7 +212,7 @@ Version 3.30. Accessed 2013-06-26.
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

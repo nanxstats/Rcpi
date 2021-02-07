@@ -8,6 +8,13 @@
 
 <title>Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges — extractDrugAutocorrelationCharge • Rcpi</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -43,6 +50,7 @@
 
 <meta property="og:title" content="Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges — extractDrugAutocorrelationCharge" />
 <meta property="og:description" content="Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges" />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -82,7 +90,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -111,7 +119,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/nanxstats/Rcpi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,7 +145,7 @@
     <p>Calculate the Moreau-Broto Autocorrelation Descriptors using Partial Charges</p>
     </div>
 
-    <pre class="usage"><span class='fu'>extractDrugAutocorrelationCharge</span>(<span class='no'>molecules</span>, <span class='kw'>silent</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>extractDrugAutocorrelationCharge</span><span class='op'>(</span><span class='va'>molecules</span>, silent <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -163,13 +171,17 @@ This function returns 5 columns named
 
     <p>Calculates the ATS autocorrelation descriptor,
 where the weight equal to the charges.</p>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>smi</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'vignettedata/FDAMDD.smi'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>)
+    <pre class="examples"><div class='input'><span class='va'>smi</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'vignettedata/FDAMDD.smi'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span>
 <span class='co'># \donttest{</span>
-<span class='no'>mol</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span>(<span class='no'>smi</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'mol'</span>)
-<span class='no'>dat</span> <span class='kw'>=</span> <span class='fu'>extractDrugAutocorrelationCharge</span>(<span class='no'>mol</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>dat</span>)<span class='co'># }</span></div><div class='output co'>#&gt;                                                             ATSc1       ATSc2
+<span class='va'>mol</span> <span class='op'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span><span class='op'>(</span><span class='va'>smi</span>, type <span class='op'>=</span> <span class='st'>'mol'</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>=</span> <span class='fu'>extractDrugAutocorrelationCharge</span><span class='op'>(</span><span class='va'>mol</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='co'># }</span>
+</div><div class='output co'>#&gt;                                                             ATSc1       ATSc2
 #&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O 0.4881987 -0.18184066
 #&gt; c1(ccc(cc1)O)NC(=O)C                                    0.2162844 -0.09614005
 #&gt; c1ccccc1NC(=O)C                                         0.1610223 -0.07980602
@@ -212,7 +224,7 @@ where the weight equal to the charges.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

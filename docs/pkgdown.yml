@@ -1,8 +1,8 @@
-pandoc: 2.9.2.1
-pkgdown: 1.5.1
+pandoc: 2.11.4
+pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   Rcpi-quickref: Rcpi-quickref.html
   Rcpi: Rcpi.html
-last_built: 2020-04-23T16:29Z
+last_built: 2021-02-07T23:43Z
 

@@ -8,6 +8,13 @@
 
 <title>Retrieve Drug Molecules in MOL Format from the DrugBank Database — getMolFromDrugBank • Rcpi</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -43,6 +50,7 @@
 
 <meta property="og:title" content="Retrieve Drug Molecules in MOL Format from the DrugBank Database — getMolFromDrugBank" />
 <meta property="og:description" content="Retrieve Drug Molecules in MOL Format from the DrugBank Database" />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -82,7 +90,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -111,7 +119,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/nanxstats/Rcpi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,7 +145,7 @@
     <p>Retrieve Drug Molecules in MOL Format from the DrugBank Database</p>
     </div>
 
-    <pre class="usage"><span class='fu'>getMolFromDrugBank</span>(<span class='no'>id</span>, <span class='kw'>parallel</span> <span class='kw'>=</span> <span class='fl'>5</span>)</pre>
+    <pre class="usage"><span class='fu'>getMolFromDrugBank</span><span class='op'>(</span><span class='va'>id</span>, parallel <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -167,11 +175,17 @@ DrugBank database.</p>
 
     <div class='dont-index'><p>See <code><a href='getSmiFromDrugBank.html'>getSmiFromDrugBank</a></code> for retrieving drug molecules
 in SMILES format from the DrugBank database.</p></div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>id</span> <span class='kw'>=</span> <span class='st'>'DB00859'</span>  <span class='co'># Penicillamine</span>
+    <pre class="examples"><div class='input'><span class='va'>id</span> <span class='op'>=</span> <span class='st'>'DB00859'</span>  <span class='co'># Penicillamine</span>
 <span class='co'># \donttest{</span>
-<span class='fu'>getMolFromDrugBank</span>(<span class='no'>id</span>)<span class='co'># }</span></div><div class='output co'>#&gt; [1] "\n  Mrv0541 08131209382D          \n\n 10  9  0  0  0  0            999 V2000\n    0.8250   -0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6500   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250    0.8250    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.5395    1.2375    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1105    1.2375    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5395    2.0625    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2539    0.8250    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5395    0.4125    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  4  3  1  0  0  0  0\n  5  1  1  0  0  0  0\n  5  2  1  0  0  0  0\n  5  3  1  0  0  0  0\n  3  6  1  6  0  0  0\n  7  4  2  0  0  0  0\n  8  4  1  0  0  0  0\n  9  5  1  0  0  0  0\n  3 10  1  6  0  0  0\nM  END\n&gt; &lt;DATABASE_ID&gt;\nDB00859\n\n&gt; &lt;DATABASE_NAME&gt;\ndrugbank\n\n&gt; &lt;SMILES&gt;\n[H][C@](N)(C(O)=O)C(C)(C)S\n\n&gt; &lt;INCHI_IDENTIFIER&gt;\nInChI=1S/C5H11NO2S/c1-5(2,9)3(6)4(7)8/h3,9H,6H2,1-2H3,(H,7,8)/t3-/m0/s1\n\n&gt; &lt;INCHI_KEY&gt;\nVVNCNSJFMMFHPL-VKHMYHEASA-N\n\n&gt; &lt;FORMULA&gt;\nC5H11NO2S\n\n&gt; &lt;MOLECULAR_WEIGHT&gt;\n149.211\n\n&gt; &lt;EXACT_MASS&gt;\n149.051049291\n\n&gt; &lt;JCHEM_ACCEPTOR_COUNT&gt;\n3\n\n&gt; &lt;JCHEM_AVERAGE_POLARIZABILITY&gt;\n14.761607659503875\n\n&gt; &lt;JCHEM_BIOAVAILABILITY&gt;\n1\n\n&gt; &lt;JCHEM_DONOR_COUNT&gt;\n3\n\n&gt; &lt;JCHEM_FORMAL_CHARGE&gt;\n0\n\n&gt; &lt;JCHEM_GHOSE_FILTER&gt;\n0\n\n&gt; &lt;JCHEM_IUPAC&gt;\n(2S)-2-amino-3-methyl-3-sulfanylbutanoic acid\n\n&gt; &lt;ALOGPS_LOGP&gt;\n-1.70\n\n&gt; &lt;JCHEM_LOGP&gt;\n-2.146518265659755\n\n&gt; &lt;ALOGPS_LOGS&gt;\n-1.51\n\n&gt; &lt;JCHEM_MDDR_LIKE_RULE&gt;\n0\n\n&gt; &lt;JCHEM_NUMBER_OF_RINGS&gt;\n0\n\n&gt; &lt;JCHEM_PHYSIOLOGICAL_CHARGE&gt;\n0\n\n&gt; &lt;JCHEM_PKA&gt;\n10.076558230275829\n\n&gt; &lt;JCHEM_PKA_STRONGEST_ACIDIC&gt;\n2.555552931139977\n\n&gt; &lt;JCHEM_PKA_STRONGEST_BASIC&gt;\n9.093679244005854\n\n&gt; &lt;JCHEM_POLAR_SURFACE_AREA&gt;\n63.32000000000001\n\n&gt; &lt;JCHEM_REFRACTIVITY&gt;\n37.22500000000001\n\n&gt; &lt;JCHEM_ROTATABLE_BOND_COUNT&gt;\n2\n\n&gt; &lt;JCHEM_RULE_OF_FIVE&gt;\n1\n\n&gt; &lt;ALOGPS_SOLUBILITY&gt;\n4.65e+00 g/l\n\n&gt; &lt;JCHEM_TRADITIONAL_IUPAC&gt;\ndepen\n\n&gt; &lt;JCHEM_VEBER_RULE&gt;\n0\n\n&gt; &lt;DRUGBANK_ID&gt;\nDB00859\n\n&gt; &lt;SECONDARY_ACCESSION_NUMBERS&gt;\nAPRD01171\n\n&gt; &lt;DRUG_GROUPS&gt;\napproved\n\n&gt; &lt;GENERIC_NAME&gt;\nPenicillamine\n\n&gt; &lt;SYNONYMS&gt;\n(−)-penicillamine; (S)-2-amino-3-mercapto-3-methylbutanoic acid; (S)-3,3-dimethylcysteine; 3-mercapto-D-valine; D-(−)-penicillamine; D-penicillamine; D-β,β-dimethylcysteine; penicilamina; Penicillamine\n\n&gt; &lt;PRODUCTS&gt;\nCuprimine; D-Penamine; Depen; Depen Tab 250mg; Penicillamine\n\n&gt; &lt;INTERNATIONAL_BRANDS&gt;\nAtamir\n\n$$$$\n"</div></pre>
+<span class='fu'>getMolFromDrugBank</span><span class='op'>(</span><span class='va'>id</span><span class='op'>)</span><span class='co'># }</span>
+</div><div class='output co'>#&gt; [[1]]
+#&gt; raw(0)
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -187,7 +201,7 @@ in SMILES format from the DrugBank database.</p></div>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

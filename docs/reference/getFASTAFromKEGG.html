@@ -8,6 +8,13 @@
 
 <title>Retrieve Protein Sequence in FASTA Format from the KEGG Database — getFASTAFromKEGG • Rcpi</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -43,6 +50,7 @@
 
 <meta property="og:title" content="Retrieve Protein Sequence in FASTA Format from the KEGG Database — getFASTAFromKEGG" />
 <meta property="og:description" content="Retrieve Protein Sequence in FASTA Format from the KEGG Database" />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -82,7 +90,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -111,7 +119,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/nanxstats/Rcpi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,7 +145,7 @@
     <p>Retrieve Protein Sequence in FASTA Format from the KEGG Database</p>
     </div>
 
-    <pre class="usage"><span class='fu'>getFASTAFromKEGG</span>(<span class='no'>id</span>, <span class='kw'>parallel</span> <span class='kw'>=</span> <span class='fl'>5</span>)</pre>
+    <pre class="usage"><span class='fu'>getFASTAFromKEGG</span><span class='op'>(</span><span class='va'>id</span>, parallel <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -168,11 +176,15 @@ from the KEGG database.</p>
     <div class='dont-index'><p>See <code><a href='getSeqFromKEGG.html'>getSeqFromKEGG</a></code> for retrieving protein
 represented by amino acid sequence from the KEGG database.
 See <code><a href='readFASTA.html'>readFASTA</a></code> for reading FASTA format files.</p></div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'hsa:10161'</span>, <span class='st'>'hsa:10162'</span>)
+    <pre class="examples"><div class='input'><span class='va'>id</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'hsa:10161'</span>, <span class='st'>'hsa:10162'</span><span class='op'>)</span>
 <span class='co'># \donttest{</span>
-<span class='fu'>getFASTAFromKEGG</span>(<span class='no'>id</span>)<span class='co'># }</span></div><div class='output co'>#&gt; [1] "&gt;hsa:10161 K04273 lysophosphatidic acid receptor 6 | (RefSeq) LPAR6, ARWH1, HYPT8, LAH3, P2RY5, P2Y5; lysophosphatidic acid receptor 6 (A)\nMVSVNSSHCFYNDSFKYTLYGCMFSMVFVLGLISNCVAIYIFICVLKVRNETTTYMINLA\nMSDLLFVFTLPFRIFYFTTRNWPFGDLLCKISVMLFYTNMYGSILFLTCISVDRFLAIVY\nPFKSKTLRTKRNAKIVCTGVWLTVIGGSAPAVFVQSTHSQGNNASEACFENFPEATWKTY\nLSRIVIFIEIVGFFIPLILNVTCSSMVLKTLTKPVTLSRSKINKTKVLKMIFVHLIIFCF\nCFVPYNINLILYSLVRTQTFVNCSVVAAVRTMYPITLCIAVSNCCFDPIVYYFTSDTIQN\nSIKMKNWSVRRSDFRFSEVHGAENFIQHNLQTLKSKIFDNESAA\n"                                                                                                                                                                                                        
+<span class='fu'>getFASTAFromKEGG</span><span class='op'>(</span><span class='va'>id</span><span class='op'>)</span><span class='co'># }</span>
+</div><div class='output co'>#&gt; [1] "&gt;hsa:10161 K04273 lysophosphatidic acid receptor 6 | (RefSeq) LPAR6, ARWH1, HYPT8, LAH3, LPA-6, P2RY5, P2Y5; lysophosphatidic acid receptor 6 (A)\nMVSVNSSHCFYNDSFKYTLYGCMFSMVFVLGLISNCVAIYIFICVLKVRNETTTYMINLA\nMSDLLFVFTLPFRIFYFTTRNWPFGDLLCKISVMLFYTNMYGSILFLTCISVDRFLAIVY\nPFKSKTLRTKRNAKIVCTGVWLTVIGGSAPAVFVQSTHSQGNNASEACFENFPEATWKTY\nLSRIVIFIEIVGFFIPLILNVTCSSMVLKTLTKPVTLSRSKINKTKVLKMIFVHLIIFCF\nCFVPYNINLILYSLVRTQTFVNCSVVAAVRTMYPITLCIAVSNCCFDPIVYYFTSDTIQN\nSIKMKNWSVRRSDFRFSEVHGAENFIQHNLQTLKSKIFDNESAA\n"                                                                                                                                                                                                 
 #&gt; [2] "&gt;hsa:10162 K13515 lysophospholipid acyltransferase 5 [EC:2.3.1.23 2.3.1.-] | (RefSeq) LPCAT3, C3F, LPCAT, LPLAT_5, LPSAT, MBOAT5, OACT5, nessy; lysophosphatidylcholine acyltransferase 3 (A)\nMASSAEGDEGTVVALAGVLQSGFQELSLNKLATSLGASEQALRLIISIFLGYPFALFYRH\nYLFYKETYLIHLFHTFTGLSIAYFNFGNQLYHSLLCIVLQFLILRLMGRTITAVLTTFCF\nQMAYLLAGYYYTATGNYDIKWTMPHCVLTLKLIGLAVDYFDGGKDQNSLSSEQQKYAIRG\nVPSLLEVAGFSYFYGAFLVGPQFSMNHYMKLVQGELIDIPGKIPNSIIPALKRLSLGLFY\nLVGYTLLSPHITEDYLLTEDYDNHPFWFRCMYMLIWGKFVLYKYVTCWLVTEGVCILTGL\nGFNGFEEKGKAKWDACANMKVWLFETNPRFTGTIASFNINTNAWVARYIFKRLKFLGNKE\nLSQGLSLLFLALWHGLHSGYLVCFQMEFLIVIVERQAARLIQESPTLSKLAAITVLQPFY\nYLVQQTIHWLFMGYSMTAFCLFTWDKWLKVYKSIYFLGHIFFLSLLFILPYIHKAMVPRK\nEKLKKME\n"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -189,7 +201,7 @@ See <code><a href='readFASTA.html'>readFASTA</a></code> for reading FASTA format
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

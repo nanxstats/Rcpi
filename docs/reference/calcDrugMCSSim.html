@@ -9,6 +9,13 @@
 <title>Calculate Drug Molecule Similarity Derived by
 Maximum Common Substructure Search — calcDrugMCSSim • Rcpi</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -46,6 +53,7 @@ Maximum Common Substructure Search — calcDrugMCSSim • Rcpi</title>
 Maximum Common Substructure Search — calcDrugMCSSim" />
 <meta property="og:description" content="Calculate Drug Molecule Similarity Derived by
 Maximum Common Substructure Search" />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -85,7 +93,7 @@ Maximum Common Substructure Search" />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -114,7 +122,7 @@ Maximum Common Substructure Search" />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/nanxstats/Rcpi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -142,18 +150,18 @@ Maximum Common Substructure Search</h1>
 Maximum Common Substructure Search</p>
     </div>
 
-    <pre class="usage"><span class='fu'>calcDrugMCSSim</span>(
-  <span class='no'>mol1</span>,
-  <span class='no'>mol2</span>,
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"smile"</span>, <span class='st'>"sdf"</span>),
-  <span class='kw'>plot</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>al</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>au</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>bl</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>bu</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>matching.mode</span> <span class='kw'>=</span> <span class='st'>"static"</span>,
-  <span class='no'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>calcDrugMCSSim</span><span class='op'>(</span>
+  <span class='va'>mol1</span>,
+  <span class='va'>mol2</span>,
+  type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"smile"</span>, <span class='st'>"sdf"</span><span class='op'>)</span>,
+  plot <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  al <span class='op'>=</span> <span class='fl'>0</span>,
+  au <span class='op'>=</span> <span class='fl'>0</span>,
+  bl <span class='op'>=</span> <span class='fl'>0</span>,
+  bu <span class='op'>=</span> <span class='fl'>0</span>,
+  matching.mode <span class='op'>=</span> <span class='st'>"static"</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -219,14 +227,27 @@ search algorithm is provided by the <code>fmcsR</code> package.</p>
     <p>Wang, Y., Backman, T. W., Horan, K., &amp; Girke, T. (2013).
 fmcsR: mismatch tolerant maximum common substructure searching in R.
 Bioinformatics, 29(21), 2792--2794.</p>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>mol1</span> <span class='kw'>=</span> <span class='st'>'CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC'</span>
-<span class='no'>mol2</span> <span class='kw'>=</span> <span class='st'>'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'</span>
-<span class='no'>mol3</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/readChar.html'>readChar</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'compseq/DB00859.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>), <span class='kw'>nchars</span> <span class='kw'>=</span> <span class='fl'>1e+6</span>)
-<span class='no'>mol4</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/readChar.html'>readChar</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'compseq/DB00860.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>), <span class='kw'>nchars</span> <span class='kw'>=</span> <span class='fl'>1e+6</span>)
+    <pre class="examples"><div class='input'><span class='va'>mol1</span> <span class='op'>=</span> <span class='st'>'CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC'</span>
+<span class='va'>mol2</span> <span class='op'>=</span> <span class='st'>'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'</span>
+<span class='va'>mol3</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/readChar.html'>readChar</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'compseq/DB00859.sdf'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span>, nchars <span class='op'>=</span> <span class='fl'>1e+6</span><span class='op'>)</span>
+<span class='va'>mol4</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/readChar.html'>readChar</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'compseq/DB00860.sdf'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span>, nchars <span class='op'>=</span> <span class='fl'>1e+6</span><span class='op'>)</span>
 <span class='co'># \donttest{</span>
-<span class='no'>sim1</span> <span class='kw'>=</span> <span class='fu'>calcDrugMCSSim</span>(<span class='no'>mol1</span>, <span class='no'>mol2</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'smile'</span>)</div><div class='output co'>#&gt; <span class='message'>ChemmineOB not found, falling back to web service version. This will be much slower</span></div><div class='output co'>#&gt; <span class='error'>Error: Forbidden</span></div><div class='input'><span class='no'>sim2</span> <span class='kw'>=</span> <span class='fu'>calcDrugMCSSim</span>(<span class='no'>mol3</span>, <span class='no'>mol4</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>'sdf'</span>, <span class='kw'>plot</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='calcDrugMCSSim-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>sim1</span><span class='kw'>[[</span><span class='fl'>2</span>]])  <span class='co'># Tanimoto Coefficient</span></div><div class='output co'>#&gt; <span class='error'>Error in print(sim1[[2]]): object 'sim1' not found</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>sim2</span><span class='kw'>[[</span><span class='fl'>3</span>]])  <span class='co'># Overlap Coefficient# }</span></div><div class='output co'>#&gt; Overlap_Coefficient 
+<span class='va'>sim1</span> <span class='op'>=</span> <span class='fu'>calcDrugMCSSim</span><span class='op'>(</span><span class='va'>mol1</span>, <span class='va'>mol2</span>, type <span class='op'>=</span> <span class='st'>'smile'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Error: package or namespace load failed for ‘ChemmineOB’:</span>
+#&gt; <span class='message'> .onLoad failed in loadNamespace() for 'ChemmineOB', details:</span>
+#&gt; <span class='message'>  call: dyn.load(file, DLLpath = DLLpath, ...)</span>
+#&gt; <span class='message'>  error: unable to load shared object '/Users/nanx/rpkgs/ChemmineOB/libs/ChemmineOB.so':</span>
+#&gt; <span class='message'>  dlopen(/Users/nanx/rpkgs/ChemmineOB/libs/ChemmineOB.so, 10): Library not loaded: /usr/local/opt/open-babel/lib/libopenbabel.7.dylib</span>
+#&gt; <span class='message'>  Referenced from: /Users/nanx/rpkgs/ChemmineOB/libs/ChemmineOB.so</span>
+#&gt; <span class='message'>  Reason: image not found</span></div><div class='output co'>#&gt; <span class='error'>Error in .ensureOB(): ChemmineOB is required to make use of this function. This package can be installed from BioConductor with the  command 'BiocManager::install("ChemmineOB").  It is not currently available for windows however. See http://bioconductor.org/packages/devel/bioc/html/ChemmineOB.html for more information</span></div><div class='input'><span class='va'>sim2</span> <span class='op'>=</span> <span class='fu'>calcDrugMCSSim</span><span class='op'>(</span><span class='va'>mol3</span>, <span class='va'>mol4</span>, type <span class='op'>=</span> <span class='st'>'sdf'</span>, plot <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='img'><img src='calcDrugMCSSim-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>sim1</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>  <span class='co'># Tanimoto Coefficient</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in print(sim1[[2]]): object 'sim1' not found</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>sim2</span><span class='op'>[[</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>  <span class='co'># Overlap Coefficient# }</span>
+</div><div class='output co'>#&gt; Overlap_Coefficient 
 #&gt;           0.6666667 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -243,7 +264,7 @@ Bioinformatics, 29(21), 2792--2794.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

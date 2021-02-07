@@ -8,6 +8,13 @@
 
 <title>Calculate Drug Molecule Similarity Derived by Molecular Fingerprints — calcDrugFPSim • Rcpi</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -43,6 +50,7 @@
 
 <meta property="og:title" content="Calculate Drug Molecule Similarity Derived by Molecular Fingerprints — calcDrugFPSim" />
 <meta property="og:description" content="Calculate Drug Molecule Similarity Derived by Molecular Fingerprints" />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -82,7 +90,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -111,7 +119,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/nanxstats/Rcpi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,12 +145,12 @@
     <p>Calculate Drug Molecule Similarity Derived by Molecular Fingerprints</p>
     </div>
 
-    <pre class="usage"><span class='fu'>calcDrugFPSim</span>(
-  <span class='no'>fp1</span>,
-  <span class='no'>fp2</span>,
-  <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"compact"</span>, <span class='st'>"complete"</span>),
-  <span class='kw'>metric</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"tanimoto"</span>, <span class='st'>"euclidean"</span>, <span class='st'>"cosine"</span>, <span class='st'>"dice"</span>, <span class='st'>"hamming"</span>)
-)</pre>
+    <pre class="usage"><span class='fu'>calcDrugFPSim</span><span class='op'>(</span>
+  <span class='va'>fp1</span>,
+  <span class='va'>fp2</span>,
+  fptype <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"compact"</span>, <span class='st'>"complete"</span><span class='op'>)</span>,
+  metric <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"tanimoto"</span>, <span class='st'>"euclidean"</span>, <span class='st'>"cosine"</span>, <span class='st'>"dice"</span>, <span class='st'>"hamming"</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -190,17 +198,30 @@ features of object B, <code>c</code> is the number of common features to A and B
 
     <p>Gasteiger, Johann, and Thomas Engel, eds.
 Chemoinformatics. Wiley.com, 2006.</p>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Nan Xiao &lt;<a href='https://nanx.me'>https://nanx.me</a>&gt;</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>mols</span> <span class='kw'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>'compseq/tyrphostin.sdf'</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'Rcpi'</span>))
+    <pre class="examples"><div class='input'><span class='va'>mols</span> <span class='op'>=</span> <span class='fu'><a href='readMolFromSDF.html'>readMolFromSDF</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'compseq/tyrphostin.sdf'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># \donttest{</span>
-<span class='no'>fp1</span> <span class='kw'>=</span> <span class='fu'><a href='extractDrugEstate.html'>extractDrugEstate</a></span>(<span class='no'>mols</span><span class='kw'>[[</span><span class='fl'>1</span>]])
-<span class='no'>fp2</span> <span class='kw'>=</span> <span class='fu'><a href='extractDrugEstate.html'>extractDrugEstate</a></span>(<span class='no'>mols</span><span class='kw'>[[</span><span class='fl'>2</span>]])
-<span class='fu'>calcDrugFPSim</span>(<span class='no'>fp1</span>, <span class='no'>fp2</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'compact'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'tanimoto'</span>)</div><div class='output co'>#&gt; [1] 0.5</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp1</span>, <span class='no'>fp2</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'compact'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'euclidean'</span>)</div><div class='output co'>#&gt; [1] 0.9678372</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp1</span>, <span class='no'>fp2</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'compact'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'cosine'</span>)</div><div class='output co'>#&gt; [1] 0.6804138</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp1</span>, <span class='no'>fp2</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'compact'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'dice'</span>)</div><div class='output co'>#&gt; [1] 0.6666667</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp1</span>, <span class='no'>fp2</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'compact'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'hamming'</span>)</div><div class='output co'>#&gt; [1] 0.06329114</div><div class='input'>
-<span class='no'>fp3</span> <span class='kw'>=</span> <span class='fu'><a href='extractDrugEstateComplete.html'>extractDrugEstateComplete</a></span>(<span class='no'>mols</span><span class='kw'>[[</span><span class='fl'>1</span>]])
-<span class='no'>fp4</span> <span class='kw'>=</span> <span class='fu'><a href='extractDrugEstateComplete.html'>extractDrugEstateComplete</a></span>(<span class='no'>mols</span><span class='kw'>[[</span><span class='fl'>2</span>]])
-<span class='fu'>calcDrugFPSim</span>(<span class='no'>fp3</span>, <span class='no'>fp4</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'complete'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'tanimoto'</span>)</div><div class='output co'>#&gt; [1] 0.5</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp3</span>, <span class='no'>fp4</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'complete'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'euclidean'</span>)</div><div class='output co'>#&gt; [1] 0.9678372</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp3</span>, <span class='no'>fp4</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'complete'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'cosine'</span>)</div><div class='output co'>#&gt; [1] 0.6804138</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp3</span>, <span class='no'>fp4</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'complete'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'dice'</span>)</div><div class='output co'>#&gt; [1] 0.6666667</div><div class='input'><span class='fu'>calcDrugFPSim</span>(<span class='no'>fp3</span>, <span class='no'>fp4</span>, <span class='kw'>fptype</span> <span class='kw'>=</span> <span class='st'>'complete'</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>'hamming'</span>)<span class='co'># }</span></div><div class='output co'>#&gt; [1] 0.06329114</div></pre>
+<span class='va'>fp1</span> <span class='op'>=</span> <span class='fu'><a href='extractDrugEstate.html'>extractDrugEstate</a></span><span class='op'>(</span><span class='va'>mols</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>fp2</span> <span class='op'>=</span> <span class='fu'><a href='extractDrugEstate.html'>extractDrugEstate</a></span><span class='op'>(</span><span class='va'>mols</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>
+<span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp1</span>, <span class='va'>fp2</span>, fptype <span class='op'>=</span> <span class='st'>'compact'</span>, metric <span class='op'>=</span> <span class='st'>'tanimoto'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.5</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp1</span>, <span class='va'>fp2</span>, fptype <span class='op'>=</span> <span class='st'>'compact'</span>, metric <span class='op'>=</span> <span class='st'>'euclidean'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.9678372</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp1</span>, <span class='va'>fp2</span>, fptype <span class='op'>=</span> <span class='st'>'compact'</span>, metric <span class='op'>=</span> <span class='st'>'cosine'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.6804138</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp1</span>, <span class='va'>fp2</span>, fptype <span class='op'>=</span> <span class='st'>'compact'</span>, metric <span class='op'>=</span> <span class='st'>'dice'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.6666667</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp1</span>, <span class='va'>fp2</span>, fptype <span class='op'>=</span> <span class='st'>'compact'</span>, metric <span class='op'>=</span> <span class='st'>'hamming'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.06329114</div><div class='input'>
+<span class='va'>fp3</span> <span class='op'>=</span> <span class='fu'><a href='extractDrugEstateComplete.html'>extractDrugEstateComplete</a></span><span class='op'>(</span><span class='va'>mols</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>fp4</span> <span class='op'>=</span> <span class='fu'><a href='extractDrugEstateComplete.html'>extractDrugEstateComplete</a></span><span class='op'>(</span><span class='va'>mols</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>
+<span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp3</span>, <span class='va'>fp4</span>, fptype <span class='op'>=</span> <span class='st'>'complete'</span>, metric <span class='op'>=</span> <span class='st'>'tanimoto'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.5</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp3</span>, <span class='va'>fp4</span>, fptype <span class='op'>=</span> <span class='st'>'complete'</span>, metric <span class='op'>=</span> <span class='st'>'euclidean'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.9678372</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp3</span>, <span class='va'>fp4</span>, fptype <span class='op'>=</span> <span class='st'>'complete'</span>, metric <span class='op'>=</span> <span class='st'>'cosine'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.6804138</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp3</span>, <span class='va'>fp4</span>, fptype <span class='op'>=</span> <span class='st'>'complete'</span>, metric <span class='op'>=</span> <span class='st'>'dice'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.6666667</div><div class='input'><span class='fu'>calcDrugFPSim</span><span class='op'>(</span><span class='va'>fp3</span>, <span class='va'>fp4</span>, fptype <span class='op'>=</span> <span class='st'>'complete'</span>, metric <span class='op'>=</span> <span class='st'>'hamming'</span><span class='op'>)</span><span class='co'># }</span>
+</div><div class='output co'>#&gt; [1] 0.06329114</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -216,7 +237,7 @@ Chemoinformatics. Wiley.com, 2006.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
