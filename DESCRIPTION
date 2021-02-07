@@ -41,4 +41,4 @@ Suggests:
 Enhances: ChemmineOB
 biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
     Cheminformatics, BiomedicalInformatics, Proteomics, GO, SystemsBiology
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
