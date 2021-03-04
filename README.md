@@ -1,6 +1,5 @@
 # Rcpi  <a href="https://nanx.me/Rcpi/"><img src="man/figures/logo.png" align="right" height="180" /></a>
 
-[![Build Status](https://travis-ci.org/nanxstats/Rcpi.svg?branch=master)](https://travis-ci.org/nanxstats/Rcpi)
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
 [![downloads](https://www.bioconductor.org/shields/downloads/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
 
