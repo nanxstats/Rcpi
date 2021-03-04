@@ -224,12 +224,12 @@ calculation based on sequence alignment.</p></div>
 <span class='va'>go1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"GO:0004022"</span>, <span class='st'>"GO:0004024"</span>, <span class='st'>"GO:0004023"</span><span class='op'>)</span>
 <span class='va'>go2</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"GO:0009055"</span>, <span class='st'>"GO:0020037"</span><span class='op'>)</span>
 <span class='fu'>calcTwoProtGOSim</span><span class='op'>(</span><span class='va'>go1</span>, <span class='va'>go2</span>, type <span class='op'>=</span> <span class='st'>'go'</span>, ont <span class='op'>=</span> <span class='st'>'MF'</span>, measure <span class='op'>=</span> <span class='st'>'Wang'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called ‘org.Hs.eg.db’</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(parse(text = OrgDb)): object 'org.Hs.eg.db' not found</span></div><div class='input'>
+</div><div class='output co'>#&gt; [1] 0.294</div><div class='input'>
 <span class='co'># By Entrez gene id</span>
 <span class='va'>gene1</span> <span class='op'>=</span> <span class='st'>'241'</span>
 <span class='va'>gene2</span> <span class='op'>=</span> <span class='st'>'251'</span>
 <span class='fu'>calcTwoProtGOSim</span><span class='op'>(</span><span class='va'>gene1</span>, <span class='va'>gene2</span>, type <span class='op'>=</span> <span class='st'>'gene'</span>, ont <span class='op'>=</span> <span class='st'>'CC'</span>, measure <span class='op'>=</span> <span class='st'>'Lin'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called ‘org.Hs.eg.db’</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(parse(text = OrgDb)): object 'org.Hs.eg.db' not found</span></div></pre>
+</div><div class='output co'>#&gt; [1] 0.324</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

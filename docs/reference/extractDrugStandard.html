@@ -190,50 +190,9 @@ This is hashed fingerprints, with a default length of 1024.</p>
     <pre class="examples"><div class='input'><span class='va'>smi</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'vignettedata/FDAMDD.smi'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span>
 <span class='co'># \donttest{</span>
 <span class='va'>mol</span> <span class='op'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span><span class='op'>(</span><span class='va'>smi</span>, type <span class='op'>=</span> <span class='st'>'mol'</span><span class='op'>)</span>
-<span class='va'>fp</span>  <span class='op'>=</span> <span class='fu'>extractDrugStandard</span><span class='op'>(</span><span class='va'>mol</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>fp</span><span class='op'>)</span><span class='co'># }</span>
-</div><div class='output co'>#&gt; $`1024`
-#&gt;   [1]    6   13   14   18   26   27   30   38   39   56   63   67   76   77   82
-#&gt;  [16]   85   86   87   88   91   96  107  108  109  117  120  121  129  130  132
-#&gt;  [31]  139  140  149  152  159  162  173  174  183  198  203  206  214  217  223
-#&gt;  [46]  235  239  249  254  272  274  282  292  296  301  302  312  327  331  336
-#&gt;  [61]  337  369  381  385  392  400  410  414  415  419  423  430  435  449  471
-#&gt;  [76]  473  475  486  492  493  498  499  514  535  543  546  548  550  575  582
-#&gt;  [91]  589  597  600  602  614  622  626  629  638  645  667  695  700  704  723
-#&gt; [106]  727  737  742  743  746  753  761  762  764  767  769  770  771  773  783
-#&gt; [121]  786  787  788  800  807  830  831  832  833  839  843  844  845  851  854
-#&gt; [136]  859  866  882  884  890  893  899  911  930  932  933  938  954  955  958
-#&gt; [151]  968  978  986  989  993  998 1002 1015
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]  13  18  56  85  87  96 162 206 214 239 254 369 389 392 457 511 512 531 544
-#&gt; [20] 575 586 614 619 638 732 737 742 743 746 770 784 787 825 839 930 954 958 966
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]  13  18  56  85  87  96 162 214 239 254 389 392 457 511 512 531 544 575 586
-#&gt; [20] 619 638 742 743 770 784 787 825 839 954 958 966
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]   14   18   32   43   49   56   58   62   70   77   85   87   95  142  161
-#&gt; [16]  168  173  192  205  220  235  239  241  245  274  294  305  306  309  335
-#&gt; [31]  352  354  358  392  395  401  403  414  425  435  452  457  461  469  471
-#&gt; [46]  501  507  512  522  528  540  544  562  564  576  577  596  620  623  626
-#&gt; [61]  638  657  661  664  691  737  742  743  745  748  753  782  784  788  804
-#&gt; [76]  813  822  830  849  867  908  910  939  954  962  963  972  980  984 1023
-#&gt; [91] 1024
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]   18   24   41   57   70   71   78   85   86   87   96  107  108  109  118
-#&gt; [16]  119  125  126  128  139  148  149  159  162  166  170  172  209  214  223
-#&gt; [31]  224  239  254  265  272  305  312  325  335  350  352  354  356  367  392
-#&gt; [46]  397  414  420  438  439  455  457  461  486  492  499  512  518  521  527
-#&gt; [61]  528  543  544  564  575  597  602  606  614  623  638  649  678  692  698
-#&gt; [76]  706  707  712  735  740  742  743  745  748  753  805  809  831  845  859
-#&gt; [91]  913  935  944  949  954 1008
-#&gt; 
-#&gt; $`1024`
-#&gt;  [1]  18  85  87 239 514 602 638 742 743 932 954 958
-#&gt; </div></pre>
+</div><div class='output co'>#&gt; <span class='error'>Error in .jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder()): Java Exception &lt;no description because toString() failed&gt;.jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder())new("jobjRef", jobj = &lt;pointer: 0x7fd184d25d70&gt;, jclass = "java/lang/Throwable")</span></div><div class='input'><span class='va'>fp</span>  <span class='op'>=</span> <span class='fu'>extractDrugStandard</span><span class='op'>(</span><span class='va'>mol</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in extractDrugStandard(mol): object 'mol' not found</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>fp</span><span class='op'>)</span><span class='co'># }</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'head': object 'fp' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

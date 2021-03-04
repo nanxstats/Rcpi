@@ -189,9 +189,9 @@ This is hashed fingerprints, with a default length of 1024.</p>
     <pre class="examples"><div class='input'><span class='va'>smi</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'vignettedata/FDAMDD.smi'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span>
 <span class='co'># \donttest{</span>
 <span class='va'>mol</span> <span class='op'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span><span class='op'>(</span><span class='va'>smi</span>, type <span class='op'>=</span> <span class='st'>'mol'</span><span class='op'>)</span>
-<span class='va'>fp</span>  <span class='op'>=</span> <span class='fu'>extractDrugStandardComplete</span><span class='op'>(</span><span class='va'>mol</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>fp</span><span class='op'>)</span><span class='co'># }</span>
-</div><div class='output co'>#&gt; [1]  796 1024</div></pre>
+</div><div class='output co'>#&gt; <span class='error'>Error in .jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder()): Java Exception &lt;no description because toString() failed&gt;.jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder())new("jobjRef", jobj = &lt;pointer: 0x7fd184d25d78&gt;, jclass = "java/lang/Throwable")</span></div><div class='input'><span class='va'>fp</span>  <span class='op'>=</span> <span class='fu'>extractDrugStandardComplete</span><span class='op'>(</span><span class='va'>mol</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in extractDrugStandardComplete(mol): object 'mol' not found</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>fp</span><span class='op'>)</span><span class='co'># }</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'fp' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

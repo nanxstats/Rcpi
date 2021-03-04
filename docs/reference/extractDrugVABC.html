@@ -177,15 +177,9 @@ This function returns one column named <code>VABC</code>.</p>
     <pre class="examples"><div class='input'><span class='va'>smi</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>'vignettedata/FDAMDD.smi'</span>, package <span class='op'>=</span> <span class='st'>'Rcpi'</span><span class='op'>)</span>
 <span class='co'># \donttest{</span>
 <span class='va'>mol</span> <span class='op'>=</span> <span class='fu'><a href='readMolFromSmi.html'>readMolFromSmi</a></span><span class='op'>(</span><span class='va'>smi</span>, type <span class='op'>=</span> <span class='st'>'mol'</span><span class='op'>)</span>
-<span class='va'>dat</span> <span class='op'>=</span> <span class='fu'>extractDrugVABC</span><span class='op'>(</span><span class='va'>mol</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='co'># }</span>
-</div><div class='output co'>#&gt;                                                         VABC
-#&gt; c1ccc2c(c1)oc(=O)c(C(CC(=O)C)c1ccc([N+](=O)[O-])cc1)c2O   NA
-#&gt; c1(ccc(cc1)O)NC(=O)C                                      NA
-#&gt; c1ccccc1NC(=O)C                                           NA
-#&gt; n1nc(S(=O)(=O)N)sc1NC(=O)C                                NA
-#&gt; O=S(=O)(c1ccc(cc1)C(=O)C)NC(=O)NC1CCCCC1                  NA
-#&gt; CC(=O)NO                                                  NA</div></pre>
+</div><div class='output co'>#&gt; <span class='error'>Error in .jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder()): Java Exception &lt;no description because toString() failed&gt;.jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder())new("jobjRef", jobj = &lt;pointer: 0x7fd184d25d88&gt;, jclass = "java/lang/Throwable")</span></div><div class='input'><span class='va'>dat</span> <span class='op'>=</span> <span class='fu'>extractDrugVABC</span><span class='op'>(</span><span class='va'>mol</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in eval.desc(molecules, "org.openscience.cdk.qsar.descriptors.molecular.VABCDescriptor",     verbose = !silent): object 'mol' not found</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='co'># }</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'head': object 'dat' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
