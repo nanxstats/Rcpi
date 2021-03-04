@@ -6,3 +6,4 @@
 ^\NEWS\.md$
 ^CONDUCT\.md$
 ^CONTRIBUTING\.md$
+^\.github$
