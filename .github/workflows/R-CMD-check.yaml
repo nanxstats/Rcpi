@@ -68,6 +68,7 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
+          BiocManager::install("org.Hs.eg.db")
         shell: Rscript {0}
 
       - name: Check
