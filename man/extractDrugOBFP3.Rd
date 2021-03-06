@@ -30,7 +30,7 @@ mol3 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'),
                 nchars = 1e+6)  # single molecule in a sdf file
 mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
                 nchars = 1e+6)  # multiple molecules in a sdf file
-\donttest{
+\dontrun{
 smifp0 = extractDrugOBFP3(mol1, type = 'smile')
 smifp1 = extractDrugOBFP3(mol2, type = 'smile')
 sdffp0 = extractDrugOBFP3(mol3, type = 'sdf')

@@ -62,7 +62,7 @@ mol1 = 'CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC'
 mol2 = 'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'
 mol3 = readChar(system.file('compseq/DB00859.sdf', package = 'Rcpi'), nchars = 1e+6)
 mol4 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'), nchars = 1e+6)
-\donttest{
+\dontrun{
 sim1 = calcDrugMCSSim(mol1, mol2, type = 'smile')
 sim2 = calcDrugMCSSim(mol3, mol4, type = 'sdf', plot = TRUE)
 print(sim1[[2]])  # Tanimoto Coefficient

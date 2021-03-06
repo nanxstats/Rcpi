@@ -31,7 +31,7 @@ mol3 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'),
 mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
                 nchars = 1e+6)  # multiple molecules in a sdf file
 
-\donttest{
+\dontrun{
 # MACCS may not be available in current version of ChemmineOB
 smifp0 = extractDrugOBMACCS(mol1, type = 'smile')
 smifp1 = extractDrugOBMACCS(mol2, type = 'smile')
