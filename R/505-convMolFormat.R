@@ -189,11 +189,11 @@
 #' @examples
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
 #' # SDF to SMILES
-#' \donttest{
+#' \dontrun{
 #' convMolFormat(infile = sdf, outfile = 'aa.smi',
 #'               from = 'sdf', to = 'smiles')}
 #' # SMILES to MOPAC Cartesian format
-#' \donttest{
+#' \dontrun{
 #' convMolFormat(infile = 'aa.smi', outfile = 'aa.mop',
 #'               from = 'smiles', to = 'mop')}
 

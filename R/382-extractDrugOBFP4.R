@@ -28,7 +28,7 @@
 #' mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
 #'                 nchars = 1e+6)  # multiple molecules in a sdf file
 #'
-#' \donttest{
+#' \dontrun{
 #' smifp0 = extractDrugOBFP4(mol1, type = 'smile')
 #' smifp1 = extractDrugOBFP4(mol2, type = 'smile')
 #' sdffp0 = extractDrugOBFP4(mol3, type = 'sdf')
