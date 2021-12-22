@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Rcpi">
 <title>Rcpi Quick Reference Card • Rcpi</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,101 +13,84 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<meta property="og:title" content="Rcpi Quick Reference Card">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Rcpi Quick Reference Card">
 <meta property="og:description" content="Rcpi">
-<meta property="og:image" content="/logo.png">
+<meta property="og:image" content="https://nanx.me/Rcpi/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">Rcpi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.21.1</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.21.1</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-2">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../articles/Rcpi.html">Get started</a>
 </li>
-<li>
-  <a href="../articles/Rcpi.html">Get started</a>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/Rcpi-quickref.html">Rcpi Quick Reference Card</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/nanxstats/Rcpi/">
-    <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-</div>
-<!--/.nav-collapse -->
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/Rcpi-quickref.html">Rcpi Quick Reference Card</a>
   </div>
-<!--/.container -->
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
+</li>
+      </ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/nanxstats/Rcpi/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
-<!--/.navbar -->
 
-      
+    
+  </div>
+</nav><div class="container template-article">
 
-      </header><script src="Rcpi-quickref_files/header-attrs-2.7/header-attrs.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Rcpi Quick Reference Card</h1>
-                        <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
+<div class="row">
+  <main id="main"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Rcpi Quick Reference Card</h1>
+                        <h4 data-toc-skip class="author">Nan Xiao &lt;<a href="https://nanx.me" class="external-link uri">https://nanx.me</a>&gt;</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/vignettes/Rcpi-quickref.Rmd"><code>vignettes/Rcpi-quickref.Rmd</code></a></small>
-      <div class="hidden name"><code>Rcpi-quickref.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/HEAD/vignettes/Rcpi-quickref.Rmd" class="external-link"><code>vignettes/Rcpi-quickref.Rmd</code></a></small>
+      <div class="d-none name"><code>Rcpi-quickref.Rmd</code></div>
     </div>
 
     
     
-<div id="retrieve-protein-sequence-data-from-online-databases" class="section level1">
-<h1 class="hasAnchor">
-<a href="#retrieve-protein-sequence-data-from-online-databases" class="anchor"></a>Retrieve Protein Sequence Data from Online Databases</h1>
+<div class="section level2">
+<h2 id="retrieve-protein-sequence-data-from-online-databases">Retrieve protein sequence data from online databases<a class="anchor" aria-label="anchor" href="#retrieve-protein-sequence-data-from-online-databases"></a>
+</h2>
 <table class="table">
 <caption>Table 1: Retrieving protein sequence data from various online databases</caption>
 <thead><tr class="header">
@@ -145,9 +129,9 @@
 </tbody>
 </table>
 </div>
-<div id="retrieve-drug-molecular-data-from-online-databases" class="section level1">
-<h1 class="hasAnchor">
-<a href="#retrieve-drug-molecular-data-from-online-databases" class="anchor"></a>Retrieve Drug Molecular Data from Online Databases</h1>
+<div class="section level2">
+<h2 id="retrieve-drug-molecular-data-from-online-databases">Retrieve drug molecular data from online databases<a class="anchor" aria-label="anchor" href="#retrieve-drug-molecular-data-from-online-databases"></a>
+</h2>
 <table class="table">
 <caption>Table 2: Retrieving drug molecular data from various online databases</caption>
 <thead><tr class="header">
@@ -198,9 +182,9 @@
 </tbody>
 </table>
 </div>
-<div id="calculate-commonly-used-protein-sequence-derived-descriptors" class="section level1">
-<h1 class="hasAnchor">
-<a href="#calculate-commonly-used-protein-sequence-derived-descriptors" class="anchor"></a>Calculate Commonly Used Protein Sequence Derived Descriptors</h1>
+<div class="section level2">
+<h2 id="calculate-commonly-used-protein-sequence-derived-descriptors">Calculate commonly used protein sequence derived descriptors<a class="anchor" aria-label="anchor" href="#calculate-commonly-used-protein-sequence-derived-descriptors"></a>
+</h2>
 <table class="table">
 <caption>Table 3: Calculating commonly used protein sequence derived descriptors</caption>
 <thead><tr class="header">
@@ -287,9 +271,9 @@
 </tbody>
 </table>
 </div>
-<div id="generate-profile-based-protein-representations" class="section level1">
-<h1 class="hasAnchor">
-<a href="#generate-profile-based-protein-representations" class="anchor"></a>Generate Profile-Based Protein Representations</h1>
+<div class="section level2">
+<h2 id="generate-profile-based-protein-representations">Generate profile-based protein representations<a class="anchor" aria-label="anchor" href="#generate-profile-based-protein-representations"></a>
+</h2>
 <table class="table">
 <caption>Table 4: Generating profile-based protein representations</caption>
 <thead><tr class="header">
@@ -312,9 +296,9 @@
 </tbody>
 </table>
 </div>
-<div id="generate-scales-based-descriptors-for-proteochemometrics-modeling" class="section level1">
-<h1 class="hasAnchor">
-<a href="#generate-scales-based-descriptors-for-proteochemometrics-modeling" class="anchor"></a>Generate Scales-Based Descriptors for Proteochemometrics Modeling</h1>
+<div class="section level2">
+<h2 id="generate-scales-based-descriptors-for-proteochemometrics-modeling">Generate scales-based descriptors for proteochemometrics modeling<a class="anchor" aria-label="anchor" href="#generate-scales-based-descriptors-for-proteochemometrics-modeling"></a>
+</h2>
 <table class="table">
 <caption>Table 5: Generating scales-based descriptors for proteochemometrics modeling</caption>
 <thead><tr class="header">
@@ -361,9 +345,9 @@
 </tbody>
 </table>
 </div>
-<div id="molecular-descriptor-sets-of-the-20-amino-acids-for-generating-scales-based-descriptors" class="section level1">
-<h1 class="hasAnchor">
-<a href="#molecular-descriptor-sets-of-the-20-amino-acids-for-generating-scales-based-descriptors" class="anchor"></a>Molecular Descriptor Sets of the 20 Amino Acids for Generating Scales-Based Descriptors</h1>
+<div class="section level2">
+<h2 id="molecular-descriptor-sets-of-the-20-amino-acids-for-generating-scales-based-descriptors">Molecular descriptor sets of the 20 amino acids for generating scales-based descriptors<a class="anchor" aria-label="anchor" href="#molecular-descriptor-sets-of-the-20-amino-acids-for-generating-scales-based-descriptors"></a>
+</h2>
 <table class="table">
 <caption>Table 6: Pre-calculated molecular descriptor sets of the 20 amino acids in for generating scales-based descriptors for proteochemometrics modeling.</caption>
 <thead><tr class="header">
@@ -581,9 +565,9 @@
 </table>
 <p><strong>Note</strong>: non-informative descriptors (e.g. descriptors with only one value across all the 20 amino acids) in these datasets have been filtered out.</p>
 </div>
-<div id="molecular-descriptors" class="section level1">
-<h1 class="hasAnchor">
-<a href="#molecular-descriptors" class="anchor"></a>Molecular Descriptors</h1>
+<div class="section level2">
+<h2 id="molecular-descriptors">Molecular descriptors<a class="anchor" aria-label="anchor" href="#molecular-descriptors"></a>
+</h2>
 <table class="table">
 <caption>Table 7: Molecular descriptors</caption>
 <thead><tr class="header">
@@ -794,9 +778,9 @@
 </tbody>
 </table>
 </div>
-<div id="molecular-fingerprints" class="section level1">
-<h1 class="hasAnchor">
-<a href="#molecular-fingerprints" class="anchor"></a>Molecular Fingerprints</h1>
+<div class="section level2">
+<h2 id="molecular-fingerprints">Molecular fingerprints<a class="anchor" aria-label="anchor" href="#molecular-fingerprints"></a>
+</h2>
 <table class="table">
 <caption>Table 8: Molecular fingerprints</caption>
 <thead><tr class="header">
@@ -895,9 +879,9 @@
 </tbody>
 </table>
 </div>
-<div id="protein-protein-and-compound-protein-interation-descriptors" class="section level1">
-<h1 class="hasAnchor">
-<a href="#protein-protein-and-compound-protein-interation-descriptors" class="anchor"></a>Protein-Protein and Compound-Protein Interation Descriptors</h1>
+<div class="section level2">
+<h2 id="protein-protein-and-compound-protein-interation-descriptors">Protein-protein and compound-protein interation descriptors<a class="anchor" aria-label="anchor" href="#protein-protein-and-compound-protein-interation-descriptors"></a>
+</h2>
 <table class="table">
 <caption>Table 9: Protein-protein and compound-protein interation descriptors</caption>
 <thead><tr class="header">
@@ -916,9 +900,9 @@
 </tbody>
 </table>
 </div>
-<div id="similarity-and-similarity-searching" class="section level1">
-<h1 class="hasAnchor">
-<a href="#similarity-and-similarity-searching" class="anchor"></a>Similarity and Similarity Searching</h1>
+<div class="section level2">
+<h2 id="similarity-and-similarity-searching">Similarity and similarity searching<a class="anchor" aria-label="anchor" href="#similarity-and-similarity-searching"></a>
+</h2>
 <table class="table">
 <caption>Table 10: Similarity and similarity searching</caption>
 <thead><tr class="header">
@@ -957,9 +941,9 @@
 </tbody>
 </table>
 </div>
-<div id="protein-sequence-data-manipulation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#protein-sequence-data-manipulation" class="anchor"></a>Protein Sequence Data Manipulation</h1>
+<div class="section level2">
+<h2 id="protein-sequence-data-manipulation">Protein sequence data manipulation<a class="anchor" aria-label="anchor" href="#protein-sequence-data-manipulation"></a>
+</h2>
 <table class="table">
 <caption>Table 11: Protein sequence data manipulation</caption>
 <thead><tr class="header">
@@ -986,9 +970,9 @@
 </tbody>
 </table>
 </div>
-<div id="molecular-data-manipulation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#molecular-data-manipulation" class="anchor"></a>Molecular Data Manipulation</h1>
+<div class="section level2">
+<h2 id="molecular-data-manipulation">Molecular data manipulation<a class="anchor" aria-label="anchor" href="#molecular-data-manipulation"></a>
+</h2>
 <table class="table">
 <caption>Table 12: Molecular data manipulation</caption>
 <thead><tr class="header">
@@ -1011,31 +995,28 @@
 </tbody>
 </table>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by Nan Xiao, Dong-Sheng Cao, Qing-Song Xu.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by Nan Xiao, Dong-Sheng Cao, Qing-Song Xu.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>
