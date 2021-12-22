@@ -39,13 +39,17 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
+      - name: Install Open Babel to compile ChemmineOB
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install libopenbabel-dev
+
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
           extra-packages: rcmdcheck
 
       - name: Install Bioconductor dependencies
         run: |
-          remotes::install_cran("BiocManager")
+          install.packages("BiocManager")
           BiocManager::install("org.Hs.eg.db")
         shell: Rscript {0}
 
