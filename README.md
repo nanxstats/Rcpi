@@ -20,16 +20,14 @@ BibTeX entry:
 
 ```
 @article{Rcpi2015,
-  author = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Alex F. Chen.},
-  title = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
+  author  = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Chen, Alex F.},
+  title   = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
   journal = {Bioinformatics},
-  year = {2015},
-  volume = {31},
-  number = {2},
-  pages = {279--281},
-  doi = {10.1093/bioinformatics/btu624},
-  issn = {1367-4803},
-  url = {http://bioinformatics.oxfordjournals.org/content/31/2/279}
+  year    = {2015},
+  volume  = {31},
+  number  = {2},
+  pages   = {279--281},
+  doi     = {10.1093/bioinformatics/btu624}
 }
 ```
 

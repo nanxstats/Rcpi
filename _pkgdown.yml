@@ -4,7 +4,7 @@ template:
   bootstrap: 5
 
 reference:
-  - title: "Protein Sequence Retrivial"
+  - title: "Protein sequence retrivial"
     desc: >
       Functions for retrieving protein sequence data from online databases.
     contents:
@@ -15,7 +15,7 @@ reference:
     - getSeqFromUniProt
     - getSeqFromKEGG
     - getSeqFromRCSBPDB
-  - title: "Drug Molecular Data Retrivial"
+  - title: "Drug molecular data retrivial"
     desc: >
       Functions for retrieving drug molecular data from online databases.
     contents:
@@ -29,7 +29,7 @@ reference:
     - getSmiFromPubChem
     - getSmiFromChEMBL
     - getSmiFromKEGG
-  - title: "Protein Sequence Descriptors"
+  - title: "Protein sequence descriptors"
     desc: >
       Functions and datasets for computing commonly used protein sequence derived descriptors.
     contents:
@@ -48,14 +48,14 @@ reference:
     - extractProtPAAC
     - extractProtAPAAC
     - AAindex
-  - title: "Profile-Based Protein Sequence Descriptors"
+  - title: "Profile-based protein sequence descriptors"
     desc: >
       Functions for generating profile-based protein representations.
     contents:
     - extractProtPSSM
     - extractProtPSSMFeature
     - extractProtPSSMAcc
-  - title: "Scales-Based Descriptors for Proteochemometrics Modeling"
+  - title: "Scales-based descriptors for proteochemometrics modeling"
     desc: >
       Functions for generating scales-based descriptors for proteochemometrics (PCM) modeling.
     contents:
@@ -66,7 +66,7 @@ reference:
     - extractPCMMDSScales
     - extractPCMBLOSUM
     - acc
-  - title: "Molecular Descriptor Sets for Generating Scales-Based Descriptors"
+  - title: "Molecular descriptor sets for generating scales-based descriptors"
     desc: >
       Molecular descriptor sets of the 20 amino acids for generating scales-based descriptors.
     contents:
@@ -105,7 +105,7 @@ reference:
     - AAPAM70
     - AAPAM120
     - AAPAM250
-  - title: "Molecular Descriptors"
+  - title: "Molecular descriptors"
     desc: >
       Functions for computing commonly used molecular descriptors.
     contents:
@@ -159,7 +159,7 @@ reference:
     - extractDrugWienerNumbers
     - extractDrugXLogP
     - extractDrugZagrebIndex
-  - title: "Molecular Fingerprints"
+  - title: "Molecular fingerprints"
     desc: >
       Functions for computing commonly used molecular fingerprints.
     contents:
@@ -185,13 +185,13 @@ reference:
     - extractDrugOBFP3
     - extractDrugOBFP4
     - extractDrugOBMACCS
-  - title: "PPI and CPI Descriptors"
+  - title: "PPI and CPI descriptors"
     desc: >
       Functions for computing protein-protein and compound-protein interation descriptors.
     contents:
     - getPPI
     - getCPI
-  - title: "Similarity and Similarity Searching"
+  - title: "Similarity and similarity searching"
     desc: >
       Functions for computing sequence/molecular similarities and similarity searching.
     contents:
@@ -202,7 +202,7 @@ reference:
     - calcParProtSeqSim
     - calcTwoProtGOSim
     - calcParProtGOSim
-  - title: "Protein Sequence Data Processing"
+  - title: "Protein sequence data processing"
     desc: >
       Functions for processing protein sequence data.
     contents:
@@ -210,7 +210,7 @@ reference:
     - readPDB
     - segProt
     - checkProt
-  - title: "Molecular Data Processing"
+  - title: "Molecular data processing"
     desc: >
       Functions for processing molecular data.
     contents:
