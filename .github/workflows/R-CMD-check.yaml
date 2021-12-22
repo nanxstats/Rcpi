@@ -43,4 +43,10 @@ jobs:
         with:
           extra-packages: rcmdcheck
 
+      - name: Install Bioconductor dependencies
+        run: |
+          remotes::install_cran("BiocManager")
+          BiocManager::install("org.Hs.eg.db")
+        shell: Rscript {0}
+
       - uses: r-lib/actions/check-r-package@v1
