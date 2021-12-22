@@ -1,3 +1,8 @@
+url: https://nanx.me/Rcpi/
+
+template:
+  bootstrap: 5
+
 reference:
   - title: "Protein Sequence Retrivial"
     desc: >

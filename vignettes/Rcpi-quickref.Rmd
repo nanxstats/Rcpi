@@ -6,7 +6,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 4
-    number_sections: true
+    number_sections: false
     highlight: "textmate"
     css: "custom.css"
 vignette: >
@@ -14,7 +14,7 @@ vignette: >
   %\VignetteIndexEntry{Rcpi Quick Reference Card}
 ---
 
-# Retrieve Protein Sequence Data from Online Databases
+## Retrieve protein sequence data from online databases
 
   Function name           Function description
   ----------------------- ---------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ vignette: >
 
   : Table 1: Retrieving protein sequence data from various online databases
 
-# Retrieve Drug Molecular Data from Online Databases
+## Retrieve drug molecular data from online databases
 
   Function name          Function description
   ---------------------- ---------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ vignette: >
 
   : Table 2: Retrieving drug molecular data from various online databases
 
-# Calculate Commonly Used Protein Sequence Derived Descriptors
+## Calculate commonly used protein sequence derived descriptors
 
   Function name              Descriptor name                                                                    Descriptor group
   -------------------------- ---------------------------------------------------------------------------------- -------------------------------
@@ -67,7 +67,7 @@ vignette: >
 
   : Table 3: Calculating commonly used protein sequence derived descriptors
 
-# Generate Profile-Based Protein Representations
+## Generate profile-based protein representations
 
   Function name              Function description
   -------------------------- ----------------------------------------------------------------------------------------
@@ -77,7 +77,7 @@ vignette: >
 
   : Table 4: Generating profile-based protein representations
 
-# Generate Scales-Based Descriptors for Proteochemometrics Modeling
+## Generate scales-based descriptors for proteochemometrics modeling
 
   Function name            Descriptor class                                                                                                  Derived by
   ------------------------ ----------------------------------------------------------------------------------------------------------------- -------------------------------
@@ -91,7 +91,7 @@ vignette: >
 
   : Table 5: Generating scales-based descriptors for proteochemometrics modeling
 
-# Molecular Descriptor Sets of the 20 Amino Acids for Generating Scales-Based Descriptors
+## Molecular descriptor sets of the 20 amino acids for generating scales-based descriptors
 
   Dataset name   Dataset description                           Dimensionality   Calculated by
   -------------- --------------------------------------------- ---------------- ---------------------------
@@ -136,7 +136,7 @@ vignette: >
 
 **Note**: non-informative descriptors (e.g. descriptors with only one value across all the 20 amino acids) in these datasets have been filtered out.
 
-# Molecular Descriptors
+## Molecular descriptors
 
   Function name                                Descriptor name
   -------------------------------------------- -----------------------------------------------------------------------------------------------------------------
@@ -193,7 +193,7 @@ vignette: >
 
   : Table 7: Molecular descriptors
 
-# Molecular Fingerprints
+## Molecular fingerprints
 
   Function name                        Fingerprint type
   ------------------------------------ -------------------------------------------------------------------
@@ -222,7 +222,7 @@ vignette: >
 
   : Table 8: Molecular fingerprints
 
-# Protein-Protein and Compound-Protein Interation Descriptors
+## Protein-protein and compound-protein interation descriptors
 
   Function name   Function description
   --------------- -----------------------------------------------------
@@ -231,7 +231,7 @@ vignette: >
 
   : Table 9: Protein-protein and compound-protein interation descriptors
 
-# Similarity and Similarity Searching
+## Similarity and similarity searching
 
   Function name         Function description
   --------------------- -------------------------------------------------------------------------------------------------------------------------
@@ -245,7 +245,7 @@ vignette: >
 
   : Table 10: Similarity and similarity searching
 
-# Protein Sequence Data Manipulation
+## Protein sequence data manipulation
 
   Function name   Function description
   --------------- ---------------------------------------------------------------------------
@@ -256,7 +256,7 @@ vignette: >
 
   : Table 11: Protein sequence data manipulation
 
-# Molecular Data Manipulation
+## Molecular data manipulation
 
   Function name      Function description
   ------------------ ---------------------------------------------------------------------------------------------

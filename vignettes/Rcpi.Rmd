@@ -8,7 +8,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 4
-    number_sections: true
+    number_sections: false
     highlight: "textmate"
     css: "custom.css"
 vignette: >
@@ -16,7 +16,7 @@ vignette: >
   %\VignetteIndexEntry{Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery}
 ---
 
-# Introduction
+## Introduction
 
 The Rcpi package @Rcpi2015 offers an R/Bioconductor package emphasizing
 the comprehensive integration of bioinformatics and chemoinformatics
@@ -56,7 +56,7 @@ interaction descriptors and pairwise similarities are widely used in various
 research fields relevant to drug disvery, such as, bioinformatics,
 chemoinformatics, proteochemometrics and chemogenomics.
 
-## Installation
+### Installation
 
 To install the Rcpi package, use:
 
@@ -77,13 +77,13 @@ Several dependencies of the Rcpi package may require some system-level
 libraries, check the corresponding manuals of these packages for
 detailed installation guides.
 
-## How to cite Rcpi
+### How to cite Rcpi
 
 If you feel Rcpi is useful in your research, please cite our paper:
 
-<blockquote>
-Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions. _Bioinformatics_ 31 (2), 279-281.
-</blockquote>
+> Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015).
+> Rcpi: R/Bioconductor package to generate various descriptors of proteins,
+> compounds and their interactions. _Bioinformatics_ 31 (2), 279-281.
 
 BibTeX entry:
 
@@ -103,14 +103,14 @@ url = {http://bioinformatics.oxfordjournals.org/content/31/2/279}
 }
 ```
 
-# Applications in Bioinformatics
+## Applications in bioinformatics
 
 For bioinformatics research, Rcpi calculates commonly used descriptors
 and proteochemometric (PCM) modeling descriptors for protein sequences.
 Rcpi also computes pairwise similarities derived by GO semantic
 similarity and sequence alignment.
 
-## Predicting protein subcellular localization
+### Predicting protein subcellular localization
 
 Protein subcellular localization prediction involves the computational
 prediction of where a protein resides in a cell. It is an important
@@ -130,7 +130,7 @@ in two separated FASTA files with `readFASTA()`:
 ```{r, eval = FALSE}
 library("Rcpi")
 
-# load FASTA files
+# Load FASTA files
 extracell <- readFASTA(system.file(
   "vignettedata/extracell.fasta",
   package = "Rcpi"
@@ -150,16 +150,16 @@ In this case, there are 325 _extracell_ protein sequences and
 length(extracell)
 ```
 
-```{r, eval = FALSE}
-## [1] 325
+```
+># [1] 325
 ```
 
 ```{r, eval = FALSE}
 length(mitonchon)
 ```
 
-```{r, eval = FALSE}
-## [1] 306
+```
+># [1] 306
 ```
 
 To assure that the protein sequences only have the twenty standard
@@ -176,16 +176,16 @@ mitonchon <- mitonchon[(sapply(mitonchon, checkProt))]
 length(extracell)
 ```
 
-```{r, eval = FALSE}
-## [1] 323
+```
+># [1] 323
 ```
 
 ```{r, eval = FALSE}
 length(mitonchon)
 ```
 
-```{r, eval = FALSE}
-## [1] 304
+```
+># [1] 304
 ```
 
 Two protein sequences were removed from each class. For the remaining
@@ -194,12 +194,12 @@ sequences, we calculate the amphiphilic pseudo amino acid composition
 forest classification modeling.
 
 ```{r, eval = FALSE}
-# calculate APAAC descriptors
+# Calculate APAAC descriptors
 x1 <- t(sapply(extracell, extractProtAPAAC))
 x2 <- t(sapply(mitonchon, extractProtAPAAC))
 x <- rbind(x1, x2)
 
-# make class labels
+# Make class labels
 labels <- as.factor(c(rep(0, length(extracell)), rep(1, length(mitonchon))))
 ```
 
@@ -212,7 +212,7 @@ Next, we will split the data into a 75% training set and a 25% test set.
 ```{r, eval = FALSE}
 set.seed(1001)
 
-# split training and test set
+# Split training and test set
 tr.idx <- c(
   sample(1:nrow(x1), round(nrow(x1) * 0.75)),
   sample(nrow(x1) + 1:nrow(x2), round(nrow(x2) * 0.75))
@@ -235,18 +235,18 @@ print(rf.fit)
 
 The training result is:
 
-```{r, eval = FALSE}
-## Call:
-##  randomForest(x = x.tr, y = y.tr, cv.fold = 5)
-##                Type of random forest: classification
-##                      Number of trees: 500
-## No. of variables tried at each split: 8
-##
-##         OOB estimate of  error rate: 25.11%
-## Confusion matrix:
-##     0   1 class.error
-## 0 196  46   0.1900826
-## 1  72 156   0.3157895
+```
+># Call:
+>#  randomForest(x = x.tr, y = y.tr, cv.fold = 5)
+>#                Type of random forest: classification
+>#                      Number of trees: 500
+># No. of variables tried at each split: 8
+>#
+>#         OOB estimate of  error rate: 25.11%
+># Confusion matrix:
+>#     0   1 class.error
+># 0 196  46   0.1900826
+># 1  72 156   0.3157895
 ```
 
 With the model trained on the training set, we predict on the test set
@@ -254,29 +254,30 @@ and plot the ROC curve with the \pkg{pROC} package, as is shown in
 Figure 1.
 
 ```{r, eval = FALSE}
-# predict on test set
+# Predict on test set
 rf.pred <- predict(rf.fit, newdata = x.te, type = "prob")[, 1]
 
-# plot ROC curve
+# Plot ROC curve
 library("pROC")
 plot.roc(y.te, rf.pred, grid = TRUE, print.auc = TRUE)
 ```
 
-<img src="figures/ex1-1.png" width="65%" class="img-responsive" align="center" alt="ROC curve for the test set of protein subcellular localization data">
-<p align="center">Figure 1: ROC curve for the test set of protein subcellular localization data</p>
+```{r, echo=FALSE, out.width="65%", fig.cap="Figure 1: ROC curve for the test set of protein subcellular localization data."}
+knitr::include_graphics("figures/ex1-1.png")
+```
 
 The area under the ROC curve (AUC) is:
 
-```{r, eval = FALSE}
-## Call:
-## plot.roc.default(x = y.te, predictor = rf.pred, col = "#0080ff",
-##                  grid = TRUE, print.auc = TRUE)
-##
-## Data: rf.pred in 81 controls (y.te 0) > 76 cases (y.te 1).
-## Area under the curve: 0.8697
+```
+># Call:
+># plot.roc.default(x = y.te, predictor = rf.pred, col = "#0080ff",
+>#                  grid = TRUE, print.auc = TRUE)
+>#
+># Data: rf.pred in 81 controls (y.te 0) > 76 cases (y.te 1).
+># Area under the curve: 0.8697
 ```
 
-# Applications in Chemoinformatics
+## Applications in chemoinformatics
 
 For chemoinformatics research, Rcpi calculates various types of molecular
 descriptors/fingerprints, and computes pairwise similarities derived by
@@ -284,7 +285,7 @@ fingerprints and maximum common substructure search. Rcpi also provides
 the `searchDrug()` function for parallelized molecular similarity
 search based on these similarity types.
 
-## Regression modeling in QSRR study of retention indices
+### Regression modeling in QSRR study of retention indices
 
 In @yan2012comparison, a quantitative structure-retention relationship
 study was performed for 656 flavor compounds on four stationary phases
@@ -335,7 +336,7 @@ molecular descriptors. The corresponding functions for molecular descriptor
 calculation are all named after `extractDrug...()` in `Rcpi`:
 
 ```{r, eval = FALSE}
-# calculate selected molecular descriptors
+# Calculate selected molecular descriptors
 x <- suppressWarnings(cbind(
   extractDrugALOGP(x.mol),
   extractDrugApol(x.mol),
@@ -358,17 +359,17 @@ the `caret` package. The cross-validation setting is 5-fold repeated
 cross-validation (repeat for 10 times).
 
 ```{r, eval = FALSE}
-# regression on training set
+# Run regression on training set
 library("caret")
 library("pls")
 
-# cross-validation settings
+# Cross-validation settings
 ctrl <- trainControl(
   method = "repeatedcv", number = 5, repeats = 10,
   summaryFunction = defaultSummary
 )
 
-# train a pls model
+# Train a PLS model
 set.seed(1002)
 pls.fit <- train(
   x, y,
@@ -376,7 +377,7 @@ pls.fit <- train(
   metric = "RMSE", preProc = c("center", "scale")
 )
 
-# print cross-validation result
+# Print cross-validation results
 print(pls.fit)
 ```
 
@@ -414,19 +415,20 @@ We can plot the components and RMSE to helps us select the desired
 number of principal components used in the model.
 
 ```{r, eval = FALSE}
-# # of components vs RMSE
+# Number of components vs. RMSE
 print(plot(pls.fit, asp = 0.5))
 ```
 
-<img src="figures/ex2-1.png" width="85%" class="img-responsive" align="center" alt="Number of principal components vs. RMSE for the PLS regression model">
-<p align="center">Figure 2: Number of principal components vs. RMSE for the PLS regression model</p>
+```{r, echo=FALSE, out.width="85%", fig.cap="Figure 2: Number of principal components vs. RMSE for the PLS regression model."}
+knitr::include_graphics("figures/ex2-1.png")
+```
 
 From Figure 2, we consider that selecting six or seven components is acceptable.
 At last, we plot the experimental RIs and the predicted RIs to see if the model
 fits well on the training set (Figure 3):
 
 ```{r, eval = FALSE}
-# plot experimental RIs vs predicted RIs
+# Plot experimental RIs vs predicted RIs
 plot(y, predict(pls.fit, x),
   xlim = range(y), ylim = range(y),
   xlab = "Experimental RIs", ylab = "Predicted RIs"
@@ -434,10 +436,11 @@ plot(y, predict(pls.fit, x),
 abline(a = 0, b = 1)
 ```
 
-<img src="figures/ex2-2.png" width="65%" class="img-responsive" align="center" alt="Experimental RIs vs. Predicted RIs">
-<p align="center">Figure 3: Experimental RIs vs. Predicted RIs</p>
+```{r, echo=FALSE, out.width="65%", fig.cap="Figure 3: Experimental RIs vs. predicted RIs."}
+knitr::include_graphics("figures/ex2-2.png")
+```
 
-## _In silico_ toxicity classification for drug discovery
+### _In silico_ toxicity classification for drug discovery
 
 In the perspective of quantitative pharmacology, the successful discovery
 of novel drugs depends on the pharmacokinetics properties, like
@@ -473,7 +476,7 @@ Then we calculate three different types of molecular fingerprints
 (E-state, MACCS, and FP4) for the drug molecules:
 
 ```{r, eval = FALSE}
-# calculate molecular fingerprints
+# Calculate molecular fingerprints
 x1 <- extractDrugEstateComplete(x.mol)
 x2 <- extractDrugMACCSComplete(x.mol)
 x3 <- extractDrugOBFP4(x.smi, type = "smile")
@@ -488,12 +491,12 @@ in `caret` before modeling, and split our training set and test set:
 ```{r, eval = FALSE}
 library("caret")
 
-# remove near-zero variance variables
+# Remove near-zero variance variables
 x1 <- x1[, -nearZeroVar(x1)]
 x2 <- x2[, -nearZeroVar(x2)]
 x3 <- x3[, -nearZeroVar(x3)]
 
-# split training and test set
+# Split training and test set
 set.seed(1003)
 tr.idx <- sample(1:nrow(x1), round(nrow(x1) * 0.75))
 te.idx <- setdiff(1:nrow(x1), tr.idx)
@@ -512,10 +515,10 @@ using SVM (RBF kernel), using the `kernlab` package and the `caret` package.
 The cross-validation setting is 5-fold repeated CV (repeat for 10 times).
 
 ```{r, eval = FALSE}
-# svm classification on training sets
+# SVM classification on training sets
 library("kernlab")
 
-# cross-validation settings
+# Cross-validation settings
 ctrl <- trainControl(
   method = "cv", number = 5, repeats = 10,
   classProbs = TRUE,
@@ -539,7 +542,7 @@ svm.fit3 <- train(
   metric = "ROC", preProc = c("center", "scale")
 )
 
-# print cross-validation result
+# Print cross-validation results
 print(svm.fit1)
 print(svm.fit2)
 print(svm.fit3)
@@ -547,28 +550,28 @@ print(svm.fit3)
 
 The training result when using E-state fingerprints:
 
-```{r, eval = FALSE}
-## Support Vector Machines with Radial Basis Function Kernel
-##
-## 597 samples
-##  23 predictors
-##   2 classes: "class0", "class1"
-##
-## Pre-processing: centered, scaled
-## Resampling: Cross-Validated (5 fold)
-##
-## Summary of sample sizes: 478, 479, 477, 477, 477
-##
-## Resampling results across tuning parameters:
-##
-##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
-##   0.25  0.797  0.7    0.765  0.0211  0.0442   0.00666
-##   0.5   0.808  0.696  0.79   0.0173  0.059    0.0236
-##   1     0.812  0.703  0.781  0.0191  0.0664   0.0228
-##
-## Tuning parameter "sigma" was held constant at a value of 0.02921559
-## ROC was used to select the optimal model using  the largest value.
-## The final values used for the model were sigma = 0.0292 and C = 1.
+```
+># Support Vector Machines with Radial Basis Function Kernel
+>#
+># 597 samples
+>#  23 predictors
+>#   2 classes: "class0", "class1"
+>#
+># Pre-processing: centered, scaled
+># Resampling: Cross-Validated (5 fold)
+>#
+># Summary of sample sizes: 478, 479, 477, 477, 477
+>#
+># Resampling results across tuning parameters:
+>#
+>#   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
+>#   0.25  0.797  0.7    0.765  0.0211  0.0442   0.00666
+>#   0.5   0.808  0.696  0.79   0.0173  0.059    0.0236
+>#   1     0.812  0.703  0.781  0.0191  0.0664   0.0228
+>#
+># Tuning parameter "sigma" was held constant at a value of 0.02921559
+># ROC was used to select the optimal model using  the largest value.
+># The final values used for the model were sigma = 0.0292 and C = 1.
 ```
 
 We can see that, after removing the near zero variance predictors,
@@ -576,28 +579,28 @@ there were only 23 predictors left for the original 79 E-state fingerprints.
 
 The training result when using MACCS keys:
 
-```{r, eval = FALSE}
-## Support Vector Machines with Radial Basis Function Kernel
-##
-## 597 samples
-## 126 predictors
-##   2 classes: "class0", "class1"
-##
-## Pre-processing: centered, scaled
-## Resampling: Cross-Validated (5 fold)
-##
-## Summary of sample sizes: 477, 477, 477, 478, 479
-##
-## Resampling results across tuning parameters:
-##
-##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
-##   0.25  0.834  0.715  0.775  0.0284  0.0994   0.0589
-##   0.5   0.848  0.726  0.79   0.0299  0.065    0.0493
-##   1     0.863  0.769  0.793  0.0307  0.0229   0.0561
-##
-## Tuning parameter "sigma" was held constant at a value of 0.004404305
-## ROC was used to select the optimal model using  the largest value.
-## The final values used for the model were sigma = 0.0044 and C = 1.
+```
+># Support Vector Machines with Radial Basis Function Kernel
+>#
+># 597 samples
+># 126 predictors
+>#   2 classes: "class0", "class1"
+>#
+># Pre-processing: centered, scaled
+># Resampling: Cross-Validated (5 fold)
+>#
+># Summary of sample sizes: 477, 477, 477, 478, 479
+>#
+># Resampling results across tuning parameters:
+>#
+>#   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
+>#   0.25  0.834  0.715  0.775  0.0284  0.0994   0.0589
+>#   0.5   0.848  0.726  0.79   0.0299  0.065    0.0493
+>#   1     0.863  0.769  0.793  0.0307  0.0229   0.0561
+>#
+># Tuning parameter "sigma" was held constant at a value of 0.004404305
+># ROC was used to select the optimal model using  the largest value.
+># The final values used for the model were sigma = 0.0044 and C = 1.
 ```
 
 There are 126 predictors left for the original 166 MACCS keys
@@ -607,28 +610,28 @@ better than using the E-state fingerprints.
 
 The training result when using FP4 fingerprints:
 
-```{r, eval = FALSE}
-## Support Vector Machines with Radial Basis Function Kernel
-##
-## 597 samples
-##  58 predictors
-##   2 classes: "class0", "class1"
-##
-## Pre-processing: centered, scaled
-## Resampling: Cross-Validated (5 fold)
-##
-## Summary of sample sizes: 478, 478, 477, 478, 477
-##
-## Resampling results across tuning parameters:
-##
-##   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
-##   0.25  0.845  0.769  0.746  0.0498  0.0458   0.0877
-##   0.5   0.856  0.744  0.777  0.0449  0.0148   0.0728
-##   1     0.863  0.751  0.777  0.0428  0.036    0.0651
-##
-## Tuning parameter "sigma" was held constant at a value of 0.01077024
-## ROC was used to select the optimal model using  the largest value.
-## The final values used for the model were sigma = 0.0108 and C = 1.
+```
+># Support Vector Machines with Radial Basis Function Kernel
+>#
+># 597 samples
+>#  58 predictors
+>#   2 classes: "class0", "class1"
+>#
+># Pre-processing: centered, scaled
+># Resampling: Cross-Validated (5 fold)
+>#
+># Summary of sample sizes: 478, 478, 477, 478, 477
+>#
+># Resampling results across tuning parameters:
+>#
+>#   C     ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
+>#   0.25  0.845  0.769  0.746  0.0498  0.0458   0.0877
+>#   0.5   0.856  0.744  0.777  0.0449  0.0148   0.0728
+>#   1     0.863  0.751  0.777  0.0428  0.036    0.0651
+>#
+># Tuning parameter "sigma" was held constant at a value of 0.01077024
+># ROC was used to select the optimal model using  the largest value.
+># The final values used for the model were sigma = 0.0108 and C = 1.
 ```
 
 There are 58 predictors left for the original 512 FP4
@@ -640,12 +643,12 @@ We predict on the test sets with the established models,
 and plot the ROC curves in one figure, as is shown in Figure 4.
 
 ```{r, eval = FALSE}
-# predict on test set
+# Predict on test set
 svm.pred1 <- predict(svm.fit1, newdata = x1.te, type = "prob")[, 1]
 svm.pred2 <- predict(svm.fit2, newdata = x2.te, type = "prob")[, 1]
 svm.pred3 <- predict(svm.fit3, newdata = x3.te, type = "prob")[, 1]
 
-# generate colors
+# Generate colors
 library("RColorBrewer")
 pal <- brewer.pal(3, "Set1")
 
@@ -656,10 +659,11 @@ plot(smooth(roc(y.te, svm.pred2)), col = pal[2], grid = TRUE, add = TRUE)
 plot(smooth(roc(y.te, svm.pred3)), col = pal[3], grid = TRUE, add = TRUE)
 ```
 
-<img src="figures/ex3-1.png" width="65%" class="img-responsive" align="center" alt="Smoothed ROC curves for different fingerprint types">
-<p align="center">Figure 4: Smoothed ROC curves for different fingerprint types</p>
+```{r, echo=FALSE, out.width="65%", fig.cap="Figure 4: Smoothed ROC curves for different fingerprint types."}
+knitr::include_graphics("figures/ex3-1.png")
+```
 
-## Clustering of molecules based on structural similarities
+### Clustering of molecules based on structural similarities
 
 Apart from supervised methods (classification and regression),
 unsupervised approaches, like clustering, is also widely applied
@@ -718,10 +722,10 @@ visualize the clustering result:
 ```{r, eval = FALSE}
 mol.hc <- hclust(as.dist(1 - simmat), method = "ward.D")
 
-library("ape") # tree visualization of clusters
-clus5 <- cutree(mol.hc, 5) # cut dendrogram into 5 clusters
+library("ape") # Tree visualization of clusters
+clus5 <- cutree(mol.hc, 5) # Cut dendrogram into 5 clusters
 
-# generate colors
+# Generate colors
 library("RColorBrewer")
 pal5 <- brewer.pal(5, "Set1")
 plot(as.phylo(mol.hc),
@@ -733,10 +737,11 @@ plot(as.phylo(mol.hc),
 
 The hierarchical clustering result for these molecules is shown in Figure 5.
 
-<img src="figures/ex4-1.png" width="65%" class="img-responsive" align="center" alt="Tree visualization of the molecular clustering result">
-<p align="center">Figure 5: Tree visualization of the molecular clustering result</p>
+```{r, echo=FALSE, out.width="65%", fig.cap="Figure 5: Tree visualization of the molecular clustering result."}
+knitr::include_graphics("figures/ex4-1.png")
+```
 
-## Structure-based chemical similarity searching
+### Structure-based chemical similarity searching
 
 Structure-based chemical similarity searching ranks molecules in a
 database by their similarity degree to one query molecule structure.
@@ -789,16 +794,29 @@ and this molecule. We print the top search results here:
 
 ```{r, eval = FALSE}
 head(rank1)
-##        92       100        83       101         1        36
-## 0.6491228 0.6491228 0.5882353 0.5660377 0.5000000 0.4861111
+```
 
+```
+>#        92       100        83       101         1        36
+># 0.6491228 0.6491228 0.5882353 0.5660377 0.5000000 0.4861111
+```
+
+```{r, eval = FALSE}
 head(rank2)
-##       100        92        83       101        94        16
-## 0.8310005 0.8208663 0.5405856 0.5033150 0.4390790 0.4274081
+```
 
+```
+>#       100        92        83       101        94        16
+># 0.8310005 0.8208663 0.5405856 0.5033150 0.4390790 0.4274081
+```
+
+```{r, eval = FALSE}
 head(rank3)
-##        92       100        23        39        94        64
-## 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784
+```
+
+```
+>#        92       100        23        39        94        64
+># 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784
 ```
 
 The Rcpi package also integrated the functionality of converting
@@ -810,7 +828,7 @@ search between the query molecule and the #92 molecule using
 `calcDrugMCSSim()`:
 
 ```{r, eval = FALSE}
-# convert SDF format to SMILES format
+# Convert SDF format to SMILES format
 convMolFormat(
   infile = mol, outfile = "DB00530.smi", from = "sdf", to = "smiles"
 )
@@ -819,7 +837,7 @@ convMolFormat(
 )
 
 smi1 <- readLines("DB00530.smi")
-smi2 <- readLines("tyrphostin.smi")[92] # select the #92 molecule
+smi2 <- readLines("tyrphostin.smi")[92] # Select the #92 molecule
 calcDrugMCSSim(smi1, smi2, type = "smile", plot = TRUE)
 ```
 
@@ -827,37 +845,38 @@ The MCS search result is stored in a list, which contains the original
 MCS result provided by the `fmcsR` package @wang2013fmcsr, the Tanimoto
 coefficient and the overlap coefficient.
 
-```{r, eval = FALSE}
-## [[1]]
-## An instance of "MCS"
-##  Number of MCSs: 1
-##  530: 29 atoms
-##  4705: 22 atoms
-##  MCS: 18 atoms
-##  Tanimoto Coefficient: 0.54545
-##  Overlap Coefficient: 0.81818
-##
-## [[2]]
-## Tanimoto_Coefficient
-##            0.5454545
-##
-## [[3]]
-## Overlap_Coefficient
-##           0.8181818
+```
+># [[1]]
+># An instance of "MCS"
+>#  Number of MCSs: 1
+>#  530: 29 atoms
+>#  4705: 22 atoms
+>#  MCS: 18 atoms
+>#  Tanimoto Coefficient: 0.54545
+>#  Overlap Coefficient: 0.81818
+>#
+># [[2]]
+># Tanimoto_Coefficient
+>#            0.5454545
+>#
+># [[3]]
+># Overlap_Coefficient
+>#           0.8181818
 ```
 
 By using `calcDrugMCSSim(..., plot = TRUE)`, the maximum common
 substructure of the two molecules is presented in Figure 6.
 
-<img src="figures/ex5-1.png" width="50%" class="img-responsive" align="center">
-<p align="center">Figure 6: Maximum common structure of the query molecule and the #92 molecule in the chemical database</p>
+```{r, echo=FALSE, out.width="50%", fig.cap="Figure 6: Maximum common structure of the query molecule and the #92 molecule in the chemical database."}
+knitr::include_graphics("figures/ex5-1.png")
+```
 
-# Applications in Chemogenomics
+## Applications in chemogenomics
 
 For chemogenomics modeling, Rcpi calculates compound-protein interaction
 (CPI) descriptors and protein-protein interaction (PPI) descriptors.
 
-## Predicting drug-target interaction by integrating chemical and genomic spaces
+### Predicting drug-target interaction by integrating chemical and genomic spaces
 
 The prediction of novel interactions between drugs and target proteins
 is a key area in genomic drug discovery. In this example, we use the
@@ -901,14 +920,14 @@ Take a look at the data:
 head(gpcr)
 ```
 
-```{r, eval = FALSE}
-##          V1     V2
-## 1 hsa:10161 D00528
-## 2 hsa:10800 D00411
-## 3 hsa:10800 D01828
-## 4 hsa:10800 D05129
-## 5 hsa:11255 D00234
-## 6 hsa:11255 D00300
+```
+>#          V1     V2
+># 1 hsa:10161 D00528
+># 2 hsa:10800 D00411
+># 3 hsa:10800 D01828
+># 4 hsa:10800 D05129
+># 5 hsa:11255 D00234
+># 6 hsa:11255 D00300
 ```
 
 We will visualize the network first. Figure 7 shows the connection
@@ -942,8 +961,9 @@ arcplot(
 )
 ```
 
-<img src="figures/ex6-1.png" width="85%" class="img-responsive" align="center" alt="Arc diagram visualization of the GPCR drug-target interaction network">
-<p align="center">Figure 7: Arc diagram visualization of the GPCR drug-target interaction network</p>
+```{r, echo=FALSE, out.width="85%", fig.cap="Figure 7: Arc diagram visualization of the GPCR drug-target interaction network."}
+knitr::include_graphics("figures/ex6-1.png")
+```
 
 An arc diagram visualize the nodes in the network in a one-dimensional
 layout, while using circular arcs to represent edges. With a good ordering
@@ -1001,7 +1021,7 @@ Since the descriptors is only for the _deduplicated_ drug and target list,
 we need to generate the full descriptor matrix for the training data:
 
 ```{r, eval = FALSE}
-# generate drug x / protein x / y
+# Generate drug x / protein x / y
 x.prot <- matrix(NA, nrow = nrow(gpcr), ncol = ncol(x0.prot))
 x.drug <- matrix(NA, nrow = nrow(gpcr), ncol = ncol(x0.drug))
 for (i in 1:nrow(gpcr)) x.prot[i, ] <- x0.prot[which(gpcr[, 1][i] == protid), ]
@@ -1023,7 +1043,7 @@ protein-protein interaction descriptors. `getPPI()` provides
 three types of interactions while `getCPI()` provides two types.
 The argument `type` is used to control this.
 
-### Compound-protein interaction (CPI) descriptors
+#### Compound-protein interaction (CPI) descriptors
 
 For compound descriptor vector $d_1^{1 \times p_1}$ and the protein
 descriptor vector $d_2^{1 \times p_2}$, there are two methods for
@@ -1032,7 +1052,7 @@ construction of descriptor vector $d$ for compound-protein interaction:
 1. `type = "combine"` - combine the two feature matrix, $d$ has $p_1 + p_2$ columns;
 2. `type = "tensorprod"` - column-by-column (pseudo)-tensor product type interactions, $d$ has $p_1 \times p_2$ columns.
 
-### Protein-protein interaction (PPI) descriptors
+#### Protein-protein interaction (PPI) descriptors
 
 For interaction protein A and protein B, let $d_1^{1 \times p}$ and
 $d_2^{1 \times p}$ be the descriptor vectors. There are three methods
@@ -1048,14 +1068,14 @@ Train a random forest classification model with 5-fold repeated CV:
 library("caret")
 x <- x[, -nearZeroVar(x)]
 
-# cross-validation settings
+# Cross-validation settings
 ctrl <- trainControl(
   method = "cv", number = 5, repeats = 10,
   classProbs = TRUE,
   summaryFunction = twoClassSummary
 )
 
-# train a random forest classifier
+# Train a random forest classifier
 library("randomForest")
 
 set.seed(1006)
@@ -1072,27 +1092,27 @@ Print the cross-validation result:
 print(rf.fit)
 ```
 
-```{r, eval = FALSE}
-## Random Forest
-##
-## 1270 samples
-##  562 predictors
-##    2 classes: "neg", "pos"
-##
-## Pre-processing: centered, scaled
-## Resampling: Cross-Validated (5 fold)
-##
-## Summary of sample sizes: 1016, 1016, 1016, 1016, 1016
-##
-## Resampling results across tuning parameters:
-##
-##   mtry  ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
-##   2     0.83   0.726  0.778  0.0221  0.044    0.0395
-##   33    0.882  0.795  0.82   0.018   0.0522   0.0443
-##   562   0.893  0.822  0.844  0.0161  0.0437   0.0286
-##
-## ROC was used to select the optimal model using  the largest value.
-## The final value used for the model was mtry = 562.
+```
+># Random Forest
+>#
+># 1270 samples
+>#  562 predictors
+>#    2 classes: "neg", "pos"
+>#
+># Pre-processing: centered, scaled
+># Resampling: Cross-Validated (5 fold)
+>#
+># Summary of sample sizes: 1016, 1016, 1016, 1016, 1016
+>#
+># Resampling results across tuning parameters:
+>#
+>#   mtry  ROC    Sens   Spec   ROC SD  Sens SD  Spec SD
+>#   2     0.83   0.726  0.778  0.0221  0.044    0.0395
+>#   33    0.882  0.795  0.82   0.018   0.0522   0.0443
+>#   562   0.893  0.822  0.844  0.0161  0.0437   0.0286
+>#
+># ROC was used to select the optimal model using  the largest value.
+># The final value used for the model was mtry = 562.
 ```
 
 Predict on the training set (for demonstration purpose only) and plot ROC curve.
@@ -1106,7 +1126,8 @@ plot(smooth(roc(y, rf.pred)), grid = TRUE, print.auc = TRUE)
 
 The ROC curve is shown in Figure 8.
 
-<img src="figures/ex6-2.png" width="65%" class="img-responsive" align="center" alt="ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest">
-<p align="center">Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest</p>
+```{r, echo=FALSE, out.width="65%", fig.cap="Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest."}
+knitr::include_graphics("figures/ex6-2.png")
+```
 
-# References
+## References

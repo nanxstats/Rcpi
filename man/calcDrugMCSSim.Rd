@@ -66,7 +66,8 @@ mol4 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'), nchars = 1
 sim1 = calcDrugMCSSim(mol1, mol2, type = 'smile')
 sim2 = calcDrugMCSSim(mol3, mol4, type = 'sdf', plot = TRUE)
 print(sim1[[2]])  # Tanimoto Coefficient
-print(sim2[[3]])  # Overlap Coefficient}
+print(sim2[[3]])  # Overlap Coefficient
+}
 }
 \references{
 Wang, Y., Backman, T. W., Horan, K., & Girke, T. (2013).
