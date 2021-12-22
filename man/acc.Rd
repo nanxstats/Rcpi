@@ -57,10 +57,3 @@ generalized scales-based descriptors.
 For more details, see \code{\link{extractPCMDescScales}}
 and \code{\link{extractPCMPropScales}}.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{acc}
-\keyword{auto}
-\keyword{covariance}
-\keyword{cross}

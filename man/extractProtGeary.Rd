@@ -104,10 +104,3 @@ See \code{\link{extractProtMoreauBroto}} and
 for Moreau-Broto autocorrelation descriptors and
 Moran autocorrelation descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Geary}
-\keyword{autocorrelation}
-\keyword{extract}
-\keyword{extractProtGeary}

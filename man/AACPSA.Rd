@@ -24,4 +24,3 @@ is included in this package. See \code{\link{OptAA3d}} for more information.
 data(AACPSA)
 
 }
-\keyword{AACPSA}

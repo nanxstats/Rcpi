@@ -78,8 +78,3 @@ Area Structural Descriptors in Computer Assissted
 Quantitative Structure Property Relationship Studies,
 Analytical Chemistry, 1990, 62:2323.2329.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{CPSA}
-\keyword{extractDrugCPSA}

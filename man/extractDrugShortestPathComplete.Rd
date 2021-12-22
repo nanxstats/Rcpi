@@ -42,7 +42,3 @@ dim(fp)}
 \seealso{
 \link{extractDrugShortestPath}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugShortestPathComplete}

@@ -38,7 +38,3 @@ head(fp)}
 \seealso{
 \link{extractDrugShortestPathComplete}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugShortestPath}

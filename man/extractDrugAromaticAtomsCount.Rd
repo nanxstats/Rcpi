@@ -30,10 +30,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugAromaticAtomsCount(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Aromatic}
-\keyword{Atoms}
-\keyword{Count}
-\keyword{extractDrugAromaticAtomsCount}

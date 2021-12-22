@@ -27,12 +27,6 @@
 #'         The numeric similarity value includes Tanimoto coefficient
 #'         and overlap coefficient.
 #'
-#' @keywords calcDrugMCSSim Drug Similarity MCS Maximum Common Substructure
-#'
-#' @aliases calcDrugMCSSim
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export calcDrugMCSSim
 #'
 #' @references

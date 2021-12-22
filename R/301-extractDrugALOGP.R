@@ -20,12 +20,6 @@
 #' each column represents one feature. This function returns three columns
 #' named \code{ALogP}, \code{ALogp2} and \code{AMR}.
 #'
-#' @keywords extractDrugALOGP ALOGP
-#'
-#' @aliases extractDrugALOGP
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugALOGP
 #'
 #' @importFrom rcdk eval.desc

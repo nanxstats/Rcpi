@@ -32,10 +32,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugVAdjMa(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Adjacency}
-\keyword{Magnitude}
-\keyword{Vertex}
-\keyword{extractDrugVAdjMa}

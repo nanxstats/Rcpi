@@ -86,8 +86,3 @@ Kang, Y.K. and Jhon, M.S.,
 Additivity of Atomic Static Polarizabilities and Dispersion Coefficients,
 Theoretica Chimica Acta, 1982, 61:41-48
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{BCUT}
-\keyword{extractDrugBCUT}

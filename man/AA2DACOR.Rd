@@ -19,4 +19,3 @@ used for scales extraction in this package.
 data(AA2DACOR)
 
 }
-\keyword{AA2DACOR}

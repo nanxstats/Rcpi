@@ -46,13 +46,3 @@ Molecular Evolution: Do Novo Design of an Idealized Leader Cleavge Site.
 See \code{\link{extractProtQSO}} for
 quasi-sequence-order descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Coupling}
-\keyword{Number}
-\keyword{Order}
-\keyword{SOCN}
-\keyword{Sequence}
-\keyword{extract}
-\keyword{extractProtSOCN}

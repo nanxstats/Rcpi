@@ -31,9 +31,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugIPMolecularLearning(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Ionization}
-\keyword{Potential}
-\keyword{extractDrugIPMolecularLearning}

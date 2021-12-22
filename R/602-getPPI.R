@@ -41,12 +41,6 @@
 #'
 #' @return A matrix containing the protein-protein interaction descriptors
 #'
-#' @keywords getPPI protein-protein interaction ppi
-#'
-#' @aliases getPPI
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getCPI}} for generating
 #' compound-protein interaction descriptors.
 #'

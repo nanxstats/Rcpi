@@ -27,12 +27,6 @@
 #' \item \code{GRAV.6} - grav3 for all pairs of atoms (not just bonded pairs)
 #' }
 #'
-#' @keywords extractDrugGravitationalIndex Gravitational Index
-#'
-#' @aliases extractDrugGravitationalIndex
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugGravitationalIndex
 #'
 #' @importFrom rcdk eval.desc

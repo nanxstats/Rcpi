@@ -15,12 +15,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{apol}.
 #'
-#' @keywords extractDrugApol Apol
-#'
-#' @aliases extractDrugApol
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugApol
 #'
 #' @importFrom rcdk eval.desc

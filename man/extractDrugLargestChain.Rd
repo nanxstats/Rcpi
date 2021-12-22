@@ -32,9 +32,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugLargestChain(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Chain}
-\keyword{Largest}
-\keyword{extractDrugLargestChain}

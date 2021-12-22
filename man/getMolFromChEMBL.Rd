@@ -34,9 +34,3 @@ getMolFromChEMBL(id)}
 See \code{\link{getSmiFromChEMBL}} for retrieving drug molecules
 in SMILES format from the ChEMBL database.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{ChEMBL}
-\keyword{getDrug}
-\keyword{getMolFromChEMBL}

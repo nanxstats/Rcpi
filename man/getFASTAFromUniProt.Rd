@@ -40,9 +40,3 @@ See \code{\link{getSeqFromUniProt}} for retrieving protein
 represented by amino acid sequence from the UniProt database.
 See \code{\link{readFASTA}} for reading FASTA format files.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{UniProt}
-\keyword{getFASTAFromUniProt}
-\keyword{getProt}

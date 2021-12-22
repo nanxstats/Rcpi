@@ -57,9 +57,3 @@ Prediction of Human Intestinal Absorption of Drug Compounds
 From Molecular Structure,
 Journal of Chemical Information and Computer Sciences, 1998, 38:726-735.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Gravitational}
-\keyword{Index}
-\keyword{extractDrugGravitationalIndex}

@@ -73,13 +73,3 @@ Wang, Y., Backman, T. W., Horan, K., & Girke, T. (2013).
 fmcsR: mismatch tolerant maximum common substructure searching in R.
 Bioinformatics, 29(21), 2792--2794.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Common}
-\keyword{Drug}
-\keyword{MCS}
-\keyword{Maximum}
-\keyword{Similarity}
-\keyword{Substructure}
-\keyword{calcDrugMCSSim}

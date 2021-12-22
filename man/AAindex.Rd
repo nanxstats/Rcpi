@@ -25,6 +25,3 @@ for more information.
 data(AAindex)
 
 }
-\keyword{AAindex}
-\keyword{aaindex}
-\keyword{datasets}

@@ -70,9 +70,3 @@ Gene Ontology (GO) semantic similarity.
 See \code{\link{calcParProtSeqSim}} for paralleled protein similarity
 calculation based on sequence alignment.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{GO}
-\keyword{calcTwoProtGOSim}
-\keyword{similarity}

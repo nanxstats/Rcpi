@@ -34,9 +34,3 @@ getMolFromDrugBank(id)}
 See \code{\link{getSmiFromDrugBank}} for retrieving drug molecules
 in SMILES format from the DrugBank database.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{DrugBank}
-\keyword{getDrug}
-\keyword{getMolFromDrugBank}

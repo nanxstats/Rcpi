@@ -18,6 +18,3 @@ PAM70 Matrix for the 20 amino acids. The matrix was extracted from the
 data(AAPAM70)
 
 }
-\keyword{AAPAM70}
-\keyword{PAM}
-\keyword{datasets}

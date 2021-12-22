@@ -42,9 +42,3 @@ for use in structure-activity studies:
 database mining and recursive partitioning.,
 Journal of chemical information and modeling, 2006, 46:1069-1077
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Complexity}
-\keyword{Fragment}
-\keyword{extractDrugFragmentComplexity}

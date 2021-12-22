@@ -105,12 +105,6 @@
 #' \code{78} \tab \code{khs.ssssPb} \tab \code{[PbD4H0](-*)(-*)(-*)-*}
 #' }
 #'
-#' @keywords extractDrugKierHallSmarts Kier Hall Smarts
-#'
-#' @aliases extractDrugKierHallSmarts
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugKierHallSmarts
 #'
 #' @importFrom rcdk eval.desc

@@ -26,12 +26,6 @@
 #'
 #' @return The numeric similarity value.
 #'
-#' @keywords calcDrugFPSim Drug Similarity Tanimoto Euclidean Dice Cosine Hamming
-#'
-#' @aliases calcDrugFPSim
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export calcDrugFPSim
 #'
 #' @references

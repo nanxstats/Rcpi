@@ -16,12 +16,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{fragC}.
 #'
-#' @keywords extractDrugFragmentComplexity Fragment Complexity
-#'
-#' @aliases extractDrugFragmentComplexity
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugFragmentComplexity
 #'
 #' @importFrom rcdk eval.desc

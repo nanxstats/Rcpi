@@ -17,12 +17,6 @@
 #' @return A length of \code{id} character vector,
 #' each element containing the corresponding drug molecule.
 #'
-#' @keywords getDrug
-#'
-#' @aliases getDrug
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getProt}} for retrieving protein sequences
 #' from three databases.
 #'

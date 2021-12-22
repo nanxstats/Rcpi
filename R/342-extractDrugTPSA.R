@@ -15,12 +15,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{TopoPSA}.
 #'
-#' @keywords extractDrugTPSA Topological Polar Surface Area
-#'
-#' @aliases extractDrugTPSA
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugTPSA
 #'
 #' @importFrom rcdk eval.desc

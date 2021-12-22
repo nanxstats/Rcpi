@@ -18,12 +18,6 @@
 #'
 #' @return A list, containing parsed Java molecular object or character strings.
 #'
-#' @keywords readMolFromSmi MOL SMILES
-#'
-#' @aliases readMolFromSmi
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{readMolFromSDF}} for reading molecules
 #' from SDF files and returning parsed Java molecular object.
 #'

@@ -16,12 +16,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{MLogP}.
 #'
-#' @keywords extractDrugMannholdLogP Mannhold LogP
-#'
-#' @aliases extractDrugMannholdLogP
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugMannholdLogP
 #'
 #' @importFrom rcdk eval.desc

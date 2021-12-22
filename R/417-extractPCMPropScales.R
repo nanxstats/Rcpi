@@ -28,12 +28,6 @@
 #' @return A length \code{lag * p^2} named vector,
 #'         \code{p} is the number of scales (principal components) selected.
 #'
-#' @keywords extract descriptor scales extractPCMPropScales AAindex
-#'
-#' @aliases extractPCMPropScales
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractPCMScales}} for
 #' generalized scales-based descriptors.
 #'

@@ -41,8 +41,3 @@ Wang, R., Gao, Y., and Lai, L.,
 Calculating partition coefficient by atom-additive method,
 Perspectives in Drug Discovery and Design, 2000, 19:47-66.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{XLogP}
-\keyword{extractDrugXLogP}

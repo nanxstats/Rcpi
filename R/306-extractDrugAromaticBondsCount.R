@@ -12,12 +12,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nAromBond}.
 #'
-#' @keywords extractDrugAromaticBondsCount Aromatic Bond Count
-#'
-#' @aliases extractDrugAromaticBondsCount
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugAromaticBondsCount
 #'
 #' @importFrom rcdk eval.desc

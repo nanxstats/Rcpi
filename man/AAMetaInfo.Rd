@@ -27,4 +27,3 @@ calculation in this package. Each column represents:
 data(AAMetaInfo)
 
 }
-\keyword{AAMetaInfo}

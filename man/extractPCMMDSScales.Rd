@@ -57,12 +57,3 @@ Molecular modeling annual, 7(12), 445--453.
 See \code{\link{extractPCMScales}} for generalized scales-based
 descriptors derived by Principal Components Analysis.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Multidimensional}
-\keyword{PCM}
-\keyword{Scaling}
-\keyword{extract}
-\keyword{extractPCMMDSScales}
-\keyword{scales}

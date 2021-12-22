@@ -45,11 +45,3 @@ The Extent of the Relationship between the Graph-Theoretical
 and the Geometrical Shape Coefficients of Chemical Compounds,
 Journal of Chemical Information and Computer Science, 1995, 35:714-716.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Geometric}
-\keyword{Index}
-\keyword{Petitjean}
-\keyword{Shape}
-\keyword{extractDrugPetitjeanShapeIndex}

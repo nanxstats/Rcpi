@@ -11,12 +11,6 @@
 #' @return A matrix. Each row represents one molecule,
 #' the columns represent the fingerprints.
 #'
-#' @keywords extractDrugOBFP2
-#'
-#' @aliases extractDrugOBFP2
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugOBFP2
 #'
 #' @examples

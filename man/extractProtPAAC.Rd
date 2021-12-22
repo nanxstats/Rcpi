@@ -114,13 +114,3 @@ Data for Biochemical Research 3rd ed., Clarendon Press Oxford (1986).
 See \code{\link{extractProtAPAAC}} for amphiphilic pseudo
          amino acid composition descriptor.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Acid}
-\keyword{Amino}
-\keyword{Composition}
-\keyword{PAAC}
-\keyword{Pseudo}
-\keyword{extract}
-\keyword{extractProtPAAC}

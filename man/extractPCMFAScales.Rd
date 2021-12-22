@@ -67,11 +67,3 @@ Proceedings of the National Academy of Sciences of the
 United States of America,
 102(18), 6395-6400.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Analysis}
-\keyword{Factor}
-\keyword{PCM}
-\keyword{extract}
-\keyword{extractPCMFAScales}

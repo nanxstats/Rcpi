@@ -40,13 +40,3 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 segProt(x, aa = 'R', k = 5)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{acid}
-\keyword{amino}
-\keyword{protein}
-\keyword{seg}
-\keyword{segment}
-\keyword{segmentation}
-\keyword{sequence}

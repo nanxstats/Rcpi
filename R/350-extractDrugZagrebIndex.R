@@ -15,12 +15,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{Zagreb}.
 #'
-#' @keywords extractDrugZagrebIndex Zagreb
-#'
-#' @aliases extractDrugZagrebIndex
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugZagrebIndex
 #'
 #' @importFrom rcdk eval.desc

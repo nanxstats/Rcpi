@@ -49,10 +49,3 @@ Rangwala, Huzefa, and George Karypis.
 \seealso{
 \link{extractProtPSSM} \link{extractProtPSSMAcc}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Alignment}
-\keyword{Blast}
-\keyword{PSSM}
-\keyword{extract}

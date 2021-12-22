@@ -40,11 +40,3 @@ fragment-based contributions and its application to the prediction
 of drug transport properties.
 Journal of medicinal chemistry, 43(20), 3714-3717.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Area}
-\keyword{Polar}
-\keyword{Surface}
-\keyword{Topological}
-\keyword{extractDrugTPSA}

@@ -25,12 +25,6 @@
 #' (i.e., rings without branches etc.) whereas these descriptors use the older
 #' more complex fragment definitions.
 #'
-#' @keywords extractDrugChiPath Chi Path
-#'
-#' @aliases extractDrugChiPath
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugChiPath
 #'
 #' @importFrom rcdk eval.desc

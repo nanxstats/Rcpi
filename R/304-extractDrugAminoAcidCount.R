@@ -17,12 +17,6 @@
 #' \code{nI}, \code{nP}, \code{nL} \code{nK}, \code{nM},
 #' \code{nS}, \code{nT}, \code{nY} \code{nV}, \code{nW}.
 #'
-#' @keywords extractDrugAminoAcidCount Amino Acid Count
-#'
-#' @aliases extractDrugAminoAcidCount
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugAminoAcidCount
 #'
 #' @importFrom rcdk eval.desc

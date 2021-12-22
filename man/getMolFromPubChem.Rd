@@ -10,7 +10,7 @@ getMolFromPubChem(id, parallel = 5)
 \item{id}{A character vector, as the PubChem drug ID.}
 
 \item{parallel}{An integer, the parallel parameter, indicates how many
-process the user would like to use for retrieving
+processes the user would like to use for retrieving
 the data (using RCurl), default is \code{5}.
 For regular cases, we recommend a number less than \code{20}.}
 }
@@ -34,9 +34,3 @@ getMolFromPubChem(id)}
 See \code{\link{getSmiFromPubChem}} for retrieving drug molecules
 in SMILES format from the PubChem database.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{PubChem}
-\keyword{getDrug}
-\keyword{getMolFromPubChem}

@@ -19,12 +19,6 @@
 #'
 #' @note To know more details about auto cross covariance, see the references.
 #'
-#' @keywords acc auto cross covariance
-#'
-#' @aliases acc
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractPCMScales}} for
 #' generalized scales-based descriptors.
 #' For more details, see \code{\link{extractPCMDescScales}}

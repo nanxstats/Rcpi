@@ -74,10 +74,3 @@ descscales = extractPCMDescScales(x, propmat = 'AATopo', index = c(37:41, 43:47)
 See \code{\link{extractPCMScales}} for generalized
 AA-descriptor based scales descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{PCM}
-\keyword{extract}
-\keyword{extractPCMDescScales}
-\keyword{scales}

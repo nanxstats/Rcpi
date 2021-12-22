@@ -62,12 +62,6 @@
 #' \item polar
 #' }
 #'
-#' @keywords extractDrugWHIM WHIM
-#'
-#' @aliases extractDrugWHIM
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugWHIM
 #'
 #' @importFrom rcdk eval.desc

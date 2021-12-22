@@ -18,6 +18,3 @@ PAM250 Matrix for the 20 amino acids. The matrix was extracted from the
 data(AAPAM250)
 
 }
-\keyword{AAPAM250}
-\keyword{PAM}
-\keyword{datasets}

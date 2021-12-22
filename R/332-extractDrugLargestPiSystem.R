@@ -12,12 +12,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nAtomP}.
 #'
-#' @keywords extractDrugLargestPiSystem Largest Pi Chain
-#'
-#' @aliases extractDrugLargestPiSystem
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugLargestPiSystem
 #'
 #' @importFrom rcdk eval.desc

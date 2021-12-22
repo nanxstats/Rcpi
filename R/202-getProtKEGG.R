@@ -14,12 +14,6 @@
 #' @return A list, each component contains one of the protein sequences
 #' in FASTA format.
 #'
-#' @keywords getProt getFASTAFromKEGG KEGG
-#'
-#' @aliases getFASTAFromKEGG
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getSeqFromKEGG}} for retrieving protein
 #' represented by amino acid sequence from the KEGG database.
 #' See \code{\link{readFASTA}} for reading FASTA format files.
@@ -61,12 +55,6 @@ getFASTAFromKEGG = function (id, parallel = 5) {
 #'
 #' @return A list, each component contains one of the protein represented by
 #' amino acid sequence(s).
-#'
-#' @keywords getProt getSeqFromKEGG KEGG
-#'
-#' @aliases getSeqFromKEGG
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getFASTAFromKEGG}} for retrieving protein sequence
 #' in FASTA format from the KEGG database.

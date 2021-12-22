@@ -18,12 +18,6 @@
 #' @return A length of \code{id} character list, each element
 #' containing the corresponding protein sequence(s) or file(s).
 #'
-#' @keywords getProt
-#'
-#' @aliases getProt
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getDrug}} for retrieving drug molecules
 #' from five databases.
 #'

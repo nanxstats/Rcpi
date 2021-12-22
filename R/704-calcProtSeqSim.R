@@ -55,13 +55,6 @@
 #'
 #' @return A \code{n} x \code{n} similarity matrix.
 #'
-#' @keywords Needleman-Wunsch Smith-Waterman local global
-#' sequence alignment parallel similarity calcParProtSeqSim
-#'
-#' @aliases calcParProtSeqSim
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{calcTwoProtSeqSim} for protein sequence alignment
 #' for two protein sequences. See \code{\link{calcParProtGOSim}} for
 #' protein similarity calculation based on
@@ -126,13 +119,6 @@ calcParProtSeqSim = function(
 #'
 #' @return An Biostrings object containing the scores and other
 #' alignment information.
-#'
-#' @keywords Needleman-Wunsch Smith-Waterman local global
-#' sequence alignment parallel similarity calcTwoProtSeqSim
-#'
-#' @aliases calcTwoProtSeqSim
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{calcParProtSeqSim}} for paralleled pairwise
 #' protein similarity calculation based on sequence alignment.

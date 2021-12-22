@@ -11,12 +11,6 @@
 #'
 #' @return A length \code{nlag * 2} named vector
 #'
-#' @keywords extract SOCN extractProtSOCN Sequence Order Coupling Number
-#'
-#' @aliases extractProtSOCN
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractProtQSO}} for
 #' quasi-sequence-order descriptors.
 #'

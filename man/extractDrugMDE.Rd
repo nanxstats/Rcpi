@@ -38,11 +38,3 @@ Approach to estimation and prediction for normal boiling point (NBP)
 of alkanes based on a novel molecular distance-edge (MDE) vector, lambda.
 Journal of chemical information and computer sciences, 38(3), 387-394.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Distance}
-\keyword{Edge}
-\keyword{MDE}
-\keyword{Molecular}
-\keyword{extractDrugMDE}

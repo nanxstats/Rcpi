@@ -16,12 +16,6 @@
 #' @return A length of \code{id} character vector,
 #' each element containing the corresponding drug molecule.
 #'
-#' @keywords getDrug getMolFromCAS CAS
-#'
-#' @aliases getMolFromCAS
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getDrug}} for retrieving drug molecules
 #' in MOL and SMILES Format from other databases.
 #'

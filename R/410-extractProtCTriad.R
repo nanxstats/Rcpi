@@ -8,12 +8,6 @@
 #'
 #' @return A length 343 named vector
 #'
-#' @keywords extract CTriad extractProtCTriad Conjoint Triad
-#'
-#' @aliases extractProtCTriad
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractProtCTriad
 #'
 #' @references

@@ -30,9 +30,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugVABC(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{VABC}
-\keyword{Volume}
-\keyword{extractDrugVABC}

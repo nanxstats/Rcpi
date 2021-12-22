@@ -35,12 +35,6 @@
 #' of the MI tensor are below \code{1e-3},
 #' then the ratio's are set to a default of 1000.
 #'
-#' @keywords extractDrugMomentOfInertia Moment Inertia
-#'
-#' @aliases extractDrugMomentOfInertia
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugMomentOfInertia
 #'
 #' @importFrom rcdk eval.desc

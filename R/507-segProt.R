@@ -20,12 +20,6 @@
 #'         segmentations (a character string), names of the list components
 #'         are the positions of the specified amino acid in the sequence.
 #'
-#' @keywords protein amino acid sequence seg segment segmentation
-#'
-#' @aliases segProt
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export segProt
 #'
 #' @examples

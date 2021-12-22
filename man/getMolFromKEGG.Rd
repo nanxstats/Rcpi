@@ -33,9 +33,3 @@ getMolFromKEGG(id)}
 See \code{\link{getSmiFromKEGG}} for retrieving drug molecules
 in SMILES format from the KEGG database.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{KEGG}
-\keyword{getDrug}
-\keyword{getMolFromKEGG}

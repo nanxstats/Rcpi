@@ -22,4 +22,3 @@ is included in this package. See \code{\link{OptAA3d}} for more information.
 data(AAMOE3D)
 
 }
-\keyword{AAMOE3D}

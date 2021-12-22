@@ -16,12 +16,6 @@
 #' This function returns two columns named
 #' \code{WPATH} (weiner path number) and \code{WPOL} (weiner polarity number).
 #'
-#' @keywords extractDrugWienerNumbers Wiener Numbers
-#'
-#' @aliases extractDrugWienerNumbers
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugWienerNumbers
 #'
 #' @importFrom rcdk eval.desc

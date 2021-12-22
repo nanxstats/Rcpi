@@ -34,9 +34,3 @@ getSeqFromKEGG(id)}
 See \code{\link{getFASTAFromKEGG}} for retrieving protein sequence
 in FASTA format from the KEGG database.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{KEGG}
-\keyword{getProt}
-\keyword{getSeqFromKEGG}

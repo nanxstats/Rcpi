@@ -25,12 +25,6 @@
 #' \item \code{WTPT.5} - sum of path lengths starting from nitrogens
 #' }
 #'
-#' @keywords extractDrugWeightedPath Weighted Path
-#'
-#' @aliases extractDrugWeightedPath
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugWeightedPath
 #'
 #' @importFrom rcdk eval.desc

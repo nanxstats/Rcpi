@@ -14,12 +14,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{XLogP}.
 #'
-#' @keywords extractDrugXLogP XLogP
-#'
-#' @aliases extractDrugXLogP
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugXLogP
 #'
 #' @importFrom rcdk eval.desc

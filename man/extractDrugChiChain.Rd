@@ -53,9 +53,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugChiChain(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Chain}
-\keyword{Chi}
-\keyword{extractDrugChiChain}

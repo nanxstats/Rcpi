@@ -39,9 +39,3 @@ Wiener, H. (1947).
 Structural determination of paraffin boiling points.
 Journal of the American Chemical Society, 69(1), 17-20.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Numbers}
-\keyword{Wiener}
-\keyword{extractDrugWienerNumbers}

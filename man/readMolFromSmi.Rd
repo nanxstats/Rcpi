@@ -39,9 +39,3 @@ mol2 = readMolFromSmi(smi, type = 'text')}
 See \code{\link{readMolFromSDF}} for reading molecules
 from SDF files and returning parsed Java molecular object.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{MOL}
-\keyword{SMILES}
-\keyword{readMolFromSmi}

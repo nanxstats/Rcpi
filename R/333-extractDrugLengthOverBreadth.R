@@ -20,12 +20,6 @@
 #' minimum area (defined by the product of the X & Y extents for that orientation).
 #' }
 #'
-#' @keywords extractDrugLengthOverBreadth Length Breadth
-#'
-#' @aliases extractDrugLengthOverBreadth
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugLengthOverBreadth
 #'
 #' @importFrom rcdk eval.desc

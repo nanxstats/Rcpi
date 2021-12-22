@@ -29,12 +29,6 @@
 #' \code{C1SP1}, \code{C2SP1}, \code{C1SP2}, \code{C2SP2}, \code{C3SP2},
 #' \code{C1SP3}, \code{C2SP3}, \code{C3SP3} and \code{C4SP3}.
 #'
-#' @keywords extractDrugCarbonTypes Carbon Types
-#'
-#' @aliases extractDrugCarbonTypes
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugCarbonTypes
 #'
 #' @importFrom rcdk eval.desc

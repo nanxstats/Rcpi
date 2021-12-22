@@ -20,15 +20,9 @@
 #'
 #' @return The result character vector
 #'
-#' @keywords Rcpi FASTA readFASTA
-#'
-#' @aliases readFASTA
-#'
 #' @note Note that any different sets of instances (chunklets),
 #'       e.g. {1, 3, 7} and {4, 6}, might belong to the
 #'       same class and might belong to different classes.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{readPDB}} for reading protein sequences
 #' in PDB format.

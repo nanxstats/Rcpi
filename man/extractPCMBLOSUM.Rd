@@ -55,10 +55,3 @@ Georgiev, A. G. (2009).
 Interpretable numerical descriptors of amino acid space.
 Journal of Computational Biology, 16(5), 703--723.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{BLOSUM}
-\keyword{PCM}
-\keyword{extract}
-\keyword{extractPCMBLOSUM}

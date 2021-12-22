@@ -14,12 +14,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nAtomLAC}.
 #'
-#' @keywords extractDrugMDE MDE Molecular Distance Edge
-#'
-#' @aliases extractDrugMDE
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugMDE
 #'
 #' @importFrom rcdk eval.desc

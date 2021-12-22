@@ -15,12 +15,6 @@
 #' \code{topoShape} (Topological Shape Index) and
 #' \code{geomShape} (Geometric Shape Index).
 #'
-#' @keywords extractDrugPetitjeanShapeIndex Petitjean Geometric Shape Index
-#'
-#' @aliases extractDrugPetitjeanShapeIndex
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugPetitjeanShapeIndex
 #'
 #' @importFrom rcdk eval.desc

@@ -19,4 +19,3 @@ used for scales extraction in this package.
 data(AATopo)
 
 }
-\keyword{AATopo}

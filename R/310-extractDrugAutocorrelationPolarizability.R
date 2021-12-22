@@ -12,13 +12,6 @@
 #' each column represents one feature. This function returns 5 columns named
 #' \code{ATSp1}, \code{ATSp2}, \code{ATSp3}, \code{ATSp4}, \code{ATSp5}.
 #'
-#' @keywords extractDrugAutocorrelationPolarizability
-#' Autocorrelation Polarizability
-#'
-#' @aliases extractDrugAutocorrelationPolarizability
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugAutocorrelationPolarizability
 #'
 #' @importFrom rcdk eval.desc

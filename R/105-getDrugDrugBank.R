@@ -14,12 +14,6 @@
 #' @return A length of \code{id} character vector,
 #' each element containing the corresponding drug molecule.
 #'
-#' @keywords getDrug getMolFromDrugBank DrugBank
-#'
-#' @aliases getMolFromDrugBank
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getSmiFromDrugBank}} for retrieving drug molecules
 #' in SMILES format from the DrugBank database.
 #'
@@ -60,12 +54,6 @@ getMolFromDrugBank = function (id, parallel = 5) {
 #'
 #' @return A length of \code{id} character vector, each element containing
 #' the corresponding drug molecule.
-#'
-#' @keywords getDrug getSmiFromDrugBank DrugBank
-#'
-#' @aliases getSmiFromDrugBank
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getMolFromDrugBank}} for retrieving drug molecules
 #' in MOL format from the DrugBank database.

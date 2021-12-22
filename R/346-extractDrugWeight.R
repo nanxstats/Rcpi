@@ -12,12 +12,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{MW}.
 #'
-#' @keywords extractDrugWeight Weight
-#'
-#' @aliases extractDrugWeight
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugWeight
 #'
 #' @importFrom rcdk eval.desc

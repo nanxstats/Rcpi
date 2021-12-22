@@ -30,9 +30,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugAutocorrelationPolarizability(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Autocorrelation}
-\keyword{Polarizability}
-\keyword{extractDrugAutocorrelationPolarizability}

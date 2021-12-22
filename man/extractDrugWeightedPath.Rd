@@ -47,9 +47,3 @@ head(dat)}
 Randic, M., On molecular identification numbers (1984).
 Journal of Chemical Information and Computer Science, 24:164-175.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Path}
-\keyword{Weighted}
-\keyword{extractDrugWeightedPath}

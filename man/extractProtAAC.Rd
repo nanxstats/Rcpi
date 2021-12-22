@@ -33,12 +33,3 @@ Amino Acid Composition and Dipeptide Composition.
 See \code{\link{extractProtDC}} and \code{\link{extractProtTC}}
          for Dipeptide Composition and Tripeptide Composition descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{AAC}
-\keyword{Acid}
-\keyword{Amino}
-\keyword{Composition}
-\keyword{extract}
-\keyword{extractProtAAC}

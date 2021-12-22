@@ -30,12 +30,6 @@
 #' \item \code{BCUTp-1h, BCUTp-2h ...} - n low highest polarizability weighted BCUTS
 #' }
 #'
-#' @keywords extractDrugBCUT BCUT
-#'
-#' @aliases extractDrugBCUT
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugBCUT
 #'
 #' @importFrom rcdk eval.desc

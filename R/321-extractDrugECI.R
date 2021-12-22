@@ -21,12 +21,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{ECCEN}.
 #'
-#' @keywords extractDrugECI Eccentric Connectivity Index
-#'
-#' @aliases extractDrugECI
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugECI
 #'
 #' @importFrom rcdk eval.desc

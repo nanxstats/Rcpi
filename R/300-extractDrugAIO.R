@@ -17,12 +17,6 @@
 #' Currently, this function returns total 293 descriptors
 #' composed of 48 descriptor types.
 #'
-#' @keywords extractDrugAIO
-#'
-#' @aliases extractDrugAIO
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugAIO
 #'
 #' @importFrom rcdk eval.desc

@@ -13,12 +13,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{LipinskiFailures}.
 #'
-#' @keywords extractDrugRuleOfFive Lipinski Rule Five
-#'
-#' @aliases extractDrugRuleOfFive
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugRuleOfFive
 #'
 #' @importFrom rcdk eval.desc

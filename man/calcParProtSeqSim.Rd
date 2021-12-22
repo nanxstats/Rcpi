@@ -54,15 +54,3 @@ for two protein sequences. See \code{\link{calcParProtGOSim}} for
 protein similarity calculation based on
 Gene Ontology (GO) semantic similarity.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Needleman-Wunsch}
-\keyword{Smith-Waterman}
-\keyword{alignment}
-\keyword{calcParProtSeqSim}
-\keyword{global}
-\keyword{local}
-\keyword{parallel}
-\keyword{sequence}
-\keyword{similarity}

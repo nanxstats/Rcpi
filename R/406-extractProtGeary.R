@@ -40,12 +40,6 @@
 #'
 #' @return A length \code{nlag} named vector
 #'
-#' @keywords extract extractProtGeary Geary autocorrelation
-#'
-#' @aliases extractProtGeary
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractProtMoreauBroto}} and
 #' \code{\link{extractProtMoran}}
 #' for Moreau-Broto autocorrelation descriptors and

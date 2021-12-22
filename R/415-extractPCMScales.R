@@ -27,13 +27,7 @@
 #'        Default is \code{TRUE}.
 #'
 #' @return A length \code{lag * p^2} named vector,
-#'         \code{p} is the number of scales (principal components) selected.
-#'
-#' @keywords extract scales extractPCMScales PCA Principal Components Analysis PCM
-#'
-#' @aliases extractPCMScales
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
+#' \code{p} is the number of scales (principal components) selected.
 #'
 #' @seealso See \code{\link{extractPCMDescScales}} for generalized
 #' AA property based scales descriptors, and \code{\link{extractPCMPropScales}}
@@ -46,7 +40,6 @@
 #' data(AAindex)
 #' AAidxmat = t(na.omit(as.matrix(AAindex[, 7:26])))
 #' scales = extractPCMScales(x, propmat = AAidxmat, pc = 5, lag = 7, silent = FALSE)
-#'
 
 extractPCMScales = function (x, propmat, pc, lag, scale = TRUE, silent = TRUE) {
 

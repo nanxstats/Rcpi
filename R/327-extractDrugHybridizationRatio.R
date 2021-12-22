@@ -20,12 +20,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{HybRatio}.
 #'
-#' @keywords extractDrugHybridizationRatio Hybridization Ratio
-#'
-#' @aliases extractDrugHybridizationRatio
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugHybridizationRatio
 #'
 #' @importFrom rcdk eval.desc

@@ -34,7 +34,3 @@ head(fp)}
 \seealso{
 \link{extractDrugEstateComplete}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugEstate}

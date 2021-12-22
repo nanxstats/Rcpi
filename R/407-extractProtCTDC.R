@@ -9,12 +9,6 @@
 #'
 #' @return A length 21 named vector
 #'
-#' @keywords extract CTD CTDC extractProtCTDC Composition
-#'
-#' @aliases extractProtCTDC
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractProtCTDT}} and \code{\link{extractProtCTDD}}
 #' for the Transition and Distribution descriptors.
 #'

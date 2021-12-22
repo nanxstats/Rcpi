@@ -32,7 +32,3 @@ dim(fp)}
 \seealso{
 \link{extractDrugPubChem}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugPubChemComplete}

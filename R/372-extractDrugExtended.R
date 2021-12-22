@@ -18,12 +18,6 @@
 #' in the fingerprint is 1.
 #' Each component's name is the length of the fingerprints.
 #'
-#' @keywords extractDrugExtended
-#'
-#' @aliases extractDrugExtended
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugExtended
 #'
 #' @importFrom rcdk get.fingerprint
@@ -88,12 +82,6 @@ extractDrugExtended = function(
 #'
 #' @return An integer vector or a matrix. Each row represents one molecule,
 #' the columns represent the fingerprints.
-#'
-#' @keywords extractDrugExtendedComplete
-#'
-#' @aliases extractDrugExtendedComplete
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugExtendedComplete
 #'

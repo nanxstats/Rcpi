@@ -39,9 +39,3 @@ UniProt REST API Documentation. \url{https://www.uniprot.org/faq/28}
 See \code{\link{getFASTAFromUniProt}} for retrieving protein
 sequences in FASTA format from the UniProt database.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{UniProt}
-\keyword{getProt}
-\keyword{getSeqFromUniProt}

@@ -25,12 +25,6 @@
 #' @return A length \code{lag * p^2} named vector,
 #'         \code{p} is the number of scales (dimensionality) selected.
 #'
-#' @keywords extract scales Multidimensional Scaling extractPCMMDSScales PCM
-#'
-#' @aliases extractPCMMDSScales
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractPCMScales}} for generalized scales-based
 #' descriptors derived by Principal Components Analysis.
 #'

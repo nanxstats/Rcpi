@@ -30,7 +30,7 @@ Default is \code{TRUE}.}
 }
 \value{
 A length \code{lag * p^2} named vector,
-        \code{p} is the number of scales (principal components) selected.
+\code{p} is the number of scales (principal components) selected.
 }
 \description{
 Generalized Scales-Based Descriptors derived by Principal Components Analysis
@@ -49,21 +49,9 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 data(AAindex)
 AAidxmat = t(na.omit(as.matrix(AAindex[, 7:26])))
 scales = extractPCMScales(x, propmat = AAidxmat, pc = 5, lag = 7, silent = FALSE)
-
 }
 \seealso{
 See \code{\link{extractPCMDescScales}} for generalized
 AA property based scales descriptors, and \code{\link{extractPCMPropScales}}
 for (19 classes) AA descriptor based scales descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Analysis}
-\keyword{Components}
-\keyword{PCA}
-\keyword{PCM}
-\keyword{Principal}
-\keyword{extract}
-\keyword{extractPCMScales}
-\keyword{scales}

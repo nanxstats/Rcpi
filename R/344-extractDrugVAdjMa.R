@@ -14,12 +14,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{VAdjMat}.
 #'
-#' @keywords extractDrugVAdjMa Vertex Adjacency Magnitude
-#'
-#' @aliases extractDrugVAdjMa
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugVAdjMa
 #'
 #' @importFrom rcdk eval.desc

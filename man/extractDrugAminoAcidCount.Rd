@@ -35,10 +35,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugAminoAcidCount(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Acid}
-\keyword{Amino}
-\keyword{Count}
-\keyword{extractDrugAminoAcidCount}

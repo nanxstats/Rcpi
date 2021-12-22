@@ -14,12 +14,6 @@
 #' @return A list, each component contains one of the protein sequences
 #' in FASTA format.
 #'
-#' @keywords getProt getFASTAFromUniProt UniProt
-#'
-#' @aliases getFASTAFromUniProt
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getSeqFromUniProt}} for retrieving protein
 #' represented by amino acid sequence from the UniProt database.
 #' See \code{\link{readFASTA}} for reading FASTA format files.
@@ -66,12 +60,6 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #'
 #' @return A list, each component contains one of the protein
 #' represented by amino acid sequence(s).
-#'
-#' @keywords getProt getSeqFromUniProt UniProt
-#'
-#' @aliases getSeqFromUniProt
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getFASTAFromUniProt}} for retrieving protein
 #' sequences in FASTA format from the UniProt database.

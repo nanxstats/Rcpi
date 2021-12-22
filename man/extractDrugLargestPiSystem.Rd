@@ -30,10 +30,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugLargestPiSystem(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Chain}
-\keyword{Largest}
-\keyword{Pi}
-\keyword{extractDrugLargestPiSystem}

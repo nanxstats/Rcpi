@@ -13,12 +13,6 @@
 #' @return A list, each component contains one of the protein sequences
 #' in PDB format.
 #'
-#' @keywords getProt getPDBFromRCSBPDB PDB
-#'
-#' @aliases getPDBFromRCSBPDB
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getSeqFromRCSBPDB}} for retrieving protein
 #' represented by amino acid sequence from the RCSB PDB database.
 #'
@@ -58,12 +52,6 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 #'
 #' @return A list, each component contains one of the protein represented by
 #' amino acid sequence(s).
-#'
-#' @keywords getProt getSeqFromRCSBPDB PDB
-#'
-#' @aliases getSeqFromRCSBPDB
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getPDBFromRCSBPDB}} for retrieving protein
 #' in PDB format from the RCSB PDB database.

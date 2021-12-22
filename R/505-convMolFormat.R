@@ -17,12 +17,6 @@
 #'
 #' @return \code{NULL}
 #'
-#' @keywords convMolFormat OpenBabel convert format
-#'
-#' @aliases convMolFormat
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export convMolFormat
 #'
 #' @note The supported formats include:

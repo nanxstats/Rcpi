@@ -37,11 +37,3 @@ Recognition of a Protein Fold in the Context of the SCOP classification.
 See \code{\link{extractProtCTDC}} and \code{\link{extractProtCTDD}}
 for the Composition and Distribution descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{CTD}
-\keyword{CTDT}
-\keyword{Transition}
-\keyword{extract}
-\keyword{extractProtCTDT}

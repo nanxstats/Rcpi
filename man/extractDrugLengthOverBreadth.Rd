@@ -41,9 +41,3 @@ mol = readMolFromSDF(sdf)
 dat = extractDrugLengthOverBreadth(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Breadth}
-\keyword{Length}
-\keyword{extractDrugLengthOverBreadth}

@@ -18,6 +18,3 @@ PAM120 Matrix for the 20 amino acids. The matrix was extracted from the
 data(AAPAM120)
 
 }
-\keyword{AAPAM120}
-\keyword{PAM}
-\keyword{datasets}

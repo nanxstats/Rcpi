@@ -34,12 +34,6 @@
 #'       whereas these descriptors use the older more complex
 #'       fragment definitions.
 #'
-#' @keywords extractDrugChiPathCluster Chi Path Cluster
-#'
-#' @aliases extractDrugChiPathCluster
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugChiPathCluster
 #'
 #' @importFrom rcdk eval.desc

@@ -89,12 +89,6 @@
 #'
 #' @seealso \link{extractProtPSSMFeature} \link{extractProtPSSMAcc}
 #'
-#' @keywords extract PSSM Blast Alignment
-#'
-#' @aliases extractProtPSSM
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractProtPSSM
 #'
 #' @references

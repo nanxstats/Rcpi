@@ -18,6 +18,3 @@ BLOSUM50 Matrix for the 20 amino acids. The matrix was extracted from the
 data(AABLOSUM50)
 
 }
-\keyword{AABLOSUM50}
-\keyword{BLOSUM}
-\keyword{datasets}

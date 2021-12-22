@@ -51,8 +51,3 @@ quantitative structure-activity relationships.
 2. Modeling dispersive and hydrophobic interactions,
 Journal of Chemical Information and Computer Science, 1987, 27:21-35.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{ALOGP}
-\keyword{extractDrugALOGP}

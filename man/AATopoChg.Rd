@@ -21,4 +21,3 @@ used for scales extraction in this package.
 data(AATopoChg)
 
 }
-\keyword{AATopoChg}

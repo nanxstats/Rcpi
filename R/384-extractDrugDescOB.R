@@ -32,12 +32,6 @@
 #'         \item \code{TPSA} - Topological Polar Surface Area
 #'         }
 #'
-#' @keywords extractDrugDescOB OpenBabel Descriptors
-#'
-#' @aliases extractDrugDescOB
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugDescOB
 #'
 #' @examples

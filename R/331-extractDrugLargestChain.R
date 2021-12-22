@@ -14,12 +14,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nAtomLC}.
 #'
-#' @keywords extractDrugLargestChain Largest Chain
-#'
-#' @aliases extractDrugLargestChain
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugLargestChain
 #'
 #' @importFrom rcdk eval.desc

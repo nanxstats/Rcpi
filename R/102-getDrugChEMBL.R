@@ -14,12 +14,6 @@
 #' @return A length of \code{id} character vector,
 #' each element containing the corresponding drug molecule.
 #'
-#' @keywords getDrug getMolFromChEMBL ChEMBL
-#'
-#' @aliases getMolFromChEMBL
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getSmiFromChEMBL}} for retrieving drug molecules
 #' in SMILES format from the ChEMBL database.
 #'
@@ -76,12 +70,6 @@ getMolFromChEMBL = function (id, parallel = 5) {
 #'
 #' @return A length of \code{id} character vector,
 #' each element containing the corresponding drug molecule.
-#'
-#' @keywords getDrug getSmiFromChEMBL ChEMBL
-#'
-#' @aliases getSmiFromChEMBL
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getMolFromChEMBL}} for retrieving drug molecules
 #' in MOL format from the ChEMBL database.

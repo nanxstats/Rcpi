@@ -41,8 +41,3 @@ Investigation of the relationship between topology and selectivity
 for druglike molecules. Journal of medicinal chemistry,
 53(21), 7709-7714.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{FMF}
-\keyword{extractDrugFMF}

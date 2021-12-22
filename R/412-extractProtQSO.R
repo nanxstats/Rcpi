@@ -13,12 +13,6 @@
 #'
 #' @return A length \code{20 + 20 + (2 * nlag)} named vector
 #'
-#' @keywords extract QSO extractProtQSO Quasi Sequence Order Quasi-Sequence-Order
-#'
-#' @aliases extractProtQSO
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractProtSOCN}}
 #' for sequence-order-coupling numbers.
 #'

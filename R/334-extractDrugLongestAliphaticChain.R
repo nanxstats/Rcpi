@@ -12,12 +12,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nAtomLAC}.
 #'
-#' @keywords extractDrugLongestAliphaticChain Longest Aliphatic Chain
-#'
-#' @aliases extractDrugLongestAliphaticChain
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugLongestAliphaticChain
 #'
 #' @importFrom rcdk eval.desc

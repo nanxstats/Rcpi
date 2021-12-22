@@ -53,12 +53,6 @@
 #' \item \code{RPSA} - TPSA / total molecular surface area
 #' }
 #'
-#' @keywords extractDrugCPSA CPSA
-#'
-#' @aliases extractDrugCPSA
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugCPSA
 #'
 #' @importFrom rcdk eval.desc

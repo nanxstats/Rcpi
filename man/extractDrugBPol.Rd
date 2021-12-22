@@ -38,9 +38,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugBPol(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{BPol}
-\keyword{Polarizability}
-\keyword{extractDrugBPol}

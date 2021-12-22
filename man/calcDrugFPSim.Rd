@@ -68,14 +68,3 @@ calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'hamming')}
 Gasteiger, Johann, and Thomas Engel, eds.
 Chemoinformatics. Wiley.com, 2006.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Cosine}
-\keyword{Dice}
-\keyword{Drug}
-\keyword{Euclidean}
-\keyword{Hamming}
-\keyword{Similarity}
-\keyword{Tanimoto}
-\keyword{calcDrugFPSim}

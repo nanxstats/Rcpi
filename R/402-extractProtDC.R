@@ -8,12 +8,6 @@
 #'
 #' @return A length 400 named vector
 #'
-#' @keywords extract DC extractProtDC Dipeptide Composition
-#'
-#' @aliases extractProtDC
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractProtAAC}} and \code{\link{extractProtTC}}
 #'          for Amino Acid Composition and Tripeptide Composition descriptors.
 #'

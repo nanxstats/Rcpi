@@ -8,12 +8,6 @@
 #'
 #' @return A length 8000 named vector
 #'
-#' @keywords extract TC extractProtTC Tripeptide Composition
-#'
-#' @aliases extractProtTC
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractProtAAC}} and \code{\link{extractProtDC}}
 #'          for Amino Acid Composition and Dipeptide Composition descriptors.
 #'

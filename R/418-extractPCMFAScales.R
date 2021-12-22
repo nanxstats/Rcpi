@@ -29,12 +29,6 @@
 #' @return A length \code{lag * p^2} named vector,
 #'         \code{p} is the number of scales (factors) selected.
 #'
-#' @keywords extract Factor Analysis extractPCMFAScales PCM
-#'
-#' @aliases extractPCMFAScales
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractPCMFAScales
 #'
 #' @references

@@ -20,12 +20,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{bpol}.
 #'
-#' @keywords extractDrugBPol BPol Polarizability
-#'
-#' @aliases extractDrugBPol
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugBPol
 #'
 #' @importFrom rcdk eval.desc

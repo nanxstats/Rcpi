@@ -16,12 +16,6 @@
 #' in the component represents the index of which element in the fingerprint is 1.
 #' Each component's name is the length of the fingerprints.
 #'
-#' @keywords extractDrugGraph
-#'
-#' @aliases extractDrugGraph
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugGraph
 #'
 #' @importFrom rcdk get.fingerprint
@@ -85,12 +79,6 @@ extractDrugGraph = function(
 #'
 #' @return An integer vector or a matrix. Each row represents one molecule,
 #' the columns represent the fingerprints.
-#'
-#' @keywords extractDrugGraphComplete
-#'
-#' @aliases extractDrugGraphComplete
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugGraphComplete
 #'

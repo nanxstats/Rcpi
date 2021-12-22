@@ -17,12 +17,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{FMF}.
 #'
-#' @keywords extractDrugFMF FMF
-#'
-#' @aliases extractDrugFMF
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugFMF
 #'
 #' @importFrom rcdk eval.desc

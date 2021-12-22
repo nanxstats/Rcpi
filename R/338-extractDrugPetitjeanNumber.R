@@ -21,12 +21,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{PetitjeanNumber}.
 #'
-#' @keywords extractDrugPetitjeanNumber Petitjean
-#'
-#' @aliases extractDrugPetitjeanNumber
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugPetitjeanNumber
 #'
 #' @importFrom rcdk eval.desc

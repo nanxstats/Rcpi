@@ -44,7 +44,3 @@ getDrug(id, 'drugbank', 'smile')}
 See \code{\link{getProt}} for retrieving protein sequences
 from three databases.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{getDrug}

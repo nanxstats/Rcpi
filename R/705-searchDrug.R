@@ -38,12 +38,6 @@
 #' @return Named numerical vector.
 #' With the decreasing similarity value of the molecules in the database.
 #'
-#' @keywords searchDrug Drug Molecule Similarity Search MCS
-#'
-#' @aliases searchDrug
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export searchDrug
 #'
 #' @examples

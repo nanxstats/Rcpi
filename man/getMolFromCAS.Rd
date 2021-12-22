@@ -36,9 +36,3 @@ getMolFromCAS(id)}
 See \code{\link{getDrug}} for retrieving drug molecules
 in MOL and SMILES Format from other databases.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{CAS}
-\keyword{getDrug}
-\keyword{getMolFromCAS}

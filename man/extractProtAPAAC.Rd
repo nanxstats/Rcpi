@@ -108,12 +108,3 @@ PNAS, 1981, 78:3824-3828 (T.P.Hopp & K.R.Woods). (The hydrophilicity data)
 See \code{\link{extractProtPAAC}} for pseudo
          amino acid composition descriptor.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{APAAC}
-\keyword{Amphiphilic}
-\keyword{Composition}
-\keyword{Pseudo}
-\keyword{extract}
-\keyword{extractProtAPAAC}

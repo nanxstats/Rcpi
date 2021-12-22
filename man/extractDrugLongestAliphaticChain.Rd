@@ -30,10 +30,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugLongestAliphaticChain(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Aliphatic}
-\keyword{Chain}
-\keyword{Longest}
-\keyword{extractDrugLongestAliphaticChain}

@@ -32,12 +32,6 @@
 #' definitions (i.e., rings without branches etc.)
 #' whereas these descriptors use the older more complex fragment definitions.
 #'
-#' @keywords extractDrugChiCluster Chi Cluster
-#'
-#' @aliases extractDrugChiCluster
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugChiCluster
 #'
 #' @importFrom rcdk eval.desc

@@ -33,9 +33,3 @@ getSeqFromRCSBPDB(id)}
 See \code{\link{getPDBFromRCSBPDB}} for retrieving protein
 in PDB format from the RCSB PDB database.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{PDB}
-\keyword{getProt}
-\keyword{getSeqFromRCSBPDB}

@@ -13,12 +13,6 @@
 #' @return A length of \code{id} character vector,
 #' each element containing the corresponding drug molecule.
 #'
-#' @keywords getDrug getMolFromKEGG KEGG
-#'
-#' @aliases getMolFromKEGG
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{getSmiFromKEGG}} for retrieving drug molecules
 #' in SMILES format from the KEGG database.
 #'
@@ -60,12 +54,6 @@ getMolFromKEGG = function (id, parallel = 5) {
 #'
 #' @return A length of \code{id} character vector,
 #' each element containing the corresponding drug molecule.
-#'
-#' @keywords getDrug getSmiFromKEGG KEGG
-#'
-#' @aliases getSmiFromKEGG
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{getMolFromKEGG}} for retrieving drug molecules
 #' in MOL format from the KEGG database.

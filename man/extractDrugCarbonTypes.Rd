@@ -47,9 +47,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugCarbonTypes(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Carbon}
-\keyword{Types}
-\keyword{extractDrugCarbonTypes}

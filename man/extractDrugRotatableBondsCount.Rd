@@ -32,10 +32,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugRotatableBondsCount(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Bonds}
-\keyword{Count}
-\keyword{Rotatable}
-\keyword{extractDrugRotatableBondsCount}

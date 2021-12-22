@@ -41,7 +41,3 @@ sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
 mol = readMolFromSDF(sdf)
 dat = extractDrugAIO(mol, warn = FALSE)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugAIO}

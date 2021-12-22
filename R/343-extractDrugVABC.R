@@ -12,12 +12,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{VABC}.
 #'
-#' @keywords extractDrugVABC Volume VABC
-#'
-#' @aliases extractDrugVABC
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugVABC
 #'
 #' @importFrom rcdk eval.desc

@@ -38,7 +38,3 @@ dim(fp)}
 \seealso{
 \link{extractDrugStandard}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugStandardComplete}

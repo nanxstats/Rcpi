@@ -25,12 +25,3 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 checkProt(x)  # TRUE
 checkProt(paste(x, 'Z', sep = ''))  # FALSE
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{acid}
-\keyword{amino}
-\keyword{check}
-\keyword{protein}
-\keyword{sequence}
-\keyword{type}

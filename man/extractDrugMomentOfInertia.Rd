@@ -53,9 +53,3 @@ mol = readMolFromSDF(sdf)
 dat = extractDrugMomentOfInertia(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Inertia}
-\keyword{Moment}
-\keyword{extractDrugMomentOfInertia}

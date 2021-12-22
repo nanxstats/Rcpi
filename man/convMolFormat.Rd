@@ -203,10 +203,3 @@ convMolFormat(infile = sdf, outfile = 'aa.smi',
 convMolFormat(infile = 'aa.smi', outfile = 'aa.mop',
               from = 'smiles', to = 'mop')}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{OpenBabel}
-\keyword{convMolFormat}
-\keyword{convert}
-\keyword{format}

@@ -29,12 +29,6 @@
 #' @return  A length \code{lag * p^2} named vector,
 #'         \code{p} is the number of scales selected.
 #'
-#' @keywords extract BLOSUM extractPCMBLOSUM PCM
-#'
-#' @aliases extractPCMBLOSUM
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractPCMBLOSUM
 #'
 #' @references

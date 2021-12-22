@@ -19,6 +19,3 @@ OptAA3d.sdf - 20 Amino Acids Optimized with MOE 2011.10 (Semiempirical AM1)
 # optaa3d = load.molecules(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'))
 # view.molecule.2d(optaa3d[[1]])  # view the first amino acid
 }
-\keyword{Acid}
-\keyword{Amino}
-\keyword{OptAA3d}

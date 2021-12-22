@@ -18,6 +18,3 @@ PAM30 Matrix for the 20 amino acids. The matrix was extracted from the
 data(AAPAM30)
 
 }
-\keyword{AAPAM30}
-\keyword{PAM}
-\keyword{datasets}

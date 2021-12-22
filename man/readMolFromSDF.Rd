@@ -31,9 +31,3 @@ mols = readMolFromSDF(sdfs)}
 See \code{\link{readMolFromSmi}} for reading molecules by SMILES
 string and returning parsed Java molecular object.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{MOL}
-\keyword{SDF}
-\keyword{readMolFromSDF}

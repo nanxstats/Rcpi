@@ -13,12 +13,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nAtom}.
 #'
-#' @keywords extractDrugAtomCount Atom Count
-#'
-#' @aliases extractDrugAtomCount
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugAtomCount
 #'
 #' @importFrom rcdk eval.desc

@@ -13,23 +13,17 @@
 #'               is present in the \code{protseq} directory of the Rcpi package.
 #'
 #' @return A character vector, representing the amino acid sequence
-#'         of the single-letter code.
-#'
-#' @keywords Rcpi PDB readPDB
-#'
-#' @aliases readPDB
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
+#' of the single-letter code.
 #'
 #' @seealso See \code{\link{readFASTA}} for reading protein sequences
-#'          in FASTA format.
+#' in FASTA format.
 #'
 #' @export readPDB
 #'
 #' @references
 #' Protein Data Bank Contents Guide: Atomic Coordinate Entry Format Description,
 #' Version 3.30. Accessed 2013-06-26.
-#' \url{ftp://ftp.wwpdb.org/pub/pdb/doc/format_descriptions/Format_v33_Letter.pdf}
+#' \url{http://ftp.wwpdb.org/pub/pdb/doc/format_descriptions/Format_v33_Letter.pdf}
 #'
 #' @examples
 #' Seq4HHB = readPDB(system.file('protseq/4HHB.pdb', package = 'Rcpi'))

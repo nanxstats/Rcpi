@@ -45,15 +45,3 @@ protein similarity calculation based on sequence alignment.
 See \code{\link{calcTwoProtGOSim}} for calculating the
 GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Needleman-Wunsch}
-\keyword{Smith-Waterman}
-\keyword{alignment}
-\keyword{calcTwoProtSeqSim}
-\keyword{global}
-\keyword{local}
-\keyword{parallel}
-\keyword{sequence}
-\keyword{similarity}

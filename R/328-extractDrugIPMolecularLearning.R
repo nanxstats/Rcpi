@@ -13,12 +13,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{MolIP}.
 #'
-#' @keywords extractDrugIPMolecularLearning Ionization Potential
-#'
-#' @aliases extractDrugIPMolecularLearning
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugIPMolecularLearning
 #'
 #' @importFrom rcdk eval.desc

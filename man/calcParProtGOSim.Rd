@@ -66,9 +66,3 @@ GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
 See \code{\link{calcParProtSeqSim}} for paralleled protein similarity
 calculation based on sequence alignment.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{GO}
-\keyword{calcParProtGOSim}
-\keyword{similarity}

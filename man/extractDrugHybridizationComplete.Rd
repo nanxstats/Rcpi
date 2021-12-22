@@ -43,7 +43,3 @@ dim(fp)}
 \seealso{
 \link{extractDrugHybridization}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugHybridizationComplete}

@@ -52,10 +52,3 @@ getPPI(x, y, type = c('combine', 'entrywise', 'tensorprod'))
 See \code{\link{getCPI}} for generating
 compound-protein interaction descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{getPPI}
-\keyword{interaction}
-\keyword{ppi}
-\keyword{protein-protein}

@@ -45,7 +45,3 @@ getProt(id, from = 'uniprot', type = 'aaseq')}
 See \code{\link{getDrug}} for retrieving drug molecules
 from five databases.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{getProt}

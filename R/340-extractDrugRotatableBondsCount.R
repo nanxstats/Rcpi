@@ -14,12 +14,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nRotB}.
 #'
-#' @keywords extractDrugRotatableBondsCount Rotatable Bonds Count
-#'
-#' @aliases extractDrugRotatableBondsCount
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugRotatableBondsCount
 #'
 #' @importFrom rcdk eval.desc

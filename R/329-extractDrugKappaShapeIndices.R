@@ -27,12 +27,6 @@
 #' \item \code{Kier3} - Third kappa shape index
 #' }
 #'
-#' @keywords extractDrugKappaShapeIndices Kappa Shape Indices
-#'
-#' @aliases extractDrugKappaShapeIndices
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugKappaShapeIndices
 #'
 #' @importFrom rcdk eval.desc

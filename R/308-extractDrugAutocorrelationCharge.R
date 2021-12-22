@@ -14,12 +14,6 @@
 #' This function returns 5 columns named
 #' \code{ATSc1}, \code{ATSc2}, \code{ATSc3}, \code{ATSc4}, \code{ATSc5}.
 #'
-#' @keywords extractDrugAutocorrelationCharge Autocorrelation Charge
-#'
-#' @aliases extractDrugAutocorrelationCharge
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugAutocorrelationCharge
 #'
 #' @importFrom rcdk eval.desc

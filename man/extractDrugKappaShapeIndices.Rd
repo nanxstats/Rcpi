@@ -45,10 +45,3 @@ mol = readMolFromSmi(smi, type = 'mol')
 dat = extractDrugKappaShapeIndices(mol)
 head(dat)}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Indices}
-\keyword{Kappa}
-\keyword{Shape}
-\keyword{extractDrugKappaShapeIndices}

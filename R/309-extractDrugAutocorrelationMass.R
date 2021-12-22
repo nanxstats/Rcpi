@@ -13,12 +13,6 @@
 #' each column represents one feature. This function returns 5 columns named
 #' \code{ATSm1}, \code{ATSm2}, \code{ATSm3}, \code{ATSm4}, \code{ATSm5}.
 #'
-#' @keywords extractDrugAutocorrelationMass Autocorrelation Mass
-#'
-#' @aliases extractDrugAutocorrelationMass
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugAutocorrelationMass
 #'
 #' @importFrom rcdk eval.desc

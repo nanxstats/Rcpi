@@ -82,12 +82,6 @@
 #' associated with protein.
 #' @return A \code{n} x \code{n} similarity matrix.
 #'
-#' @keywords GO similarity calcParProtGOSim
-#'
-#' @aliases calcParProtGOSim
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{calcTwoProtGOSim}} for calculating the
 #' GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
 #' See \code{\link{calcParProtSeqSim}} for paralleled protein similarity
@@ -177,12 +171,6 @@ calcParProtGOSim = function(
 #' for combining semantic similarity scores of multiple GO terms
 #' associated with protein.
 #' @return A n x n matrix.
-#'
-#' @keywords GO similarity calcTwoProtGOSim
-#'
-#' @aliases calcTwoProtGOSim
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{calcParProtGOSim}} for
 #' protein similarity calculation based on

@@ -59,9 +59,3 @@ smidesc1 = extractDrugDescOB(mol2, type = 'smile')
 sdfdesc0 = extractDrugDescOB(mol3, type = 'sdf')
 sdfdesc1 = extractDrugDescOB(mol4, type = 'sdf')}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Descriptors}
-\keyword{OpenBabel}
-\keyword{extractDrugDescOB}

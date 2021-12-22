@@ -46,12 +46,6 @@
 #'       three properties, which means users should explicitly specify
 #'       the properties to use.
 #'
-#' @keywords extract PAAC extractProtPAAC Pseudo Amino Acid Composition
-#'
-#' @aliases extractProtPAAC
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @seealso See \code{\link{extractProtAPAAC}} for amphiphilic pseudo
 #'          amino acid composition descriptor.
 #'

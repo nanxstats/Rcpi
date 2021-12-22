@@ -21,12 +21,6 @@
 #' each column represents one feature.
 #' This function returns one column named \code{nHBDon}.
 #'
-#' @keywords extractDrugHBondDonorCount Bond Donor Count
-#'
-#' @aliases extractDrugHBondDonorCount
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugHBondDonorCount
 #'
 #' @importFrom rcdk eval.desc
