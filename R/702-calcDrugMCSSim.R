@@ -51,17 +51,25 @@ calcDrugMCSSim = function(
     al = 0, au = 0, bl = 0, bu = 0,
     matching.mode = 'static', ...) {
 
+    if (!is_pkg_available("ChemmineR")) {
+        stop ("Must install the `ChemmineR` package to calculate the similarity.", call. = FALSE)
+    }
+
+    if (!is_pkg_available("fmcsR")) {
+        stop ("Must install the `fmcsR` package to calculate the similarity.", call. = FALSE)
+    }
+
     if (type == 'smile') {
 
         # smile to sdfset
-        sdfset1 = ChemmineR::smiles2sdf(mol1)
-        sdfset2 = ChemmineR::smiles2sdf(mol2)
+        sdfset1 = eval(parse(text = "ChemmineR::smiles2sdf(mol1)"))
+        sdfset2 = eval(parse(text = "ChemmineR::smiles2sdf(mol2)"))
 
     } else if (type == 'sdf') {
 
         # sdf to sdfset
-        sdfstr1 = ChemmineR::read.SDFstr(textConnection(mol1))
-        sdfstr2 = ChemmineR::read.SDFstr(textConnection(mol2))
+        sdfstr1 = eval(parse(text = "ChemmineR::read.SDFstr(textConnection(mol1))"))
+        sdfstr2 = eval(parse(text = "ChemmineR::read.SDFstr(textConnection(mol2))"))
         sdfset1 = as(sdfstr1, 'SDFset')
         sdfset2 = as(sdfstr2, 'SDFset')
 
@@ -71,10 +79,9 @@ calcDrugMCSSim = function(
 
     }
 
-    mcs = fmcsR::fmcs(sdfset1, sdfset2, al = al, au = au, bl = bl, bu = bu,
-                      matching.mode = matching.mode, fast = FALSE)
+    mcs = eval(parse(text = "fmcsR::fmcs(sdfset1, sdfset2, al = al, au = au, bl = bl, bu = bu, matching.mode = matching.mode, fast = FALSE)"))
 
-    if (plot == TRUE) fmcsR::plotMCS(mcs, ...)
+    if (plot == TRUE) eval(parse(text = "fmcsR::plotMCS(mcs, ...)"))
 
     x = list(mcs,
              mcs@stats['Tanimoto_Coefficient'],

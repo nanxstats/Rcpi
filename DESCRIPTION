@@ -29,8 +29,6 @@ Imports:
     doParallel,
     Biostrings,
     GOSemSim,
-    ChemmineR,
-    fmcsR,
     rcdk (>= 3.3.8)
 Suggests:
     knitr,

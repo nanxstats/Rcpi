@@ -189,10 +189,18 @@ searchDrug = function(
 
     if (method == 'mcs') {
 
-        mol = ChemmineR::read.SDFset(mol)
-        moldb = ChemmineR::read.SDFset(moldb)
+        if (!is_pkg_available("ChemmineR")) {
+            stop ("Must install the `ChemmineR` package to use the 'mcs' method.", call. = FALSE)
+        }
 
-        fmcsresult = fmcsR::fmcsBatch(mol, moldb, ...)
+        if (!is_pkg_available("fmcsR")) {
+            stop ("Must install the `fmcsR` package to use the 'mcs' method.", call. = FALSE)
+        }
+
+        mol = eval(parse(text = "ChemmineR::read.SDFset(mol)"))
+        moldb = eval(parse(text = "ChemmineR::read.SDFset(moldb)"))
+
+        fmcsresult = eval(parse(text = "fmcsR::fmcsBatch(mol, moldb, ...)"))
 
         if (mcssim == 'tanimoto') {
             rankvec = fmcsresult[order(fmcsresult[, 'Tanimoto_Coefficient'],
@@ -211,3 +219,5 @@ searchDrug = function(
     return(rankvec)
 
 }
+
+is_pkg_available <- function(x) requireNamespace(x, quietly = TRUE)
