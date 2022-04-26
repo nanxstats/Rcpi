@@ -33,14 +33,14 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.21.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.30.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="active nav-item">
   <a class="nav-link" href="../articles/Rcpi.html">Get started</a>
@@ -76,6 +76,9 @@
   </div>
 </nav><div class="container template-article">
 
+
+
+
 <div class="row">
   <main id="main"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery</h1>
@@ -91,32 +94,60 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p>The Rcpi package <span class="citation">Cao <em>et al.</em> (2015)</span> offers an R/Bioconductor package emphasizing the comprehensive integration of bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery.</p>
-<p>Rcpi implemented and integrated the state-of-the-art protein sequence descriptors and molecular descriptors/fingerprints with R. For protein sequences, the Rcpi package can</p>
+<p>The Rcpi package <span class="citation">Cao <em>et al.</em>
+(2015)</span> offers an R/Bioconductor package emphasizing the
+comprehensive integration of bioinformatics and chemoinformatics into a
+molecular informatics platform for drug discovery.</p>
+<p>Rcpi implemented and integrated the state-of-the-art protein sequence
+descriptors and molecular descriptors/fingerprints with R. For protein
+sequences, the Rcpi package can</p>
 <ul>
-<li>Calculate six protein descriptor groups composed of fourteen types of commonly used structural and physicochemical descriptors that include 9,920 descriptors.</li>
-<li>Calculate profile-based protein representation derived by PSSM (Position-Specific Scoring Matrix).</li>
-<li>Calculate six types of generalized scales-based descriptors derived by various dimensionality reduction methods for proteochemometric (PCM) modeling.</li>
-<li>Parallellized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.</li>
+<li>Calculate six protein descriptor groups composed of fourteen types
+of commonly used structural and physicochemical descriptors that include
+9,920 descriptors.</li>
+<li>Calculate profile-based protein representation derived by PSSM
+(Position-Specific Scoring Matrix).</li>
+<li>Calculate six types of generalized scales-based descriptors derived
+by various dimensionality reduction methods for proteochemometric (PCM)
+modeling.</li>
+<li>Parallellized pairwise similarity computation derived by protein
+sequence alignment and Gene Ontology (GO) semantic similarity measures
+within a list of proteins.</li>
 </ul>
 <p>For small molecules, the Rcpi package can</p>
 <ul>
-<li>Calculate 307 molecular descriptors (2D/3D), including constitutional, topological, geometrical, and electronic descriptors, etc.</li>
-<li>Calculate more than ten types of molecular fingerprints, including FP4 keys, E-state fingerprints, MACCS keys, etc., and parallelized chemical similarity search.</li>
-<li>Parallelized pairwise similarity computation derived by fingerprints and maximum common substructure search within a list of small molecules.</li>
+<li>Calculate 307 molecular descriptors (2D/3D), including
+constitutional, topological, geometrical, and electronic descriptors,
+etc.</li>
+<li>Calculate more than ten types of molecular fingerprints, including
+FP4 keys, E-state fingerprints, MACCS keys, etc., and parallelized
+chemical similarity search.</li>
+<li>Parallelized pairwise similarity computation derived by fingerprints
+and maximum common substructure search within a list of small
+molecules.</li>
 </ul>
-<p>By combining various types of descriptors for drugs and proteins in different methods, interaction descriptors representing protein-protein or compound-protein interactions can be conveniently generated with Rcpi, including:</p>
+<p>By combining various types of descriptors for drugs and proteins in
+different methods, interaction descriptors representing protein-protein
+or compound-protein interactions can be conveniently generated with
+Rcpi, including:</p>
 <ul>
 <li>Two types of compound-protein interaction (CPI) descriptors</li>
 <li>Three types of protein-protein interaction (PPI) descriptors</li>
 </ul>
 <p>Several useful auxiliary utilities are also shipped with Rcpi:</p>
 <ul>
-<li>Parallelized molecule and protein sequence retrieval from several online databases, like PubChem, ChEMBL, KEGG, DrugBank, UniProt, RCSB PDB, etc.</li>
-<li>Loading molecules stored in SMILES/SDF files and loading protein sequences from FASTA/PDB files</li>
+<li>Parallelized molecule and protein sequence retrieval from several
+online databases, like PubChem, ChEMBL, KEGG, DrugBank, UniProt, RCSB
+PDB, etc.</li>
+<li>Loading molecules stored in SMILES/SDF files and loading protein
+sequences from FASTA/PDB files</li>
 <li>Molecular file format conversion</li>
 </ul>
-<p>The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, such as, bioinformatics, chemoinformatics, proteochemometrics and chemogenomics.</p>
+<p>The computed protein sequence descriptors, molecular
+descriptors/fingerprints, interaction descriptors and pairwise
+similarities are widely used in various research fields relevant to drug
+disvery, such as, bioinformatics, chemoinformatics, proteochemometrics
+and chemogenomics.</p>
 <div class="section level3">
 <h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h3>
@@ -124,17 +155,25 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
 <span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"Rcpi"</span><span class="op">)</span></code></pre></div>
-<p>To make the Rcpi package fully functional (especially the Open Babel related functionalities), we recommend the users also install the <em>Enhances</em> packages by:</p>
+<p>To make the Rcpi package fully functional (especially the Open Babel
+related functionalities), we recommend the users also install the
+<em>Enhances</em> packages by:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"Rcpi"</span>, dependencies <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Imports"</span>, <span class="st">"Enhances"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.</p>
+<p>Several dependencies of the Rcpi package may require some
+system-level libraries, check the corresponding manuals of these
+packages for detailed installation guides.</p>
 </div>
 <div class="section level3">
 <h3 id="how-to-cite-rcpi">How to cite Rcpi<a class="anchor" aria-label="anchor" href="#how-to-cite-rcpi"></a>
 </h3>
-<p>If you feel Rcpi is useful in your research, please cite our paper:</p>
+<p>If you feel Rcpi is useful in your research, please cite our
+paper:</p>
 <blockquote>
-<p>Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions. <em>Bioinformatics</em> 31 (2), 279-281.</p>
+<p>Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015).
+Rcpi: R/Bioconductor package to generate various descriptors of
+proteins, compounds and their interactions. <em>Bioinformatics</em> 31
+(2), 279-281.</p>
 </blockquote>
 <p>BibTeX entry:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">Rcpi2015</span>,</span>
@@ -155,13 +194,27 @@
 <div class="section level2">
 <h2 id="applications-in-bioinformatics">Applications in bioinformatics<a class="anchor" aria-label="anchor" href="#applications-in-bioinformatics"></a>
 </h2>
-<p>For bioinformatics research, Rcpi calculates commonly used descriptors and proteochemometric (PCM) modeling descriptors for protein sequences. Rcpi also computes pairwise similarities derived by GO semantic similarity and sequence alignment.</p>
+<p>For bioinformatics research, Rcpi calculates commonly used
+descriptors and proteochemometric (PCM) modeling descriptors for protein
+sequences. Rcpi also computes pairwise similarities derived by GO
+semantic similarity and sequence alignment.</p>
 <div class="section level3">
 <h3 id="predicting-protein-subcellular-localization">Predicting protein subcellular localization<a class="anchor" aria-label="anchor" href="#predicting-protein-subcellular-localization"></a>
 </h3>
-<p>Protein subcellular localization prediction involves the computational prediction of where a protein resides in a cell. It is an important component of bioinformatics-based prediction of protein function and genome annotation, and can also aid us to identify novel drug targets.</p>
-<p>Here we use the subcellular localization dataset of human proteins presented in the study of <span class="citation">Chou and Shen (2008)</span> for a demonstration. The complete dataset includes 3,134 protein sequences (2,750 different proteins), classified into 14 human subcellular locations. We selected two classes of proteins as our benchmark dataset. Class 1 contains 325 <em>extracell</em> proteins, and class 2 includes 307 <em>mitochondrion</em> proteins.</p>
-<p>First, we load the Rcpi package, then read the protein sequences stored in two separated FASTA files with <code><a href="../reference/readFASTA.html">readFASTA()</a></code>:</p>
+<p>Protein subcellular localization prediction involves the
+computational prediction of where a protein resides in a cell. It is an
+important component of bioinformatics-based prediction of protein
+function and genome annotation, and can also aid us to identify novel
+drug targets.</p>
+<p>Here we use the subcellular localization dataset of human proteins
+presented in the study of <span class="citation">Chou and Shen
+(2008)</span> for a demonstration. The complete dataset includes 3,134
+protein sequences (2,750 different proteins), classified into 14 human
+subcellular locations. We selected two classes of proteins as our
+benchmark dataset. Class 1 contains 325 <em>extracell</em> proteins, and
+class 2 includes 307 <em>mitochondrion</em> proteins.</p>
+<p>First, we load the Rcpi package, then read the protein sequences
+stored in two separated FASTA files with <code><a href="../reference/readFASTA.html">readFASTA()</a></code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
 
@@ -174,14 +227,21 @@
   <span class="st">"vignettedata/mitochondrion.fasta"</span>,
   package <span class="op">=</span> <span class="st">"Rcpi"</span>
 <span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>The loaded sequences are stored as two lists in R, and each component in the list is a character string representing one protein sequence. In this case, there are 325 <em>extracell</em> protein sequences and 306 <em>mitonchon</em> protein sequences:</p>
+<p>The loaded sequences are stored as two lists in R, and each component
+in the list is a character string representing one protein sequence. In
+this case, there are 325 <em>extracell</em> protein sequences and 306
+<em>mitonchon</em> protein sequences:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span></code></pre></div>
 <pre><code>&gt;# [1] 325</code></pre>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span></code></pre></div>
 <pre><code>&gt;# [1] 306</code></pre>
-<p>To assure that the protein sequences only have the twenty standard amino acid types which is required for the descriptor computation, we use the <code><a href="../reference/checkProt.html">checkProt()</a></code> function to do the amino acid type sanity checking and remove the <em>non-standard</em> protein sequences:</p>
+<p>To assure that the protein sequences only have the twenty standard
+amino acid types which is required for the descriptor computation, we
+use the <code><a href="../reference/checkProt.html">checkProt()</a></code> function to do the amino acid type
+sanity checking and remove the <em>non-standard</em> protein
+sequences:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">extracell</span> <span class="op">&lt;-</span> <span class="va">extracell</span><span class="op">[</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">extracell</span>, <span class="va">checkProt</span><span class="op">)</span><span class="op">)</span><span class="op">]</span>
 <span class="va">mitonchon</span> <span class="op">&lt;-</span> <span class="va">mitonchon</span><span class="op">[</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">mitonchon</span>, <span class="va">checkProt</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></code></pre></div>
@@ -191,7 +251,10 @@
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span></code></pre></div>
 <pre><code>&gt;# [1] 304</code></pre>
-<p>Two protein sequences were removed from each class. For the remaining sequences, we calculate the amphiphilic pseudo amino acid composition (APAAC) descriptor <span class="citation">Chou (2005)</span> and create class labels for the random forest classification modeling.</p>
+<p>Two protein sequences were removed from each class. For the remaining
+sequences, we calculate the amphiphilic pseudo amino acid composition
+(APAAC) descriptor <span class="citation">Chou (2005)</span> and create
+class labels for the random forest classification modeling.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Calculate APAAC descriptors</span>
 <span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">extracell</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span>
@@ -200,8 +263,12 @@
 
 <span class="co"># Make class labels</span>
 <span class="va">labels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>In Rcpi, the functions of commonly used descriptors for protein sequences and proteochemometric (PCM) modeling descriptors are named after <code>extractProt...()</code> and <code>extractPCM...()</code>.</p>
-<p>Next, we will split the data into a 75% training set and a 25% test set.</p>
+<p>In Rcpi, the functions of commonly used descriptors for protein
+sequences and proteochemometric (PCM) modeling descriptors are named
+after <code>extractProt...()</code> and
+<code>extractPCM...()</code>.</p>
+<p>Next, we will split the data into a 75% training set and a 25% test
+set.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1001</span><span class="op">)</span>
 
@@ -216,7 +283,8 @@
 <span class="va">x.te</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span>
 <span class="va">y.tr</span> <span class="op">&lt;-</span> <span class="va">labels</span><span class="op">[</span><span class="va">tr.idx</span><span class="op">]</span>
 <span class="va">y.te</span> <span class="op">&lt;-</span> <span class="va">labels</span><span class="op">[</span><span class="va">te.idx</span><span class="op">]</span></code></pre></div>
-<p>We will train a random forest classification model on the training set with 5-fold cross-validation, using the  package.</p>
+<p>We will train a random forest classification model on the training
+set with 5-fold cross-validation, using the package.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://www.stat.berkeley.edu/~breiman/RandomForests/" class="external-link">"randomForest"</a></span><span class="op">)</span>
 <span class="va">rf.fit</span> <span class="op">&lt;-</span> <span class="fu">randomForest</span><span class="op">(</span><span class="va">x.tr</span>, <span class="va">y.tr</span>, cv.fold <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
@@ -233,7 +301,9 @@
 &gt;#     0   1 class.error
 &gt;# 0 196  46   0.1900826
 &gt;# 1  72 156   0.3157895</code></pre>
-<p>With the model trained on the training set, we predict on the test set and plot the ROC curve with the  package, as is shown in Figure 1.</p>
+<p>With the model trained on the training set, we predict on the test
+set and plot the ROC curve with the package, as is shown in Figure
+1.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Predict on test set</span>
 <span class="va">rf.pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">rf.fit</span>, newdata <span class="op">=</span> <span class="va">x.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
@@ -243,7 +313,8 @@
 <span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot.roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">rf.pred</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, print.auc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <div class="figure">
 <img src="figures/ex1-1.png" alt="Figure 1: ROC curve for the test set of protein subcellular localization data." width="65%"><p class="caption">
-Figure 1: ROC curve for the test set of protein subcellular localization data.
+Figure 1: ROC curve for the test set of protein subcellular localization
+data.
 </p>
 </div>
 <p>The area under the ROC curve (AUC) is:</p>
@@ -258,13 +329,32 @@ Figure 1: ROC curve for the test set of protein subcellular localization data.
 <div class="section level2">
 <h2 id="applications-in-chemoinformatics">Applications in chemoinformatics<a class="anchor" aria-label="anchor" href="#applications-in-chemoinformatics"></a>
 </h2>
-<p>For chemoinformatics research, Rcpi calculates various types of molecular descriptors/fingerprints, and computes pairwise similarities derived by fingerprints and maximum common substructure search. Rcpi also provides the <code><a href="../reference/searchDrug.html">searchDrug()</a></code> function for parallelized molecular similarity search based on these similarity types.</p>
+<p>For chemoinformatics research, Rcpi calculates various types of
+molecular descriptors/fingerprints, and computes pairwise similarities
+derived by fingerprints and maximum common substructure search. Rcpi
+also provides the <code><a href="../reference/searchDrug.html">searchDrug()</a></code> function for parallelized
+molecular similarity search based on these similarity types.</p>
 <div class="section level3">
 <h3 id="regression-modeling-in-qsrr-study-of-retention-indices">Regression modeling in QSRR study of retention indices<a class="anchor" aria-label="anchor" href="#regression-modeling-in-qsrr-study-of-retention-indices"></a>
 </h3>
-<p>In <span class="citation">Yan <em>et al.</em> (2012)</span>, a quantitative structure-retention relationship study was performed for 656 flavor compounds on four stationary phases of different polarities, using constitutional, topological and geometrical molecular descriptors. The gas chromatographic retention indices (RIs) of these compounds were accurately predicted using linear models. Here we choose the molecules and their RIs of one stationary phase (OV101) as our benchmark dataset.</p>
-<p>Since it would be rather tedious to implement the complete cross-validation procedures, the R package <code>caret</code> is used here. To run the R code below, users need to install the  package and the required predictive modeling packages first. The  package provides a unified interface for the modeling tuning task across different statistical machine learning packages. It is particularly helpful in QSAR modeling, for it contains tools for data splitting, pre-processing, feature selection, model tuning and other functionalities.</p>
-<p>Just like the last section, we load the Rcpi package, and read the molecules stored in a SMILES file:</p>
+<p>In <span class="citation">Yan <em>et al.</em> (2012)</span>, a
+quantitative structure-retention relationship study was performed for
+656 flavor compounds on four stationary phases of different polarities,
+using constitutional, topological and geometrical molecular descriptors.
+The gas chromatographic retention indices (RIs) of these compounds were
+accurately predicted using linear models. Here we choose the molecules
+and their RIs of one stationary phase (OV101) as our benchmark
+dataset.</p>
+<p>Since it would be rather tedious to implement the complete
+cross-validation procedures, the R package <code>caret</code> is used
+here. To run the R code below, users need to install the package and the
+required predictive modeling packages first. The package provides a
+unified interface for the modeling tuning task across different
+statistical machine learning packages. It is particularly helpful in
+QSAR modeling, for it contains tools for data splitting, pre-processing,
+feature selection, model tuning and other functionalities.</p>
+<p>Just like the last section, we load the Rcpi package, and read the
+molecules stored in a SMILES file:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
 
@@ -280,9 +370,17 @@ Figure 1: ROC curve for the test set of protein subcellular localization data.
 <span class="va">x.mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">RI.smi</span>, type <span class="op">=</span> <span class="st">"mol"</span><span class="op">)</span>
 <span class="va">x.tab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></span><span class="op">(</span><span class="va">RI.csv</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="va">y</span> <span class="op">&lt;-</span> <span class="va">x.tab</span><span class="op">$</span><span class="va">RI</span></code></pre></div>
-<p>The <code><a href="../reference/readMolFromSmi.html">readMolFromSmi()</a></code> function is used for reading molecules from SMILES files, for molecules stored in SDF files, use <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code> instead.</p>
-<p>The CSV file <code>RI.csv</code> contains tabular data for the retention indices, compound name, and odor information of the compounds. Here we only extracted the RI values by calling <code>x.tab$RI</code>.</p>
-<p>After the molecules were properly loaded, we calculate several selected molecular descriptors. The corresponding functions for molecular descriptor calculation are all named after <code>extractDrug...()</code> in <code>Rcpi</code>:</p>
+<p>The <code><a href="../reference/readMolFromSmi.html">readMolFromSmi()</a></code> function is used for reading
+molecules from SMILES files, for molecules stored in SDF files, use
+<code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code> instead.</p>
+<p>The CSV file <code>RI.csv</code> contains tabular data for the
+retention indices, compound name, and odor information of the compounds.
+Here we only extracted the RI values by calling
+<code>x.tab$RI</code>.</p>
+<p>After the molecules were properly loaded, we calculate several
+selected molecular descriptors. The corresponding functions for
+molecular descriptor calculation are all named after
+<code>extractDrug...()</code> in <code>Rcpi</code>:</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Calculate selected molecular descriptors</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/warning.html" class="external-link">suppressWarnings</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span>
@@ -294,8 +392,16 @@ Figure 1: ROC curve for the test set of protein subcellular localization data.
   <span class="fu"><a href="../reference/extractDrugWienerNumbers.html">extractDrugWienerNumbers</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,
   <span class="fu"><a href="../reference/extractDrugZagrebIndex.html">extractDrugZagrebIndex</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>
 <span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>After the descriptors were calculated, the result <code>x</code> will be a data frame, each row represents one molecule, and each column is one descriptor (predictor). The Rcpi package integrated the molecular descriptors and chemical fingerprints calculated by the <code>rcdk</code> package <span class="citation">Steinbeck <em>et al.</em> (2003)</span> and the ChemmineOB package <span class="citation">Horan and Girke (2013)</span>.</p>
-<p>Next, a partial least squares model will be fitted with the <code>pls</code> and the <code>caret</code> package. The cross-validation setting is 5-fold repeated cross-validation (repeat for 10 times).</p>
+<p>After the descriptors were calculated, the result <code>x</code> will
+be a data frame, each row represents one molecule, and each column is
+one descriptor (predictor). The Rcpi package integrated the molecular
+descriptors and chemical fingerprints calculated by the
+<code>rcdk</code> package <span class="citation">Steinbeck <em>et
+al.</em> (2003)</span> and the ChemmineOB package <span class="citation">Horan and Girke (2013)</span>.</p>
+<p>Next, a partial least squares model will be fitted with the
+<code>pls</code> and the <code>caret</code> package. The
+cross-validation setting is 5-fold repeated cross-validation (repeat for
+10 times).</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Run regression on training set</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span>
@@ -341,16 +447,22 @@ Resampling results across tuning parameters:
 
 RMSE was used to select the optimal model using the smallest value.
 The final value used for the model was ncomp = 9.</code></pre>
-<p>We see that the RMSE of the PLS regression model was decreasing when the number of principal components (<code>ncomp</code>) was increasing. We can plot the components and RMSE to helps us select the desired number of principal components used in the model.</p>
+<p>We see that the RMSE of the PLS regression model was decreasing when
+the number of principal components (<code>ncomp</code>) was increasing.
+We can plot the components and RMSE to helps us select the desired
+number of principal components used in the model.</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Number of components vs. RMSE</span>
 <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">pls.fit</span>, asp <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="figure">
 <img src="figures/ex2-1.png" alt="Figure 2: Number of principal components vs. RMSE for the PLS regression model." width="85%"><p class="caption">
-Figure 2: Number of principal components vs. RMSE for the PLS regression model.
+Figure 2: Number of principal components vs. RMSE for the PLS regression
+model.
 </p>
 </div>
-<p>From Figure 2, we consider that selecting six or seven components is acceptable. At last, we plot the experimental RIs and the predicted RIs to see if the model fits well on the training set (Figure 3):</p>
+<p>From Figure 2, we consider that selecting six or seven components is
+acceptable. At last, we plot the experimental RIs and the predicted RIs
+to see if the model fits well on the training set (Figure 3):</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Plot experimental RIs vs predicted RIs</span>
 <span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">y</span>, <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">pls.fit</span>, <span class="va">x</span><span class="op">)</span>,
@@ -368,8 +480,18 @@ Figure 3: Experimental RIs vs. predicted RIs.
 <h3 id="in-silico-toxicity-classification-for-drug-discovery">
 <em>In silico</em> toxicity classification for drug discovery<a class="anchor" aria-label="anchor" href="#in-silico-toxicity-classification-for-drug-discovery"></a>
 </h3>
-<p>In the perspective of quantitative pharmacology, the successful discovery of novel drugs depends on the pharmacokinetics properties, like <strong>a</strong>bsorption, <strong>d</strong>istribution, <strong>m</strong>etabolism, and <strong>e</strong>xcretion. In addition, the potential <strong>t</strong>oxicity of chemical compounds is taken into account. QSAR or QSPR methods are usually employed to predict the ADME/T qualities of potential drug candidates.</p>
-<p>In <span class="citation">D-S Cao <em>et al.</em> (2012)</span>, quantitative structure-toxicity relationship (QSTR) models were established for classifying five toxicity datasets. Here we use the maximum recommended daily dose dataset (FDAMDD) from FDA Center for Drug Evaluation and Research as the benchmark dataset.</p>
+<p>In the perspective of quantitative pharmacology, the successful
+discovery of novel drugs depends on the pharmacokinetics properties,
+like <strong>a</strong>bsorption, <strong>d</strong>istribution,
+<strong>m</strong>etabolism, and <strong>e</strong>xcretion. In
+addition, the potential <strong>t</strong>oxicity of chemical compounds
+is taken into account. QSAR or QSPR methods are usually employed to
+predict the ADME/T qualities of potential drug candidates.</p>
+<p>In <span class="citation">D-S Cao <em>et al.</em> (2012)</span>,
+quantitative structure-toxicity relationship (QSTR) models were
+established for classifying five toxicity datasets. Here we use the
+maximum recommended daily dose dataset (FDAMDD) from FDA Center for Drug
+Evaluation and Research as the benchmark dataset.</p>
 <p>First, load the drug molecules stored in a SMILES file into R:</p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
@@ -380,14 +502,24 @@ Figure 3: Experimental RIs vs. predicted RIs.
 <span class="va">x.mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">fdamdd.smi</span>, type <span class="op">=</span> <span class="st">"mol"</span><span class="op">)</span>
 <span class="va">x.smi</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">fdamdd.smi</span>, type <span class="op">=</span> <span class="st">"text"</span><span class="op">)</span>
 <span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"class"</span>, <span class="fu"><a href="https://rdrr.io/r/base/scan.html" class="external-link">scan</a></span><span class="op">(</span><span class="va">fdamdd.csv</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>The object <code>x.mol</code> is used for computing the MACCS and E-state fingerprints; the object <code>x.smi</code> is used for computing the FP4 fingerprints. The 0-1 class labels stored in file <code>FDAMDD.csv</code> indicates whether the drug molecule has high toxicity or not.</p>
-<p>Then we calculate three different types of molecular fingerprints (E-state, MACCS, and FP4) for the drug molecules:</p>
+<p>The object <code>x.mol</code> is used for computing the MACCS and
+E-state fingerprints; the object <code>x.smi</code> is used for
+computing the FP4 fingerprints. The 0-1 class labels stored in file
+<code>FDAMDD.csv</code> indicates whether the drug molecule has high
+toxicity or not.</p>
+<p>Then we calculate three different types of molecular fingerprints
+(E-state, MACCS, and FP4) for the drug molecules:</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Calculate molecular fingerprints</span>
 <span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>
 <span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>
 <span class="va">x3</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span><span class="op">(</span><span class="va">x.smi</span>, type <span class="op">=</span> <span class="st">"smile"</span><span class="op">)</span></code></pre></div>
-<p>As the nature of fingerprint-based structure representation, the calculated 0-1 matrix <code>x1</code>, <code>x2</code>, and <code>x3</code> will be very sparse. Since there are several columns have nearly exactly the same value for all the molecules, we should remove them with <code><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar()</a></code> in <code>caret</code> before modeling, and split our training set and test set:</p>
+<p>As the nature of fingerprint-based structure representation, the
+calculated 0-1 matrix <code>x1</code>, <code>x2</code>, and
+<code>x3</code> will be very sparse. Since there are several columns
+have nearly exactly the same value for all the molecules, we should
+remove them with <code><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar()</a></code> in <code>caret</code> before
+modeling, and split our training set and test set:</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span>
 
@@ -408,7 +540,10 @@ Figure 3: Experimental RIs vs. predicted RIs.
 <span class="va">x3.te</span> <span class="op">&lt;-</span> <span class="va">x3</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span>
 <span class="va">y.tr</span> <span class="op">&lt;-</span> <span class="va">y</span><span class="op">[</span><span class="va">tr.idx</span><span class="op">]</span>
 <span class="va">y.te</span> <span class="op">&lt;-</span> <span class="va">y</span><span class="op">[</span><span class="va">te.idx</span><span class="op">]</span></code></pre></div>
-<p>On the training sets, we will train three classification models separately using SVM (RBF kernel), using the <code>kernlab</code> package and the <code>caret</code> package. The cross-validation setting is 5-fold repeated CV (repeat for 10 times).</p>
+<p>On the training sets, we will train three classification models
+separately using SVM (RBF kernel), using the <code>kernlab</code>
+package and the <code>caret</code> package. The cross-validation setting
+is 5-fold repeated CV (repeat for 10 times).</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># SVM classification on training sets</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"kernlab"</span><span class="op">)</span>
@@ -463,7 +598,9 @@ Figure 3: Experimental RIs vs. predicted RIs.
 &gt;# Tuning parameter "sigma" was held constant at a value of 0.02921559
 &gt;# ROC was used to select the optimal model using  the largest value.
 &gt;# The final values used for the model were sigma = 0.0292 and C = 1.</code></pre>
-<p>We can see that, after removing the near zero variance predictors, there were only 23 predictors left for the original 79 E-state fingerprints.</p>
+<p>We can see that, after removing the near zero variance predictors,
+there were only 23 predictors left for the original 79 E-state
+fingerprints.</p>
 <p>The training result when using MACCS keys:</p>
 <pre><code>&gt;# Support Vector Machines with Radial Basis Function Kernel
 &gt;#
@@ -486,7 +623,9 @@ Figure 3: Experimental RIs vs. predicted RIs.
 &gt;# Tuning parameter "sigma" was held constant at a value of 0.004404305
 &gt;# ROC was used to select the optimal model using  the largest value.
 &gt;# The final values used for the model were sigma = 0.0044 and C = 1.</code></pre>
-<p>There are 126 predictors left for the original 166 MACCS keys after removing the near-zero variance predictors. The model performance by AUC values is slightly better than using the E-state fingerprints.</p>
+<p>There are 126 predictors left for the original 166 MACCS keys after
+removing the near-zero variance predictors. The model performance by AUC
+values is slightly better than using the E-state fingerprints.</p>
 <p>The training result when using FP4 fingerprints:</p>
 <pre><code>&gt;# Support Vector Machines with Radial Basis Function Kernel
 &gt;#
@@ -509,8 +648,12 @@ Figure 3: Experimental RIs vs. predicted RIs.
 &gt;# Tuning parameter "sigma" was held constant at a value of 0.01077024
 &gt;# ROC was used to select the optimal model using  the largest value.
 &gt;# The final values used for the model were sigma = 0.0108 and C = 1.</code></pre>
-<p>There are 58 predictors left for the original 512 FP4 fingerprints after the screening. The model performance by AUC values is almost the same comparing to using MACCS keys, and better than using E-state fingerprints.</p>
-<p>We predict on the test sets with the established models, and plot the ROC curves in one figure, as is shown in Figure 4.</p>
+<p>There are 58 predictors left for the original 512 FP4 fingerprints
+after the screening. The model performance by AUC values is almost the
+same comparing to using MACCS keys, and better than using E-state
+fingerprints.</p>
+<p>We predict on the test sets with the established models, and plot the
+ROC curves in one figure, as is shown in Figure 4.</p>
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Predict on test set</span>
 <span class="va">svm.pred1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">svm.fit1</span>, newdata <span class="op">=</span> <span class="va">x1.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
@@ -535,17 +678,35 @@ Figure 4: Smoothed ROC curves for different fingerprint types.
 <div class="section level3">
 <h3 id="clustering-of-molecules-based-on-structural-similarities">Clustering of molecules based on structural similarities<a class="anchor" aria-label="anchor" href="#clustering-of-molecules-based-on-structural-similarities"></a>
 </h3>
-<p>Apart from supervised methods (classification and regression), unsupervised approaches, like clustering, is also widely applied in the quantitative research of drugs.</p>
-<p>In reality, there are usually too many chemical compounds available for identifying drug-like molecules. Thus it would be attractive using clustering methods to aid the selection of a representative subset of all available compounds. For a clustering approach that groups compounds together by their structural similarity, applying the principle <em>similar compounds have similar properties</em> means that we only need to test the representative compounds from each individual cluster, rather than do the time-consuming complete set of experiments, and this should be sufficient to understand the structure-activity relationships of the whole compound set.</p>
-<p>The Rcpi package provides easy-to-use functions for computing the similarity between small molecules derived by molecular fingerprints and maximum common substructure search.</p>
-<p>As a example, the SDF file <code>tyrphostin.sdf</code> below is a database composed by searching <em>tyrphostin</em> in PubChem and filtered by <em>Lipinski”s rule of five</em>. We load this SDF file using <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code>:</p>
+<p>Apart from supervised methods (classification and regression),
+unsupervised approaches, like clustering, is also widely applied in the
+quantitative research of drugs.</p>
+<p>In reality, there are usually too many chemical compounds available
+for identifying drug-like molecules. Thus it would be attractive using
+clustering methods to aid the selection of a representative subset of
+all available compounds. For a clustering approach that groups compounds
+together by their structural similarity, applying the principle
+<em>similar compounds have similar properties</em> means that we only
+need to test the representative compounds from each individual cluster,
+rather than do the time-consuming complete set of experiments, and this
+should be sufficient to understand the structure-activity relationships
+of the whole compound set.</p>
+<p>The Rcpi package provides easy-to-use functions for computing the
+similarity between small molecules derived by molecular fingerprints and
+maximum common substructure search.</p>
+<p>As a example, the SDF file <code>tyrphostin.sdf</code> below is a
+database composed by searching <em>tyrphostin</em> in PubChem and
+filtered by <em>Lipinski”s rule of five</em>. We load this SDF file
+using <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code>:</p>
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
 <span class="va">mols</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSDF.html">readMolFromSDF</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
   <span class="st">"compseq/tyrphostin.sdf"</span>,
   package <span class="op">=</span> <span class="st">"Rcpi"</span>
 <span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>Then we compute the E-state fingerprints for all the molecules using <code><a href="../reference/extractDrugEstate.html">extractDrugEstate()</a></code>, and calculate their pairwise similarity matrix with <code><a href="../reference/calcDrugFPSim.html">calcDrugFPSim()</a></code>:</p>
+<p>Then we compute the E-state fingerprints for all the molecules using
+<code><a href="../reference/extractDrugEstate.html">extractDrugEstate()</a></code>, and calculate their pairwise
+similarity matrix with <code><a href="../reference/calcDrugFPSim.html">calcDrugFPSim()</a></code>:</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">simmat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mols</span><span class="op">)</span><span class="op">)</span>
 
@@ -558,7 +719,9 @@ Figure 4: Smoothed ROC curves for different fingerprint types.
     <span class="va">simmat</span><span class="op">[</span><span class="va">j</span>, <span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">tmp</span>
   <span class="op">}</span>
 <span class="op">}</span></code></pre></div>
-<p>With the computed similarity matrix <code>simmat</code>, we will try to cluster the molecules using hierarchical clustering, then visualize the clustering result:</p>
+<p>With the computed similarity matrix <code>simmat</code>, we will try
+to cluster the molecules using hierarchical clustering, then visualize
+the clustering result:</p>
 <div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mol.hc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">as.dist</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">simmat</span><span class="op">)</span>, method <span class="op">=</span> <span class="st">"ward.D"</span><span class="op">)</span>
 
@@ -573,7 +736,8 @@ Figure 4: Smoothed ROC curves for different fingerprint types.
   tip.color <span class="op">=</span> <span class="va">pal5</span><span class="op">[</span><span class="va">clus5</span><span class="op">]</span>,
   label.offset <span class="op">=</span> <span class="fl">0.1</span>, cex <span class="op">=</span> <span class="fl">0.7</span>
 <span class="op">)</span></code></pre></div>
-<p>The hierarchical clustering result for these molecules is shown in Figure 5.</p>
+<p>The hierarchical clustering result for these molecules is shown in
+Figure 5.</p>
 <div class="figure">
 <img src="figures/ex4-1.png" alt="Figure 5: Tree visualization of the molecular clustering result." width="65%"><p class="caption">
 Figure 5: Tree visualization of the molecular clustering result.
@@ -583,14 +747,27 @@ Figure 5: Tree visualization of the molecular clustering result.
 <div class="section level3">
 <h3 id="structure-based-chemical-similarity-searching">Structure-based chemical similarity searching<a class="anchor" aria-label="anchor" href="#structure-based-chemical-similarity-searching"></a>
 </h3>
-<p>Structure-based chemical similarity searching ranks molecules in a database by their similarity degree to one query molecule structure. The numerical similarity value is usually computed based on the molecular fingerprints with selected metrics or by maximum common structure search. It is one of the core techniques for ligand-based virtual screening in drug discovery.</p>
-<p>The SDF file <code>DB00530.sdf</code> below is retrieved from DrugBank, the drug ID DB00530 is <em>Erlotinib</em>, which is a reversible tyrosine kinase inhibitor. Given this molecule as the query molecule, we will do a similarity searching in the database <code>tyrphostin.sdf</code> presented in the last subsection.</p>
+<p>Structure-based chemical similarity searching ranks molecules in a
+database by their similarity degree to one query molecule structure. The
+numerical similarity value is usually computed based on the molecular
+fingerprints with selected metrics or by maximum common structure
+search. It is one of the core techniques for ligand-based virtual
+screening in drug discovery.</p>
+<p>The SDF file <code>DB00530.sdf</code> below is retrieved from
+DrugBank, the drug ID DB00530 is <em>Erlotinib</em>, which is a
+reversible tyrosine kinase inhibitor. Given this molecule as the query
+molecule, we will do a similarity searching in the database
+<code>tyrphostin.sdf</code> presented in the last subsection.</p>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
 
 <span class="va">mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"compseq/DB00530.sdf"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span>
 <span class="va">moldb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"compseq/tyrphostin.sdf"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span></code></pre></div>
-<p>We can do parallelized drug molecular similarity search with the <code><a href="../reference/searchDrug.html">searchDrug()</a></code> function in Rcpi. Here we choose the search criterion to be MACCS keys with cosine similarity, FP2 fingerprints with tanimoto similarity, and maximum common substructure search with tanimoto similarity.</p>
+<p>We can do parallelized drug molecular similarity search with the
+<code><a href="../reference/searchDrug.html">searchDrug()</a></code> function in Rcpi. Here we choose the search
+criterion to be MACCS keys with cosine similarity, FP2 fingerprints with
+tanimoto similarity, and maximum common substructure search with
+tanimoto similarity.</p>
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">rank1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/searchDrug.html">searchDrug</a></span><span class="op">(</span>
   <span class="va">mol</span>, <span class="va">moldb</span>,
@@ -607,7 +784,10 @@ Figure 5: Tree visualization of the molecular clustering result.
   cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">"mcs"</span>,
   mcssim <span class="op">=</span> <span class="st">"tanimoto"</span>
 <span class="op">)</span></code></pre></div>
-<p>The returned search result is stored as a numerical vector, the name of each element is the molecule number in the database, and the value is the similarity value between the query molecule and this molecule. We print the top search results here:</p>
+<p>The returned search result is stored as a numerical vector, the name
+of each element is the molecule number in the database, and the value is
+the similarity value between the query molecule and this molecule. We
+print the top search results here:</p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank1</span><span class="op">)</span></code></pre></div>
 <pre><code>&gt;#        92       100        83       101         1        36
@@ -620,7 +800,13 @@ Figure 5: Tree visualization of the molecular clustering result.
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank3</span><span class="op">)</span></code></pre></div>
 <pre><code>&gt;#        92       100        23        39        94        64
 &gt;# 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784</code></pre>
-<p>The Rcpi package also integrated the functionality of converting molecular file formats. For example, we can convert the SDF files to SMILES files using <code><a href="../reference/convMolFormat.html">convMolFormat()</a></code>. Since the #92 molecule ranks the highest in the three searches performed, we will calculate the similarity derived by maximum common substructure search between the query molecule and the #92 molecule using <code><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim()</a></code>:</p>
+<p>The Rcpi package also integrated the functionality of converting
+molecular file formats. For example, we can convert the SDF files to
+SMILES files using <code><a href="../reference/convMolFormat.html">convMolFormat()</a></code>. Since the #92 molecule
+ranks the highest in the three searches performed, we will calculate the
+similarity derived by maximum common substructure search between the
+query molecule and the #92 molecule using
+<code><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim()</a></code>:</p>
 <div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Convert SDF format to SMILES format</span>
 <span class="fu"><a href="../reference/convMolFormat.html">convMolFormat</a></span><span class="op">(</span>
@@ -633,7 +819,9 @@ Figure 5: Tree visualization of the molecular clustering result.
 <span class="va">smi1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="st">"DB00530.smi"</span><span class="op">)</span>
 <span class="va">smi2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="st">"tyrphostin.smi"</span><span class="op">)</span><span class="op">[</span><span class="fl">92</span><span class="op">]</span> <span class="co"># Select the #92 molecule</span>
 <span class="fu"><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim</a></span><span class="op">(</span><span class="va">smi1</span>, <span class="va">smi2</span>, type <span class="op">=</span> <span class="st">"smile"</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
-<p>The MCS search result is stored in a list, which contains the original MCS result provided by the <code>fmcsR</code> package <span class="citation">Wang <em>et al.</em> (2013)</span>, the Tanimoto coefficient and the overlap coefficient.</p>
+<p>The MCS search result is stored in a list, which contains the
+original MCS result provided by the <code>fmcsR</code> package <span class="citation">Wang <em>et al.</em> (2013)</span>, the Tanimoto
+coefficient and the overlap coefficient.</p>
 <pre><code>&gt;# [[1]]
 &gt;# An instance of "MCS"
 &gt;#  Number of MCSs: 1
@@ -650,10 +838,12 @@ Figure 5: Tree visualization of the molecular clustering result.
 &gt;# [[3]]
 &gt;# Overlap_Coefficient
 &gt;#           0.8181818</code></pre>
-<p>By using <code>calcDrugMCSSim(..., plot = TRUE)</code>, the maximum common substructure of the two molecules is presented in Figure 6.</p>
+<p>By using <code>calcDrugMCSSim(..., plot = TRUE)</code>, the maximum
+common substructure of the two molecules is presented in Figure 6.</p>
 <div class="figure">
 <img src="figures/ex5-1.png" alt="Figure 6: Maximum common structure of the query molecule and the #92 molecule in the chemical database." width="50%"><p class="caption">
-Figure 6: Maximum common structure of the query molecule and the #92 molecule in the chemical database.
+Figure 6: Maximum common structure of the query molecule and the #92
+molecule in the chemical database.
 </p>
 </div>
 </div>
@@ -661,17 +851,38 @@ Figure 6: Maximum common structure of the query molecule and the #92 molecule in
 <div class="section level2">
 <h2 id="applications-in-chemogenomics">Applications in chemogenomics<a class="anchor" aria-label="anchor" href="#applications-in-chemogenomics"></a>
 </h2>
-<p>For chemogenomics modeling, Rcpi calculates compound-protein interaction (CPI) descriptors and protein-protein interaction (PPI) descriptors.</p>
+<p>For chemogenomics modeling, Rcpi calculates compound-protein
+interaction (CPI) descriptors and protein-protein interaction (PPI)
+descriptors.</p>
 <div class="section level3">
-<h3 id="predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces">Predicting drug-target interaction by integrating chemical and genomic spaces<a class="anchor" aria-label="anchor" href="#predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces"></a>
+<h3 id="predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces">Predicting drug-target interaction by integrating chemical and
+genomic spaces<a class="anchor" aria-label="anchor" href="#predicting-drug-target-interaction-by-integrating-chemical-and-genomic-spaces"></a>
 </h3>
-<p>The prediction of novel interactions between drugs and target proteins is a key area in genomic drug discovery. In this example, we use the G Protein-Coupled Receptor (GPCR) dataset provided by <span class="citation">Yamanishi <em>et al.</em> (2008)</span> as our benchmark dataset.</p>
-<p>A drug-target interaction network can be naturally modeled as a bipartite graph, where the nodes are target proteins or drug molecules and edges (only drugs and proteins could be connected by edges) represent drug-target interactions. Initially, the graph only contains edges describing the <em>real</em> drug-target interactions determined by experiments or other ways. In this example, all real drug-target interaction pairs (i.e., 635 drug-target interactions) are used as the positive samples. For negative samples we select random, non-interacting pairs from these drugs and proteins. They are constructed as follows:</p>
+<p>The prediction of novel interactions between drugs and target
+proteins is a key area in genomic drug discovery. In this example, we
+use the G Protein-Coupled Receptor (GPCR) dataset provided by <span class="citation">Yamanishi <em>et al.</em> (2008)</span> as our
+benchmark dataset.</p>
+<p>A drug-target interaction network can be naturally modeled as a
+bipartite graph, where the nodes are target proteins or drug molecules
+and edges (only drugs and proteins could be connected by edges)
+represent drug-target interactions. Initially, the graph only contains
+edges describing the <em>real</em> drug-target interactions determined
+by experiments or other ways. In this example, all real drug-target
+interaction pairs (i.e., 635 drug-target interactions) are used as the
+positive samples. For negative samples we select random, non-interacting
+pairs from these drugs and proteins. They are constructed as
+follows:</p>
 <ol style="list-style-type: decimal">
-<li>Separate the pairs in the above positive samples into single drugs and proteins;</li>
-<li>Re-couple these singles into pairs in a way that none of them occurs in the corresponding positive dataset.</li>
+<li>Separate the pairs in the above positive samples into single drugs
+and proteins;</li>
+<li>Re-couple these singles into pairs in a way that none of them occurs
+in the corresponding positive dataset.</li>
 </ol>
-<p>Ten generated negative sets were used in <span class="citation">Dong-Sheng Cao <em>et al.</em> (2012)</span>, here we only used one of them for a demonstration. The drug ID and target ID is stored in <code>GPCR.csv</code>. The first column is KEGG protein ID, and the second column is KEGG drug ID. The first 635 rows form the positive set, and the last 635 rows form the negative set.</p>
+<p>Ten generated negative sets were used in <span class="citation">Dong-Sheng Cao <em>et al.</em> (2012)</span>, here we
+only used one of them for a demonstration. The drug ID and target ID is
+stored in <code>GPCR.csv</code>. The first column is KEGG protein ID,
+and the second column is KEGG drug ID. The first 635 rows form the
+positive set, and the last 635 rows form the negative set.</p>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
 
@@ -691,7 +902,9 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
 &gt;# 4 hsa:10800 D05129
 &gt;# 5 hsa:11255 D00234
 &gt;# 6 hsa:11255 D00300</code></pre>
-<p>We will visualize the network first. Figure 7 shows the connection pattern for the GPCR drug-target interaction network in the form of an <em>arc diagram</em>.</p>
+<p>We will visualize the network first. Figure 7 shows the connection
+pattern for the GPCR drug-target interaction network in the form of an
+<em>arc diagram</em>.</p>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://igraph.org" class="external-link">"igraph"</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"arcdiagram"</span><span class="op">)</span>
@@ -719,11 +932,17 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
 <span class="op">)</span></code></pre></div>
 <div class="figure">
 <img src="figures/ex6-1.png" alt="Figure 7: Arc diagram visualization of the GPCR drug-target interaction network." width="85%"><p class="caption">
-Figure 7: Arc diagram visualization of the GPCR drug-target interaction network.
+Figure 7: Arc diagram visualization of the GPCR drug-target interaction
+network.
 </p>
 </div>
-<p>An arc diagram visualize the nodes in the network in a one-dimensional layout, while using circular arcs to represent edges. With a good ordering of nodes, it is easy to identify cliques and bridges.</p>
-<p>Next, we will download the target protein sequences (in FASTA format) and drug molecule (in SMILES format) from the KEGG database, in parallel:</p>
+<p>An arc diagram visualize the nodes in the network in a
+one-dimensional layout, while using circular arcs to represent edges.
+With a good ordering of nodes, it is easy to identify cliques and
+bridges.</p>
+<p>Next, we will download the target protein sequences (in FASTA format)
+and drug molecule (in SMILES format) from the KEGG database, in
+parallel:</p>
 <div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
 
@@ -739,9 +958,21 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
 
 <span class="va">protseq</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getSeqFromKEGG.html">getSeqFromKEGG</a></span><span class="op">(</span><span class="va">protid</span>, parallel <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
 <span class="va">drugseq</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getSmiFromKEGG.html">getSmiFromKEGG</a></span><span class="op">(</span><span class="va">drugid</span>, parallel <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></code></pre></div>
-<p>If the connection is slow or accidentally interrupts, just try a few more times until success.</p>
-<p>The functions in Rcpi named after <code>getMolFrom...()</code> and <code>getSmiFrom...()</code> supports the parallelized retrieval of (drug) molecules from PubChem, ChEMBL, CAS, KEGG, and DrugBank. The functions named after <code>getSeqFrom...()</code>, <code>getFASTAFrom...()</code>, and <code>getPDBFrom...()</code> supports the parallelized retrieval of proteins from UniProt, KEGG and RCSB PDB. The functions <code><a href="../reference/getDrug.html">getDrug()</a></code> and <code><a href="../reference/getProt.html">getProt()</a></code> are two integrated wrapper functions for downloading the molecules and protein sequences from these online databases.</p>
-<p>After the sequences were downloaded, we can calculate the protein sequence descriptors and molecular descriptors for the targets and drugs:</p>
+<p>If the connection is slow or accidentally interrupts, just try a few
+more times until success.</p>
+<p>The functions in Rcpi named after <code>getMolFrom...()</code> and
+<code>getSmiFrom...()</code> supports the parallelized retrieval of
+(drug) molecules from PubChem, ChEMBL, CAS, KEGG, and DrugBank. The
+functions named after <code>getSeqFrom...()</code>,
+<code>getFASTAFrom...()</code>, and <code>getPDBFrom...()</code>
+supports the parallelized retrieval of proteins from UniProt, KEGG and
+RCSB PDB. The functions <code><a href="../reference/getDrug.html">getDrug()</a></code> and
+<code><a href="../reference/getProt.html">getProt()</a></code> are two integrated wrapper functions for
+downloading the molecules and protein sequences from these online
+databases.</p>
+<p>After the sequences were downloaded, we can calculate the protein
+sequence descriptors and molecular descriptors for the targets and
+drugs:</p>
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x0.prot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span>
   <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">protseq</span><span class="op">)</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span>,
@@ -753,7 +984,9 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
   <span class="fu"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span><span class="op">(</span><span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/textconnections.html" class="external-link">textConnection</a></span><span class="op">(</span><span class="va">drugseq</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,
   <span class="fu"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span><span class="op">(</span><span class="va">drugseq</span>, type <span class="op">=</span> <span class="st">"smile"</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
-<p>Since the descriptors is only for the <em>deduplicated</em> drug and target list, we need to generate the full descriptor matrix for the training data:</p>
+<p>Since the descriptors is only for the <em>deduplicated</em> drug and
+target list, we need to generate the full descriptor matrix for the
+training data:</p>
 <div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Generate drug x / protein x / y</span>
 <span class="va">x.prot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="cn">NA</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">x0.prot</span><span class="op">)</span><span class="op">)</span>
@@ -762,34 +995,54 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
 <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span><span class="op">)</span> <span class="va">x.drug</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span> <span class="op">&lt;-</span> <span class="va">x0.drug</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">==</span> <span class="va">drugid</span><span class="op">)</span>, <span class="op">]</span>
 
 <span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"pos"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"neg"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>Generate drug-target interaction descriptors using <code><a href="../reference/getCPI.html">getCPI()</a></code>.</p>
+<p>Generate drug-target interaction descriptors using
+<code><a href="../reference/getCPI.html">getCPI()</a></code>.</p>
 <div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getCPI.html">getCPI</a></span><span class="op">(</span><span class="va">x.prot</span>, <span class="va">x.drug</span>, type <span class="op">=</span> <span class="st">"combine"</span><span class="op">)</span></code></pre></div>
-<p>The pairwise interaction is another useful type of representation in drug-target prediction, protein-protein interaction prediction and related research. Rcpi also provides <code><a href="../reference/getPPI.html">getPPI()</a></code> to generate protein-protein interaction descriptors. <code><a href="../reference/getPPI.html">getPPI()</a></code> provides three types of interactions while <code><a href="../reference/getCPI.html">getCPI()</a></code> provides two types. The argument <code>type</code> is used to control this.</p>
+<p>The pairwise interaction is another useful type of representation in
+drug-target prediction, protein-protein interaction prediction and
+related research. Rcpi also provides <code><a href="../reference/getPPI.html">getPPI()</a></code> to generate
+protein-protein interaction descriptors. <code><a href="../reference/getPPI.html">getPPI()</a></code> provides
+three types of interactions while <code><a href="../reference/getCPI.html">getCPI()</a></code> provides two
+types. The argument <code>type</code> is used to control this.</p>
 <div class="section level4">
 <h4 id="compound-protein-interaction-cpi-descriptors">Compound-protein interaction (CPI) descriptors<a class="anchor" aria-label="anchor" href="#compound-protein-interaction-cpi-descriptors"></a>
 </h4>
-<p>For compound descriptor vector <span class="math inline">\(d_1^{1 \times p_1}\)</span> and the protein descriptor vector <span class="math inline">\(d_2^{1 \times p_2}\)</span>, there are two methods for construction of descriptor vector <span class="math inline">\(d\)</span> for compound-protein interaction:</p>
+<p>For compound descriptor vector <span class="math inline">\(d_1^{1
+\times p_1}\)</span> and the protein descriptor vector <span class="math inline">\(d_2^{1 \times p_2}\)</span>, there are two methods
+for construction of descriptor vector <span class="math inline">\(d\)</span> for compound-protein interaction:</p>
 <ol style="list-style-type: decimal">
 <li>
-<code>type = "combine"</code> - combine the two feature matrix, <span class="math inline">\(d\)</span> has <span class="math inline">\(p_1 + p_2\)</span> columns;</li>
+<code>type = "combine"</code> - combine the two feature matrix,
+<span class="math inline">\(d\)</span> has <span class="math inline">\(p_1 + p_2\)</span> columns;</li>
 <li>
-<code>type = "tensorprod"</code> - column-by-column (pseudo)-tensor product type interactions, <span class="math inline">\(d\)</span> has <span class="math inline">\(p_1 \times p_2\)</span> columns.</li>
+<code>type = "tensorprod"</code> - column-by-column (pseudo)-tensor
+product type interactions, <span class="math inline">\(d\)</span> has
+<span class="math inline">\(p_1 \times p_2\)</span> columns.</li>
 </ol>
 </div>
 <div class="section level4">
 <h4 id="protein-protein-interaction-ppi-descriptors">Protein-protein interaction (PPI) descriptors<a class="anchor" aria-label="anchor" href="#protein-protein-interaction-ppi-descriptors"></a>
 </h4>
-<p>For interaction protein A and protein B, let <span class="math inline">\(d_1^{1 \times p}\)</span> and <span class="math inline">\(d_2^{1 \times p}\)</span> be the descriptor vectors. There are three methods to construct the protein-protein interaction descriptor <span class="math inline">\(d\)</span>:</p>
+<p>For interaction protein A and protein B, let <span class="math inline">\(d_1^{1 \times p}\)</span> and <span class="math inline">\(d_2^{1 \times p}\)</span> be the descriptor
+vectors. There are three methods to construct the protein-protein
+interaction descriptor <span class="math inline">\(d\)</span>:</p>
 <ol style="list-style-type: decimal">
 <li>
-<code>type = "combine"</code> - combine the two descriptor matrix, <span class="math inline">\(d\)</span> has <span class="math inline">\(p + p\)</span> columns;</li>
+<code>type = "combine"</code> - combine the two descriptor matrix,
+<span class="math inline">\(d\)</span> has <span class="math inline">\(p
++ p\)</span> columns;</li>
 <li>
-<code>type = "tensorprod"</code> - column-by-column (pseudo)-tensor product type interactions, <span class="math inline">\(d\)</span> has <span class="math inline">\(p \times p\)</span> columns;</li>
+<code>type = "tensorprod"</code> - column-by-column (pseudo)-tensor
+product type interactions, <span class="math inline">\(d\)</span> has
+<span class="math inline">\(p \times p\)</span> columns;</li>
 <li>
-<code>type = "entrywise"</code> - entrywise product and entrywise sum of the two matrices, then combine them, <span class="math inline">\(d\)</span> has <span class="math inline">\(p + p\)</span> columns.</li>
+<code>type = "entrywise"</code> - entrywise product and entrywise
+sum of the two matrices, then combine them, <span class="math inline">\(d\)</span> has <span class="math inline">\(p +
+p\)</span> columns.</li>
 </ol>
-<p>Train a random forest classification model with 5-fold repeated CV:</p>
+<p>Train a random forest classification model with 5-fold repeated
+CV:</p>
 <div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">]</span>
@@ -832,7 +1085,8 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
 &gt;#
 &gt;# ROC was used to select the optimal model using  the largest value.
 &gt;# The final value used for the model was mtry = 562.</code></pre>
-<p>Predict on the training set (for demonstration purpose only) and plot ROC curve.</p>
+<p>Predict on the training set (for demonstration purpose only) and plot
+ROC curve.</p>
 <div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">rf.pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">rf.fit</span><span class="op">$</span><span class="va">finalModel</span>, <span class="va">x</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
 
@@ -841,7 +1095,8 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
 <p>The ROC curve is shown in Figure 8.</p>
 <div class="figure">
 <img src="figures/ex6-2.png" alt="Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest." width="65%"><p class="caption">
-Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest.
+Figure 8: ROC curve for predicting on the training set of the GPCR
+drug-target interaction dataset using random forest.
 </p>
 </div>
 </div>
@@ -852,34 +1107,55 @@ Figure 8: ROC curve for predicting on the training set of the GPCR drug-target i
 </h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-cao2012silico" class="csl-entry">
-Cao,D-S <em>et al.</em> (2012) In silico toxicity prediction by support vector machine and SMILES representation-based string kernel. <em>SAR and QSAR in Environmental Research</em>, <strong>23</strong>, 141–153.
+Cao,D-S <em>et al.</em> (2012) In silico toxicity prediction by support
+vector machine and SMILES representation-based string kernel. <em>SAR
+and QSAR in Environmental Research</em>, <strong>23</strong>, 141–153.
 </div>
 <div id="ref-cao2012large" class="csl-entry">
-Cao,Dong-Sheng <em>et al.</em> (2012) Large-scale prediction of drug-target interactions using protein sequences and drug topological structures. <em>Analytica chimica acta</em>, <strong>752</strong>, 1–10.
+Cao,Dong-Sheng <em>et al.</em> (2012) Large-scale prediction of
+drug-target interactions using protein sequences and drug topological
+structures. <em>Analytica chimica acta</em>, <strong>752</strong>, 1–10.
 </div>
 <div id="ref-Rcpi2015" class="csl-entry">
-Cao,D.-S. <em>et al.</em> (2015) <a href="https://doi.org/10.1093/bioinformatics/btu624" class="external-link"><span class="nocase">Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions</span></a>. <em>Bioinformatics</em>, <strong>31</strong>, 279–281.
+Cao,D.-S. <em>et al.</em> (2015) <a href="https://doi.org/10.1093/bioinformatics/btu624" class="external-link"><span class="nocase">Rcpi: R/Bioconductor package to generate various
+descriptors of proteins, compounds and their interactions</span></a>.
+<em>Bioinformatics</em>, <strong>31</strong>, 279–281.
 </div>
 <div id="ref-chouapaac" class="csl-entry">
-Chou,K.-C. (2005) Using amphiphilic pseudo amino acid composition to predict enzyme subfamily classes. <em>Bioinformatics</em>, <strong>21</strong>, 10–19.
+Chou,K.-C. (2005) Using amphiphilic pseudo amino acid composition to
+predict enzyme subfamily classes. <em>Bioinformatics</em>,
+<strong>21</strong>, 10–19.
 </div>
 <div id="ref-chou2008cell" class="csl-entry">
-Chou,K.-C. and Shen,H.-B. (2008) Cell-PLoc: A package of web servers for predicting subcellular localization of proteins in various organisms. <em>Nature Protocols</em>, <strong>3</strong>, 153–162.
+Chou,K.-C. and Shen,H.-B. (2008) Cell-PLoc: A package of web servers for
+predicting subcellular localization of proteins in various organisms.
+<em>Nature Protocols</em>, <strong>3</strong>, 153–162.
 </div>
 <div id="ref-chemmineob" class="csl-entry">
-Horan,K. and Girke,T. (2013) <a href="http://manuals.bioinformatics.ucr.edu/home/chemminer" class="external-link">ChemmineOB: R interface to a subset of OpenBabel functionalities</a>.
+Horan,K. and Girke,T. (2013) <a href="http://manuals.bioinformatics.ucr.edu/home/chemminer" class="external-link">ChemmineOB:
+R interface to a subset of OpenBabel functionalities</a>.
 </div>
 <div id="ref-steinbeck2003chemistry" class="csl-entry">
-Steinbeck,C. <em>et al.</em> (2003) The chemistry development kit (CDK): An open-source java library for chemo-and bioinformatics. <em>Journal of chemical information and computer sciences</em>, <strong>43</strong>, 493–500.
+Steinbeck,C. <em>et al.</em> (2003) The chemistry development kit (CDK):
+An open-source java library for chemo-and bioinformatics. <em>Journal of
+chemical information and computer sciences</em>, <strong>43</strong>,
+493–500.
 </div>
 <div id="ref-wang2013fmcsr" class="csl-entry">
-Wang,Y. <em>et al.</em> (2013) fmcsR: Mismatch tolerant maximum common substructure searching in r. <em>Bioinformatics</em>, <strong>29</strong>, 2792–2794.
+Wang,Y. <em>et al.</em> (2013) fmcsR: Mismatch tolerant maximum common
+substructure searching in r. <em>Bioinformatics</em>,
+<strong>29</strong>, 2792–2794.
 </div>
 <div id="ref-yamanishi2008prediction" class="csl-entry">
-Yamanishi,Y. <em>et al.</em> (2008) Prediction of drug–target interaction networks from the integration of chemical and genomic spaces. <em>Bioinformatics</em>, <strong>24</strong>, i232–i240.
+Yamanishi,Y. <em>et al.</em> (2008) Prediction of drug–target
+interaction networks from the integration of chemical and genomic
+spaces. <em>Bioinformatics</em>, <strong>24</strong>, i232–i240.
 </div>
 <div id="ref-yan2012comparison" class="csl-entry">
-Yan,J. <em>et al.</em> (2012) Comparison of quantitative structure–retention relationship models on four stationary phases with different polarity for a diverse set of flavor compounds. <em>Journal of Chromatography A</em>, <strong>1223</strong>, 118–125.
+Yan,J. <em>et al.</em> (2012) Comparison of quantitative
+structure–retention relationship models on four stationary phases with
+different polarity for a diverse set of flavor compounds. <em>Journal of
+Chromatography A</em>, <strong>1223</strong>, 118–125.
 </div>
 </div>
 </div>
@@ -896,7 +1172,7 @@ Yan,J. <em>et al.</em> (2012) Comparison of quantitative structure–retention r
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
     </footer>
