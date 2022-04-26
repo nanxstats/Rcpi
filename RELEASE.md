@@ -1,12 +1,14 @@
-Clone
+# Make a new release
+
+## Clone repos
 
 ```bash
-git clone git@github.com:road2stat/Rcpi.git
+git clone git@github.com:nanxstats/Rcpi.git
 git clone -b master git@git.bioconductor.org:packages/Rcpi.git Rcpi-devel
-git clone -b RELEASE_3_9 git@git.bioconductor.org:packages/Rcpi.git Rcpi-release
+git clone -b RELEASE_3_14 git@git.bioconductor.org:packages/Rcpi.git Rcpi-release
 ```
 
-Merge
+## Merge changes
 
 ```bash
 # Merge Rcpi changes to Rcpi-devel, then
@@ -18,13 +20,15 @@ cd Rcpi
 cp .gitignore .Rbuildignore ~/Rcpi-release
 ```
 
-Modify branch name, commit message, and push
+## Push changes
+
+Modify branch name, write commit message, and push
 
 ```bash
 cd Rcpi-devel
 git status
 git add -A
-git commit -m 'v1.19.1 release'
+git commit -m "v1.31.1"
 git push origin master
 ```
 
@@ -32,6 +36,6 @@ git push origin master
 cd Rcpi-release
 git status
 git add -A
-git commit -m 'v1.19.1 release'
-git push origin RELEASE_3_8
+git commit -m "v1.31.1"
+git push origin RELEASE_3_14
 ```

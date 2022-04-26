@@ -1,3 +1,9 @@
+# Rcpi 1.31.1 (2022-04-25)
+
+## Improvements
+
+- Fixed a build error on macOS in the `devel` branch due to dependencies not available.
+
 # Rcpi 1.21.1 (2019-05-17)
 
 ## Improvements
