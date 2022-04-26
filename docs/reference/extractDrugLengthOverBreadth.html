@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.30.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.31.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,11 +96,15 @@ extents for a series of rotations about the Z axis
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">sdf</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'sysdata/OptAA3d.sdf'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span></span>
 <span class="r-in"><span class="co"># \donttest{</span></span>
 <span class="r-in"><span class="va">mol</span> <span class="op">=</span> <span class="fu"><a href="readMolFromSDF.html">readMolFromSDF</a></span><span class="op">(</span><span class="va">sdf</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in .jarray(molfiles, contents.class = "S"):</span> unable to create a string array</span>
 <span class="r-in"><span class="va">dat</span> <span class="op">=</span> <span class="fu">extractDrugLengthOverBreadth</span><span class="op">(</span><span class="va">mol</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval.desc(molecules, "org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor",     verbose = !silent):</span> object 'mol' not found</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span><span class="co"># }</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in h(simpleError(msg, call)):</span> error in evaluating the argument 'x' in selecting a method for function 'head': object 'dat' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     LOBMAX   LOBMIN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1.662321 1.662321</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 1.584020 1.584020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 1.186100 1.149565</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 1.154386 1.018091</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 1.087556 1.087556</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 1.735749 1.735749</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
