@@ -35,7 +35,6 @@ Suggests:
     rmarkdown,
     RUnit,
     BiocGenerics
-Enhances: ChemmineOB
 biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
     Cheminformatics, BiomedicalInformatics, Proteomics, GO, SystemsBiology
 RoxygenNote: 7.1.2

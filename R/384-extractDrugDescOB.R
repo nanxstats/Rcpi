@@ -52,42 +52,43 @@
 
 extractDrugDescOB = function (molecules, type = c('smile', 'sdf')) {
 
+    check_ob()
+
     if (type == 'smile') {
 
         if ( length(molecules) == 1L ) {
 
-            molRefs = ChemmineOB::forEachMol('SMILES', molecules, identity)
-            x = ChemmineOB::prop_OB(molRefs)
+            molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', molecules, identity)"))
+            x = eval(parse(text = "ChemmineOB::prop_OB(molRefs)"))
 
         } else if ( length(molecules) > 1L ) {
 
             x = matrix(NA, nrow = length(molecules), ncol = 16)
 
             for ( i in 1:length(molecules) ) {
-                molRefs = ChemmineOB::forEachMol('SMILES', molecules[i], identity)
-                fp[i, ] = ChemmineOB::prop_OB(molRefs)
+                molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', molecules[i], identity)"))
+                fp[i, ] = eval(parse(text = "ChemmineOB::prop_OB(molRefs)"))
             }
 
         }
 
     } else if (type == 'sdf') {
 
-        smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES',
-                                        source = molecules)
+        smi = eval(parse(text = "ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES', source = molecules)"))
         smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
 
         if ( length(smiclean) == 1L ) {
 
-            molRefs = ChemmineOB::forEachMol('SMILES', smiclean, identity)
-            fp = ChemmineOB::prop_OB(molRefs)
+            molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', smiclean, identity)"))
+            fp = eval(parse(text = "ChemmineOB::prop_OB(molRefs)"))
 
         } else if ( length(smiclean) > 1L ) {
 
             x = matrix(NA, nrow = length(smiclean), ncol = 16)
 
             for ( i in 1:length(smiclean) ) {
-                molRefs = ChemmineOB::forEachMol('SMILES', smiclean[i], identity)
-                fp[i, ] = ChemmineOB::prop_OB(molRefs)
+                molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', smiclean[i], identity)"))
+                fp[i, ] = eval(parse(text = "ChemmineOB::prop_OB(molRefs)"))
             }
 
         }

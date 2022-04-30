@@ -192,11 +192,15 @@
 #'               from = 'smiles', to = 'mop')}
 
 convMolFormat = function (infile, outfile, from, to) {
-
-    ChemmineOB::convertFormatFile(
-        from = from, to = to,
-        fromFile = infile, toFile = outfile)
-
+    check_ob()
+    eval(parse(text = "ChemmineOB::convertFormatFile(from = from, to = to, fromFile = infile, toFile = outfile)"))
     invisible()
+}
 
+check_ob <- function() {
+    if (!is_pkg_available("ChemmineOB")) {
+        stop("Must install the `ChemmineOB` package first.", call. = FALSE)
+    } else {
+        invisible(NULL)
+    }
 }

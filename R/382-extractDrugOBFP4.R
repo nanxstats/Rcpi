@@ -30,41 +30,42 @@
 
 extractDrugOBFP4 = function (molecules, type = c('smile', 'sdf')) {
 
+    check_ob()
+
     if (type == 'smile') {
 
         if ( length(molecules) == 1L ) {
 
-            molRefs = ChemmineOB::forEachMol('SMILES', molecules, identity)
-            fp = ChemmineOB::fingerprint_OB(molRefs, 'FP4')
+            molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', molecules, identity)"))
+            fp = eval(parse(text = "ChemmineOB::fingerprint_OB(molRefs, 'FP4')"))
 
         } else if ( length(molecules) > 1L ) {
 
             fp = matrix(0L, nrow = length(molecules), ncol = 512L)
 
             for ( i in 1:length(molecules) ) {
-                molRefs = ChemmineOB::forEachMol('SMILES', molecules[i], identity)
-                fp[i, ] = ChemmineOB::fingerprint_OB(molRefs, 'FP4')
+                molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', molecules[i], identity)"))
+                fp[i, ] = eval(parse(text = "ChemmineOB::fingerprint_OB(molRefs, 'FP4')"))
             }
 
         }
 
     } else if (type == 'sdf') {
 
-        smi = ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES',
-                                        source = molecules)
+        smi = eval(parse(text = "ChemmineOB::convertFormat(from = 'SDF', to = 'SMILES', source = molecules)"))
         smiclean = strsplit(smi, '\\t.*?\\n')[[1]]
 
         if ( length(smiclean) == 1L ) {
 
-            molRefs = ChemmineOB::forEachMol('SMILES', smiclean, identity)
-            fp = ChemmineOB::fingerprint_OB(molRefs, 'FP4')
+            molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', smiclean, identity)"))
+            fp = eval(parse(text = "ChemmineOB::fingerprint_OB(molRefs, 'FP4')"))
 
         } else if ( length(smiclean) > 1L ) {
 
             fp = matrix(0L, nrow = length(smiclean), ncol = 512L)
             for ( i in 1:length(smiclean) ) {
-                molRefs = ChemmineOB::forEachMol('SMILES', smiclean[i], identity)
-                fp[i, ] = ChemmineOB::fingerprint_OB(molRefs, 'FP4')
+                molRefs = eval(parse(text = "ChemmineOB::forEachMol('SMILES', smiclean[i], identity)"))
+                fp[i, ] = eval(parse(text = "ChemmineOB::fingerprint_OB(molRefs, 'FP4')"))
             }
 
         }
