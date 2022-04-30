@@ -14,7 +14,7 @@ Molecular Fingerprints Similarity or Maximum Common Substructure Search"><meta p
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.31.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -165,12 +165,7 @@ This function runs for a query compound against a set of molecules.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       100 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 0.1204819 </span>
 <span class="r-in"><span class="fu">searchDrug</span><span class="op">(</span><span class="va">mol</span>, <span class="va">moldb</span>, cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">'fp'</span>, fptype <span class="op">=</span> <span class="st">'fp2'</span>, fpsim <span class="op">=</span> <span class="st">'tanimoto'</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> .onLoad failed in loadNamespace() for 'ChemmineOB', details:</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span>   call: dyn.load(file, DLLpath = DLLpath, ...)</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span>   error: unable to load shared object '/Users/nanx/rpkgs/ChemmineOB/libs/ChemmineOB.so':</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span>   dlopen(/Users/nanx/rpkgs/ChemmineOB/libs/ChemmineOB.so, 0x000A): Library not loaded: /usr/local/opt/open-babel/lib/libopenbabel.7.dylib</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span>   Referenced from: /Users/nanx/rpkgs/ChemmineOB/libs/ChemmineOB.so</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span>   Reason: tried: '/usr/local/opt/open-babel/lib/libopenbabel.7.dylib' (no such file), '/Library/Frameworks/R.framework/Resources/lib/libopenbabel.7.dylib' (no such file), '/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/server/libopenbabel.7.dylib' (no such file)</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> Must install the `ChemmineOB` package first.</span>
 <span class="r-in"><span class="fu">searchDrug</span><span class="op">(</span><span class="va">mol</span>, <span class="va">moldb</span>, cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">'mcs'</span>, mcssim <span class="op">=</span> <span class="st">'tanimoto'</span><span class="op">)</span><span class="co"># }</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        92       100        23        39        94        64        60        59 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784 0.3636364 0.3529412 </span>

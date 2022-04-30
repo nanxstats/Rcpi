@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.31.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,7 +90,7 @@ the columns represent the fingerprints.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">smi</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'vignettedata/FDAMDD.smi'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span></span>
 <span class="r-in"><span class="co"># \donttest{</span></span>
 <span class="r-in"><span class="va">mol</span> <span class="op">=</span> <span class="fu"><a href="readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'mol'</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in .jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder()):</span> Java Exception &lt;no description because toString() failed&gt;get.smiles.parser()new("jobjRef", jobj = &lt;pointer: 0x7f78040c60c0&gt;, jclass = "java/lang/Throwable")</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in .jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder()):</span> Java Exception &lt;no description because toString() failed&gt;get.smiles.parser()new("jobjRef", jobj = &lt;pointer: 0x7fd2b9820c68&gt;, jclass = "java/lang/Throwable")</span>
 <span class="r-in"><span class="va">fp</span>  <span class="op">=</span> <span class="fu">extractDrugPubChemComplete</span><span class="op">(</span><span class="va">mol</span><span class="op">)</span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in extractDrugPubChemComplete(mol):</span> object 'mol' not found</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">fp</span><span class="op">)</span><span class="co"># }</span></span>
