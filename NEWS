@@ -1,8 +1,8 @@
-# Rcpi 1.33.1 (2022-04-30)
+# Rcpi 1.33.1 (2022-05-07)
 
 ## Improvements
 
-- Remove the usage of `Enhances` in `DESCRIPTION`.
+- Remove the `Enhances` field in `DESCRIPTION` to improve clarity.
 
 # Rcpi 1.33.0 (2022-04-25)
 
