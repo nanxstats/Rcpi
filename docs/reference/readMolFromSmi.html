@@ -14,7 +14,7 @@ Molecular Object or Plain Text List"><meta property="og:image" content="https://
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,13 +66,15 @@ Molecular Object or Plain Text List</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">readMolFromSmi</span><span class="op">(</span><span class="va">smifile</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mol"</span>, <span class="st">"text"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">readMolFromSmi</span><span class="op">(</span><span class="va">smifile</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mol"</span>, <span class="st">"text"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>smifile</dt>
 <dd><p>Character vector, containing SMILES file location(s).</p></dd>
+
+
 <dt>type</dt>
 <dd><p><code>'mol'</code> or <code>'text'</code>. <code>'mol'</code> returns parsed
 Java molecular object, used for <code>'text'</code> returns (plain-text)
@@ -80,10 +82,13 @@ character string list. For common molecular descriptors and
 fingerprints, use <code>'mol'</code>.
 For descriptors and fingerprints calculated by OpenBabel,
 i.e. functions named <code>extractDrugOB...()</code> , use <code>'text'</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A list, containing parsed Java molecular object or character strings.</p>
+    
+
+<p>A list, containing parsed Java molecular object or character strings.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -99,10 +104,10 @@ from SDF files and returning parsed Java molecular object.</p></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">smi</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'vignettedata/FDAMDD.smi'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="va">mol1</span> <span class="op">=</span> <span class="fu">readMolFromSmi</span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'mol'</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">mol2</span> <span class="op">=</span> <span class="fu">readMolFromSmi</span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'text'</span><span class="op">)</span><span class="co"># }</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">smi</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'vignettedata/FDAMDD.smi'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="va">mol1</span> <span class="op">=</span> <span class="fu">readMolFromSmi</span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'mol'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">mol2</span> <span class="op">=</span> <span class="fu">readMolFromSmi</span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'text'</span><span class="op">)</span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -114,7 +119,7 @@ from SDF files and returning parsed Java molecular object.</p></div>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

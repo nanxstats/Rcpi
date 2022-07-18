@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,24 +60,33 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">extractDrugStandardComplete</span><span class="op">(</span><span class="va">molecules</span>, depth <span class="op">=</span> <span class="fl">6</span>, size <span class="op">=</span> <span class="fl">1024</span>, silent <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">extractDrugStandardComplete</span><span class="op">(</span><span class="va">molecules</span>, depth <span class="op">=</span> <span class="fl">6</span>, size <span class="op">=</span> <span class="fl">1024</span>, silent <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>molecules</dt>
 <dd><p>Parsed molucule object.</p></dd>
+
+
 <dt>depth</dt>
 <dd><p>The search depth. Default is <code>6</code>.</p></dd>
+
+
 <dt>size</dt>
 <dd><p>The length of the fingerprint bit string. Default is <code>1024</code>.</p></dd>
+
+
 <dt>silent</dt>
 <dd><p>Logical. Whether the calculating process
 should be shown or not, default is <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>An integer vector or a matrix. Each row represents one molecule,
+    
+
+<p>An integer vector or a matrix. Each row represents one molecule,
 the columns represent the fingerprints.</p>
     </div>
     <div class="section level2">
@@ -93,14 +102,12 @@ This is hashed fingerprints, with a default length of 1024.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">smi</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'vignettedata/FDAMDD.smi'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="va">mol</span> <span class="op">=</span> <span class="fu"><a href="readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'mol'</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in .jnew("org/openscience/cdk/smiles/SmilesParser", get.chem.object.builder()):</span> Java Exception &lt;no description because toString() failed&gt;get.smiles.parser()new("jobjRef", jobj = &lt;pointer: 0x7fa5ae7e1188&gt;, jclass = "java/lang/Throwable")</span>
-<span class="r-in"><span class="va">fp</span>  <span class="op">=</span> <span class="fu">extractDrugStandardComplete</span><span class="op">(</span><span class="va">mol</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in extractDrugStandardComplete(mol):</span> object 'mol' not found</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">fp</span><span class="op">)</span><span class="co"># }</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'fp' not found</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">smi</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'vignettedata/FDAMDD.smi'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="va">mol</span> <span class="op">=</span> <span class="fu"><a href="readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'mol'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">fp</span>  <span class="op">=</span> <span class="fu">extractDrugStandardComplete</span><span class="op">(</span><span class="va">mol</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">fp</span><span class="op">)</span><span class="co"># }</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  796 1024</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -112,7 +119,7 @@ This is hashed fingerprints, with a default length of 1024.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

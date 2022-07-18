@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">getPPI</span><span class="op">(</span><span class="va">protmat1</span>, <span class="va">protmat2</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"combine"</span>, <span class="st">"tensorprod"</span>, <span class="st">"entrywise"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">protmat1</span>, <span class="va">protmat2</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"combine"</span>, <span class="st">"tensorprod"</span>, <span class="st">"entrywise"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -68,16 +68,23 @@
     <dl><dt>protmat1</dt>
 <dd><p>The first protein descriptor matrix,
 must have the same ncol with <code>protmat2</code>.</p></dd>
+
+
 <dt>protmat2</dt>
 <dd><p>The second protein descriptor matrix,
 must have the same ncol with <code>protmat1</code>.</p></dd>
+
+
 <dt>type</dt>
 <dd><p>The interaction type, one or more of
 <code>"combine"</code>, <code>"tensorprod"</code>, and <code>"entrywise"</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A matrix containing the protein-protein interaction descriptors</p>
+    
+
+<p>A matrix containing the protein-protein interaction descriptors</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -98,59 +105,59 @@ compound-protein interaction descriptors.</p></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">y</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">5</span><span class="op">:</span><span class="fl">14</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">'combine'</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">5</span><span class="op">:</span><span class="fl">14</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">'combine'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    6    5   10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7    6   11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    8    7   12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4    9    8   13</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5   10    9   14</span>
-<span class="r-in"><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">'tensorprod'</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">'tensorprod'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5   30   10   60</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   12   42   22   77</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   21   56   36   96</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   32   72   52  117</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]   45   90   70  140</span>
-<span class="r-in"><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">'entrywise'</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="st">'entrywise'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5   60    6   16</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   12   77    8   18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   21   96   10   20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   32  117   12   22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]   45  140   14   24</span>
-<span class="r-in"><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'combine'</span>, <span class="st">'tensorprod'</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'combine'</span>, <span class="st">'tensorprod'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    6    5   10    5   30   10   60</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7    6   11   12   42   22   77</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    8    7   12   21   56   36   96</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4    9    8   13   32   72   52  117</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5   10    9   14   45   90   70  140</span>
-<span class="r-in"><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'combine'</span>, <span class="st">'entrywise'</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'combine'</span>, <span class="st">'entrywise'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    6    5   10    5   60    6   16</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7    6   11   12   77    8   18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    8    7   12   21   96   10   20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4    9    8   13   32  117   12   22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5   10    9   14   45  140   14   24</span>
-<span class="r-in"><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'entrywise'</span>, <span class="st">'tensorprod'</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'entrywise'</span>, <span class="st">'tensorprod'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5   30   10   60    5   60    6   16</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]   12   42   22   77   12   77    8   18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]   21   56   36   96   21   96   10   20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   32   72   52  117   32  117   12   22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]   45   90   70  140   45  140   14   24</span>
-<span class="r-in"><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'combine'</span>, <span class="st">'entrywise'</span>, <span class="st">'tensorprod'</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">getPPI</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'combine'</span>, <span class="st">'entrywise'</span>, <span class="st">'tensorprod'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    6    5   10    5   30   10   60    5    60     6    16</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    7    6   11   12   42   22   77   12    77     8    18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    8    7   12   21   56   36   96   21    96    10    20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    4    9    8   13   32   72   52  117   32   117    12    22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    5   10    9   14   45   90   70  140   45   140    14    24</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -162,7 +169,7 @@ compound-protein interaction descriptors.</p></div>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

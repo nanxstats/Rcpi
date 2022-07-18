@@ -14,7 +14,7 @@ Maximum Common Substructure Search"><meta property="og:image" content="https://n
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,18 +66,18 @@ Maximum Common Substructure Search</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">calcDrugMCSSim</span><span class="op">(</span>
-  <span class="va">mol1</span>,
-  <span class="va">mol2</span>,
-  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"smile"</span>, <span class="st">"sdf"</span><span class="op">)</span>,
-  plot <span class="op">=</span> <span class="cn">FALSE</span>,
-  al <span class="op">=</span> <span class="fl">0</span>,
-  au <span class="op">=</span> <span class="fl">0</span>,
-  bl <span class="op">=</span> <span class="fl">0</span>,
-  bu <span class="op">=</span> <span class="fl">0</span>,
-  matching.mode <span class="op">=</span> <span class="st">"static"</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">calcDrugMCSSim</span><span class="op">(</span></span>
+<span>  <span class="va">mol1</span>,</span>
+<span>  <span class="va">mol2</span>,</span>
+<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"smile"</span>, <span class="st">"sdf"</span><span class="op">)</span>,</span>
+<span>  plot <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  al <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  au <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  bl <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  bu <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  matching.mode <span class="op">=</span> <span class="st">"static"</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -85,31 +85,52 @@ Maximum Common Substructure Search</p>
     <dl><dt>mol1</dt>
 <dd><p>The first molecule. R character string object
 containing the molecule. See examples.</p></dd>
+
+
 <dt>mol2</dt>
 <dd><p>The second molecule. R character string object
 containing the molecule. See examples.</p></dd>
+
+
 <dt>type</dt>
 <dd><p>The input molecule format, 'smile' or 'sdf'.</p></dd>
+
+
 <dt>plot</dt>
 <dd><p>Logical. Should we plot the two molecules and
 their maximum common substructure?</p></dd>
+
+
 <dt>al</dt>
 <dd><p>Lower bound for the number of atom mismatches. Default is 0.</p></dd>
+
+
 <dt>au</dt>
 <dd><p>Upper bound for the number of atom mismatches. Default is 0.</p></dd>
+
+
 <dt>bl</dt>
 <dd><p>Lower bound for the number of bond mismatches. Default is 0.</p></dd>
+
+
 <dt>bu</dt>
 <dd><p>Upper bound for the number of bond mismatches. Default is 0.</p></dd>
+
+
 <dt>matching.mode</dt>
 <dd><p>Three modes for bond matching are supported:
 <code>'static'</code>, <code>'aromatic'</code>, and <code>'ring'</code>.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Other graphical parameters</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A list containing the detail MCS information and similarity values.
+    
+
+<p>A list containing the detail MCS information and similarity values.
         The numeric similarity value includes Tanimoto coefficient
         and overlap coefficient.</p>
     </div>
@@ -128,16 +149,16 @@ Bioinformatics, 29(21), 2792--2794.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">mol1</span> <span class="op">=</span> <span class="st">'CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC'</span></span>
-<span class="r-in"><span class="va">mol2</span> <span class="op">=</span> <span class="st">'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'</span></span>
-<span class="r-in"><span class="va">mol3</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/readChar.html" class="external-link">readChar</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'compseq/DB00859.sdf'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span>, nchars <span class="op">=</span> <span class="fl">1e+6</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">mol4</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/readChar.html" class="external-link">readChar</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'compseq/DB00860.sdf'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span>, nchars <span class="op">=</span> <span class="fl">1e+6</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="va">sim1</span> <span class="op">=</span> <span class="fu">calcDrugMCSSim</span><span class="op">(</span><span class="va">mol1</span>, <span class="va">mol2</span>, type <span class="op">=</span> <span class="st">'smile'</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">sim2</span> <span class="op">=</span> <span class="fu">calcDrugMCSSim</span><span class="op">(</span><span class="va">mol3</span>, <span class="va">mol4</span>, type <span class="op">=</span> <span class="st">'sdf'</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">sim1</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>  <span class="co"># Tanimoto Coefficient</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">sim2</span><span class="op">[[</span><span class="fl">3</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>  <span class="co"># Overlap Coefficient</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">mol1</span> <span class="op">=</span> <span class="st">'CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC'</span></span></span>
+<span class="r-in"><span><span class="va">mol2</span> <span class="op">=</span> <span class="st">'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'</span></span></span>
+<span class="r-in"><span><span class="va">mol3</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/readChar.html" class="external-link">readChar</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'compseq/DB00859.sdf'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span>, nchars <span class="op">=</span> <span class="fl">1e+6</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">mol4</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/readChar.html" class="external-link">readChar</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'compseq/DB00860.sdf'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span>, nchars <span class="op">=</span> <span class="fl">1e+6</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="va">sim1</span> <span class="op">=</span> <span class="fu">calcDrugMCSSim</span><span class="op">(</span><span class="va">mol1</span>, <span class="va">mol2</span>, type <span class="op">=</span> <span class="st">'smile'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">sim2</span> <span class="op">=</span> <span class="fu">calcDrugMCSSim</span><span class="op">(</span><span class="va">mol3</span>, <span class="va">mol4</span>, type <span class="op">=</span> <span class="st">'sdf'</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">sim1</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>  <span class="co"># Tanimoto Coefficient</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">sim2</span><span class="op">[[</span><span class="fl">3</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>  <span class="co"># Overlap Coefficient</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -149,7 +170,7 @@ Bioinformatics, 29(21), 2792--2794.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

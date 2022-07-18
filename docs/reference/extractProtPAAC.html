@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,19 +60,21 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">extractProtPAAC</span><span class="op">(</span>
-  <span class="va">x</span>,
-  props <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Hydrophobicity"</span>, <span class="st">"Hydrophilicity"</span>, <span class="st">"SideChainMass"</span><span class="op">)</span>,
-  lambda <span class="op">=</span> <span class="fl">30</span>,
-  w <span class="op">=</span> <span class="fl">0.05</span>,
-  customprops <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">extractProtPAAC</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  props <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Hydrophobicity"</span>, <span class="st">"Hydrophilicity"</span>, <span class="st">"SideChainMass"</span><span class="op">)</span>,</span>
+<span>  lambda <span class="op">=</span> <span class="fl">30</span>,</span>
+<span>  w <span class="op">=</span> <span class="fl">0.05</span>,</span>
+<span>  customprops <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
 <dd><p>A character vector, as the input protein sequence.</p></dd>
+
+
 <dt>props</dt>
 <dd><p>A character vector, specifying the properties used.
 3 properties are used by default, as listed below:</p><dl><dt><code>'Hydrophobicity'</code></dt>
@@ -88,10 +90,16 @@ of the 20 amino acids</p></dd>
 of the 20 amino acids</p></dd>
 
 </dl></dd>
+
+
 <dt>lambda</dt>
 <dd><p>The lambda parameter for the PAAC descriptors, default is 30.</p></dd>
+
+
 <dt>w</dt>
 <dd><p>The weighting factor, default is 0.05.</p></dd>
+
+
 <dt>customprops</dt>
 <dd><p>A <code>n x 21</code> named data frame contains <code>n</code>
 customize property. Each row contains one property.
@@ -108,10 +116,13 @@ Then users should explicitly specify these properties
 with these names in the argument <code>props</code>.
 See the examples below for a demonstration.
 The default value for <code>customprops</code> is <code>NULL</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A length <code>20 + lambda</code> named vector</p>
+    
+
+<p>A length <code>20 + lambda</code> named vector</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -152,8 +163,8 @@ Data for Biochemical Research 3rd ed., Clarendon Press Oxford (1986).
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="fu">extractProtPAAC</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="fu">extractProtPAAC</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         Xc1.A         Xc1.R         Xc1.N         Xc1.D         Xc1.C </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    9.07025432   10.07806035    5.54293319    7.30659376    9.57415734 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         Xc1.E         Xc1.Q         Xc1.G         Xc1.H         Xc1.I </span>
@@ -174,26 +185,26 @@ Data for Biochemical Research 3rd ed., Clarendon Press Oxford (1986).
 <span class="r-out co"><span class="r-pr">#&gt;</span>    0.02476967    0.02342389    0.02431684    0.02610300    0.02626722 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Xc2.lambda.26 Xc2.lambda.27 Xc2.lambda.28 Xc2.lambda.29 Xc2.lambda.30 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    0.02457082    0.02343049    0.02588823    0.02490463    0.02451951 </span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">myprops</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>AccNo <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MyProp1"</span>, <span class="st">"MyProp2"</span>, <span class="st">"MyProp3"</span><span class="op">)</span>,</span>
-<span class="r-in">                     A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.62</span>,  <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">15</span><span class="op">)</span>,  R <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2.53</span>,   <span class="fl">3</span>, <span class="fl">101</span><span class="op">)</span>,</span>
-<span class="r-in">                     N <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.78</span>,  <span class="fl">0.2</span>, <span class="fl">58</span><span class="op">)</span>,  D <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.9</span>,    <span class="fl">3</span>, <span class="fl">59</span><span class="op">)</span>,</span>
-<span class="r-in">                     C <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.29</span>,    <span class="op">-</span><span class="fl">1</span>, <span class="fl">47</span><span class="op">)</span>,  E <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.74</span>,   <span class="fl">3</span>, <span class="fl">73</span><span class="op">)</span>,</span>
-<span class="r-in">                     Q <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.85</span>,  <span class="fl">0.2</span>, <span class="fl">72</span><span class="op">)</span>,  G <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.48</span>,    <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>,</span>
-<span class="r-in">                     H <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.4</span>,  <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">82</span><span class="op">)</span>,  I <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.38</span>, <span class="op">-</span><span class="fl">1.8</span>, <span class="fl">57</span><span class="op">)</span>,</span>
-<span class="r-in">                     L <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.06</span>,  <span class="op">-</span><span class="fl">1.8</span>, <span class="fl">57</span><span class="op">)</span>,  K <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>,    <span class="fl">3</span>, <span class="fl">73</span><span class="op">)</span>,</span>
-<span class="r-in">                     M <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.64</span>,  <span class="op">-</span><span class="fl">1.3</span>, <span class="fl">75</span><span class="op">)</span>,  F <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.19</span>, <span class="op">-</span><span class="fl">2.5</span>, <span class="fl">91</span><span class="op">)</span>,</span>
-<span class="r-in">                     P <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.12</span>,     <span class="fl">0</span>, <span class="fl">42</span><span class="op">)</span>,  S <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.18</span>, <span class="fl">0.3</span>, <span class="fl">31</span><span class="op">)</span>,</span>
-<span class="r-in">                     T <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.05</span>, <span class="op">-</span><span class="fl">0.4</span>, <span class="fl">45</span><span class="op">)</span>,  W <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.81</span>, <span class="op">-</span><span class="fl">3.4</span>, <span class="fl">130</span><span class="op">)</span>,</span>
-<span class="r-in">                     Y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.26</span>,  <span class="op">-</span><span class="fl">2.3</span>, <span class="fl">107</span><span class="op">)</span>, V <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.08</span>, <span class="op">-</span><span class="fl">1.5</span>, <span class="fl">43</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Use 3 default properties, 4 properties in the AAindex database,</span></span>
-<span class="r-in"><span class="co"># and 3 cutomized properties</span></span>
-<span class="r-in"><span class="fu">extractProtPAAC</span><span class="op">(</span><span class="va">x</span>, customprops <span class="op">=</span> <span class="va">myprops</span>,</span>
-<span class="r-in">                props <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Hydrophobicity'</span>, <span class="st">'Hydrophilicity'</span>, <span class="st">'SideChainMass'</span>,</span>
-<span class="r-in">                          <span class="st">'CIDH920105'</span>, <span class="st">'BHAR880101'</span>,</span>
-<span class="r-in">                          <span class="st">'CHAM820101'</span>, <span class="st">'CHAM820102'</span>,</span>
-<span class="r-in">                          <span class="st">'MyProp1'</span>, <span class="st">'MyProp2'</span>, <span class="st">'MyProp3'</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">myprops</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>AccNo <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MyProp1"</span>, <span class="st">"MyProp2"</span>, <span class="st">"MyProp3"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.62</span>,  <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">15</span><span class="op">)</span>,  R <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2.53</span>,   <span class="fl">3</span>, <span class="fl">101</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     N <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.78</span>,  <span class="fl">0.2</span>, <span class="fl">58</span><span class="op">)</span>,  D <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.9</span>,    <span class="fl">3</span>, <span class="fl">59</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     C <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.29</span>,    <span class="op">-</span><span class="fl">1</span>, <span class="fl">47</span><span class="op">)</span>,  E <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.74</span>,   <span class="fl">3</span>, <span class="fl">73</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     Q <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.85</span>,  <span class="fl">0.2</span>, <span class="fl">72</span><span class="op">)</span>,  G <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.48</span>,    <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     H <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.4</span>,  <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">82</span><span class="op">)</span>,  I <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.38</span>, <span class="op">-</span><span class="fl">1.8</span>, <span class="fl">57</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     L <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.06</span>,  <span class="op">-</span><span class="fl">1.8</span>, <span class="fl">57</span><span class="op">)</span>,  K <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>,    <span class="fl">3</span>, <span class="fl">73</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     M <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.64</span>,  <span class="op">-</span><span class="fl">1.3</span>, <span class="fl">75</span><span class="op">)</span>,  F <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.19</span>, <span class="op">-</span><span class="fl">2.5</span>, <span class="fl">91</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     P <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.12</span>,     <span class="fl">0</span>, <span class="fl">42</span><span class="op">)</span>,  S <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.18</span>, <span class="fl">0.3</span>, <span class="fl">31</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     T <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.05</span>, <span class="op">-</span><span class="fl">0.4</span>, <span class="fl">45</span><span class="op">)</span>,  W <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.81</span>, <span class="op">-</span><span class="fl">3.4</span>, <span class="fl">130</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                     Y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.26</span>,  <span class="op">-</span><span class="fl">2.3</span>, <span class="fl">107</span><span class="op">)</span>, V <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.08</span>, <span class="op">-</span><span class="fl">1.5</span>, <span class="fl">43</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Use 3 default properties, 4 properties in the AAindex database,</span></span></span>
+<span class="r-in"><span><span class="co"># and 3 cutomized properties</span></span></span>
+<span class="r-in"><span><span class="fu">extractProtPAAC</span><span class="op">(</span><span class="va">x</span>, customprops <span class="op">=</span> <span class="va">myprops</span>,</span></span>
+<span class="r-in"><span>                props <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Hydrophobicity'</span>, <span class="st">'Hydrophilicity'</span>, <span class="st">'SideChainMass'</span>,</span></span>
+<span class="r-in"><span>                          <span class="st">'CIDH920105'</span>, <span class="st">'BHAR880101'</span>,</span></span>
+<span class="r-in"><span>                          <span class="st">'CHAM820101'</span>, <span class="st">'CHAM820102'</span>,</span></span>
+<span class="r-in"><span>                          <span class="st">'MyProp1'</span>, <span class="st">'MyProp2'</span>, <span class="st">'MyProp3'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         Xc1.A         Xc1.R         Xc1.N         Xc1.D         Xc1.C </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    9.12536927   10.13929919    5.57661456    7.35099191    9.63233423 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         Xc1.E         Xc1.Q         Xc1.G         Xc1.H         Xc1.I </span>
@@ -214,7 +225,7 @@ Data for Biochemical Research 3rd ed., Clarendon Press Oxford (1986).
 <span class="r-out co"><span class="r-pr">#&gt;</span>    0.02473118    0.02329787    0.02470748    0.02592993    0.02557742 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Xc2.lambda.26 Xc2.lambda.27 Xc2.lambda.28 Xc2.lambda.29 Xc2.lambda.30 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    0.02469289    0.02360989    0.02570375    0.02473739    0.02436325 </span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -226,7 +237,7 @@ Data for Biochemical Research 3rd ed., Clarendon Press Oxford (1986).
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

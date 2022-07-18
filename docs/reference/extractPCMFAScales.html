@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,50 +60,66 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">extractPCMFAScales</span><span class="op">(</span>
-  <span class="va">x</span>,
-  <span class="va">propmat</span>,
-  <span class="va">factors</span>,
-  scores <span class="op">=</span> <span class="st">"regression"</span>,
-  <span class="va">lag</span>,
-  scale <span class="op">=</span> <span class="cn">TRUE</span>,
-  silent <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">extractPCMFAScales</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  <span class="va">propmat</span>,</span>
+<span>  <span class="va">factors</span>,</span>
+<span>  scores <span class="op">=</span> <span class="st">"regression"</span>,</span>
+<span>  <span class="va">lag</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  silent <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
 <dd><p>A character vector, as the input protein sequence.</p></dd>
+
+
 <dt>propmat</dt>
 <dd><p>A matrix containing the properties for the amino acids.
 Each row represent one amino acid type, each column represents
 one property.
 Note that the one-letter row names must be provided for we need
 them to seek the properties for each AA type.</p></dd>
+
+
 <dt>factors</dt>
 <dd><p>Integer. The number of factors to be fitted.
 Must be no greater than the number of AA properties provided.</p></dd>
+
+
 <dt>scores</dt>
 <dd><p>Type of scores to produce. The default is <code>"regression"</code>,
 which gives Thompson's scores, <code>"Bartlett"</code> given
 Bartlett's weighted least-squares scores.</p></dd>
+
+
 <dt>lag</dt>
 <dd><p>The lag parameter. Must be less than the amino acids number
 in the protein sequence.</p></dd>
+
+
 <dt>scale</dt>
 <dd><p>Logical. Should we auto-scale the property matrix
 (<code>propmat</code>) before doing Factor Analysis? Default is <code>TRUE</code>.</p></dd>
+
+
 <dt>silent</dt>
 <dd><p>Logical. Whether we print the SS loadings,
 proportion of variance and the cumulative proportion of
 the selected factors or not.
 Default is <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A length <code>lag * p^2</code> named vector,
-<code>p</code> is the number of scales (factors) selected.</p>
+    
+
+<p>A length <code>lag * p^2</code> named vector,</p>
+<p></p>
+<p><code>p</code> is the number of scales (factors) selected.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -122,10 +138,10 @@ United States of America,
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">AATopo</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">tprops</span> <span class="op">=</span> <span class="va">AATopo</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">37</span><span class="op">:</span><span class="fl">41</span>, <span class="fl">43</span><span class="op">:</span><span class="fl">47</span><span class="op">)</span><span class="op">]</span>  <span class="co"># select a set of topological descriptors</span></span>
-<span class="r-in"><span class="va">fa</span> <span class="op">=</span> <span class="fu">extractPCMFAScales</span><span class="op">(</span><span class="va">x</span>, propmat <span class="op">=</span> <span class="va">tprops</span>, factors <span class="op">=</span> <span class="fl">5</span>, lag <span class="op">=</span> <span class="fl">7</span>, silent <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">AATopo</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">tprops</span> <span class="op">=</span> <span class="va">AATopo</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">37</span><span class="op">:</span><span class="fl">41</span>, <span class="fl">43</span><span class="op">:</span><span class="fl">47</span><span class="op">)</span><span class="op">]</span>  <span class="co"># select a set of topological descriptors</span></span></span>
+<span class="r-in"><span><span class="va">fa</span> <span class="op">=</span> <span class="fu">extractPCMFAScales</span><span class="op">(</span><span class="va">x</span>, propmat <span class="op">=</span> <span class="va">tprops</span>, factors <span class="op">=</span> <span class="fl">5</span>, lag <span class="op">=</span> <span class="fl">7</span>, silent <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Summary of the factor analysis result:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
@@ -156,7 +172,7 @@ United States of America,
 <span class="r-out co"><span class="r-pr">#&gt;</span> Test of the hypothesis that 5 factors are sufficient.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> The chi square statistic is 472.2 on 5 degrees of freedom.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> The p-value is 7.96e-100 </span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -168,7 +184,7 @@ United States of America,
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

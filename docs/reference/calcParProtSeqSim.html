@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">calcParProtSeqSim</span><span class="op">(</span><span class="va">protlist</span>, cores <span class="op">=</span> <span class="fl">2</span>, type <span class="op">=</span> <span class="st">"local"</span>, submat <span class="op">=</span> <span class="st">"BLOSUM62"</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">calcParProtSeqSim</span><span class="op">(</span><span class="va">protlist</span>, cores <span class="op">=</span> <span class="fl">2</span>, type <span class="op">=</span> <span class="st">"local"</span>, submat <span class="op">=</span> <span class="st">"BLOSUM62"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -70,24 +70,33 @@
 each component of the list is a character string,
 storing one protein sequence. Unknown sequences should be represented as
 <code>''</code>.</p></dd>
+
+
 <dt>cores</dt>
 <dd><p>Integer. The number of CPU cores to use for parallel execution,
 default is <code>2</code>. Users could use the <code>detectCores()</code> function
 in the <code>parallel</code> package to see how many cores they could use.</p></dd>
+
+
 <dt>type</dt>
 <dd><p>Type of alignment, default is <code>'local'</code>,
 could be <code>'global'</code> or <code>'local'</code>,
 where <code>'global'</code> represents Needleman-Wunsch global alignment;
 <code>'local'</code> represents Smith-Waterman local alignment.</p></dd>
+
+
 <dt>submat</dt>
 <dd><p>Substitution matrix, default is <code>'BLOSUM62'</code>,
 could be one of <code>'BLOSUM45'</code>, <code>'BLOSUM50'</code>, <code>'BLOSUM62'</code>,
 <code>'BLOSUM80'</code>, <code>'BLOSUM100'</code>, <code>'PAM30'</code>, <code>'PAM40'</code>,
 <code>'PAM70'</code>, <code>'PAM120'</code>, <code>'PAM250'</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A <code>n</code> x <code>n</code> similarity matrix.</p>
+    
+
+<p>A <code>n</code> x <code>n</code> similarity matrix.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -104,16 +113,16 @@ Gene Ontology (GO) semantic similarity.</p></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">s1</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">s2</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P08218.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">s3</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P10323.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">s4</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P20160.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">s5</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/Q9NZP8.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">plist</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">s2</span>, <span class="va">s3</span>, <span class="va">s4</span>, <span class="va">s5</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="va">psimmat</span> <span class="op">=</span> <span class="fu">calcParProtSeqSim</span><span class="op">(</span><span class="va">plist</span>, cores <span class="op">=</span> <span class="fl">2</span>, type <span class="op">=</span> <span class="st">'local'</span>,</span>
-<span class="r-in">                            submat <span class="op">=</span> <span class="st">'BLOSUM62'</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">psimmat</span><span class="op">)</span><span class="co"># }</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">s1</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">s2</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P08218.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">s3</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P10323.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">s4</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P20160.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">s5</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/Q9NZP8.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">plist</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">s2</span>, <span class="va">s3</span>, <span class="va">s4</span>, <span class="va">s5</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="va">psimmat</span> <span class="op">=</span> <span class="fu">calcParProtSeqSim</span><span class="op">(</span><span class="va">plist</span>, cores <span class="op">=</span> <span class="fl">2</span>, type <span class="op">=</span> <span class="st">'local'</span>,</span></span>
+<span class="r-in"><span>                            submat <span class="op">=</span> <span class="st">'BLOSUM62'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">psimmat</span><span class="op">)</span><span class="co"># }</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            [,1]       [,2]       [,3]       [,4]       [,5]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 1.00000000 0.11825938 0.10236985 0.04921696 0.03943488</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,] 0.11825938 1.00000000 0.18858241 0.12124217 0.06391103</span>
@@ -131,7 +140,7 @@ Gene Ontology (GO) semantic similarity.</p></div>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

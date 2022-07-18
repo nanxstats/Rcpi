@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,18 +60,20 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">segProt</span><span class="op">(</span>
-  <span class="va">x</span>,
-  aa <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"R"</span>, <span class="st">"N"</span>, <span class="st">"D"</span>, <span class="st">"C"</span>, <span class="st">"E"</span>, <span class="st">"Q"</span>, <span class="st">"G"</span>, <span class="st">"H"</span>, <span class="st">"I"</span>, <span class="st">"L"</span>, <span class="st">"K"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"P"</span>,
-    <span class="st">"S"</span>, <span class="st">"T"</span>, <span class="st">"W"</span>, <span class="st">"Y"</span>, <span class="st">"V"</span><span class="op">)</span>,
-  k <span class="op">=</span> <span class="fl">7</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">segProt</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  aa <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"R"</span>, <span class="st">"N"</span>, <span class="st">"D"</span>, <span class="st">"C"</span>, <span class="st">"E"</span>, <span class="st">"Q"</span>, <span class="st">"G"</span>, <span class="st">"H"</span>, <span class="st">"I"</span>, <span class="st">"L"</span>, <span class="st">"K"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"P"</span>,</span>
+<span>    <span class="st">"S"</span>, <span class="st">"T"</span>, <span class="st">"W"</span>, <span class="st">"Y"</span>, <span class="st">"V"</span><span class="op">)</span>,</span>
+<span>  k <span class="op">=</span> <span class="fl">7</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
 <dd><p>A character vector, as the input protein sequence.</p></dd>
+
+
 <dt>aa</dt>
 <dd><p>A character, the amino acid type. one of
 <code>'A'</code>, <code>'R'</code>, <code>'N'</code>, <code>'D'</code>, <code>'C'</code>,
@@ -79,13 +81,18 @@
 <code>'I'</code>, <code>'L'</code>, <code>'K'</code>, <code>'M'</code>,
 <code>'F'</code>, <code>'P'</code>, <code>'S'</code>, <code>'T'</code>,
 <code>'W'</code>, <code>'Y'</code>, <code>'V'</code>.</p></dd>
+
+
 <dt>k</dt>
 <dd><p>A positive integer, specifys the window size (half of the window),
 default is 7.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A named list, each component contains one of the
+    
+
+<p>A named list, each component contains one of the
         segmentations (a character string), names of the list components
         are the positions of the specified amino acid in the sequence.</p>
     </div>
@@ -96,8 +103,8 @@ default is 7.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span class="r-in"><span class="fu">segProt</span><span class="op">(</span><span class="va">x</span>, aa <span class="op">=</span> <span class="st">'R'</span>, k <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">'protseq/P00750.fasta'</span>, package <span class="op">=</span> <span class="st">'Rcpi'</span><span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="fu">segProt</span><span class="op">(</span><span class="va">x</span>, aa <span class="op">=</span> <span class="st">'R'</span>, k <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $`6`</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MDAMKRGLCCV"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -215,7 +222,7 @@ default is 7.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $`557`</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "YLDWIRDNMRP"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -227,7 +234,7 @@ default is 7.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

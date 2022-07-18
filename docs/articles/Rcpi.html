@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +80,7 @@
 
 
 <div class="row">
-  <main id="main"><div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Rcpi: R/Bioconductor Package as an Integrated Informatics Platform for Drug Discovery</h1>
                         <h4 data-toc-skip class="author">Nan Xiao &lt;<a href="https://nanx.me" class="external-link uri">https://nanx.me</a>&gt;</h4>
             
@@ -153,13 +153,13 @@ and chemogenomics.</p>
 </h3>
 <p>To install the Rcpi package, use:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
-<span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"Rcpi"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"Rcpi"</span><span class="op">)</span></span></code></pre></div>
 <p>To make the Rcpi package fully functional (especially the Open Babel
 related functionalities), we recommend the users also install the
 <em>Enhances</em> packages by:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"Rcpi"</span>, dependencies <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Imports"</span>, <span class="st">"Enhances"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"Rcpi"</span>, dependencies <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Imports"</span>, <span class="st">"Enhances"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Several dependencies of the Rcpi package may require some
 system-level libraries, check the corresponding manuals of these
 packages for detailed installation guides.</p>
@@ -216,26 +216,26 @@ class 2 includes 307 <em>mitochondrion</em> proteins.</p>
 <p>First, we load the Rcpi package, then read the protein sequences
 stored in two separated FASTA files with <code><a href="../reference/readFASTA.html">readFASTA()</a></code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
-
-<span class="co"># Load FASTA files</span>
-<span class="va">extracell</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
-  <span class="st">"vignettedata/extracell.fasta"</span>,
-  package <span class="op">=</span> <span class="st">"Rcpi"</span>
-<span class="op">)</span><span class="op">)</span>
-<span class="va">mitonchon</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
-  <span class="st">"vignettedata/mitochondrion.fasta"</span>,
-  package <span class="op">=</span> <span class="st">"Rcpi"</span>
-<span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Load FASTA files</span></span>
+<span><span class="va">extracell</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<span>  <span class="st">"vignettedata/extracell.fasta"</span>,</span>
+<span>  package <span class="op">=</span> <span class="st">"Rcpi"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">mitonchon</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readFASTA.html">readFASTA</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<span>  <span class="st">"vignettedata/mitochondrion.fasta"</span>,</span>
+<span>  package <span class="op">=</span> <span class="st">"Rcpi"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>The loaded sequences are stored as two lists in R, and each component
 in the list is a character string representing one protein sequence. In
 this case, there are 325 <em>extracell</em> protein sequences and 306
 <em>mitonchon</em> protein sequences:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;# [1] 325</code></pre>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;# [1] 306</code></pre>
 <p>To assure that the protein sequences only have the twenty standard
 amino acid types which is required for the descriptor computation, we
@@ -243,26 +243,26 @@ use the <code><a href="../reference/checkProt.html">checkProt()</a></code> funct
 sanity checking and remove the <em>non-standard</em> protein
 sequences:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">extracell</span> <span class="op">&lt;-</span> <span class="va">extracell</span><span class="op">[</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">extracell</span>, <span class="va">checkProt</span><span class="op">)</span><span class="op">)</span><span class="op">]</span>
-<span class="va">mitonchon</span> <span class="op">&lt;-</span> <span class="va">mitonchon</span><span class="op">[</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">mitonchon</span>, <span class="va">checkProt</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">extracell</span> <span class="op">&lt;-</span> <span class="va">extracell</span><span class="op">[</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">extracell</span>, <span class="va">checkProt</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="va">mitonchon</span> <span class="op">&lt;-</span> <span class="va">mitonchon</span><span class="op">[</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">mitonchon</span>, <span class="va">checkProt</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;# [1] 323</code></pre>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;# [1] 304</code></pre>
 <p>Two protein sequences were removed from each class. For the remaining
 sequences, we calculate the amphiphilic pseudo amino acid composition
 (APAAC) descriptor <span class="citation">Chou (2005)</span> and create
 class labels for the random forest classification modeling.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Calculate APAAC descriptors</span>
-<span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">extracell</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span>
-<span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">mitonchon</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span>
-
-<span class="co"># Make class labels</span>
-<span class="va">labels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Calculate APAAC descriptors</span></span>
+<span><span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">extracell</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">mitonchon</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Make class labels</span></span>
+<span><span class="va">labels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">extracell</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mitonchon</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>In Rcpi, the functions of commonly used descriptors for protein
 sequences and proteochemometric (PCM) modeling descriptors are named
 after <code>extractProt...()</code> and
@@ -270,25 +270,25 @@ after <code>extractProt...()</code> and
 <p>Next, we will split the data into a 75% training set and a 25% test
 set.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1001</span><span class="op">)</span>
-
-<span class="co"># Split training and test set</span>
-<span class="va">tr.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x2</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="va">te.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html" class="external-link">setdiff</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="va">tr.idx</span><span class="op">)</span>
-
-<span class="va">x.tr</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span>
-<span class="va">x.te</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span>
-<span class="va">y.tr</span> <span class="op">&lt;-</span> <span class="va">labels</span><span class="op">[</span><span class="va">tr.idx</span><span class="op">]</span>
-<span class="va">y.te</span> <span class="op">&lt;-</span> <span class="va">labels</span><span class="op">[</span><span class="va">te.idx</span><span class="op">]</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1001</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Split training and test set</span></span>
+<span><span class="va">tr.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span> <span class="op">+</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x2</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">te.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html" class="external-link">setdiff</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="va">tr.idx</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">x.tr</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span></span>
+<span><span class="va">x.te</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span></span>
+<span><span class="va">y.tr</span> <span class="op">&lt;-</span> <span class="va">labels</span><span class="op">[</span><span class="va">tr.idx</span><span class="op">]</span></span>
+<span><span class="va">y.te</span> <span class="op">&lt;-</span> <span class="va">labels</span><span class="op">[</span><span class="va">te.idx</span><span class="op">]</span></span></code></pre></div>
 <p>We will train a random forest classification model on the training
 set with 5-fold cross-validation, using the package.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://www.stat.berkeley.edu/~breiman/RandomForests/" class="external-link">"randomForest"</a></span><span class="op">)</span>
-<span class="va">rf.fit</span> <span class="op">&lt;-</span> <span class="fu">randomForest</span><span class="op">(</span><span class="va">x.tr</span>, <span class="va">y.tr</span>, cv.fold <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rf.fit</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://www.stat.berkeley.edu/~breiman/RandomForests/" class="external-link">"randomForest"</a></span><span class="op">)</span></span>
+<span><span class="va">rf.fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html" class="external-link">randomForest</a></span><span class="op">(</span><span class="va">x.tr</span>, <span class="va">y.tr</span>, cv.fold <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rf.fit</span><span class="op">)</span></span></code></pre></div>
 <p>The training result is:</p>
 <pre><code>&gt;# Call:
 &gt;#  randomForest(x = x.tr, y = y.tr, cv.fold = 5)
@@ -305,12 +305,12 @@ set with 5-fold cross-validation, using the package.</p>
 set and plot the ROC curve with the package, as is shown in Figure
 1.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Predict on test set</span>
-<span class="va">rf.pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">rf.fit</span>, newdata <span class="op">=</span> <span class="va">x.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
-
-<span class="co"># Plot ROC curve</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://expasy.org/tools/pROC/" class="external-link">"pROC"</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot.roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">rf.pred</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, print.auc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Predict on test set</span></span>
+<span><span class="va">rf.pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">rf.fit</span>, newdata <span class="op">=</span> <span class="va">x.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># Plot ROC curve</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://expasy.org/tools/pROC/" class="external-link">"pROC"</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot.roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">rf.pred</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, print.auc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="figures/ex1-1.png" alt="Figure 1: ROC curve for the test set of protein subcellular localization data." width="65%"><p class="caption">
 Figure 1: ROC curve for the test set of protein subcellular localization
@@ -356,20 +356,20 @@ feature selection, model tuning and other functionalities.</p>
 <p>Just like the last section, we load the Rcpi package, and read the
 molecules stored in a SMILES file:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
-
-<span class="va">RI.smi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
-  <span class="st">"vignettedata/RI.smi"</span>,
-  package <span class="op">=</span> <span class="st">"Rcpi"</span>
-<span class="op">)</span>
-<span class="va">RI.csv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
-  <span class="st">"vignettedata/RI.csv"</span>,
-  package <span class="op">=</span> <span class="st">"Rcpi"</span>
-<span class="op">)</span>
-
-<span class="va">x.mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">RI.smi</span>, type <span class="op">=</span> <span class="st">"mol"</span><span class="op">)</span>
-<span class="va">x.tab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></span><span class="op">(</span><span class="va">RI.csv</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="va">y</span> <span class="op">&lt;-</span> <span class="va">x.tab</span><span class="op">$</span><span class="va">RI</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">RI.smi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<span>  <span class="st">"vignettedata/RI.smi"</span>,</span>
+<span>  package <span class="op">=</span> <span class="st">"Rcpi"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">RI.csv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<span>  <span class="st">"vignettedata/RI.csv"</span>,</span>
+<span>  package <span class="op">=</span> <span class="st">"Rcpi"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">x.mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">RI.smi</span>, type <span class="op">=</span> <span class="st">"mol"</span><span class="op">)</span></span>
+<span><span class="va">x.tab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></span><span class="op">(</span><span class="va">RI.csv</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">x.tab</span><span class="op">$</span><span class="va">RI</span></span></code></pre></div>
 <p>The <code><a href="../reference/readMolFromSmi.html">readMolFromSmi()</a></code> function is used for reading
 molecules from SMILES files, for molecules stored in SDF files, use
 <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code> instead.</p>
@@ -382,16 +382,16 @@ selected molecular descriptors. The corresponding functions for
 molecular descriptor calculation are all named after
 <code>extractDrug...()</code> in <code>Rcpi</code>:</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Calculate selected molecular descriptors</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/warning.html" class="external-link">suppressWarnings</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span>
-  <span class="fu"><a href="../reference/extractDrugALOGP.html">extractDrugALOGP</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugApol.html">extractDrugApol</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugECI.html">extractDrugECI</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugTPSA.html">extractDrugTPSA</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugWeight.html">extractDrugWeight</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugWienerNumbers.html">extractDrugWienerNumbers</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugZagrebIndex.html">extractDrugZagrebIndex</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>
-<span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Calculate selected molecular descriptors</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/warning.html" class="external-link">suppressWarnings</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="../reference/extractDrugALOGP.html">extractDrugALOGP</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugApol.html">extractDrugApol</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugECI.html">extractDrugECI</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugTPSA.html">extractDrugTPSA</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugWeight.html">extractDrugWeight</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugWienerNumbers.html">extractDrugWienerNumbers</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugZagrebIndex.html">extractDrugZagrebIndex</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span></span>
+<span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>After the descriptors were calculated, the result <code>x</code> will
 be a data frame, each row represents one molecule, and each column is
 one descriptor (predictor). The Rcpi package integrated the molecular
@@ -403,26 +403,26 @@ al.</em> (2003)</span> and the ChemmineOB package <span class="citation">Horan a
 cross-validation setting is 5-fold repeated cross-validation (repeat for
 10 times).</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Run regression on training set</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/khliland/pls" class="external-link">"pls"</a></span><span class="op">)</span>
-
-<span class="co"># Cross-validation settings</span>
-<span class="va">ctrl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/trainControl.html" class="external-link">trainControl</a></span><span class="op">(</span>
-  method <span class="op">=</span> <span class="st">"repeatedcv"</span>, number <span class="op">=</span> <span class="fl">5</span>, repeats <span class="op">=</span> <span class="fl">10</span>,
-  summaryFunction <span class="op">=</span> <span class="va">defaultSummary</span>
-<span class="op">)</span>
-
-<span class="co"># Train a PLS model</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1002</span><span class="op">)</span>
-<span class="va">pls.fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span>
-  <span class="va">x</span>, <span class="va">y</span>,
-  method <span class="op">=</span> <span class="st">"pls"</span>, tuneLength <span class="op">=</span> <span class="fl">10</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,
-  metric <span class="op">=</span> <span class="st">"RMSE"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="co"># Print cross-validation results</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">pls.fit</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Run regression on training set</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/khliland/pls" class="external-link">"pls"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Cross-validation settings</span></span>
+<span><span class="va">ctrl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/trainControl.html" class="external-link">trainControl</a></span><span class="op">(</span></span>
+<span>  method <span class="op">=</span> <span class="st">"repeatedcv"</span>, number <span class="op">=</span> <span class="fl">5</span>, repeats <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  summaryFunction <span class="op">=</span> <span class="va">defaultSummary</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Train a PLS model</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1002</span><span class="op">)</span></span>
+<span><span class="va">pls.fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span></span>
+<span>  <span class="va">x</span>, <span class="va">y</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"pls"</span>, tuneLength <span class="op">=</span> <span class="fl">10</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,</span>
+<span>  metric <span class="op">=</span> <span class="st">"RMSE"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Print cross-validation results</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">pls.fit</span><span class="op">)</span></span></code></pre></div>
 <p>The cross-validation result is:</p>
 <pre><code>Partial Least Squares 
 
@@ -452,8 +452,8 @@ the number of principal components (<code>ncomp</code>) was increasing.
 We can plot the components and RMSE to helps us select the desired
 number of principal components used in the model.</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Number of components vs. RMSE</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">pls.fit</span>, asp <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Number of components vs. RMSE</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">pls.fit</span>, asp <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="figures/ex2-1.png" alt="Figure 2: Number of principal components vs. RMSE for the PLS regression model." width="85%"><p class="caption">
 Figure 2: Number of principal components vs. RMSE for the PLS regression
@@ -464,12 +464,12 @@ model.
 acceptable. At last, we plot the experimental RIs and the predicted RIs
 to see if the model fits well on the training set (Figure 3):</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Plot experimental RIs vs predicted RIs</span>
-<span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">y</span>, <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">pls.fit</span>, <span class="va">x</span><span class="op">)</span>,
-  xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>,
-  xlab <span class="op">=</span> <span class="st">"Experimental RIs"</span>, ylab <span class="op">=</span> <span class="st">"Predicted RIs"</span>
-<span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">0</span>, b <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Plot experimental RIs vs predicted RIs</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">y</span>, <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">pls.fit</span>, <span class="va">x</span><span class="op">)</span>,</span>
+<span>  xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="st">"Experimental RIs"</span>, ylab <span class="op">=</span> <span class="st">"Predicted RIs"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">0</span>, b <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="figures/ex2-2.png" alt="Figure 3: Experimental RIs vs. predicted RIs." width="65%"><p class="caption">
 Figure 3: Experimental RIs vs. predicted RIs.
@@ -494,14 +494,14 @@ maximum recommended daily dose dataset (FDAMDD) from FDA Center for Drug
 Evaluation and Research as the benchmark dataset.</p>
 <p>First, load the drug molecules stored in a SMILES file into R:</p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
-
-<span class="va">fdamdd.smi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"vignettedata/FDAMDD.smi"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span>
-<span class="va">fdamdd.csv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"vignettedata/FDAMDD.csv"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span>
-
-<span class="va">x.mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">fdamdd.smi</span>, type <span class="op">=</span> <span class="st">"mol"</span><span class="op">)</span>
-<span class="va">x.smi</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">fdamdd.smi</span>, type <span class="op">=</span> <span class="st">"text"</span><span class="op">)</span>
-<span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"class"</span>, <span class="fu"><a href="https://rdrr.io/r/base/scan.html" class="external-link">scan</a></span><span class="op">(</span><span class="va">fdamdd.csv</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">fdamdd.smi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"vignettedata/FDAMDD.smi"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span></span>
+<span><span class="va">fdamdd.csv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"vignettedata/FDAMDD.csv"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">x.mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">fdamdd.smi</span>, type <span class="op">=</span> <span class="st">"mol"</span><span class="op">)</span></span>
+<span><span class="va">x.smi</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">fdamdd.smi</span>, type <span class="op">=</span> <span class="st">"text"</span><span class="op">)</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"class"</span>, <span class="fu"><a href="https://rdrr.io/r/base/scan.html" class="external-link">scan</a></span><span class="op">(</span><span class="va">fdamdd.csv</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>The object <code>x.mol</code> is used for computing the MACCS and
 E-state fingerprints; the object <code>x.smi</code> is used for
 computing the FP4 fingerprints. The 0-1 class labels stored in file
@@ -510,10 +510,10 @@ toxicity or not.</p>
 <p>Then we calculate three different types of molecular fingerprints
 (E-state, MACCS, and FP4) for the drug molecules:</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Calculate molecular fingerprints</span>
-<span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>
-<span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span>
-<span class="va">x3</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span><span class="op">(</span><span class="va">x.smi</span>, type <span class="op">=</span> <span class="st">"smile"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Calculate molecular fingerprints</span></span>
+<span><span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span></span>
+<span><span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span><span class="op">(</span><span class="va">x.mol</span><span class="op">)</span></span>
+<span><span class="va">x3</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span><span class="op">(</span><span class="va">x.smi</span>, type <span class="op">=</span> <span class="st">"smile"</span><span class="op">)</span></span></code></pre></div>
 <p>As the nature of fingerprint-based structure representation, the
 calculated 0-1 matrix <code>x1</code>, <code>x2</code>, and
 <code>x3</code> will be very sparse. Since there are several columns
@@ -521,61 +521,61 @@ have nearly exactly the same value for all the molecules, we should
 remove them with <code><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar()</a></code> in <code>caret</code> before
 modeling, and split our training set and test set:</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span>
-
-<span class="co"># Remove near-zero variance variables</span>
-<span class="va">x1</span> <span class="op">&lt;-</span> <span class="va">x1</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span><span class="op">]</span>
-<span class="va">x2</span> <span class="op">&lt;-</span> <span class="va">x2</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x2</span><span class="op">)</span><span class="op">]</span>
-<span class="va">x3</span> <span class="op">&lt;-</span> <span class="va">x3</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x3</span><span class="op">)</span><span class="op">]</span>
-
-<span class="co"># Split training and test set</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1003</span><span class="op">)</span>
-<span class="va">tr.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span>
-<span class="va">te.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html" class="external-link">setdiff</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span>, <span class="va">tr.idx</span><span class="op">)</span>
-<span class="va">x1.tr</span> <span class="op">&lt;-</span> <span class="va">x1</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span>
-<span class="va">x1.te</span> <span class="op">&lt;-</span> <span class="va">x1</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span>
-<span class="va">x2.tr</span> <span class="op">&lt;-</span> <span class="va">x2</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span>
-<span class="va">x2.te</span> <span class="op">&lt;-</span> <span class="va">x2</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span>
-<span class="va">x3.tr</span> <span class="op">&lt;-</span> <span class="va">x3</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span>
-<span class="va">x3.te</span> <span class="op">&lt;-</span> <span class="va">x3</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span>
-<span class="va">y.tr</span> <span class="op">&lt;-</span> <span class="va">y</span><span class="op">[</span><span class="va">tr.idx</span><span class="op">]</span>
-<span class="va">y.te</span> <span class="op">&lt;-</span> <span class="va">y</span><span class="op">[</span><span class="va">te.idx</span><span class="op">]</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Remove near-zero variance variables</span></span>
+<span><span class="va">x1</span> <span class="op">&lt;-</span> <span class="va">x1</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="va">x2</span> <span class="op">&lt;-</span> <span class="va">x2</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x2</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="va">x3</span> <span class="op">&lt;-</span> <span class="va">x3</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x3</span><span class="op">)</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># Split training and test set</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1003</span><span class="op">)</span></span>
+<span><span class="va">tr.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">te.idx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html" class="external-link">setdiff</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span>, <span class="va">tr.idx</span><span class="op">)</span></span>
+<span><span class="va">x1.tr</span> <span class="op">&lt;-</span> <span class="va">x1</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span></span>
+<span><span class="va">x1.te</span> <span class="op">&lt;-</span> <span class="va">x1</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span></span>
+<span><span class="va">x2.tr</span> <span class="op">&lt;-</span> <span class="va">x2</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span></span>
+<span><span class="va">x2.te</span> <span class="op">&lt;-</span> <span class="va">x2</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span></span>
+<span><span class="va">x3.tr</span> <span class="op">&lt;-</span> <span class="va">x3</span><span class="op">[</span><span class="va">tr.idx</span>, <span class="op">]</span></span>
+<span><span class="va">x3.te</span> <span class="op">&lt;-</span> <span class="va">x3</span><span class="op">[</span><span class="va">te.idx</span>, <span class="op">]</span></span>
+<span><span class="va">y.tr</span> <span class="op">&lt;-</span> <span class="va">y</span><span class="op">[</span><span class="va">tr.idx</span><span class="op">]</span></span>
+<span><span class="va">y.te</span> <span class="op">&lt;-</span> <span class="va">y</span><span class="op">[</span><span class="va">te.idx</span><span class="op">]</span></span></code></pre></div>
 <p>On the training sets, we will train three classification models
 separately using SVM (RBF kernel), using the <code>kernlab</code>
 package and the <code>caret</code> package. The cross-validation setting
 is 5-fold repeated CV (repeat for 10 times).</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># SVM classification on training sets</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"kernlab"</span><span class="op">)</span>
-
-<span class="co"># Cross-validation settings</span>
-<span class="va">ctrl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/trainControl.html" class="external-link">trainControl</a></span><span class="op">(</span>
-  method <span class="op">=</span> <span class="st">"cv"</span>, number <span class="op">=</span> <span class="fl">5</span>, repeats <span class="op">=</span> <span class="fl">10</span>,
-  classProbs <span class="op">=</span> <span class="cn">TRUE</span>,
-  summaryFunction <span class="op">=</span> <span class="va">twoClassSummary</span>
-<span class="op">)</span>
-
-<span class="co"># SVM with RBF kernel</span>
-<span class="va">svm.fit1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span>
-  <span class="va">x1.tr</span>, <span class="va">y.tr</span>,
-  method <span class="op">=</span> <span class="st">"svmRadial"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,
-  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="va">svm.fit2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span>
-  <span class="va">x2.tr</span>, <span class="va">y.tr</span>,
-  method <span class="op">=</span> <span class="st">"svmRadial"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,
-  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="va">svm.fit3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span>
-  <span class="va">x3.tr</span>, <span class="va">y.tr</span>,
-  method <span class="op">=</span> <span class="st">"svmRadial"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,
-  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="co"># Print cross-validation results</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">svm.fit1</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">svm.fit2</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">svm.fit3</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># SVM classification on training sets</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"kernlab"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Cross-validation settings</span></span>
+<span><span class="va">ctrl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/trainControl.html" class="external-link">trainControl</a></span><span class="op">(</span></span>
+<span>  method <span class="op">=</span> <span class="st">"cv"</span>, number <span class="op">=</span> <span class="fl">5</span>, repeats <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  classProbs <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  summaryFunction <span class="op">=</span> <span class="va">twoClassSummary</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># SVM with RBF kernel</span></span>
+<span><span class="va">svm.fit1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span></span>
+<span>  <span class="va">x1.tr</span>, <span class="va">y.tr</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"svmRadial"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,</span>
+<span>  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">svm.fit2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span></span>
+<span>  <span class="va">x2.tr</span>, <span class="va">y.tr</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"svmRadial"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,</span>
+<span>  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">svm.fit3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span></span>
+<span>  <span class="va">x3.tr</span>, <span class="va">y.tr</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"svmRadial"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,</span>
+<span>  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Print cross-validation results</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">svm.fit1</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">svm.fit2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">svm.fit3</span><span class="op">)</span></span></code></pre></div>
 <p>The training result when using E-state fingerprints:</p>
 <pre><code>&gt;# Support Vector Machines with Radial Basis Function Kernel
 &gt;#
@@ -655,20 +655,20 @@ fingerprints.</p>
 <p>We predict on the test sets with the established models, and plot the
 ROC curves in one figure, as is shown in Figure 4.</p>
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Predict on test set</span>
-<span class="va">svm.pred1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">svm.fit1</span>, newdata <span class="op">=</span> <span class="va">x1.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
-<span class="va">svm.pred2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">svm.fit2</span>, newdata <span class="op">=</span> <span class="va">x2.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
-<span class="va">svm.pred3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">svm.fit3</span>, newdata <span class="op">=</span> <span class="va">x3.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
-
-<span class="co"># Generate colors</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"RColorBrewer"</span><span class="op">)</span>
-<span class="va">pal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html" class="external-link">brewer.pal</a></span><span class="op">(</span><span class="fl">3</span>, <span class="st">"Set1"</span><span class="op">)</span>
-
-<span class="co"># ROC curves of different fingerprints</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://expasy.org/tools/pROC/" class="external-link">"pROC"</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/smooth.html" class="external-link">smooth</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred1</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/smooth.html" class="external-link">smooth</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred2</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/smooth.html" class="external-link">smooth</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred3</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Predict on test set</span></span>
+<span><span class="va">svm.pred1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">svm.fit1</span>, newdata <span class="op">=</span> <span class="va">x1.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span><span class="va">svm.pred2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">svm.fit2</span>, newdata <span class="op">=</span> <span class="va">x2.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span><span class="va">svm.pred3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">svm.fit3</span>, newdata <span class="op">=</span> <span class="va">x3.te</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># Generate colors</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"RColorBrewer"</span><span class="op">)</span></span>
+<span><span class="va">pal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html" class="external-link">brewer.pal</a></span><span class="op">(</span><span class="fl">3</span>, <span class="st">"Set1"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># ROC curves of different fingerprints</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://expasy.org/tools/pROC/" class="external-link">"pROC"</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">smooth</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred1</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">smooth</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred2</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">smooth</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred3</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="figures/ex3-1.png" alt="Figure 4: Smoothed ROC curves for different fingerprint types." width="65%"><p class="caption">
 Figure 4: Smoothed ROC curves for different fingerprint types.
@@ -699,43 +699,43 @@ database composed by searching <em>tyrphostin</em> in PubChem and
 filtered by <em>Lipinski”s rule of five</em>. We load this SDF file
 using <code><a href="../reference/readMolFromSDF.html">readMolFromSDF()</a></code>:</p>
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
-<span class="va">mols</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSDF.html">readMolFromSDF</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
-  <span class="st">"compseq/tyrphostin.sdf"</span>,
-  package <span class="op">=</span> <span class="st">"Rcpi"</span>
-<span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span></span>
+<span><span class="va">mols</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readMolFromSDF.html">readMolFromSDF</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<span>  <span class="st">"compseq/tyrphostin.sdf"</span>,</span>
+<span>  package <span class="op">=</span> <span class="st">"Rcpi"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Then we compute the E-state fingerprints for all the molecules using
 <code><a href="../reference/extractDrugEstate.html">extractDrugEstate()</a></code>, and calculate their pairwise
 similarity matrix with <code><a href="../reference/calcDrugFPSim.html">calcDrugFPSim()</a></code>:</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">simmat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mols</span><span class="op">)</span><span class="op">)</span>
-
-<span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mols</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-  <span class="kw">for</span> <span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="va">i</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mols</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-    <span class="va">fp1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span><span class="op">(</span><span class="va">mols</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>
-    <span class="va">fp2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span><span class="op">(</span><span class="va">mols</span><span class="op">[[</span><span class="va">j</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>
-    <span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calcDrugFPSim.html">calcDrugFPSim</a></span><span class="op">(</span><span class="va">fp1</span>, <span class="va">fp2</span>, fptype <span class="op">=</span> <span class="st">"compact"</span>, metric <span class="op">=</span> <span class="st">"tanimoto"</span><span class="op">)</span>
-    <span class="va">simmat</span><span class="op">[</span><span class="va">i</span>, <span class="va">j</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">tmp</span>
-    <span class="va">simmat</span><span class="op">[</span><span class="va">j</span>, <span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">tmp</span>
-  <span class="op">}</span>
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">simmat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mols</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mols</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="va">i</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">mols</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">fp1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span><span class="op">(</span><span class="va">mols</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span>    <span class="va">fp2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extractDrugEstate.html">extractDrugEstate</a></span><span class="op">(</span><span class="va">mols</span><span class="op">[[</span><span class="va">j</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span>    <span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calcDrugFPSim.html">calcDrugFPSim</a></span><span class="op">(</span><span class="va">fp1</span>, <span class="va">fp2</span>, fptype <span class="op">=</span> <span class="st">"compact"</span>, metric <span class="op">=</span> <span class="st">"tanimoto"</span><span class="op">)</span></span>
+<span>    <span class="va">simmat</span><span class="op">[</span><span class="va">i</span>, <span class="va">j</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">tmp</span></span>
+<span>    <span class="va">simmat</span><span class="op">[</span><span class="va">j</span>, <span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">tmp</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 <p>With the computed similarity matrix <code>simmat</code>, we will try
 to cluster the molecules using hierarchical clustering, then visualize
 the clustering result:</p>
 <div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mol.hc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">as.dist</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">simmat</span><span class="op">)</span>, method <span class="op">=</span> <span class="st">"ward.D"</span><span class="op">)</span>
-
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://ape-package.ird.fr/" class="external-link">"ape"</a></span><span class="op">)</span> <span class="co"># Tree visualization of clusters</span>
-<span class="va">clus5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/cutree.html" class="external-link">cutree</a></span><span class="op">(</span><span class="va">mol.hc</span>, <span class="fl">5</span><span class="op">)</span> <span class="co"># Cut dendrogram into 5 clusters</span>
-
-<span class="co"># Generate colors</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"RColorBrewer"</span><span class="op">)</span>
-<span class="va">pal5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html" class="external-link">brewer.pal</a></span><span class="op">(</span><span class="fl">5</span>, <span class="st">"Set1"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">as.phylo</span><span class="op">(</span><span class="va">mol.hc</span><span class="op">)</span>,
-  type <span class="op">=</span> <span class="st">"fan"</span>,
-  tip.color <span class="op">=</span> <span class="va">pal5</span><span class="op">[</span><span class="va">clus5</span><span class="op">]</span>,
-  label.offset <span class="op">=</span> <span class="fl">0.1</span>, cex <span class="op">=</span> <span class="fl">0.7</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mol.hc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html" class="external-link">as.dist</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">simmat</span><span class="op">)</span>, method <span class="op">=</span> <span class="st">"ward.D"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://ape-package.ird.fr/" class="external-link">"ape"</a></span><span class="op">)</span> <span class="co"># Tree visualization of clusters</span></span>
+<span><span class="va">clus5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/cutree.html" class="external-link">cutree</a></span><span class="op">(</span><span class="va">mol.hc</span>, <span class="fl">5</span><span class="op">)</span> <span class="co"># Cut dendrogram into 5 clusters</span></span>
+<span></span>
+<span><span class="co"># Generate colors</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"RColorBrewer"</span><span class="op">)</span></span>
+<span><span class="va">pal5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html" class="external-link">brewer.pal</a></span><span class="op">(</span><span class="fl">5</span>, <span class="st">"Set1"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/as.phylo.html" class="external-link">as.phylo</a></span><span class="op">(</span><span class="va">mol.hc</span><span class="op">)</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"fan"</span>,</span>
+<span>  tip.color <span class="op">=</span> <span class="va">pal5</span><span class="op">[</span><span class="va">clus5</span><span class="op">]</span>,</span>
+<span>  label.offset <span class="op">=</span> <span class="fl">0.1</span>, cex <span class="op">=</span> <span class="fl">0.7</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>The hierarchical clustering result for these molecules is shown in
 Figure 5.</p>
 <div class="figure">
@@ -759,45 +759,45 @@ reversible tyrosine kinase inhibitor. Given this molecule as the query
 molecule, we will do a similarity searching in the database
 <code>tyrphostin.sdf</code> presented in the last subsection.</p>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
-
-<span class="va">mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"compseq/DB00530.sdf"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span>
-<span class="va">moldb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"compseq/tyrphostin.sdf"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mol</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"compseq/DB00530.sdf"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span></span>
+<span><span class="va">moldb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"compseq/tyrphostin.sdf"</span>, package <span class="op">=</span> <span class="st">"Rcpi"</span><span class="op">)</span></span></code></pre></div>
 <p>We can do parallelized drug molecular similarity search with the
 <code><a href="../reference/searchDrug.html">searchDrug()</a></code> function in Rcpi. Here we choose the search
 criterion to be MACCS keys with cosine similarity, FP2 fingerprints with
 tanimoto similarity, and maximum common substructure search with
 tanimoto similarity.</p>
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">rank1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/searchDrug.html">searchDrug</a></span><span class="op">(</span>
-  <span class="va">mol</span>, <span class="va">moldb</span>,
-  cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">"fp"</span>,
-  fptype <span class="op">=</span> <span class="st">"maccs"</span>, fpsim <span class="op">=</span> <span class="st">"tanimoto"</span>
-<span class="op">)</span>
-<span class="va">rank2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/searchDrug.html">searchDrug</a></span><span class="op">(</span>
-  <span class="va">mol</span>, <span class="va">moldb</span>,
-  cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">"fp"</span>,
-  fptype <span class="op">=</span> <span class="st">"fp2"</span>, fpsim <span class="op">=</span> <span class="st">"cosine"</span>
-<span class="op">)</span>
-<span class="va">rank3</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/searchDrug.html">searchDrug</a></span><span class="op">(</span>
-  <span class="va">mol</span>, <span class="va">moldb</span>,
-  cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">"mcs"</span>,
-  mcssim <span class="op">=</span> <span class="st">"tanimoto"</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">rank1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/searchDrug.html">searchDrug</a></span><span class="op">(</span></span>
+<span>  <span class="va">mol</span>, <span class="va">moldb</span>,</span>
+<span>  cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">"fp"</span>,</span>
+<span>  fptype <span class="op">=</span> <span class="st">"maccs"</span>, fpsim <span class="op">=</span> <span class="st">"tanimoto"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">rank2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/searchDrug.html">searchDrug</a></span><span class="op">(</span></span>
+<span>  <span class="va">mol</span>, <span class="va">moldb</span>,</span>
+<span>  cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">"fp"</span>,</span>
+<span>  fptype <span class="op">=</span> <span class="st">"fp2"</span>, fpsim <span class="op">=</span> <span class="st">"cosine"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">rank3</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/searchDrug.html">searchDrug</a></span><span class="op">(</span></span>
+<span>  <span class="va">mol</span>, <span class="va">moldb</span>,</span>
+<span>  cores <span class="op">=</span> <span class="fl">4</span>, method <span class="op">=</span> <span class="st">"mcs"</span>,</span>
+<span>  mcssim <span class="op">=</span> <span class="st">"tanimoto"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>The returned search result is stored as a numerical vector, the name
 of each element is the molecule number in the database, and the value is
 the similarity value between the query molecule and this molecule. We
 print the top search results here:</p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank1</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank1</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;#        92       100        83       101         1        36
 &gt;# 0.6491228 0.6491228 0.5882353 0.5660377 0.5000000 0.4861111</code></pre>
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank2</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;#       100        92        83       101        94        16
 &gt;# 0.8310005 0.8208663 0.5405856 0.5033150 0.4390790 0.4274081</code></pre>
 <div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank3</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rank3</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;#        92       100        23        39        94        64
 &gt;# 0.7000000 0.7000000 0.4000000 0.4000000 0.4000000 0.3783784</code></pre>
 <p>The Rcpi package also integrated the functionality of converting
@@ -808,17 +808,17 @@ similarity derived by maximum common substructure search between the
 query molecule and the #92 molecule using
 <code><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim()</a></code>:</p>
 <div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Convert SDF format to SMILES format</span>
-<span class="fu"><a href="../reference/convMolFormat.html">convMolFormat</a></span><span class="op">(</span>
-  infile <span class="op">=</span> <span class="va">mol</span>, outfile <span class="op">=</span> <span class="st">"DB00530.smi"</span>, from <span class="op">=</span> <span class="st">"sdf"</span>, to <span class="op">=</span> <span class="st">"smiles"</span>
-<span class="op">)</span>
-<span class="fu"><a href="../reference/convMolFormat.html">convMolFormat</a></span><span class="op">(</span>
-  infile <span class="op">=</span> <span class="va">moldb</span>, outfile <span class="op">=</span> <span class="st">"tyrphostin.smi"</span>, from <span class="op">=</span> <span class="st">"sdf"</span>, to <span class="op">=</span> <span class="st">"smiles"</span>
-<span class="op">)</span>
-
-<span class="va">smi1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="st">"DB00530.smi"</span><span class="op">)</span>
-<span class="va">smi2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="st">"tyrphostin.smi"</span><span class="op">)</span><span class="op">[</span><span class="fl">92</span><span class="op">]</span> <span class="co"># Select the #92 molecule</span>
-<span class="fu"><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim</a></span><span class="op">(</span><span class="va">smi1</span>, <span class="va">smi2</span>, type <span class="op">=</span> <span class="st">"smile"</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Convert SDF format to SMILES format</span></span>
+<span><span class="fu"><a href="../reference/convMolFormat.html">convMolFormat</a></span><span class="op">(</span></span>
+<span>  infile <span class="op">=</span> <span class="va">mol</span>, outfile <span class="op">=</span> <span class="st">"DB00530.smi"</span>, from <span class="op">=</span> <span class="st">"sdf"</span>, to <span class="op">=</span> <span class="st">"smiles"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/convMolFormat.html">convMolFormat</a></span><span class="op">(</span></span>
+<span>  infile <span class="op">=</span> <span class="va">moldb</span>, outfile <span class="op">=</span> <span class="st">"tyrphostin.smi"</span>, from <span class="op">=</span> <span class="st">"sdf"</span>, to <span class="op">=</span> <span class="st">"smiles"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">smi1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="st">"DB00530.smi"</span><span class="op">)</span></span>
+<span><span class="va">smi2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="st">"tyrphostin.smi"</span><span class="op">)</span><span class="op">[</span><span class="fl">92</span><span class="op">]</span> <span class="co"># Select the #92 molecule</span></span>
+<span><span class="fu"><a href="../reference/calcDrugMCSSim.html">calcDrugMCSSim</a></span><span class="op">(</span><span class="va">smi1</span>, <span class="va">smi2</span>, type <span class="op">=</span> <span class="st">"smile"</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>The MCS search result is stored in a list, which contains the
 original MCS result provided by the <code>fmcsR</code> package <span class="citation">Wang <em>et al.</em> (2013)</span>, the Tanimoto
 coefficient and the overlap coefficient.</p>
@@ -884,17 +884,17 @@ stored in <code>GPCR.csv</code>. The first column is KEGG protein ID,
 and the second column is KEGG drug ID. The first 635 rows form the
 positive set, and the last 635 rows form the negative set.</p>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
-
-<span class="va">gpcr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
-  <span class="st">"vignettedata/GPCR.csv"</span>,
-  package <span class="op">=</span> <span class="st">"Rcpi"</span>
-<span class="op">)</span>,
-header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gpcr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<span>  <span class="st">"vignettedata/GPCR.csv"</span>,</span>
+<span>  package <span class="op">=</span> <span class="st">"Rcpi"</span></span>
+<span><span class="op">)</span>,</span>
+<span>header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>Take a look at the data:</p>
 <div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span></span></code></pre></div>
 <pre><code>&gt;#          V1     V2
 &gt;# 1 hsa:10161 D00528
 &gt;# 2 hsa:10800 D00411
@@ -906,30 +906,31 @@ header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span clas
 pattern for the GPCR drug-target interaction network in the form of an
 <em>arc diagram</em>.</p>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://igraph.org" class="external-link">"igraph"</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"arcdiagram"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://had.co.nz/reshape" class="external-link">"reshape"</a></span><span class="op">)</span>
-
-<span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/graph_from_data_frame.html" class="external-link">graph.data.frame</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span>, <span class="op">]</span>, directed <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-<span class="va">edgelist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/as_edgelist.html" class="external-link">get.edgelist</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span>
-<span class="va">vlabels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/V.html" class="external-link">V</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span><span class="op">$</span><span class="va">name</span>
-<span class="va">vgroups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">95</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">223</span><span class="op">)</span><span class="op">)</span>
-<span class="va">vfill</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#8B91D4"</span>, <span class="fl">95</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#B2C771"</span>, <span class="fl">223</span><span class="op">)</span><span class="op">)</span>
-<span class="va">vborders</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#6F74A9"</span>, <span class="fl">95</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#8E9F5A"</span>, <span class="fl">223</span><span class="op">)</span><span class="op">)</span>
-<span class="va">degrees</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/degree.html" class="external-link">degree</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span>
-
-<span class="va">xx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">vgroups</span>, <span class="va">degrees</span>, <span class="va">vlabels</span>, ind <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/pkg/igraph/man/gorder.html" class="external-link">vcount</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span><span class="op">)</span>
-<span class="va">yy</span> <span class="op">&lt;-</span> <span class="fu">arrange</span><span class="op">(</span><span class="va">xx</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">vgroups</span><span class="op">)</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">degrees</span><span class="op">)</span><span class="op">)</span>
-<span class="va">new.ord</span> <span class="op">&lt;-</span> <span class="va">yy</span><span class="op">$</span><span class="va">ind</span>
-
-<span class="fu">arcplot</span><span class="op">(</span>
-  <span class="va">edgelist</span>,
-  ordering <span class="op">=</span> <span class="va">new.ord</span>, labels <span class="op">=</span> <span class="va">vlabels</span>,
-  cex.labels <span class="op">=</span> <span class="fl">0.1</span>, show.nodes <span class="op">=</span> <span class="cn">TRUE</span>,
-  col.nodes <span class="op">=</span> <span class="va">vborders</span>, bg.nodes <span class="op">=</span> <span class="va">vfill</span>,
-  cex.nodes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log10</a></span><span class="op">(</span><span class="va">degrees</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>,
-  pch.nodes <span class="op">=</span> <span class="fl">21</span>, line <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span>, col.arcs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/hsv.html" class="external-link">hsv</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0.2</span>, <span class="fl">0.25</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://igraph.org" class="external-link">"igraph"</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://had.co.nz/reshape" class="external-link">"reshape"</a></span><span class="op">)</span></span>
+<span><span class="co"># remotes::install_github("gastonstat/arcdiagram")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/gastonstat/arcdiagram" class="external-link">"arcdiagram"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/graph_from_data_frame.html" class="external-link">graph.data.frame</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span>, <span class="op">]</span>, directed <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">edgelist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/as_edgelist.html" class="external-link">get.edgelist</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span></span>
+<span><span class="va">vlabels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/V.html" class="external-link">V</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span><span class="op">$</span><span class="va">name</span></span>
+<span><span class="va">vgroups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">95</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">223</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">vfill</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#8B91D4"</span>, <span class="fl">95</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#B2C771"</span>, <span class="fl">223</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">vborders</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#6F74A9"</span>, <span class="fl">95</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"#8E9F5A"</span>, <span class="fl">223</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">degrees</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/degree.html" class="external-link">degree</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">xx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">vgroups</span>, <span class="va">degrees</span>, <span class="va">vlabels</span>, ind <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/pkg/igraph/man/gorder.html" class="external-link">vcount</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">yy</span> <span class="op">&lt;-</span> <span class="fu">arrange</span><span class="op">(</span><span class="va">xx</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">vgroups</span><span class="op">)</span>, <span class="fu">desc</span><span class="op">(</span><span class="va">degrees</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">new.ord</span> <span class="op">&lt;-</span> <span class="va">yy</span><span class="op">$</span><span class="va">ind</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/arcdiagram/man/arcplot.html" class="external-link">arcplot</a></span><span class="op">(</span></span>
+<span>  <span class="va">edgelist</span>,</span>
+<span>  ordering <span class="op">=</span> <span class="va">new.ord</span>, labels <span class="op">=</span> <span class="va">vlabels</span>,</span>
+<span>  cex.labels <span class="op">=</span> <span class="fl">0.1</span>, show.nodes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  col.nodes <span class="op">=</span> <span class="va">vborders</span>, bg.nodes <span class="op">=</span> <span class="va">vfill</span>,</span>
+<span>  cex.nodes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log10</a></span><span class="op">(</span><span class="va">degrees</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.1</span>,</span>
+<span>  pch.nodes <span class="op">=</span> <span class="fl">21</span>, line <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span>, col.arcs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/hsv.html" class="external-link">hsv</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0.2</span>, <span class="fl">0.25</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="figures/ex6-1.png" alt="Figure 7: Arc diagram visualization of the GPCR drug-target interaction network." width="85%"><p class="caption">
 Figure 7: Arc diagram visualization of the GPCR drug-target interaction
@@ -944,20 +945,20 @@ bridges.</p>
 and drug molecule (in SMILES format) from the KEGG database, in
 parallel:</p>
 <div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span>
-
-<span class="va">gpcr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>
-  <span class="st">"vignettedata/GPCR.csv"</span>,
-  package <span class="op">=</span> <span class="st">"Rcpi"</span>
-<span class="op">)</span>,
-header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="va">protid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span><span class="op">)</span>
-<span class="va">drugid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span><span class="op">)</span>
-
-<span class="va">protseq</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getSeqFromKEGG.html">getSeqFromKEGG</a></span><span class="op">(</span><span class="va">protid</span>, parallel <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
-<span class="va">drugseq</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getSmiFromKEGG.html">getSmiFromKEGG</a></span><span class="op">(</span><span class="va">drugid</span>, parallel <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/Rcpi/">"Rcpi"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gpcr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
+<span>  <span class="st">"vignettedata/GPCR.csv"</span>,</span>
+<span>  package <span class="op">=</span> <span class="st">"Rcpi"</span></span>
+<span><span class="op">)</span>,</span>
+<span>header <span class="op">=</span> <span class="cn">FALSE</span>, as.is <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">protid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">drugid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">protseq</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getSeqFromKEGG.html">getSeqFromKEGG</a></span><span class="op">(</span><span class="va">protid</span>, parallel <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">drugseq</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getSmiFromKEGG.html">getSmiFromKEGG</a></span><span class="op">(</span><span class="va">drugid</span>, parallel <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></span></code></pre></div>
 <p>If the connection is slow or accidentally interrupts, just try a few
 more times until success.</p>
 <p>The functions in Rcpi named after <code>getMolFrom...()</code> and
@@ -974,31 +975,31 @@ databases.</p>
 sequence descriptors and molecular descriptors for the targets and
 drugs:</p>
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x0.prot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">protseq</span><span class="op">)</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">protseq</span><span class="op">)</span>, <span class="va">extractProtCTriad</span><span class="op">)</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="va">x0.drug</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span>
-  <span class="fu"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span><span class="op">(</span><span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/textconnections.html" class="external-link">textConnection</a></span><span class="op">(</span><span class="va">drugseq</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span><span class="op">(</span><span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/textconnections.html" class="external-link">textConnection</a></span><span class="op">(</span><span class="va">drugseq</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,
-  <span class="fu"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span><span class="op">(</span><span class="va">drugseq</span>, type <span class="op">=</span> <span class="st">"smile"</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">x0.prot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">protseq</span><span class="op">)</span>, <span class="va">extractProtAPAAC</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">protseq</span><span class="op">)</span>, <span class="va">extractProtCTriad</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">x0.drug</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="../reference/extractDrugEstateComplete.html">extractDrugEstateComplete</a></span><span class="op">(</span><span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/textconnections.html" class="external-link">textConnection</a></span><span class="op">(</span><span class="va">drugseq</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugMACCSComplete.html">extractDrugMACCSComplete</a></span><span class="op">(</span><span class="fu"><a href="../reference/readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/textconnections.html" class="external-link">textConnection</a></span><span class="op">(</span><span class="va">drugseq</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/extractDrugOBFP4.html">extractDrugOBFP4</a></span><span class="op">(</span><span class="va">drugseq</span>, type <span class="op">=</span> <span class="st">"smile"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>Since the descriptors is only for the <em>deduplicated</em> drug and
 target list, we need to generate the full descriptor matrix for the
 training data:</p>
 <div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Generate drug x / protein x / y</span>
-<span class="va">x.prot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="cn">NA</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">x0.prot</span><span class="op">)</span><span class="op">)</span>
-<span class="va">x.drug</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="cn">NA</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">x0.drug</span><span class="op">)</span><span class="op">)</span>
-<span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span><span class="op">)</span> <span class="va">x.prot</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span> <span class="op">&lt;-</span> <span class="va">x0.prot</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">==</span> <span class="va">protid</span><span class="op">)</span>, <span class="op">]</span>
-<span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span><span class="op">)</span> <span class="va">x.drug</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span> <span class="op">&lt;-</span> <span class="va">x0.drug</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">==</span> <span class="va">drugid</span><span class="op">)</span>, <span class="op">]</span>
-
-<span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"pos"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"neg"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Generate drug x / protein x / y</span></span>
+<span><span class="va">x.prot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="cn">NA</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">x0.prot</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">x.drug</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="cn">NA</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">x0.drug</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span><span class="op">)</span> <span class="va">x.prot</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span> <span class="op">&lt;-</span> <span class="va">x0.prot</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">==</span> <span class="va">protid</span><span class="op">)</span>, <span class="op">]</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span><span class="op">)</span> <span class="va">x.drug</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span> <span class="op">&lt;-</span> <span class="va">x0.drug</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">==</span> <span class="va">drugid</span><span class="op">)</span>, <span class="op">]</span></span>
+<span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"pos"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"neg"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">gpcr</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Generate drug-target interaction descriptors using
 <code><a href="../reference/getCPI.html">getCPI()</a></code>.</p>
 <div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getCPI.html">getCPI</a></span><span class="op">(</span><span class="va">x.prot</span>, <span class="va">x.drug</span>, type <span class="op">=</span> <span class="st">"combine"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getCPI.html">getCPI</a></span><span class="op">(</span><span class="va">x.prot</span>, <span class="va">x.drug</span>, type <span class="op">=</span> <span class="st">"combine"</span><span class="op">)</span></span></code></pre></div>
 <p>The pairwise interaction is another useful type of representation in
 drug-target prediction, protein-protein interaction prediction and
 related research. Rcpi also provides <code><a href="../reference/getPPI.html">getPPI()</a></code> to generate
@@ -1044,27 +1045,27 @@ p\)</span> columns.</li>
 <p>Train a random forest classification model with 5-fold repeated
 CV:</p>
 <div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">]</span>
-
-<span class="co"># Cross-validation settings</span>
-<span class="va">ctrl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/trainControl.html" class="external-link">trainControl</a></span><span class="op">(</span>
-  method <span class="op">=</span> <span class="st">"cv"</span>, number <span class="op">=</span> <span class="fl">5</span>, repeats <span class="op">=</span> <span class="fl">10</span>,
-  classProbs <span class="op">=</span> <span class="cn">TRUE</span>,
-  summaryFunction <span class="op">=</span> <span class="va">twoClassSummary</span>
-<span class="op">)</span>
-
-<span class="co"># Train a random forest classifier</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://www.stat.berkeley.edu/~breiman/RandomForests/" class="external-link">"randomForest"</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1006</span><span class="op">)</span>
-<span class="va">rf.fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span>
-  <span class="va">x</span>, <span class="va">y</span>,
-  method <span class="op">=</span> <span class="st">"rf"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,
-  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/topepo/caret/" class="external-link">"caret"</a></span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/pkg/caret/man/nearZeroVar.html" class="external-link">nearZeroVar</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># Cross-validation settings</span></span>
+<span><span class="va">ctrl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/trainControl.html" class="external-link">trainControl</a></span><span class="op">(</span></span>
+<span>  method <span class="op">=</span> <span class="st">"cv"</span>, number <span class="op">=</span> <span class="fl">5</span>, repeats <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  classProbs <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  summaryFunction <span class="op">=</span> <span class="va">twoClassSummary</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Train a random forest classifier</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://www.stat.berkeley.edu/~breiman/RandomForests/" class="external-link">"randomForest"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1006</span><span class="op">)</span></span>
+<span><span class="va">rf.fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/caret/man/train.html" class="external-link">train</a></span><span class="op">(</span></span>
+<span>  <span class="va">x</span>, <span class="va">y</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"rf"</span>, trControl <span class="op">=</span> <span class="va">ctrl</span>,</span>
+<span>  metric <span class="op">=</span> <span class="st">"ROC"</span>, preProc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"center"</span>, <span class="st">"scale"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>Print the cross-validation result:</p>
-<pre><code><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rf.fit</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rf.fit</span><span class="op">)</span></span></code></pre>
 <pre><code>&gt;# Random Forest
 &gt;#
 &gt;# 1270 samples
@@ -1088,10 +1089,10 @@ CV:</p>
 <p>Predict on the training set (for demonstration purpose only) and plot
 ROC curve.</p>
 <div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">rf.pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">rf.fit</span><span class="op">$</span><span class="va">finalModel</span>, <span class="va">x</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
-
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://expasy.org/tools/pROC/" class="external-link">"pROC"</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/pROC/man/plot.roc.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/smooth.html" class="external-link">smooth</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y</span>, <span class="va">rf.pred</span><span class="op">)</span><span class="op">)</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, print.auc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">rf.pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">rf.fit</span><span class="op">$</span><span class="va">finalModel</span>, <span class="va">x</span>, type <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="http://expasy.org/tools/pROC/" class="external-link">"pROC"</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">smooth</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/pROC/man/roc.html" class="external-link">roc</a></span><span class="op">(</span><span class="va">y</span>, <span class="va">rf.pred</span><span class="op">)</span><span class="op">)</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, print.auc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>The ROC curve is shown in Figure 8.</p>
 <div class="figure">
 <img src="figures/ex6-2.png" alt="Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest." width="65%"><p class="caption">
@@ -1172,7 +1173,7 @@ Chromatography A</em>, <strong>1223</strong>, 118–125.
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer>

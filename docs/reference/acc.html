@@ -14,7 +14,7 @@ of the Same Length"><meta property="og:image" content="https://nanx.me/Rcpi/logo
     
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.33.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@ of the Same Length</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">acc</span><span class="op">(</span><span class="va">mat</span>, <span class="va">lag</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">acc</span><span class="op">(</span><span class="va">mat</span>, <span class="va">lag</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -75,12 +75,17 @@ of the Same Length</p>
 <dd><p>A <code>p * n</code> matrix. Each row represents one scale
 (total <code>p</code> scales), each column represents one amino acid position
 (total <code>n</code> amino acids).</p></dd>
+
+
 <dt>lag</dt>
 <dd><p>The lag parameter. Must be less than the amino acids.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A length <code>lag * p^2</code> named vector, the element names are
+    
+
+<p>A length <code>lag * p^2</code> named vector, the element names are
         constructed by: the scales index (crossed scales index) and
         lag index.</p>
     </div>
@@ -116,192 +121,192 @@ and <code><a href="extractPCMPropScales.html">extractPCMPropScales</a></code>.</
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">p</span> <span class="op">=</span> <span class="fl">8</span>    <span class="co"># p is the scales number</span></span>
-<span class="r-in"><span class="va">n</span> <span class="op">=</span> <span class="fl">200</span>  <span class="co"># n is the amino acid number</span></span>
-<span class="r-in"><span class="va">lag</span> <span class="op">=</span> <span class="fl">7</span>  <span class="co"># the lag paramter</span></span>
-<span class="r-in"><span class="va">mat</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="va">p</span> <span class="op">*</span> <span class="va">n</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="va">p</span>, ncol <span class="op">=</span> <span class="va">n</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">acc</span><span class="op">(</span><span class="va">mat</span>, <span class="va">lag</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">p</span> <span class="op">=</span> <span class="fl">8</span>    <span class="co"># p is the scales number</span></span></span>
+<span class="r-in"><span><span class="va">n</span> <span class="op">=</span> <span class="fl">200</span>  <span class="co"># n is the amino acid number</span></span></span>
+<span class="r-in"><span><span class="va">lag</span> <span class="op">=</span> <span class="fl">7</span>  <span class="co"># the lag paramter</span></span></span>
+<span class="r-in"><span><span class="va">mat</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="va">p</span> <span class="op">*</span> <span class="va">n</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="va">p</span>, ncol <span class="op">=</span> <span class="va">n</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">acc</span><span class="op">(</span><span class="va">mat</span>, <span class="va">lag</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl1.lag1     scl2.lag1     scl3.lag1     scl4.lag1     scl5.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0189919898  0.0439221887 -0.0960508174 -0.0120599768  0.0482875846 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0142483468 -0.0228854836  0.0019009147  0.0194756196  0.0941402537 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl6.lag1     scl7.lag1     scl8.lag1     scl1.lag2     scl2.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0903950980  0.0081512305  0.1429366795  0.0383841497  0.0177996431 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1446088465 -0.0301451417 -0.0408943847 -0.0140775451  0.0530623127 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl3.lag2     scl4.lag2     scl5.lag2     scl6.lag2     scl7.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0675908719  0.0060115637  0.0432014160  0.0531071245 -0.0992079038 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0399536421 -0.0300567583  0.0918200173  0.0746043691  0.0347804076 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl8.lag2     scl1.lag3     scl2.lag3     scl3.lag3     scl4.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1188474912  0.0206347918  0.0286100281  0.1115176873  0.0801247333 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0159981658  0.0658656865 -0.0401802284  0.0238192894  0.0130324270 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl5.lag3     scl6.lag3     scl7.lag3     scl8.lag3     scl1.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0116959841 -0.0337813782 -0.0292778116  0.0944635193  0.0573380229 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0438030682  0.0362708201 -0.0879933522 -0.0397434862 -0.0091072855 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl2.lag4     scl3.lag4     scl4.lag4     scl5.lag4     scl6.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0325377455  0.0233484393 -0.1615698757 -0.0952722472  0.0852722101 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0054979966  0.0371761627  0.0499004705 -0.0432344069 -0.0182846716 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl7.lag4     scl8.lag4     scl1.lag5     scl2.lag5     scl3.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0788382252  0.0902970291 -0.1226789479  0.0325053583  0.0245332581 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0496601115  0.0393458285 -0.0021909859 -0.0926422724 -0.1399298927 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl4.lag5     scl5.lag5     scl6.lag5     scl7.lag5     scl8.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0218898429  0.0081316561 -0.0774798525  0.1108366950  0.0847299120 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0166293629  0.0257698015 -0.0419803459 -0.0179804614  0.0592064306 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl1.lag6     scl2.lag6     scl3.lag6     scl4.lag6     scl5.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0597189953 -0.0589041476  0.0645001760  0.0665893094  0.0132882868 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0500771014 -0.0072409934 -0.0118821051 -0.1257892331  0.0924985855 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl6.lag6     scl7.lag6     scl8.lag6     scl1.lag7     scl2.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0284369499  0.0813607392  0.1365893489  0.0025093525 -0.0634547754 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0890284908  0.0275021008  0.0941315431  0.0423022652  0.0661326376 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl3.lag7     scl4.lag7     scl5.lag7     scl6.lag7     scl7.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0443394241  0.0052472666 -0.0117494478 -0.0750922521  0.0581890208 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0642559744  0.0258132921  0.0190030482  0.0692118641  0.1220790290 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     scl8.lag7   scl1.2.lag1   scl1.3.lag1   scl1.4.lag1   scl1.5.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1108956968 -0.0741937727  0.0914303025 -0.1007988440  0.0654784455 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0893716465 -0.0620888167 -0.0201451644  0.0047039757 -0.0348316027 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.6.lag1   scl1.7.lag1   scl1.8.lag1   scl2.3.lag1   scl2.4.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0546390511 -0.0136296141  0.0612400108  0.0899777801  0.0417207572 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0724195613  0.0703788648 -0.0247157680  0.0731198348 -0.0335669471 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.5.lag1   scl2.6.lag1   scl2.7.lag1   scl2.8.lag1   scl3.4.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0770100941 -0.0166874516  0.0606455053  0.0233613292 -0.0053976463 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0003757571 -0.1022022128 -0.0363055617 -0.0335130922 -0.0181760261 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.5.lag1   scl3.6.lag1   scl3.7.lag1   scl3.8.lag1   scl4.5.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0535242133 -0.0214417847  0.0537600377 -0.0038423284 -0.0975133943 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0803084186 -0.0169379512 -0.0632965790 -0.1404247098  0.1142332720 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.6.lag1   scl4.7.lag1   scl4.8.lag1   scl5.6.lag1   scl5.7.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0489603569 -0.1456475308  0.0187837432  0.0341426591 -0.0350797412 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1148466068 -0.1617564207  0.0335599540 -0.0519187971 -0.0079913267 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.8.lag1   scl6.7.lag1   scl6.8.lag1   scl7.8.lag1   scl2.1.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0389447979 -0.0218167080 -0.0061610852  0.0354178333  0.0400851460 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0050491768 -0.0247749630 -0.1406221933 -0.0712306984 -0.2311706061 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.1.lag1   scl4.1.lag1   scl5.1.lag1   scl6.1.lag1   scl7.1.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0145791986 -0.0194559695 -0.0167933216  0.1151959254 -0.1547023788 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0217940867  0.0245435011 -0.0148134404  0.0155918227 -0.1154098354 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.1.lag1   scl3.2.lag1   scl4.2.lag1   scl5.2.lag1   scl6.2.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0345738145  0.0576454361  0.0520393725 -0.0102608692  0.1458926617 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0040353397  0.0283052171 -0.0537843638  0.0161096064  0.0029976183 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.2.lag1   scl8.2.lag1   scl4.3.lag1   scl5.3.lag1   scl6.3.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0270332507 -0.0150777628 -0.1099055958  0.0734172921  0.0737914811 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0718100534  0.0481977525 -0.0174677366  0.0266826246  0.1024785653 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.3.lag1   scl8.3.lag1   scl5.4.lag1   scl6.4.lag1   scl7.4.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0070629719  0.0082498018  0.1081262784 -0.0608963510  0.0307359322 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1249885262 -0.0105163034  0.0094816710  0.0390743754  0.0722120838 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.4.lag1   scl6.5.lag1   scl7.5.lag1   scl8.5.lag1   scl7.6.lag1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1058285964 -0.1491986726  0.0358153899 -0.0181953824 -0.0143351219 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0493579345 -0.0700971892  0.0571853473  0.0057200316  0.0992664857 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.6.lag1   scl8.7.lag1   scl1.2.lag2   scl1.3.lag2   scl1.4.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0311658393 -0.0566014959  0.0114634649 -0.0803342986 -0.0040754810 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0661634046 -0.0057049834  0.0131309258  0.1735096713 -0.0124800486 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.5.lag2   scl1.6.lag2   scl1.7.lag2   scl1.8.lag2   scl2.3.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0506996783  0.0587556380  0.0519858364  0.1155747754  0.0512599794 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0546513731  0.0049522528 -0.0753888126  0.0461212574 -0.0658665574 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.4.lag2   scl2.5.lag2   scl2.6.lag2   scl2.7.lag2   scl2.8.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0157585826  0.0582422347  0.1087312403 -0.0305885970  0.0080519956 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0374225393 -0.0038401067  0.0589777299 -0.0959650587  0.0645493908 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.4.lag2   scl3.5.lag2   scl3.6.lag2   scl3.7.lag2   scl3.8.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0431970694  0.0204607970 -0.0377325920  0.0452442821 -0.0176885764 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0040919926  0.0475967092  0.1039778976  0.1147917643  0.0048106499 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.5.lag2   scl4.6.lag2   scl4.7.lag2   scl4.8.lag2   scl5.6.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0506135158  0.1205692067 -0.0999339743  0.2183759118 -0.1006006515 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0012570995  0.0904332242 -0.0399920676 -0.0111813441 -0.1051968291 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.7.lag2   scl5.8.lag2   scl6.7.lag2   scl6.8.lag2   scl7.8.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.2141886521 -0.0773026314  0.0513668129 -0.0603459151  0.0545357535 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0131320980 -0.0527928328 -0.0917592690  0.0209724913 -0.0569965256 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.1.lag2   scl3.1.lag2   scl4.1.lag2   scl5.1.lag2   scl6.1.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0722460485  0.0117301285 -0.0356943431  0.0611340005  0.0542134602 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0060045709 -0.1132632316  0.1647424181  0.0715362527  0.0466073737 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.1.lag2   scl8.1.lag2   scl3.2.lag2   scl4.2.lag2   scl5.2.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0109746301  0.0207069025  0.0651396210 -0.0789593669  0.0289653292 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0451586439  0.0324825458 -0.0087800589 -0.0165862800  0.1427627413 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.2.lag2   scl7.2.lag2   scl8.2.lag2   scl4.3.lag2   scl5.3.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0449529437 -0.0413463907  0.0309370932  0.0905689129 -0.1159667777 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1169520019 -0.0732658932 -0.0960332227  0.0414855813 -0.0736486950 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.3.lag2   scl7.3.lag2   scl8.3.lag2   scl5.4.lag2   scl6.4.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0470141382 -0.1115012941 -0.0989304701 -0.1564810276 -0.0198986590 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0195384297  0.0221047440  0.0528736507  0.1269791051 -0.0926249501 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.4.lag2   scl8.4.lag2   scl6.5.lag2   scl7.5.lag2   scl8.5.lag2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1176492810 -0.0803717469  0.0176966806 -0.0304328337  0.1004081124 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0305864769 -0.0354190417  0.0470469156  0.0381743757 -0.0682808648 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.6.lag2   scl8.6.lag2   scl8.7.lag2   scl1.2.lag3   scl1.3.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0657800319 -0.1161344535  0.0711587432 -0.0210727634 -0.0042984381 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0963907303  0.0097994139 -0.0621865769  0.0704578010 -0.0188644740 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.4.lag3   scl1.5.lag3   scl1.6.lag3   scl1.7.lag3   scl1.8.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0392923791  0.0180238638  0.0699260921  0.0299155677 -0.0242090971 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0216560462  0.0142713528  0.0544771235  0.0631691659  0.0533380396 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.3.lag3   scl2.4.lag3   scl2.5.lag3   scl2.6.lag3   scl2.7.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0064946055  0.0574803548  0.1580746239  0.0011786182  0.0316304601 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0446712837  0.0227816634  0.0155746579  0.0448551265  0.0024510576 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.8.lag3   scl3.4.lag3   scl3.5.lag3   scl3.6.lag3   scl3.7.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0690168609  0.1698372277 -0.0522838813  0.0951760809  0.0222372541 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0246751676  0.0976773889  0.0918029868  0.0173966566 -0.0670840113 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.8.lag3   scl4.5.lag3   scl4.6.lag3   scl4.7.lag3   scl4.8.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0317726891 -0.0852484774 -0.0198200228 -0.1555676826 -0.0001153137 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0830381358  0.0225812965  0.0189989638  0.0974790908 -0.0904453566 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.6.lag3   scl5.7.lag3   scl5.8.lag3   scl6.7.lag3   scl6.8.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1150838253  0.1013964496 -0.0195516502  0.0106254028 -0.0195907952 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0341175625  0.0833977279  0.1182158319  0.0049362962 -0.0375101193 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.8.lag3   scl2.1.lag3   scl3.1.lag3   scl4.1.lag3   scl5.1.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0562169557 -0.0338879677 -0.0199118866  0.0991479686 -0.0330619666 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0464702738  0.0091899425 -0.0496240698 -0.0496681978  0.0687367532 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.1.lag3   scl7.1.lag3   scl8.1.lag3   scl3.2.lag3   scl4.2.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0288519669  0.0716683464 -0.0217467836  0.0210602081 -0.0200373974 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1569409409 -0.0045315069 -0.1369471468 -0.0466432051 -0.0660472335 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.2.lag3   scl6.2.lag3   scl7.2.lag3   scl8.2.lag3   scl4.3.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1092908156  0.1783288479 -0.0295594591 -0.0372177555 -0.0249809237 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0960832882 -0.0111447341 -0.0123024637 -0.0680386632 -0.0965652283 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.3.lag3   scl6.3.lag3   scl7.3.lag3   scl8.3.lag3   scl5.4.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0112784341  0.0676477328  0.0448350364 -0.0265386800 -0.0209127514 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0028057177 -0.0140232822 -0.0566248447 -0.1398162739  0.0440041248 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.4.lag3   scl7.4.lag3   scl8.4.lag3   scl6.5.lag3   scl7.5.lag3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0786300512  0.0970197614 -0.0505707822  0.1228287764  0.0599125956 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0861750158 -0.0410188371 -0.1861684223 -0.0648108657  0.0026677470 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.5.lag3   scl7.6.lag3   scl8.6.lag3   scl8.7.lag3   scl1.2.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0564091286  0.0996099879  0.0808377026 -0.0264931690  0.0430432020 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0847757074  0.2165324900 -0.0055871570  0.0389112073 -0.0226509766 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.3.lag4   scl1.4.lag4   scl1.5.lag4   scl1.6.lag4   scl1.7.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1008234690 -0.1414975116 -0.0081518347 -0.0245824649 -0.0321138367 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0815951368 -0.0556208757 -0.1072222027 -0.0912809486  0.0324986312 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.8.lag4   scl2.3.lag4   scl2.4.lag4   scl2.5.lag4   scl2.6.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0227527558  0.0710996760  0.0605133802 -0.0232352911 -0.0655343644 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0827547699 -0.0433420277  0.0976548881 -0.0275943166 -0.0086679817 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.7.lag4   scl2.8.lag4   scl3.4.lag4   scl3.5.lag4   scl3.6.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0287402886  0.0021051016 -0.0663178082  0.0531982870 -0.0162169127 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1218786262 -0.0034025861 -0.0107744807  0.0784203737 -0.1222432456 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.7.lag4   scl3.8.lag4   scl4.5.lag4   scl4.6.lag4   scl4.7.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0623673472  0.0135490390 -0.0101506185 -0.1001193055  0.0773734148 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0115097517  0.0899996672 -0.1024832569  0.1012282201  0.0720476892 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.8.lag4   scl5.6.lag4   scl5.7.lag4   scl5.8.lag4   scl6.7.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0538607841 -0.0186083291  0.0321028298 -0.0888496590 -0.0069232941 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0450479385  0.0402772747 -0.0505952022  0.0166855336  0.0769714323 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.8.lag4   scl7.8.lag4   scl2.1.lag4   scl3.1.lag4   scl4.1.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0458715339  0.0264271481 -0.1036488062 -0.0938820305  0.1893644635 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1233843396  0.0629771289  0.0703196087  0.1106607504  0.0288580757 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.1.lag4   scl6.1.lag4   scl7.1.lag4   scl8.1.lag4   scl3.2.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0178990580 -0.0441390678 -0.0725098943  0.1160187879  0.0470766252 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0496699131  0.0205957890 -0.0363306505 -0.0821920577  0.0904469661 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.2.lag4   scl5.2.lag4   scl6.2.lag4   scl7.2.lag4   scl8.2.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0330175437 -0.0480701433 -0.0532440501 -0.0799026755  0.0173362456 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0810780422 -0.0031132832  0.0020964418  0.0210473177 -0.0717215518 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.3.lag4   scl5.3.lag4   scl6.3.lag4   scl7.3.lag4   scl8.3.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0553415121 -0.1429727255 -0.1880283168  0.1456643376 -0.0730415393 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0561286759  0.1100113278  0.0531393600 -0.0182794663  0.0491097736 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.4.lag4   scl6.4.lag4   scl7.4.lag4   scl8.4.lag4   scl6.5.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0597726516  0.0704411590 -0.1573652948 -0.0754960640  0.0315858792 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0352437674  0.1757839594  0.1497493917 -0.1039095774  0.0008783436 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.5.lag4   scl8.5.lag4   scl7.6.lag4   scl8.6.lag4   scl8.7.lag4 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0313634418  0.0226799797  0.0463535372 -0.0331322920 -0.0180272147 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0773653911 -0.1347085615 -0.1310782217  0.0478837861  0.0108453221 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.2.lag5   scl1.3.lag5   scl1.4.lag5   scl1.5.lag5   scl1.6.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0888567426  0.0611447474  0.1031679072  0.0741523306  0.0595252062 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0072986942 -0.0966980764 -0.0104125679  0.0283241475 -0.0511110236 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.7.lag5   scl1.8.lag5   scl2.3.lag5   scl2.4.lag5   scl2.5.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0512267747 -0.1559710601  0.0263960022  0.0376134482  0.0885938740 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0239166179  0.1097945286  0.0143309748 -0.1701740608  0.0459544751 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.6.lag5   scl2.7.lag5   scl2.8.lag5   scl3.4.lag5   scl3.5.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0859375320  0.0056419342 -0.0327584427  0.0850877427 -0.0045720267 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0155679513 -0.0909368542  0.0532719335  0.0033233439 -0.0367014694 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.6.lag5   scl3.7.lag5   scl3.8.lag5   scl4.5.lag5   scl4.6.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0420778080  0.0433374047  0.0251603088  0.0622450910  0.0273598584 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0057873036 -0.1314006770 -0.0429648671 -0.0288433616  0.0407255354 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.7.lag5   scl4.8.lag5   scl5.6.lag5   scl5.7.lag5   scl5.8.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0958548316  0.0956078345  0.0254809768  0.1371951353 -0.0510624730 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0874817049  0.0034303451  0.0639155917  0.0784477418  0.0086209764 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.7.lag5   scl6.8.lag5   scl7.8.lag5   scl2.1.lag5   scl3.1.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0297450243 -0.1145772700  0.0351555846 -0.0717497431 -0.0391827337 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1616979066 -0.0931260015 -0.0115739275 -0.0347181813 -0.0434562155 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.1.lag5   scl5.1.lag5   scl6.1.lag5   scl7.1.lag5   scl8.1.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1143856578  0.0399622817 -0.0431909519  0.0216187719  0.0343192904 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0166304170  0.0763394479 -0.0049361792  0.0828962704  0.0250244587 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.2.lag5   scl4.2.lag5   scl5.2.lag5   scl6.2.lag5   scl7.2.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0264170497  0.0187544998 -0.0273834823 -0.0652878925 -0.0314685514 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0111691280 -0.0675812723 -0.0207172298 -0.0107164852  0.2245153312 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.2.lag5   scl4.3.lag5   scl5.3.lag5   scl6.3.lag5   scl7.3.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0169236596 -0.0240774405 -0.0989886779  0.0653132871  0.0185248441 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0242778809  0.0617362259  0.2182219013 -0.1542478649  0.0904850000 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.3.lag5   scl5.4.lag5   scl6.4.lag5   scl7.4.lag5   scl8.4.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0863793692 -0.0007852133 -0.0853329406 -0.0863178832 -0.1035374550 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0363029449 -0.0238283810  0.0277823072  0.1184827332  0.0195329459 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.5.lag5   scl7.5.lag5   scl8.5.lag5   scl7.6.lag5   scl8.6.lag5 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0214191669  0.1398993367  0.0892235789  0.0097766022 -0.1696417302 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0368593554  0.0166331624 -0.0649579270 -0.0181200481 -0.1247208390 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.7.lag5   scl1.2.lag6   scl1.3.lag6   scl1.4.lag6   scl1.5.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0501158616  0.0924712519 -0.1480968383 -0.1336922619 -0.0448422238 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1448148822  0.0150811900 -0.1000951770  0.0288478501 -0.0036597114 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.6.lag6   scl1.7.lag6   scl1.8.lag6   scl2.3.lag6   scl2.4.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1323563064  0.0729048396 -0.1888672079  0.0315273122 -0.0240715234 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1878333142  0.0291575879  0.0254473643 -0.0013840428 -0.0369667738 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.5.lag6   scl2.6.lag6   scl2.7.lag6   scl2.8.lag6   scl3.4.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0343207311 -0.0471633454  0.1093097014 -0.0239699841  0.0126635874 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0709670203 -0.0203179157  0.1343578219 -0.0633269041  0.0564580377 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.5.lag6   scl3.6.lag6   scl3.7.lag6   scl3.8.lag6   scl4.5.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0784799244 -0.0386831364 -0.0770199602 -0.0379029071 -0.0267343096 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1346646357 -0.0108010947  0.0156204347  0.1580418556 -0.0830505319 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.6.lag6   scl4.7.lag6   scl4.8.lag6   scl5.6.lag6   scl5.7.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0272083293 -0.0780775490  0.0608662817 -0.0143262128  0.0254302436 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0493745506  0.0597141649 -0.0643059993  0.0308311642 -0.0875644572 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.8.lag6   scl6.7.lag6   scl6.8.lag6   scl7.8.lag6   scl2.1.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0698555382 -0.0149869716  0.0268578665  0.0386250539 -0.0717305897 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1230269261  0.0209915942  0.0179452261 -0.0377001942 -0.0248257044 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.1.lag6   scl4.1.lag6   scl5.1.lag6   scl6.1.lag6   scl7.1.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0784333791 -0.1004621229  0.0164405004 -0.0942140759  0.0629049398 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1705001735 -0.0743687851  0.0289575866  0.0341944778 -0.0582157613 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.1.lag6   scl3.2.lag6   scl4.2.lag6   scl5.2.lag6   scl6.2.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0127657806  0.0984882063 -0.0412842805 -0.0698315514 -0.0436226329 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0386687083 -0.0506393108  0.0456270505  0.0583550306 -0.0367611190 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.2.lag6   scl8.2.lag6   scl4.3.lag6   scl5.3.lag6   scl6.3.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1116071916  0.0395822203 -0.1089688934  0.0548997024 -0.0083961937 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1692912206 -0.1488598109 -0.0017474304  0.0701823372 -0.0939188538 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.3.lag6   scl8.3.lag6   scl5.4.lag6   scl6.4.lag6   scl7.4.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0672177302  0.0325472406  0.0210346395 -0.0396819126  0.0178513811 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0294783233 -0.0423058758  0.0259082401 -0.0801025085 -0.0279413548 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.4.lag6   scl6.5.lag6   scl7.5.lag6   scl8.5.lag6   scl7.6.lag6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0918992006  0.1258190459  0.1592891655  0.0814045604  0.0022236607 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1623783728  0.0179895868 -0.1357500011 -0.0855314259  0.0062542447 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl8.6.lag6   scl8.7.lag6   scl1.2.lag7   scl1.3.lag7   scl1.4.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0274691923 -0.0832876087  0.0031363497  0.0010773344 -0.1628472645 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0300542734 -0.0047633293  0.0306165366 -0.0015262146 -0.0095872077 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl1.5.lag7   scl1.6.lag7   scl1.7.lag7   scl1.8.lag7   scl2.3.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0067804247 -0.0020191089 -0.0815891210  0.0025469571  0.2113715028 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1278996949 -0.0243942857 -0.1507691217 -0.0499392640  0.0587360232 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.4.lag7   scl2.5.lag7   scl2.6.lag7   scl2.7.lag7   scl2.8.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0531138264 -0.0059271110  0.0088924009  0.0612088196  0.0850636548 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0212609671  0.0399253598 -0.0364056036  0.0772479664 -0.0952777633 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl3.4.lag7   scl3.5.lag7   scl3.6.lag7   scl3.7.lag7   scl3.8.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0717254457  0.0309036780 -0.0035489663 -0.0065880627 -0.0173063933 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0730496802  0.1362252457  0.0184334550 -0.0711597151 -0.0894383796 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl4.5.lag7   scl4.6.lag7   scl4.7.lag7   scl4.8.lag7   scl5.6.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0044071256  0.0348588748 -0.0331733195 -0.0182018917  0.0294427027 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1742042663  0.0113261164 -0.0599178030 -0.0185082447  0.0520365608 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl5.7.lag7   scl5.8.lag7   scl6.7.lag7   scl6.8.lag7   scl7.8.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0398366529  0.0124934056  0.1024757691 -0.0915954966  0.0218367904 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0355918722  0.0428105669 -0.1227042192 -0.0837020544 -0.1044191958 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl2.1.lag7   scl3.1.lag7   scl4.1.lag7   scl5.1.lag7   scl6.1.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0215401947  0.0963471182  0.0823245166 -0.0214350084 -0.1835630824 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0357888961  0.0565378814 -0.0367343480 -0.1362871831 -0.1147027794 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.1.lag7   scl8.1.lag7   scl3.2.lag7   scl4.2.lag7   scl5.2.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0562010318  0.0455176831 -0.1118817133 -0.0680685660 -0.2193268484 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.1015329868  0.0655471868  0.0729478134  0.0265827122 -0.0413653097 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.2.lag7   scl7.2.lag7   scl8.2.lag7   scl4.3.lag7   scl5.3.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0717311928  0.0147678280 -0.0862228419  0.0422895786 -0.1102890576 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.0042251085  0.0725796283 -0.0466662525 -0.0478346315  0.0494098465 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl6.3.lag7   scl7.3.lag7   scl8.3.lag7   scl5.4.lag7   scl6.4.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0388018486 -0.0728137828 -0.0710223144 -0.0100764535  0.0685747681 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1128697139  0.0373057712 -0.0205566252 -0.0632938379 -0.0859268011 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.4.lag7   scl8.4.lag7   scl6.5.lag7   scl7.5.lag7   scl8.5.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0421413654 -0.0363159857 -0.1190974001 -0.1098012725 -0.0328992492 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0370761739  0.0500980459  0.0324925457  0.0539457485  0.1139779653 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   scl7.6.lag7   scl8.6.lag7   scl8.7.lag7 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.1018754556  0.0386847419 -0.0197292112 </span>
-<span class="r-in"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.0609141962  0.0349750398 -0.0054437258 </span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -313,7 +318,7 @@ and <code><a href="extractPCMPropScales.html">extractPCMPropScales</a></code>.</
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>
