@@ -936,8 +936,9 @@ of an _arc diagram_.
 
 ```{r, eval = FALSE}
 library("igraph")
-library("arcdiagram")
 library("reshape")
+# remotes::install_github("gastonstat/arcdiagram")
+library("arcdiagram")
 
 g <- graph.data.frame(gpcr[1:(nrow(gpcr) / 2), ], directed = FALSE)
 edgelist <- get.edgelist(g)
