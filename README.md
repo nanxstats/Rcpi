@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
-[![downloads](https://www.bioconductor.org/shields/downloads/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
+[![downloads](https://bioconductor.org/shields/downloads/release/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
 <!-- badges: end -->
 
 ## Overview
