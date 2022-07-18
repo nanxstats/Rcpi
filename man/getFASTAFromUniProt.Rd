@@ -33,7 +33,7 @@ getFASTAFromUniProt(id)}
 \references{
 UniProt. \url{https://www.uniprot.org/}
 
-UniProt REST API Documentation. \url{https://www.uniprot.org/faq/28}
+UniProt REST API Documentation. \url{https://www.uniprot.org/help/api}
 }
 \seealso{
 See \code{\link{getSeqFromUniProt}} for retrieving protein

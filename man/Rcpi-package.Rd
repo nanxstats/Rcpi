@@ -6,7 +6,7 @@
 \alias{Rcpi-package}
 \title{Rcpi: Molecular Informatics Toolkit for Compound-Protein Interaction in Drug Discovery}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 A molecular informatics toolkit with an integration of bioinformatics and chemoinformatics tools for drug discovery.
 }

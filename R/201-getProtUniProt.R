@@ -25,7 +25,7 @@
 #' @references
 #' UniProt. \url{https://www.uniprot.org/}
 #'
-#' UniProt REST API Documentation. \url{https://www.uniprot.org/faq/28}
+#' UniProt REST API Documentation. \url{https://www.uniprot.org/help/api}
 #'
 #' @examples
 #' id = c('P00750', 'P00751', 'P00752')
@@ -35,9 +35,9 @@
 getFASTAFromUniProt = function (id, parallel = 5) {
 
   # example id:  P00750
-  # example url: https://www.uniprot.org/uniprot/P00750.fasta
+  # example url: https://rest.uniprot.org/uniprotkb/P00750.fasta
 
-  fastaURL = paste0('https://www.uniprot.org/uniprot/', id, '.fasta')
+  fastaURL = paste0('https://rest.uniprot.org/uniprotkb/', id, '.fasta')
 
   fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
 
@@ -69,7 +69,7 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 #' @references
 #' UniProt. \url{https://www.uniprot.org/}
 #'
-#' UniProt REST API Documentation. \url{https://www.uniprot.org/faq/28}
+#' UniProt REST API Documentation. \url{https://www.uniprot.org/help/api}
 #'
 #' @examples
 #' id = c('P00750', 'P00751', 'P00752')
@@ -79,7 +79,7 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 getSeqFromUniProt = function (id, parallel = 5) {
 
   # example id:  P00750
-  # example url: https://www.uniprot.org/uniprot/P00750.fasta
+  # example url: https://rest.uniprot.org/uniprotkb/P00750.fasta
 
   fastaTxt = getFASTAFromUniProt(id, parallel)
 
