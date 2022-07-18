@@ -1,3 +1,9 @@
+# Rcpi 1.33.2 (2022-07-17)
+
+## Improvements
+
+- Updated the endpoint URL of UniProt API to fix access issues ([#14](https://github.com/nanxstats/Rcpi/issues/14)).
+
 # Rcpi 1.33.1 (2022-05-07)
 
 ## Improvements
