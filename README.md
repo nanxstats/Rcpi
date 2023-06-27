@@ -52,11 +52,11 @@ BiocManager::install("Rcpi")
 
 ### Manage dependencies
 
-Some features in the Rcpi package relies on certain R packages which may
+Some features in the Rcpi package rely on certain R packages which may
 require specific system configurations to install from source.
 To make the build process robust, these dependencies have been configured
 as runtime dependencies. Here are some instructions for installing such
-dependencies to enable certain features.
+dependencies to enable the features in Rcpi.
 
 #### Install rcdk
 
