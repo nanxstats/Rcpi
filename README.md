@@ -31,24 +31,55 @@ BibTeX entry:
 }
 ```
 
+Browse the package vignettes:
+[workflow](https://nanx.me/Rcpi/articles/Rcpi.html), and [cheatsheet](https://nanx.me/Rcpi/articles/Rcpi-quickref.html) to get started.
+
 ## Installation
 
-To install the `Rcpi` package:
+### Install Rcpi
+
+Install the Rcpi package via BiocManager. If BiocManager is not already installed:
 
 ```r
 install.packages("BiocManager")
+```
+
+Then install Rcpi:
+
+```r
 BiocManager::install("Rcpi")
 ```
 
-To make the package fully functional (especially the Open Babel related functions), we recommend installing the _Enhances_ packages by:
+### Manage dependencies
+
+Some features in the Rcpi package relies on certain R packages which may
+require specific system configurations to install from source.
+To make the build process robust, these dependencies have been configured
+as runtime dependencies. Here are some instructions for installing such
+dependencies to enable certain features.
+
+#### Install rcdk
+
+rcdk can be installed from either CRAN or GitHub:
 
 ```r
-BiocManager::install("Rcpi", dependencies = c("Imports", "Enhances"))
+install.packages("rcdk", type = "source")
+remotes::install_github("CDK-R/cdkr", subdir = "rcdk")
 ```
 
-Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.
+rcdk requires JDK and rJava to be installed and configured on your system.
 
-Browse the package vignettes: [[1](https://nanx.me/Rcpi/articles/Rcpi.html)], [[2](https://nanx.me/Rcpi/articles/Rcpi-quickref.html)] for a quick-start.
+#### Install cheminformatics packages
+
+Additional packages for cheminformatics capabilities are available
+from Bioconductor:
+
+```r
+BiocManager::install(c("fmcsR", "ChemmineR", "ChemmineOB"))
+```
+
+ChemmineOB requires Open Babel to compile from source.
+Ensure Open Babel is properly installed on your system.
 
 ## Features
 
