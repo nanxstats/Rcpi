@@ -108,19 +108,43 @@
   pages   = {279--281},
   doi     = {10.1093/bioinformatics/btu624}
 }</code></pre>
+<p>Browse the package vignettes: <a href="https://nanx.me/Rcpi/articles/Rcpi.html">workflow</a>, and <a href="https://nanx.me/Rcpi/articles/Rcpi-quickref.html">cheatsheet</a> to get started.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>To install the <code>Rcpi</code> package:</p>
+<div class="section level3">
+<h3 id="install-rcpi">Install Rcpi<a class="anchor" aria-label="anchor" href="#install-rcpi"></a>
+</h3>
+<p>Install the Rcpi package via BiocManager. If BiocManager is not already installed:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
-<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"Rcpi"</span><span class="op">)</span></span></code></pre></div>
-<p>To make the package fully functional (especially the Open Babel related functions), we recommend installing the <em>Enhances</em> packages by:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span></code></pre></div>
+<p>Then install Rcpi:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"Rcpi"</span>, dependencies <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Imports"</span>, <span class="st">"Enhances"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.</p>
-<p>Browse the package vignettes: [<a href="https://nanx.me/Rcpi/articles/Rcpi.html">1</a>], [<a href="https://nanx.me/Rcpi/articles/Rcpi-quickref.html">2</a>] for a quick-start.</p>
+<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"Rcpi"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="manage-dependencies">Manage dependencies<a class="anchor" aria-label="anchor" href="#manage-dependencies"></a>
+</h3>
+<p>Some features in the Rcpi package relies on certain R packages which may require specific system configurations to install from source. To make the build process robust, these dependencies have been configured as runtime dependencies. Here are some instructions for installing such dependencies to enable certain features.</p>
+<div class="section level4">
+<h4 id="install-rcdk">Install rcdk<a class="anchor" aria-label="anchor" href="#install-rcdk"></a>
+</h4>
+<p>rcdk can be installed from either CRAN or GitHub:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rcdk"</span>, type <span class="op">=</span> <span class="st">"source"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"CDK-R/cdkr"</span>, subdir <span class="op">=</span> <span class="st">"rcdk"</span><span class="op">)</span></span></code></pre></div>
+<p>rcdk requires JDK and rJava to be installed and configured on your system.</p>
+</div>
+<div class="section level4">
+<h4 id="install-cheminformatics-packages">Install cheminformatics packages<a class="anchor" aria-label="anchor" href="#install-cheminformatics-packages"></a>
+</h4>
+<p>Additional packages for cheminformatics capabilities are available from Bioconductor:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"fmcsR"</span>, <span class="st">"ChemmineR"</span>, <span class="st">"ChemmineOB"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>ChemmineOB requires Open Babel to compile from source. Ensure Open Babel is properly installed on your system.</p>
+</div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
