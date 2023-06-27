@@ -3,6 +3,7 @@
 <!-- badges: start -->
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
 [![downloads](https://bioconductor.org/shields/downloads/release/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
+[![R-CMD-check](https://github.com/nanxstats/Rcpi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nanxstats/Rcpi/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
