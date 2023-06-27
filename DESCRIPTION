@@ -20,21 +20,21 @@ VignetteBuilder: knitr
 Depends:
     R (>= 3.0.2)
 Imports:
-    stats,
-    utils,
-    methods,
-    RCurl,
-    rjson,
-    foreach,
-    doParallel,
     Biostrings,
     GOSemSim,
-    rcdk (>= 3.3.8)
+    RCurl,
+    doParallel,
+    foreach,
+    methods,
+    rjson,
+    rlang,
+    stats,
+    utils
 Suggests:
     knitr,
     rmarkdown,
-    RUnit,
-    BiocGenerics
+    testthat (>= 3.0.0)
 biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
     Cheminformatics, BiomedicalInformatics, Proteomics, GO, SystemsBiology
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
+Config/testthat/edition: 3
