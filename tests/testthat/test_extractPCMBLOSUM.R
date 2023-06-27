@@ -1,5 +1,5 @@
-test_extractPCMBLOSUM = function() {
-    x = paste(
+test_that("`extractPCMBLOSUM()` works", {
+    x = paste0(
         'MDAMKRGLCCVLLLCGAVFVSPSQEIHARFRRGARSYQVICRDEKTQMIYQQHQSWLRP',
         'VLRSNRVEYCWCNSGRAQCHSVPVKSCSEPRCFNGGTCQQALYFSDFVCQCPEGFAGKCC',
         'EIDTRATCYEDQGISYRGTWSTAESGAECTNWNSSALAQKPYSGRRPDAIRLGLGNHNYC',
@@ -9,11 +9,17 @@ test_extractPCMBLOSUM = function() {
         'QERFPPHHLTVILGRTYRVVPGEEEQKFEVEKYIVHKEFDDDTYDNDIALLQLKSDSSRC',
         'AQESSVVRTVCLPPADLQLPDWTECELSGYGKHEALSPFYSERLKEAHVRLYPSSRCTSQ',
         'HLLNRTVTDNMLCAGDTRSGGPQANLHDACQGDSGGPLVCLNDGRMTLVGIISWGLGCGQ',
-        'KDVPGVYTKVTNYLDWIRDNMRP', sep = '')
-    blosum = extractPCMBLOSUM(x, submat = 'AABLOSUM62', k = 5, lag = 7,
-                              scale = TRUE, silent = TRUE)
-    pam = extractPCMBLOSUM(x, submat = 'AAPAM250', k = 3, lag = 9,
-                           scale = TRUE, silent = TRUE)
-    checkEquals(length(blosum), 175L)
-    checkEquals(length(pam), 81L)
-}
+        'KDVPGVYTKVTNYLDWIRDNMRP'
+    )
+    blosum = extractPCMBLOSUM(
+        x, submat = 'AABLOSUM62', k = 5, lag = 7,
+        scale = TRUE, silent = TRUE
+    )
+    pam = extractPCMBLOSUM(
+        x, submat = 'AAPAM250', k = 3, lag = 9,
+        scale = TRUE, silent = TRUE
+    )
+
+    expect_equal(length(blosum), 175L)
+    expect_equal(length(pam), 81L)
+})
