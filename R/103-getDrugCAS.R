@@ -5,7 +5,7 @@
 #' This function retrieves drug molecules in InChI format from the CAS database.
 #' CAS database only provides InChI data, so here we return the molecule
 #' in InChI format, users could convert them to SMILES format using
-#' Open Babel (\url{http://openbabel.org/}) or other third-party tools.
+#' Open Babel or other third-party tools.
 #'
 #' @param id A character vector, as the CAS drug ID.
 #' @param parallel An integer, the parallel parameter, indicates how many

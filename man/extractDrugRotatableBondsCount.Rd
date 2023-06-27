@@ -23,7 +23,7 @@ Descriptor that Calculates the Number of Nonrotatable Bonds on A Molecule
 \details{
 The number of rotatable bonds is given by the SMARTS specified by
 Daylight on SMARTS tutorial
-(\url{http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html#EXMPL})
+(\url{https://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html})
 }
 \examples{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')

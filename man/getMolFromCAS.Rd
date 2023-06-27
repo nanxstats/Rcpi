@@ -25,7 +25,7 @@ Retrieve Drug Molecules in InChI Format from the CAS Database
 This function retrieves drug molecules in InChI format from the CAS database.
 CAS database only provides InChI data, so here we return the molecule
 in InChI format, users could convert them to SMILES format using
-Open Babel (\url{http://openbabel.org/}) or other third-party tools.
+Open Babel or other third-party tools.
 }
 \examples{
 id = '52-67-5'  # Penicillamine

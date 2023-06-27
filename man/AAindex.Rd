@@ -18,7 +18,7 @@ The data was extracted from the AAindex1 database ver 9.1
 November 2012 (Data Last Modified 2006-08-14).
 
 With this data, users could investigate each property's accession number
-and other details. Visit \url{http://www.genome.jp/dbget/aaindex.html}
+and other details. Visit \url{https://www.genome.jp/dbget/aaindex.html}
 for more information.
 }
 \examples{

@@ -9,7 +9,7 @@
 #' This descriptor calculates the sum of the absolute value of the
 #' difference between atomic polarizabilities of all bonded atoms
 #' in the molecule (including implicit hydrogens) with polarizabilities
-#' taken from \url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
+#' taken from \url{https://bit.ly/3PvNbhe}.
 #' This descriptor assumes 2-centered bonds.
 #'
 #' @param molecules Parsed molucule object.

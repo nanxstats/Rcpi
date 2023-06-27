@@ -4,7 +4,7 @@
 #'
 #' The number of rotatable bonds is given by the SMARTS specified by
 #' Daylight on SMARTS tutorial
-#' (\url{http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html#EXMPL})
+#' (\url{https://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html})
 #'
 #' @param molecules Parsed molucule object.
 #' @param silent Logical. Whether the calculating process

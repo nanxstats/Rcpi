@@ -23,8 +23,7 @@ Calculate the Sum of the Atomic Polarizabilities Descriptor
 \details{
 Calculates the sum of the atomic polarizabilities
 (including implicit hydrogens) descriptor.
-Polarizabilities are taken from
-\url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
+Polarizabilities are taken from \url{https://bit.ly/3PvNbhe}.
 }
 \examples{
 smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
