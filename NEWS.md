@@ -1,3 +1,12 @@
+# Rcpi 1.37.1 (2023-06-27)
+
+## Improvements
+
+- Migrate rcdk to a runtime soft dependency using rlang, to avoid build time issues.
+- Migrate unit tests from using RUnit to testthat.
+- Use GitHub Actions workflows for `R CMD check` and building the pkgdown website.
+- Fix URLs that are broken or moved in the documentation.
+
 # Rcpi 1.33.2 (2022-07-17)
 
 ## Improvements
