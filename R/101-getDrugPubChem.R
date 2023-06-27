@@ -63,8 +63,6 @@ getMolFromPubChem = function (id, parallel = 5) {
 #'
 #' @export getSmiFromPubChem
 #'
-#' @importFrom rcdk load.molecules get.smiles
-#'
 #' @examples
 #' id = c('7847562', '7847563')  # Penicillamine
 #' \donttest{
@@ -80,7 +78,7 @@ getSmiFromPubChem = function (id, parallel = 5) {
     tmpfile = tempfile(pattern = paste0(id, '-'), fileext = '.sdf')
     for (i in 1:length(id)) cat(SdfTxt[[i]], file = tmpfile[i])
     Mol = readMolFromSDF(tmpfile)
-    Smi = sapply(Mol, get.smiles)
+    Smi = sapply(Mol, getSmiles)
     unlink(tmpfile)
 
     return(Smi)

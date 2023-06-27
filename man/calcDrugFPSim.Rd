@@ -45,9 +45,9 @@ features of object B, \code{c} is the number of common features to A and B:
 }
 }
 \examples{
+\donttest{
 mols = readMolFromSDF(system.file('compseq/tyrphostin.sdf', package = 'Rcpi'))
 
-\donttest{
 fp1 = extractDrugEstate(mols[[1]])
 fp2 = extractDrugEstate(mols[[2]])
 calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'tanimoto')

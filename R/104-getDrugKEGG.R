@@ -60,8 +60,6 @@ getMolFromKEGG = function (id, parallel = 5) {
 #'
 #' @export getSmiFromKEGG
 #'
-#' @importFrom rcdk load.molecules get.smiles
-#'
 #' @examples
 #' id = 'D00496'  # Penicillamine
 #' \donttest{
@@ -78,8 +76,8 @@ getSmiFromKEGG = function (id, parallel = 5) {
     tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'mol')
     for (i in 1:length(id)) cat(MolTxt[[i]], file = tmpfile[i])
 
-    Mol = load.molecules(tmpfile)
-    Smi = sapply(Mol, get.smiles)
+    Mol = loadMolecules(tmpfile)
+    Smi = sapply(Mol, getSmiles)
 
     unlink(tmpfile)
 

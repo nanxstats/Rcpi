@@ -14,8 +14,6 @@
 #'
 #' @export extractDrugKR
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugKRComplete}
 #'
 #' @examples
@@ -29,7 +27,7 @@ extractDrugKR = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'kr', verbose = !silent)
+        x = getFingerprint(molecules, type = 'kr', silent = silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
@@ -37,9 +35,7 @@ extractDrugKR = function (molecules, silent = TRUE) {
 
     } else {
 
-        x = lapply(
-            molecules, get.fingerprint,
-            type = 'kr', verbose = !silent)
+        x = lapply(molecules, getFingerprint, type = 'kr', silent = silent)
 
         fp = vector('list', length(molecules))
 
@@ -71,8 +67,6 @@ extractDrugKR = function (molecules, silent = TRUE) {
 #'
 #' @export extractDrugKRComplete
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugKR}
 #'
 #' @examples
@@ -86,16 +80,14 @@ extractDrugKRComplete = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'kr', verbose = !silent)
+        x = getFingerprint(molecules, type = 'kr', silent = silent)
 
         fp = integer(4860)
         fp[x@bits] = 1L
 
     } else {
 
-        x = lapply(
-            molecules, get.fingerprint,
-            type = 'kr', verbose = !silent)
+        x = lapply(molecules, getFingerprint, type = 'kr', silent = silent)
 
         fp = matrix(0L, nrow = length(molecules), ncol = 4860)
 

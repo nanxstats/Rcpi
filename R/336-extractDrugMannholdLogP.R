@@ -18,8 +18,6 @@
 #'
 #' @export extractDrugMannholdLogP
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Mannhold, R., Poda, G. I., Ostermann, C., & Tetko, I. V. (2009).
 #' Calculation of molecular lipophilicity: State-of-the-art and
@@ -34,12 +32,5 @@
 #' head(dat)}
 
 extractDrugMannholdLogP = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.MannholdLogPDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'MannholdLogPDescriptor', silent = silent)
 }

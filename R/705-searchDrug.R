@@ -69,8 +69,8 @@ searchDrug = function(
                            'hybrid',   'maccs',    'estate',
                            'pubchem',  'kr',       'shortestpath') ) {
 
-            mol   = rcdk::load.molecules(mol)
-            moldb = rcdk::load.molecules(moldb)
+            mol   = loadMolecules(mol)
+            moldb = loadMolecules(moldb)
 
         }
 

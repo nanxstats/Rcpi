@@ -29,8 +29,6 @@
 #'
 #' @export extractDrugGravitationalIndex
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Katritzky, A.R. and Mu, L. and Lobanov, V.S. and Karelson, M.,
 #' Correlation of Boiling Points With Molecular Structure.
@@ -51,12 +49,5 @@
 #' head(dat)}
 
 extractDrugGravitationalIndex = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.GravitationalIndexDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'GravitationalIndexDescriptor', silent = silent)
 }

@@ -17,8 +17,6 @@
 #'
 #' @export extractDrugTPSA
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Ertl, P., Rohde, B., & Selzer, P. (2000).
 #' Fast calculation of molecular polar surface area as a sum of
@@ -34,12 +32,5 @@
 #' head(dat)}
 
 extractDrugTPSA = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'TPSADescriptor', silent = silent)
 }

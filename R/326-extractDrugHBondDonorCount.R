@@ -23,8 +23,6 @@
 #'
 #' @export extractDrugHBondDonorCount
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -33,12 +31,5 @@
 #' head(dat)}
 
 extractDrugHBondDonorCount = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.HBondDonorCountDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'HBondDonorCountDescriptor', silent = silent)
 }

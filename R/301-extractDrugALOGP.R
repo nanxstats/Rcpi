@@ -22,8 +22,6 @@
 #'
 #' @export extractDrugALOGP
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Ghose, A.K. and Crippen, G.M. ,
 #' Atomic physicochemical parameters for three-dimensional structure-directed
@@ -45,12 +43,5 @@
 #' head(dat)}
 
 extractDrugALOGP = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.ALOGPDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'ALOGPDescriptor', silent = silent)
 }

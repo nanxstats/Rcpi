@@ -107,8 +107,6 @@
 #'
 #' @export extractDrugKierHallSmarts
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Butina, D. ,
 #' Performance of Kier-Hall E-state Descriptors
@@ -130,12 +128,5 @@
 #' head(dat)}
 
 extractDrugKierHallSmarts = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.KierHallSmartsDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'KierHallSmartsDescriptor', silent = silent)
 }

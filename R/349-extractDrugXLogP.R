@@ -16,8 +16,6 @@
 #'
 #' @export extractDrugXLogP
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Wang, R., Fu, Y., and Lai, L.,
 #' A New Atom-Additive Method for Calculating Partition Coefficients,
@@ -35,12 +33,5 @@
 #' head(dat)}
 
 extractDrugXLogP = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.XLogPDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'XLogPDescriptor', silent = silent)
 }

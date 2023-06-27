@@ -16,8 +16,6 @@
 #'
 #' @export extractDrugMDE
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Liu, S., Cao, C., & Li, Z. (1998).
 #' Approach to estimation and prediction for normal boiling point (NBP)
@@ -32,12 +30,5 @@
 #' head(dat)}
 
 extractDrugMDE = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.MDEDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'MDEDescriptor', silent = silent)
 }

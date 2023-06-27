@@ -17,8 +17,6 @@
 #'
 #' @export extractDrugZagrebIndex
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -27,12 +25,5 @@
 #' head(dat)}
 
 extractDrugZagrebIndex = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.ZagrebIndexDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'ZagrebIndexDescriptor', silent = silent)
 }

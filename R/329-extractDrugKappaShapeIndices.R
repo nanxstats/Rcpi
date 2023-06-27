@@ -29,8 +29,6 @@
 #'
 #' @export extractDrugKappaShapeIndices
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -39,12 +37,5 @@
 #' head(dat)}
 
 extractDrugKappaShapeIndices = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.KappaShapeIndicesDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'KappaShapeIndicesDescriptor', silent = silent)
 }

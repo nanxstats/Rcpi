@@ -17,8 +17,6 @@
 #'
 #' @export extractDrugShortestPath
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugShortestPathComplete}
 #'
 #' @examples
@@ -33,9 +31,9 @@ extractDrugShortestPath = function(
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(
+        x = getFingerprint(
             molecules, type = 'shortestpath',
-            depth = depth, size = size, verbose = !silent)
+            depth = depth, size = size, silent = silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
@@ -44,9 +42,9 @@ extractDrugShortestPath = function(
     } else {
 
         x = lapply(
-            molecules, get.fingerprint,
+            molecules, getFingerprint,
             type = 'shortestpath',
-            depth = depth, size = size, verbose = !silent)
+            depth = depth, size = size, silent = silent)
 
         fp = vector('list', length(molecules))
 
@@ -81,8 +79,6 @@ extractDrugShortestPath = function(
 #'
 #' @export extractDrugShortestPathComplete
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugShortestPath}
 #'
 #' @examples
@@ -97,9 +93,9 @@ extractDrugShortestPathComplete = function(
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(
+        x = getFingerprint(
             molecules, type = 'shortestpath',
-            depth = depth, size = size, verbose = !silent)
+            depth = depth, size = size, silent = silent)
 
         fp = integer(x@nbit)
         fp[x@bits] = 1L
@@ -107,8 +103,8 @@ extractDrugShortestPathComplete = function(
     } else {
 
         x = lapply(
-            molecules, get.fingerprint, type = 'shortestpath',
-            depth = depth, size = size, verbose = !silent)
+            molecules, getFingerprint, type = 'shortestpath',
+            depth = depth, size = size, silent = silent)
 
         fp = matrix(0L, nrow = length(molecules), ncol = size)
 

@@ -14,8 +14,6 @@
 #'
 #' @export extractDrugPubChem
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugPubChemComplete}
 #'
 #' @examples
@@ -29,7 +27,7 @@ extractDrugPubChem = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'pubchem', verbose = !silent)
+        x = getFingerprint(molecules, type = 'pubchem', silent = silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
@@ -37,8 +35,7 @@ extractDrugPubChem = function (molecules, silent = TRUE) {
 
     } else {
 
-        x = lapply(molecules, get.fingerprint,
-                   type = 'pubchem', verbose = !silent)
+        x = lapply(molecules, getFingerprint, type = 'pubchem', silent = silent)
 
         fp = vector('list', length(molecules))
 
@@ -70,8 +67,6 @@ extractDrugPubChem = function (molecules, silent = TRUE) {
 #'
 #' @export extractDrugPubChemComplete
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugPubChem}
 #'
 #' @examples
@@ -85,15 +80,14 @@ extractDrugPubChemComplete = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'pubchem', verbose = !silent)
+        x = getFingerprint(molecules, type = 'pubchem', silent = silent)
 
         fp = integer(881)
         fp[x@bits] = 1L
 
     } else {
 
-        x = lapply(molecules, get.fingerprint,
-                   type = 'pubchem', verbose = !silent)
+        x = lapply(molecules, getFingerprint, type = 'pubchem', silent = silent)
 
         fp = matrix(0L, nrow = length(molecules), ncol = 881)
 

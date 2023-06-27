@@ -22,8 +22,6 @@
 #'
 #' @export extractDrugHybridizationRatio
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -32,12 +30,5 @@
 #' head(dat)}
 
 extractDrugHybridizationRatio = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.HybridizationRatioDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'HybridizationRatioDescriptor', silent = silent)
 }

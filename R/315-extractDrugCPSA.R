@@ -55,8 +55,6 @@
 #'
 #' @export extractDrugCPSA
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Stanton, D.T. and Jurs, P.C. ,
 #' Development and Use of Charged Partial Surface
@@ -72,12 +70,5 @@
 #' head(dat)}
 
 extractDrugCPSA = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.CPSADescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'CPSADescriptor', silent = silent)
 }

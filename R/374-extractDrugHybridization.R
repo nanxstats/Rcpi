@@ -18,8 +18,6 @@
 #'
 #' @export extractDrugHybridization
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugHybridizationComplete}
 #'
 #' @examples
@@ -34,9 +32,9 @@ extractDrugHybridization = function(
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(
+        x = getFingerprint(
             molecules, type = 'hybridization',
-            depth = depth, size = size, verbose = !silent)
+            depth = depth, size = size, silent = silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
@@ -45,8 +43,8 @@ extractDrugHybridization = function(
     } else {
 
         x = lapply(
-            molecules, get.fingerprint, type = 'hybridization',
-            depth = depth, size = size, verbose = !silent)
+            molecules, getFingerprint, type = 'hybridization',
+            depth = depth, size = size, silent = silent)
 
         fp = vector('list', length(molecules))
 
@@ -82,8 +80,6 @@ extractDrugHybridization = function(
 #'
 #' @export extractDrugHybridizationComplete
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugHybridization}
 #'
 #' @examples
@@ -98,9 +94,9 @@ extractDrugHybridizationComplete = function(
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(
+        x = getFingerprint(
             molecules, type = 'hybridization',
-            depth = depth, size = size, verbose = !silent)
+            depth = depth, size = size, silent = silent)
 
         fp = integer(x@nbit)
         fp[x@bits] = 1L
@@ -108,8 +104,8 @@ extractDrugHybridizationComplete = function(
     } else {
 
         x = lapply(
-            molecules, get.fingerprint, type = 'hybridization',
-            depth = depth, size = size, verbose = !silent)
+            molecules, getFingerprint, type = 'hybridization',
+            depth = depth, size = size, silent = silent)
 
         fp = matrix(0L, nrow = length(molecules), ncol = size)
 

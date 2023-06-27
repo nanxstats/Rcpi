@@ -23,8 +23,6 @@
 #'
 #' @export readMolFromSmi
 #'
-#' @importFrom rcdk parse.smiles
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -37,7 +35,7 @@ readMolFromSmi = function (smifile, type = c('mol', 'text')) {
 
         txt = scan(smifile, what = 'complex', quiet = TRUE)
         smi = as.character(txt)
-        mol = parse.smiles(smi)
+        mol = parseSmiles(smi)
 
     } else if (type == 'text') {
 

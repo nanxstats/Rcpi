@@ -19,8 +19,6 @@
 #'
 #' @export extractDrugFMF
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Yang, Y., Chen, H., Nilsson, I., Muresan, S., & Engkvist, O. (2010).
 #' Investigation of the relationship between topology and selectivity
@@ -35,12 +33,5 @@
 #' head(dat)}
 
 extractDrugFMF = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.FMFDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'FMFDescriptor', silent = silent)
 }

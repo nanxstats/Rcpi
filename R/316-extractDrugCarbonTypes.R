@@ -31,8 +31,6 @@
 #'
 #' @export extractDrugCarbonTypes
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -41,12 +39,5 @@
 #' head(dat)}
 
 extractDrugCarbonTypes = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.CarbonTypesDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'CarbonTypesDescriptor', silent = silent)
 }

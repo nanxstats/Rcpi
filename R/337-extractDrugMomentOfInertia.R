@@ -37,8 +37,6 @@
 #'
 #' @export extractDrugMomentOfInertia
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' sdf = system.file('sysdata/OptAA3d.sdf', package = 'Rcpi')
 #' \donttest{
@@ -47,12 +45,5 @@
 #' head(dat)}
 
 extractDrugMomentOfInertia = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.MomentOfInertiaDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'MomentOfInertiaDescriptor', silent = silent)
 }

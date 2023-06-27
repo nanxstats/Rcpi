@@ -18,8 +18,6 @@
 #'
 #' @export extractDrugWienerNumbers
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Wiener, H. (1947).
 #' Structural determination of paraffin boiling points.
@@ -33,12 +31,5 @@
 #' head(dat)}
 
 extractDrugWienerNumbers = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.WienerNumbersDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'WienerNumbersDescriptor', silent = silent)
 }

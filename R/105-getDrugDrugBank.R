@@ -60,8 +60,6 @@ getMolFromDrugBank = function (id, parallel = 5) {
 #'
 #' @export getSmiFromDrugBank
 #'
-#' @importFrom rcdk load.molecules get.smiles
-#'
 #' @examples
 #' id = 'DB00859'  # Penicillamine
 #' \donttest{
@@ -77,8 +75,8 @@ getSmiFromDrugBank = function (id, parallel = 5) {
     tmpfile = tempfile(pattern = paste0(id, '-'), fileext = 'sdf')
     for (i in 1:length(id)) cat(SdfTxt[[i]], file = tmpfile[i])
 
-    Mol = load.molecules(tmpfile)
-    Smi = sapply(Mol, get.smiles)
+    Mol = loadMolecules(tmpfile)
+    Smi = sapply(Mol, getSmiles)
 
     unlink(tmpfile)
 

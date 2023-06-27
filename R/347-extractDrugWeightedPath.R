@@ -27,8 +27,6 @@
 #'
 #' @export extractDrugWeightedPath
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Randic, M., On molecular identification numbers (1984).
 #' Journal of Chemical Information and Computer Science, 24:164-175.
@@ -41,12 +39,5 @@
 #' head(dat)}
 
 extractDrugWeightedPath = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.WeightedPathDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'WeightedPathDescriptor', silent = silent)
 }

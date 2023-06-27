@@ -64,8 +64,6 @@
 #'
 #' @export extractDrugWHIM
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Todeschini, R. and Gramatica, P.,
 #' New 3D Molecular Descriptors: The WHIM theory and QAR Applications,
@@ -79,12 +77,5 @@
 #' head(dat)}
 
 extractDrugWHIM = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.WHIMDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'WHIMDescriptor', silent = silent)
 }

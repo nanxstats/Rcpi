@@ -22,8 +22,6 @@
 #'
 #' @export extractDrugLengthOverBreadth
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @note The descriptor assumes that the atoms have been configured.
 #'
 #' @examples
@@ -34,12 +32,5 @@
 #' head(dat)}
 
 extractDrugLengthOverBreadth = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'LengthOverBreadthDescriptor', silent = silent)
 }

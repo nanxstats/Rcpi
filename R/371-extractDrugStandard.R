@@ -18,8 +18,6 @@
 #'
 #' @export extractDrugStandard
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugStandardComplete}
 #'
 #' @examples
@@ -34,9 +32,9 @@ extractDrugStandard = function(
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(
+        x = getFingerprint(
             molecules, type = 'standard',
-            depth = depth, size = size, verbose = !silent)
+            depth = depth, size = size, silent = silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
@@ -45,8 +43,8 @@ extractDrugStandard = function(
     } else {
 
         x = lapply(
-            molecules, get.fingerprint, type = 'standard',
-            depth = depth, size = size, verbose = !silent)
+            molecules, getFingerprint, type = 'standard',
+            depth = depth, size = size, silent = silent)
 
         fp = vector('list', length(molecules))
 
@@ -82,8 +80,6 @@ extractDrugStandard = function(
 #'
 #' @export extractDrugStandardComplete
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugStandard}
 #'
 #' @examples
@@ -98,9 +94,9 @@ extractDrugStandardComplete = function(
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(
+        x = getFingerprint(
             molecules, type = 'standard',
-            depth = depth, size = size, verbose = !silent)
+            depth = depth, size = size, silent = silent)
 
         fp = integer(x@nbit)
         fp[x@bits] = 1L
@@ -108,8 +104,8 @@ extractDrugStandardComplete = function(
     } else {
 
         x = lapply(
-            molecules, get.fingerprint, type = 'standard',
-            depth = depth, size = size, verbose = !silent)
+            molecules, getFingerprint, type = 'standard',
+            depth = depth, size = size, silent = silent)
 
         fp = matrix(0L, nrow = length(molecules), ncol = size)
 

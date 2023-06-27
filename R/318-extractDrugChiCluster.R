@@ -34,8 +34,6 @@
 #'
 #' @export extractDrugChiCluster
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -44,12 +42,5 @@
 #' head(dat)}
 
 extractDrugChiCluster = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.ChiClusterDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'ChiClusterDescriptor', silent = silent)
 }

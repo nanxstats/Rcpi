@@ -14,8 +14,6 @@
 #'
 #' @export readMolFromSDF
 #'
-#' @importFrom rcdk load.molecules
-#'
 #' @examples
 #' sdf  = system.file('compseq/DB00859.sdf', package = 'Rcpi')
 #' sdfs = c(system.file('compseq/DB00859.sdf', package = 'Rcpi'),
@@ -26,7 +24,7 @@
 
 readMolFromSDF = function (sdffile) {
 
-  mol = load.molecules(normalizePath(sdffile))
+  mol = loadMolecules(normalizePath(sdffile))
 
   return(mol)
 

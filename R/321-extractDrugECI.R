@@ -23,8 +23,6 @@
 #'
 #' @export extractDrugECI
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Sharma, V. and Goswami, R. and Madan, A.K. (1997),
 #' Eccentric Connectivity Index: A Novel Highly Discriminating
@@ -39,12 +37,5 @@
 #' head(dat)}
 
 extractDrugECI = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.EccentricConnectivityIndexDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'EccentricConnectivityIndexDescriptor', silent = silent)
 }

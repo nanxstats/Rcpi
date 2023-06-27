@@ -17,8 +17,6 @@
 #'
 #' @export extractDrugPetitjeanShapeIndex
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Petitjean, M.,
 #' Applications of the radius-diameter diagram to the classification of
@@ -39,12 +37,5 @@
 #' head(dat)}
 
 extractDrugPetitjeanShapeIndex = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.PetitjeanShapeIndexDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'PetitjeanShapeIndexDescriptor', silent = silent)
 }

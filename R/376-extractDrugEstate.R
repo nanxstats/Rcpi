@@ -15,8 +15,6 @@
 #'
 #' @export extractDrugEstate
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugEstateComplete}
 #'
 #' @examples
@@ -30,7 +28,7 @@ extractDrugEstate = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'estate', verbose = !silent)
+        x = getFingerprint(molecules, type = 'estate', silent = silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
@@ -38,8 +36,7 @@ extractDrugEstate = function (molecules, silent = TRUE) {
 
     } else {
 
-        x = lapply(molecules, get.fingerprint,
-                   type = 'estate', verbose = !silent)
+        x = lapply(molecules, getFingerprint, type = 'estate', silent = silent)
 
         fp = vector('list', length(molecules))
 
@@ -72,8 +69,6 @@ extractDrugEstate = function (molecules, silent = TRUE) {
 #'
 #' @export extractDrugEstateComplete
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugEstate}
 #'
 #' @examples
@@ -87,16 +82,14 @@ extractDrugEstateComplete = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'estate', verbose = !silent)
+        x = getFingerprint(molecules, type = 'estate', silent = silent)
 
         fp = integer(79)
         fp[x@bits] = 1L
 
     } else {
 
-        x = lapply(
-            molecules, get.fingerprint,
-            type = 'estate', verbose = !silent)
+        x = lapply(molecules, getFingerprint, type = 'estate', silent = silent)
 
         fp = matrix(0L, nrow = length(molecules), ncol = 79)
 

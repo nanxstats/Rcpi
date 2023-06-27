@@ -18,8 +18,6 @@
 #'
 #' @export extractDrugFragmentComplexity
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Nilakantan, R. and Nunn, D.S. and Greenblatt,
 #' L. and Walker, G. and Haraki, K. and Mobilio, D.,
@@ -36,12 +34,5 @@
 #' head(dat)}
 
 extractDrugFragmentComplexity = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.FragmentComplexityDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'FragmentComplexityDescriptor', silent = silent)
 }

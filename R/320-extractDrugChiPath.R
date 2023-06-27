@@ -27,8 +27,6 @@
 #'
 #' @export extractDrugChiPath
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -37,12 +35,5 @@
 #' head(dat)}
 
 extractDrugChiPath = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.ChiPathDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'ChiPathDescriptor', silent = silent)
 }

@@ -19,8 +19,6 @@
 #'
 #' @export extractDrugAminoAcidCount
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -29,12 +27,5 @@
 #' head(dat)}
 
 extractDrugAminoAcidCount = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.AminoAcidCountDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'AminoAcidCountDescriptor', silent = silent)
 }

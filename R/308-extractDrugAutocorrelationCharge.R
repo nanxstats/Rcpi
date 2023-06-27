@@ -16,8 +16,6 @@
 #'
 #' @export extractDrugAutocorrelationCharge
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -26,12 +24,5 @@
 #' head(dat)}
 
 extractDrugAutocorrelationCharge = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorCharge',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'AutocorrelationDescriptorCharge', silent = silent)
 }

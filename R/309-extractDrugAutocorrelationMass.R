@@ -15,8 +15,6 @@
 #'
 #' @export extractDrugAutocorrelationMass
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Moreau, Gilles, and Pierre Broto.
 #' The autocorrelation of a topological structure: a new molecular descriptor.
@@ -30,12 +28,5 @@
 #' head(dat)}
 
 extractDrugAutocorrelationMass = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorMass',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'AutocorrelationDescriptorMass', silent = silent)
 }

@@ -14,8 +14,6 @@
 #'
 #' @export extractDrugVABC
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -24,12 +22,5 @@
 #' head(dat)}
 
 extractDrugVABC = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.VABCDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'VABCDescriptor', silent = silent)
 }

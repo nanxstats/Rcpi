@@ -32,8 +32,6 @@
 #'
 #' @export extractDrugBCUT
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @references
 #' Pearlman, R.S. and Smith, K.M.,
 #' Metric Validation and the Receptor-Relevant Subspace Concept,
@@ -80,12 +78,5 @@
 #' head(dat)}
 
 extractDrugBCUT = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.BCUTDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'BCUTDescriptor', silent = silent)
 }

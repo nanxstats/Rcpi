@@ -14,8 +14,6 @@
 #'
 #' @export extractDrugMACCS
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugMACCSComplete}
 #'
 #' @examples
@@ -29,7 +27,7 @@ extractDrugMACCS = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'maccs', verbose = !silent)
+        x = getFingerprint(molecules, type = 'maccs', silent = silent)
 
         fp = vector('list', 1)
         fp[[1]] = x@bits
@@ -38,8 +36,8 @@ extractDrugMACCS = function (molecules, silent = TRUE) {
     } else {
 
         x = lapply(
-            molecules, get.fingerprint,
-            type = 'maccs', verbose = !silent)
+            molecules, getFingerprint,
+            type = 'maccs', silent = silent)
 
         fp = vector('list', length(molecules))
 
@@ -71,8 +69,6 @@ extractDrugMACCS = function (molecules, silent = TRUE) {
 #'
 #' @export extractDrugMACCSComplete
 #'
-#' @importFrom rcdk get.fingerprint
-#'
 #' @seealso \link{extractDrugMACCS}
 #'
 #' @examples
@@ -86,7 +82,7 @@ extractDrugMACCSComplete = function (molecules, silent = TRUE) {
 
     if (length(molecules) == 1) {
 
-        x = get.fingerprint(molecules, type = 'maccs', verbose = !silent)
+        x = getFingerprint(molecules, type = 'maccs', silent = silent)
 
         fp = integer(166)
         fp[x@bits] = 1L
@@ -94,8 +90,8 @@ extractDrugMACCSComplete = function (molecules, silent = TRUE) {
     } else {
 
         x = lapply(
-            molecules, get.fingerprint,
-            type = 'maccs', verbose = !silent)
+            molecules, getFingerprint,
+            type = 'maccs', silent = silent)
 
         fp = matrix(0L, nrow = length(molecules), ncol = 166)
 

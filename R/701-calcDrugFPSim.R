@@ -33,9 +33,9 @@
 #' Chemoinformatics. Wiley.com, 2006.
 #'
 #' @examples
+#' \donttest{
 #' mols = readMolFromSDF(system.file('compseq/tyrphostin.sdf', package = 'Rcpi'))
 #'
-#' \donttest{
 #' fp1 = extractDrugEstate(mols[[1]])
 #' fp2 = extractDrugEstate(mols[[2]])
 #' calcDrugFPSim(fp1, fp2, fptype = 'compact', metric = 'tanimoto')
