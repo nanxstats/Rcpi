@@ -31,8 +31,9 @@ BibTeX entry:
 }
 ```
 
-Browse the package vignettes:
-[workflow](https://nanx.me/Rcpi/articles/Rcpi.html), and [cheatsheet](https://nanx.me/Rcpi/articles/Rcpi-quickref.html) to get started.
+Browse the [workflow](https://nanx.me/Rcpi/articles/Rcpi.html) and
+[cheatsheet](https://nanx.me/Rcpi/articles/Rcpi-quickref.html)
+vignettes to get started.
 
 ## Installation
 
@@ -89,7 +90,7 @@ Rcpi implemented and integrated the state-of-the-art protein sequence descriptor
 
 - Calculate six types of generalized scales-based descriptors derived by various dimensionality reduction methods for proteochemometric (PCM) modeling.
 
-- Parallellized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.
+- Parallelized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.
 
 For small molecules, the Rcpi package could
 
@@ -113,7 +114,7 @@ Several useful auxiliary utilities are also shipped with Rcpi:
 
 - Molecular file format conversion
 
-The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, cheminformatics, proteochemometrics, and chemogenomics.
+The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug discovery, primarily bioinformatics, cheminformatics, proteochemometrics, and chemogenomics.
 
 ## Contribute
 
