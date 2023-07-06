@@ -18,7 +18,7 @@ Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Biocon
 
 BibTeX entry:
 
-```
+```bibtex
 @article{Rcpi2015,
   author  = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Chen, Alex F.},
   title   = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
@@ -69,6 +69,8 @@ remotes::install_github("CDK-R/cdkr", subdir = "rcdk")
 ```
 
 rcdk requires JDK and rJava to be installed and configured on your system.
+Check out the [rJava readme](https://github.com/s-u/rJava) for installation
+and troubleshooting instructions.
 
 #### Install cheminformatics packages
 
