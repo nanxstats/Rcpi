@@ -21,8 +21,6 @@
 #'
 #' @export getMolFromCAS
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = '52-67-5'  # Penicillamine
 #' \donttest{
@@ -39,7 +37,7 @@ getMolFromCAS = function (id, parallel = 5) {
     InChIURL = paste0('http://www.chemnet.com/cas/supplier.cgi?terms=', id,
                       '&exact=dict')
 
-    InChITxt = getURLAsynchronous(url = InChIURL, perform = parallel)
+    InChITxt = get_url_parallel(url = InChIURL, total_con = parallel)
 
     n = length(id)
     tmp1 = rep(NA, n)

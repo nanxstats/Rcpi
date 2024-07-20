@@ -19,8 +19,6 @@
 #'
 #' @export getMolFromPubChem
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = c('7847562', '7847563')  # Penicillamine
 #' \donttest{
@@ -34,9 +32,7 @@ getMolFromPubChem = function (id, parallel = 5) {
     SdfURL = paste0('https://pubchem.ncbi.nlm.nih.gov/rest/pug/substance/sid/',
                     id, '/record/SDF/?record_type=2d')
 
-    SdfTxt = getURLAsynchronous(url = SdfURL, perform = parallel)
-
-    SdfTxt = if (is.list(SdfTxt)) sapply(SdfTxt, rawToChar) else rawToChar(SdfTxt)
+    SdfTxt = get_url_parallel(url = SdfURL, total_con = parallel)
 
     return(SdfTxt)
 

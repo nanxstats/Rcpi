@@ -19,8 +19,6 @@
 #'
 #' @export getMolFromDrugBank
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = 'DB00859'  # Penicillamine
 #' \donttest{
@@ -29,11 +27,11 @@
 getMolFromDrugBank = function (id, parallel = 5) {
 
     # example id : DB00859 (Penicillamine)
-    # example url: https://www.drugbank.ca/structures/small_molecule_drugs/DB00859.sdf
+    # example url: https://go.drugbank.com/structures/small_molecule_drugs/DB00859.sdf
 
-    SdfURL = paste0('https://www.drugbank.ca/structures/small_molecule_drugs/', id, '.sdf')
+    SdfURL = paste0('https://go.drugbank.com/structures/small_molecule_drugs/', id, '.sdf')
 
-    SdfTxt = getURLAsynchronous(url = SdfURL, perform = parallel)
+    SdfTxt = get_url_parallel(url = SdfURL, total_con = parallel)
 
     return(SdfTxt)
 
@@ -68,7 +66,7 @@ getMolFromDrugBank = function (id, parallel = 5) {
 getSmiFromDrugBank = function (id, parallel = 5) {
 
     # example id : DB00859 (Penicillamine)
-    # example url: https://www.drugbank.ca/structures/small_molecule_drugs/DB00859.sdf
+    # example url: https://go.drugbank.com/structures/small_molecule_drugs/DB00859.sdf
 
     SdfTxt = getMolFromDrugBank(id, parallel)
 

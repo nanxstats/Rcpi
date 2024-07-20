@@ -19,8 +19,6 @@
 #'
 #' @export getMolFromChEMBL
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = 'CHEMBL1430'  # Penicillamine
 #' \donttest{
@@ -33,7 +31,7 @@ getMolFromChEMBL = function (id, parallel = 5) {
     # then we get: https://www.ebi.ac.uk/chembldb/download_helper/getmol/369179
 
     MolPageURL = paste0('https://www.ebi.ac.uk/chembldb/compound/inspect/', id)
-    MolPageTxt = getURLAsynchronous(url = MolPageURL, perform = parallel)
+    MolPageTxt = get_url_parallel(url = MolPageURL, total_con = parallel)
 
     n = length(id)
     tmp1 = rep(NA, n)
@@ -49,7 +47,7 @@ getMolFromChEMBL = function (id, parallel = 5) {
     }
 
     MolURL = paste0('https://www.ebi.ac.uk/chembldb/download_helper/getmol/', tmp2)
-    MolTxt = getURLAsynchronous(url = MolURL, perform = parallel)
+    MolTxt = get_url_parallel(url = MolURL, total_con = parallel)
 
     return(MolTxt)
 
@@ -76,7 +74,6 @@ getMolFromChEMBL = function (id, parallel = 5) {
 #'
 #' @export getSmiFromChEMBL
 #'
-#' @importFrom RCurl getURLAsynchronous
 #' @importFrom rjson fromJSON
 #'
 #' @examples
@@ -91,7 +88,7 @@ getSmiFromChEMBL = function (id, parallel = 5) {
 
     MolURL = paste0('https://www.ebi.ac.uk/chembl/api/data/molecule?molecule_chembl_id__in=', id, '&format=json')
 
-    MolTxt = getURLAsynchronous(url = MolURL, perform = parallel)
+    MolTxt = get_url_parallel(url = MolURL, total_con = parallel)
 
     SmiTxt = lapply(MolTxt, fromJSON)
     SmiTxt = sapply(SmiTxt, `[[`, 'molecules')
