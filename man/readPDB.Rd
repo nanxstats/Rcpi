@@ -32,7 +32,7 @@ Seq4HHB
 \references{
 Protein Data Bank Contents Guide: Atomic Coordinate Entry Format Description,
 Version 3.30. Accessed 2013-06-26.
-\url{http://ftp.wwpdb.org/pub/pdb/doc/format_descriptions/Format_v33_Letter.pdf}
+\url{https://files.wwpdb.org/pub/pdb/doc/format_descriptions/Format_v33_Letter.pdf}
 }
 \seealso{
 See \code{\link{readFASTA}} for reading protein sequences
