@@ -2,7 +2,7 @@ bibentry(
   "Article",
   key = "cao2015rcpi",
   title = "Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions",
-  author = "Cao Dong-Sheng and Xiao Nan and Xu Qing-Song and Chen Alex F.",
+  author = "Dong-Sheng Cao and Nan Xiao and Qing-Song Xu and Alex F. Chen",
   journal = "Bioinformatics",
   volume = "31",
   number = "2",
