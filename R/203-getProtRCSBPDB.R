@@ -18,8 +18,6 @@
 #'
 #' @export getPDBFromRCSBPDB
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = c('4HHB', '4FF9')
 #' \donttest{
@@ -32,7 +30,7 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 
   pdbURL = paste0('https://files.rcsb.org/view/', id, '.pdb')
 
-  pdbTxt = getURLAsynchronous(url = pdbURL, perform = parallel)
+  pdbTxt = get_url_parallel(url = pdbURL, total_con = parallel)
 
   return(pdbTxt)
 
@@ -58,8 +56,6 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 #'
 #' @export getSeqFromRCSBPDB
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = c('4HHB', '4FF9')
 #' \donttest{
@@ -68,11 +64,11 @@ getPDBFromRCSBPDB = function (id, parallel = 5) {
 getSeqFromRCSBPDB = function (id, parallel = 5) {
 
   # example id : 4HHB
-  # example url: https://www.rcsb.org/pdb/download/downloadFile.do?fileFormat=fastachain&compression=NO&structureId=4hhb&chainId=A
+  # example url: https://www.rcsb.org/fasta/entry/4HHB/download
 
-  fastaURL = paste0('https://www.rcsb.org/pdb/download/downloadFile.do?fileFormat=fastachain&compression=NO&structureId=', id, '&chainId=A')
+  fastaURL = paste0('https://www.rcsb.org/fasta/entry/', id, '/download')
 
-  fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
+  fastaTxt = get_url_parallel(url = fastaURL, total_con = parallel)
 
   tmpfile = tempfile(pattern = paste0(id, '-'), fileext = '.fasta')
   for (i in 1:length(id)) write(fastaTxt[[i]], tmpfile[i])

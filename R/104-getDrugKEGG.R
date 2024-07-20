@@ -18,8 +18,6 @@
 #'
 #' @export getMolFromKEGG
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = 'D00496'  # Penicillamine
 #' \donttest{
@@ -33,7 +31,7 @@ getMolFromKEGG = function (id, parallel = 5) {
 
     MolURL = paste0('http://rest.kegg.jp/get/', id, '/mol')
 
-    MolTxt = getURLAsynchronous(url = MolURL, perform = parallel)
+    MolTxt = get_url_parallel(url = MolURL, total_con = parallel)
 
     return(MolTxt)
 

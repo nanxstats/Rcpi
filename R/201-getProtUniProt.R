@@ -20,8 +20,6 @@
 #'
 #' @export getFASTAFromUniProt
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @references
 #' UniProt. \url{https://www.uniprot.org/}
 #'
@@ -39,7 +37,7 @@ getFASTAFromUniProt = function (id, parallel = 5) {
 
   fastaURL = paste0('https://rest.uniprot.org/uniprotkb/', id, '.fasta')
 
-  fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
+  fastaTxt = get_url_parallel(url = fastaURL, total_con = parallel)
 
   return(fastaTxt)
 

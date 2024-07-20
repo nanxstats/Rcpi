@@ -22,9 +22,10 @@ Depends:
 Imports:
     Biostrings,
     GOSemSim,
-    RCurl,
+    curl,
     doParallel,
     foreach,
+    httr2,
     methods,
     rjson,
     rlang,

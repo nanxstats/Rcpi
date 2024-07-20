@@ -20,8 +20,6 @@
 #'
 #' @export getFASTAFromKEGG
 #'
-#' @importFrom RCurl getURLAsynchronous
-#'
 #' @examples
 #' id = c('hsa:10161', 'hsa:10162')
 #' \donttest{
@@ -34,7 +32,7 @@ getFASTAFromKEGG = function (id, parallel = 5) {
 
     fastaURL = paste0('http://rest.kegg.jp/get/', id, '/aaseq')
 
-    fastaTxt = getURLAsynchronous(url = fastaURL, perform = parallel)
+    fastaTxt = get_url_parallel(url = fastaURL, total_con = parallel)
 
     return(fastaTxt)
 
