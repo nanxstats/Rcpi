@@ -4,7 +4,7 @@
 ^pkgdown$
 ^docs$
 ^\NEWS\.md$
-^CONDUCT\.md$
+^CODE_OF_CONDUCT\.md$
 ^CONTRIBUTING\.md$
 ^RELEASE\.md$
 ^\.github$
