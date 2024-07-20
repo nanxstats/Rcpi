@@ -1,20 +1,20 @@
 Package: Rcpi
-Version: 1.37.1
 Type: Package
+Version: 1.37.1
 Title: Molecular Informatics Toolkit for Compound-Protein
     Interaction in Drug Discovery
-Description: A molecular informatics toolkit with an integration of
-    bioinformatics and chemoinformatics tools for drug discovery.
 Authors@R: c(
-    person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre")),
+    person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-0250-5673")),
     person("Dong-Sheng", "Cao", role = "aut"),
     person("Qing-Song", "Xu", email = "qsxu@csu.edu.cn", role = c("aut"))
     )
-Maintainer: Nan Xiao <me@nanx.me>
+Description: A molecular informatics toolkit with an integration of
+    bioinformatics and chemoinformatics tools for drug discovery.
 License: Artistic-2.0 | file LICENSE
 URL: https://nanx.me/Rcpi/, https://github.com/nanxstats/Rcpi
-Encoding: UTF-8
 BugReports: https://github.com/nanxstats/Rcpi/issues
+Encoding: UTF-8
 LazyData: true
 VignetteBuilder: knitr
 Depends:
@@ -34,7 +34,15 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
-biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
-    Cheminformatics, BiomedicalInformatics, Proteomics, GO, SystemsBiology
-RoxygenNote: 7.2.3
+biocViews:
+    Software,
+    DataImport,
+    DataRepresentation,
+    FeatureExtraction,
+    Cheminformatics,
+    BiomedicalInformatics,
+    Proteomics,
+    GO,
+    SystemsBiology
 Config/testthat/edition: 3
+RoxygenNote: 7.3.2

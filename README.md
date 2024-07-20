@@ -8,7 +8,7 @@
 
 ## Overview
 
-Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and cheminformatics tools for drug discovery. For more information, please see our paper <[DOI:10.1093/bioinformatics/btu624](https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btu624)> ([PDF](https://nanx.me/papers/Rcpi.pdf)).
+Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and cheminformatics tools for drug discovery. For more information, please see our paper <[DOI:10.1093/bioinformatics/btu624](https://doi.org/10.1093/bioinformatics/btu624)> ([PDF](https://nanx.me/papers/Rcpi.pdf)).
 
 ## Paper Citation
 

@@ -4,7 +4,7 @@
 #'
 #' This function converts between various chemical file formats via OpenBabel.
 #' The complete supported file format list could be found at
-#' \url{https://openbabel.org/docs/dev/FileFormats/Overview.html}.
+#' \url{https://openbabel.org/docs/FileFormats/Overview.html}.
 #'
 #' @param infile A character string. Indicating the input file location.
 #' @param outfile A character string. Indicating the output file location.

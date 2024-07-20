@@ -6,7 +6,7 @@ template:
 reference:
   - title: "Protein sequence retrivial"
     desc: >
-      Functions for retrieving protein sequence data from online databases.
+      Retrieve protein sequence data from online databases.
     contents:
     - getProt
     - getFASTAFromUniProt
@@ -17,7 +17,7 @@ reference:
     - getSeqFromRCSBPDB
   - title: "Drug molecular data retrivial"
     desc: >
-      Functions for retrieving drug molecular data from online databases.
+      Retrieve drug molecular data from online databases.
     contents:
     - getDrug
     - getMolFromDrugBank
@@ -31,7 +31,7 @@ reference:
     - getSmiFromKEGG
   - title: "Protein sequence descriptors"
     desc: >
-      Functions and datasets for computing commonly used protein sequence derived descriptors.
+      Compute commonly used protein sequence derived descriptors.
     contents:
     - extractProtAAC
     - extractProtDC
@@ -50,14 +50,14 @@ reference:
     - AAindex
   - title: "Profile-based protein sequence descriptors"
     desc: >
-      Functions for generating profile-based protein representations.
+      Generate profile-based protein representations.
     contents:
     - extractProtPSSM
     - extractProtPSSMFeature
     - extractProtPSSMAcc
   - title: "Scales-based descriptors for proteochemometrics modeling"
     desc: >
-      Functions for generating scales-based descriptors for proteochemometrics (PCM) modeling.
+      Generate scales-based descriptors for proteochemometrics (PCM) modeling.
     contents:
     - extractPCMScales
     - extractPCMPropScales
@@ -68,7 +68,8 @@ reference:
     - acc
   - title: "Molecular descriptor sets for generating scales-based descriptors"
     desc: >
-      Molecular descriptor sets of the 20 amino acids for generating scales-based descriptors.
+      Molecular descriptor sets of the 20 amino acids for
+      generating scales-based descriptors.
     contents:
     - OptAA3d
     - AAMetaInfo
@@ -107,7 +108,7 @@ reference:
     - AAPAM250
   - title: "Molecular descriptors"
     desc: >
-      Functions for computing commonly used molecular descriptors.
+      Compute commonly used molecular descriptors.
     contents:
     - extractDrugAIO
     - extractDrugALOGP
@@ -161,7 +162,7 @@ reference:
     - extractDrugZagrebIndex
   - title: "Molecular fingerprints"
     desc: >
-      Functions for computing commonly used molecular fingerprints.
+      Compute commonly used molecular fingerprints.
     contents:
     - extractDrugStandard
     - extractDrugStandardComplete
@@ -187,13 +188,13 @@ reference:
     - extractDrugOBMACCS
   - title: "PPI and CPI descriptors"
     desc: >
-      Functions for computing protein-protein and compound-protein interation descriptors.
+      Compute protein-protein and compound-protein interation descriptors.
     contents:
     - getPPI
     - getCPI
   - title: "Similarity and similarity searching"
     desc: >
-      Functions for computing sequence/molecular similarities and similarity searching.
+      Compute sequence/molecular similarities and similarity searching.
     contents:
     - calcDrugFPSim
     - calcDrugMCSSim
@@ -204,7 +205,7 @@ reference:
     - calcParProtGOSim
   - title: "Protein sequence data processing"
     desc: >
-      Functions for processing protein sequence data.
+      Process protein sequence data.
     contents:
     - readFASTA
     - readPDB
@@ -212,9 +213,8 @@ reference:
     - checkProt
   - title: "Molecular data processing"
     desc: >
-      Functions for processing molecular data.
+      Process molecular data.
     contents:
     - readMolFromSDF
     - readMolFromSmi
     - convMolFormat
-    - Rcpi-package
