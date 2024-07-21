@@ -1,6 +1,6 @@
 Package: Rcpi
 Type: Package
-Version: 1.37.1
+Version: 1.41.1
 Title: Molecular Informatics Toolkit for Compound-Protein
     Interaction in Drug Discovery
 Authors@R: c(
