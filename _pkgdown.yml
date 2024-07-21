@@ -4,7 +4,7 @@ template:
   bootstrap: 5
 
 reference:
-  - title: "Protein sequence retrivial"
+  - title: "Protein sequence retrieval"
     desc: >
       Retrieve protein sequence data from online databases.
     contents:
@@ -15,7 +15,7 @@ reference:
     - getSeqFromUniProt
     - getSeqFromKEGG
     - getSeqFromRCSBPDB
-  - title: "Drug molecular data retrivial"
+  - title: "Drug molecular data retrieval"
     desc: >
       Retrieve drug molecular data from online databases.
     contents:
@@ -188,7 +188,7 @@ reference:
     - extractDrugOBMACCS
   - title: "PPI and CPI descriptors"
     desc: >
-      Compute protein-protein and compound-protein interation descriptors.
+      Compute protein-protein and compound-protein interaction descriptors.
     contents:
     - getPPI
     - getCPI
