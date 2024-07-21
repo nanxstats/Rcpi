@@ -1,3 +1,13 @@
+# Rcpi 1.41.1 (2024-07-20)
+
+## Improvements
+
+- Replaced RCurl with httr2 and curl for retrieving molecular and sequence
+  data from web APIs. Updated the outdated API endpoint URLs for DrugBank
+  and RCSB PDB (#18).
+- `inst/CITATION` now uses `bibentry()` to replace `citEntry()` (#19).
+- Fixed check notes on lost braces when running `R CMD check` under R 4.4.x (#21).
+
 # Rcpi 1.37.1 (2023-06-27)
 
 ## Improvements
@@ -11,7 +21,7 @@
 
 ## Improvements
 
-- Updated the endpoint URL of UniProt API to fix access issues ([#14](https://github.com/nanxstats/Rcpi/issues/14)).
+- Updated the endpoint URL of UniProt API to fix access issues (#14).
 
 # Rcpi 1.33.1 (2022-05-07)
 
@@ -43,8 +53,8 @@
 
 ## Bug Fixes
 
-- Fixed API endpoints that are not working due to their changes across time ([#5](https://github.com/nanxstats/Rcpi/issues/5)).
-- Fixed the vignette example for QSRR study ([#6](https://github.com/nanxstats/Rcpi/issues/6)).
+- Fixed API endpoints that are not working due to their changes across time (#5).
+- Fixed the vignette example for QSRR study (#6).
 
 ## Improvements
 
