@@ -1,25 +1,23 @@
 #' Auto Cross Covariance (ACC) for Generating Scales-Based Descriptors
 #' of the Same Length
 #'
-#' Auto Cross Covariance (ACC) for Generating Scales-Based Descriptors
-#' of the Same Length
-#'
-#' This function calculates the auto covariance and auto cross covariance
+#' Calculates auto covariance and auto cross covariance
 #' for generating scale-based descriptors of the same length.
 #'
 #' @param mat A \code{p * n} matrix. Each row represents one scale
-#' (total \code{p} scales), each column represents one amino acid position
-#' (total \code{n} amino acids).
+#'   (total \code{p} scales), each column represents one amino acid position
+#'   (total \code{n} amino acids).
 #'
 #' @param lag The lag parameter. Must be less than the amino acids.
 #'
 #' @return A length \code{lag * p^2} named vector, the element names are
-#'         constructed by: the scales index (crossed scales index) and
-#'         lag index.
+#'   constructed by: the scales index (crossed scales index) and
+#'   lag index.
 #'
-#' @note To know more details about auto cross covariance, see the references.
+#' @note To see more details about auto cross covariance, check the references.
 #'
-#' @seealso See \code{\link{extractPCMScales}} for
+#' @seealso
+#' See \code{\link{extractPCMScales}} for
 #' generalized scales-based descriptors.
 #' For more details, see \code{\link{extractPCMDescScales}}
 #' and \code{\link{extractPCMPropScales}}.
@@ -27,14 +25,13 @@
 #' @export acc
 #'
 #' @references
-#' Wold, S., Jonsson, J., Sj\"{o}rstr\"{o}m, M., Sandberg,
-#' M., & R\"{a}nnar, S. (1993).
+#' Wold, S., Jonsson, J., Sjörström, M., Sandberg, M., & Rännar, S. (1993).
 #' DNA and peptide sequences and chemical processes multivariately modelled
 #' by principal component analysis and partial least-squares projections
 #' to latent structures.
 #' \emph{Analytica chimica acta}, 277(2), 239--253.
 #'
-#' Sj\"{o}str\"{o}m, M., R\"{a}nnar, S., & Wieslander, A. (1995).
+#' Sjöström, M., Rännar, S., & Wieslander, Å. (1995).
 #' Polypeptide sequence property relationships in \emph{Escherichia coli}
 #' based on auto cross covariances.
 #' \emph{Chemometrics and intelligent laboratory systems}, 29(2), 295--305.
@@ -42,11 +39,9 @@
 #' @examples
 #' p = 8    # p is the scales number
 #' n = 200  # n is the amino acid number
-#' lag = 7  # the lag paramter
+#' lag = 7  # lag parameter
 #' mat = matrix(rnorm(p * n), nrow = p, ncol = n)
 #' acc(mat, lag)
-#'
-
 acc = function (mat, lag) {
 
     p = nrow(mat)

@@ -27,18 +27,10 @@ annotations (execution time is divided approximately
 by a factor 3). Default value is \code{FALSE}.}
 }
 \value{
-The result character vector
+Character vector.
 }
 \description{
-Read Protein Sequences in FASTA Format
-}
-\details{
-This function reads protein sequences in FASTA format.
-}
-\note{
-Note that any different sets of instances (chunklets),
-      e.g. {1, 3, 7} and {4, 6}, might belong to the
-      same class and might belong to different classes.
+Reads protein sequences in FASTA format.
 }
 \examples{
 P00750 = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))
@@ -48,7 +40,7 @@ P00750
 Pearson, W.R. and Lipman, D.J. (1988)
 Improved tools for biological sequence comparison.
 \emph{Proceedings of the National Academy of Sciences
-of the United States of America}, \bold{85}: 2444-2448
+of the United States of America}, 85: 2444-2448.
 }
 \seealso{
 See \code{\link{readPDB}} for reading protein sequences
