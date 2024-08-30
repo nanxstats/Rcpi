@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.41.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.41.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,16 @@
       <small>Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.41.2" id="rcpi-1412-2024-08-30">Rcpi 1.41.2 (2024-08-30)<a class="anchor" aria-label="anchor" href="#rcpi-1412-2024-08-30"></a></h2>
+<div class="section level3">
+<h3 id="improvements-1-41-2">Improvements<a class="anchor" aria-label="anchor" href="#improvements-1-41-2"></a></h3>
+<ul><li>
+<p>Since Bioconductor 3.19 and Biostrings 2.72.0, the pairwise sequence alignment facilities have been moved from Biostrings into the pwalign package. For maximum compatibility, we now detect the installed Biostrings version at runtime and decide which package to use for pairwise alignment, without introducing pwalign as an additional hard dependency.</p>
+<p>When calling <code><a href="../reference/calcTwoProtSeqSim.html">calcTwoProtSeqSim()</a></code> and <code><a href="../reference/calcParProtSeqSim.html">calcParProtSeqSim()</a></code>, if users have Biostrings &gt;= 2.72.0 installed while pwalign is not installed, expect to see an explicit error in the results saying that pwalign is required and should be installed from Bioconductor.</p>
+</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.41.1" id="rcpi-1411-2024-07-20">Rcpi 1.41.1 (2024-07-20)<a class="anchor" aria-label="anchor" href="#rcpi-1411-2024-07-20"></a></h2>
 <div class="section level3">
