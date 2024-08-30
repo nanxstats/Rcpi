@@ -1,3 +1,18 @@
+# Rcpi 1.41.2 (2024-08-30)
+
+## Improvements
+
+- Since Bioconductor 3.19 and Biostrings 2.72.0, the pairwise sequence
+  alignment facilities have been moved from Biostrings into the pwalign package.
+  For maximum compatibility, we now detect the installed Biostrings version
+  at runtime and decide which package to use for pairwise alignment,
+  without introducing pwalign as an additional hard dependency.
+
+  When calling `calcTwoProtSeqSim()` and `calcParProtSeqSim()`,
+  if users have Biostrings >= 2.72.0 installed while pwalign is not installed,
+  expect to see an explicit error in the results saying that pwalign is
+  required and should be installed from Bioconductor.
+
 # Rcpi 1.41.1 (2024-07-20)
 
 ## Improvements
