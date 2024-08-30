@@ -10,11 +10,12 @@
 
     } else {
 
+        pwa = resolve_pwa()
         s1  = try(Biostrings::AAString(protlist[[id1]]), silent = TRUE)
         s2  = try(Biostrings::AAString(protlist[[id2]]), silent = TRUE)
-        s12 = try(Biostrings::pairwiseAlignment(s1, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
-        s11 = try(Biostrings::pairwiseAlignment(s1, s1, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
-        s22 = try(Biostrings::pairwiseAlignment(s2, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s12 = try(pwa(s1, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s11 = try(pwa(s1, s1, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s22 = try(pwa(s2, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
 
         if ( is.numeric(s12) == FALSE | is.numeric(s11) == FALSE | is.numeric(s22) == FALSE ) {
             sim = 0L
@@ -90,6 +91,8 @@ calcParProtSeqSim = function(
         tmp <- .calcSeqPairSim(rev(idx[, i]), protlist = protlist, type = type, submat = submat)
     }
 
+    # convert any error objects into length-1 message
+    seqsimlist = as.list(unlist(seqsimlist))
     # convert list to matrix
     seqsimmat = matrix(0, length(protlist), length(protlist))
     for (i in 1:length(seqsimlist)) seqsimmat[idx[2, i], idx[1, i]] = seqsimlist[[i]]
@@ -141,9 +144,8 @@ calcTwoProtSeqSim = function(
     # sequence alignment for two protein sequences
     s1  = try(Biostrings::AAString(seq1), silent = TRUE)
     s2  = try(Biostrings::AAString(seq2), silent = TRUE)
-    s12 = try(Biostrings::pairwiseAlignment(
-        s1, s2, type = type, substitutionMatrix = submat),
-        silent = TRUE)
+    pwa = resolve_pwa()
+    s12 = try(pwa(s1, s2, type = type, substitutionMatrix = submat), silent = TRUE)
 
     return(s12)
 
