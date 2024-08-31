@@ -1,5 +1,6 @@
 .calcSeqPairSim = function(
     twoid, protlist = protlist, type = type, submat = submat) {
+    pwa = resolve_pwa()
 
     id1 = twoid[1]
     id2 = twoid[2]
@@ -10,7 +11,6 @@
 
     } else {
 
-        pwa = resolve_pwa()
         s1  = try(Biostrings::AAString(protlist[[id1]]), silent = TRUE)
         s2  = try(Biostrings::AAString(protlist[[id2]]), silent = TRUE)
         s12 = try(pwa(s1, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
@@ -77,6 +77,7 @@
 
 calcParProtSeqSim = function(
     protlist, cores = 2, type = 'local', submat = 'BLOSUM62') {
+    invisible(resolve_pwa())
 
     doParallel::registerDoParallel(cores)
 
@@ -140,11 +141,11 @@ calcParProtSeqSim = function(
 
 calcTwoProtSeqSim = function(
     seq1, seq2, type = 'local', submat = 'BLOSUM62') {
+    pwa = resolve_pwa()
 
     # sequence alignment for two protein sequences
     s1  = try(Biostrings::AAString(seq1), silent = TRUE)
     s2  = try(Biostrings::AAString(seq2), silent = TRUE)
-    pwa = resolve_pwa()
     s12 = try(pwa(s1, s2, type = type, substitutionMatrix = submat), silent = TRUE)
 
     return(s12)
