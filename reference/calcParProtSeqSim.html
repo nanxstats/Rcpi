@@ -33,7 +33,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Parallellized Protein Sequence Similarity Calculation based on Sequence Alignment</h1>
-      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/v1.41.2/R/704-calcProtSeqSim.R" class="external-link"><code>R/704-calcProtSeqSim.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/R/704-calcProtSeqSim.R" class="external-link"><code>R/704-calcProtSeqSim.R</code></a></small>
       <div class="d-none name"><code>calcParProtSeqSim.Rd</code></div>
     </div>
 
@@ -105,37 +105,9 @@ Gene Ontology (GO) semantic similarity.</p></div>
 <span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="va">psimmat</span> <span class="op">=</span> <span class="fu">calcParProtSeqSim</span><span class="op">(</span><span class="va">plist</span>, cores <span class="op">=</span> <span class="fl">2</span>, type <span class="op">=</span> <span class="st">'local'</span>,</span></span>
 <span class="r-in"><span>                            submat <span class="op">=</span> <span class="st">'BLOSUM62'</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> The package "pwalign" is required. Please install it from Bioconductor.</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">psimmat</span><span class="op">)</span><span class="co"># }</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1]                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "1"                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,2]                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "1"                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,3]                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "1"                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,4]                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "1"                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      [,5]                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4,] "The package \"pwalign\" is required. Please install it from Bioconductor."</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5,] "1"                                                                        </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'psimmat' not found</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
