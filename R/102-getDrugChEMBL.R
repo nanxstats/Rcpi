@@ -74,8 +74,6 @@ getMolFromChEMBL = function (id, parallel = 5) {
 #'
 #' @export getSmiFromChEMBL
 #'
-#' @importFrom rjson fromJSON
-#'
 #' @examples
 #' id = 'CHEMBL1430'  # Penicillamine
 #' \donttest{
@@ -90,7 +88,7 @@ getSmiFromChEMBL = function (id, parallel = 5) {
 
     MolTxt = get_url_parallel(url = MolURL, total_con = parallel)
 
-    SmiTxt = lapply(MolTxt, fromJSON)
+    SmiTxt = lapply(MolTxt, jsonlite::fromJSON, simplifyVector = FALSE)
     SmiTxt = sapply(SmiTxt, `[[`, 'molecules')
 
     Smi = sapply(lapply(SmiTxt, `[[`, 'molecule_structures'), `[[`, 'canonical_smiles')
