@@ -1,3 +1,14 @@
+# Rcpi 1.41.3 (2024-09-09)
+
+## Improvements
+
+- Added early dependency checks for pwalign in functions that use
+  pairwise alignment. If certain dependency conditions can't be met,
+  the error is raised immediately, preventing unnecessary computation (#26).
+- Replaced rjson with jsonlite to maintain compatibility with R < 4.4.0.
+  The recent rjson update (v0.2.22 , 2024-08-20) requires R (>= 4.4.0),
+  which would break builds on r-oldrel (#28).
+
 # Rcpi 1.41.2 (2024-08-30)
 
 ## Improvements
