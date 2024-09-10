@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">Rcpi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.41.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.41.3</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,14 @@
       <small>Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.41.3" id="rcpi-1413-2024-09-09">Rcpi 1.41.3 (2024-09-09)<a class="anchor" aria-label="anchor" href="#rcpi-1413-2024-09-09"></a></h2>
+<div class="section level3">
+<h3 id="improvements-1-41-3">Improvements<a class="anchor" aria-label="anchor" href="#improvements-1-41-3"></a></h3>
+<ul><li>Added early dependency checks for pwalign in functions that use pairwise alignment. If certain dependency conditions can’t be met, the error is raised immediately, preventing unnecessary computation (<a href="https://github.com/nanxstats/Rcpi/issues/26" class="external-link">#26</a>).</li>
+<li>Replaced rjson with jsonlite to maintain compatibility with R &lt; 4.4.0. The recent rjson update (v0.2.22 , 2024-08-20) requires R (&gt;= 4.4.0), which would break builds on r-oldrel (<a href="https://github.com/nanxstats/Rcpi/issues/28" class="external-link">#28</a>).</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.41.2" id="rcpi-1412-2024-08-30">Rcpi 1.41.2 (2024-08-30)<a class="anchor" aria-label="anchor" href="#rcpi-1412-2024-08-30"></a></h2>
 <div class="section level3">
