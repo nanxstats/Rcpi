@@ -26,8 +26,8 @@ Imports:
     doParallel,
     foreach,
     httr2,
+    jsonlite,
     methods,
-    rjson,
     rlang,
     stats,
     utils
