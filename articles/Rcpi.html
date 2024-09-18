@@ -66,7 +66,7 @@
                         <h4 data-toc-skip class="author">Nan Xiao &lt;<a href="https://nanx.me" class="external-link uri">https://nanx.me</a>&gt;</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/v1.41.3/vignettes/Rcpi.Rmd" class="external-link"><code>vignettes/Rcpi.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/vignettes/Rcpi.Rmd" class="external-link"><code>vignettes/Rcpi.Rmd</code></a></small>
       <div class="d-none name"><code>Rcpi.Rmd</code></div>
     </div>
 
@@ -293,7 +293,7 @@ set and plot the ROC curve with the package, as is shown in Figure
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://xrobin.github.io/pROC/" class="external-link">"pROC"</a></span><span class="op">)</span></span>
 <span><span class="fu">plot.roc</span><span class="op">(</span><span class="va">y.te</span>, <span class="va">rf.pred</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, print.auc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="figures/ex1-1.png" alt="Figure 1: ROC curve for the test set of protein subcellular localization data." width="65%"><p class="caption">
+<img src="figures%2Fex1-1.png" alt="Figure 1: ROC curve for the test set of protein subcellular localization data." width="65%"><p class="caption">
 Figure 1: ROC curve for the test set of protein subcellular localization
 data.
 </p>
@@ -436,7 +436,7 @@ number of principal components used in the model.</p>
 <code class="sourceCode R"><span><span class="co"># Number of components vs. RMSE</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">pls.fit</span>, asp <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="figures/ex2-1.png" alt="Figure 2: Number of principal components vs. RMSE for the PLS regression model." width="85%"><p class="caption">
+<img src="figures%2Fex2-1.png" alt="Figure 2: Number of principal components vs. RMSE for the PLS regression model." width="85%"><p class="caption">
 Figure 2: Number of principal components vs. RMSE for the PLS regression
 model.
 </p>
@@ -452,7 +452,7 @@ to see if the model fits well on the training set (Figure 3):</p>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">0</span>, b <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="figures/ex2-2.png" alt="Figure 3: Experimental RIs vs. predicted RIs." width="65%"><p class="caption">
+<img src="figures%2Fex2-2.png" alt="Figure 3: Experimental RIs vs. predicted RIs." width="65%"><p class="caption">
 Figure 3: Experimental RIs vs. predicted RIs.
 </p>
 </div>
@@ -651,7 +651,7 @@ ROC curves in one figure, as is shown in Figure 4.</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/smooth.html" class="external-link">smooth</a></span><span class="op">(</span><span class="fu">roc</span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred2</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/smooth.html" class="external-link">smooth</a></span><span class="op">(</span><span class="fu">roc</span><span class="op">(</span><span class="va">y.te</span>, <span class="va">svm.pred3</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="va">pal</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="figures/ex3-1.png" alt="Figure 4: Smoothed ROC curves for different fingerprint types." width="65%"><p class="caption">
+<img src="figures%2Fex3-1.png" alt="Figure 4: Smoothed ROC curves for different fingerprint types." width="65%"><p class="caption">
 Figure 4: Smoothed ROC curves for different fingerprint types.
 </p>
 </div>
@@ -720,7 +720,7 @@ the clustering result:</p>
 <p>The hierarchical clustering result for these molecules is shown in
 Figure 5.</p>
 <div class="figure">
-<img src="figures/ex4-1.png" alt="Figure 5: Tree visualization of the molecular clustering result." width="65%"><p class="caption">
+<img src="figures%2Fex4-1.png" alt="Figure 5: Tree visualization of the molecular clustering result." width="65%"><p class="caption">
 Figure 5: Tree visualization of the molecular clustering result.
 </p>
 </div>
@@ -822,7 +822,7 @@ coefficient and the overlap coefficient.</p>
 <p>By using <code>calcDrugMCSSim(..., plot = TRUE)</code>, the maximum
 common substructure of the two molecules is presented in Figure 6.</p>
 <div class="figure">
-<img src="figures/ex5-1.png" alt="Figure 6: Maximum common structure of the query molecule and the #92 molecule in the chemical database." width="50%"><p class="caption">
+<img src="figures%2Fex5-1.png" alt="Figure 6: Maximum common structure of the query molecule and the #92 molecule in the chemical database." width="50%"><p class="caption">
 Figure 6: Maximum common structure of the query molecule and the #92
 molecule in the chemical database.
 </p>
@@ -913,7 +913,7 @@ pattern for the GPCR drug-target interaction network in the form of an
 <span>  pch.nodes <span class="op">=</span> <span class="fl">21</span>, line <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span>, col.arcs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/hsv.html" class="external-link">hsv</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0.2</span>, <span class="fl">0.25</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="figures/ex6-1.png" alt="Figure 7: Arc diagram visualization of the GPCR drug-target interaction network." width="85%"><p class="caption">
+<img src="figures%2Fex6-1.png" alt="Figure 7: Arc diagram visualization of the GPCR drug-target interaction network." width="85%"><p class="caption">
 Figure 7: Arc diagram visualization of the GPCR drug-target interaction
 network.
 </p>
@@ -1098,7 +1098,7 @@ ROC curve.</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/smooth.html" class="external-link">smooth</a></span><span class="op">(</span><span class="fu">roc</span><span class="op">(</span><span class="va">y</span>, <span class="va">rf.pred</span><span class="op">)</span><span class="op">)</span>, grid <span class="op">=</span> <span class="cn">TRUE</span>, print.auc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>The ROC curve is shown in Figure 8.</p>
 <div class="figure">
-<img src="figures/ex6-2.png" alt="Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest." width="65%"><p class="caption">
+<img src="figures%2Fex6-2.png" alt="Figure 8: ROC curve for predicting on the training set of the GPCR drug-target interaction dataset using random forest." width="65%"><p class="caption">
 Figure 8: ROC curve for predicting on the training set of the GPCR
 drug-target interaction dataset using random forest.
 </p>
@@ -1174,7 +1174,7 @@ Chromatography A</em>, <strong>1223</strong>, 118–125.
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>

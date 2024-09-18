@@ -33,7 +33,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Calculate the KR (Klekota and Roth) Molecular Fingerprints (in Compact Format)</h1>
-      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/v1.41.3/R/378-extractDrugKR.R" class="external-link"><code>R/378-extractDrugKR.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/R/378-extractDrugKR.R" class="external-link"><code>R/378-extractDrugKR.R</code></a></small>
       <div class="d-none name"><code>extractDrugKR.Rd</code></div>
     </div>
 
@@ -81,9 +81,9 @@ Each component's name is the length of the fingerprints.</p>
 <span class="r-in"><span><span class="va">mol</span> <span class="op">=</span> <span class="fu"><a href="readMolFromSmi.html">readMolFromSmi</a></span><span class="op">(</span><span class="va">smi</span>, type <span class="op">=</span> <span class="st">'mol'</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in parseSmiles(smi):</span> The package "rcdk" is required to parse SMILES</span>
 <span class="r-in"><span><span class="va">fp</span>  <span class="op">=</span> <span class="fu">extractDrugKR</span><span class="op">(</span><span class="va">mol</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'mol' not found</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'mol' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">fp</span><span class="op">)</span><span class="co"># }</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'fp' not found</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'fp' not found</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -95,7 +95,7 @@ Each component's name is the length of the fingerprints.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>

@@ -35,7 +35,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Profile-based protein representation derived by PSSM (Position-Specific Scoring Matrix) and auto cross covariance</h1>
-      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/v1.41.3/R/423-extractProtPSSMAcc.R" class="external-link"><code>R/423-extractProtPSSMAcc.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nanxstats/Rcpi/blob/master/R/423-extractProtPSSMAcc.R" class="external-link"><code>R/423-extractProtPSSMAcc.R</code></a></small>
       <div class="d-none name"><code>extractProtPSSMAcc.Rd</code></div>
     </div>
 
@@ -95,9 +95,9 @@ to latent structures.
 <span class="r-in"><span><span class="va">pssmmat</span> <span class="op">=</span> <span class="fu"><a href="extractProtPSSM.html">extractProtPSSM</a></span><span class="op">(</span>seq <span class="op">=</span> <span class="va">x</span>, database.path <span class="op">=</span> <span class="va">dbpath</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in extractProtPSSM(seq = x, database.path = dbpath):</span> Please install makeblastdb (included in the NCBI BLAST+) or specify makeblastdb.path.</span>
 <span class="r-in"><span><span class="va">pssmacc</span> <span class="op">=</span> <span class="fu">extractProtPSSMAcc</span><span class="op">(</span><span class="va">pssmmat</span>, lag <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'pssmmat' not found</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'pssmmat' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="va">pssmacc</span><span class="op">)</span><span class="co"># }</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'pssmacc' not found</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'pssmacc' not found</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -109,7 +109,7 @@ to latent structures.
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>
